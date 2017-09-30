@@ -1,0 +1,34 @@
+<span class="createTime" ng-bind="convertTime({createTime:n.createTimestamp})"></span>
+<div class="content" ng-click="showPreview({n:n,$event:$event})">
+    <div class="banner" ng-style="n.titleBkColor"></div>
+    <span class="topic text-ellipsis" ng-bind="checkTopic(n.topic)" ng-class="{grayColor:!n.topic}"></span>
+    <div class="spliter"></div>
+    <div class="cover" ng-class="{'noCoverBorder':!n.cover}">
+       <img ng-src="{{n.cover.url | coverImage}}" ng-if="n.cover"/>
+        <div class="noCover" ng-if="!n.cover">
+            <img src="theme/images/no_cover.png"/>
+            <span translate="notice.no-cover"></span>
+        </div>
+    </div>
+    <span class="summary text-multiple-ellipsis" ng-bind="checkSummary(n.summary)" ng-class="{'noSummary': !n.summary}" ng-style="n.textContentStyle"></span>
+    <div class="footer">
+        <span translate="notice.detail"></span>
+    </div>
+    <div class="options" ng-if="!hideOptions">
+      <div class="sendTo"  ng-click="showPublishScope({n:n})">
+        <span translate="notice.send-to"></span>
+      </div>
+      <div class="edit" ng-click="showPublish({n:n,event:$event})" ng-if="!n.id">
+        <i class="icon-edit"></i>
+        <span translate="notice.edit"></span>
+      </div>
+      <div class="forwdTo" ng-click="forward({n:n,event:$event})" ng-if="n.id">
+        <i class="icon-forward"></i>
+        <span translate="notice.forward"></span>
+      </div>
+      <div class="delete" ng-click="deleteNotice({n:n})">
+        <i class="icon-remove"></i>
+        <span translate="notice.delete"></span>
+      </div>
+    </div>
+</div>

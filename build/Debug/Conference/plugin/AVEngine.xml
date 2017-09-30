@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AVModuleConfiguration>
+	<!--globle image post process. 1111:(denoise, contrast, color, sharpen)-->
+	<PicPostProcess>4</PicPostProcess>
+	
+	<BFrameNum>0</BFrameNum>
+	
+	<!--bitrate for the 1280x720, 640x360, 320x180, 160x90, 80x45-->
+	<Bitrate0>550</Bitrate0>
+	<Bitrate1>300</Bitrate1>
+	<Bitrate2>150</Bitrate2>
+	<Bitrate3>50</Bitrate3>
+	<Bitrate4>30</Bitrate4>
+
+	<!--DTS send layer num. 1111:(160,320,640,1280)-->
+	<ServerSendLayerCnt0>7</ServerSendLayerCnt0>
+	<ServerSendLayerCnt1>14</ServerSendLayerCnt1>
+	<ServerSendLayerCnt2>12</ServerSendLayerCnt2>
+	
+	<!--audio-->
+	<agc_enable>1</agc_enable>
+	<reverb_enable>0</reverb_enable>
+	<reverb_drytime>43</reverb_drytime>
+	<reverb_wettime>57</reverb_wettime>
+	<reverb_dampness>45</reverb_dampness>
+	<reverb_roomwidth>56</reverb_roomwidth>
+	<reverb_roomsize>56</reverb_roomsize>
+	<iir_enable>0</iir_enable>
+	<iir_freq>400</iir_freq>
+	<iir_gain>10</iir_gain>
+	<iir_type>1</iir_type>
+</AVModuleConfiguration>

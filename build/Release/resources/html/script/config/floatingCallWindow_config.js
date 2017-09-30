@@ -1,0 +1,52 @@
+/**
+ * Created by waouyang on 15/12/10.
+ */
+[
+    'src/js/lib/jquery-2.1.4.js',
+    'src/js/uc.js',
+    /*Constants**/
+    'src/js/constants/Constants.js',
+    'src/js/constants/ErrorCode.js',
+    /*Utils**/
+    'src/js/util/EventUtil.js',
+    'src/js/util/HashMap.js',
+    'src/js/util/WindowUtil.js',
+    'src/js/util/StringUtil.js',
+    'src/js/util/TimeUtil.js',
+    'src/js/util/LogUtil.js',
+    'src/js/util/StorageUtil.js',
+    'src/js/util/SystemUtil.js',
+    'src/js/util/ImageUtil.js',
+    'src/js/util/AvatarUtil.js',
+    /* Components **/
+    'src/js/service/UIService.js',
+    /* Interfaces **/
+    'src/js/interfaces/IUIEvent.js',
+    'src/js/interfaces/IUIService.js',
+    'src/js/interfaces/ICallService.js',
+    'src/js/interfaces/ICallEvent.js',
+    'src/js/interfaces/IContactService.js',
+    'src/js/interfaces/IContactEvent.js',
+    'src/js/interfaces/IIMService.js',
+    'src/js/interfaces/IIMEvent.js',
+    'src/js/interfaces/IGroupService.js',
+    'src/js/interfaces/IGroupEvent.js',
+	'src/js/interfaces/ISharingService.js',
+	'src/js/interfaces/ISharingEvent.js',
+    'src/js/listener/event_config.js',
+    'src/js/listener/service_config.js',
+    'src/js/listener/native_event_config.js',
+    'src/js/listener/native_service_config.js',
+    'src/js/listener/manager.js',
+	/* Cache Data **/
+	'src/js/modules/cache/CacheEventListener.js',
+	'src/js/modules/cache/BasicContactInfoCache.js',
+    'src/js/modules/message/chat/ChatManager.js',
+    'src/js/modules/component/PromptMessageBox.js',
+    'src/js/modules/component/TitleBarButton.js',
+    'src/js/modules/component/FloatingCallWindowToolBar.js',
+    'src/js/modules/call/CallInfo.js',
+    'src/js/modules/call/FloatingCallWindowEventListener.js',
+    'src/js/modules/call/FloatingCallWindowManager.js',
+    'src/js/modules/call/FloatingCallWindow.js'
+]

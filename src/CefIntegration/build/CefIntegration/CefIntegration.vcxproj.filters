@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{fb03fe34-6273-4662-a9e7-6f3db32ca51a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\browser">
+      <UniqueIdentifier>{489b27ec-ed20-4efe-a660-eb1501b40b51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\renderer">
+      <UniqueIdentifier>{84ebeafa-af67-4a2c-8649-08fac2babae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\browser\drag_drop">
+      <UniqueIdentifier>{d77b6490-3b09-4779-ae28-f30b7d11e55b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{3aefffd8-e827-4d8c-b5e5-d29ea660783c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\browser">
+      <UniqueIdentifier>{34054517-2e70-49c7-838b-76dd63c9049b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\renderer">
+      <UniqueIdentifier>{748b2218-529f-41a7-8dd9-6617ff42ecdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{3c9e12e1-b287-461c-8e12-745a75a27303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="include\browser\drag_drop">
+      <UniqueIdentifier>{0a9c2a3b-5364-4686-80b2-69ee110eaafd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils\xml">
+      <UniqueIdentifier>{526984fa-1ab0-4813-a054-09a5eb3823b5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\resources\CefIntegration.js">
+      <Filter>resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\resources\CefIntegration.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\CefClient.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\CefJSConversion.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ClientApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\Dialog.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\FileUtil.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\ImageUtil.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\CefOSRWindow.cpp">
+      <Filter>src\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\CefWindow.cpp">
+      <Filter>src\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\ClientHandler.cpp">
+      <Filter>src\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\OsrUtil.cpp">
+      <Filter>src\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\WindowExtension.cpp">
+      <Filter>src\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\WindowManager.cpp">
+      <Filter>src\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\WindowResizableHandler.cpp">
+      <Filter>src\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\drag_drop\bytes_write_handler.cc">
+      <Filter>src\browser\drag_drop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\drag_drop\geometry_util.cc">
+      <Filter>src\browser\drag_drop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\drag_drop\osr_dragdrop_win.cc">
+      <Filter>src\browser\drag_drop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\renderer\ClientExtensionHandler.cpp">
+      <Filter>src\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\third_party\pugixml\src\pugixml.cpp">
+      <Filter>src\utils\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\Tray.cpp">
+      <Filter>src\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\Font.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\Proxy.cpp">
+      <Filter>src\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\browser\ProxyAuthWnd.cpp">
+      <Filter>src\browser</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\resources\resource.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\CefClient.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\CefJSConversion.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ClientApp.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\ClientDefs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Delegate.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\renderer\ClientExtensionHandler.h">
+      <Filter>include\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\CefOSRWindow.h">
+      <Filter>include\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\CefWindow.h">
+      <Filter>include\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\ClientHandler.h">
+      <Filter>include\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\WindowFeature.h">
+      <Filter>include\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\WindowManager.h">
+      <Filter>include\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\WindowResizableHandler.h">
+      <Filter>include\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\drag_drop\osr_dragdrop_events.h">
+      <Filter>include\browser\drag_drop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\drag_drop\osr_dragdrop_win.h">
+      <Filter>include\browser\drag_drop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\Dialog.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\FileUtil.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\ImageUtil.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\browser\OsrUtil.h">
+      <Filter>src\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\browser\WindowExtension.h">
+      <Filter>src\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\browser\drag_drop\bytes_write_handler.h">
+      <Filter>src\browser\drag_drop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\browser\drag_drop\geometry_util.h">
+      <Filter>src\browser\drag_drop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\third_party\pugixml\src\pugiconfig.hpp">
+      <Filter>src\utils\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\third_party\pugixml\src\pugixml.hpp">
+      <Filter>src\utils\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\Tray.h">
+      <Filter>include\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\browser\JsExtDef.h">
+      <Filter>src\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\Font.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\Proxy.h">
+      <Filter>include\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\browser\ProxyAuthWnd.h">
+      <Filter>include\browser</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,116 @@
+.body-container{
+    overflow: hidden;
+    background-color: rgba(00,00,00, .7);
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-user-select: none;
+}
+.body-container .icon-preview-close{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 32px;
+    height: 32px;
+    background: rgba(0,0,0, .4) url("../images/preview/icon_close.png") no-repeat center center ;
+    border-radius: 50%;
+    background-size: 16px 16px;
+    z-index: 1;
+    cursor: pointer;
+}
+.body-container .image-container{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.body-container .image-container .image-node{
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    position: relative;
+    overflow: hidden;
+}
+.body-container .image-container img{
+    max-width: 100%;
+    max-height: 100%;
+    cursor: -webkit-grab;
+    border-radius: 3px;
+    box-shadow: 0 0 5px white;
+    position: absolute;
+}
+.body-container .image-container img.drag{
+    -webkit-transition: inherit;
+}
+.body-container .image-container img.d90{
+    transform: rotate(90deg) !important;
+    -webkit-transform: rotate(90deg) !important;
+}
+.body-container .image-container img.d180{
+    transform: rotate(180deg) !important;
+    -webkit-transform: rotate(180deg) !important;
+}
+.body-container .image-container img.d270{
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg) !important;
+}
+.body-container .control-container{
+    height: 40px;
+    /*width: 200px;*/
+    border-radius: 20px;
+    background-color: rgba(59,78,97, .8);
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 20px;
+    padding: 0 20px;
+}
+.body-container .control-container .control-btn{
+    width: 36px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.body-container .control-container .previous{
+    background-image: url("../images/preview/icon_previous.png");
+}
+.body-container .control-container .previous.disabled{
+    background-image: url("../images/preview/icon_previous_disabled.png");
+}
+.body-container .control-container .next{
+    background-image: url("../images/preview/icon_next.png");
+}
+.body-container .control-container .next.disabled{
+    background-image: url("../images/preview/icon_next_disabled.png");
+}
+.body-container .control-container .download{
+    background-image: url("../images/preview/icon_download.png");
+}
+.body-container .control-container .rotate{
+    background-image: url("../images/preview/icon_rotate.png");
+}
+.body-container .control-container .cloud{
+    background-image: url("../images/preview/icon_cloud.png");
+}
+.image-node .scale-size{
+    font-size: 12px;
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -15px;
+    background-color: rgba(69,71,74, 0.6);
+    display: none;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 3px #eee;
+    z-index: 3;
+}

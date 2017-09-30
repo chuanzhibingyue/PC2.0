@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/show_minutes.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/showMinutes.js"></script>
+    <title></title>
+</head>
+<body>
+  <div class="show-Minutes child-window-shadow">
+      <div class="window-bar">
+          <span class="title"><span class="userName"></span>{{Meeting.OthersMeetingSummary}}</span>
+          <div class="tool-icon-container">
+              <span class="icon-close tool-icon"></span>
+          </div>
+      </div>
+      <div class="title-Minutes">
+          <span class="userName"></span>{{Meeting.OthersMeetingSummary}}
+      </div>
+      <div class="content-Minutes">
+           <script id="discussion" type="text/plain" style="height:320px;margin-left:18px;margin-right:20px;height:400px;"></script>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+.check-for-updates{
+    width: 560px;
+    height: 214px;
+    background-color: #ffffff;
+}
+.title{
+    color:#3b4f61;
+    font-size: 14px;
+    margin: 13px 494px 13px 10px;
+}
+.line{
+    width: 100%;
+    border-bottom: solid 1px #dadada;
+}
+.logo{
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+}
+
+.loading{
+    /*display: none;*/
+}
+.new-version{
+    display: none;
+}
+.version{
+    display: none;
+}
+.checkup_failed{
+    display: none;
+}
+.loading .progressBar{
+    width:400px;
+    height:2px;
+    margin-top:10px;
+    background-color: #dadada;
+}
+#bar{
+    width: 0;
+    height: 2px;
+    background: #3b4f61;
+}
+.loading-here{
+    position: absolute;
+    top: 95px;
+    left: 130px;
+}
+
+.cancel,
+.update-now,
+.confirm {
+    position: absolute;
+    top: 170px;
+    left: 380px;
+    width: 164px;
+    height: 32px;
+    border: none;
+    color: #ffffff;
+    background-color: #4f667b;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+.content{
+    position: absolute;
+    font-size: 14px;
+    color: #3b4f61;
+    top: 80px;
+    left: 130px;
+}

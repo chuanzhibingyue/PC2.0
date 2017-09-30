@@ -1,0 +1,1112 @@
+.new-meeting {
+    background-color: #fff;
+}
+
+.new-meeting * {
+    font-size: 12px;
+    color: #777777;
+}
+
+.new-meeting .meeting-body {
+    position: absolute;
+    left: 0;
+    right: 3px;
+    top: 43px;
+    bottom: 68px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.new-meeting .clear-float {
+    clear: both;
+}
+
+.new-meeting .title {
+    color: #999;
+    font-size: 12px;
+}
+
+.new-meeting .item {
+    height: 20px;
+    line-height: 25px;
+}
+
+.new-meeting .meeting-icon {
+    float: left;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    text-indent: -10000px;
+    background-image: url(../images/meeting/icon_time.png);
+}
+
+.new-meeting .attendee {
+    background-image: url(../images/meeting/icon_attendee.png);
+    margin-top: -1px;
+}
+
+.new-meeting .location {
+    /*background-image: url(../images/meeting/icon_location.png);*/
+}
+
+.new-meeting .remark {
+    background-image: url(../images/meeting/icon_remark.png);
+}
+
+.new-meeting .content {
+    outline: none;
+    height: 30px;
+}
+
+.new-meeting .save {
+    border: none;
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+.new-meeting .window-bar {
+    height: 43px;
+    line-height: 43px;
+    vertical-align: middle;
+    padding: 0 10px;
+    background-image: url(../images/bottom_border.png);
+    background-repeat: repeat-x;
+    background-position-y: 40px;
+}
+
+.new-meeting .window-bar .title {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #3b4f61 !important;
+}
+
+.new-meeting .window-bar .tool-icon-container {
+    top: 0;
+    line-height: 20px;
+}
+
+.new-meeting .meeting-name {
+    position: relative;
+    left: 1px;
+    line-height: 50px;
+    height: 50px;
+    padding: 0 20px;
+    margin-top: 10px;
+}
+
+.new-meeting .meeting-name .content {
+    padding: 0px 20px;
+    margin: 0 15px;
+    height: 30px;
+    width: 673px;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+}
+.new-meeting .meeting-name .content:focus{
+    border: 1px solid #ffcc00;
+}
+
+.new-meeting .meeting-row {
+    padding:20px;
+    background-color:transparent;
+    /*border-top: solid 1px #f7f7f7;*/
+}
+
+.new-meeting .meeting-row .wrap{
+    padding-left:20px;
+}
+
+.new-meeting .meeting-row .wrap .high-setting{
+    float: right;
+    color: #71aee2;
+    cursor: pointer;
+}
+
+.new-meeting .meeting-row.slideDown .wrap{
+    display: none;
+}
+
+.new-meeting .meeting-row .group-time, .new-meeting .address, .new-meeting .mark{
+    margin-top: 10px;
+}
+
+.new-meeting .meeting-row .group-time .left{
+    float: left
+}
+
+.new-meeting .meeting-row .group-time .middle{
+    float: left;
+    margin-top: 9px;
+    margin-left: 20px;
+    width: 660px;
+    height: 1px;
+    background-color: #ededed;
+}
+
+.new-meeting .meeting-row .group-time .btnSlide{
+    float: left;
+    width: 6px;
+    height: 6px;
+    border: 2px solid #C6C6C6;
+    margin-left: 20px;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 2px;
+    -webkit-transform: rotate(45deg);
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+.new-meeting .meeting-row.slideDown .btnSlide{
+    margin-top: 4px;
+    -webkit-transform: rotate(225deg);
+}
+
+.new-meeting .meeting-row .group-time .btnSlide:hover{
+    border: 2px solid #9D9D9D;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 2px;
+}
+
+.new-meeting .meeting-row .group-time .btnSlide:active{
+    border: 2px solid #787878;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 2px;
+}
+
+.new-meeting .meeting-row .row-container {
+    vertical-align: middle;
+    padding: 16px 0;
+    position: relative;
+}
+
+.new-meeting .attendees-list {
+    margin-left: 25px;
+    float: left;
+    position: relative;
+    width: 398px;
+}
+
+.new-meeting .date-time-area, .new-meeting .hours-area, .new-meeting .timezone-area, .new-meeting .whole-day-area {
+    display: inline-block;
+    float: left;
+    min-height: 1px;
+    margin-right: -1px;
+    padding: 5px 10px;
+    line-height: 25px;
+    border-left: solid 1px #f7f7f7;
+    border-right: solid 1px #f7f7f7;
+}
+
+.new-meeting .date-time-area {
+    /*width: 180px;*/
+    width: 100%;
+    border: none;
+    padding-left: 0;
+}
+
+.new-meeting .date-time-area  .time-wrap{
+    display: inline-block;
+    width: 190px;
+}
+
+.new-meeting .date-time-area  .time-wrap .start-time, .new-meeting .date-time-area  .time-wrap .end-time{
+    display: inline-block;
+}
+
+.new-meeting .hours-area {
+    width: 76px;
+}
+
+.new-meeting .timezone-area {
+    width: 155px;
+}
+
+.new-meeting .whole-day-area {
+    width: 35px;
+    float: left;
+    border-right: none;
+}
+
+.new-meeting .date, .new-meeting .time {
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+    border-radius: 2px;
+}
+
+.new-meeting #startTimeBox, .new-meeting #endTimeBox{
+    width: 36px;
+    height: 23px;
+    line-height: 21px;
+    border: 1px solid white;
+    outline: none;
+    float: right;
+    padding: 1px 3px 2px 3px;
+}
+
+.new-meeting .date {
+    width: 90px;
+    height: 25px;
+    padding-top: 2.5px;
+}
+
+.new-meeting .hours, .new-meeting .timezone, .new-meeting .whole-day {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.00);
+    position: relative;
+    margin-top: 2px;
+}
+
+.new-meeting .hours {
+    width: 76px;
+}
+
+.new-meeting .timezone {
+    width: 150px;
+}
+
+.new-meeting .whole-day {
+    border: none;
+    width: 50px;
+}
+
+.new-meeting .timezone span {
+    display: inline-block;
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.new-meeting .time:hover, .new-meeting .hours:hover, .new-meeting .timezone:hover, input.timeBox:hover {
+    border: 1px solid #dfdfdf !important;
+    border-radius: 2px;
+}
+
+.timeBox::selection{
+    background-color: #EDE90E;
+}
+
+.new-meeting .me {
+    display: inline-block;
+    padding: 0 10px;
+    height: 26px;
+    line-height: 26px;
+    background-color: #ffcc00;
+    text-indent: 30px;
+    margin-right: 10px;
+    color: #fff;
+    float: left;
+    border-radius: 3px;
+    background-image: url(../images/meeting/icon_host.png);
+    background-repeat: no-repeat;
+    background-position: 5px 50%;
+    min-width: 25px;
+}
+
+.new-meeting .add{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    text-indent: -10000px;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    float: right;
+    background-image: url(../images/meeting/icon_attendee_add.png);
+    background-repeat: no-repeat;
+}
+
+.new-meeting .calendarAttendee{
+    display: inline-block;
+    width: 33px;
+    height: 26px;
+    margin: 0;
+    padding: 0;
+    float: right;
+    background-image:url(../images/meeting/icon_attendee_list.png);
+    background-repeat: no-repeat;
+}
+
+.new-meeting .attendance {
+    /*float: left;*/
+    /*margin-right: 10px;*/
+    height: 26px;
+    line-height: 26px;
+    /* padding: 0 10px; */
+    font-size: 14px;
+    color: #3b4f61;
+    /*background-color: #f7f7f7;*/
+    /*border-radius: 2px;*/
+    cursor: pointer;
+}
+
+.new-meeting .attendance-selected {
+    background-color:#d1e1ef;
+}
+
+.new-meeting .wait-delete {
+    background-color: red;
+}
+
+.new-meeting .inputAttend {
+    margin-left: 30px;
+    width: 400px;
+    outline:none;
+}
+
+
+.new-meeting .me, .new-meeting .add, .new-meeting .calendarAttendee, .new-meeting .attendance{
+    /*margin-bottom: 3px;*/
+    font-size: 12px;
+}
+
+.new-meeting .empty-mark {
+    float: left;
+    margin-top: 3px;
+    margin-right: 10px;
+    height: 30px;
+    line-height: 27px;
+    color: #999;
+}
+
+
+.new-meeting .address {
+    /*margin-left: 25px;*/
+    width: 398px;
+}
+
+.new-meeting .cloud-meeting {
+    float: left;
+    margin-right: 10px;
+    line-height: 66px;
+    width: 32px;
+}
+
+.new-meeting .repeat {
+    float: left;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.new-meeting .mark {
+    width: 787px;
+    padding-right: 10px;
+    height: 220px;
+    resize: none;
+    color: #777777;
+    font-size: 12px;
+    line-height: 18pt;
+}
+
+.new-meeting .meeting-save {
+    position: absolute;
+    bottom: 0px;
+    height: 68px;
+    line-height: 68px;
+    padding: 0 20px;
+    right: 0px;
+    left: 0px;
+    background-color: #ffffff;
+    text-align: right;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: 1px solid #ededed;
+}
+
+.new-meeting .meeting-save .left{
+    float: left;
+}
+
+.new-meeting .meeting-save .left>span{
+    color: #173553;
+}
+
+.new-meeting .meeting-save .save {
+    display: inline-block;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    background-color: #47607a;
+    border-radius: 3px;
+    color: white;
+}
+
+.new-meeting .meeting-save .save:hover {
+    background-color: #607588;
+}
+
+.new-meeting .meeting-save .save:active {
+    background-color: #465b6e;
+}
+
+.new-meeting .meeting-save .cancel {
+    display: inline-block;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    background-color: #eeeeee;
+    border-radius: 3px;
+    color: #3b4f61;
+    margin-right: 10px;
+}
+
+.new-meeting .meeting-save .cancel:hover {
+    background-color: #eeeeee;
+}
+
+.new-meeting .meeting-save .cancel:active {
+    background-color: #d4d4d4;
+}
+
+.new-meeting .meeting-edit:hover, .new-meeting .meeting-edit:hover * {
+    /*background-color: #fffff3;*/
+}
+
+.new-meeting .meeting-name span {
+    font-size: 12px;
+}
+
+.new-meeting .meeting-name .input-length {
+    right: 31px;
+}
+
+.new-meeting .meeting-edit:hover span {
+    display: inline;
+}
+.new-meeting .loading-layer{
+    position: absolute;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.24;
+    top: 41px;
+    bottom: 0px;
+    display: none;
+}
+.new-meeting .loading-info
+{
+    position: absolute;
+    width: 369px;
+    height: 42px;
+    text-align: center;
+    border-radius: 3px;
+    display: none;
+    z-index: 4;
+    background-color: #f96868;
+    margin: 0px 30px;
+}
+.new-meeting .loading{
+    height: 40px;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 40px;
+    float: left;
+    margin-left: 20px;
+}
+
+.attendee-box, .create-attendees, .attendee-time-box, .user-list-box{
+    position: relative;
+    height: auto;
+}
+/* overwrite css*/
+.new-meeting  .content {
+    height: 30px;
+    width: calc(100% - 10px);
+    background-color: #ffffff;
+    border: 1px solid #dadada;
+    color: #03111f;
+}
+.new-meeting .ipt-text
+{
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    color: #03111f;
+    background-color: #ffffff;
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    padding-left: 10px;
+}
+.new-meeting .ipt-text:focus
+{
+    border: 1px solid #3399f3 !important;
+    background-color: #ffffff !important;
+}
+
+.new-meeting .inputAttend.ipt-text:focus{
+    border: none !important;
+}
+
+/* meeting names*/
+
+.new-meeting .meeting-names
+{
+    position: relative;
+    line-height: 30px;
+}
+
+.new-meeting .meeting-names .txt-length {
+    float:right;
+}
+.new-meeting .group-time  .Timeleft
+{
+    float: left;
+}
+.new-meeting .group-time  .TimeSetting
+{
+    float: right;
+    cursor: pointer;
+}
+.new-meeting .group-time  .TimeSetting .high-setting
+{
+    color: #71aee2;
+}
+.new-meeting .meeting-rows {
+    padding:5px 30px;
+    background-color:transparent;
+}
+.new-meeting .date-time-area  .time-wraps{
+    float: left;
+    width: 200px;
+    border: solid 1px #dadada;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.new-meeting .date-time-area  .time-duration{
+    float: right;
+    width: 120px;
+    border: solid 1px #dadada;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.new-meeting .date-time-area  .time-duration .duration {
+    width: 53px;
+    display: inline-block;
+    line-height: 17px;
+}
+/*.new-meeting .date-time-area  .time-wraps .pickAdate-inputBox{*/
+    /*border-style: none;*/
+    /*width: 150px;*/
+/*}*/
+/*.new-meeting .date-time-area  .time-wraps .pickAdate-inputBox input:first-child{*/
+    /*width: 105px;*/
+/*}*/
+.new-meeting .date-time-area  .time-wraps .timetitle
+{
+    float:left;
+}
+.new-meeting .date-time-area  .time-wraps .start-time
+{
+    position: relative;
+    top: 3px;
+    display: inline-block;
+}
+/*.new-meeting .date-time-area  .time-wraps .start-time .weekspan {*/
+    /*position: absolute;*/
+    /*margin-left: 70px;*/
+    /*width: 35px;*/
+    /*line-height: 22px;*/
+    /*font-size: 12px;*/
+    /*color: #173553;*/
+/*}*/
+.new-meeting .date-time-area .setting-timezone .timezoneRow
+{
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px #dadada;
+    margin-top: 5px;
+}
+.new-meeting .date-time-area .rightLine
+{
+    float: left;
+    margin-right: 4px;
+    padding-right: 10px;
+    border-style: none;
+    border-right: solid 1px #ededed;
+    height: 18px;
+    line-height: 18px;
+    margin-top: 6px;
+}
+.new-meeting .date-time-area .setting-timezone .timeZonelist
+{
+    display: inline-block;
+    margin-top: 5px;
+}
+.new-meeting .date-time-area .setting-timezone .timeZonelist span
+{
+    display: inline-block;
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+    max-width: 255px;
+}
+.new-meeting .date-time-area .setting-timezone .timeZonelist:hover {
+    border: 1px solid #dfdfdf !important;
+    border-radius: 2px;
+    line-height:20px;
+    height: 20px;
+    display: inline-block;
+}
+.new-meeting .date-time-area .setting-timezone .timeZone
+{
+    width: calc(100% - 10px);
+}
+
+.new-meeting .date-time-area .setting-timezone .timeZoneCycle
+{
+    float:left;
+    width:140px;
+}
+.new-meeting .date-time-area  .setting-timezone
+{
+    float:left;
+    width:100%;
+}
+.new-meeting .date-time-area  .whole-day-area
+{
+    float:right;
+}
+
+.new-meeting .date-time-area .whole-day-areas {
+    width: 85px;
+    float: right;
+    border-right: none;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    text-align: right;
+}
+.new-meeting .date-time-area .whole-days {
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.00);
+    position: relative;
+    bottom:2px;
+    display: inline-block;
+}
+.new-meeting .date-time-area .isRepeats:hover {
+    border: 1px solid #dfdfdf !important;
+    border-radius: 2px;
+    line-height:20px;
+    display: inline-block;
+}
+
+.attendee-box {
+    width: 100%;
+    line-height: 30px;
+    overflow: hidden;
+}
+.new-meeting .attendee-box .btnBatchUser
+{
+    float: right;
+    color: #71aee2;
+    cursor: pointer;
+}
+.attendee-box .attendee-list
+{
+    border: solid 1px #dadada;
+    line-height: 30px;
+    padding-left: 5px;
+}
+.new-meeting .selects
+{
+    border: 1px solid #3399f3 !important;
+    background-color: #ffffff !important;
+}
+.attendee-box .attendee-list .emcee,
+.attendee-box .attendee-list .attendees
+{
+    background-color: #e9e9e9;
+    margin-right: 5px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 0 11px;
+}
+.attendee-box .attendee-list .attendees:hover
+{
+    /*padding-left: 5px;*/
+    /*padding-right: 17px;*/
+    padding: 0 5px;
+}
+.new-meeting .attendees .delete-icon{
+    height: 8px;
+    width: 8px;
+    font-size: 8px;
+    margin-left: 4px;
+    display: none;
+    color: #777777;
+}
+.new-meeting .attendees:hover .delete-icon{
+    display: inline-block;
+}
+
+.attendee-box .attendee-list .busyUser:hover .delete-icon{
+    color: white;
+}
+
+.attendee-box .attendee-list .busyUser{
+    background-color: #f96868;
+}
+.attendee-box .attendee-list .emcee.busyUser,
+.attendee-box .attendee-list .busyUser .name{
+    color: #ffffff;
+}
+
+.attendee-box .busy-node{
+    margin-top: 2px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: #fffde2;
+    border: solid 1px #d7d17c;
+    display: none;
+}
+
+.attendee-box .busy-node .busy-hint{
+    margin-left: 5px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #a12121;
+}
+.attendee-box .busy-node .view-busy-status{
+    text-decoration: underline;
+    margin-left: -2px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #71aee2;
+    cursor: pointer;
+}
+.attendee-box .ErrMsg
+ {
+     margin-top: 2px;
+     height: 30px;
+     border-radius: 2px;
+     background-color: #fffde2;
+     border: solid 1px #d7d17c;
+     display: none;
+ }
+.attendee-box .ErrMsg .ErrInfo
+{
+    margin-left: 5px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #a12121;
+}
+.attendee-box .addUser
+{
+    display: inline-block;
+}
+.attendee-box .inputAttend {
+    margin-left: 0px;
+    width: 140px;
+    height: 26px;
+    line-height: 26px;
+    outline: none;
+    border-style: none;
+    background-color: #fff;
+}
+
+.create-attendees, .attendee-time-box{
+    display: inline-block;
+}
+.create-attendees {
+    position: absolute;
+    width: 95px;
+    border-right: 1px solid #ededed;
+}
+.create-attendees .attendee-list{
+    max-height: 210px;
+    /*overflow: hidden;*/
+}
+.create-attendees .header{
+    height: 60px;
+    line-height: 60px;
+    background-color: white;
+    position: relative;
+    z-index: 3;
+    border-bottom: 1px solid #dadada;
+}
+.create-attendees .attendee-list>div, .attendee-time-box .attendee-time{
+    height: 29px;
+    line-height: 29px;
+    border-top: 1px solid #dadada;
+}
+.create-attendees .attendee-list>div:first-child, .user-list-box .attendee-time.owner{
+    border-top: none;
+}
+.create-attendees .attendee-list *{
+    color: #4f667b;
+}
+.new-meeting .marks {
+    height: 80px;
+    resize: none;
+    color: #777777;
+    font-size: 12px;
+    line-height: 18pt;
+    width: calc(100% - 10px);
+}
+
+/* 右侧时间 */
+.attendee-time-box{
+    float: right;
+    width: 100%;
+    margin-right: 4px;
+    overflow: hidden;
+    max-height: 270px;
+}
+.attendee-time-box .header{
+    text-align: center;
+}
+.user-list-box{
+    position: relative;
+    z-index: 1;
+    max-height: 210px;
+    /*overflow-y: auto;*/
+    margin-right: 14px;
+}
+
+.attendee-time-box .header .current-time{
+    font-size: 14px;
+    color: #173553;
+}
+.attendee-time-box .header .prev{
+    background-image: url(../images/meeting/icon_nav_prev_mini.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: inline-block;
+    height: 13px;
+    line-height: 13px;
+    width: 13px;
+    outline: none;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.attendee-time-box .header .next{
+    background-image: url(../images/meeting/icon_nav_next_min.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: inline-block;
+    height: 13px;
+    line-height: 13px;
+    width: 13px;
+    outline: none;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.attendee-time-box .meeting-horizontal-scroll{
+    /*display: none;*/
+    height: 6px;
+    width: 720px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 4;
+    cursor: pointer;
+    overflow: auto;
+}
+.attendee-time-box .meeting-horizontal-scroll.ps-fixed{
+    position: fixed;
+    bottom: 83px;
+}
+.attendee-time-box .meeting-horizontal-scroll .content-length{
+    width: 1440px;
+    height: 1px;
+}
+.attendee-time-box .meeting-vertical-scroll{
+    /*display: none;*/
+    height: 210px;
+    width: 6px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    cursor: pointer;
+    overflow: auto;
+    right: 0px;
+    top: 0;
+    margin-top: 66px;
+}
+.attendee-time-box .meeting-vertical-scroll .content-length{
+    width: 1px;
+}
+.attendee-time-box .meeting-time-box{
+    width: 1450px;
+    position: relative;
+    /*overflow: hidden;*/
+}
+.attendee-time-box .time-hours{
+    height: 20px;
+    border-bottom: 1px solid #ededed;
+}
+.attendee-time-box .time-hours .time-pointer{
+    display: inline-block;
+    text-indent: 5px;
+    width: 59px;
+    color: #adadad;
+    border-right: 1px solid #ededed;
+    position: relative;
+    background-color: white;
+    z-index: 2;
+}
+.attendee-time-box .time-hours .time-pointer .hour{
+    color: #47607a;
+}
+.attendee-time-box .attendee-time{
+    position: relative;
+    background: url(../images/meeting/meeting_timeline.png);
+}
+
+.attendee-time-box .header{
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    position: relative;
+    z-index: 4;
+}
+.attendees-group-add .icon-meeting-add{
+    cursor: pointer;
+    font-size: 32px;
+    vertical-align: middle;
+    color: #ffcc00;
+}
+.attendees-group-add .icon-meeting-add:hover{
+    color:#ffe066
+}
+.attendees-group-add .icon-meeting-add:active{
+    color: #cca300;
+}
+
+.meeting-time-box .time-rule {
+    top: -10px;
+    position: absolute;
+    width: 1px;
+    bottom: 0px;
+    background-color: #3b4f61;
+    display: none;
+    z-index: 4;
+}
+
+.meeting-time-box .rule-time-box {
+    position: absolute;
+    top: -10px;
+    color: #adadad;
+    width: 30px;
+    background-color: #3b4f61;
+    text-align: center;
+    border-radius: 3px;
+    display: none;
+    line-height: 10px;
+    z-index: 4;
+}
+
+.meeting-time-box .rule-time-box .hour,
+.meeting-time-box .rule-time-box .minute {
+   color: #adadad;
+    font-size: 8px;
+    height: 15px;
+    line-height: 15px;
+}
+
+.meeting-time-box .rule-time-box .hour {
+    color: #fff;
+}
+
+.user-list-box .meeting-timeline {
+    position: absolute;
+    bottom: 0;
+    display: none;
+    z-index: 4;
+}
+
+.user-list-box .meeting-timeline .head {
+    background-color: #4cd964;
+    height: 3px;
+}
+
+.user-list-box .meeting-timeline .body {
+    position: absolute;
+    top: 3px;
+    bottom: 0;
+    background-color: #4cd964;
+    width: 100%;
+    opacity: 0.3;
+}
+
+.user-list-box .meeting-timeline-busy .head,
+.user-list-box .meeting-timeline-busy .body {
+    background-color: #f96868;
+}
+
+.user-list-box .meeting-timeline-attendee-busy .head,
+.user-list-box .meeting-timeline-attendee-busy .body {
+    background-color: #71aee2;
+}
+.user-list-box .current-time{
+    bottom: 0;
+    background-color: #808080;
+    opacity: 0.1;
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+.user-list-box .timeline-segment{
+    top: 10px;
+    position: absolute;
+    height: 10px;
+    background-color: #3b4f61;
+}
+
+.time-wrap .timetitle{
+    display: block;
+    float:left;
+    margin-right: 10px;
+}
+/* map css*/
+.tangram-suggestion-main
+{
+    height:180px;
+}
+.tangram-suggestion
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height:180px;
+}
+.tangram-suggestion-main table td
+{
+    line-height: 50px;
+    height: 50px;
+    padding-left: 10px
+}
+.tangram-suggestion-main table td:hover
+{
+    line-height: 50px;
+    height: 50px;
+    background-color: #71aee2;
+}

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\UCPlugin.cpp" />
+    <ClCompile Include="..\..\..\..\src\PluginInstance.cpp">
+      <Filter>include\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\StringConvert.cpp">
+      <Filter>include\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\WindowManger.cpp">
+      <Filter>include\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginPipe.cpp">
+      <Filter>include\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{7367e349-c3a2-4c34-ac92-2e0abc5795d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\src">
+      <UniqueIdentifier>{34acf92f-91d8-4ae5-9247-f0e70a3be69f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\PluginInstance.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\PluginInterface.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\StringConvert.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\PluginDefs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\PluginConfig.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\WindowManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\Platform.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\PluginPipe.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,106 @@
+/******************/
+.panel{
+    background-color: #fff;
+    /*border: 1px solid #ccc;*/
+    border-radius: 4px;
+}
+.pannel .tool-icon-container .tool-icon{
+    font-size: 10px;
+    padding: 4px;
+    cursor: pointer;
+}
+.panel .tool-icon-container .icon-close:hover{
+    background-color: red;
+    color: #ffffff;
+}
+.panel  .waring-ipt {
+    border-color: red;
+}
+.panelContain{
+    width: 395px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.title{
+    padding: 10px;
+    font-size: 14px;
+}
+.border{
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000000), to(rgba(0, 0, 0, 0)));
+    height: 3px;
+    opacity: 0.1;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}
+.switch-bar {
+    background-color: #ffcc00;
+    display: inline-block;
+    font-size: 10px;
+    border-radius: 9px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 20px;
+    float: left;
+}
+
+.switch-bar .on, .switch-bar .off {
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    float: left;
+    color: #fff;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.switch-bar .on {
+    padding-left: 3px;
+}
+
+.switch-bar .off {
+    padding-right: 3px;
+}
+
+.switch-bar .switch {
+    border: 0px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 20px;
+    top: 0px;
+    transition-duration: 0.2s;
+    box-shadow: 2px 1px 5px #aaa;
+
+}
+.switch-bar a {
+    background: none;
+
+}
+.switch-bar-left {
+    background-color: #ddd;
+}
+
+.switch-bar-left .switch {
+    left: 1px;
+}
+
+.switch-bar-right .switch {
+    left: 18px;
+    transform: translateX(0);
+}
+.notDisturbTitle{
+    font-size: 14px;
+    margin-top: 16px;
+    margin-left: 78px;
+}
+

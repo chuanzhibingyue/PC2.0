@@ -1,0 +1,289 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            
+//  This template script provides the code necessary to build an entry-point 
+//  function to be called in an InstallScript custom action. 
+//                                                                            
+//                                                                            
+//    File Name:  Setup.rul                                                   
+//                                                                            
+//  Description:  InstallShield script                                        
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Include Ifx.h for built-in InstallScript function prototypes, for Windows 
+// Installer API function prototypes and constants, and to declare code for 
+// the OnBegin and OnEnd events.
+#include "ifx.h"
+
+// The keyword export identifies MyFunction() as an entry-point function.
+// The argument it accepts must be a handle to the Installer database.
+export prototype Initialize(HWND);
+export prototype InstallWelcome(HWND);
+export prototype PatchWelcome(HWND);
+export prototype SetupResume(HWND);
+export prototype MaintenanceWelcome(HWND);
+export prototype SetupInterrupted(HWND);
+export prototype SetupCompleteError(HWND);
+export prototype SetupCompleteSuccess(HWND);
+export prototype ExcuteAction(HWND);
+export prototype RealInstall(HWND);
+export prototype Percent10(HWND);
+export prototype Percent30(HWND);
+export prototype Percent50(HWND);
+export prototype Percent80(HWND);
+export prototype RealUninstall(HWND);
+export prototype ExecPreUnistall(HWND);
+export prototype SetRuntimeProperty(HWND);
+
+//调用dll导出函数抛进度给js
+prototype cdecl BOOL MsiDll.PostProgress(NUMBER,NUMBER);
+prototype cdecl int MsiDll.ShowMainWnd(STRING, STRING, STRING);
+prototype cdecl void MsiDll.WaitForUIFinish();
+prototype cdecl void MsiDll.SetInstallType(NUMBER);
+prototype cdecl int MsiDll.GetInstallType();
+prototype cdecl void MsiDll.GetInstallDir(BYREF STRING);
+prototype cdecl void MsiDll.CleanUpBeforUninstallFromCP();
+prototype cdecl void MsiDll.MyLog(int, STRING);
+LONG g_hMsiDll;
+//prototype cdecl int ATLDLL.Init(STRING,NUMBER);
+// To Do:  Declare global variables, define constants, and prototype user-
+//         defined and DLL functions here.
+
+
+// To Do:  Create a custom action for this entry-point function:
+// 1.  Right-click on "Custom Actions" in the Sequences/Actions view.
+// 2.  Select "Custom Action Wizard" from the context menu.
+// 3.  Proceed through the wizard and give the custom action a unique name.
+// 4.  Select "Run InstallScript code" for the custom action type, and in
+//     the next panel select "MyFunction" (or the new name of the entry-
+//     point function) for the source.
+// 5.  Click Next, accepting the default selections until the wizard
+//     creates the custom action.
+//
+// Once you have made a custom action, you must execute it in your setup by
+// inserting it into a sequence or making it the result of a dialog's
+// control event.
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+// Function:  MyFunction
+//                                                                           
+//  Purpose:  This function will be called by the script engine when
+//            Windows(TM) Installer executes your custom action (see the "To
+//            Do," above).
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+
+
+function InstallWelcome(hMSI)
+    // To Do:  Declare local variables.
+    NUMBER nBuffer;
+    STRING strMsg;
+begin
+	strMsg = "function: InstallWelcome preInstall";
+	g_hMsiDll = 0;
+	//MessageBox(strMsg, INFORMATION);
+end;
+
+
+function Initialize(hMSI)
+    // To Do:  Declare local variables.
+    NUMBER nBuffer;
+    STRING strMsg, strSupDir, szValueBuf, strProductCode, strInstallDll, strCmdLine;
+begin
+	strMsg = "function: Initialize";
+	g_hMsiDll = 0;
+	//MessageBox(strMsg, INFORMATION);
+end;
+
+
+function RealUninstall(hMSI)
+     NUMBER nBuffer,nLoadDll;
+    STRING strMsg, strSupDir, strMsiDll, strUILevel;
+begin
+	strMsg = "function: RealUninstall";
+	//MessageBox(strMsg, INFORMATION);
+
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+	strMsiDll = strSupDir ^ "MsiDll.dll";
+	ChangeDirectory(strSupDir);
+	g_hMsiDll = LoadLibraryA(strMsiDll);		
+	MyLog(g_hMsiDll, "After LoadLibraryA in RealUninstall.");
+	if(g_hMsiDll <= 0) then 
+		strMsg = "抱歉！加载MsiDll失败,将以传统方式卸载，更多信息请与蜜蜂开发人员联系！";
+		MessageBox(strMsg, INFORMATION);
+		return ERROR_SUCCESS;
+	endif;
+	
+	//默认是从开始程序菜单发起的卸载
+	SetInstallType(0);		
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "UILevel", strUILevel, nBuffer);
+	//非静默安装,则是控制面板发起的卸载
+	if(strUILevel != "2") then
+		MyLog(0, "Not silence uninstall.");
+		SetInstallType(2);
+	endif;
+end;
+
+function RealInstall(hMSI)
+    // To Do:  Declare local variables.
+    NUMBER nBuffer, nLoadDll, nType;
+    STRING strMsg, strSupDir, strMsiDll, strValue;
+    STRING strProductCode, szInstallDir, szPropvalue, strPackageCode, strVersion;
+    NUMBER nRet;
+begin
+	strMsg = "function: RealInstall";
+	//MessageBox(strMsg, INFORMATION);
+	
+	if(g_hMsiDll == 0) then		
+		nBuffer = MAX_PATH;
+		MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+		strMsiDll = strSupDir ^ "MsiDll.dll";	
+		ChangeDirectory(strSupDir);
+		g_hMsiDll = LoadLibraryA(strMsiDll);
+		MyLog(g_hMsiDll, "After LoadLibraryA in RealInstall.");
+	endif;
+	if(g_hMsiDll <= 0) then 
+		strMsg = "抱歉！加载MsiDll失败,将以传统界面安装，更多信息请与蜜蜂开发人员联系！";
+		MessageBox(strMsg, INFORMATION);
+		return ERROR_SUCCESS;
+	endif;
+	
+	nType = GetInstallType();
+	if(nType == 2) then
+		MyLog(0, "Uninstall from control panel");
+		CleanUpBeforUninstallFromCP();
+		//FreeLibrary(nLoadDll);	//从控制面板启动的卸载使用传统界面
+	else
+		if(nType == 1) then
+			nBuffer = MAX_PATH;
+			MsiGetProperty(hMSI, "ProductCode", strProductCode, nBuffer);
+	
+			nBuffer = MAX_PATH;
+			MsiGetProperty(hMSI, "PackageCode", strPackageCode, nBuffer);
+			strVersion = IFX_PRODUCT_VERSION;
+
+		endif;
+		nRet = ShowMainWnd(strProductCode, strPackageCode, strVersion);
+		if(nRet == 0) then
+			MyLog(0, "Before return ERROR_INSTALL_USEREXIT.");
+			FreeLibrary(g_hMsiDll);
+			return ERROR_INSTALL_USEREXIT;
+			//abort;//用户点击取消
+		endif;	
+	endif;
+end;
+
+
+function Percent10(hMSI)
+    // To Do:  Declare local variables.
+    NUMBER nBuffer,nRecoverType;
+    STRING strMsg, strSupDir, strInstallDll;
+    STRING szValueBuf, strProductCode, strCmdLine;
+begin
+	strMsg = "function: Percent10";
+	//MessageBox(strMsg, INFORMATION);
+	PostProgress(1, 10);
+end;
+
+function Percent30(hMSI)
+    // To Do:  Declare local variables.
+    NUMBER nBuffer;
+    STRING strMsg, strSupDir, strMsiDll;
+
+begin
+	strMsg = "function: Percent30";
+	//MessageBox(strMsg, INFORMATION);
+		
+	PostProgress(1, 30);
+
+end;
+
+function Percent50(hMSI)
+    // To Do:  Declare local variables.
+    NUMBER nBuffer;
+    STRING strMsg, strSupDir, strMsiDll;
+begin
+	strMsg = "function: Percent60";
+	//MessageBox(strMsg, INFORMATION);
+	
+	PostProgress(1,60);
+end;
+
+function Percent80(hMSI)
+    // To Do:  Declare local variables.
+    NUMBER nBuffer;
+    STRING strMsg, strSupDir, strMsiDll;
+begin
+	strMsg = "function: Percent80";
+	//MessageBox(strMsg, INFORMATION);
+
+	PostProgress(1,80);
+end;
+
+
+function SetupInterrupted(hMSI)
+    // To Do:  Declare local variables.
+    STRING strMsg;
+begin
+	strMsg = "function: SetupInterrupted";
+	//MessageBox(strMsg, INFORMATION);
+	
+	PostProgress(0,0);
+    // To Do:  Write script that will be executed when MyFunction is called.
+
+end;
+
+function SetupCompleteError(hMSI)
+    // To Do:  Declare local variables.
+    STRING strMsg;
+begin
+	strMsg = "function: SetupCompleteError";
+	//MessageBox(strMsg, INFORMATION);
+	PostProgress(0,0);
+    // To Do:  Write script that will be executed when MyFunction is called.
+
+end;
+
+function SetupCompleteSuccess(hMSI)
+    // To Do:  Declare local variables.
+    NUMBER nBuffer;
+    STRING strMsg, strSupDir, strMsiDll;
+begin
+	strMsg = "function: SetupCompleteSuccess";
+	//MessageBox(strMsg, INFORMATION);
+    // To Do:  Write script that will be executed when MyFunction is called.
+
+	PostProgress(1,100);
+	WaitForUIFinish();
+	
+end;
+
+//after install
+function ExcuteAction(hMSI)
+    NUMBER nBuffer;
+    STRING strMsg, strSupDir, strMsiDll;
+begin
+	strMsg = "function: ExcuteAction--END";
+	MyLog(0, "-----------ExcuteAction enter.msiexec install finished----------");
+	FreeLibrary(g_hMsiDll);
+	//MessageBox(strMsg, INFORMATION);
+end;
+
+
+function SetRuntimeProperty(hMSI) 
+    NUMBER nType;
+    STRING szInstallDir;
+begin
+
+	nType = GetInstallType();
+	if(nType == 1) then
+		GetInstallDir(szInstallDir);
+		MsiSetProperty(hMSI,"INSTALLDIR",szInstallDir);
+		MsiSetTargetPath(hMSI, "INSTALLDIR", szInstallDir);	
+	endif;
+	
+end;

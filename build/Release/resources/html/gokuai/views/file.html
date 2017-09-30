@@ -1,0 +1,110 @@
+<div class="col-1 left-wrapper gk-mount">
+    <div class="gk-search mount-search">
+        <div class="seach-wrapper" ng-click="goToSearch($event)">
+            <i class="icon-search fa fa-search"></i>
+            <input type="text" placeholder="{{'搜索'|translate}}" ng-model="searchMount" class="mount-input" ng-blur="blurSearch($event)">
+            <i class="icon-cross fa fa-times-circle" ng-show="searchMount" ng-mousedown="clearSearch($event)"></i>
+        </div>
+        <!--<a  class="fa fa-plus mount-add" uib-tooltip="创建库" tooltip-placement="bottom" tooltip-append-to-body="true" ng-click="addEntLib($event)" ng-if="!hideAddEnt"></a>-->
+    </div>
+
+    <div>
+        <div class="mount-wrapper" ng-show="!searchMount">
+            <div ng-repeat="node in sideTree" ng-if="node.mounts && node.mounts.length">
+                <div>
+                    <div class="mount-name" ng-click="showMounts($event)">
+                        <i class="icon-triangle-down icon-triangle fa fa-caret-down"></i>
+                        <i class="icon-triangle-right icon-triangle fa fa-caret-right"></i>
+                        <span ng-bind="node.header"></span>
+                        <span class="mount-count">({{node.mounts.length}})</span>
+                    </div>
+                    <ul class="mount-list-wrapper">
+                        <li ng-repeat="mount in node.mounts"
+                            ng-right-click="goTo($event,mount,$index == 0 ? 0 : 1)"
+                            context-menu="onContextMenuShow(mount)"
+                            data-target="mount-right-menu"
+                            data-index="{{$index}}"
+                            data-id="{{mount.mountid}}"
+                            context-menu-margin-bottom="20"
+                            data-jqyoui-options="{'tolerance':'pointer'}"
+                            jqyoui-droppable="{onOver:'onOver(mount)',onDrop:'onDrop(mount)',onOut:'onOut'}"
+                            data-drop="isDropable(mount)"
+                        >
+                            <a class="top-item mount-item"
+                               href="javascript:;"
+                               ng-click="goToFile({mountid: mount.mountid, fullpath: '', view: 'mount', from: 0})"
+                               ng-if="node.type == 'top'"
+                               ng-class="{active: mount.mountid == routeid && !self}"
+                            >
+                                <span class="top-triangle"></span>
+                                <img ng-src="{{mount.logo}}" class="mount-icon" error-src/>
+                                <span ng-bind="mount.name"></span>
+                            </a>
+
+                            <a class="top-item mount-item"
+                               href="javascript:;"
+                               ng-click="goToFile({mountid: mount.mountid, fullpath: '', view: 'mount', from: 1})"
+                               ng-if="node.type != 'top'"
+                               ng-class="{active: mount.mountid == routeid && self}">
+                                <span class="top-triangle"></span>
+                                <img ng-src="{{mount.logo}}" class="mount-icon" error-src/>
+                                <span ng-bind="mount.name"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 搜索 -->
+        <div class="mount-wrapper" ng-show="searchMount">
+            <div>
+                <ul class="mount-list-wrapper">
+                    <li ng-repeat="mount in mounts | filter: {name: searchMount}" context-menu-margin-bottom="20" context-menu="onContextMenuShow(mount)" data-target="mount-right-menu">
+                        <a href="javascript:;" ng-click="goToFile({mountid: mount.mountid, fullpath: '', view: 'mount', self: true, selectedhash: ''})"
+                           ng-class="{active: mount.mountid == routeid && self}" class="mount-item" ng-right-click="goTo($event,mount)">
+                            <img ng-src="{{mount.logo}}" class="mount-icon" error-src/>
+                            <span ng-bind="mount.name"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown position-fixed right-menu mount-context-menu" id="mount-right-menu" ng-show="getSelectedMount()">
+            <ul class="dropdown-menu" role="menu">
+                <!--<li ng-repeat="menu in mountMenu" ng-show="menu.getState(getSelectedMount())>0">-->
+                <li ng-repeat="menu in mountMenu" class="menu-item" ng-show="menu.getState(getSelectedMount(),sideTree[0].mounts)>0">
+                    <a class="pointer" href="javascript:void(0)" role="menuitem" tabindex="1" ng-click="menu.execute(getSelectedMount())">
+                        {{menu.text|translate}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="gk-transfer" ng-click="openTransfer()">上传下载队列</div>
+
+   <a href="javascript:;" class="create_lib_btn" ng-click="showCreateLib()"><i class=""></i></a>
+
+</div>
+
+<div class="col-2" ng-if="!mount">
+    <div class="init-mount">
+        <img src="images/quanshi-empty.png" alt="空白页面"/>
+        <p>您还没有选择任何库.</p>
+    </div>
+</div>
+
+<div class="main-wrapper col-2">
+    <div ui-view="header"></div>
+    <div ui-view="bread"></div>
+    <div ui-view="toolbar"></div>
+    <div ui-view="content"></div>
+</div>
+
+<div class="col-3" ng-if="mount.orgtype != 20 && libMemberIsOpen">
+    <div ui-view="member"></div>
+</div>
+

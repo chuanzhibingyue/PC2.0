@@ -1,0 +1,197 @@
+.switch-bar {
+    background-color: #ffcc00;
+    display: inline-block;
+    font-size: 10px;
+    border-radius: 9px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.switch-bar .on, .switch-bar .off {
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    float: left;
+    color: #fff;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.switch-bar .on {
+    padding-left: 3px;
+}
+
+.switch-bar .off {
+    padding-right: 3px;
+}
+
+.switch-bar .switch {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 20px;
+    top: 0px;
+    transition-duration: 0.2s;
+    box-shadow: 2px 1px 5px #aaa;
+}
+
+.switch-bar-left {
+    background-color: #ddd;
+}
+
+.switch-bar-left .switch {
+    left: 1px;
+}
+
+.switch-bar-right .switch {
+    left: 18px;
+    transform: translateX(0);
+}
+
+.dropdown-list *, .time-box * {
+    color: #3b4f61;
+}
+
+.dropdown-list {
+    width: 200px;
+    height: 0;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #aaa;
+}
+
+.dropdown-list .prev, .dropdown-list .next {
+    position: absolute;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+    font-size: 12px;
+    overflow: hidden;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: -10000px;
+    background-image: url(../images/meeting/icon_drop_down.png);
+}
+
+.dropdown-list .prev {
+    background-image: url(../images/meeting/icon_drop_up.png);
+    top: 0;
+}
+
+.dropdown-list .items {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.dropdown-list .items a {
+    text-decoration: none;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #3b4f61;
+    text-indent: 25px;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    left: 0;
+    padding-right: 3px;
+}
+
+.dropdown-list .right a {
+    padding-left: 0;
+    padding-right: 30px;
+    width: 95%;
+    text-align: right;
+}
+
+.dropdown-list .items a:hover {
+    background-color: #4e677d;
+    color: #fff;
+}
+
+.dropdown-list .items a.selected i {
+    height: 20px;
+    width: 20px;
+    line-height: 25px;
+    display: inline-block;
+    left: 5px;
+    top: 2px;
+    color: #fff;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: 10000px;
+    background-image: url(../images/meeting/icon_selected.png);
+}
+
+.dropdown-list .items a.selected:hover i {
+    background-color: #4e677d;
+    color: #fff;
+    background-image: url(../images/meeting/icon_selected_white.png);
+}
+
+.dropdown-list-nav {
+    width: 10px;
+    height: 20px;
+    line-height: 20px;
+    display: none;
+    float: right;
+    vertical-align: middle;
+    text-decoration: none;
+    background-image: url(../images/meeting/icon_drop_list.png);
+    background-position: 50% 5px;
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+    margin-right: 3px;
+    margin-top: 2px;
+}
+
+.time-box {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    width: 40px;
+    padding: 0 3px;
+}
+
+.time-box .time-hour, .time-box .time-minute {
+    outline: none;
+    width: 16px;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.time-box .time-hour::selection, .time-box .time-minute::selection {
+    background-color: #ede90e;
+}
+
+.meeting-duration-container{
+    font-size: 12px;
+    color: #03111f;
+    width: 70px;
+    margin: 5px 6px;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.meeting-duration-container span{
+    color: #03111f;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+        .content{
+            width: 100%;
+            height: 400px;
+            overflow: auto;
+        }
+        .no-scroll-bar::-webkit-scrollbar-thumb{
+            display: none;
+        }
+        /*::-webkit-scrollbar{width: 6px;height: 6px;}*/
+        /*::-webkit-scrollbar-track-piece{background-color: #CCCCCC;-webkit-border-radius:  6px;}*/
+        /*::-webkit-scrollbar-thumb:vertical{height: 5px;background-color:  #999999;-webkit-border-radius: 6px;}*/
+        /*::-webkit-scrollbar-thumb:horizontal{width: 5px;background-color:  #CCCCCC;-webkit-border-radius: 6px;}*/
+        ::-webkit-scrollbar {width: 6px;height: 6px;}
+        /*:-webkit-scrollbar-track-piece {background-color: transparent;}*/
+        /*::-webkit-scrollbar-track-piece:no-button {}*/
+        ::-webkit-scrollbar-thumb {
+            background-color: #3994EF;
+            border-radius: 3px;
+            outline-offset:22px;
+        }
+        ::-webkit-scrollbar-thumb:vertical {margin-left: 3px}
+        /*::-webkit-scrollbar-thumb:hover {background-color: #A4EEF0;}*/
+        /*::-webkit-scrollbar-thumb:active {background-color: #666;}*/
+        ::-webkit-scrollbar-button:vertical { height: 13px}
+        ::-webkit-scrollbar-button:horizontal { width: 13px;}
+        /*::-webkit-scrollbar-button:vertical:start:decrement { background-color: white; }*/
+        /*::-webkit-scrollbar-button:vertical:end:increment { background-color: white; }*/
+        /*::-webkit-scrollbar-button:horizontal:start:decrement { background-color: white; }*/
+        /*::-webkit-scrollbar-button:horizontal:end:increment { background-color: white; }*/
+        /*body::-webkit-scrollbar-track-piece {background-color: white;}*/
+        /*div{*/
+            /*width: 400px;*/
+            /*height: 400px;*/
+            /*box-shadow: -2px 0px 8px 9px rgba(255,255,255, .1),2px 0px 0px 2px rgba(00,99,99, .2),0px -3px 0px 1px rgba(255,255,255, .2),0px 5px 0px 5px rgba(00,99,00, 0.2);*/
+            /*margin: 20px;*/
+            /*box-shadow: 0 6px 20px 6px rgba(99,99,99, .4);*/
+        /*}*/
+    </style>
+    <script type="text/javascript" src="../src/js/lib/jquery-2.1.4.js"></script>
+    <script type="text/javascript">
+
+        window.addEventListener('load', function (e) {
+
+            var node = document.getElementById('edit-box');
+            
+            node.onpaste = function (e) {
+                log('paste');
+                if (e.clipboardData) {
+                    log('event.clipboardData');
+                    if (e.clipboardData.types) {
+                        log('event.clipboardData.types');
+
+                        // Look for a types property that is undefined
+                        if (!isArray(e.clipboardData.types)) {
+                            log('event.clipboardData.types is undefined');
+                        }
+
+                        // Loop the data store in type and display it
+                        var i = 0;
+                        while (i < e.clipboardData.types.length) {
+                            var key = e.clipboardData.types[i];
+                            var val = e.clipboardData.getData(key);
+                            log((i + 1) + ': ' + key + ' - ' + val);
+                            i++;
+                        }
+
+                    } else {
+                        // Look for access to data if types array is missing
+                        var text = e.clipboardData.getData('text/plain');
+                        var url = e.clipboardData.getData('text/uri-list');
+                        var html = e.clipboardData.getData('text/html');
+                        log('text/plain - ' + text);
+                        if (url !== undefined) {
+                            log('text/uri-list - ' + url);
+                        }
+                        if (html !== undefined) {
+                            log('text/html - ' + html);
+                        }
+                    }
+                }
+
+                // IE event is attached to the window object
+                if (window.clipboardData) {
+                    log('window.clipboardData');
+                    // The schema is fixed
+                    var text = window.clipboardData.getData('Text');
+                    var url = window.clipboardData.getData('URL');
+                    log('Text - ' + text);
+                    if (url !== null) {
+                        log('URL - ' + url);
+                    }
+                }
+
+                // Needs a few msec to excute paste
+                window.setTimeout(logContents, 50, true);
+
+            };
+
+//            // Button events
+//            var btn = document.getElementById('clear-logs');
+//            btn.onclick = function (e) {
+//                clearLog();
+//            };
+        });
+
+
+        function logContents() {
+            var node = document.getElementById('edit-box');
+            log('Current contents - ' + node.innerHTML);
+        }
+
+        function log(str) {
+            var node = document.getElementById('log-box');
+            var li = document.createElement('li')
+            li.appendChild(document.createTextNode(str));
+            node.appendChild(li);
+        }
+
+        function clearLog() {
+            var node = document.getElementById('log-box');
+            while (node.firstChild) {
+                node.removeChild(node.firstChild);
+            }
+        }
+
+        function isArray(obj) {
+            return obj && !(obj.propertyIsEnumerable('length')) &&
+                    typeof obj === 'object' && typeof obj.length === 'number';
+        }
+    </script>
+</head>
+<body>
+<!--<div contenteditable="true" id="edit-box"></div>-->
+<div class="content ">
+    <p>
+        sdsdfs df ds sd sd sd sd sd sd sd sdsdfs df ds sd sd sd sd sd sd sd sd sdsdfs df ds sd sd sd sd sd sd sd sd sdsdfs df ds sd sd sd sd sd sd sd sd sdsdfs df ds sd sd sd sd sd sd sd sd sdsdfs df ds sd sd sd sd sd sd sd sd sdsdfs df ds sd sd sd sd sd sd sd sd sdsdfs df ds sd sd sd sd sd sd s
+        d sd sdsdfs df ds sd sd sd sd sd sd sd sd sdsdfs df ds sd sd sd sd sd sd sd sd sdsdfs df ds sd sd sd sd sd sd sd sd vsd <br>
+        sd<br>
+        sd<br>
+        sd<br>
+        s<br>
+        d<br>
+        sd<br>
+        s<br>
+        ds<br>
+        d<br>
+        s<br>
+        d<br>
+        s<br>
+        <br>
+        d<br>
+        s<br>
+        d<br>
+        sv<br>
+        dv<br>
+        sd<br>
+        sv<br>
+        d<br>
+        s<br>
+        d<br>
+        sd<br>
+        sv<br>
+        dv<br>
+        sdv<br>
+        s<br>
+        d<br>
+        sd<br>
+        <br>
+        dsd<br>
+        sd<br>
+        s<br>
+        d<br>
+        sv<br>
+        dv<br>
+        sd<br>
+        sv<br>
+        d<br>
+        s<br>
+        d<br>
+        sd<br>
+        sv<br>
+        dv<br>
+        sdv<br>
+        s<br>
+        d<br>
+        sd<br>
+        <br>
+        dsd<br>
+        sd<br>
+        s<br>
+    </p>
+</div>
+
+</body>
+
+</html>

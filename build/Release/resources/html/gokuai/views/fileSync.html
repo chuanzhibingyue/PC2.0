@@ -1,0 +1,26 @@
+<div class="gk-dialog-header" ng-show="type == 0 || type == 2" translate>
+    同步设置
+</div>
+<div class="gk-dialog-header" ng-show="type == 1" translate>
+    备份设置
+</div>
+<div class="gk-dialog-content">
+    <p translate ng-show="type == 0 || type == 2">
+        <span class="sync-name">"{{filename}}"</span>开启同步后，拥有读写权限的文件将自动与库保持一致，只有读取权限的文件，本地的任何改动不会自动同步到库，库的改动会自动同步到本地
+    </p>
+    <p translate ng-show="type == 1">
+        <span class="sync-name">"{{filename}}"</span>开启备份后，备份文件夹内的文件将会自动上传到云端。
+    </p>
+    <div>
+        <span translate>本地位置：</span>
+        <input class="uri-input" type="text" ng-model="localURI" readonly/>
+        <a class="sync-btn" ng-if="!isSync && localURI" ng-click="changeLocalURI()"><span translate>更改</span></a>
+    </div>
+</div>
+<div class="gk-dialog-footer">
+    <button class="cancel-btn" ng-click="closeDialog()">关闭</button>
+    <button class="ok-btn" ng-if="(type == 0 || type == 2) && !isSync" ng-click="setSync($event, type)">开启同步</button>
+    <button class="ok-btn" ng-if="type == 1 && !isSync" ng-click="setSync($event, type)">开启备份</button>
+    <button class="ok-btn" ng-if="(type == 0 || type == 2) && isSync && canRemoveSync" ng-click="removeSync()">取消同步</button>
+    <button class="ok-btn" ng-if="type == 1 && isSync && canRemoveSync" ng-click="removeSync()">取消备份</button>
+</div>

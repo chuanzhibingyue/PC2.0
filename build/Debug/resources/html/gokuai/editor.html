@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="goukuai.editor">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/vendor-bundle.css"/>
+        <link rel="stylesheet" href="styles/editor-bundle.css"/>
+        <style>
+            [ng-cloak] {
+                display: none !important;
+            }
+        </style>
+    </head>
+    <body ng-controller="editorCtrl as vm" class="qs-theme">
+        <div class="page-wrapper">        
+            <div class="editor-view">
+                <div class="editor-header">
+                    <span class="title">够快笔记</span>
+                    <div class="icon-container">
+                        <span class="fa fa-times icon-tool" ng-click="closeWindow()"></span>
+                    </div>
+                </div>
+                <div class="editor-toolbar" ng-cloak>
+                    <button class="btn btn-sm btn-primary" ng-click="saveNote()" ng-disabled="noteSaving || !contentChange">
+                        <i class="fa" ng-class="{true:'fa-spinner fa-spin',false:'fa-save'}[noteSaving]"></i>
+                        {{noteSaving ? '保存中...' : '保存'}}
+                    </button>
+                </div>
+                <div ng-hide="contentLoaded" class="text-center" style="font-size: 20px;">
+                    <i class="fa fa-spinner fa-spin"></i>载入中...
+                </div>
+                <div ng-show="contentLoaded">
+                    <script id="container" name="content" type="text/plain"></script>
+                </div>
+            </div>
+        </div>
+        <script src="scripts/vendor-bundle.js"></script>
+        <script src="scripts/editor-bundle.js"></script>
+    </body>
+</html>

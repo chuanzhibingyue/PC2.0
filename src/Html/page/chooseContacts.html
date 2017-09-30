@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../css/choose_contacts.css" rel="stylesheet">
+	<script type="text/javascript" src="../nls/i18n.js"></script>
+	<script type="text/javascript" src="../script/chooseContacts.js"></script>
+    <title>Profile</title>
+</head>
+<body>
+<div id="layoutContainer" class="child-window-shadow">
+	<div class="popup-panel vertical popup">
+        <div class="popup-panel-body">
+        	<div class="popup-panel-left">
+        		<div class="popup-panel-header-left">	
+        			<div class="search-input-container">
+        				<span class="icon-search"></span><input type="text" class="search-input" placeholder="{{ChooseContacts.Search}}" spellcheck="false"/>
+        				<span class="icon-search-del" style="display: block;"></span>
+        			</div>				
+				</div>        		       	
+        		<div class="popup-panel-left-body contacts-panel">
+        			<div class="contacts-panel-splitter"><img src="../images/contacts/contacts_panel_splitter.png"/></div>
+        			<div class="panel-contacts panel-item" style="display: none;">
+        				<div class="my-departments-bread-crumbs bread-crumb">{{ChooseContacts.MyDepartment}}</div>
+        				<ul class="my-departments-list">
+        					<li class="my-department-item">
+        						<div class="department-widget-container">
+        							<div class="left">
+        								<div class="rounded-corners avatar-my-department">
+											<img src="../images/contacts/avatar_my_department.png"> 
+										</div>
+        							</div>
+        							<div class="right">
+        								<div class="checkbox-parent check-box-my-department">         	
+        									<input type="checkbox">         	
+        									<label><span></span></label>         
+        								</div>
+        							</div>
+        							<div class="center text-ellipsis department-item">        								
+        							</div>
+        						</div>
+        					</li>        					
+        				</ul>
+        				<div class="contact-bread-crumbs bread-crumb">{{ChooseContacts.FrequentContacts}}</div>
+        				<ul class="contact-list"></ul>
+        			</div>
+        			<div class="panel-projects panel-item" style="display: none;"><ul class="project-list group-list"></ul></div>
+        			<div class="panel-groupChats panel-item" style="display: none;"><ul class="group-chat-list group-list"></ul></div>
+        			<div class="panel-my-department panel-item" style="display: none;"><ul class="my-department-list"></ul></div>
+        			<div class="panel-organization panel-item" style="display: none;"><div class="org-parent"></div></div>
+        			<div class="panel-search-result-parent panel-item node-shadow" style="display:none;">
+                        <div class="panel-search-result panel-item">
+                            <div class="default-search-result">
+                                <div class="search-result contacts-result">
+                                    <div class="bread-crumb"><span class="contact-bread-crumb bread-crumb-left">{{ChooseContacts.Contacts}}</span><span class="bread-crumb-right view-more-search-result view-more-contacts">
+		        				{{ChooseContacts.MoreContacts}}
+		        				</span></div>
+                                    <ul class="contact-list"></ul>
+                                </div>
+                                <div class="search-result projects-result">
+                                    <div class="bread-crumb"><span class="project-bread-crumb bread-crumb-left">{{ChooseContacts.Projects}}</span><span class="bread-crumb-right view-more-search-result view-more-projects">
+	        					{{ChooseContacts.MoreProjects}}
+	        					</span></div>
+                                    <ul class="project-list group-list"></ul>
+                                </div>
+                                <div class="search-result chats-result">
+                                    <div class="bread-crumb"><span class="chat-bread-crumb bread-crumb-left">{{ChooseContacts.GroupChats}}</span><span class="bread-crumb-right view-more-search-result view-more-chats">
+		        				{{ChooseContacts.MoreGroupChats}}
+		        				</span></div>
+                                    <ul class="group-chat-list group-list"></ul>
+                                </div>
+                            </div>
+                            <div class="more-search-result">
+                                <div class="search-result contacts-result">
+                                    <div class="bread-crumb"><span class="bread-crumb-return"><img src="../images/contacts/return.png" alt="back"></span><span class="contact-bread-crumb bread-crumb-left">{{ChooseContacts.Contacts}}</span></div>
+                                    <ul class="contact-list"></ul>
+                                </div>
+                                <div class="search-result projects-result">
+                                    <div class="bread-crumb"><span class="bread-crumb-return"><img src="../images/contacts/return.png" alt="back"></span><span class="project-bread-crumb bread-crumb-left">{{ChooseContacts.Projects}}</span></div>
+                                    <ul class="project-list group-list"></ul>
+                                </div>
+                                <div class="search-result chats-result">
+                                    <div class="bread-crumb"><span class="bread-crumb-return"><img src="../images/contacts/return.png" alt="back"></span><span class="chat-bread-crumb bread-crumb-left">{{ChooseContacts.GroupChats}}</span></div>
+                                    <ul class="group-chat-list group-list"></ul>
+                                </div>
+                            </div>
+                            <div class="in-searching">
+                               {{ChooseContacts.Searching}}
+                            </div>
+                            <div class="no-chooseContacts-result">
+                                <img src='../images/search/no-result.png' />
+                            </div>
+                        </div>
+                    </div>
+        		</div>
+        	</div>
+        	<div class="popup-panel-right">
+        	
+        		<div class="popup-panel-right-heder"><label class="select-contacts-title">{{ChooseContacts.PleaseChooseLeftContacts}}</label></div>  
+			    <div class="popup-panel-right-body">
+			    	<div class="popup-panel-right-content">
+			    		<ul class="my-departments-list"></ul>
+			    		<ul class="contact-list"></ul>
+			    		<ul class="project-list"></ul>
+			    		<ul class="group-chat-list"></ul>
+			    		<ul class="org-parent"></ul>
+        			</div>
+			    </div>  
+			    <div class="popup-panel-right-footer">
+			    	<button type="button" class="btn-cancel btn">{{Common.Cancel}}</button> 
+        			<button type="button" class="btn disable">{{ChooseContacts.Ok}}</button>
+			    </div>      		
+        		
+        	</div>
+        </div>
+	</div>
+	
+	<div class="tool-icon-container">
+		<span class="icon-close tool-icon"></span>
+	</div>
+</div>
+</body>
+</html>

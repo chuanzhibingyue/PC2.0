@@ -1,0 +1,196 @@
+/* common style */
+* {
+  -webkit-transition: all 0.3s;
+}
+
+/* common button style */
+.btn {
+  font-family: STHeitiSC-Light;
+  font-size: 14px;
+  display: inline-block;
+  width: 120px;
+  border-radius: 4px;
+  text-align: center;
+  height: 32px;
+  line-height: 32px;
+  background: #47607a;
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+.btn:hover {
+  color: #4f667b;
+  background-color: #ede90e;
+}
+.btn.light {
+  color: #3b4f61;
+  background-color: #ededed;
+}
+.btn.light:hover {
+  background-color: #eeeeee;
+}
+.btn.light:active {
+  background-color: #d4d4d4;
+}
+.btn.dark {
+  color: white;
+  background-color: #4f667b;
+}
+.btn.dark:hover {
+  background-color: #607588;
+}
+.btn.dark:active {
+  background-color: #465b6e;
+}
+
+.btn-large {
+  width: 208px !important;
+}
+
+.update-main {
+    margin: 20px;
+    width: 520px;
+    height: 420px;
+    color: white;
+    background-color: #3b4f61;
+    box-shadow: 0px 0px 5px #3b4f61;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.update-main header {
+  position: relative;
+}
+.update-main .update-welcome, .update-main .update-failed {
+  padding-top: 43px;
+}
+.update-main .update-welcome .logo, .update-main .update-failed .logo, .update-main .update-welcome .btn-group, .update-main .update-failed .btn-group {
+  font-size: 16px;
+  margin-top: 40px;
+  text-align: center;
+  margin-right: 10px;
+}
+.update-main .update-welcome #btnIgnore, .update-main .update-failed #btnIgnore {
+  display: none;
+}
+.update-main .update-welcome .logo, .update-main .update-failed .logo {
+  height: 220px;
+}
+.update-main .update-welcome .btn-group, .update-main .update-failed .btn-group, .update-main .update-welcome .title, .update-main .update-failed .title {
+  margin-top: 20px;
+}
+.update-main .update-welcome .btn-group, .update-main .update-failed .btn-group {
+  margin-top: 40px;
+}
+.update-main .update-welcome .title, .update-main .update-failed .title {
+  font-size: 12px;
+}
+.update-main .update-welcome .tips, .update-main .update-failed .tips {
+  font-size: 12px;
+  color: white;
+  border: none;
+  width: 380px;
+  height: 108px;
+  margin-top: 20px;
+  text-align: left !important;
+  background-color: #3b4f61;
+  resize: none;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+}
+.update-main .update-welcome .tips.center{
+    text-align: center !important;
+}
+.update-main .update-welcome .tips:hover, .update-main .update-failed .tips:hover {
+  overflow-y: auto;
+}
+.update-main .update-setup {
+  padding: 20px;
+  /*display: none;*/
+}
+.update-main .update-setup .intro {
+  width: 360px;
+  height: 240px;
+  margin-top: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+.update-main .update-setup .progress {
+  height: 4px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right, #FFCC00 0%, #FFCC00 15%, #ccc 15%, #ccc 100%);
+}
+.update-main .update-setup .status {
+  color: #FFCC00;
+}
+.update-main .update-setup .status .left {
+  float: left;
+}
+.update-main .update-setup .status .right {
+  float: right;
+}
+.update-main .update-failed {
+  display: none;
+}
+.update-main .update-force {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.update-main .update-force .body {
+  width: 360px;
+  height: 168px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -85px;
+  margin-left: -180px;
+  border-radius: 2px;
+  background-color: white;
+  color: #3b4f61;
+}
+.update-main .update-force .body .tips {
+  text-align: left;
+  padding-left: 20px;
+}
+.update-main .update-force .title {
+  margin-top: 10px;
+}
+.update-main .update-force .title .msg {
+  margin-top: 20px;
+}
+.update-main .update-force .btn-group {
+  margin-top: 40px;
+}
+
+textarea:focus {
+  border: none;
+  outline: none;
+}
+
+.btn-dark, .btn-gray{
+    margin-right: 5px;
+}
+
+.btn-group{
+    text-align: right;
+    /*padding-right: 20px;*/
+    margin-top: 50px !important;
+}
+
+.btn-yellow img{
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: -3px;
+}
+
+.tool-icon-container .tool-icon{
+    color: #677987;
+}
+
+.tool-icon-container .tool-icon:hover{
+    color: white;
+}
+/*# sourceMappingURL=update.css.map */

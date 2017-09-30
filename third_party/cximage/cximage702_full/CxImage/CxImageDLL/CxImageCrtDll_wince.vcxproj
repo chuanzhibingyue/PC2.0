@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ClCompile Include="..\tif_xfile.cpp" />
+    <ClCompile Include="..\ximabmp.cpp" />
+    <ClCompile Include="..\ximadsp.cpp" />
+    <ClCompile Include="..\ximaenc.cpp" />
+    <ClCompile Include="..\ximaexif.cpp" />
+    <ClCompile Include="..\ximage.cpp" />
+    <ClCompile Include="..\ximagif.cpp" />
+    <ClCompile Include="..\ximahist.cpp" />
+    <ClCompile Include="..\ximaico.cpp" />
+    <ClCompile Include="..\ximainfo.cpp" />
+    <ClCompile Include="..\ximaint.cpp" />
+    <ClCompile Include="..\ximajas.cpp" />
+    <ClCompile Include="..\ximajbg.cpp" />
+    <ClCompile Include="..\ximajpg.cpp" />
+    <ClCompile Include="..\ximalpha.cpp" />
+    <ClCompile Include="..\ximalyr.cpp" />
+    <ClCompile Include="..\ximamng.cpp" />
+    <ClCompile Include="..\ximapal.cpp" />
+    <ClCompile Include="..\ximapcx.cpp" />
+    <ClCompile Include="..\ximapng.cpp" />
+    <ClCompile Include="..\ximasel.cpp" />
+    <ClCompile Include="..\ximaska.cpp" />
+    <ClCompile Include="..\ximatga.cpp" />
+    <ClCompile Include="..\ximath.cpp" />
+    <ClCompile Include="..\ximatif.cpp" />
+    <ClCompile Include="..\ximatran.cpp" />
+    <ClCompile Include="..\ximawbmp.cpp" />
+    <ClCompile Include="..\ximawmf.cpp" />
+    <ClCompile Include="..\ximawnd.cpp" />
+    <ClCompile Include="..\xmemfile.cpp" />
+    <ClCompile Include="CxImageCrtDll.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>CxImageCrtDll</ProjectName>
+    <ProjectGuid>{8B2AFC31-F380-42E5-8C10-F1B31271D5D0}</ProjectGuid>
+    <RootNamespace>CxImageCrtDll</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CxImageCrtDll.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\xfile.h" />
+    <ClInclude Include="..\ximabmp.h" />
+    <ClInclude Include="..\ximacfg.h" />
+    <ClInclude Include="..\ximadef.h" />
+    <ClInclude Include="..\ximage.h" />
+    <ClInclude Include="..\ximagif.h" />
+    <ClInclude Include="..\ximaico.h" />
+    <ClInclude Include="..\ximaiter.h" />
+    <ClInclude Include="..\ximajas.h" />
+    <ClInclude Include="..\ximajbg.h" />
+    <ClInclude Include="..\ximajpg.h" />
+    <ClInclude Include="..\ximamng.h" />
+    <ClInclude Include="..\ximapcx.h" />
+    <ClInclude Include="..\ximapng.h" />
+    <ClInclude Include="..\ximaska.h" />
+    <ClInclude Include="..\ximatga.h" />
+    <ClInclude Include="..\ximath.h" />
+    <ClInclude Include="..\ximatif.h" />
+    <ClInclude Include="..\ximawbmp.h" />
+    <ClInclude Include="..\ximawmf.h" />
+    <ClInclude Include="..\xiofile.h" />
+    <ClInclude Include="..\xmemfile.h" />
+    <ClInclude Include="StdCrt.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

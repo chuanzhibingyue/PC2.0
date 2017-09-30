@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+        <title>蜜蜂v2.0安装向导</title>
+        <link rel="stylesheet" href="index.css" />
+		<script>
+		// init window
+		external.SetTitle("InstallBee");
+		external.Show(520, 420);
+		</script>
+    </head>
+    <body onSelectStart="return false" onDragStart="return false;">
+        <div class="section" >
+            <div class="main">
+                <!-- title -->
+                <div class="title" >
+                    <div class="operation">
+                        <i class="min"></i>
+                        <i class="close"></i>
+                    </div>
+                </div>
+
+                <div class="step0" >
+                    <div class="logo">
+                        <img src="logo.png"  />
+                    </div>
+                </div>
+
+                <div class="step1" style="display:none;">
+                    <!-- logo -->
+                    <div class="logo">
+                        <img src="logo2.png"  />
+                    </div>
+
+                    <!-- setup button -->
+                    <div class="setup-button">
+                        <a id="btnStartSetup" class="btn-setup disabled" onfocus="this.blur();" href="javascript:void(0);"></a>
+                    </div>
+
+                    <!-- setup option -->
+                    <div class="setup-option">
+                        <div class="left">
+                            <div class="checkbox" id="btnAgreeService">
+                                <input type="hidden" name="agreeService"/>
+                            </div>
+                            <div class="service">阅读并同意&nbsp;<a href="http://www.quanshi.com/terms/" target="_blank" onfocus="this.blur();">许可协议</a></div>
+                        </div>
+
+                        <div class="right" id="btnShowOptions">
+                            <img src="up.png" name="up"/><img src="down.png"  name="down" style="display:none"/>
+                            <span>&nbsp;自定义选项</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- install ing... -->
+                <div class="step2" style="display:none;">
+                    <div class="info">
+                        <img src="1.png" id="productImg" />
+                    </div>
+                    <div class="progress">
+                        <div class="bar">
+                            <div class="num">
+
+                            </div>
+                        </div>
+                        <div class="des">
+                            <div class="left">
+                                正在安装蜜蜂...
+                            </div>
+                            <div class="right">
+                                0%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- install success... -->
+                <div class="success" style="display:none;">
+                    <div class="info">
+                        <img src="login.png" />
+                    </div>
+                    <div class="setup-success">
+                        <a class="btn-setup-success" href="javascript:void(0);" onfocus="this.blur();"></a>
+                    </div>
+                </div>
+
+                <!-- install error1... -->
+                <div class="error1"  style="display:none;">
+                    <div class="info">
+                        <img src="error.png"   style="display: none" />
+                        <div class="tips">
+                            <div class="big">
+                                惨了，安装发生问题
+                            </div>
+                            <div class="">
+                                请联系公司的技术支持团队来解决
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setup-success">
+                        <a class="btn-setup-error" href="javascript:void(0);" onfocus="this.blur();"></a>
+                    </div>
+                </div>
+
+                <!-- install error1... -->
+                <div class="error2" style="display: none;" >
+                    <div class="info">
+                        <img src="error.png" style="display:none;" />
+                        <div class="tips">
+                            <div class="big">
+                                嗯，有些元件未能安装成功
+                            </div>
+                            <div class="">
+                                你可以继续完成剩余的安装步骤
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setup-success">
+                        <a class="btn-setup-resetup" href="javascript:void(0);" onfocus="this.blur();"></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="option-wrap" style="display: none;">
+                <div class="option">
+                    <input type="text" id="installPath" />
+                    <a href="javascript:void(0);" id="btnChoosePath"  onfocus="this.blur();">浏览</a>
+                </div>
+
+                <div class="option volume" >
+                    所需空间:&nbsp; <span>83MB</span> &nbsp;&nbsp;可用空间:&nbsp;<span>47.8G</span>
+                </div>
+
+                <!-- 是否生成快捷方式 -->
+                <div class="checkbox-item">
+                    <label for="">
+                        <div class="checkbox checked">
+                            <input type="hidden" name="createShortcut" value="1"/>
+                        </div>
+                        <span>生成桌面快捷方式</span>
+                    </label>
+                </div>
+
+                <!-- 添加到快捷启动栏 -->
+                <div class="checkbox-item">
+                    <label for="">
+                        <div class="checkbox checked">
+                            <input type="hidden" name="inLauncher" value="1"/>
+                        </div>
+                        <span>添加到快捷启动栏</span>
+                    </label>
+                </div>
+
+                <!-- 开机自动启动 -->
+                <div class="checkbox-item">
+                    <label for="">
+                        <div class="checkbox">
+                            <input type="hidden" name="autoRun" value="0"/>
+                        </div>
+                        <span>开机自动启动</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="dialogMain"></div>
+        <div class="dialog">
+            <div class="header">
+                <span>提示</span>
+                <i class="close"></i>
+            </div>
+            <div class="content">
+                这台电脑上已经安装了蜜蜂，是否覆盖安装？
+            </div>
+
+            <div class="btn-option">
+				<a class="btn-setup-ok-unistallold" style="display:none" href="javascript:void(0);" onfocus="this.blur();">确定</a>
+				<a class="btn-setup-ok-close" style="display:none" href="javascript:void(0);" onfocus="this.blur();">确定</a>
+                <a class="btn-setup-ok" style="display:none" href="javascript:void(0);" onfocus="this.blur();">确定</a>
+                <a class="btn-setup-cover" href="javascript:void(0);" onfocus="this.blur();">覆盖</a>
+                <a class="btn-setup-force" style="display:none" href="javascript:void(0);" onfocus="this.blur();">直接安装</a>
+                <a class="btn-setup-cancel" href="javascript:void(0);" onfocus="this.blur();">取消</a>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="jquery.1.6.js"></script>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="common.js"></script>

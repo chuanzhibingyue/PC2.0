@@ -1,0 +1,11 @@
+<div class="file-toolbar">
+    <div class="toolbar-operator" ng-if="newFolder">
+        <div class="act-item create-icon" ng-click="newFolder.create()">
+            <span>新建目录</span>
+        </div>
+    </div>
+    <div class="pull-right toolbar-view">
+        <a ng-click="changeListView('thumbnail')" class="toolbar-icon icon-thumb" ng-class="PAGE_CONFIG.listView=='thumbnail'?'active':''" style="margin-right: 10px;"></a>
+        <a ng-click="changeListView('list')" ng-class="PAGE_CONFIG.listView=='list'?'active':''" class="toolbar-icon icon-list"></a>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[uuid(4C4AF893-EDA5-48bc-AAFA-DDED61C5E3DF)]
+library UpdateModuleLib
+{
+	[uuid(4C4AF893-EDA5-48bc-AAFA-DDED61C5E3DE)]
+	interface IUpdate : IDispatch
+	{
+		HRESULT SetXmlDocument( [in] IUnknown * pXmlDoc );
+		HRESULT RemoveXmlDocument( [in] IUnknown * pXmlDoc );
+		HRESULT CheckUpdates( [in] UINT uAppId, [in] UINT uSiteId, [in] UINT uSkinId, 
+			[in] BSTR szServerUrl, [in] UINT uHttpPort, [in] UINT uTimeout );
+		HRESULT Download();
+		HRESULT CancelDownload();
+		HRESULT Install();
+		HRESULT Restart( [in] BSTR szTangCmd );
+		HRESULT RemoveFile( [in] BSTR szFullFileName );
+		HRESULT RemoveFolder( [in] BSTR szFullFolderName );
+		HRESULT UpdateUrlProtocol( [in] BSTR szProtocol, [in] BSTR szFullAppName );
+		HRESULT RemoveUrlProtocol( [in] BSTR szProtocol );
+		HRESULT UpdateDesktopLink( [in] BSTR szName, [in] BSTR szFullAppName, 
+			[in] BSTR szCmdArgs, [in] BSTR szIco );
+		HRESULT RemoveDesktopLink ( [in] BSTR szName);
+		HRESULT UpdateStartMenu( [in] BSTR szName, [in] BSTR szFullAppName, 
+			[in] BSTR szCmdArgs, [in] BSTR szIco );
+		HRESULT RemoveStartMenu ( [in] BSTR szName );
+		HRESULT ReadCookie( [in] BSTR szUrl, [in] BSTR szName, [out,retval] BSTR* szContent );
+		HRESULT UpdateCookie( [in] BSTR szUrl, [in] BSTR szName, [in] BSTR szContent );
+		HRESULT RemoveCookie( [in] BSTR szUrl, [in] BSTR szName );
+		HRESULT SetSiteId( [in] UINT nSiteId );
+		HRESULT GetSiteId( [out,retval] UINT* nSiteId );
+		HRESULT SetVersion( [in] BSTR bstrVersion );
+		HRESULT GetVersion( [out,retval] BSTR* pbstrVersion );
+		HRESULT SetLanguage( [in] BSTR bstrLanguage );
+		HRESULT GetLanguage( [out,retval] BSTR* bstrLanguage );
+		HRESULT GetInstallPath( [out, retval] BSTR* bstrPath );
+		HRESULT GetUpdateVersion( [out,retval] BSTR* pbstrVersion );
+		HRESULT GetAppId( [out,retval] UINT* nAppId );
+		HRESULT SetAppId( [in] UINT nAppId );
+	}
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="41,187">
+    <Container width="423" height="124" bordercolor="#002D3D4D">
+        <VerticalLayout bordersize="0" width="40" height="187" bkcolor="#FFFFFFFF" bordercolor="#002D3D4D">
+            <Button name="96" text="96" float="true" pos="3,169,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="72" text="72" float="true" pos="3,154,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="48" text="48" float="true" pos="3,139,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="36" text="36" float="true" pos="3,124,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="24" text="24" float="true" pos="3,109,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="18" text="18" float="true" pos="3,94,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="14" text="14" float="true" pos="3,79,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="13" text="13" float="true" pos="3,63,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="12" text="12" float="true" pos="3,48,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="11" text="11" float="true" pos="3,33,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="10" text="10" float="true" pos="3,18,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+            <Button name="9" text="9" float="true" pos="3,3,0,0" width="34" height="14" bkcolor="#FFFFFFFF" textcolor="#002D3D4D" disabledtextcolor="#FFFFFFFF" align="right" />
+        </VerticalLayout>
+    </Container>
+</Window>

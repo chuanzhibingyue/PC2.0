@@ -1,0 +1,160 @@
+<div class="modal-left" ng-if="type == 'link'">
+    <h3>
+        <i class="fa fa-link"></i> <span translate>外链</span>
+        <a ng-if="!linkObj" ng-click="openLinkManage()" href="javascript:;" class="published-link" translate>已生成的外链</a>
+    </h3>
+
+    <div class="filename" ng-bind="file.filename"></div>
+    <a class="btn btn-primary open-link" ng-click="saveSetting($event, 'link')" ng-if="!linkObj">
+        <span translate>生成外链并复制到剪切板</span>
+        <i class="fa fa-spin fa-spinner form-icon" ng-show="isloading"></i>
+    </a>
+
+    <div style="position: relative;" ng-show="linkObj">
+        <div>
+            <input class="input-link" type="text" ng-model="linkObj.url" readonly/>
+            <a class="input-link-btn" id="copyBtn" ng-click="copyLink($event,linkObj.url)">复制</a>
+        </div>
+    </div>
+</div>
+<div class="modal-left" ng-if="type == 'emailLink'">
+    <h3><i class="fa fa-cloud"></i><span translate>云附件</span></h3>
+
+    <p class="file-share-desp" translate>通过将云附件粘贴到邮件中，不用上传也可以将超大附件以更加友好的展示方式发送给客户或合作伙伴</p>
+
+    <div>
+        <div ng-bind-html="displayLink"></div>
+    </div>
+    <a class="btn btn-primary open-link" ng-click="saveSetting($event, 'emailLink')">
+        <span translate>生成云附件并复制到剪切板</span>
+        <i class="fa fa-spin fa-spinner form-icon" ng-show="isloading"></i>
+    </a>
+</div>
+<div class="modal-right">
+    <div class="setting-wrapper">
+        <div class="visit-wrapper">
+            <label translate class="title">访问控制</label>
+
+            <div class="input-wrapper">
+                <input class="radio-button-input" id="visitAll" type="radio" ng-model="setting.visit" value="all"/>
+                <label class="radio-button-label" for="visitAll">{{'任何获得该链接的人都可以访问'}}</label>
+            </div>
+            <!--<div class="input-wrapper" ng-show="isEnt">-->
+            <!--<input class="radio-button-input" id="visitLib" type="radio" ng-model="setting.visit" value="lib"/>-->
+            <!--<label class="radio-button-label" for="visitLib" ng-bind="entText"></label>-->
+            <!--</div>-->
+            <div class="input-wrapper">
+                <input class="radio-button-input" id="visitPwd" type="radio" ng-model="setting.visit" value="password"/>
+                <label class="radio-button-label" for="visitPwd">{{'设置密码访问'}}</label>
+            </div>
+            <div class="input-wrapper clearfix" ng-show="setting.visit == 'password'">
+                <input type="text" id="passwordText" class="password-input" placeholder="{{'只支持英文和数字'}}" ng-model="setting.password"/>
+                <a class="password-btn" translate ng-click="createPass()">随机生成</a>
+            </div>
+            <div translate class="input-wrapper password-error" ng-show="passError && setting.visit == 'password'">
+                密码错，请输入正确的密码 (只能为数字或字母,且长度不能超过12)
+            </div>
+        </div>
+
+        <div class="expire-wrapper">
+            <label translate class="title">失效时间</label>
+
+            <div class="input-wrapper">
+                <div class="btn-group" dropdown>
+                    <div class="btn-group" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn" ng-bind="expireDate"></button>
+                        <button type="button" class="btn fa fa-caret-down"></button>
+                    </div>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a translate ng-click="changeExpire($event, 'no')">永不失效</a></li>
+                        <li><a translate ng-click="changeExpire($event, 'day')">两天</a></li>
+                        <li><a translate ng-click="changeExpire($event, 'week')">一个星期</a></li>
+                        <li><a translate ng-click="changeExpire($event, 'month')">一个月</a></li>
+                        <li><a translate ng-click="changeExpire($event, 'custom')">自定义失效时间</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="input-wrapper custom-date" ng-show="isCustomExpire">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" id="calcendar1" data-toggle="dropdown">
+                        <div><input placeholder="失效日期" readonly class="date-input" type="text"
+                                    ng-value="data.date | date: 'yyyy-MM-dd'"><span class="date-input-icon"><i
+                                class="fa fa-calendar"></i></span></div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-datetimepicker" aria-labelledby="dLabel">
+                        <datetimepicker
+                                data-ng-model="data.date"
+                                data-before-render="beforeRender($view, $dates, $leftDate, $upDate, $rightDate,'datePicker')"
+                                data-on-set-time="onDateSet(newDate, oldDate)"
+                                data-datetimepicker-config="{dropdownSelector: '#calcendar1', startView: 'day', minView: 'day'}"/>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" id="calcendar2" data-toggle="dropdown">
+                        <div><input placeholder="失效时间" readonly class="date-input" type="text"
+                                    ng-value="data.time | date: 'HH:mm'"><span class="date-input-icon"><i
+                                class="fa fa-clock-o"></i></span></div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-datetimepicker" aria-labelledby="dLabel">
+                        <datetimepicker
+                                data-ng-model="data.time"
+                                data-before-render="beforeRender($view, $dates, $leftDate, $upDate, $rightDate,'timePicker')"
+                                data-on-set-time="onTimeSet(newDate, oldDate)"
+                                data-datetimepicker-config="{dropdownSelector: '#calcendar2', startView: 'hour', minView: 'minute'}"/>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <a class="setting-switch" translate>设置权限</a>
+
+        <div class="custom-wrapper">
+            <div>
+                <div class="checkbox-wrapper clearfix">
+                    <div class="input-wrapper">
+                        <input type="checkbox" id="permissonPreview" class="checkbox__input"
+                               ng-model="setting.permission.preview"
+                               ng-disabled="(!setting.permission.download && !setting.permission.upload) || setting.permission.download || !allowPreview || isFile">
+                        <label for="permissonPreview" class="checkbox__label">
+                            <span ng-show="allowPreview" translate>允许预览</span>
+                            <span ng-show="!allowPreview" tooltip="{{'你没有预览权限'}}" translate>允许预览</span>
+                        </label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="checkbox" id="permissonDownload" class="checkbox__input"
+                               ng-model="setting.permission.download"
+                               ng-disabled="!setting.permission.preview || !allowDownload">
+                        <label for="permissonDownload" class="checkbox__label">
+                            <span ng-show="allowDownload" translate>允许下载</span>
+                            <span ng-show="!allowDownload" tooltip="{{'你没有下载权限' }}" translate>允许下载</span>
+                        </label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="checkbox" id="permissonUpload" class="checkbox__input"
+                               ng-model="setting.permission.upload"
+                               ng-disabled="(!setting.permission.download && !setting.permission.preview) || !file.dir || !allowUpload">
+                        <label for="permissonUpload" class="checkbox__label">
+                            <span ng-show="allowUpload && file.dir" translate>允许上传</span>
+                            <span ng-show="!allowUpload" tooltip="{{'你没有上传权限' }}" translate>允许上传</span>
+                            <span ng-show="allowUpload && !file.dir" tooltip="{{'只有文件夹能上传' }}" translate>允许上传</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-wrapper" ng-show="linkObj">
+            <div class="setting-btn-wrapper clearfix">
+                <button class="btn-primary setting-btn" ng-click="updateSetting()" ng-disabled="saving">
+                    <span translate style="cursor: pointer;">保存设置</span>
+                    <span us-spinner="{radius:7, width:2, length: 3, lines: 9, scale: 0.75, color: '#666'}"
+                          ng-show="updateLoading"></span>
+                </button>
+                <button class="btn-primary setting-btn" ng-click="closeLink()" ng-disabled="saving">
+                    <span translate style="cursor: pointer;">关闭链接</span>
+                    <span us-spinner="{radius:7, width:2, length: 3, lines: 9, scale: 0.75, color: '#666'}"
+                          ng-show="closeLoading"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

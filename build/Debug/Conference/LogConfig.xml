@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LogConfig>
+  <!-- whether security in different processes. -->
+  <ProcessSecurity>1</ProcessSecurity>
+  <LogFolderDir></LogFolderDir>
+  <!-- the max size(bytes) of folder stores log files. -->
+  <LogFolderSize>100000000</LogFolderSize>
+  <!-- when clean up the log folder, how much percent to clean up.-->
+  <LogFolderCleanScale>0.2</LogFolderCleanScale>
+  <!-- set the log level. -->
+  <LogLevel>4</LogLevel>
+</LogConfig>

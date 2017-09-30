@@ -1,0 +1,103 @@
+/* common style*/
+/*  common style */
+*::selection { background-color: #F7F7F7; color: white; }
+
+* { padding: 0; margin: 0; outline: none; }
+
+html { overflow: hidden; height: 100%; }
+
+body { width: 520px; height: 420px; outline: none; overflow: hidden; font-family: 'Microsoft Yahei'; }
+
+a { outline: none; text-decoration: none; }
+
+.pointer, .main .operation i.min:hover, .main .operation i.close:hover { cursor: pointer; }
+
+.wrap-padding, .main .step0, .main .step2, .main .step1 { padding: 0px 20px; }
+
+.main a.btn { width: 130px !important; color:#4f667b !important;height: 32px; line-height: 32px;display: inline-block; text-decoration: none; margin-right: 10px;}
+.main a.btn:hover, .main .error .setup-success a:hover {color:white !important; }
+
+.main { width: 520px; height: 420px;box-shadow: 0 0 25px #ccc;  background-color: #3b4f61; color: white; }
+.main .title{width: 100%;}
+.main .operation { float: right; height: 18px; margin-right: 10px; margin-top: 5px; }
+.main .operation i { display: inline-block; width: 18px; height: 18px; }
+.main .operation i.min { background: url(min_normal.png) no-repeat 6px 13px;}
+.main .operation i.min:hover { background: url(min_hover.png) no-repeat 3px 3px;}
+.main .operation i.min:active { background: url(min_active.png) no-repeat 3px 3px;}
+.main .operation i.close { background: url(close_normal.png) no-repeat 5px 5px; }
+.main .operation i.close:hover { background: url(close_hover.png) no-repeat 3px 3px;}
+.main .operation i.close:active { background: url(close_active.png) no-repeat 3px 3px;}
+.main .operation i.close.disabled{ background: url(close_normal.png) no-repeat 3px 5px !important; cursor: default}
+.main .step0, .main .step2, .error { text-align: center; overflow: hidden}
+.main .step0 .welcome, .main .step2 .welcome { font-family: 'Microsoft Yahei';font-size: 20px; line-height: 36px; margin-bottom: 10px; }
+.main .step0, .main .step2, .main .step1 { overflow: hidden; }
+.main .logo, .main .setup-button { font-size: 16px; margin: 40px 0; text-align: center; }
+.main .btn-wrap { margin-top: 80px; }
+.main .step1 .info { height: 270px; margin-top: 40px; text-align: center;}
+.main .step1 .progress .bar { height: 4px; width:100%; border-radius: 5px; background-color: #D7D7D7;  }
+.main .step1 .progress .des { margin-top: 30px;  }
+.main .step1 .progress .des .left { float: left; }
+.main .step1 .progress .des .right { float: right; }
+.main .error .info { height: 230px; margin-top: 40px; text-align: center; }
+.main .error .info .tips { margin-top: 30px; }
+.main .error .setup-success { text-align: center; }
+.main .error .setup-success a:hover { color: white;}
+.main .error .big { font-size: 20px; line-height: 28px; margin-bottom: 20px;}
+.main .btn-uninstall-success, .main .btn-uninstall-cancel, .main .btn-uninstall{}
+.main .bar .num { width: 0%; height: 4px; background-color: #FFCC00; }
+.btn-install-close{margin-top: 30px;}
+
+/*# sourceMappingURL=uninstal.css.map */
+/* 卸载取消按钮 */
+.btn-uninstall-cancel{
+    background: url(cancle_normal.png);
+}
+.btn-uninstall-cancel:hover{
+    background: url(cancle_hover.png);
+}
+.btn-uninstall-cancel:active{
+    background: url(cancle_active.png);
+}
+
+/* 卸载确认按钮 */
+.btn-uninstall{
+    background: url(uninstall_normal.png);
+}
+.btn-uninstall:hover{
+    background: url(uninstall_hover.png);
+}
+.btn-uninstall:active{
+    background: url(uninstall_active.png);
+}
+
+/* 卸载完成按钮 */
+a.btn.btn-uninstall-success{
+    width: 180px !important;
+    background: url(ok_normal.png);
+	margin-right: 0px !important;
+}
+a.btn.btn-uninstall-success:hover{
+    background: url(ok_hover.png);
+}
+a.btn.btn-uninstall-success:active{
+    background: url(ok_active.png);
+}
+
+/* 卸载出错按钮 */
+a.btn-install-close{
+    display: inline-block;
+    width: 180px !important;
+    height: 32px;
+    background: url(ok_normal.png);
+    margin-top: 60px;
+}
+a.btn-install-close:hover{
+    background: url(ok_hover.png);
+}
+a.btn-install-close:active{
+    background: url(ok_active.png);
+}
+
+.error .msg{
+    font-size: 12px;
+}

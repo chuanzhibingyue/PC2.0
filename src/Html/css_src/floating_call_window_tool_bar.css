@@ -1,0 +1,149 @@
+.floating-call-tool-bar{
+    width: 100%;
+    height: 100%;
+}
+.floating-call-tool-bar .call-toolbar-btn{
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    display: inline-block;
+    margin-right:15px;
+    cursor: pointer;
+    font-size:22px;
+}
+.floating-call-tool-bar .call-toolbar-btn.disable{
+    cursor: default;
+}
+
+.floating-call-tool-bar .call-toolbar-btn.openHover{
+    background-color: #f4f16e;
+    color:#3b4f61 !important;
+
+}
+.floating-call-tool-bar .call-toolbar-btn.openActive{
+    background-color: #e0dd0d;
+    color:#3b4f61 !important;
+}
+
+.floating-call-tool-bar .call-toolbar-btn.open{
+    color:#3b4f61 !important;
+    background-color: #ede90e !important;
+    opacity: 1 !important;
+}
+.floating-call-tool-bar .quick-reply{
+    position: absolute;
+	font-weight:bold;
+	font-size:12px;
+	line-height:20px;
+	color:#fff;
+    left: 20px;
+    background: url(../images/message/screen_shot_settings.png) no-repeat  right center;
+    width: 60px;
+    height: 20px;
+    /* display: none; */
+    bottom: 15px;
+}
+.floating-call-tool-bar .call-btn-node{
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    text-align: right;
+}
+.floating-call-tool-bar .call-btn-node.video-open{
+    text-align: right;
+}
+
+/*----call btn----*/
+.floating-call-tool-bar .mute{
+    color:#ffffff;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	font-size:22px;
+	background-color:rgba(255,255,255,0.1);
+	border-radius:50%;
+}
+.floating-call-tool-bar .mute.muted{
+    border-radius: 50%;
+    color:#3b4f61;
+    background-color: #ede90e !important;
+    opacity: 1 !important;
+}
+.floating-call-tool-bar .mute.muted.disable{
+    background-color:rgba(255,255,255,0.3);
+}
+.floating-call-tool-bar .mute.disable{
+    opacity: 0.3 !important;
+}
+.floating-call-tool-bar .video{
+}
+.floating-call-tool-bar .video.open{
+}
+.floating-call-tool-bar .end-call{
+    border-radius: 50%;
+    background-color: #ff5252;
+    color:#ffffff;
+    float: right;
+    line-height: 40px;
+    text-align: center;
+
+}
+.floating-call-tool-bar .end-call:hover{
+    background-color: #ff7272;
+}
+.floating-call-tool-bar .end-call:active{
+    background-color: #e54949;
+}
+.floating-call-tool-bar .end-call.disable{
+    background-color: #ff5252;
+    opacity: 0.3 !important;
+}
+.floating-call-tool-bar .answer-call{
+    border-radius: 50%;
+    background-color: #4cd964;
+    float: right;
+    line-height: 40px;
+    color:#ffffff;
+    text-align: center;
+}
+.floating-call-tool-bar .answer-call.hide{
+   display:none !important ;
+}
+.floating-call-tool-bar .answer-call.disable{
+    background-color: #4cd964;
+    opacity: 0.3 !important;
+}
+.floating-call-tool-bar .replyMessage{
+    display:none;
+    min-height:117px;
+    width:196px;
+	border-radius:4px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    position: absolute;
+	left:-40px;
+    color:#173553;
+    cursor: pointer;
+    margin-top: 40px;
+	padding-top:5px;
+    background-color: #ffffff;
+}
+.floating-call-tool-bar .replyMessage li:hover{
+    background-color: #4f667b;
+	color:#fff;
+}
+.floating-call-tool-bar .replyMessage li:active{
+    background-color: #4f667b;
+}
+.floating-call-tool-bar .replyMessage li{
+	height:22px;
+	line-height:22px;
+	padding-left:20px;
+}
+
+.floating-call-tool-bar .replyMessage .self-send-message{
+	border-top:1px solid #ededed;
+	height:27px;
+	line-height:27px;
+}

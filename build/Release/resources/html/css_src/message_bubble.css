@@ -1,0 +1,230 @@
+#layoutContainer {
+    flex-flow: row;
+    overflow: hidden;
+    height: 320px;
+}
+
+.popup-message-box {
+	padding-left: 18px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #3b4f61;
+    font-size: 12px;
+    color: #ffffff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: solid 1px #3b4f61;
+}
+
+.conversation-list {
+	font-size: 14px;
+    color: #173553;
+    background-color: white;
+}
+
+.conversation-item {
+    height: 30px;
+    padding: 10px 20px;
+}
+
+.message-total-num {
+	padding-left: 7px;
+}
+
+.avatar-node {
+	float: left;
+    width: 40px;
+    height: 40px;
+}
+.conversation-item .meeting-icon{
+    color: white;
+    width: 36px;
+    height: 34px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 32px;
+    background-repeat: no-repeat;
+    background-size: 35px 30px;
+    background-image: url("../images/conversation/icon_normal_meeting_normal.png");
+}
+.conversation-item .meeting-icon.cloud{
+    width: 38px;
+    height: 35px;
+    line-height: 31px;
+    text-align: left;
+    background-size: 37px 35px;
+    background-repeat: no-repeat;
+    background-image: url("../images/conversation/icon_cloud_meeting_normal.png");
+}
+.conversation-item .meeting-icon.cancelled{
+    background-image: url("../images/conversation/icon_normal_meeting_cancelled.png");
+}
+.conversation-item .meeting-icon.cloud.cancelled{
+    background-image: url("../images/conversation/icon_cloud_meeting_cancelled.png");
+}
+.conversation-item .meeting-icon.cloud .cloud-time{
+    margin-left: 3px;
+}
+.conversation-item .meeting-icon.cloud .cloud-day{
+    margin-left: 6px;
+}
+.conversation-item .meeting-icon.cloud .cloud-month{
+    margin-left: 1px;
+}
+.title {
+	float: left;
+    margin-left: 8px;
+    margin-top: 1px;
+    max-width: 135px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+
+.title.cancelled{
+    text-decoration: line-through;
+    color: #7d7d63 !important;
+}
+
+.msg-num {
+    position: absolute;
+    margin-top: 6px;
+    border-radius: 40px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #ffffff;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#f96868), to(#d54a4a));
+}
+
+.delete {
+    margin-top: 11px;
+    position: absolute;
+    right: 6px;
+    /*top: 10px;*/
+    width: 8px;
+    height: 8px;
+}
+
+.popup-message-box-bottom {
+    height: 35px;
+	font-size: 12px;
+    color: #777777;
+    background-color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom: solid 1px white;
+    border-top: solid 1px #e8e8e8;
+}
+
+.popup-message-box-bottom ul li {
+    padding: 7px 20px;
+}
+
+.scroll-bar {
+    position: relative;
+    background-color: white;
+}
+
+.ignore {
+	float: left;
+    cursor: pointer;
+}
+
+.setting :hover{
+    cursor: pointer;
+}
+
+.setting {
+	float: right;
+	line-height: 27px;
+    margin-right: 5px;
+}
+
+.setting-icon {
+	width: 16px;
+    height: 16px;
+}
+
+.single-bubble {
+    position: relative;
+    top: 260px;
+    bottom: 0px;
+    left: 15px;
+    right: 0px;
+    height: 52px;
+    width: 260px;
+    cursor: pointer;
+    background-color: #fffee1;
+    border-radius: 4px;
+    border: solid 1px #ffffff;
+    box-shadow: 0px 1px 15px rgba(00,00,00, .3);
+}
+
+.single-bubble :hover{
+    cursor: pointer;
+    background-color: #fffee1;
+}
+
+.bubble-list {
+    position: absolute;
+    top: 205px;
+    left: 15px;
+    width: 260px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 15px rgba(00,00,00, .3);
+}
+
+.bubble-list .conversation-list :hover{
+    cursor: pointer;
+    background-color: #fffee1;
+}
+
+.round-image {
+    width: 32px;
+    border-radius: 50%;
+    height: 32px;
+}
+
+.hundred {
+    width: 30px;
+    right:18px;
+}
+
+.ten {
+    width: 24px;
+    right: 20px;
+}
+.single {
+    right: 22px;
+}
+.avatar-node .group-avatar .avatar-admin {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 2;
+    border: 1px solid #FFFFFF;
+}
+
+.avatar-node .group-avatar .avatar-attendee {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.meeting {
+    margin-right: 15px;
+    margin-top: 11px;
+    height: 10px;
+    width: 10px;
+}

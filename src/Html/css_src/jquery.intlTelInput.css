@@ -1,0 +1,68 @@
+/**
+*  jquery.intlTelInput 
+*  vreate by hougang.chen 2015/12/31
+*/
+.jquery-intlTelInput {
+	cursor: pointer;
+}
+.jquery-intlTelInput span {
+	width: 100%;
+	height:20px;
+	line-height:20px;
+	color: #173553;
+	display:inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.jquery-intlTelInput .listbox{
+	width:150px;
+	padding:5px 2px 15px 0px;
+	position: absolute;
+	display:none;
+	left: 0;
+	top: 45px;
+	color: #173553;
+	font-size:12px;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 4px 7px rgba(00,00,00, .5);
+	
+}
+.jquery-intlTelInput .listbox .select_inner {
+	max-height:128px;
+	overflow-y:auto;
+	z-index: 3;
+}
+.jquery-intlTelInput .listbox .select_inner li {
+	height:25px;
+	line-height:25px;
+}
+.jquery-intlTelInput .listbox .select_inner li:hover {
+	background-color: #4f667b;
+	color:#fff;
+}
+.jquery-intlTelInput .listbox .select_inner li span{
+	display:inline-block;
+	line-height:25px;
+}
+.jquery-intlTelInput .listbox .select_inner li .tel{
+	width:90px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.jquery-intlTelInput .listbox .select_inner li .dialCode{
+	width:30px;
+	color:#777;
+}
+.jquery-intlTelInput .listbox .select_inner li .icon-call_singleSelected{
+	font-size:9px;
+	width:10px;
+	margin:0px 5px;
+	float:left;
+}
+.jquery-intlTelInput .listbox .select_inner li .unselect{
+	opacity:0;
+}

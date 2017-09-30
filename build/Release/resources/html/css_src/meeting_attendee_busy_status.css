@@ -1,0 +1,448 @@
+.meeting-attendee_busy_status {
+    background-color: #fff;
+}
+
+.meeting-attendee_busy_status .window-bar {
+    height: 43px;
+    line-height: 43px;
+    vertical-align: middle;
+    padding: 0 10px;
+    background-image: url(../images/bottom_border.png);
+    background-repeat: repeat-x;
+    background-position-y: 40px;
+}
+
+.meeting-attendee_busy_status .window-bar .title {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.meeting-attendee_busy_status .window-bar .tool-icon-container {
+    top: -1px;
+    line-height: 20px;
+}
+
+.meeting-attendee_busy_status .header{
+    width: 100%;
+    height: 75px;
+}
+
+.meeting-attendee_busy_status .header .start-time-label{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 15px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.meeting-attendee_busy_status .header .meeting-time-container{
+    width: 100%;
+    height: 35px;
+}
+
+.meeting-attendee_busy_status .header .start-time-container{
+    width: 220px;
+    border: 1px solid #cccccc;
+    height: 30px;
+    line-height: 30px;
+    margin-left:15px;
+    float: left;
+}
+
+.meeting-attendee_busy_status .header .start-time-container .start-label{
+    font-size: 12px;
+    color: #cccccc;
+    width: 45px;
+    line-height: 20px;
+    height: 20px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+    margin-top: 5px;
+    float: left;
+}
+
+.meeting-attendee_busy_status .header .start-time-container .start-time{
+    float: left;
+    position: relative;
+    padding: 4px 5px;
+}
+
+.meeting-attendee_busy_status .header .duration-container{
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #cccccc;
+    float: left;
+    margin-left: 20px;
+}
+
+.meeting-attendee_busy_status .header .duration-container .duration-label{
+    font-size: 12px;
+    color: #cccccc;
+    width: 45px;
+    line-height: 20px;
+    height: 20px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+    margin-top: 5px;
+    float: left;
+}
+
+.meeting-attendee_busy_status .header .duration-container .duration{
+    float: left;
+}
+
+.meeting-attendee_busy_status .header .search-input{
+    margin-right: 20px;
+    width: 240px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #cccccc;
+    padding: 0 0 0 10px;
+    float: right;
+    outline: none;
+}
+
+.meeting-attendee_busy_status .header .search-input:focus{
+    border: 1px solid #3399f3;
+    outline: none;
+}
+
+.meeting-attendee_busy_status .body{
+    height: 365px;
+    width: 100%;
+}
+
+.meeting-attendee_busy_status .body .body-header{
+    width: 100%;
+    height: 20px;
+    background-color: #eeeeee;
+}
+
+.meeting-attendee_busy_status .body .body-header .time-pointer-container{
+    width: 830px;
+    height: 20px;
+    overflow: hidden;
+    margin-left: 165px;
+    border-left: 1px solid #dadada;
+}
+.meeting-attendee_busy_status .body .body-header .time-pointers{
+    height: 20px;
+    line-height: 20px;
+    /*width: 830px;*/
+    white-space: nowrap;
+    /*margin-left: -100px;*/
+}
+
+.meeting-attendee_busy_status .body .body-header .time-pointers .time-pointer {
+    font-size: 10px;
+    width: 60px;
+    /*text-indent: 4px;*/
+    text-align: center;
+    color: #999;
+    /*float: left;*/
+    display: inline-block;
+    /*background-image: url(../images/meeting/meeting_timeline.png);*/
+}
+
+.meeting-attendee_busy_status .body .body-header .time-pointers .time-pointer .hour {
+    color: #3b4f61;
+}
+
+.meeting-attendee_busy_status .body .body-content{
+    width: 100%;
+    height: 345px;
+    position: relative;
+}
+
+.meeting-attendee_busy_status .body .body-content .attendee-list-container{
+    display: inline-block;
+    width: 165px;
+    border-right: solid 1px #dadada;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+.meeting-attendee_busy_status .attendee-list{
+    position: relative;
+}
+
+.meeting-attendee_busy_status .attendee-list .attendee {
+    display: block;
+    width:100%;
+    height: 39px;
+    line-height: 40px;
+    cursor: default;
+    outline: none;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+.meeting-attendee_busy_status .attendee-list .attendee *{
+    cursor: pointer;
+}
+.meeting-attendee_busy_status .attendee-list .attendee:hover{
+    background-color:#fffff3;
+}
+
+.meeting-attendee_busy_status .attendee-list .attendee .attendee-name{
+    height: 40px;
+    line-height: 40px;
+    margin-left: 10px;
+    float: left;
+    font-size: 14px;
+    color: #3b4f61;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 130px;
+}
+
+.meeting-attendee_busy_status .attendee-list .attendee.host .attendee-name{
+    max-width: 100px;
+}
+
+.meeting-attendee_busy_status .attendee-list .attendee .attendee-host{
+    height: 20px;
+    line-height: 20px;
+    margin-right: 10px;
+    float: right;
+    padding: 0 5px;
+    margin-top: 10px;
+    font-size: 10px;
+    border-radius: 2px;
+    background-color: #607589;
+    color: #E4E4DF;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.meeting-attendee_busy_status .attendee-list .attendee .delete-attendee {
+    background-image: url(../images/meeting/icon_delete.png);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    text-indent: 10000px;
+    outline: none;
+    border: none;
+    background-position: 50%;
+    background-color: #fff;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 15px;
+}
+
+.meeting-attendee_busy_status .attendee-list .attendee:hover .delete-attendee {
+    display: inline-block;
+}
+
+
+.meeting-attendee_busy_status .timeline-box {
+    width: 830px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.meeting-attendee_busy_status .timeline-box .timelines {
+    position: relative;
+    width: 1440px;
+}
+
+.meeting-attendee_busy_status .timeline-box .timeline-segment {
+    top: 15px;
+    position: absolute;
+    height: 10px;
+    border-radius: 2px;
+    background-color: #adadad;
+}
+
+.meeting-attendee_busy_status .timeline-box .time-pointers,
+.meeting-attendee_busy_status .timeline-box .attendee-works {
+    width: 830px;
+    border-right: solid 1px #ededed;
+}
+
+
+.meeting-attendee_busy_status .timeline-box .attendee-works {
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    /*background-image: url(../images/meeting/meeting_timeline.png);*/
+}
+
+.meeting-attendee_busy_status .timeline-box .attendee-works .empty-bar {
+    height: 24px;
+    line-height: 24px;
+    background-color: #f5f5f5;
+    background-image: url(../images/meeting/meeting_timeline.png);
+}
+
+.meeting-attendee_busy_status .timeline-box .attendee-works .timeline {
+    height: 39px;
+    line-height: 39px;
+    border-bottom: 1px solid #ededed;
+    background-image: url(../images/meeting/meeting_timeline.png);
+    background-color:#fff;
+    position: relative;
+}
+
+.meeting-attendee_busy_status .timeline-box .time-rule {
+    top: 10px;
+    position: absolute;
+    width: 1px;
+    height: 420px;
+    background-color: #3b4f61;
+    display: none;
+}
+
+.meeting-attendee_busy_status .timeline-box .rule-time-box {
+    position: absolute;
+    color: #adadad;
+    width: 30px;
+    background-color: #3b4f61;
+    text-align: center;
+    border-radius: 3px;
+    display: none;
+    line-height: 10px;
+}
+
+.meeting-attendee_busy_status .timeline-box .rule-time-box .hour,
+.meeting-attendee_busy_status .timeline-box .rule-time-box .minute {
+    font-size: 8px;
+    height: 15px;
+    line-height: 15px;
+}
+
+.meeting-attendee_busy_status .timeline-box .rule-time-box .hour {
+    color: #fff;
+}
+
+.meeting-attendee_busy_status .timeline-box .meeting-timeline {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: none;
+    z-index: 4;
+}
+
+.meeting-attendee_busy_status .timeline-box .meeting-timeline .timeline-head {
+    background-color: #4cd964;
+    height: 3px;
+}
+
+.meeting-attendee_busy_status .timeline-box .meeting-timeline .timeline-body {
+    position: absolute;
+    top: 3px;
+    bottom: 0;
+    background-color: #4cd964;
+    width: 100%;
+    opacity: 0.3;
+}
+
+.meeting-attendee_busy_status .timeline-box .meeting-timeline-busy .timeline-head,
+.meeting-attendee_busy_status .timeline-box .meeting-timeline-busy .timeline-body {
+    background-color: #f96868;
+}
+
+.meeting-attendee_busy_status .timeline-box .meeting-timeline-attendee-busy .timeline-head,
+.meeting-attendee_busy_status .timeline-box .meeting-timeline-attendee-busy .timeline-body {
+    background-color: #71aee2;
+}
+
+.meeting-attendee_busy_status .calendarButton a{
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.meeting-attendee_busy_status .calendarButton .finish{
+    background-color: #3b4f61;
+    color: #ffffff;
+    border-radius: 2px;
+    width: 164px;
+}
+.meeting-attendee_busy_status .calendarButton .finish:hover{
+    background-color:#607588;
+}
+.meeting-attendee_busy_status .calendarButton .finish:active{
+    background-color:#465b6e;
+}
+.meeting-attendee_busy_status .calendarButton .cancel{
+    background-color: #ededed;
+    color: #3b4f61;
+    border-radius: 2px;
+    margin-right: 6px;
+    width: 105px;
+}
+.meeting-attendee_busy_status .calendarButton .cancel:hover{
+    background-color:#eeeeee;
+}
+.meeting-attendee_busy_status .calendarButton .cancel:active{
+    background-color:#d4d4d4;
+}
+.meeting-attendee_busy_status .vertical-scroll {
+    position: absolute;
+    top: 142px;
+    bottom: 60px;
+    right: 2px;
+    width: 5px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.meeting-attendee_busy_status .vertical-scroll .content-length {
+    width: 1px;
+}
+
+.meeting-attendee_busy_status .horizontal-scroll {
+    position: absolute;
+    left: 165px;
+    bottom: 60px;
+    right: 3px;
+    height: 5px;
+    overflow-x: auto;
+    z-index:99;
+}
+
+.meeting-attendee_busy_status .horizontal-scroll .content-length {
+    height: 1px;
+}
+
+.meeting-attendee_busy_status .calendarButton{
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    border-top: solid 1px #dadada;
+    margin-right: 10px;
+}
+
+.meeting-attendee_busy_status  .current-time{
+    bottom:0;
+    background-color: #808080;
+    opacity: 0.1;
+    position: absolute;
+    z-index: 3;
+    top:60px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.meeting-attendee_busy_status .attendNoBottom{
+    bottom:20px;
+}

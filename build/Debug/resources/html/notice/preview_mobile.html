@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="text/css" rel="stylesheet" href="theme/css/preview_mobile.css" />
+  <title>preview</title>
+  <script src="thirdparty/jquery-1.11.3.js"></script>
+	<script src="thirdparty/angular.min.js"></script>
+	<script src="thirdparty/angular-animate.min.js"></script>
+	<script src="thirdparty/angular-sanitize.min.js"></script>
+	<script src="thirdparty/cropper.min.js"></script>
+	<script src="thirdparty/angular-translate.min.js"></script>
+
+  <!-- replace start-->
+	<script src="js/app.js"></script>
+	<!-- 第一引入services -->
+	<script src="js/services/native.js"></script>
+	<script src="js/services/utils.js"></script>
+	<script src="js/services/notices.js"></script>
+	<script src="js/services/pages.js"></script>
+	<script src="js/services/api.js"></script>
+	<script src="js/services/log.js"></script>
+	<!-- 第二入directives -->
+	<script src="js/directives/notice_alert.js"></script>
+	<script src="js/directives\raw_html.js"></script>
+	<!-- 第三入controllers -->
+	<script src="js/controllers/preview_controller.js"></script>
+	<!-- replace end-->
+<body>
+	<div class="main"  ng-controller="previewCtrl">
+		<div class="wrapper">
+			<div class="account" ng-bind="notice.accountName"></div>
+	    <div class="header">
+	      <div class="topic"><span id="topicContent" ng-bind="notice.topic"></span></div>
+	      <div class="subline">
+	        <div class="createTime" ng-bind="notice.createTime"></div>
+	      </div>
+	    </div>
+	    <div class="contentDiv">
+			<div class="coverDiv" ng-if="notice.isEmbedCover && notice.cover.url">
+				<img ng-src="{{notice.cover.url}}"></img>
+			</div>
+			<div id="content" raw-html content="notice.content"></div>
+	    </div>
+	  </div>
+		<i class="close" ng-click = "onClose()"></i>
+  	<div notice-alert></div>
+	</div>
+
+</body>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <link href="../css/AVdetection.css" rel="stylesheet" />
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/AVdetection.js"></script>
+    <title>AVdetection</title>
+</head>
+<body>
+<div class="AVdetectionWindow">
+    <div class="windowTitle">
+        {{AVdetection.title}}
+    </div>
+    <div class="stepShowContent ">
+        <ol>
+            <li class="stepone ui-step-done">
+                <div class="step-icon">
+                    <span class="icon-speaker"></span>
+                    <span class="step-name">{{AVdetection.stepName.speaker}}</span>
+                    <span class="icon-circe_right"></span>
+                </div>
+                <div class="step-line"></div>
+            </li>
+            <li class="steptwo">
+                <div class="step-icon">
+                    <span class="icon-mike"></span>
+                    <span class="step-name">{{AVdetection.stepName.mike}}</span>
+                    <span class="icon-circe_right"></span>
+                </div>
+                <!--<div class="step-line"></div>  -->
+            </li>
+            <!-- //暂时屏蔽视频检测
+            <li class="stepthree">
+                <div class="step-icon">
+                    <span class="icon-call_video"></span>
+                    <span class="step-name">{{AVdetection.stepName.video}}</span>
+                    <span class="icon-circe_right"></span>
+                </div>
+            </li>
+            -->
+            <div class='cl'></div>
+        </ol>
+    </div>
+    <div class="speakerContent">
+        <div class="content">
+            <div class="tip">{{AVdetection.speakeContent.useingEquipmentTip}}</div>
+            <div class="hardwareSelect"></div>
+            <div class="speakerList"></div>
+            <div class="DetectionTip">{{AVdetection.speakeContent.clickDetectionBtnTip}}</div>
+            <div class="clickDetectionBtn">
+                <div>
+                    <a class="btn-uikit btn-gray btn-turnOn" href="###">{{AVdetection.speakeContent.DetectionBtn}}</a>
+                </div>
+                <div class="detectionVideo"></div>
+                <div class="detectionVideoOn"></div>
+                <div class='cl'></div>
+            </div>
+            <div class='cl'></div>
+        </div>
+        <div class="errorTip">
+            {{AVdetection.speakeContent.errorTip}}
+        </div>
+    </div>
+    <div class="mikeContent hide">
+        <div class="content">
+            <div class="tip">{{AVdetection.mikeContent.useingEquipmentTip}}</div>
+            <div class="hardwareSelect"></div>
+            <div class="mikeList"></div>
+            <div class="DetectionTip">{{AVdetection.mikeContent.clickDetectionBtnTip}}</div>
+            <div class="clickDetectionBtn">
+                <div class="detectionMike"></div>
+                <div class="detectionMikeOn"></div>
+                <div class='cl'></div>
+            </div>
+            <div class='cl'></div>
+        </div>
+        <div class="errorTip">
+            {{AVdetection.mikeContent.errorTip}}
+        </div>
+    </div>
+    <div class="vedioContent hide">
+        <div class="vedio">
+        </div>
+        <div class="content">
+            <div class="tip">{{AVdetection.vedioContent.useingEquipmentTip}}</div>
+            <div class="hardwareSelect"></div>
+        </div>
+        <div class="errorTip">
+            {{AVdetection.vedioContent.errorTip}}
+        </div>
+    </div>
+    <div class="stepBtnContent">
+        <a class="btn-uikit btn-gray btn-prevstep hide " href="###">{{AVdetection.stepbutton.prevStepBtn}}</a>
+        <a class="btn-uikit btn-dark btn-nextstep" href="###">{{AVdetection.stepbutton.nextStepBtn}}</a>
+    </div>
+    <div class="tool-icon-container">
+        <span class="icon-close tool-icon"></span>
+    </div>
+</div>
+</body>
+</html>

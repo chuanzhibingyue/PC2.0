@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 通道层配置选择,该配置项在程序初始化时加载,运行中修改配置项在当前会议中不会生效-->
+<TransportMgr>
+	<!--P2P配置项 -->
+	<P2P>
+		<USEP2P>1</USEP2P>
+		<UseMulticast>1</UseMulticast>
+		<P2PMPort>5050</P2PMPort>
+	</P2P>
+	<!--C/DTS配置项 包含连接类型的配置与选择以及连接属性的设置 -->
+	<Connection>
+	  <!--  C/DTS ProtocolVersionNumber : 0老协议(无流控) 1为新协议(RCMP) 2为TCP/UDP双连接支持(RCBP) -->
+		<!--  C/DTS ConnectionType :0 normal HTTP First(http https); 1 normal TCP/UDP First(参考C/DTSLastConnectionType);2 only use HTTP; 3 only use HTTPS; 4 only use TCP/UDP -->
+		<!--  C/DTS LastConnectionType :0 TCP; 1 UDP; 2 HTTP; 3 HTTPS; 4无效 该选项用于记录上次会议的连接类型,请勿手动修改-->
+		<CTS>		
+			<ProtocolVersionNumber>2</ProtocolVersionNumber>
+			<ConnectionType>1</ConnectionType>
+			<MaxContentLength/>
+			<HeartbeatInterval/>
+			<LastConnectionType/>
+		</CTS>
+		<DTS>
+			<ProtocolVersionNumber>2</ProtocolVersionNumber>
+			<ConnectionType>1</ConnectionType>
+			<MaxContentLength/>
+			<HeartbeatInterval/>
+			<LastConnectionType/>
+		</DTS>
+		<!--连接类型配置清理周期，单位天 -->
+		<CycleCleanTime>30</CycleCleanTime>
+		<!--上次清理的日期,以时间戳的形式存放,精确到天-->
+		<LastCleanDate/>
+		<!--UDP断线切换检测时间，单位秒 -->
+		<UDPDetectTime>60</UDPDetectTime>
+		<!--TCP/HTTP/HTTPS断线切换检测时间，单位秒 -->
+		<TCPDetectTime>300</TCPDetectTime>
+		<!--断线切换检测阀值，当断线次数超过该值时才进行切换 -->
+		<MaxRetryCount>2</MaxRetryCount>
+		<!--连接监控超时时间，单位秒 -->
+		<ConnectDetectTime>15</ConnectDetectTime>
+	</Connection>
+	<Channel>
+		<!--通道发送清包阀值，目前只有视频和桌面有效，其它的通道做清包处理。-->
+		<SendClearThreshold>
+		<!--视频有4个发送队列，分别对应SVC的4个层，这里只配置最小层，其它层根据上一层是下一层2倍的原则进行配置-->
+			<MinVideoThreshold>50</MinVideoThreshold>
+			<DesktopThreshold>50</DesktopThreshold>
+		</SendClearThreshold>
+		<!--通道接收队列的最小值,根据需要可以对各个业务进行配置，没有配置的默认32。-->
+		<RecvList>
+			<AudioSize/>
+			<VideoSize>512</VideoSize>
+			<ChatSize/>
+			<WhiteBoardSize/>
+			<DocSharingSize>512</DocSharingSize>
+			<DesktopSharingSize>512</DesktopSharingSize>
+		</RecvList>
+	</Channel>
+	<FlowControl>
+		<!--流控窗口最小值 -->
+		<MinWinSize>3</MinWinSize>
+		<!--RTT最大的有意义值,超过后不采用-->
+		<MaxRtt>5000</MaxRtt>
+		<!--RTT Means最大值 超过该值后阻止窗口增长-->
+		<MaxRttMeans>400</MaxRttMeans>
+		<!--RTT Means 分界值 对RTT采用不同的等级-->
+		<RttMeansBorder>75</RttMeansBorder>
+		<!--RTT用于调整窗口和means取值1/2 窗口不惩罚 -->
+		<RttLevel1>100</RttLevel1>
+		<!--RTT用于调整窗口和means取值1/3 窗口减少25%-->
+		<RttLevel2>200</RttLevel2>
+		<!--RTT用于调整窗口和means取值1/4 窗口减少50%-->
+		<RttLevel3>300</RttLevel3>
+		<!--丢包惩罚阀值1 当丢包个数超过该值时winsize降为50%-->
+		<LostLevel1>2</LostLevel1>
+		<!--丢包惩罚阀值2 当丢包个数超过该值时winsize降为最小值-->
+		<LostLevel2>4</LostLevel2>
+	</FlowControl>
+</TransportMgr>

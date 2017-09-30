@@ -1,0 +1,91 @@
+﻿Build started 2016/6/15 15:13:25.
+     1>Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\DuiLib\DuiLib\DuiLib.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D UILIB_EXPORTS /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Build\Debug/DuiLib.pch" /Fo"Debug\DuiLib\\" /Fd"Debug\DuiLib\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D UILIB_EXPORTS /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Build\Debug/DuiLib.pch" /Fo"Debug\DuiLib\\" /Fd"Debug\DuiLib\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Control\UIActiveX.cpp Control\UIButton.cpp Control\UICheckBox.cpp Control\UICombo.cpp Control\UIComboBox.cpp Control\UIDateTime.cpp Control\UIEdit.cpp Control\UILabel.cpp Control\UIList.cpp Control\UIOption.cpp Control\UIProgress.cpp Control\UIRichEdit.cpp Control\UIScrollBar.cpp Control\UISlider.cpp Control\UIText.cpp Control\UITreeView.cpp Control\UIWebBrowser.cpp Core\UIBase.cpp Core\UIContainer.cpp Core\UIControl.cpp Core\UIDlgBuilder.cpp Core\UIManager.cpp Core\UIMarkup.cpp Core\UIRender.cpp Layout\UIChildLayout.cpp Layout\UIHorizontalLayout.cpp Layout\UITabLayout.cpp Layout\UITileLayout.cpp Layout\UIVerticalLayout.cpp UIlib.cpp Utils\UIDelegate.cpp Utils\Utils.cpp Utils\WinImplBase.cpp
+         WinImplBase.cpp
+         Utils.cpp
+         UIDelegate.cpp
+         UIlib.cpp
+         UIVerticalLayout.cpp
+         UITileLayout.cpp
+         UITabLayout.cpp
+         UIHorizontalLayout.cpp
+         UIChildLayout.cpp
+         UIRender.cpp
+         UIMarkup.cpp
+         UIManager.cpp
+         UIDlgBuilder.cpp
+         UIControl.cpp
+         UIContainer.cpp
+         UIBase.cpp
+         UIWebBrowser.cpp
+         UITreeView.cpp
+         UIText.cpp
+         UISlider.cpp
+         Generating Code...
+         Compiling...
+         UIScrollBar.cpp
+         UIRichEdit.cpp
+         UIProgress.cpp
+         UIOption.cpp
+         UIList.cpp
+         UILabel.cpp
+         UIEdit.cpp
+         UIDateTime.cpp
+         UIComboBox.cpp
+         UICombo.cpp
+         UICheckBox.cpp
+         UIButton.cpp
+         UIActiveX.cpp
+         Generating Code...
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D UILIB_EXPORTS /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\DuiLib\\" /Fd"Debug\DuiLib\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt Utils\stb_image.c
+         stb_image.c
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D UILIB_EXPORTS /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\DuiLib\\" /Fd"Debug\DuiLib\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Utils\XUnzip.cpp
+         XUnzip.cpp
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1197,5): warning MSB8030: The linker switch "Minimum Required Version" requires "SubSystem" to be set.  Without "SubSystem", the "Minimum Required Version" would not be passed to linker and could prevent to the output binary from running on older Operating Systems.
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\lib\DuiLib_d.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:.\lib /LIBPATH:"D:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /DEBUG /PDB:"E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\DuiLib\lib\DuiLib_d.pdb" /TLBID:1 /BASE:"0x11000000" /DYNAMICBASE /NXCOMPAT /IMPLIB:"../lib/DuiLib_d.lib" /MACHINE:X86 /SAFESEH /DLL Debug\DuiLib\UIActiveX.obj
+         Debug\DuiLib\UIButton.obj
+         Debug\DuiLib\UICheckBox.obj
+         Debug\DuiLib\UICombo.obj
+         Debug\DuiLib\UIComboBox.obj
+         Debug\DuiLib\UIDateTime.obj
+         Debug\DuiLib\UIEdit.obj
+         Debug\DuiLib\UILabel.obj
+         Debug\DuiLib\UIList.obj
+         Debug\DuiLib\UIOption.obj
+         Debug\DuiLib\UIProgress.obj
+         Debug\DuiLib\UIRichEdit.obj
+         Debug\DuiLib\UIScrollBar.obj
+         Debug\DuiLib\UISlider.obj
+         Debug\DuiLib\UIText.obj
+         Debug\DuiLib\UITreeView.obj
+         Debug\DuiLib\UIWebBrowser.obj
+         Debug\DuiLib\UIBase.obj
+         Debug\DuiLib\UIContainer.obj
+         Debug\DuiLib\UIControl.obj
+         Debug\DuiLib\UIDlgBuilder.obj
+         Debug\DuiLib\UIManager.obj
+         Debug\DuiLib\UIMarkup.obj
+         Debug\DuiLib\UIRender.obj
+         Debug\DuiLib\UIChildLayout.obj
+         Debug\DuiLib\UIHorizontalLayout.obj
+         Debug\DuiLib\UITabLayout.obj
+         Debug\DuiLib\UITileLayout.obj
+         Debug\DuiLib\UIVerticalLayout.obj
+         Debug\DuiLib\StdAfx.obj
+         Debug\DuiLib\UIlib.obj
+         Debug\DuiLib\stb_image.obj
+         Debug\DuiLib\UIDelegate.obj
+         Debug\DuiLib\Utils.obj
+         Debug\DuiLib\WinImplBase.obj
+         Debug\DuiLib\XUnzip.obj
+            Creating library ../lib/DuiLib_d.lib and object ../lib/DuiLib_d.exp
+         DuiLib.vcxproj -> E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\DuiLib\DuiLib\..\lib\DuiLib_d.dll
+     1>Done Building Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\DuiLib\DuiLib\DuiLib.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.63

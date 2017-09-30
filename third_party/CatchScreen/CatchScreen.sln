@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CatchScreen", "CatchScreen.vcxproj", "{A91E28CE-C40B-44EE-9E7C-C3A0DC819328}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "..\CatchScreenTest\Test\Test\Test.vcxproj", "{02B5D65D-E79B-4B3B-BFE5-621DAA0A5876}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A91E28CE-C40B-44EE-9E7C-C3A0DC819328}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A91E28CE-C40B-44EE-9E7C-C3A0DC819328}.Debug|Win32.Build.0 = Debug|Win32
+		{A91E28CE-C40B-44EE-9E7C-C3A0DC819328}.Release|Win32.ActiveCfg = Release|Win32
+		{A91E28CE-C40B-44EE-9E7C-C3A0DC819328}.Release|Win32.Build.0 = Release|Win32
+		{02B5D65D-E79B-4B3B-BFE5-621DAA0A5876}.Debug|Win32.ActiveCfg = Debug|Win32
+		{02B5D65D-E79B-4B3B-BFE5-621DAA0A5876}.Debug|Win32.Build.0 = Debug|Win32
+		{02B5D65D-E79B-4B3B-BFE5-621DAA0A5876}.Release|Win32.ActiveCfg = Release|Win32
+		{02B5D65D-E79B-4B3B-BFE5-621DAA0A5876}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

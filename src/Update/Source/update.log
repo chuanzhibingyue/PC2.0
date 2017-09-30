@@ -1,0 +1,63 @@
+﻿Build started 2016/6/15 15:14:01.
+     1>Project "E:\mywork\client\PC2.0TRUNK\PC2.0\src\Update\Source\update.vcxproj" on node 4 (Rebuild target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(364,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I../../../third_party/uc_sdk/third_party/log_manager /I../../../third_party/DuiLib/DuiLib /I../../../third_party/libUpdate/Source /I../../../third_party/libUpdate/Framework/Common/Inc /I../../../third_party/libUpdate/Tang/Common/Inc /I../../../third_party\uc_sdk\third_party\common\include /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Debug/update.pch" /Fo".\Debug/" /Fd".\Debug/vc120.pdb" /FR /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I../../../third_party/uc_sdk/third_party/log_manager /I../../../third_party/DuiLib/DuiLib /I../../../third_party/libUpdate/Source /I../../../third_party/libUpdate/Framework/Common/Inc /I../../../third_party/libUpdate/Tang/Common/Inc /I../../../third_party\uc_sdk\third_party\common\include /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc120.pdb" /FR /Gd /TP /analyze- /errorReport:prompt update.cpp
+         update.cpp
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\bin\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /l"0x0406" /nologo /fo"update.res" update.rc 
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\\update.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:../../../third_party/DuiLib/lib /LIBPATH:../../../third_party/libUpdate//lib /LIBPATH:../../../third_party/uc_sdk\third_party\log_manager\lib\windows /LIBPATH:../../../third_party\uc_sdk\third_party\common\lib\windows\Debug DuiLib_d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib shlwapi.lib msxml2.lib update_d.lib LogManager_d.lib common.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\update.lib" /MACHINE:X86 /SAFESEH update.res
+         .\Debug/update.obj
+         .\Debug/StdAfx.obj
+     1>update_d.lib(UpdateManagerImpl.obj) : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+         update.vcxproj -> E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\update.exe
+       BscMake:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o".\Debug/360Safe.bsc" update.sbr StdAfx.sbr
+       PostBuildEvent:
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\\skin
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\\skin
+         copy ..\..\..\third_party\uc_sdk\third_party\log_manager\lib\windows\LogManager_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\\LogManager_d.dll
+         copy ..\..\..\third_party\uc_sdk\third_party\zlib\lib\windows\zlib_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\\zlib_d.dll
+         copy ..\..\..\third_party\uc_sdk\third_party\common\lib\windows\Debug\common.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\\common.dll
+         copy ..\..\..\third_party\uc_sdk\third_party\google-glog\lib\windows\debug\glog_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\\glog_d.dll
+         copy ..\..\..\third_party\DuiLib\lib\DuiLib_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\\DuiLib_d.dll
+         copy  .\skin\*.* E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\skin\  /Y
+         copy .\CopyScript.bat E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\\..\
+         :VCEnd
+         目录不是空的。
+         目录不是空的。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\ 已经存在。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\update\\skin 已经存在。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         .\skin\cancel_not_selected.png
+         .\skin\cancel_selected.png
+         .\skin\close.png
+         .\skin\failed.png
+         .\skin\logo.png
+         .\skin\manual_not_selected.png
+         .\skin\manual_selected.png
+         .\skin\min.png
+         .\skin\progress_fore.png
+         .\skin\skin.xml
+         .\skin\success.png
+         .\skin\try_not_selected.png
+         .\skin\try_selected.png
+         .\skin\Update.ico
+         已复制        14 个文件。
+         已复制         1 个文件。
+     1>Done Building Project "E:\mywork\client\PC2.0TRUNK\PC2.0\src\Update\Source\update.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:17.49

@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{21BC0789-3747-4C9E-9360-8CEC2732547B}</ProjectGuid>
+    <RootNamespace>libAMRPlayer</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(COMMON_INC);$(SUPPORT_INC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;MMS_IO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <AssemblerOutput>All</AssemblerOutput>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(TARGET_DIR)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(COMMON_INC);$(SUPPORT_INC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;MMS_IO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerOutput>All</AssemblerOutput>
+      <AssemblerListingLocation>.\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\$(Configuration)\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(TARGET_DIR)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WavePlayer.cpp" />
+    <ClCompile Include="AMR\a_refl.c" />
+    <ClCompile Include="AMR\agc.c" />
+    <ClCompile Include="AMR\autocorr.c" />
+    <ClCompile Include="AMR\az_lsp.c" />
+    <ClCompile Include="AMR\b_cn_cod.c" />
+    <ClCompile Include="AMR\basicop2.c" />
+    <ClCompile Include="AMR\bgnscd.c" />
+    <ClCompile Include="AMR\bits2prm.c" />
+    <ClCompile Include="AMR\c1035pf.c" />
+    <ClCompile Include="AMR\c2_11pf.c" />
+    <ClCompile Include="AMR\c2_9pf.c" />
+    <ClCompile Include="AMR\c3_14pf.c" />
+    <ClCompile Include="AMR\c4_17pf.c" />
+    <ClCompile Include="AMR\c8_31pf.c" />
+    <ClCompile Include="AMR\c_g_aver.c" />
+    <ClCompile Include="AMR\calc_cor.c" />
+    <ClCompile Include="AMR\calc_en.c" />
+    <ClCompile Include="AMR\cbsearch.c" />
+    <ClCompile Include="AMR\cl_ltp.c" />
+    <ClCompile Include="AMR\cod_amr.c" />
+    <ClCompile Include="AMR\coder.c" />
+    <ClCompile Include="AMR\convolve.c" />
+    <ClCompile Include="AMR\copy.c" />
+    <ClCompile Include="AMR\cor_h.c" />
+    <ClCompile Include="AMR\count.c" />
+    <ClCompile Include="AMR\d1035pf.c" />
+    <ClCompile Include="AMR\d2_11pf.c" />
+    <ClCompile Include="AMR\d2_9pf.c" />
+    <ClCompile Include="AMR\d3_14pf.c" />
+    <ClCompile Include="AMR\d4_17pf.c" />
+    <ClCompile Include="AMR\d8_31pf.c" />
+    <ClCompile Include="AMR\d_gain_c.c" />
+    <ClCompile Include="AMR\d_gain_p.c" />
+    <ClCompile Include="AMR\d_homing.c" />
+    <ClCompile Include="AMR\d_plsf.c" />
+    <ClCompile Include="AMR\d_plsf_3.c" />
+    <ClCompile Include="AMR\d_plsf_5.c" />
+    <ClCompile Include="AMR\dec_amr.c" />
+    <ClCompile Include="AMR\dec_gain.c" />
+    <ClCompile Include="AMR\dec_lag3.c" />
+    <ClCompile Include="AMR\dec_lag6.c" />
+    <ClCompile Include="AMR\decoder.c" />
+    <ClCompile Include="AMR\dtx_dec.c" />
+    <ClCompile Include="AMR\dtx_enc.c" />
+    <ClCompile Include="AMR\e_homing.c" />
+    <ClCompile Include="AMR\ec_gains.c" />
+    <ClCompile Include="AMR\enc_lag3.c" />
+    <ClCompile Include="AMR\enc_lag6.c" />
+    <ClCompile Include="AMR\ex_ctrl.c" />
+    <ClCompile Include="AMR\g_adapt.c" />
+    <ClCompile Include="AMR\g_code.c" />
+    <ClCompile Include="AMR\g_pitch.c" />
+    <ClCompile Include="AMR\gain_q.c" />
+    <ClCompile Include="AMR\gc_pred.c" />
+    <ClCompile Include="AMR\gmed_n.c" />
+    <ClCompile Include="AMR\hp_max.c" />
+    <ClCompile Include="AMR\int_lpc.c" />
+    <ClCompile Include="AMR\int_lsf.c" />
+    <ClCompile Include="AMR\inter_36.c" />
+    <ClCompile Include="AMR\inv_sqrt.c" />
+    <ClCompile Include="AMR\lag_wind.c" />
+    <ClCompile Include="AMR\levinson.c" />
+    <ClCompile Include="AMR\lflg_upd.c" />
+    <ClCompile Include="AMR\log2.c" />
+    <ClCompile Include="AMR\lpc.c" />
+    <ClCompile Include="AMR\lsfwt.c" />
+    <ClCompile Include="AMR\lsp.c" />
+    <ClCompile Include="AMR\lsp_avg.c" />
+    <ClCompile Include="AMR\lsp_az.c" />
+    <ClCompile Include="AMR\lsp_lsf.c" />
+    <ClCompile Include="AMR\mac_32.c" />
+    <ClCompile Include="AMR\n_proc.c" />
+    <ClCompile Include="AMR\ol_ltp.c" />
+    <ClCompile Include="AMR\oper_32b.c" />
+    <ClCompile Include="AMR\p_ol_wgh.c" />
+    <ClCompile Include="AMR\ph_disp.c" />
+    <ClCompile Include="AMR\pitch_fr.c" />
+    <ClCompile Include="AMR\pitch_ol.c" />
+    <ClCompile Include="AMR\post_pro.c" />
+    <ClCompile Include="AMR\pow2.c" />
+    <ClCompile Include="AMR\pre_big.c" />
+    <ClCompile Include="AMR\pre_proc.c" />
+    <ClCompile Include="AMR\pred_lt.c" />
+    <ClCompile Include="AMR\preemph.c" />
+    <ClCompile Include="AMR\prm2bits.c" />
+    <ClCompile Include="AMR\pstfilt.c" />
+    <ClCompile Include="AMR\q_gain_c.c" />
+    <ClCompile Include="AMR\q_gain_p.c" />
+    <ClCompile Include="AMR\q_plsf.c" />
+    <ClCompile Include="AMR\q_plsf_3.c" />
+    <ClCompile Include="AMR\q_plsf_5.c" />
+    <ClCompile Include="AMR\qgain475.c" />
+    <ClCompile Include="AMR\qgain795.c" />
+    <ClCompile Include="AMR\qua_gain.c" />
+    <ClCompile Include="AMR\r_fft.c" />
+    <ClCompile Include="AMR\reorder.c" />
+    <ClCompile Include="AMR\residu.c" />
+    <ClCompile Include="AMR\s10_8pf.c" />
+    <ClCompile Include="AMR\set_sign.c" />
+    <ClCompile Include="AMR\set_zero.c" />
+    <ClCompile Include="AMR\sid_sync.c" />
+    <ClCompile Include="AMR\sp_dec.c" />
+    <ClCompile Include="AMR\sp_enc.c" />
+    <ClCompile Include="AMR\spreproc.c" />
+    <ClCompile Include="AMR\spstproc.c" />
+    <ClCompile Include="AMR\sqrt_l.c" />
+    <ClCompile Include="AMR\strfunc.c" />
+    <ClCompile Include="AMR\syn_filt.c" />
+    <ClCompile Include="AMR\ton_stab.c" />
+    <ClCompile Include="AMR\vad1.c" />
+    <ClCompile Include="AMR\vad2.c" />
+    <ClCompile Include="AMR\vadname.c" />
+    <ClCompile Include="AMR\weight_a.c" />
+    <ClCompile Include="decoder\AMRFileDecoder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="WavePlayer.h" />
+    <ClInclude Include="AMR\a_refl.h" />
+    <ClInclude Include="AMR\agc.h" />
+    <ClInclude Include="AMR\autocorr.h" />
+    <ClInclude Include="AMR\az_lsp.h" />
+    <ClInclude Include="AMR\b_cn_cod.h" />
+    <ClInclude Include="AMR\basic_op.h" />
+    <ClInclude Include="AMR\bgnscd.h" />
+    <ClInclude Include="AMR\bits2prm.h" />
+    <ClInclude Include="AMR\c1035pf.h" />
+    <ClInclude Include="AMR\c2_11pf.h" />
+    <ClInclude Include="AMR\c2_9pf.h" />
+    <ClInclude Include="AMR\c3_14pf.h" />
+    <ClInclude Include="AMR\c4_17pf.h" />
+    <ClInclude Include="AMR\c8_31pf.h" />
+    <ClInclude Include="AMR\c_g_aver.h" />
+    <ClInclude Include="AMR\calc_cor.h" />
+    <ClInclude Include="AMR\calc_en.h" />
+    <ClInclude Include="AMR\cbsearch.h" />
+    <ClInclude Include="AMR\cl_ltp.h" />
+    <ClInclude Include="AMR\cnst.h" />
+    <ClInclude Include="AMR\cnst_vad.h" />
+    <ClInclude Include="AMR\cod_amr.h" />
+    <ClInclude Include="AMR\convolve.h" />
+    <ClInclude Include="AMR\copy.h" />
+    <ClInclude Include="AMR\cor_h.h" />
+    <ClInclude Include="AMR\count.h" />
+    <ClInclude Include="AMR\d1035pf.h" />
+    <ClInclude Include="AMR\d2_11pf.h" />
+    <ClInclude Include="AMR\d2_9pf.h" />
+    <ClInclude Include="AMR\d3_14pf.h" />
+    <ClInclude Include="AMR\d4_17pf.h" />
+    <ClInclude Include="AMR\d8_31pf.h" />
+    <ClInclude Include="AMR\d_gain_c.h" />
+    <ClInclude Include="AMR\d_gain_p.h" />
+    <ClInclude Include="AMR\d_homing.h" />
+    <ClInclude Include="AMR\d_plsf.h" />
+    <ClInclude Include="AMR\dec_amr.h" />
+    <ClInclude Include="AMR\dec_gain.h" />
+    <ClInclude Include="AMR\dec_lag3.h" />
+    <ClInclude Include="AMR\dec_lag6.h" />
+    <ClInclude Include="AMR\dtx_dec.h" />
+    <ClInclude Include="AMR\dtx_enc.h" />
+    <ClInclude Include="AMR\e_homing.h" />
+    <ClInclude Include="AMR\ec_gains.h" />
+    <ClInclude Include="AMR\enc_lag3.h" />
+    <ClInclude Include="AMR\enc_lag6.h" />
+    <ClInclude Include="AMR\ex_ctrl.h" />
+    <ClInclude Include="AMR\frame.h" />
+    <ClInclude Include="AMR\g_adapt.h" />
+    <ClInclude Include="AMR\g_code.h" />
+    <ClInclude Include="AMR\g_pitch.h" />
+    <ClInclude Include="AMR\gain_q.h" />
+    <ClInclude Include="AMR\gc_pred.h" />
+    <ClInclude Include="AMR\gmed_n.h" />
+    <ClInclude Include="AMR\hp_max.h" />
+    <ClInclude Include="AMR\int_lpc.h" />
+    <ClInclude Include="AMR\int_lsf.h" />
+    <ClInclude Include="AMR\inter_36.h" />
+    <ClInclude Include="AMR\inv_sqrt.h" />
+    <ClInclude Include="AMR\lag_wind.h" />
+    <ClInclude Include="AMR\levinson.h" />
+    <ClInclude Include="AMR\log2.h" />
+    <ClInclude Include="AMR\lpc.h" />
+    <ClInclude Include="AMR\lsfwt.h" />
+    <ClInclude Include="AMR\lsp.h" />
+    <ClInclude Include="AMR\lsp_avg.h" />
+    <ClInclude Include="AMR\lsp_az.h" />
+    <ClInclude Include="AMR\lsp_lsf.h" />
+    <ClInclude Include="AMR\mac_32.h" />
+    <ClInclude Include="AMR\mode.h" />
+    <ClInclude Include="AMR\n_proc.h" />
+    <ClInclude Include="AMR\ol_ltp.h" />
+    <ClInclude Include="AMR\oper_32b.h" />
+    <ClInclude Include="AMR\p_ol_wgh.h" />
+    <ClInclude Include="AMR\ph_disp.h" />
+    <ClInclude Include="AMR\pitch_fr.h" />
+    <ClInclude Include="AMR\pitch_ol.h" />
+    <ClInclude Include="AMR\post_pro.h" />
+    <ClInclude Include="AMR\pow2.h" />
+    <ClInclude Include="AMR\pre_big.h" />
+    <ClInclude Include="AMR\pre_proc.h" />
+    <ClInclude Include="AMR\pred_lt.h" />
+    <ClInclude Include="AMR\preemph.h" />
+    <ClInclude Include="AMR\prm2bits.h" />
+    <ClInclude Include="AMR\pstfilt.h" />
+    <ClInclude Include="AMR\q_gain_c.h" />
+    <ClInclude Include="AMR\q_gain_p.h" />
+    <ClInclude Include="AMR\q_plsf.h" />
+    <ClInclude Include="AMR\qgain475.h" />
+    <ClInclude Include="AMR\qgain795.h" />
+    <ClInclude Include="AMR\qua_gain.h" />
+    <ClInclude Include="AMR\reorder.h" />
+    <ClInclude Include="AMR\residu.h" />
+    <ClInclude Include="AMR\s10_8pf.h" />
+    <ClInclude Include="AMR\set_sign.h" />
+    <ClInclude Include="AMR\set_zero.h" />
+    <ClInclude Include="AMR\sid_sync.h" />
+    <ClInclude Include="AMR\sp_dec.h" />
+    <ClInclude Include="AMR\sp_enc.h" />
+    <ClInclude Include="AMR\spreproc.h" />
+    <ClInclude Include="AMR\spstproc.h" />
+    <ClInclude Include="AMR\sqrt_l.h" />
+    <ClInclude Include="AMR\strfunc.h" />
+    <ClInclude Include="AMR\syn_filt.h" />
+    <ClInclude Include="AMR\ton_stab.h" />
+    <ClInclude Include="AMR\typedef.h" />
+    <ClInclude Include="AMR\typedefs.h" />
+    <ClInclude Include="AMR\vad.h" />
+    <ClInclude Include="AMR\vad1.h" />
+    <ClInclude Include="AMR\vad2.h" />
+    <ClInclude Include="AMR\vadname.h" />
+    <ClInclude Include="AMR\weight_a.h" />
+    <ClInclude Include="decoder\AMRFileDecoder.h" />
+    <ClInclude Include="decoder\WaveDef.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

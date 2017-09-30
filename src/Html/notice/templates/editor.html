@@ -1,0 +1,114 @@
+<div class="editorWrapper">
+    <div class='ta-toolbar'>
+        <div class='btn-group'>
+            <a class="btn rollback" data-role='rollback'>
+              <i class="tx"></i>
+              <span translate="publish.editor.rollback" class="tooltip"></span>
+            </a>
+            <div class="spliter"></div>
+            <a href="#" class="upDownMenu" ng-click="toggleFontSizeOptions()">
+                <span class="txtFontSize"  ng-bind="font.fontSize"></span>
+                <div ><div class="right-line"></div><span class="drop fa fa-caret-down"></span></div>
+                <div class="shadow" ng-click="toggleFontSizeOptions()"  ng-show="isShowFontSizeOptions"></div>
+                <ul class="fontSizeOptions" ng-show="isShowFontSizeOptions">
+                    <li ng-repeat="f in fonts" ng-class="{'isSelected': font.fontSize == f}" ng-bind="f" class="fontSize" ng-click="updateFontSize(f)"></li>
+                </ul>
+            </a>
+            <a href="#" class="colorPicker" ng-click="toggleFontColorOptions()">
+              <span class="txtFontColor">
+                <span class="span-font"></span>
+                <span class="span-color" style="background-color:{{font.color}}">&nbsp;</span>
+              </span>
+              <span class="span-line"></span>
+              <div><div class="right-line"></div><span class="drop fa fa-caret-down"></span></div>
+              <div class="shadow" ng-click="toggleFontColorOptions()"  ng-show="isShowFontColorOptions"></div>
+              <ul class="fontColorOptions" ng-show="isShowFontColorOptions">
+                  <li ng-repeat="color in colors"  class="color" ng-class="{'isSelected': font.color == color}" ng-click="updateFontColor(color)">
+                      <span style="background-color:{{color}};">&nbsp;</span>
+                  </li>
+              </ul>
+              <span translate="publish.editor.font-color" class="tooltip"></span>
+            </a>
+
+            <div class="spliter"></div>
+
+            <a class='btn' data-role='bold' href='#'>
+              <i class="tx icon-bold-img"></i>
+              <span translate="publish.editor.font-bold" class="tooltip"></span>
+            </a>
+            <a class='btn' data-role='italic' href='#'>
+              <i class="tx icon-italic-img"></i>
+              <span translate="publish.editor.font-italic" class="tooltip"></span>
+            </a>
+            <a class='btn' data-role='underline' href='#'>
+              <i class="tx icon-underline-img" ></i>
+              <span translate="publish.editor.font-underline" class="tooltip"></span>
+            </a>
+            <div class="spliter"></div>
+            <a class='btn justify' data-role='justifyLeft' href='#'>
+              <i class='tx icon-adjust-left-img'></i>
+              <span translate="publish.editor.align-left" class="tooltip"></span>
+            </a>
+            <a class='btn justify' data-role='justifyCenter' href='#'>
+              <i class='tx icon-adjust-center-img'></i>
+              <span translate="publish.editor.align-center" class="tooltip"></span>
+            </a>
+            <a class='btn justify' data-role='justifyRight' href='#'>
+              <i class='tx icon-adjust-right-img'></i>
+              <span translate="publish.editor.align-right" class="tooltip"></span>
+            </a>
+            <!-- <a class='btn' data-role='justifyFull' href='#'><i class='fa fa-align-justify'></i></a> -->
+            <div class="spliter"></div>
+            <a class='btn' data-role='insertUnorderedList' href='#'>
+              <i class="tx icon-ul-img"></i>
+              <span translate="publish.editor.ul" class="tooltip"></span>
+            </a>
+            <a class='btn' data-role='insertOrderedList' href='#'>
+              <i class="tx icon-ol-img"></i>
+              <span translate="publish.editor.ol" class="tooltip"></span>
+            </a>
+            <div class="spliter"></div>
+            <a href='#' class="btn hayperLinkIcon" ng-click="toggleLinkOptions()">
+              <i class="tx icon-link-img"></i>
+              <span translate="publish.editor.link" class="tooltip"></span>
+            </a>
+            <div class="shadow" ng-click="toggleLinkOptions()"  ng-show="isShowLinkOptions"></div>
+            <div class="linkOptions" ng-show="isShowLinkOptions">
+              	<span class="close" ng-click = "toggleLinkOptions()"></span>
+                <div class="title" translate="publish.editor.hyper-link"></div>
+              	<div class="sh"></div>
+                <div class="lnkBox">
+                  <label class="lnkLabel" translate="publish.editor.link-to"></label>
+                  <input id="lnkInput" type="text" ng-model="linkURL" ng-keypress="onLinkInputKeyup($event)"/>
+                </div>
+
+                <div class="bottomBtns">
+                  <button class="btnConfirm btn" ng-click="addLink()" translate="publish.editor.confirm"></button>
+                  <button class="btnCancel btn" ng-click="toggleLinkOptions()"  translate="publish.editor.cancel"></button>
+                </div>
+            </div>
+            <a href='#' class="btn" data-role="cloud">
+              <i class="tx icon-cloud-img"></i>
+              <span translate="publish.editor.cloud" class="tooltip"></span>
+            </a>
+            <a class='btn' data-role='img' href='#'>
+              <i class="tx icon-img-img" ></i>
+              <span translate="publish.editor.image" class="tooltip"></span>
+            </a>
+            <div class="spliter"></div>
+            <a class='btn' href='#' data-role="blockquote">
+              <i class="tx icon-blockquote-img"></i>
+              <span translate="publish.editor.blockquote" class="tooltip"></span>
+            </a>
+            <a class='btn' href='#' data-role="hr">
+              <i class="tx icon-split-img"></i>
+              <span translate="publish.editor.hr" class="tooltip"></span>
+            </a>
+        </div>
+        <div class="disableShadow"></div>
+    </div>
+    <div class="ta-editor">
+        <div ng-keyup="onInputCaretPositionKeyUp($event)" ng-mouseup="onInputCaretPositionKeyUp($event)" ng-keydown="setInputEditorCaretPosition($event)" ng-mousedown="setInputEditorCaretPosition($event)" id='content' contenteditable spellcheck="false">
+        </div>
+    </div>
+</div>

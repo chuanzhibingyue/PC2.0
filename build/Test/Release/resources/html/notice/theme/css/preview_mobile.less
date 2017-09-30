@@ -1,0 +1,160 @@
+//out:preview_mobile.css
+body{
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #222;
+  overflow: auto;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+	font-family: "微软雅黑", "Microsoft YaHei" !important;
+  ::-webkit-scrollbar{
+    width: 6px;
+        height: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: #D8D8D8;
+  }
+}
+.main{
+  position: absolute;
+  width: 406px;
+  height: 755px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: left;
+  overflow: auto;
+}
+.close{
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  z-index: 16;
+  height: 32px;
+  width: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 5px;
+  background-image: url(../images/icon_close_reverse.png);
+  background-size: 15px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.4);
+}
+.wrapper{
+  position: relative;
+  padding: 115px 27px 100px 24px;
+  height: 100%;
+  width: 370px;
+  background:url(../images/mobile_bg.png) no-repeat center center;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  .header{
+    padding: 40px 0 0 0;
+    border-bottom: solid 1px #666;
+    position: relative;
+    text-align: left;
+    margin: 0 27px;
+    .topic{
+      font-weight:bold;
+      font-size:18pt;
+      word-wrap: break-word;
+    }
+    .subline{
+      margin-top:7px;
+      margin-bottom:12px;
+      display:inline-block;
+      width:100%;
+      font-size:14px;
+    }
+  }
+  .contentDiv{
+      clear: both;
+      padding: 12px 27px;
+      font-size: 14pt;
+      line-height: 1.5;
+      flex: 1;
+      text-align: left;
+      overflow: auto;
+      word-wrap: break-word;
+      pre{
+        white-space:pre-wrap!important;
+      }
+      img{
+        max-width:100%;
+        display: block;
+      }
+      .coverDiv{
+          margin: 10px 0;
+      }
+  }
+}
+blockquote{
+  line-height: 1.5;
+  border-left: solid 3px #999;
+  padding-left: 1em;
+  margin: 0;
+  position: relative;
+}
+.alert{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    z-index: 100000;
+    top: 0;
+    .alertContainer{
+			position: relative;
+	    background-color: #fff;
+	    color: #03111f;
+	    width: 360px;
+	    min-width: 300px;
+	    margin: auto;
+	    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+	    border-radius: 2px;
+	    height: 100px;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    padding: 20px;
+      .alertTitle{
+          font-weight: bold;
+      }
+
+      .alertMsg{
+				padding-top: 20px;
+				padding-bottom: 22px;
+				padding-left: 12px;
+          span{
+						display: block;
+						font-size: 12px;
+						line-height: 1;
+          }
+      }
+      .bottomBtns{
+          button{
+              cursor: pointer;
+              width: 80px;
+              float: right;
+              height: 32px;
+              border: none;
+              border-radius: 2px;
+              margin-left:10px;
+          }
+          .confirmBtn{
+              background: #F96868;
+              color: #fff;
+          }
+          .cancelBtn{
+              background:#ededed;
+              color:#03111f;
+          }
+      }
+
+    }
+}

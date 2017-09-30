@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="115,26">
+    <Container width="423" height="100" bordercolor="#00FFFBF0">
+        <VerticalLayout bordersize="2" width="115" height="26" bkcolor="#FF2D3D4D">
+            <Button name="COLORLIST" float="true" pos="68,5,0,0" width="40" height="16" bkimage="size_rect_normal.png" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" pushedimage="shape_rect_hover.png" />
+            <Option name="SMALL" float="true" pos="7,9,0,0" width="8" height="8" bkimage="small_not_selected.png" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" group="group" selected="true" selectedimage="small_selected.png.png" />
+            <Option name="MEDIUM" float="true" pos="24,8,0,0" width="10" height="10" bkimage="medium_not_selected.png" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" group="group" selectedimage="medium_selected.png" />
+            <Option name="LARGE" float="true" pos="44,7,0,0" width="12" height="12" bkimage="large_not_selected.png" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="center" group="group" selectedimage="large_selected.png" />
+        </VerticalLayout>
+    </Container>
+</Window>

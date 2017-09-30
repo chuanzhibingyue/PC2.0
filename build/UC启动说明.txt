@@ -1,0 +1,9 @@
+1. 以管理员运行cmd.exe
+2. 进入到当前目录，运行createHtmlLink.bat创建Html链接
+3. 运行runUCClient.bat, 拷贝应用程序所需的dll文件到Debug目录
+4. runUCClient.bat 
+参数： 
+stop --- 关闭程序 
+restart --- 重启程序 
+nodeps --- 不需要拷贝东西
+setDeps -- 仅拷贝相关dll，不启动程序

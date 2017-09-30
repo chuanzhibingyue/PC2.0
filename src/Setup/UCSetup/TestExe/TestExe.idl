@@ -1,0 +1,76 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+    uuid(502A8973-5DE5-4BAD-8A4B-8D15CB4B9A0D),
+    version(1.0),
+    helpstring("TestExe 1.0 Type Library")
+]
+library TestExeLib
+{
+    importlib("stdole2.tlb");
+
+    [uuid(78776F5F-4AD4-434c-821B-FA2059F15FBF)]
+    interface ITangWnd : IDispatch
+    {
+        HRESULT show([in,defaultvalue(1)] int uFlags);
+        HRESULT hide();
+        HRESULT close([in, defaultvalue(0)] BOOL bStartNow);
+        HRESULT setTitle([in] BSTR bstrTitle);
+        HRESULT setSize([in] int width, [in] int height);
+        HRESULT setPos([in] int left, [in] int top);
+        HRESULT navigate(
+            [in] BSTR relativePath,
+            [in,defaultvalue(TRUE)] BOOL bLocalPage);
+
+		HRESULT minimize();
+        HRESULT setCallBackHandler([in] BSTR);
+        HRESULT setSpaceCallBackHandler([in] BSTR);
+
+		HRESULT setWinTitleRect(
+			[in, defaultvalue(0)] UINT px,
+			[in, defaultvalue(0)] UINT py,
+			[in, defaultvalue(0)] UINT x,
+			[in, defaultvalue(0)] UINT y);
+
+		HRESULT selectFolderDialog(
+			[in] BSTR strDialogTitle,
+			[out,retval] BSTR* pstrDir);
+
+		HRESULT DoInstall(
+            [in] BOOL bDeskLnk,
+            [in] BOOL bStartLnk,
+			[in] BOOL bAutoRun
+            );
+        HRESULT ReInstall(
+            [out,retval] BSTR* strInstallDir
+            );
+		HRESULT RecoverInstall();
+        HRESULT Uninstall();
+        HRESULT CheckInstall(
+            [out,retval] int *pbInstalledUCorBee);
+		HRESULT CheckIsNewVersion(
+			[out,retval] BOOL *pbNew);
+		HRESULT CheckNeedInstallMeeting(
+            [out,retval] BOOL *pbNeedInstall);
+		HRESULT InstallUCCMeeting(
+            [out,retval] BOOL *pbSuccessed);
+        HRESULT CheckAppRunning(
+            [out,retval] BOOL *pbRunning);
+    }
+
+    [uuid(127BAC20-781A-4583-911A-B5E7586B8892)]
+    interface ITangUtil : IDispatch
+    {
+        HRESULT GetModulePath(
+            [out,retval] BSTR* strModulepath);
+
+        HRESULT GetSpecialFolderPath(
+            [in] UINT32 iRequest,
+            [out,retval] BSTR *strPath);
+
+        HRESULT GetProcessCount(
+            [in] BSTR bstrProcessName,
+            [out,retval] int* nProcessCount);
+    }
+};

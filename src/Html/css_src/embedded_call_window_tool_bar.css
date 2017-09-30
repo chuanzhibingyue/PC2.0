@@ -1,0 +1,265 @@
+.embedded-call-tool-bar{
+    position: absolute;
+    width: 100%;
+    height: 140px;
+}
+.embedded-call-tool-bar .call-btn-line{
+    width: 100%;
+    height: 40px;
+    /*padding: 10px 0;*/
+    text-align: center;
+}
+.embedded-call-tool-bar .call-btn-line .text-chat-node{
+    position: absolute;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    bottom: 0;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.embedded-call-tool-bar .call-btn-line .text-chat-node .text-msg-num{
+    border-radius: 9px;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#f96868), to(#d54a4a));
+    font-size: 12px;
+    line-height: 18px;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    color: white;
+    position: absolute;
+    right: -4px;
+    top: -2px;
+}
+.embedded-call-tool-bar .call-btn-line .text-chat-node .text-msg-num.single{
+    width: 18px;
+}
+.embedded-call-tool-bar .call-btn-line .text-chat-node .text-msg-num.ten{
+    width: 24px;
+}
+.embedded-call-tool-bar .call-btn-line .text-chat-node .text-msg-num.hundred{
+    width: 27px;
+}
+
+.embedded-call-tool-bar .call-btn-line .call-toolbar-btn{
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.1);
+    line-height: 40px;
+    color:#ffffff;
+    border-radius: 50%;
+    font-size:22px;
+}
+.embedded-call-tool-bar .call-btn-line .call-toolbar-btn:hover{
+    background-color: rgba(255,255,255,0.3);
+    /*color:#ffffff;*/
+}
+
+.embedded-call-tool-bar .call-btn-line .call-toolbar-btn:active{
+    background-color: rgba(0,0,0,0.1);
+    /*color:#ffffff;*/
+}
+
+.embedded-call-tool-bar .call-btn-line .call-toolbar-btn.disable{
+    cursor: default;
+    color:rgba(255,255,255,0.3);
+}
+
+.embedded-call-tool-bar .call-btn-line .call-toolbar-btn.openHover{
+    background-color: #f4f16e;
+    color:#3b4f61 !important;
+
+}
+.embedded-call-tool-bar .call-btn-line .call-toolbar-btn.openActive{
+    background-color: #e0dd0d;
+    color:#3b4f61 !important;
+}
+.embedded-call-tool-bar .call-btn-line .call-toolbar-btn.open{
+    color:#3b4f61 !important;
+    background-color: #ede90e !important;
+    opacity: 1 !important;
+}
+/*----call btn----*/
+/*.embedded-call-tool-bar .text-chat-btn{*/
+    /*color: #ffffff;*/
+    /*border-radius: 50%;*/
+/*}*/
+/*.embedded-call-tool-bar .mute{*/
+    /*color: #ffffff;*/
+    /*border-radius: 50%;*/
+/*}*/
+
+.embedded-call-tool-bar .video{
+    /*border-radius: 50%;*/
+    display: none !important;
+}
+/*.embedded-call-tool-bar .video.open{*/
+    /*border-radius: 50%;*/
+/*}*/
+.embedded-call-tool-bar .desktop-share{
+    border-radius: 50%;
+
+}
+/*.embedded-call-tool-bar .desktop-share.open{*/
+    /*border-radius: 50%;*/
+/*}*/
+/*.embedded-call-tool-bar .switch-call-channel{*/
+    /*border-radius: 50%;*/
+/*}*/
+/*.embedded-call-tool-bar .full-screen{*/
+    /*border-radius: 50%;*/
+/*}*/
+/*.embedded-call-tool-bar .full-screen.full{*/
+    /*border-radius: 50%;*/
+/*}*/
+/*.embedded-call-tool-bar .add{*/
+    /*border-radius: 50%;*/
+/*}*/
+/*.embedded-call-tool-bar .add.disable{*/
+    /*background-color:rgba(255, 255, 255, 0.1);*/
+/*}*/
+.embedded-call-tool-bar .call-btn-node{
+    display: inline-block;
+    height: 40px;
+    text-align: center;
+}
+
+.embedded-call-tool-bar .full-screen-node{
+    height: 40px;
+    /*display: inline-block;*/
+    position: absolute;
+    right: 10px;
+    display: none;
+}
+.embedded-call-tool-bar .end-call-line{
+    height: 80px;
+    text-align: center;
+    width: 100%;
+    /*padding: 10px 0;*/
+    margin-bottom: 30px;
+    margin-top: 30px;
+    line-height: 40px;
+}
+.embedded-call-tool-bar .end-call-line .end-call-btn{
+    width: 140px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #ff5252;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    line-height: 40px;
+    color: #ffffff;
+    font-size: 22px;
+}
+.embedded-call-tool-bar .end-call-line .end-call-btn:hover{
+    background-color: #ff7272;
+}
+.embedded-call-tool-bar .end-call-line .end-call-btn:active{
+    background-color: #e54949;
+}
+.embedded-call-tool-bar .end-call-line .end-call-btn.disable{
+    background-color: #ff5252;
+    opacity: 0.3;
+}
+.embedded-call-tool-bar .internetTip, .embedded-call-tool-bar .AVdetectionTips{
+    width: 240px;
+    height: 52px;
+    border-radius: 4px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    color:#3b4f61;
+    text-align: center;
+    background-color: #ffffff;
+    position: absolute;
+}
+.embedded-call-tool-bar .internetTip:before {
+    border: 1px solid #ededed;
+    transform: rotate(45deg);
+    content: ' ';
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    background-color: white;
+    border-left: none;
+    border-top: none;
+    bottom:-5px;
+    margin-left:145px;
+}
+
+.embedded-call-tool-bar .AVdetectionTips{
+    width:240px;
+    padding-top:10px;
+}
+
+.embedded-call-tool-bar .AVdetectionTips p a{
+    text-decoration: none;
+    color: #6499c6;
+}
+.embedded-call-tool-bar .AVdetectionTips p a:hover{
+    text-decoration: none;
+    color:#0044cc;
+}
+
+.embedded-call-tool-bar .AVdetectionTips:before {
+    content: "";
+    width:0;
+    height:0;
+    position: absolute;
+    left:159px;
+    bottom:-5px;
+    color: #FFFFFF;
+    border-top:6px solid #FFFFFF;
+    border-right:6px solid transparent;
+    border-left:6px solid transparent;
+
+}
+.embedded-call-tool-bar .tellingPhone{
+   position:absolute;
+   width:240px;
+   height: 246px;
+   background-color: #ffffff;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+   text-align: center;
+   border-radius:4px;
+
+}
+.embedded-call-tool-bar .tellingPhone:after{
+    position: absolute;
+    content: "";
+    color: #FFFFFF;
+    left: 113px;
+    top: 246px;
+    width:0;
+    height:0;
+    border-top:6px solid #FFFFFF;
+    border-right:6px solid transparent;
+    border-left:6px solid transparent;
+}
+.embedded-call-tool-bar .tellingPhone .telling-number{
+    margin-top: 52px;
+    margin-bottom: 16px;
+}
+
+.embedded-call-tool-bar .tellingPhone .telling-tip{
+    margin-bottom: 95px;
+	font-size:12px;
+	color:#777777;
+}
+
+.embedded-call-tool-bar .tellingPhone .telling-cancel a{
+	font-size:12px;
+	color:#777777;
+	cursor:pointer;
+}
+.embedded-call-tool-bar .tellingPhone .telling-cancel a:hover{
+	color:#173553;
+}

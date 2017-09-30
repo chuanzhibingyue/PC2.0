@@ -1,0 +1,197 @@
+@CHARSET "UTF-8";
+
+#layoutContainer{
+ 	    /* position: absolute; */
+    /* top: 1px; */
+    /* left: 1px; */
+    /* right: 1px; */
+    /* bottom: 1px; */
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+    /* border: 1px solid #666; */
+    /* box-shadow: -10px 0 10px 10px #999; */
+    /* box-shadow: -1px 0 4px -1px #999, /*Left*/
+	/* 1px 0 4px -1px #999,/*Right*/
+	/* 0 -1px 4px -1px #999,/*Top*/
+	/* 0 1px 4px -1px #999;
+    /* border-radius: 2px; */
+    background-color: #ffffff;
+}
+
+#layoutContainer .menu-panel-body.vertical .menu-panel-body-title {
+    height: 20px;
+    width: 100%;
+}
+
+.tool-icon-container {
+    position: absolute;
+    height: 20px;
+    top: -1px;
+    right: 1px;
+}
+
+#layoutContainer .menu-panel-body{
+    display: flex;
+    height: 100%;
+    flex-flow: row;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#layoutContainer .menu-panel-body.vertical{
+    display: flex;
+    flex-direction: column;
+}
+
+.group-detail {
+	margin-top: 20px;
+	font-size: 12px;
+}
+
+.profile-wrapper .left-content {
+	    width: 290px;
+}
+
+/*.actions-bar figure {*/
+    /*float: left;*/
+    /*cursor: pointer;*/
+/*}*/
+
+.group-detail .switch-actions-bar {
+    margin: 10px 20px;
+    display: inline-block;
+    width: 400px;
+    margin-right: 120px;
+    padding: 50px 0px 0px;
+}
+
+.groupProfile .group-detail .switch-to-members-selected {
+    left: 38px;
+    top: 238px;
+}
+
+.groupProfile .group-detail .switch-to-settings-selected {
+    left: 92px;
+    top: 238px;
+}
+
+.actions-bar {
+    margin-left: 130px;
+}
+
+.group-detail .chat-settings {
+    padding-left: 88px;
+}
+
+.groupProfile .group-detail .group-detail-down {
+    position: absolute;
+    top: 244px;
+    left: -46px;
+    right: 0px;
+    bottom: 72px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-right: 3px;   
+}
+
+.group-detail .group-members-panel {
+    margin: 0 60px;
+}
+
+.remove-contact {
+	width: 8px;
+	height:8px;
+}
+
+.contact-item .right {
+	/*margin-right: 40px;*/
+}
+
+.group-detail .profile-wrapper .project-avatar-edit {
+    left: 370px;
+    top: 90px;
+}
+
+.groupProfile .profile-wrapper {
+	padding: 0 40px 0 40px;
+}
+
+.groupProfile .profile-wrapper div.left-content {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.groupProfile .group-detail .group-name-container .group-name {
+	max-width: 200px;
+}
+.group-detail .profile-wrapper .project-group-avatar{
+    left:-10px;
+}
+.groupProfile .group-detail .group-settings .button-panel {
+	width: 440px;
+}
+.view-calendar-figcaption {
+    background: url("../images/contacts/meeting.png") center center no-repeat;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    /* top: 140px; */
+    left: 40px;
+}
+.view-GroupCall-figcaption{
+ left: 40px;
+}
+
+/*.send-call{*/
+   /*float:right;*/
+   /*right:55px;*/
+/*}*/
+.group-detail .group-settings .button-panel .btn{
+    position: absolute;
+    left: 90px;
+    width: 120px;
+}
+
+.groupMoreListloading{
+    background: url(../images/loading.gif) no-repeat center center;
+    width:100%;
+    height:60px;
+    text-align: center;
+}
+figure {
+    cursor: pointer;
+}
+.send-content {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+}
+.send-message,.send-call{
+    color: #ffffff;
+    border: none;
+    background-color: #4f667b;
+    width: 160px;
+    height: 32px;
+    border-radius: 2px;
+    bottom: 20px;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 32px;
+    position: relative;
+    right: auto;
+    margin: 0 10px;
+    display: inline-block;
+}
+/*.send-call{*/
+    /*float:right;*/
+    /*right:55px;*/
+/*}*/
+.group-detail .group-settings .button-panel .btn{
+    position: absolute;
+    left: 90px;
+    width: 120px;
+}

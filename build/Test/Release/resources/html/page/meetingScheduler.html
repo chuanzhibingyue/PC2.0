@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../css/meeting_scheduler.css" rel="stylesheet">
+    <link href="../script/third_party/baidumapv2.0.2/css/bmap.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/meetingScheduler.js"></script>
+    <script type="text/javascript" src="../script/third_party/baidumapv2.0.2/js/apiv2.0.js"></script>
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=HhKP4bwW0wH6XQ9lFclStWsF"></script>-->
+    <title>Create Meeting</title>
+</head>
+<body>
+<div class="new-meeting child-window-shadow window-fadeIn">
+    <div class="window-bar">
+        <span class="title">{{Meeting.NewMeeting}}</span>
+
+        <div class="tool-icon-container">
+            <span class="icon-close tool-icon"></span>
+        </div>
+    </div>
+    <div class="meeting-body">
+        <div class="meeting-rows meeting-names meeting-edit">
+            <span>{{Meeting.Subject}}</span>
+
+            <div class="txt-length"><span class="input-length">0</span>/<span class="max-length">30</span></div>
+            <input type="text" class="subject content ipt-text" maxlength="30" placeholder="{{Meeting.Notice}}"/>
+        </div>
+        <div class="meeting-rows">
+            <div class="group-time">
+                <div class="Timeleft">{{Meeting.GroupTime}}</div>
+                <div class="TimeSetting hide" onclick='$(".settingDiv").toggle(300)'><span class="high-setting">{{Meeting.HighSetting}}</span>
+                </div>
+            </div>
+
+            <!-- 会议时间与与会者-->
+            <div class="wrap">
+                <!-- 时间选择区域-->
+                <div class="date-time-area">
+                    <div class="meeting-icon time-icon hide"></div>
+                    <div class="time-wraps activeDiv">
+                        <span class="timetitle rightLine">{{Meeting.StartTime}}</span>
+                        <div class="start-time"></div>
+                    </div>
+                    <div class="time-wraps" style="display: none">
+                        <span class="timetitle">{{Meeting.EndTime}}</span>
+
+                        <div class="end-time" style="display: none">
+                        </div>
+                    </div>
+                    <div class="time-duration activeDiv">
+                        <span class="timetitle rightLine">{{Meeting.MeetingLength}}</span>
+
+                        <div class="duration">
+                        </div>
+                    </div>
+                    <div class="settingDiv" style="display: none">
+                        <div class="setting-timezone">
+                            <div class="timeZone timezoneRow">
+                                <span class="timeZone-title rightLine">{{Meeting.changeTimeZone}}</span>
+                                <div class="timeZonelist"></div>
+                            </div>
+                            <div class="timeZoneCycle timezoneRow hide">
+                                <span class="repeatCycle-title rightLine">{{Meeting.repeatCycle}}</span>
+                                <span class="isRepeats"></span>
+                            </div>
+                            <div class="whole-day-areas hide">
+                                <span class="title">{{Meeting.AllDay}}</span>
+                                <div class="whole-days"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 与会人日程查看 -->
+                <div class="attendee-box">
+                    <!-- 与会人 -->
+                    <span class="header">{{Meeting.AttendeeHeader}}</span>
+                    <div class="btnBatchUser">{{Meeting.addBatchUser}}</div>
+                    <div class="attendee-list" onclick="$('#selectedAttendee').focus();$(this).addClass('selects')">
+                        <span class="emcee" key=""></span>
+                        <div class="addUser">
+                            <input id="selectedAttendee" class="inputAttend ipt-text" placeholder="{{Meeting.SearchAttendee}}"  onfocus="$('.attendee-list').addClass('selects')"  onblur="$('.attendee-list').removeClass('selects')" />
+                        </div>
+                    </div>
+                    <div class="busy-node">
+                        <span class="busy-hint">{{Meeting.AttendeeBusy}}</span>
+                        <span class="view-busy-status">{{Meeting.ViewMeetingAttendeeBusyStatus}}</span>
+                    </div>
+                    <div class="ErrMsg">
+                        <span class="ErrInfo">{{Meeting.EmailPrompt}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 会议地点 -->
+        <div class="meeting-rows meeting-edit location">
+            <div>{{Meeting.MeetingAddress}}</div>
+            <input type="text" id="address" class="content address ipt-text" maxlength="50"
+                   placeholder="{{Meeting.InputLocalAddress}}"/>
+            <br class="clear-float"/>
+        </div>
+        <div class="meeting-rows meeting-edit">
+            <!--<i class="meeting-icon remark">{{Meeting.MeetingComment}}</i>-->
+            <div>{{Meeting.AddMeetingCommentTitle}}</div>
+            <textarea class="content marks ipt-text" rows="3" maxlength="500"
+                      placeholder="{{Meeting.AddMeetingComment}}"></textarea>
+            <br class="clear-float"/>
+        </div>
+    </div>
+    <div class="meeting-save">
+        <div class="left">
+            <div class="cloud-meeting"></div>
+            <span>{{Meeting.SelectedCloudMeeting}}</span>
+        </div>
+        <a href="javascript:void(0);" id="cancel" class="btn-uikit btn-gray">{{Common.Cancel}}</a>
+        <a href="javascript:void(0);" id="save" class="btn-uikit btn-dark disabled">{{Main.CreateMeeting}}</a>
+    </div>
+
+    <div class="loading-background loading-layer">
+    </div>
+    <div class="loading-background loading-info">
+        <div class="loading">{{Meeting.CreateMeetingLoading}}</div>
+    </div>
+
+</div>
+</body>
+</html>

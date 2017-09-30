@@ -1,0 +1,393 @@
+.calendar-box {
+	overflow: hidden;
+}
+
+.calendar-box .clear-float {
+	clear: both;
+}
+
+.calendar-box .date-info {
+    /*text-align: center;*/
+    line-height: 45px;
+    height: 45px;
+    /*background-image:url(../images/bottom_border.png);*/
+    /*background-repeat: repeat-x;*/
+    /*background-position-y: 50px;*/
+}
+
+.calendar-box .today-btn {
+    width: 30px;
+    height: 12px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #03111f;
+    padding: 1px 10px 3px 10px;
+    /*border: 1px solid #FFFFFF;*/
+    cursor: pointer;
+    background-color: #ededed;
+    margin: 2px 2px;
+}
+
+.calendar-box .today-info-manu {
+    color: #03111f;
+    font-size: 16px;
+    /* line-height: 50px; */
+    /* height: 50px; */
+    /* background-image: url(../images/bottom_border.png); */
+    /* background-repeat: repeat-x; */
+    /* background-position-y: 50px; */
+    margin-left: 22px;
+}
+
+
+
+.calendar-box .nav {
+    float: right;
+    display: inline-block;
+    margin-top: -4px;
+}
+
+.calendar-box .nav a {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	cursor: pointer;
+    /*background-image:url(../images/meeting/icon_nav_prev.png);*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: 50%;*/
+    /*text-indent: 10000px;*/
+    /*border: 1px solid #FFFFFF;*/
+    vertical-align: middle;
+    /*background-color: #ededed;*/
+    position: relative;
+}
+
+.calendar-box .nav a.left {
+    margin-right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ededed;
+
+}
+.calendar-box .nav a.left:after{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    display: inline-block;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    color: #adadad;
+}
+
+.calendar-box .nav a.right {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #ededed;
+}
+.calendar-box .nav a.right:after{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    display: inline-block;
+    transform: rotate(225deg);
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    color: #adadad;
+
+}
+.calendar-box .today-btn:hover,
+.calendar-box .nav a.left:hover,
+.calendar-box .nav a.right:hover{
+    background-color: #dadada;
+}
+.calendar-box .today-btn:active,
+.calendar-box .nav a.left:active,
+.calendar-box .nav a.right:active{
+    background-color: #c3c3c3;
+}
+/*.calendar-box .nav a:hover{
+    border-color: transparent;
+    border-radius: 0;
+}*/
+.calendar-box .nav a.left:hover:after,
+.calendar-box .nav a.right:hover:after{
+    border-color: #777777;
+}
+.calendar-box ul, .calendar-box li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: block;
+	text-align: center;   
+}
+
+.calendar-box ul {
+	width: 100%;
+}
+
+.calendar-box li {
+	display: inline-block;
+	width: 14%;
+	float: left;
+}
+
+.calendar-box .header li {
+	font-size: 10px;
+	color: #666;
+    height: 30px;
+	line-height: 40px;
+}
+
+.calendar-box .days li {
+    height: 25px;
+	line-height: 25px;
+}
+
+.calendar-box ul.header, .calendar-box ul.days {
+	position: relative;
+    left: 8px;
+    width: 290px;
+    top: -20px;
+    height: 25px;
+}
+
+.calendar-box ul.days a {
+    position: relative;
+    font-size: 12px;
+    color: #03111f;
+    width: 24px;
+    height: 24px;
+    line-height: 20px;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.calendar-box ul.days a.today{
+    font-weight: bold;
+    color: #f96868;
+}
+.calendar-box ul.days a.today.today-selected{
+    font-weight: normal;
+}
+.calendar-box ul.days a.navigated {
+    background-color: #ededed;
+}
+.calendar-box ul.days a.selected {
+	/*background-color: #ededed;*/
+	background-color: #adadad !important;
+    color: white;
+}
+.calendar-box ul.days a.marked-date.navigated{
+    background-color: #4f667b;
+    color: white;
+}
+.calendar-box ul.days a.marked-date.navigated.today-selected{
+    color:#4f667b;
+    background-color: #ede90e;
+}
+.days div.create-meeting {
+    background-color: #ede90e;
+    position:relative;
+    width:60px;
+    height:22px;
+    color: #3b4f61;
+    font-size: 12px;
+    top: -51px;
+    left: -10px;
+    line-height: 22px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.days div.create-meeting:after{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    display: inline-block;
+    transform: rotate(-50deg);
+    position: absolute;
+    margin-top: 17px;
+    margin-left: -27px;
+    color: #ede90e;
+    background-color: #ede90e;
+}
+.calendar-box ul.days a.today-selected, .calendar-box ul.days a.today-selected:hover{
+    /*font-weight: bold;*/
+    /*float: left;*/
+    color: #ffffff;
+    /*margin-left: 5px;*/
+    background-color: #f96868;
+}
+.calendar-box ul.days a.inactive {
+	color: #666;
+}
+
+.calendar-box ul.days a.marked-date:after{
+    content: "";
+    width: 3px;
+    height: 3px;
+    /*background-color: #173553;*/
+    background-color: #adadad;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    bottom: 2px;
+}
+
+.calendar-box ul.days a.marked-date.selected:after,
+.calendar-box ul.days a.marked-date.today-selected:after{
+    background-color: white;
+}
+
+.calendar-box ul.days a.marked-date.today-selected.selected:after,
+.calendar-box ul.days a.marked-date.today-selected.navigated:after{
+    /*background-color: #3b4f61;*/
+}
+/*a.marked-date .navigated:after {*/
+    /*content: "";*/
+    /*width: 4px;*/
+    /*height: 4px;*/
+    /*background-color: yellow;*/
+    /*border-radius: 50%;*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+    /*left: 40%;*/
+    /*bottom: 2px;*/
+/*}*/
+
+
+.pop-calendar-box {
+    box-shadow: 0 6px 20px rgba(00,00,00, .2);
+	padding: 5px 5px 10px 5px;
+	border-radius: 0 0 5px 5px;
+	background-color: #fff;
+	position: absolute;
+	display: none;
+	z-index: 99;
+    margin-top: -1px;
+}
+
+.pop-calendar-box .today-info {
+	font-size: 12px;
+}
+
+
+.pop-calendar-box .date-info {
+	text-align: left;
+	border: none;
+    line-height: 25px;
+    height: 25px;
+}
+
+.pop-calendar-box ul.header, .pop-calendar-box ul.days {
+    left: 0;
+    width: 180px;
+}
+
+.pop-calendar-box ul, .pop-calendar-box .days li, .pop-calendar-box ul.days a {
+	height: 25px;
+	line-height: 25px;
+	font-size: 10px;
+}
+
+.pop-calendar-box ul.days a:hover, .calendar-box ul.days a:hover{
+    background-color: #dadada;
+}
+
+.pop-calendar-box ul.days a {
+	width: 25px;
+}
+
+.pop-calendar-box .nav a {
+    width: 5px;
+    background-image:url(../images/meeting/icon_nav_prev_mini.png);
+}
+
+.pop-calendar-box .nav a.right {
+    background-image:url(../images/meeting/icon_nav_next_min.png);
+}
+
+.pop-calendar-box .nav a.original {
+    background-image:url(../images/meeting/icon_calendar_original.png);
+}
+
+.date-box {
+	width:90px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0;
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.00)
+}
+
+.date-box:hover {
+    border: solid 1px #dfdfdf;
+}
+
+.date-box-selector {
+    box-shadow: 0px 1px 5px #aaa;
+    border-color: #fff;
+    border-radius: 2px 2px 0 0;
+    border: none !important;
+}
+
+.date-box .date-info {
+	display: inline-block;
+}
+
+.date-box .date-info .edit
+{
+    display:none;
+}
+
+.date-box .date-info .year, .date-box .date-info .month, .date-box .date-info .day
+{
+    border: none;
+    outline: none;
+    width: 16px;
+    margin: 0;
+    height: 16px;
+}
+
+.date-box .date-info .year:focus, .date-box .date-info .month:focus, .date-box .date-info .day:focus
+{
+    background-color: #ede90e;
+}
+
+.date-box .date-info .year
+{
+    width: 32px;
+}
+
+.date-box .date-nav {
+    display: none;
+    margin-left: 3px;
+    width: 8px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+    background-image:url(../images/meeting/icon_drop_list.png);
+    background-position: 50% 4px;
+    background-repeat:no-repeat;
+    text-indent:-1000px;
+    outline:none;
+}
+
+.date-box:hover .date-nav, .date-box-selector .date-nav {
+    display: inline-block !important;
+}

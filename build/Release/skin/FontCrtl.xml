@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="115,26">
+    <Container width="423" height="124" bordercolor="#00FFFBF0">
+        <VerticalLayout bordersize="2" width="115" height="22" bkcolor="#FF2D3D4D">
+            <Button name="COLORLIST" float="true" pos="62,5,0,0" width="45" height="16" bkimage="size_rect_normal.png" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" pushedimage="size_rect_hover.png" />
+            <Button name="SIZELIST" text="18" float="true" pos="8,5,0,0" width="45" height="16" bkimage="size_rect_normal.png" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" />
+        </VerticalLayout>
+    </Container>
+</Window>

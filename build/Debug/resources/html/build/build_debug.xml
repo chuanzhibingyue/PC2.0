@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="uc" basedir="../" default="build.all">
+    <description>UC javascript build</description>
+    <property name="build" value="build"/>
+    <property name="releaseDir" value="${build}/release"/>
+    <property name="releaseDir.html" value="${releaseDir}/html"/>
+
+    <target name="init" description="init directories">
+        <condition property="releaseDirExists">
+            <available file="${releaseDir}" type="dir"/>
+        </condition>
+        <antcall target="clean.release"/>
+        <mkdir dir="${releaseDir}"/>
+    </target>
+
+    <target name="clean.release" if="releaseDirExists">
+        <description>Clean release directory</description>
+        <delete includeEmptyDirs="true">
+            <fileset dir="${releaseDir}"/>
+        </delete>
+    </target>
+
+    <!-- copy static files -->
+    <target name="copy.static" depends="init">
+        <copy todir="${releaseDir.html}">
+            <fileset dir="${basedir}">
+                <include name="nls/**"/>
+                <include name="media/**"/>
+                <include name="page/**"/>
+                <include name="font/**"/>
+                <include name="css/**"/>
+                <include name="css_src/**"/>
+				<include name="gokuai/**"/>
+                <include name="images/**"/>
+                <include name="script/**"/>
+                <include name="src/**"/>
+                <include name="index.html"/>
+                <exclude name="**/svn/*"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="build.all" depends="copy.static">
+    </target>
+</project>

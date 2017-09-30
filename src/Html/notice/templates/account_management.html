@@ -1,0 +1,106 @@
+<div id="accountsPage" class="publishEnd management">
+    <ng-include src="'templates/header.html'"></ng-include>
+    <article class="container">
+        <ng-include class="left" src="'templates/menu.html'"></ng-include>
+        <div class="right">
+            <div class="accountsArray" ng-show="!isShowManagement">
+                <div class="tops" translate="account.manage.my-accounts"></div>
+                <div class="accountsContainer">
+                    <section ng-repeat="account in accounts" class="accountSection" ng-click="showManagement(account)" >
+                        <div class="avartarDiv">
+                            <notice-image isrc="account.avatar" save-to-local="true"></notice-image>
+                        </div>
+                        <div class="nameDiv text-ellipsis" ng-class="{grayFont:account.status == 0}">
+                            <span ng-bind="account.name|accountName" title="{{account.name|accountName}}"></span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <spinner-loading ng-show='isLoadingAccounts'></spinner-loading>
+            <div class="managementContainer" ng-show="isShowManagement">
+                <header>
+                    <span class="fa fa-angle-left" ng-click="closeManagement()"></span>
+                    <span class="title" ng-bind="manageSetting"></span>
+                </header>
+                <article>
+                    <div class="accountSection">
+                        <div class="avartarDiv">
+                            <div class="avatarContainer">
+                                <div class="top">
+                                    <div class="title" translate="account.manage.title"></div>
+                                    <div class="tip" translate="account.manage.title-tip"></div>
+                                </div>
+                                <div class="avatarImage">
+                                    <notice-image isrc="temp_avatar" save-to-local="true"/>
+                                </div>
+                                <div class="options" ng-show="temp_avatar != account.avatar">
+                                    <div class="update btn" translate="account.manage.save" ng-click="submit('avatar')">
+                                    </div>
+                                    <div class="cancel btn" ng-click="cancel('avatar')" translate="account.manage.cancel">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="iconsContainer">
+                                <div class="top">
+                                    <div class="title" translate="account.manage.icon-title"></div>
+                                </div>
+                                <div class="icons">
+                                    <div class="iconWrapper" ng-repeat="icon in icons" ng-class="{'selected':temp_avatar==icon}">
+                                        <div class="iconDiv" ng-click="updateAvatar(icon)">
+                                            <notice-image isrc="icon" save-to-local="true"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customizeTitle" >
+                                    <span translate="account.manage.icon-customize-title"></span>
+                                    <span class="tip" translate="account.manage.icon-customize_tip"></span>
+                                </div>
+                                <div class="customizeWrapper" ng-class="{'selected':temp_avatar==customizedURL}">
+                                    <div class="customizeSet" ng-click="updateAvatar()" ng-style="customizeStyle"></div>
+                                </div>
+                                <div class="customizeOption" ng-show="customizedURL">
+                                    <a class="optOption"><span translate="common.update" ng-click="updateAvatar(null,true)"></span></a>
+                                    <a class="splitter"></a>
+                                    <a class="optRemove" ng-click="removeCustomizedIcon()"><span translate="common.remove"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nameDiv">
+                            <label class="nameLabel" translate="account.manage.name">
+                            </label>
+                            <div class="nameSet">
+                                <div class="nameValue" ng-hide="showname">
+                                    <span ng-bind="temp_name|accountName" ng-class="{'grayFont':!temp_name}"></span>
+                                    <a class="updateNameBtn btn" ng-click="showname = true"><span translate="account.manage.modify"></span></a>
+                                </div>
+                                <div class="nameUpdate" ng-show="showname">
+                                    <div><input ng-model="temp_name" placeholder="{{'account.input-max-length'|translate}}"/></div>
+                                    <div class="btns">
+                                        <span class="btn update" translate="account.manage.save" ng-click="submit('name')"></span>
+                                        <span class="btn cancel" translate="account.manage.cancel" ng-click="cancel('name')"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scopes">
+                            <label translate="account.manage.scope"></label>
+                            <div class="sections">
+                                <span ng-repeat="section in account.sectionIDs" class="value section" ng-bind="section.text"></span>
+                            </div>
+                        </div>
+                        <div class="editors">
+                            <label translate="account.manage.editors"></label>
+                            <div class="sections">
+                                <span ng-repeat="editor in account.editors" class="value section" ng-bind="editor.name"></span>
+                            </div>
+                        </div>
+                        <div class="warning">
+                            <span translate="account.manage.warning"></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </article>
+    <div notice-alert></div>
+</div>

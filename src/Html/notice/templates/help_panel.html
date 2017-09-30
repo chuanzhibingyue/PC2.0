@@ -1,0 +1,15 @@
+<span class="help" translate="common.help-link" ng-click="toggleHelpPanel($event)"></span>
+<article ng-show="isShowPanel" class="help_panel">
+    <ul class="help_header">
+        <li class="help_section" ng-repeat="section in sections" ng-click="changeSection(section)" ng-class="{'selected': section === selectedSection}">
+            <span ng-bind="section.name"></span>
+        </li>
+    </ul>
+    <ul class="section_list" ng-show="isShowList">
+        <li class="section_list_item" ng-repeat="item in selectedSection.list" ng-bind="item.name" ng-click="changeSectionItem(item)"></li>
+    </ul>
+    <div class="detail" ng-hide="isShowList">
+        <h3 ng-bind="selectedItem.name"></h3>
+        <p ng-bind-html="selectedItem.detail"></p>
+    </div>
+</article>

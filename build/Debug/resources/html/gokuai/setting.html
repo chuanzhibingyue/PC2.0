@@ -1,0 +1,109 @@
+<!doctype html>
+<html prevent-drag-drop>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/vendor-bundle.css"/>
+    <link rel="stylesheet" href="styles/setting-bundle.css"/>
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body ng-controller="setCtrl as vm" disable-context-menu disable-backspace>
+    <div class="window-shadow">
+        <div class="window-header">设置</div>
+        <div class="window-body">
+            <div class="left-side">
+                <ul>
+                    <li>
+                        <a class="nav-item active" ng-click="vm.changeView($event, 'sync')">
+                            <span>同步与备份</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item" ng-click="vm.changeView($event, 'setting')">
+                            <span>高级</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-side">
+                <div ng-switch on="vm.view">
+                    <div ng-switch-when="sync" ng-cloak>
+                        <div class="header">同步与备份</div>
+                        <div class="content">
+                            <div class="title-header sync-row">
+                                <span class="sync-col sync-col-1">文件夹</span>
+                                <span class="sync-col sync-col-2">状态</span>
+                                <span class="sync-col">类型</span>
+                            </div>
+                            <ul>
+                                <li ng-repeat="file in vm.syncedFiles track by $index" class="sync-row">
+                                    <a class="sync-col sync-col-1" title="{{file.filename}}" href="javascript:void(0)" ng-click="vm.openPath(file)">
+                                        <img class="sync-img" src="images/sync_folder32x32.png" ng-if="file.type == 0"/>
+                                        <img class="sync-img" src="images/uploadonly_sync_folder32x32.png" ng-if="file.type == 1"/>
+                                        <img class="sync-img" src="images/downloadonly_sync_folder32x32.png" ng-if="file.type == 2"/>
+                                        <span class="filename">{{file.filename}}</span>
+                                    </a>
+                                    <a class="sync-col sync-col-1" ng-if="file.num != 0">
+                                        <span>正在同步</span>
+                                    </a>
+                                    <a class="sync-col sync-col-2" ng-if="file.num == 0">
+                                        <i class="fa fa-check-circle" style="color: #53ba72"></i>
+                                        <span>完成</span>
+                                    </a>
+                                    <a class="sync-col">
+                                        <span ng-if="file.type == 0 || file.type == 2">同步</span>
+                                        <span ng-if="file.type == 1">备份</span>
+                                    </a>
+                                    <button class="btn btn-danger" ng-click="vm.cancelSync(file)">取消</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div ng-switch-when="setting" ng-cloak>
+                        <div class="header">高级</div>
+                        <div class="content">
+                            <div class="setting-item">
+                                <h6>配置及缓存位置（软件下次启动生效）</h6>
+                                <div class="input-wrapper">
+                                    <input type="text" ng-model="vm.configpath" class="path-input" readonly />
+                                    <a ng-click="vm.selectConfigPath()" class="path-btn">移动</a>
+                                </div>
+                                <div>
+                                    <button ng-click="vm.clearCache()" class="cache-btn">清理缓存</button>
+                                    <p class="setting-info">删除缓存可以换出您的磁盘空间，但可能导致你的同步效率下降</p>
+                                </div>
+                            </div>
+
+                            <div class="setting-item">
+                                <h6>文件夹同步设置：不同步的文件格式</h6>
+                                <ul>
+                                    <li class="setting-info">
+                                        1. 不需要同步的文件，可添加格式屏蔽。如：本地产生的一些临时文件，格式为 lnk, tmp等
+                                    </li>
+                                    <li class="setting-info">
+                                        2. 多个请使用 “；”分隔，只需添加后缀名无需 “.”
+                                    </li>
+                                </ul>
+                                <div>
+                                    <textarea ng-model="vm.ignoreText" class="setting-textarea"></textarea>
+                                </div>
+                                <div>
+                                    <button ng-click="vm.defaultType()" class="btn default-btn">恢复默认</button>
+                                    <button ng-click="vm.setIgnore()" class="btn setting-btn">设置</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/vendor-bundle.js"></script>
+    <script src="scripts/setting-bundle.js"></script>
+</body>
+</html>

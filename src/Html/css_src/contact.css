@@ -1,0 +1,1387 @@
+
+#contactPanel {
+	width: 100%;
+}
+
+.contacts {
+	font-size: 12px;
+}
+
+.contacts-panel {
+	color: #3b4f61;
+}
+
+.sub-menu-panel .contact-search-container {
+	padding-top: 11px;
+	height: 38px;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.panel-item {
+	position:absolute;
+	width: 300px;
+	top: 92px;
+	left:60px;
+	right:0px;
+	bottom:4px;
+	overflow-x:scroll;
+	overflow-y:scroll;
+}
+
+.contacts-panel-main .panel-item {
+	top: 141px;
+}
+
+.project-item-template, .member-item-template {
+	display: none;
+}
+
+.contact-list, .project-list, .members-list, .my-department-list, .group-chat-list { list-style: none; margin: 0; padding: 0; }
+
+.bread-crumb {
+	background: #f7f7f7;
+	padding: 3px 30px;
+	text-align: center;
+	color: #666;
+}
+
+.my-department-list li {
+	/*overflow: ellipsis;	*/
+	/*margin-left: 10px;*/
+}
+
+.project-list li.group-item, .group-chat-list li.group-item {
+	padding-left: 25px;
+	/*overflow: ellipsis; */
+	overflow: hidden;
+	height: 28px;
+	line-height: 28px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.left-edge { float: left; padding-right: 20px; }
+
+.right-edge { float: right; }
+
+.colleague-list .colleague-item .left-edge, .colleague-list .colleague-item .display-name {
+	cursor:pointer;
+}
+
+.contact-item, .group-item {
+	cursor: pointer;
+}
+
+.contact-item {
+	padding-left: 25px;
+	margin-top: 5px;
+	overflow: hidden;
+}
+.colleague-list .contact-item {
+	padding-left: 15px;
+}
+
+.contact-item:hover, .group-item:hover, .meeting-item:hover {
+	background-color: #fffff3;
+}
+
+.contact-item:hover .right, .group-item:hover .right, .meeting-item:hover  .right{
+	background-color: #fffff3;
+}
+
+.contact-item.hover, .group-item.hover, .meeting-item.hover{
+	background-color: #fffee1;
+}
+
+.alphabetical-key-item {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.alphabetical-key-item .fixed {
+	float:left;
+	width:9px;
+	padding-left: 20px;
+	height: 15px;
+}
+.alphabetical-key-item .fluid {
+	overflow:hidden;
+	/*background-color:#999999;*/
+	padding: 10px 10px 0 5px;
+	margin: 10px 0 10px 20px;
+}
+
+.alphabetical-key-item .fluid .line {
+	border-bottom: 1px solid #f5f5f5;
+	margin-left: 5px;
+}
+.contact-display-name{
+	padding-right: 10px;
+	width: auto;
+	font-size: 14px;
+	display: inline-block;
+	max-width: 60px;
+}
+.contact-description {
+	color: #999;
+	font-size: 12px;
+	margin-right: 6px;
+	display: inline-block;
+}
+.contact-department {
+	max-width: 90px;
+	padding-right: 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	float: left;
+	color:#666;
+}
+
+.contact-position{
+	width: 40px;
+	/*display: inline-block;*/
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #666;
+}
+.contact-selected {
+	background-color: #fffff3 !important;
+}
+
+.contact-widget-container,
+.group-widget-container {
+	height: 28px;
+	line-height: 28px;
+	display: flex;
+
+}
+.group-widget-container .group-avatar{
+	width: 15px;
+	height: 15px;
+}
+.group-widget-container .group-avatar .avatar-attendee{
+	margin-left: 5px;
+	margin-top: 9px;
+}
+.constant_container{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+.contact-widget-container .left, .group-widget-container .left, .meeting-widget-container .left {
+	float: left;
+	padding-left: 9px;
+	line-height: 28px;
+	padding-right: 15px;
+}
+.meeting-widget-container .left {
+	margin-right: 5px;
+}
+
+.contact-widget-container .right, .group-widget-container .right {
+	float:right;
+	vertical-align:middle;
+	line-height: 28px;
+	display: none;
+	/*margin-right: 10px;*/
+	right: 0px;
+	position: absolute;
+}
+
+.contact-widget-container .center{
+	height: 28px;
+	line-height:28px;
+	float: left;
+	/*max-width: 180px;*/
+}
+
+.popup .organization-widget-container .contact-widget-container .center{
+	max-width: 168px;
+	overflow: hidden;
+}
+
+.contact-widget-container input, .contact-widget-container img, .group-widget-container input, .group-widget-container img {
+	vertical-align:top;
+}
+
+.contact-widget-container .contact-item .right .remove-contact {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.contact-widget-container .center div,
+.meeting-widget-container .center div {
+	/*line-height: 16px;*/
+	vertical-align:top;
+	color: #03111f;
+}
+
+.contact-item .contact-widget-container .left .avatar {
+	width: 20px;
+	height: 20px;
+	margin-top: 4px;
+	/*vertical-align: top;*/
+	/*margin-top: 10px;*/
+}
+.groupProfile .contact-item .contact-widget-container .left .size{
+	width: 32px !important;
+	height: 32px !important;
+}
+
+.contact-item .contact-widget-container .left .round-image {
+	border-radius: 50%;
+}
+
+.contact-item .user-list-status{
+	position: absolute;
+	margin-left: 13px;
+	margin-top: -12px;
+	width: 8px;
+	height: 8px;
+	line-height: 8px;
+	border: solid 1px #ffffff;
+}
+
+.text-ellipsis {
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+.user-detail {
+	color: #3b4f61;
+}
+
+.user-detail figure figcaption {
+	margin-top: 10px;
+
+}
+.user-detail .user-detail-up {
+	height: 255px;
+}
+.user-detail .user-detail-down {
+	position: absolute;
+	/*width: 100%;*/
+	top: 262px;
+	left: 360px;
+	right: 0px;
+	bottom: 90px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin-right: 3px;
+}
+
+.self .user-detail-down {
+	top: 180px;
+}
+/*.contacts .self .profile-position{*/
+	/*padding-top: 30px;*/
+/*}*/
+
+.self-detail-down{
+	top:262px !important;
+}
+
+.user-signature {
+	display: inline-block;
+	max-width: 270px;
+	color: #03111f;
+}
+label .user-signature{
+	max-width: 210px;
+}
+
+.user-detail .user-signature-view .edit-user-signature {
+	display:none;
+}
+
+.self .user-signature-view .user-signature {
+	padding-right: 8px;
+}
+.self .user-signature-view .edit-user-signature {
+	display:inline-block;
+	cursor: pointer;
+	padding-left: 20px;
+	height: 20px;
+	background: url("../images/contacts/edit_group.png") center center no-repeat;
+}
+.self .user-signature-view .edit-user-signature:hover {
+	background: url("../images/contacts/edit_group_hover.png") center center no-repeat;
+}
+.self .user-signature-view .edit-user-signature:active {
+	background: url("../images/contacts/edit_group_active.png") center center no-repeat;
+}
+.self .user-signature-edit .user-signature-input {
+	width: 200px;
+	height: 26px;
+	border: 1px solid #dadada;
+	padding-left: 5px;
+}
+.self .user-signature-edit .user-signature-input:hover {
+	background: #f7f7f7;
+}
+.self .user-signature-edit .user-signature-input:focus {
+	outline:none;
+}
+
+.self .profile-wrapper .contact-avatar-edit {
+	position: absolute;
+	margin-left: 50px;
+	border: 1px solid #f5f5f5;
+	height: 30px;
+	width: 30px;
+	background: white;
+	cursor: pointer;
+	background: url("../images/contacts/change_avatar.png") center center no-repeat;
+}
+.contact-edit{
+	margin-left: 360px !important;
+}
+.popup .self .profile-wrapper .contact-avatar-edit {
+	margin-left: 320px;
+	margin-top: -35px;
+}
+
+.self .profile-wrapper .contact-avatar-edit:hover {
+	background: url("../images/contacts/change_avatar_hover.png") center center no-repeat;
+}
+
+.self .profile-wrapper .contact-avatar-edit:active {
+	background: url("../images/contacts/change_avatar_active.png") center center no-repeat;
+}
+
+
+div.profile-wrapper { padding: 0 60px 0 60px; min-width: 500px; width: 100%; overflow: hidden; height: 80px;}
+
+div.left-content { margin-left: 20px; margin-right: 10px; overflow: hidden; float: left; word-break: break-all;
+	height: 80px;
+	width: 280px;
+}
+div.profile-display-name {
+	color: #03111f;
+    font-size: 18px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    /*width:186px;*/
+}
+span.person-name{
+	float: left;
+	display: block;
+	max-width: 170px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	line-height: 28px;
+}
+.user-status {
+	height: 13px;
+    line-height: 13px;
+	margin-top: 5px;
+}
+.user-status span {
+	font-size: 12px;
+	color: #666;
+	padding-left: 4px;
+	line-height: 13px;
+	float: left;
+}
+.user-status div {
+	width: 13px;
+	height: 13px;
+	background-size: 100% 100%;
+	float: left;
+}
+.user-status .status-online {
+	background-image: url(../images/userstatus/msg_online.png);
+}
+
+.user-status .status-busy{
+	background-image: url("../images/userstatus/msg_busy.png");
+}
+
+.user-status .status-offline {
+	background-image: url(../images/userstatus/msg_offline.png);
+}
+.user-status .status-incall {
+	background-image: url(../images/userstatus/msg_incall.png);
+}
+div.profile-info {
+    line-height: 13px;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	white-space: nowrap;
+}
+div.profile-position {
+	float: left;
+	color: #666;
+	padding-top: 15px;
+	padding-right: 10px;
+	width: auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+div.profile-department {
+	flex: 1;
+	color: #666;
+	padding-top: 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.profile-display-name .attention {
+	display: inline-block;
+	background: #f5f5f5;
+	margin-left: 12px;
+	font-size: 12px;
+	width: 70px;
+	text-align: center;
+	padding: 4px 0;
+	cursor: pointer;
+	color: #4f667b;
+}
+
+.profile-display-name .both-attentioned {
+	width: 86px;
+}
+
+.profile-display-name .attention img {
+	padding-right: 5px;
+}
+
+div.profile-avatar {
+	/*background: red; */
+	overflow: hidden;
+	position: relative;
+	/*left: -100px;*/
+}
+
+div.profile-avatar img {
+	width: 80px;
+	height: 80px;
+	/*position: absolute;*/
+	right:10%;
+}
+
+.actions-bar {
+	/*border:3px solid #8AC007;    */
+	margin-left: auto;
+	margin-right: auto;
+	width: 240px;
+	padding: 15px 0;
+	text-align: center;
+}
+
+.actions-bar figure {
+	/*padding-left: 18px;*/
+	/*padding-right: 18px;*/
+}
+
+.profile-detail {
+	padding: 15px 82px;
+}
+
+.user-up-splitter {
+	border-bottom: 1px solid #f5f5f5;
+	margin: 0 10px 0 10px;
+	padding: 9px 60px 0 60px;
+}
+
+.self .user-up-splitter {
+	padding-top: 40px;
+}
+
+.social {
+	padding: 11px 0 10px 95px;
+	margin: 0 10px;
+	cursor: pointer;
+	min-width: 524px;
+}
+
+.profile-detail .field, .social .field {
+	display: table!important;
+}
+
+.social .field {
+	margin-left: -20px;
+}
+
+.social .social-right {
+	padding-left: 306px;
+}
+/*.profile-detail .field {
+	margin-bottom: 1em;
+}*/
+
+.profile-detail .label,.social .label{
+	/*display: block;*/
+}
+.profile-detail .value, .social .value{
+	display: table-cell;
+}
+
+.user-detail .user-signature-edit {
+	display:none;
+}
+
+.social-figcaption {
+	background: url("../images/contacts/social-new.png") center center no-repeat;
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	top: 140px;
+	left: 485px;
+}
+/*.send-message-figcaption:hover {*/
+/*background: url("../images/contacts/sendMessage_hover.png") center center no-repeat;*/
+/*}*/
+
+/*.send-message-figcaption:active {*/
+/*background: url("../images/contacts/sendMessage_active.png") center center no-repeat;*/
+/*}*/
+
+.view-calendar-figcaption {
+	background: url("../images/contacts/meeting.png") center center no-repeat;
+	height: 32px;
+	width: 32px;
+	position: absolute;
+	top: 140px;
+	left: 440px;
+}
+
+.view-call-figcaption{
+    background: url("../images/contacts/call_hover.png") center center no-repeat;
+    height: 32px;
+    width: 33px;
+    position: absolute;
+    top: 140px;
+    left: 487px;
+}
+.view-GroupCall-figcaption{
+     background: url("../images/contacts/call_default.png") center center no-repeat;
+     height: 32px;
+     width: 33px;
+     position: absolute;
+     top: 140px;
+     left: 487px;
+ }
+
+
+/*.view-calendar-figcaption:hover {*/
+/*background: url("../images/contacts/view_calendar_hover.png") center center no-repeat;*/
+/*}*/
+/*.view-calendar-figcaption:active {*/
+/*background: url("../images/contacts/view_calendar_active.png") center center no-repeat;*/
+/*}*/
+
+.profile-detail .label, .social .label {
+	padding: 4px 0px;
+	color: #666;
+	width: 75px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.profile-detail .value, .social .value {
+	/*background: red;
+    width: 100%;*/
+	vertical-align: top;
+	padding: 5px 0px 5px 5px;
+}
+
+.social .value {
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+.user-detail .line {
+	border-bottom: 1px solid #f5f5f5;
+	margin-right: 40px;
+	margin-top: 10px;
+}
+.leader-list, .colleague-list {
+	list-style: none;
+	margin-left: 70px;
+	padding: 0;
+}
+
+.leader-list li, .colleague-list li {
+	padding: 0;
+}
+
+.leader-list li .contact-widget-container .left, .colleague-list li .contact-widget-container .left {
+	width: 30px;
+}
+
+.leader-list li, .colleague-list li.left-edge img{
+	cursor:pointer;
+}
+
+/* .leader-list li:first-child, .colleague-list li:first-child {
+	padding: 0 18px 18px 0;
+	margin: 0 10px 10px 0;
+}
+ */
+.leader-list li {
+	border-bottom: none;
+}
+
+/* http://stackoverflow.com/questions/19276237/two-spans-side-by-side-one-ellipsized */
+/* http://output.jsbin.com/rojam/3 */
+.group-item .group-name-container, .meeting-item .meeting-name-container {
+	/*display: flex;*/
+	flex-direction: row;
+	/*flex-wrap: nowarp;*/
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: center;
+	width: 200px;
+	/*padding-top: 14px;*/
+	font-size: 14px;
+}
+.group-item .group-name-container {
+	line-height: 28px;
+	height: 28px;
+	display: inline-block;
+}
+
+.group-item .group-name-container .group-name {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex-grow: 0;
+	flex-shrink: 1;
+	/*line-height: 16px;*/
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	max-width: 130px;
+	color: #03111f;
+}
+
+.meeting-widget-container .meeting-name {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex-grow: 0;
+	flex-shrink: 1;
+	line-height: 16px;
+}
+
+.group-item .project-group-avatar .project-avatar {
+	width: 20px;
+	height: 20px;
+	vertical-align: top;
+	margin-top: 4px;
+}
+
+.group-item .group-name-container .group-members-count-container {
+	flex-grow: 1;
+	flex-shrink: 0;
+	padding-left: 5px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.group-item .group-avatar {
+	/*padding: 10px 0;*/
+}
+
+.group-item .group-avatar img{
+	width: 15px;
+	height: 15px;
+	margin-top: 2px;
+}
+
+.group-description,.meeting-description {
+	color: #999;
+	font-size: 12px;
+	padding-top: 4px;
+}
+.group-description {
+    display: none;
+}
+/* http://stackoverflow.com/questions/25267774/rounded-corners-on-rectangular-image-using-css-only */
+/* http://jsfiddle.net/jrulle/v8g3y0na/5/ */
+.rounded-corners {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	overflow: hidden;
+	text-align:center;
+	vertical-align:middle;
+	margin-left: 15px;
+}
+.rounded-corners  img{
+	vertical-align:top;
+}
+.avatar-my-department {
+	/*background:#71aee2;*/
+}
+
+.avatar-organization {
+	/*background:#ede90e;*/
+}
+.group-selected {
+	background-color: #fffee1 !important;
+}
+.group-detail {
+	color: #3b4f61;
+}
+.group-detail .group-detail-up {
+	height: 255px;
+}
+.group-detail .group-detail-down {
+	position: absolute;
+	top: 230px;
+	left: 360px;
+	right: 0px;
+	bottom: 90px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.group-detail .profile-wrapper .group-avatar, .group-detail .profile-wrapper .project-group-avatar {
+	overflow: hidden;
+	height: 100px;
+	width: 100px;
+	position: relative;
+	left: -10px;
+}
+
+.group-detail .profile-wrapper .project-group-avatar img {
+	height: 80px;
+	width: 80px;
+}
+.group-detail .profile-wrapper .project-avatar-edit {
+	position: absolute;
+	top: 48px;
+	right: 15px;
+	border: 1px solid #f5f5f5;
+	height: 30px;
+	width: 30px;
+	background: white;
+	cursor: pointer;
+	background: url("../images/contacts/change_avatar.png") center center no-repeat;
+}
+
+.group-detail .profile-wrapper .project-avatar-edit:hover {
+	background: url("../images/contacts/change_avatar_hover.png") center center no-repeat;
+}
+
+.group-detail .profile-wrapper .project-avatar-edit:active {
+	background: url("../images/contacts/change_avatar_active.png") center center no-repeat;
+}
+
+.group-detail .profile-wrapper .group-avatar .avatar-admin {
+	height: 60px;
+	width: 60px;
+	border: 2px solid #FFFFFF;
+}
+.group-detail .profile-wrapper  .group-avatar .avatar-attendee {
+	height: 60px;
+	width: 60px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.group-detail .group-count-container {
+	padding-left: 8px;
+	line-height: 24px;
+}
+.group-detail .group-name-container{
+	padding: 10px 0 0 0;
+	max-height: 60px;
+	/*overflow-y: scroll;*/
+	font-size: 18px;
+}
+
+.group-detail .group-name-container .group-name {
+	max-width: 188px;
+	line-height: 24px;
+
+}
+
+.group-detail .group-name-container > span {
+	display: inline-block;
+}
+.group-detail .group-name-edit {
+	display: none;
+}
+
+.group-detail .group-name-edit .group-name-input {
+	width: 190px;
+	height: 22px;
+	border-radius: 2px;
+	border: 1px solid #dadada;
+	padding-left: 5px;
+}
+
+.group-detail .group-name-edit .group-name-input:hover {
+	background: #f7f7f7;
+}
+
+.group-detail .group-name-edit .group-name-input:focus {
+	outline:none;
+}
+
+.group-detail .group-creator-container {
+	color: #666;
+	padding-top: 10px;
+}
+.group-detail .group-name-container .edit-group {
+	cursor: pointer;
+	display: none;
+	height: 20px;
+	padding-left: 22px;
+	background: url("../images/contacts/edit_group.png") center center no-repeat;
+}
+
+.group-detail .group-name-container .edit-group:hover {
+	background: url("../images/contacts/edit_group_hover.png") center center no-repeat;
+}
+
+.group-detail .group-name-container .edit-group:active {
+	background: url("../images/contacts/edit_group_active.png") center center no-repeat;
+}
+.group-detail .group-creator-titile {
+	padding-right: 5px;
+	padding-left: 1px;
+}
+
+.group-detail .switch-actions-bar {
+	padding: 4px 45px;
+	margin: 0 20px;
+	border-bottom: 1px solid #f5f5f5;
+	color: #999;
+}
+
+.group-detail .switch-actions-bar .switch-action {
+	height: 33px;
+	line-height: 29px;
+	margin-left: 14px;
+	padding: 8px 8px;
+}
+
+.group-detail .switch-actions-bar .selected {
+	border-bottom: 3px solid #ffcc00;
+	color: #47607a;
+}
+
+.group-detail .switch-actions-bar .switch-action {
+	cursor: pointer;
+	color: #666;
+}
+
+.group-detail .switch-to-selected {
+	position: absolute;
+	height: 3px;
+	background-color: #FFCC00;
+	border-radius: 2px;
+}
+.group-detail .switch-to-members-selected {
+	width: 32px;
+	left: 443px;
+	top: 226px;
+}
+
+.group-detail .switch-to-settings-selected {
+	width: 32px;
+	left: 499px;
+	top: 226px;
+	display: none;
+}
+.group-detail .group-members-panel {
+	margin: 0 65px;
+}
+
+.group-detail .add-members {
+	padding: 15px 0 0px 17px;
+	color: #999;
+}
+
+.group-detail .add-members div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.group-detail .add-members .add-member-icon, .group-detail .add-members .add-member-text {
+	cursor: pointer;
+}
+.group-detail .add-members .add-member-icon {
+	padding-left: 7px;
+}
+
+.group-detail .add-members .add-member-text {
+	padding-left: 20px;
+	padding-bottom: 5px;
+	color:#666;
+}
+
+.group-detail .add-members img {
+	vertical-algin: middle;
+}
+
+.group-detail .contact-list {
+	width: 430px;
+}
+
+.group-detail .add-members img {
+	vertical-algin: middle;
+}
+
+/* .group-admin .contact-item .right {
+	display: block;
+} */
+
+.group-admin .contact-item:hover .right{
+	display: block;
+}
+.group-admin .contact-item .right{
+	display:none;
+}
+
+.group-admin .contact-item .right input {
+	display: none;
+}
+
+/*If current user is admin, show remove icon except him*/
+.group-admin .contact-item .right .remove-contact {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.group-detail .contact-item .left .group-creator-icon {
+	position: absolute;
+	margin-top: -14px;
+	margin-left: 10px;
+}
+
+/*If current contact-item is admin, hide remove icon*/
+.group-admin .contact-item-admin .right .remove-contact {
+	display: none;
+}
+
+.group-detail .group-settings {
+	display: none;
+}
+
+.group-detail .group-settings .button-panel {
+	position: fixed;
+	text-align: left;
+	width: 550px;
+	padding-left: 9%;
+	padding-top: 5%;
+}
+
+.group-detail .group-settings .button-panel .btn-exit-group, .group-detail .group-settings .button-panel .btn-end-group {
+	background: #f96868;
+	color: #fff;
+}
+.group-detail .group-settings .button-panel .btn-exit-group:hover, .group-detail .group-settings .button-panel .btn-end-group:hover {
+	background: #f97777;
+}
+.group-detail .group-settings .button-panel .btn-exit-group:active, .group-detail .group-settings .button-panel .btn-end-group:active {
+	background: #df5d5d;
+}
+.group-detail .group-settings .button-panel .btn {
+	padding: 6px 22px 7px 22px;
+	border-radius: 2px;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+	width: 180px;
+}
+
+.group-detail .chat-settings {
+	padding-left: 90px;
+}
+.group-detail .chat-settings .chat-settings-title {
+	padding: 15px 0;
+	color: #666;
+}
+.group-detail .chat-settings .chat-setting-list{
+	margin-bottom: 10px;
+}
+.group-detail .chat-settings .chat-setting-list .chat-setting-item {
+	/*padding: 10px 0;*/
+}
+.group-detail .chat-settings .chat-setting-list .chat-setting-item div {
+	display:inline-block;
+	margin-top: -3px;
+}
+.group-detail .chat-settings .chat-setting-list .chat-setting-item .chat-setting-message-disturb-status {
+	width: 50px;
+}
+.group-detail .chat-settings .chat-setting-list .chat-setting-item .chat-setting-saveto-contacts-status {
+	width: 50px;
+}
+.group-detail .chat-settings .chat-setting-list .chat-setting-item .chat-setting-message-disturb-title{
+	padding-left: 5px;
+}
+.down-scroll-way-point {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.in-loading {
+	text-align: center;
+	height: 200px;
+	padding-top: 100px;
+}
+
+.in-exception {
+	color: red;
+}
+
+.contacts-panel-main .contacts-panel-splitter {
+	top: 133px;
+}
+.contacts-panel-splitter {
+	height: 3px;
+	position: absolute;
+	top: 80px;
+	transition: all -0.7s!important;
+}
+.contacts-panel-splitter img {
+	vertical-align: middle;
+}
+
+*::-webkit-input-placeholder {
+	color: #c3c3c3;
+}
+
+.text-selectable {
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+.contacts .init-panel.init-panel-noneUser .init-background {
+	background-image: url(../images/contacts/noneUser.png);
+}
+.contacts .init-panel.init-panel-noneProject .init-background {
+	background-image: url(../images/contacts/noneProject.png);
+}
+.contacts .init-panel.init-panel-noneGroup .init-background {
+	background-image: url(../images/contacts/noneGroup.png);
+}
+
+@media screen and (min-width: 1024px) {
+	.contacts .content-panel-body {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	/*User detail css here */
+	.user-detail {
+		margin: 0 auto;
+	}
+
+	div.profile-wrapper {
+		padding: 0;
+	}
+	div.profile-wrapper.left-none{
+		margin-left: 0;
+	}
+	div.left-none {
+		margin-left: 0px !important;
+	}
+	div.left-content {
+		margin-left: 0;
+	}
+	div.profile-avatar{
+		left: 0px;
+	}
+	.user-detail-up {
+		text-align: left;
+	}
+	div.left-none{
+		left: 0px;
+	}
+	.social {
+		padding: 11px 0 10px 0;
+		margin: 0;
+		border-bottom: 1px solid #f5f5f5;
+		cursor: pointer;
+		position: absolute;
+		left: 10px;
+		right: 3px;
+		top: 0;
+		text-align: center;
+	}
+
+	.social .field {
+		width: 544px;
+		margin: auto;
+	}
+
+	.social .social-text {
+		margin-left: -75px;
+	}
+
+	.user-up-splitter {
+		position: absolute;
+		left: 410px;
+		right: 10px;
+		margin: 0;
+	}
+
+	.user-detail-down {
+		position: absolute;
+		/* width: 100%; */
+		top: 250px;
+		left: 360px;
+		right: 0px;
+		bottom: 8px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		margin-right: 3px;
+		overflow: auto;
+	}
+	.user-detail-down-wrapper {
+		width: 524px;
+		text-align: left;
+		margin: auto;
+		right: 0;
+	}
+    .self-up{
+		margin-top: -20px;
+	}
+	.profile-detail {
+		padding: 15px 20px;
+		margin-top: 10px;
+	}
+
+	.self .profile-wrapper .contact-avatar-edit {
+		margin-left: 197px;
+	}
+
+	.contact-edit{
+		margin-left: 445px !important;
+	}
+	.contact-personal-data{
+		position: relative !important;
+		top: 35px !important;
+		left: -129px !important;
+		width: 50px;
+
+	}
+	.contact-relationship-data{
+		position: relative !important;
+		top: 15px !important;
+		left: -62px !important;
+		width: 28px;
+
+	}
+	.contact-slip-line{
+		position: relative !important;
+		top: 23px !important;
+		left: -130px !important;
+
+	}
+	.contact-move {
+		position: relative !important;
+		top: 23px !important;
+		left: -71px !important;
+
+	}
+
+	.contact-splitter {
+		position: relative !important;
+		top: 25px !important;
+		left: -130px !important;
+	}
+
+	div.profile-avatar img {
+		width: 80px;
+		height: 80px;
+		/*position: absolute;*/
+		right: 20%;
+	}
+	.left-position{
+		margin-left: -100px;
+	}
+
+	.colleagues-wrapper {
+		margin-left: -60px;
+	}
+
+	/*Group detail css here */
+	.group-detail {
+		margin: 0 auto;
+	}
+
+	.group-detail-up {
+		text-align: left;
+	}
+
+	.group-detail .profile-wrapper .project-avatar-edit {
+		/*right: 665px;*/
+	}
+
+	.group-up-splitter {
+		position: absolute;
+		left: 410px;
+		right: 10px;
+		margin: 0;
+		background-color: #f5f5f5;
+		top: 283px;
+		height: 1px;
+	}
+
+	.group-detail .group-members-panel {
+		margin: 0;
+	}
+
+	.group-detail .switch-actions-bar {
+		border: 0;
+		padding: 0;
+		margin: 0;
+		margin-top: 60px;
+	}
+
+	.group-detail .switch-actions-bar .switch-action {
+		margin-left: 0;
+		position: relative;
+		top: -25px;
+	}
+
+	.group-detail .switch-to-members-selected {
+		left: initial !important;
+		margin-left: 4px;
+		margin-top: 56px;
+	}
+
+	.group-detail .switch-to-settings-selected {
+		left: initial !important;
+		margin-left: 44px;
+		margin-top: 56px;
+	}
+
+	.group-detail-down {
+		position: absolute;
+		/* width: 100%; */
+		top: 285px !important;
+	}
+
+	.group-detail-down-wrapper {
+		width: 524px;
+		text-align: left;
+		margin: auto;
+		right: 0;
+	}
+
+	.group-detail .chat-settings {
+		padding-left: 25px;
+	}
+
+	.view-calendar-figcaption {
+		position: relative;
+		top: 0;
+		left: -233px;
+	}
+
+    .view-call-figcaption,.view-GroupCall-figcaption{
+        position: relative;
+        top: 0;
+        left: -146px;
+    }
+
+	.group-detail .group-settings .button-panel {
+		margin-left: -7%;
+	}
+	.group-detail .profile-wrapper .group-avatar, .group-detail .profile-wrapper .project-group-avatar {
+		position: relative;
+		left: -10px;
+	}
+	.avatar-left{
+		left: 70px !important;
+	}
+}
+.send-content {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	width: 500px;
+}
+.send-message,.send-call{
+    color: #ffffff;
+    border: none;
+    background-color: #4f667b;
+    position: absolute;
+    width: 160px;
+    height: 32px;
+    border-radius: 2px;
+    bottom: 20px;
+    right: 235px;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 32px;
+	position: relative;
+	right: auto;
+	margin: 0 10px;
+}
+/*.send-call{*/
+    /*float:right;*/
+    /*right:55px;*/
+/*}*/
+.contact-personal-data{
+		position: absolute;
+		top: 233px;
+		left: 440px;
+		cursor: pointer;
+		color: #03111f;
+	}
+.contact-relationship-data{
+		position: absolute;
+		top: 233px;
+		left: 510px;
+		cursor: pointer;
+	color: #03111f;
+	}
+.contact-slip-line{
+		height: 3px;
+		background-color: #FFCC00;
+		border-radius: 3px;
+		width: 56px;
+		position: absolute;
+		top: 259px;
+		left: 440px;
+
+	}
+.contact-move{
+		height: 3px;
+		background-color: #FFCC00;
+		border-radius: 3px;
+		width: 50px;
+		position: absolute;
+		top: 259px;
+		left: 498px;
+	}
+.contact-splitter{
+		border-bottom: 1px solid #f5f5f5;
+		position: absolute;
+		top: 260px;
+		width: 480px;
+		left: 370px;
+	}
+.new-label{
+		margin: 15px 0 0 82px;
+		color: #999;
+	}
+
+.uploadMask {
+	position: absolute;
+	width: 50%;
+	height: 220px;
+	background-image:url("../images/loading_37.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+	top: 60px;
+	left: 180px;
+	display: none;
+}
+

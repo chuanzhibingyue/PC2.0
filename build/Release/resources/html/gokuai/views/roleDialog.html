@@ -1,0 +1,25 @@
+<div class="gk-dialog-header">{{title}}</div>
+<div class="gk-dialog-content">
+    <div class="role-wrapper" ng-click="showMenu($event)">
+        <a class="role-input" style="cursor: pointer;">
+            <span ng-bind="role.name"></span>
+        </a>
+        <ul class="dropdown-menu" style="max-height:300px;overflow: auto">
+            <li ng-repeat="role in roles track by $index">
+                <a ng-click="changeRole(role)">{{role.name}}</a>
+            </li>
+        </ul>
+        <i class="icon-sort fa fa-sort" style="cursor: pointer;"></i>
+    </div>
+</div>
+<div class="gk-dialog-footer">
+    <button class="cancel-btn" ng-click="cancel()">取消</button>
+    <button class="ok-btn" ng-click="addMember()" ng-if="type == 'addMember'">
+        <span>完成</span>
+        <span class="fa fa-spinner fa-puls" ng-show="loading"></span>
+    </button>
+    <button class="ok-btn" ng-click="updateMember()" ng-if="type == 'updateMember'">
+        <span>完成</span>
+        <span class="fa fa-spinner fa-puls" ng-show="loading"></span>
+    </button>
+</div>

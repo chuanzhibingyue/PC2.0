@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="800,600" sizebox="4,4,6,6" caption="0,0,0,40" roundcorner="4,4">
+    <VerticalLayout bordersize="2" bkcolor="#FFFFFFFF" bkcolor2="#FFAAAAA0">
+        <HorizontalLayout height="32" bkcolor="#FFE6E6DC" bkcolor2="#FFAAAAA0">
+            <VerticalLayout bkcolor="#FFFFFFFF">
+                <Text name="sharingName" float="true" pos="16,6,0,0" width="362" height="20" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="wrap" />
+            </VerticalLayout>
+            <VerticalLayout width="77" bkcolor="#FFFFFFFF">
+                <Button name="minbtn" float="true" pos="12,5,0,0" width="20" height="20" bkimage="min.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="min.png" />
+                <Button name="maxbtn" float="true" pos="42,13,0,0" width="9" height="8" bkimage="max_normal.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="max_normal.png" hotimage="max_select.png" pushedimage="max_select.png" />
+                <Button name="restorebtn" float="true" pos="36,7,0,0" width="20" height="20" bkimage="restore_normal.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="restore_normal.png" hotimage="restore_select.png" pushedimage="restore_select.png" />
+            </VerticalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

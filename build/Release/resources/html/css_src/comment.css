@@ -1,0 +1,432 @@
+.filecomment{
+	position: absolute;
+	top: 80px;
+	left: 522px;
+	right: 0px;
+	bottom: 0px;
+	/*min-width: 300px;*/
+	background: #ffffff;
+	font-size: 14px;
+	overflow:hidden;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	border-top: 1px solid rgba(188, 188, 188, .5);
+	border-left: 1px solid rgba(188, 188, 188, .5);
+	box-shadow:0 4px 10px rgba(00,00,00,.2);
+    z-index: 100;
+}
+#commentLoading{
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    margin: 5px auto;
+    font-size: 12px;
+    color: #8199ac;
+    background: url(../images/messagebox/loading-17.gif) no-repeat 0 center;
+    display: none;
+}
+.filecomment .more-msg-line{
+	line-height: 16px;
+}
+.filecomment .more-msg-loading {
+	text-align: center;
+	width: 16px;
+	height: 16px;
+	padding-left: 20px;
+	margin: 5px auto;
+	font-size: 12px;
+	color: #8199ac;
+	background: url(../images/messagebox/loading-17.gif) no-repeat 0 center;
+	display: block;
+	clear: both;
+}
+.filecomment .more-msg {
+	text-align: center;
+	width: 6em;
+	padding-left: 20px;
+	margin: 5px auto;
+	font-size: 12px;
+	color: #8199ac;
+	background: url(../images/messagebox/moreMsg.png) no-repeat 0 center;
+	display: block;
+	clear: both;
+	cursor: pointer;
+}
+
+.filecomment .item-list{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.filecomment .file-info{
+	width: 100%;
+	height: 36px;
+	margin-top: 15px;
+}
+.filecomment .file-info:hover{
+
+}
+.filecomment .file-info .icon{
+	float: left;
+	width: 38px;
+	height: 44px;
+	border: 0;
+	position: initial;
+}
+.filecomment .file-info  .file-ext {
+	font-size: 6px;
+	color: white;
+	position: relative;
+	float: left;
+	margin-left: -34px;
+	margin-top: -1px;
+	width: 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-transform: scaleY(1.8);
+}
+.filecomment  .file-info .detail{
+	position: relative;
+}
+.filecomment .file-info .name{
+	position: absolute;
+	left: 60px;
+	top: 4px;
+	color: #3b4f61;
+	font-size: 14px;
+	max-width: 60%;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.filecomment .file-info .time{
+	float: left;
+	margin-left:  22px;
+	margin-top: 23px;
+	color: #999999;
+	font-size: 12px;
+}
+.filecomment .file-info .size{
+	float: left;
+	margin-left:  10px;
+	margin-top: 23px;
+	color: #999999;
+	font-size: 12px;
+}
+.filecomment .file-info .user{
+	float: left;
+	margin-left:  10px;
+	margin-top: 23px;
+	color: #999999;
+	font-size: 12px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    width:90px;
+}
+.filecomment .operation {
+	float: right;
+	margin-top: 20px;
+}
+.filecomment .download {
+	 float: left;
+	 margin-right: 10px;
+	 color: #71AEE2;
+	 font-size: 12px;
+	 cursor: pointer;
+	 padding-top: 3px;
+ }
+.filecomment .download:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-right: 1px solid #dadada;
+	margin-left: 10px;
+}
+.filecomment .forward {
+	float: left;
+	margin-right: 0px;
+	color: #71AEE2;
+	font-size: 12px;
+	cursor: pointer;
+	padding-top: 3px;
+}
+.filecomment .saveCloud:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 1px solid #dadada;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.filecomment .saveCloud {
+    float: left;
+    margin-right: 0px;
+    color: #71AEE2;
+    font-size: 12px;
+    cursor: pointer;
+    padding-top: 3px;
+}
+
+.filecomment .more {
+	float: left;
+	margin-right: 0px;
+	width: 26px;
+	color: #3B4F61;
+	background: #F5F5F5;
+	font-size: 10px;
+	text-align: center;
+	cursor: pointer;
+	height: 26px;
+    border-radius: 2px;
+}
+.filecomment .more:hover {
+	background: #F0F0F0;
+}
+.filecomment .progress{
+	float:left;
+	margin-right: 5px;
+	margin-top: 8px;
+	width: 80px;
+	height: 8px;
+	border:1px solid #999999;
+}
+.filecomment .progress::-webkit-progress-bar{
+	background-color: #d7d7d7;
+}
+.filecomment .progress::-webkit-progress-value {
+	background-color: #3B4F61;
+}
+
+.filecomment .line {
+	width: 100%;
+	float:left;
+	margin-top: 5px;
+	height: 1px;
+	background: #f5f5f5;
+}
+.filecomment .comment-box{
+	border:none;
+	position: absolute;
+	overflow:hidden;
+	overflow-y:auto;
+	left: 20px;
+	right: 4px;
+	top: 100px;
+	bottom: 70px;
+	margin-bottom: 30px;
+}
+.filecomment .comment-item{
+	margin-top: 10px;
+	width: 100%;
+	clear: both;
+	float: left;
+	margin-bottom: 10px;
+}
+.filecomment .comment-item .header{
+	float: left;
+	width: 32px;
+	height: 32px;
+	border-radius:50%;
+	cursor: pointer;
+    position: absolute;
+}
+.filecomment .comment-item .context{
+    float: left;
+    margin-left: 32px;
+}
+.filecomment .comment-item .left-text-info{
+	float: left;
+    margin-left: 12px;
+    margin-top: -3px;
+	clear:both;
+}
+.filecomment .comment-item .left-text-info .user{
+	font-size: 12px;
+	cursor: pointer;
+	color: #999999;
+	float: left;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    max-width:200px;
+}
+.filecomment .comment-item .content{
+    font-size: 14px;
+    /*max-width: 80%;*/
+    color: #3b4f61;
+    word-wrap: break-word;
+	word-break: break-all;
+    margin-left: 12px;
+    margin-top: 17px;
+    padding-right: 20px;
+    -webkit-user-select:text;
+}
+.filecomment .comment-item .left-text-info .timestamp{
+	font-size: 12px;
+	color: #ADADAD;
+	float: left;
+	margin-left: 10px;
+}
+
+.filecomment .comment-item .right-text-info{
+	float: right;
+	width: 100%;
+	position: relative;
+	clear:both;
+	margin-bottom: 30px;
+}
+.filecomment .comment-item .right-text-info .user{
+	font-size: 14px;
+	cursor: pointer;
+	color: #3B4F61;
+	text-align: right;
+	margin-right: 10px;
+}
+.filecomment .comment-item .right-text-info .content{
+	font-size: 14px;
+	max-width: 80%;
+	color: #555555;
+	line-height:20px;
+	padding: 3px 0;
+	float: right;
+	margin-right: 10px;
+}
+.filecomment .comment-item .right-text-info .timestamp{
+	font-size: 12px;
+	color: #ADADAD;
+	position: absolute;
+	bottom: -20px;
+	right: 10px;
+}
+.filecomment .editor {
+	height: 50px;
+	left: 20px;
+	right: 20px;
+	bottom: 50px;
+	position: absolute;
+}
+.filecomment .text-input{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    border-top: 1px solid #f5f5f5;
+    outline: none;
+    resize: none;
+    color: #3C4F5E;
+    padding: 5px 0px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+.filecomment .tip{
+	position: absolute;
+    font-size: 12px;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+	bottom: 10px;
+	right: 23px;
+	color: #10233D;
+    background-color: #E8E8E8;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.filecomment .tip:hover{
+    color: white;
+    background-color: #4F667B;
+}
+.filecomment .tip:active{
+    color: white;
+    background-color: #2F4E6B;
+}
+
+.filecomment .menu{
+	display:none;
+	position:absolute;
+	top:100px;
+	left:500px;
+	border:1px solid rgba(188, 188, 188, .5);
+	cursor: default;
+	border-radius: 3px;
+	box-shadow:0 0 3px  rgba(99, 99, 99, .2);
+}
+.filecomment .menu:after, .filecomment .menu:before {
+	border: solid transparent;
+	content: ' ';
+	height: 0;
+	position: absolute;
+	width: 0;
+}
+.filecomment .menu:after {
+	border-width: 8px;
+	border-bottom-color: white;
+	top: -16px;
+	left: 115px;
+}
+.filecomment .menu.first-select:after {
+	border-bottom-color: #465C71;
+}
+.filecomment .menu:before {
+	border-width: 9px;
+	border-bottom-color: rgba(188, 188, 188, .5);
+	top: -18px;
+	left: 114px;
+}
+.filecomment .menu .menu-item {
+	width: 130px;
+	height: 23px;
+	color: #3C4F5E;
+	background: white;
+	padding-left: 20px;
+	padding-top: 7px;
+}
+.filecomment .menu .menu-item:hover{
+	background: #465C71;
+	color: white;
+}
+.filecomment .menu .menu-item .arrow{
+	position: absolute;
+	left: 130px;
+	top: 72px;
+	content:"";
+	width:0;
+	height:0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #3C4F5E;
+}
+.filecomment .menu .menu-item:hover .arrow{
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid white;
+}
+.filecomment .second-menu{
+	display: none;
+}
+.filecomment .menu-item.children:hover .second-menu{
+	white-space:nowrap;
+	display:block;
+	position:absolute;
+	top:-16px;
+	left:-285px;
+	border:1px solid rgba(188, 188, 188, .5);
+	cursor: default;
+	border-radius: 3px;
+	box-shadow:0 0 3px  rgba(99, 99, 99, .2);
+}
+.filecomment .no-comment{
+	margin: 0px auto;
+	background-image: url("../images/chat/no-comments.png");
+	width: 162px;
+	height: 124px;
+	margin-top: 150px;
+	background-repeat: no-repeat;
+	color: #adadad;
+	font-size: 14px;
+	padding-top: 150px;
+	text-align: center;
+}

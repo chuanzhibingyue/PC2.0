@@ -1,0 +1,52 @@
+<div class='searchbar-dir'>
+    <div class="searchbar" ng-click="showSearchRlt($event)" ng-class="{'input_active':isSearchInputActive}">
+        <span class="search_icon" ></span>
+        <input spellcheck="false" type="text" id="searchInput" class="input"  ng-model='keyWord' ng-keypress="onSearchInputKeyPress($event)" ng-keydown="setInputEditorCaretPosition($event);$event.stopImmediatePropagation();" ng-change="search()" ng-keyup="onInputCaretPositionKeyUp($event)" ng-mouseup="onInputCaretPositionKeyUp($event)"  ng-mousedown="setInputEditorCaretPosition($event)" ng-change="search()" />
+        <span class="search_delete" ng-show="keyWord" ng-click="deleteKeyWord($event)"></span>
+    </div>
+    <div class="searchrlt ng-hide" ng-show="isShowRlt">
+        <div class="searchrlt_content" ng-show="contactList.length > 0 || timenewsList.length > 0 || orgList.length > 0">
+            <div class="contacts_list" ng-show="contactList.length > 0">
+                <div class="list_header" ng-show="!isSinglePage">
+                    <span class="header_title" translate="contact.search.contacts"></span>
+                    <span class="header_btn" ng-click="showSinglePage('contact')" translate="contact.search.more-contacts"></span>
+                </div>
+                <div class="list_header" ng-show="isSinglePage">
+                    <span class="header_back_btn" ng-click="backToRlt()" translate="contact.search.contacts"></span>
+                </div>
+                <div class="contact_item" ng-repeat="item in contactList" ng-click="onContactClick(item,true)" ng-class="{'selected': item == selectedResult}">
+                    <div class="avatar">
+                        <img ng-src="{{item.avatar}}" onerror="this.src='theme/images/contact/icon_avatar_default_40.png'">
+                    </div>
+                    <div class="item_content">
+                        <span class="wrapper">
+                          <span class="name" ng-bind-html="item.name"></span>
+                          <span class="tooltip" ng-bind-html="item.name"></span>
+                        </span>
+                        <span class="department" ng-bind-html="item.department"></span>
+                        <span class="position" ng-bind-html="item.position"></span>
+                        <span class="select" ng-class='{"checked":item.isSelected ==1,"disable-checked":item.isSelected == 3||item.isSelected == 4,"un-checked":item.isSelected == 0}'> </span>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts_list" ng-show="orgList.length > 0">
+                <div class="list_header" ng-show="!isSinglePage">
+                    <span class="header_title" translate="contact.search.orgs"></span>
+                    <span class="header_btn" ng-click="showSinglePage('orgs')" translate="contact.search.more-orgs"></span>
+                </div>
+                <div class="list_header" ng-show="isSinglePage">
+                    <span class="header_back_btn" ng-click="backToRlt()" translate="contact.search.orgs"></span>
+                </div>
+                <div class="contact_item" ng-repeat="item in orgList" ng-click="onContactClick(item)" ng-class="{'selected': item == selectedResult}">
+                    <div class="avatar">
+                        <img src="theme/images/organization.png">
+                    </div>
+                    <div class="item_content">
+                        <span class="org" ng-bind-html="item.name"></span>
+                        <span class="select" ng-class='{"checked":item.isSelected ==1,"disable-checked":item.isSelected == 3||item.isSelected == 4,"un-checked":item.isSelected == 0}'> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

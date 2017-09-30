@@ -1,0 +1,64 @@
+﻿Build started 2016/5/20 14:27:59.
+     1>Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\copylocation\CopyLocation.vcxproj" on node 2 (Rebuild target(s)).
+     1>Midl:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\midl.exe /W1 /nologo /char signed /env win32 /Oicf /h "CopyLocation.h" /iid "CopyLocation_i.c" /tlb ".\CopyLocation.tlb" CopyLocation.idl 
+         Processing .\CopyLocation.idl
+         CopyLocation.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\oaidl.idl
+         oaidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\objidl.idl
+         objidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\unknwn.idl
+         unknwn.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\wtypes.idl
+         wtypes.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\wtypesbase.idl
+         wtypesbase.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\basetsd.h
+         basetsd.h
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\shared\guiddef.h
+         guiddef.h
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\ocidl.idl
+         ocidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\oleidl.idl
+         oleidl.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\servprov.idl
+         servprov.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\urlmon.idl
+         urlmon.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\msxml.idl
+         msxml.idl
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\oaidl.acf
+         oaidl.acf
+         Processing C:\Program Files (x86)\Windows Kits\8.1\Include\um\ocidl.acf
+         ocidl.acf
+       ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Debug\CopyLocation.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\CopyLocation.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CopyLocation.cpp CopyLocationShl.cpp
+         CopyLocationShl.cpp
+         CopyLocation.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\copylocation\copylocation.cpp(61): warning C4996: 'GetVersion': was declared deprecated
+                 c:\program files (x86)\windows kits\8.1\include\um\sysinfoapi.h(110) : see declaration of 'GetVersion'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\copylocation\copylocation.cpp(92): warning C4996: 'GetVersion': was declared deprecated
+                 c:\program files (x86)\windows kits\8.1\include\um\sysinfoapi.h(110) : see declaration of 'GetVersion'
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /D _UNICODE /D UNICODE /l"0x0409" /I.\Debug\ /nologo /fo".\Debug\CopyLocation.res" CopyLocation.rc 
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\CopyLocation.dll" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Program Files (x86)\Visual Leak Detector\lib\Win32" odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\CopyLocation.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\Debug\CopyLocation.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\CopyLocation.lib" /MACHINE:X86 /SAFESEH /DLL .\Debug\CopyLocation.res
+         .\Debug\CopyLocation.obj
+         .\Debug\CopyLocationShl.obj
+         .\Debug\StdAfx.obj
+     1>CopyLocation.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+            Creating library .\Debug\CopyLocation.lib and object .\Debug\CopyLocation.exp
+         CopyLocation.vcxproj -> E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\copylocation\.\Debug\CopyLocation.dll
+       CustomBuildStep:
+         regsvr32 /s /c "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\copylocation\.\Debug\CopyLocation.dll" 
+         echo regsvr32 exec. time > ".\Debug\regsvr32.trg" 
+         :VCEnd
+     1>Done Building Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\copylocation\CopyLocation.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:08.47

@@ -1,0 +1,62 @@
+<div class="gk-dialog-header">
+    创建库
+</div>
+<div class="gk-dialog-content" ng-if="!isloading && !errorText">
+
+    <div class="input-wrapper" ng-if="ents && ents.length && ents.length > 1">
+        <span class="lib-info" translate>企业名称</span>
+        <a class="create-input" style="cursor: pointer;" ng-click="openEntMenu($event)">
+            <span ng-bind="ent.ent_name"></span>
+        </a>
+        <ul class="dropdown-menu" id="entMenu">
+            <li ng-repeat="ent in ents track by $index" ng-click="changeEnt(ent)">
+                <a>{{ent.ent_name}}</a>
+            </li>
+        </ul>
+        <i class="icon-sort fa fa-sort" ng-click="openEntMenu($event)" style="cursor: pointer;"></i>
+    </div>
+
+    <div class="input-wrapper">
+        <span class="lib-info" translate>库名称</span>
+        <input type="text" class="create-input" ng-model="setting.name" placeholder="{{'必填（最多20字）'|translate}}" maxlength="20"  enable-enter-submit="createLib()"/>
+    </div>
+    <!--<div class="input-wrapper">-->
+        <!--<span class="lib-info" translate>库图标</span>-->
+        <!--<a class="create-input create-input-lib-logo" style="cursor: pointer;" ng-click="openLogoMenu($event)">-->
+            <!--<img ng-src="{{setting.logoUrl}}" />-->
+        <!--</a>-->
+        <!--<ul class="dropdown-menu" id="logoMenu">-->
+            <!--<li ng-repeat="libLogo in libLogos track by $index" ng-click="changeLibLogo(libLogo)">-->
+                <!--<img ng-src="{{libLogo.url}}" />-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--<i class="icon-sort fa fa-sort" ng-click="openLogoMenu($event)" style="cursor: pointer;"></i>-->
+    <!--</div>-->
+
+    <div class="input-wrapper" ng-if="!hideSp">
+        <span class="lib-info" translate>存储节点</span>
+        <a class="create-input" style="cursor: pointer;" ng-click="openStorageMenu($event)">
+            <span ng-bind="setting.storagePoint.name"></span>
+        </a>
+        <ul class="dropdown-menu" id="storageMenu">
+            <li ng-repeat="storagePoint in ent.storagePoints track by $index" ng-click="changeStoragePoint(storagePoint)">
+                <a>{{storagePoint.name}}</a>
+            </li>
+        </ul>
+        <i class="icon-sort fa fa-sort" ng-click="openStorageMenu($event)" style="cursor: pointer;"></i>
+    </div>
+
+    <div class="btn-wrapper">
+        <button class="cancel-btn" ng-click="cancel()" >取消</button>
+        <button class="ok-btn" ng-click="createLib()" style="position: relative" ng-disabled="createLoading">
+            <span ng-show="!createLoading">完成</span>
+            <span ng-show="createLoading" us-spinner spinner-theme="smallWhite"></span>
+        </button>
+    </div>
+</div>
+<div class="gk-dialog-content" ng-show="!isloading && errorText" style="text-align: center;">
+    <p>{{errorText}}</p>
+</div>
+<div class="gk-dialog-content" ng-show="isloading" style="position: relative">
+    <span us-spinner></span>
+</div>

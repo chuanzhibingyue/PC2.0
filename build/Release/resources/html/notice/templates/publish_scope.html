@@ -1,0 +1,21 @@
+<div>
+
+    <div class="selectedContent" tabindex="0" ng-blur="onSelectOrgItem($event,null)">
+        <a class="showContact" ng-click="batchAddSelection()" ng-class="{'disabled':isSelectAll}"><span translate="publish.batch-add"></span></a>
+        <div class="sectionSelection" ng-click="toggleSection()" ng-mousedown="setSearchInputFocus($event)">
+            <div ng-repeat="section in selectedSections" class="selectedSection" ng-class="{selected:section.isSelected}" ng-click="onSelectOrgItem($event,section)" ng-mouseenter="sectionMousehover(true,$event)" ng-mouseleave="sectionMousehover(false,$event)">
+                <span ng-bind-html="section.text"></span>
+                <span class="closeTag" ng-click="removeSelectedSection(section,$event)"></span>
+            </div>
+            <search-bar rootorg="rootorg" is-node-Selected="isNodeSelected" select-node="addSelection" is-single-select="true" input-blur="onSearchInputBlur()" input-focus="onSearchInputFocus()" placeholder="{{'publish.search-org-user-tip'|translate}}" ng-hide="isSelectAll"></search-bar>
+        </div>
+        <div class="selectAll" ng-click="selectAll()">
+            <span ng-bind="selectionText"></span>
+        </div>
+    </div>
+    <!--<div class="sections" ng-show="isSectionShow" ng-mouseover="isMouseOverSectionOptions = true" ng-mouseout="isMouseOverSectionOptions = false">-->
+        <!--<div ng-repeat="section in sections" ng-class="{'onSeleced':section.selected,'last':$last }" class="section" ng-click="onSelectedSectionChanged(section)">-->
+            <!--<div ng-bind-html="section.text"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>

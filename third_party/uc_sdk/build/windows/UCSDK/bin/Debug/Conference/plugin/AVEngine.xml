@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AVModuleConfiguration>
+	<!--force to send 4/3/2 layers, 0 is disable this item. event:4-->
+	<SendLayerCnt>0</SendLayerCnt>
+
+	<!--globle image post process. 1111:(denoise, contrast, color, sharpen)-->
+	<PicPostProcess>4</PicPostProcess>
+	
+	<!--bitrate for the 640*480, 320*240, 160*120-->
+	<BitrateVGA>300</BitrateVGA>
+	<BitrateQVGA>180</BitrateQVGA>
+	<BitrateQQVGA>68</BitrateQQVGA>
+
+	<BitrateMin>100</BitrateMin>
+	
+	<!--DTS send layer num. 1111:(80,160,320,640)-->
+	<ServerSendLayerCntVGA>7</ServerSendLayerCntVGA>
+	<ServerSendLayerCntQVGA>6</ServerSendLayerCntQVGA>
+	<ServerSendLayerCntQQVGA>12</ServerSendLayerCntQQVGA>
+	
+	<!--audio-->
+	<agc_enable>1</agc_enable>
+	<reverb_enable>0</reverb_enable>
+	<reverb_drytime>43</reverb_drytime>
+	<reverb_wettime>57</reverb_wettime>
+	<reverb_dampness>45</reverb_dampness>
+	<reverb_roomwidth>56</reverb_roomwidth>
+	<reverb_roomsize>56</reverb_roomsize>
+	<iir_enable>0</iir_enable>
+	<iir_freq>400</iir_freq>
+	<iir_gain>10</iir_gain>
+	<iir_type>1</iir_type>
+</AVModuleConfiguration>

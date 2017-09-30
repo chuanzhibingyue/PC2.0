@@ -1,0 +1,83 @@
+<div class="gk-dialog-header" style="border: none; height: 30px;"></div>
+<div class="gk-dialog-content">
+    <div class="lm-title">
+        <h3 translate>管理 ‘{{file.filename}}’ 外链</h3>
+    </div>
+    <div class="lm-content">
+        <div ng-show="!isloaded" style="text-align: center; padding: 25px;" translate>正在加载...</div>
+        <div ng-show="isloaded && errLoaded" style="text-align: center; padding: 25px;" translate>数据加载失败</div>
+        <div ng-show="isloaded && !errLoaded">
+            <div class="lm-opt-wrapper clearfix">
+                <a class="lm-opt-btn active" ng-click="changeCreator($event, 'own')" translate>我创建的</a>
+                <a class="lm-opt-btn" ng-click="changeCreator($event, 'others')" translate>其他成员创建的</a>
+            </div>
+            <div class="lm-table-wrapper">
+                <table ng-show="creator == 'own'" class="own">
+                    <thead>
+                    <tr>
+                        <th translate>外链地址</th>
+                        <th translate>访问控制</th>
+                        <th ng-click="orderByExpire($event, 0)" translate style="cursor: pointer;">失效时间<span class="fa fa-caret-down" style="padding-left: 5px; font-size: 14px;"></span></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-show="!owners || owners.length == 0">
+                        <td colspan="4" style="text-align: center; font-size: 12px; padding: 20px;" translate>没有外链</td>
+                    </tr>
+                    <tr ng-repeat="owner in owners" ng-show="owners">
+                        <td><a ng-click="openLink($event, owner.url)" style="cursor: pointer;" ng-bind="owner.url"></a></td>
+                        <td>
+                            <span ng-if="owner.property.password"><span translate>设置密码访问</span></span>
+                            <span ng-if="!owner.property.password && owner.property.scope == 0"><span translate>任何获得该链接的人都可以访问</span></span>
+                            <span ng-if="!owner.property.password && owner.property.scope == 1"><span ng-bind="entText"></span></span>
+                        </td>
+                        <td>
+                            <span ng-if="owner.deadline == -1"><span translate>永不失效</span></span>
+                            <span ng-if="owner.deadline != -1" ng-class="{'link-expire': currentDate > owner.deadline*1000}"><span>{{owner.deadline*1000 | date:'yyyy-MM-dd HH:mm'}}</span><span ng-show="currentDate > owner.deadline*1000"> (已失效)</span></span>
+                        </td>
+                        <td>
+                            <a class="fa fa-times act-btn" ng-click="closeLink($event, owner.code, owner.mount_id, $index, 0)" tooltip="{{'关闭'}}"></a>
+                            <a class="fa fa-wrench act-btn" ng-click="openLink($event, owner)" tooltip="{{'设置'}}"></a>
+                            <a class="fa fa-copy act-btn" data-clipboard-text="{{owner.url}}" ng-click="copyLink($event, owner.url)" tooltip="{{'复制'}}"></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table ng-show="creator == 'others'" class="other">
+                    <thead>
+                    <tr>
+                        <th translate>外链地址</th>
+                        <th translate>访问控制</th>
+                        <th ng-click="orderByExpire($event, 1)" translate style="cursor: pointer;">失效时间<span class="fa fa-caret-down" style="padding-left: 5px; font-size: 14px;"></span></th>
+                        <th ng-click="orderByCreator($event)" translate style="cursor: pointer;">创建人<span class="fa fa-caret-down" style="padding-left: 5px; font-size: 14px;"></span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-show="!others || others.length == 0">
+                        <td colspan="4" style="text-align: center; font-size: 12px; padding: 20px;" translate>没有外链</td>
+                    </tr>
+                    <tr ng-repeat="other in others">
+                        <td><a ng-click="openLink($event, other.url)" style="cursor: pointer;" ng-bind="other.url"></a></td>
+                        <td>
+                            <span ng-if="other.property.password"><span translate>设置密码访问</span></span>
+                            <span ng-if="!other.property.password && other.property.scope == 0"><span translate>任何获得该链接的人都可以访问</span></span>
+                            <span ng-if="!other.property.password && other.property.scope == 1"><span ng-bind="entText"></span></span>
+                        </td>
+                        <td>
+                            <span ng-if="other.deadline == -1"><span translate>永不失效</span></span>
+                            <span ng-if="other.deadline != -1" ng-class="{'link-expire': currentDate > other.deadline*1000}"><span>{{other.deadline*1000 | date:'yyyy-MM-dd HH:mm'}}</span><span ng-show="currentDate > other.deadline*1000" translate> (已失效)</span></span>
+                        </td>
+                        <td>
+                            <span class="name" ng-bind="other.member_name"></span>
+                            <a class="fa fa-times act-btn" ng-click="closeLink($event, other.code, other.mount_id, $index, 1)" tooltip="{{'关闭'}}"></a>
+                            <a class="fa fa-copy act-btn" data-clipboard-text="{{other.url}}" ng-click="copyLink($event, other.url)" tooltip="{{'复制'}}"></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

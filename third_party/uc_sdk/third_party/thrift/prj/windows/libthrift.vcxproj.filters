@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\include\thrift\protocol\TBase64Utils.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\protocol\TDebugProtocol.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\protocol\TDenseProtocol.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\protocol\TJSONProtocol.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\transport\TBufferTransports.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\transport\TFDTransport.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\transport\THttpClient.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\transport\THttpServer.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\transport\THttpTransport.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\transport\TServerSocket.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\transport\TSimpleFileTransport.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\transport\TSocketPool.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\transport\TTransportException.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\thrift\transport\TZlibTransport.cpp">
+      <Filter>transport</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\thrift\protocol\TBase64Utils.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\protocol\TBinaryProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\protocol\TCompactProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\protocol\TDebugProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\protocol\TDenseProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\protocol\TJSONProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\protocol\TProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\protocol\TProtocolDecorator.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\protocol\TProtocolException.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\protocol\TProtocolTap.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\protocol\TVirtualProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\PlatformSocket.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TBufferTransports.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TFDTransport.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\THttpClient.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\THttpServer.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\THttpTransport.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TServerSocket.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TServerTransport.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TShortReadTransport.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TSimpleFileTransport.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TSocketPool.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TTransport.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TTransportException.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TVirtualTransport.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\transport\TZlibTransport.h">
+      <Filter>transport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\thrift\windows\config.h">
+      <Filter>windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="transport">
+      <UniqueIdentifier>{e9f61404-1148-4103-bd6f-e5869d37fa79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="windows">
+      <UniqueIdentifier>{2814002a-3c68-427e-b0eb-33acd2f406ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocol">
+      <UniqueIdentifier>{07ced19b-b72a-4105-9ffb-6d2bcf64497e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\include\thrift\protocol\TBinaryProtocol.tcc">
+      <Filter>protocol</Filter>
+    </None>
+    <None Include="..\..\include\thrift\protocol\TCompactProtocol.tcc">
+      <Filter>protocol</Filter>
+    </None>
+  </ItemGroup>
+</Project>

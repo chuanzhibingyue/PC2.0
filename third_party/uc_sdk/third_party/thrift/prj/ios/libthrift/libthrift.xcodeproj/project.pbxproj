@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3882F8631AEA339D009CDC47 /* libthrift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3882F8571AEA339D009CDC47 /* libthrift.a */; };
+		3882F8E21AEB5D41009CDC47 /* TBase64Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3882F8CF1AEB5D41009CDC47 /* TBase64Utils.cpp */; };
+		3882F8E51AEB5D41009CDC47 /* TDebugProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3882F8D51AEB5D41009CDC47 /* TDebugProtocol.cpp */; };
+		3882F8E61AEB5D41009CDC47 /* TDenseProtocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3882F8D71AEB5D41009CDC47 /* TDenseProtocol.cpp */; };
+		3882F9101AEB5D5E009CDC47 /* TBufferTransports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3882F8EA1AEB5D5E009CDC47 /* TBufferTransports.cpp */; };
+		3882F91E1AEB5D5E009CDC47 /* TTransportException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3882F9091AEB5D5E009CDC47 /* TTransportException.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3882F8641AEA339D009CDC47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3882F84F1AEA339D009CDC47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3882F8561AEA339D009CDC47;
+			remoteInfo = libthrift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3882F8551AEA339D009CDC47 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3882F8571AEA339D009CDC47 /* libthrift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libthrift.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3882F8621AEA339D009CDC47 /* libthriftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libthriftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3882F8681AEA339D009CDC47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3882F8CC1AEA3A9E009CDC47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3882F8CE1AEB5D1F009CDC47 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../../../config.h; sourceTree = "<group>"; };
+		3882F8CF1AEB5D41009CDC47 /* TBase64Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TBase64Utils.cpp; path = ../../../../protocol/TBase64Utils.cpp; sourceTree = "<group>"; };
+		3882F8D01AEB5D41009CDC47 /* TBase64Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBase64Utils.h; path = ../../../../protocol/TBase64Utils.h; sourceTree = "<group>"; };
+		3882F8D11AEB5D41009CDC47 /* TBinaryProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBinaryProtocol.h; path = ../../../../protocol/TBinaryProtocol.h; sourceTree = "<group>"; };
+		3882F8D51AEB5D41009CDC47 /* TDebugProtocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TDebugProtocol.cpp; path = ../../../../protocol/TDebugProtocol.cpp; sourceTree = "<group>"; };
+		3882F8D61AEB5D41009CDC47 /* TDebugProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDebugProtocol.h; path = ../../../../protocol/TDebugProtocol.h; sourceTree = "<group>"; };
+		3882F8D71AEB5D41009CDC47 /* TDenseProtocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TDenseProtocol.cpp; path = ../../../../protocol/TDenseProtocol.cpp; sourceTree = "<group>"; };
+		3882F8D81AEB5D41009CDC47 /* TDenseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDenseProtocol.h; path = ../../../../protocol/TDenseProtocol.h; sourceTree = "<group>"; };
+		3882F8DD1AEB5D41009CDC47 /* TProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TProtocol.h; path = ../../../../protocol/TProtocol.h; sourceTree = "<group>"; };
+		3882F8E01AEB5D41009CDC47 /* TProtocolTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TProtocolTap.h; path = ../../../../protocol/TProtocolTap.h; sourceTree = "<group>"; };
+		3882F8E11AEB5D41009CDC47 /* TVirtualProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVirtualProtocol.h; path = ../../../../protocol/TVirtualProtocol.h; sourceTree = "<group>"; };
+		3882F8EA1AEB5D5E009CDC47 /* TBufferTransports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TBufferTransports.cpp; path = ../../../../transport/TBufferTransports.cpp; sourceTree = "<group>"; };
+		3882F8EB1AEB5D5E009CDC47 /* TBufferTransports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBufferTransports.h; path = ../../../../transport/TBufferTransports.h; sourceTree = "<group>"; };
+		3882F9091AEB5D5E009CDC47 /* TTransportException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TTransportException.cpp; path = ../../../../transport/TTransportException.cpp; sourceTree = "<group>"; };
+		3882F90A1AEB5D5E009CDC47 /* TTransportException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTransportException.h; path = ../../../../transport/TTransportException.h; sourceTree = "<group>"; };
+		3882F90D1AEB5D5E009CDC47 /* TVirtualTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVirtualTransport.h; path = ../../../../transport/TVirtualTransport.h; sourceTree = "<group>"; };
+		3882F9211AEB6642009CDC47 /* TProtocolException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TProtocolException.h; path = ../../../../protocol/TProtocolException.h; sourceTree = "<group>"; };
+		3882F9221AEB665F009CDC47 /* TTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTransport.h; path = ../../../../transport/TTransport.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3882F8541AEA339D009CDC47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3882F85F1AEA339D009CDC47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3882F8631AEA339D009CDC47 /* libthrift.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3882F84E1AEA339D009CDC47 = {
+			isa = PBXGroup;
+			children = (
+				3882F8CC1AEA3A9E009CDC47 /* Foundation.framework */,
+				3882F8591AEA339D009CDC47 /* libthrift */,
+				3882F8661AEA339D009CDC47 /* libthriftTests */,
+				3882F8581AEA339D009CDC47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3882F8581AEA339D009CDC47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3882F8571AEA339D009CDC47 /* libthrift.a */,
+				3882F8621AEA339D009CDC47 /* libthriftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3882F8591AEA339D009CDC47 /* libthrift */ = {
+			isa = PBXGroup;
+			children = (
+				3882F8CE1AEB5D1F009CDC47 /* config.h */,
+				3882F8711AEA33CA009CDC47 /* protocol */,
+				3882F8721AEA33E1009CDC47 /* transport */,
+			);
+			path = libthrift;
+			sourceTree = "<group>";
+		};
+		3882F8661AEA339D009CDC47 /* libthriftTests */ = {
+			isa = PBXGroup;
+			children = (
+				3882F8671AEA339D009CDC47 /* Supporting Files */,
+			);
+			path = libthriftTests;
+			sourceTree = "<group>";
+		};
+		3882F8671AEA339D009CDC47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3882F8681AEA339D009CDC47 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3882F8711AEA33CA009CDC47 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3882F9211AEB6642009CDC47 /* TProtocolException.h */,
+				3882F8CF1AEB5D41009CDC47 /* TBase64Utils.cpp */,
+				3882F8D01AEB5D41009CDC47 /* TBase64Utils.h */,
+				3882F8D11AEB5D41009CDC47 /* TBinaryProtocol.h */,
+				3882F8D51AEB5D41009CDC47 /* TDebugProtocol.cpp */,
+				3882F8D61AEB5D41009CDC47 /* TDebugProtocol.h */,
+				3882F8D71AEB5D41009CDC47 /* TDenseProtocol.cpp */,
+				3882F8D81AEB5D41009CDC47 /* TDenseProtocol.h */,
+				3882F8DD1AEB5D41009CDC47 /* TProtocol.h */,
+				3882F8E01AEB5D41009CDC47 /* TProtocolTap.h */,
+				3882F8E11AEB5D41009CDC47 /* TVirtualProtocol.h */,
+			);
+			name = protocol;
+			sourceTree = "<group>";
+		};
+		3882F8721AEA33E1009CDC47 /* transport */ = {
+			isa = PBXGroup;
+			children = (
+				3882F9221AEB665F009CDC47 /* TTransport.h */,
+				3882F8EA1AEB5D5E009CDC47 /* TBufferTransports.cpp */,
+				3882F8EB1AEB5D5E009CDC47 /* TBufferTransports.h */,
+				3882F9091AEB5D5E009CDC47 /* TTransportException.cpp */,
+				3882F90A1AEB5D5E009CDC47 /* TTransportException.h */,
+				3882F90D1AEB5D5E009CDC47 /* TVirtualTransport.h */,
+			);
+			name = transport;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3882F8561AEA339D009CDC47 /* libthrift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3882F86B1AEA339D009CDC47 /* Build configuration list for PBXNativeTarget "libthrift" */;
+			buildPhases = (
+				3882F8531AEA339D009CDC47 /* Sources */,
+				3882F8541AEA339D009CDC47 /* Frameworks */,
+				3882F8551AEA339D009CDC47 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libthrift;
+			productName = libthrift;
+			productReference = 3882F8571AEA339D009CDC47 /* libthrift.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3882F8611AEA339D009CDC47 /* libthriftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3882F86E1AEA339D009CDC47 /* Build configuration list for PBXNativeTarget "libthriftTests" */;
+			buildPhases = (
+				3882F85E1AEA339D009CDC47 /* Sources */,
+				3882F85F1AEA339D009CDC47 /* Frameworks */,
+				3882F8601AEA339D009CDC47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3882F8651AEA339D009CDC47 /* PBXTargetDependency */,
+			);
+			name = libthriftTests;
+			productName = libthriftTests;
+			productReference = 3882F8621AEA339D009CDC47 /* libthriftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3882F84F1AEA339D009CDC47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = UC;
+				TargetAttributes = {
+					3882F8561AEA339D009CDC47 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					3882F8611AEA339D009CDC47 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 3882F8521AEA339D009CDC47 /* Build configuration list for PBXProject "libthrift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3882F84E1AEA339D009CDC47;
+			productRefGroup = 3882F8581AEA339D009CDC47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3882F8561AEA339D009CDC47 /* libthrift */,
+				3882F8611AEA339D009CDC47 /* libthriftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3882F8601AEA339D009CDC47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3882F8531AEA339D009CDC47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3882F9101AEB5D5E009CDC47 /* TBufferTransports.cpp in Sources */,
+				3882F8E61AEB5D41009CDC47 /* TDenseProtocol.cpp in Sources */,
+				3882F8E51AEB5D41009CDC47 /* TDebugProtocol.cpp in Sources */,
+				3882F91E1AEB5D5E009CDC47 /* TTransportException.cpp in Sources */,
+				3882F8E21AEB5D41009CDC47 /* TBase64Utils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3882F85E1AEA339D009CDC47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3882F8651AEA339D009CDC47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3882F8561AEA339D009CDC47 /* libthrift */;
+			targetProxy = 3882F8641AEA339D009CDC47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3882F8691AEA339D009CDC47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3882F86A1AEA339D009CDC47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3882F86C1AEA339D009CDC47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = BOOST_HAS_RVALUE_REFS;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./../../../../,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = thrift;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3882F86D1AEA339D009CDC47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./../../../../,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = thrift;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3882F86F1AEA339D009CDC47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = libthriftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3882F8701AEA339D009CDC47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = libthriftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3882F8521AEA339D009CDC47 /* Build configuration list for PBXProject "libthrift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3882F8691AEA339D009CDC47 /* Debug */,
+				3882F86A1AEA339D009CDC47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3882F86B1AEA339D009CDC47 /* Build configuration list for PBXNativeTarget "libthrift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3882F86C1AEA339D009CDC47 /* Debug */,
+				3882F86D1AEA339D009CDC47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3882F86E1AEA339D009CDC47 /* Build configuration list for PBXNativeTarget "libthriftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3882F86F1AEA339D009CDC47 /* Debug */,
+				3882F8701AEA339D009CDC47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3882F84F1AEA339D009CDC47 /* Project object */;
+}

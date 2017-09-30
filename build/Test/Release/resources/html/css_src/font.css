@@ -1,0 +1,309 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../font/icomoon.eot?i24u0m');
+    src:    url('../font/icomoon.eot?i24u0m#iefix') format('embedded-opentype'),
+        url('../font/icomoon.ttfx?i24u0m') format('truetype'),
+        url('../font/icomoon.woff?i24u0m') format('woff'),
+        url('../font/icomoon.svg?i24u0m#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-createMeetingRoom:before {
+    content: "\e900";
+}
+.icon-link:before {
+    content: "\e600";
+}
+.icon-close:before {
+    content: "\e602";
+}
+.icon-max:before {
+    content: "\e609";
+}
+.icon-min:before {
+    content: "\e60e";
+}
+.icon-search:before {
+    content: "\e60f";
+}
+.icon-setting:before {
+    content: "\e610";
+}
+.icon-pbx-audio:before {
+    content: "\e901";
+}
+.icon-chat_call_select:before {
+    content: "\e902";
+}
+.icon-chat_call_default:before {
+    content: "\e903";
+}
+.icon-refresh:before {
+    content: "\e904";
+}
+.icon-meeting-add:before {
+    content: "\e905";
+}
+.icon-meeting-emcee:before {
+    content: "\e906";
+}
+.icon-call_add_user:before {
+    content: "\e907";
+}
+.icon-call_cancelScreen:before {
+    content: "\e908";
+}
+.icon-call_changeWindow:before {
+    content: "\e909";
+}
+.icon-call_lookVideo:before {
+    content: "\e90a";
+}
+.icon-call_message:before {
+    content: "\e90b";
+}
+.icon-call_radioChange:before {
+    content: "\e90c";
+}
+.icon-call_reporterTell:before {
+    content: "\e90d";
+}
+.icon-call_setScreen:before {
+    content: "\e90e";
+}
+.icon-call_shareScreen:before {
+    content: "\e90f";
+}
+.icon-call_singleSelected:before {
+    content: "\e910";
+}
+.icon-call_stopTell:before {
+    content: "\e911";
+}
+.icon-call_tellCalm:before {
+    content: "\e912";
+}
+.icon-call_userList:before {
+    content: "\e913";
+}
+.icon-call_video:before {
+    content: "\e914";
+}
+.icon-call_video_left:before {
+    content: "\e915";
+}
+.icon-call_video_ringht:before {
+    content: "\e916";
+}
+.icon-callspeak:before {
+    content: "\e917";
+}
+.icon-dialpaddown:before {
+    content: "\e918";
+}
+.icon-dialpadup:before {
+    content: "\e919";
+}
+.icon-forward:before {
+    content: "\e91a";
+}
+.icon-more:before {
+    content: "\e91b";
+}
+.icon-summary:before {
+    content: "\e91c";
+}
+.icon-summary-selected:before {
+    content: "\e91d";
+}
+.icon-chat:before {
+    content: "\e91e";
+}
+.icon-chat-selected:before {
+    content: "\e91f";
+}
+.icon-settings:before {
+    content: "\e920";
+}
+.icon-start:before {
+    content: "\e921";
+}
+.icon-chatfile-selected:before {
+    content: "\e922";
+}
+.icon-chatfile:before {
+    content: "\e923";
+}
+.icon-meeting-Members:before {
+    content: "\e924";
+}
+.icon-calendar:before {
+    content: "\e925";
+}
+.icon-addcontacts:before {
+    content: "\e926";
+}
+.icon-createMetting:before {
+    content: "\e927";
+}
+.icon-createCloud:before {
+    content: "\e928";
+}
+.icon-cloudMember:before {
+    content: "\e929";
+}
+.icon-cloudMember-selected:before {
+    content: "\e92a";
+}
+.icon-cloud:before {
+    content: "\e92b";
+}
+.icon-cloudFile:before {
+    content: "\e92c";
+}
+.icon-calendarPanel:before {
+    content: "\e92d";
+}
+.icon-contactsPanel:before {
+    content: "\e92e";
+}
+.icon-messagePanel:before {
+    content: "\e92f";
+}
+.icon-applicationPanel:before {
+    content: "\e930";
+}
+.icon-attendee:before {
+    content: "\e931";
+}
+.icon-detail:before {
+    content: "\e932";
+}
+.icon-location:before {
+    content: "\e933";
+}
+.icon-password:before {
+    content: "\e934";
+}
+.icon-restore:before {
+    content: "\e935";
+}
+.icon-external-chat-checked:before {
+    content: "\e936";
+}
+.icon-call_cancelScreen2:before {
+    content: "\e937";
+}
+.icon-call_changeWindow2:before {
+    content: "\e938";
+}
+.icon-external-chat:before {
+    content: "\e939";
+}
+.icon-call_phoneVideo:before {
+    content: "\e93a";
+}
+.icon-call_radioChange2:before {
+    content: "\e93b";
+}
+.icon-call_reporterTell2:before {
+    content: "\e93c";
+}
+.icon-call_phoneVideoMute:before {
+    content: "\e93d";
+}
+.icon-call_shareScreen2:before {
+    content: "\e93e";
+}
+.icon-call_singleSelected2:before {
+    content: "\e93f";
+}
+.icon-call_voipVideo:before {
+    content: "\e940";
+}
+.icon-summary-selected2:before {
+    content: "\e941";
+}
+.icon-call_voipVideoMute:before {
+    content: "\e942";
+}
+.icon-chatfile-selected2:before {
+    content: "\e943";
+}
+.icon-call_video_ringht2:before {
+    content: "\e944";
+}
+.icon-remote-assistance-selected:before {
+    content: "\e945";
+}
+.icon-remote-assistance:before {
+    content: "\e946";
+}
+.icon-mike:before {
+    content: "\e947";
+}
+.icon-speaker:before {
+    content: "\e948";
+}
+.icon-circe_right:before {
+    content: "\e949";
+}
+.icon-disturb:before {
+    content: "\e94a";
+}
+.icon-cloudMember-selected2:before {
+    content: "\e94b";
+}
+.icon-meeting-attendee:before {
+    content: "\e94c";
+}
+.icon-meeting-chat:before {
+    content: "\e94d";
+}
+.icon-back:before {
+    content: "\e94e";
+}
+.icon-meeting-file:before {
+    content: "\e94f";
+}
+.icon-meeting-add-attendee:before {
+    content: "\e950";
+}
+.icon-applicationPanel2:before {
+    content: "\e956";
+}
+.icon-chattool-emoj:before {
+    content: "\e958";
+}
+.icon-chattool-code:before {
+    content: "\e959";
+}
+.icon-chattool-cut:before {
+    content: "\e95a";
+}
+.icon-chattool-uploadimg:before {
+    content: "\e95b";
+}
+.icon-chattool-upload:before {
+    content: "\e95c";
+}
+.icon-chattool-word:before {
+    content: "\e95d";
+}

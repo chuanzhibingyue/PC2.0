@@ -1,0 +1,146 @@
+<div>
+    <div keyboard-shortcut="enableKeyBoardShortcut" class="file-wrapper file-table-wrapper" ng-if="PAGE_CONFIG.listView == 'list'" ng-class="{issync: PAGE_CONFIG.synctype == 0
+    || PAGE_CONFIG.synctype == 1 || PAGE_CONFIG.synctype == 2}">
+        <div id="infiniteTable" gk-contextmenu drop-upload>
+            <div class="file-table-header">
+                <div class="file-col-c file-col file-title-col" ng-click="changeOrder($event, 'filesize')">
+                    <span style="display: inline-block;" translate>大小</span>
+                    <span class="icon-sort fa fa-sort"></span>
+                </div>
+                <div class="file-col-b file-col file-title-col" ng-click="changeOrder($event, 'lasttime')">
+                    <span translate>最后修改</span>
+                    <span class="icon-sort  fa fa-sort"></span>
+                    <div class="v-line"></div>
+                </div>
+                <div class="file-col-a file-col file-title-col file-title-name" ng-click="changeOrder($event, 'filename')">
+                    <span translate>文件名</span>
+                    <span class="icon-sort  fa fa-sort"></span>
+                    <div class="v-line"></div>
+                    <file-col-resizer></file-col-resizer>
+                </div>
+            </div>
+            <div class="file-sync-header" ng-show="!isloading">
+                <div class="file-col-c file-col" ng-click="showSyncSetting()">
+                    <span translate>设置</span>
+                </div>
+                <div class="file-col-b file-col" ng-click="goToLocal()">
+                    <span translate>前往</span>
+                </div>
+                <div class="file-col-a file-col file-title-col">
+                    <span ng-show="PAGE_CONFIG.synctype == 0" translate>同步的文件夹</span>
+                    <span ng-show="PAGE_CONFIG.synctype == 1" translate>备份的文件夹</span>
+                    <span ng-show="PAGE_CONFIG.synctype == 2" translate>同步的文件夹(只下载)</span>
+                </div>
+            </div>
+            <div class="file-table-content" infinite-scroll-disabled="isloading || limitLoad"
+                 infinite-scroll="fileList()" infinite-scroll-container="'#infiniteTable'"
+                 infinite-scroll-distance="1">
+                <div ng-if="isEmpty" style="text-align: center; padding: 10px 0; color: #999; font-size: 12px;">
+                    <span translate ng-if="PAGE_CONFIG.view != 'search'">该文件夹为空</span>
+                    <span ng-if="PAGE_CONFIG.view == 'search'">未找到相关搜索结果</span>
+                </div>
+                <div ng-repeat="file in files | filter: keyword | limitTo: limit track by $index"
+                     file-select data-index="{{$index}}"
+                     ng-class="{'selected': file.selected,'no_cache':file.have == 0 && file.dir == 0,'pre-cut':file.preCut}"
+                     ng-dblclick="handleDblClick($event, file)"
+                     class="file-item"
+                     jqyoui-droppable="{onOver:'onOver',onDrop:'onDrop(file)',onOut:'onOut'}"
+                     data-drag="isDragable()"
+                     jqyoui-draggable="{animate:false,onStart:'onStart(file)'}"
+                     data-jqyoui-options="jqyouiOptions"
+                     data-drop="isDropable(file)"
+                >
+                    <div class="file-col file-col-c file-filesize">{{file.humansize}}</div>
+                    <div class="file-col file-col-b file-lasttime">{{file.lasttime*1000 | date: 'yyyy/MM/dd HH:mm'}} {{file.lastname}}</div>
+                    <div class="file-col file-col-a">
+                        <div class="file-info">
+                            <div class="file-icon file-icon-28 icon-{{file.fileicon}}-28"
+                                 ng-class="{'icon-cache-folder-28': file.iscached && file.dir == 1,
+                                    'icon-collection-folder-28': file.property.collection_type == 'private'  && file.dir == 1,
+                                    'icon-public-folder-28': file.property.collection_type == 'public'  && file.dir == 1,
+                                    'icon-sync-folder-28': file.synctype == 0  && file.dir == 1,
+                                    'icon-sync-download-folder-28': file.synctype == 2  && file.dir == 1,
+                                    'icon-sync-upload-folder-28': file.synctype == 1  && file.dir == 1}"></div>
+                            <div class="icon-lock-me file-lock" ng-if="file.lock == 2"></div>
+                            <div class="icon-lock-others file-lock" ng-if="file.lock == 1"></div>
+                            <div class="file-transfer icon-upload" ng-if="file.status == 1"></div>
+                            <div class="file-transfer icon-download" ng-if="file.status == 2"></div>
+                            <span ng-hide="file.rename" ng-click="showRename($event,file)">{{file.filename}}</span>
+                        </div>
+                        <form ng-submit="renameSubmit($event, file)" ng-if="file.rename">
+                            <input type="text" id="rename" ng-value="file.filename" ng-dblclick="handleRenameDblClick($event)"/>
+                        </form>
+                    </div>
+                    <div class="file-tags clearfix">
+                        <div class="tag-item" ng-repeat="tag in file.tags track by $index" title="{{tag}}">
+                            <i class="circle"></i><span ng-bind="tag" class="tag-name"></span>
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="isloading" style="text-align: center; padding: 10px 0; color: #999; font-size: 12px;">
+                    <span translate>正在加载</span>
+                </div>
+                <div ng-if="loadedError" style="text-align: center; padding: 10px 0; color: #999; font-size: 12px;">
+                    <span translate>文件加载失败</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div keyboard-shortcut="enableKeyBoardShortcut" class="file-wrapper file-thumbnail-wrapper" ng-if="PAGE_CONFIG.listView == 'thumbnail'">
+        <div gk-contextmenu drop-upload id="infiniteThumb">
+            <div ng-if="files && files.length == 0 && !isloading" style="text-align: center; padding: 10px 0; color: #999; font-size: 12px;">
+                <span ng-if="PAGE_CONFIG.view != 'search'">该文件夹为空</span>
+                <span ng-if="PAGE_CONFIG.view == 'search'">未找到相关搜索结果</span>
+            </div>
+            <div ng-if="isloading" style="text-align: center; padding: 10px 0; color: #999; font-size: 12px;">
+                <span translate>正在加载</span>
+            </div>
+            <div ng-if="loadedError" style="text-align: center; padding: 10px 0; color: #999; font-size: 12px;">
+                <span translate>文件加载失败</span>
+            </div>
+            <ul class="thumb_list"
+                infinite-scroll-disabled="isloading || limitLoad"
+                infinite-scroll="fileList()" infinite-scroll-container="'#infiniteThumb'"
+                infinite-scroll-distance="1"
+            >
+                <li
+                   ng-repeat="file in files track by $index"
+                   class="thumb-item" file-select
+                   data-index="{{$index}}"
+                   ng-class="{selected: file.selected,'no_cache':file.have == 0 && file.dir == 0,'pre-cut':file.preCut}"
+                   ng-dblclick="handleDblClick($event, file)"
+                   jqyoui-droppable="{onOver:'onOver',onDrop:'onDrop(file)',onOut:'onOut'}"
+                   data-drag="isDragable()"
+                   jqyoui-draggable="{animate:false,onStart:'onStart(file)'}"
+                   data-jqyoui-options="jqyouiOptions"
+                   data-drop="isDropable(file)"
+                >
+                    <div class="file-icon file-icon-54" ng-if="file.thumbimg" style="background-image: url({{file.thumbimg}});">
+                    </div>
+                    <div class="file-icon file-icon-54 icon-{{file.fileicon}}-54" ng-if="!file.thumbimg"
+                         ng-class="{'icon-cache-folder-54': file.iscached && file.dir == 1,
+                                    'icon-collection-folder-54': file.property.collection_type == 'private'  && file.dir == 1,
+                                    'icon-public-folder-54': file.property.collection_type == 'public'  && file.dir == 1,
+                                    'icon-sync-folder-54': file.synctype == 0  && file.dir == 1,
+                                    'icon-sync-download-folder-54': file.synctype == 2  && file.dir == 1,
+                                    'icon-sync-upload-folder-54': file.synctype == 1  && file.dir == 1}">
+                        <div class="icon-lock-me file-lock" ng-if="file.lock == 2"></div>
+                        <div class="icon-lock-others file-lock" ng-if="file.lock == 1"></div>
+                        <div class="file-transfer icon-upload" ng-if="file.status == 1"></div>
+                        <div class="file-transfer icon-download" ng-if="file.status == 2"></div>
+                        <div class="icon-document" ng-if="file.fileicon == 'document'">{{file.ext | formatExt}}</div>
+                        <div class="icon-other" ng-if="file.fileicon == 'other'">{{file.ext | formatExt}}</div>
+                    </div>
+                    <div class="file-filename" ng-click="showRename($event,file)">{{file.filename}}</div>
+                    <div class="rename-thumb" ng-if="file.rename">
+                        <form ng-submit="renameSubmit($event, file)">
+                            <input type="text" id="renameThumb" ng-value="file.filename" ng-dblclick="handleRenameDblClick($event)"/>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,48 @@
+.qtips-wrap, .qtips-wrap .qtips-dir{
+    /*background-color: #EDE90E;*/
+    background-color: #f5f5f5;
+}
+
+.qtips-wrap{
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    z-index: 999;
+    padding: 2px 6px;
+    width: auto;
+    line-height: 19px;
+    border-radius: 2px;
+    text-align: center;
+    color: #173553;
+    box-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.16) inset, 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.qtips-wrap .qtips-dir{
+    display: none;
+    width: 10px;
+    height: 10px;
+    -webkit-transform: rotate(45deg);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.qtips-wrap.long{
+    width: auto;
+    height: auto;
+    padding:5px 10px;
+    line-height: 20px;
+    max-width: 400px;
+    text-align: left;
+}
+
+.qtips-wrap .text{
+    max-width: 380px;
+    word-wrap: break-word;
+}
+
+.qtips-wrap.qtips-show-by .qtips-dir{
+    display: none;
+}

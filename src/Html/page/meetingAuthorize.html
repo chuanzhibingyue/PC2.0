@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../css/meeting_authorize.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/meetingAuthorize.js"></script>
+    <title trans="callee">{{Meeting.SetAccreditTitle}}</title>
+</head>
+<body class="accredit-meeting">
+    <div class="popup-panel vertical popup  child-window-shadow">
+        <div class="popup-panel-head">
+            <p>{{Meeting.CalendarAccreditSetting}}</p>
+            <a></a>
+        </div>
+        <div class="popup-panel-separator"></div>
+        <div class="popup-panel-content">
+            <h1 class="top-line"></h1>
+            <div class="content-add">
+                <p>{{Meeting.SetAccredit}}</p>
+                <input class="user_input" placeholder="{{Meeting.SetMyAccredit}}" />
+                <img src="../images/meeting/icon_search.png" />
+            </div>
+            <div class="content-del">
+                <p>{{Meeting.SetAccredit}}</p>
+                <img class="avatar" src="../images/avatar_default.png" />
+                <div>
+                    <a id="accreditSetting">{{Meeting.CancelAccredit}}</a>
+                    <span class="name"></span>
+                    <span class="department"></span>
+                    <span class="position"></span>
+
+                </div>
+            </div>
+            <h1 class="bottom-line"></h1>
+        </div>
+        <div class="popup-panel-result">
+            <a class="cancel">{{Common.Cancel}}</a>
+            <a class="finish">{{Common.Success}}</a>
+        </div>
+    </div>
+</body>
+</html>

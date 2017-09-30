@@ -1,0 +1,50 @@
+﻿Build started 2016/6/15 15:13:25.
+     1>Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\common\build\common.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\include\ /I..\include\common /I..\src\modp_base64 /I..\third_party\zlib\include /I"D:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D COMMON_EXPORTS /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\dllmain.cpp ..\src\modp_base64\modp_b64.cc ..\src\ShellExt.cpp ..\src\StringConvert.cpp ..\src\ThreadMessage.cpp ..\src\ZipWrapper.cpp
+         ZipWrapper.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\third_party\common\src\zipwrapper.cpp(84): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\third_party\common\src\zipwrapper.cpp(122): warning C4996: '_splitpath': This function or variable may be unsafe. Consider using _splitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(854) : see declaration of '_splitpath'
+         ThreadMessage.cpp
+         StringConvert.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\third_party\common\src\stringconvert.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+         ShellExt.cpp
+         modp_b64.cc
+         dllmain.cpp
+         Generating Code...
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\include\ /I..\include\common /I..\src\modp_base64 /I..\third_party\zlib\include /I"D:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D COMMON_EXPORTS /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\minizip\ioapi.c ..\src\minizip\iowin32.c ..\src\minizip\mztools.c ..\src\minizip\unzip.c ..\src\minizip\zip.c
+         zip.c
+         unzip.c
+         mztools.c
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\third_party\common\src\minizip\mztools.c(38): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\third_party\common\src\minizip\mztools.c(39): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\third_party\common\src\minizip\mztools.c(40): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\third_party\common\src\minizip\mztools.c(247): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+         iowin32.c
+         ioapi.c
+         Generating Code...
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../lib/windows/Debug\common.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\third_party\zlib\lib\windows /LIBPATH:"D:\Program Files (x86)\Visual Leak Detector\lib\Win32" zlib_d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"../lib/windows/Debug\common.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"../lib/windows/Debug\common.lib" /MACHINE:X86 /DLL Debug\dllmain.obj
+         Debug\ioapi.obj
+         Debug\iowin32.obj
+         Debug\mztools.obj
+         Debug\unzip.obj
+         Debug\zip.obj
+         Debug\modp_b64.obj
+         Debug\ShellExt.obj
+         Debug\StringConvert.obj
+         Debug\ThreadMessage.obj
+         Debug\ZipWrapper.obj
+            Creating library ../lib/windows/Debug\common.lib and object ../lib/windows/Debug\common.exp
+         common.vcxproj -> E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\common\build\../lib/windows/Debug\common.dll
+     1>Done Building Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\common\build\common.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.33

@@ -1,0 +1,195 @@
+#ifndef CTANGMEETINGCLIENTCOMMONEXTERNALDEF
+#define CTANGMEETINGCLIENTCOMMONEXTERNALDEF
+
+//All of meeting data/string/command which will be used by 3rd-parter should be defined here -Loren
+#ifndef S_SUCCEED
+#define S_SUCCEED 200
+#endif
+#ifndef E_FAIL
+#define E_FAIL 0x82010196L
+#endif
+#ifndef S_OK
+#define S_OK  0
+#endif
+#ifndef S_FALSE
+#define S_FALSE                             0x1L
+#endif
+
+//TangConfig
+
+//#define GNETTANGCONFIG_SETRUNNINGMODE          "GNetTangConfig_SetRunningMode"
+//#define GNETTANGCONFIG_SETAPPLOGPATH           "GNetTangConfig_SetAppLogPath"
+//#define GNETTANGCONFIG_SETTHREADTYPE           "GNetTangConfig_SetThreadType" //线程模式，默认0，一般不需要调用
+
+
+//Tang Conference
+enum TANG_LEFTCONF_REASON
+{
+    LEFTCONFREASON_UNKNOWN          =0,
+    LEFTCONFREASON_SELFLEFT,
+    LEFTCONFREASON_HOSTENDMEETING,
+    LEFTCONFREASON_HOSTKICKOUT,
+    LEFTCONFREASON_SERVERSTOPPED,
+    LEFTCONFREASON_NETWORKDISCONNECT
+};
+
+enum TANG_JOINCONF_STATUS
+{
+    JOINCONFSTATUS_SUCCEEDED = 0,
+    JOINCONFSTATUS_RECONNECTSUCCEEDED,
+    JOINCONFSTATUS_NETWORKCONNECTFAILED,
+    JOINCONFSTATUS_NETWORKAUTHFAILED,
+    JOINCONFSTATUS_GETCONFINFOFAILED,
+    JOINCONFSTATUS_GETUSERINFOFAILED,
+};
+
+enum TANG_SESSION_NETWORKQUALITY
+{
+    NETWORKQUALITY_VERYGOOD = 0,
+    NETWORKQUALITY_GOOD,
+    NETWORKQUALITY_NORMAL,
+    NETWORKQUALITY_BAD,
+    NETWORKQUALITY_VERYBAD,
+};
+
+//enum TANG_CONF_STATUS
+//{
+//    CONFSTATUS_UNINITIALIZE =0,
+//    CONFSTATUS_NOTRUNNING,
+//    CONFSTATUS_RUNNINGSUCCEEDED,
+//    CONFSTATUS_RUNNINGFAILED
+//};
+
+typedef enum
+{
+    TMC_SESSIONTYPE_NONE = 0,
+    TMC_SESSIONTYPE_CONF,
+    TMC_SESSIONTYPE_AUDIO,
+    TMC_SESSIONTYPE_VIDEO,
+    TMC_SESSIONTYPE_WHITEBOARD,
+    TMC_SESSIONTYPE_DOCUMENT,
+    TMC_SESSIONTYPE_DESKTOP,
+    TMC_SESSIONTYPE_CHAT,
+    TMC_SESSIONTYPE_ALL
+}GNetTangSessionType;
+
+
+//Error define
+//Common Error Define
+#define TANGSDKERROR_COMMONERROR_MAXINDEX 512
+#define TANGSDKERROR_COMMON_CHANNELAUTH_FAILED  1
+//Conference Error Define
+
+#define TANGSDKERROR_CONF_BASEERROR                 (0x1000000+TANGSDKERROR_COMMONERROR_MAXINDEX)
+#define TANGSDKERROR_CONF_KICKOUTUSER_FAILED        TANGSDKERROR_CONF_BASEERROR+1
+#define TANGSDKERROR_CONF_LOCKCONFROOM_FAILED       TANGSDKERROR_CONF_BASEERROR+2
+#define TANGSDKERROR_CONF_UNLOCKCONFROOM_FAILED     TANGSDKERROR_CONF_BASEERROR+3
+#define TANGSDKERROR_CONF_ADDROLE_FAILED            TANGSDKERROR_CONF_BASEERROR+4
+#define TANGSDKERROR_CONF_SWITCHUSERROLE_FAILED     TANGSDKERROR_CONF_BASEERROR+5
+
+#define TANGSDKERROR_AUDIO_BASEERROR                (0x2000000+TANGSDKERROR_COMMONERROR_MAXINDEX)
+#define TANGSDKERROR_VIDEO_BASEERROR                (0x3000000+TANGSDKERROR_COMMONERROR_MAXINDEX)
+#define TANGSDKERROR_WB_BASEERROR                   (0x4000000+TANGSDKERROR_COMMONERROR_MAXINDEX)
+#define TANGSDKERROR_DOC_BASEERROR                  (0x5000000+TANGSDKERROR_COMMONERROR_MAXINDEX)
+#define TANGSDKERROR_DESKTOP_BASEERROR              (0x6000000+TANGSDKERROR_COMMONERROR_MAXINDEX)
+#define TANGSDKERROR_CHAT_BASEERROR                 (0x7000000+TANGSDKERROR_COMMONERROR_MAXINDEX)
+#define TANGSDKERROR__BASEERROR                     (0x8000000+TANGSDKERROR_COMMONERROR_MAXINDEX)
+
+
+
+//#define TANGUSERTYPE_DATAUSER 		0 // 缃戠粶鐢ㄦ埛
+//#define TANGUSERTYPE_PHONEUSER		1 // 绾數璇濈敤鎴?
+//#define TNAGUSERROLE_NONE           0
+//#define TANGUSERROLE_GUEST          1
+//#define TANGUSERROLE_PRESENTER      2
+//#define TANGUSERROLE_HOST           4
+//#define TANGUSERROLE_PRESENTERHOST  (TANGUSERROLE_PRESENTER | TANGUSERROLE_HOST)
+
+
+//#define TANGUSERAUDIOSTATUS_NONE		    0
+//#define TANGUSERAUDIOSTATUS_VOIPUNMUTE		1
+//#define TANGUSERAUDIOSTATUS_VOIPMUTEBYSELF	2
+//#define TANGUSERAUDIOSTATUS_VOIPMUTEBYHOST	3
+//#define TANGUSERAUDIOSTATUS_PSTNUNMUTE		4
+//#define TANGUSERAUDIOSTATUS_PSTNMUTEBYSELF	5
+//#define TANGUSERAUDIOSTATUS_PSTNMUTEBYHOST	6
+//#define TANGUSERAUDIOSTATUS_PSTNCALLING 	7
+
+//enum TANAGERRORTYPE
+//{
+//    TANGERROR_NONE =0,
+//    TANGERROR_NETWORK,
+//    TANGERROR_LOGIN,
+//    TANGERROR_IMMEETING
+//};
+
+//#define MAX_SITE_LEN  				50
+//#define MAX_USERNAME_LEN 			50
+//#define MAX_EMAIL_LEN 			    50
+//#define MAX_USERPASSWORD_LEN 		20
+//#define MAX_PHONENUMBER_LEN         20
+//#define MAX_MEETINGKEY_LEN 			20
+
+////Tang Meeting Client
+//#define  TMC_PRODUCT_ID             "productId"
+//#define  TMC_APP_ID                 "appId"
+//#define  TMC_CLIENT_TYPE            "clientType"
+
+//enum TANG_CLIENT_TYPE
+//{
+//    TANGCLIENTTYPE_PC           = 2, //电脑
+//    TANGCLIENTTYPE_PUREPHONE    = 3, //纯电话用户
+//    TANGCLIENTTYPE_MOBILE       = 6	//手机app用户
+//};
+
+//var loginPara =       '{"userName": "hezhang.xi@quanshi.com","password":"11111111","countryCode":"","productId":"6000","appId":"6","clientType":6}';
+//var joinMeetingPara = '{"name":"hezhang.xi@quanshi.com","tempUserId":"","pcode":"2014204824","appId":"6","clientType":6}';
+
+#define  TMC_ACCOUNT_LOGINTYPE	  	"loginType"
+#define  TMC_ACCOUNT_SITE			"site"
+#define  TMC_ACCOUNT_ACCOUNTID 		"accountID"
+#define  TMC_ACCOUNT_USERNAME 		"userName"
+#define  TMC_ACCOUNT_EMAIL 			"email"
+#define  TMC_ACCOUNT_MOBILEPHONE 	"mobilePhone"
+#define  TMC_ACCOUNT_PASSWORD 		"aPassword"
+#define  TMC_ACCOUNT_COUNTRYCODE    "countryCode"
+
+#define  TMC_MEETING_PASSWORD 		"mPassword"
+
+#define  TMC_DATATYPE_USERROLE      "userrole"
+#define  TMC_DATATYPE_USERDATA      "userdata"
+#define  TMC_DATATYPE_USERLIST  	"userList"
+#define  TMC_DATATYPE_PHONEUSERDATA "phoneUserData"
+#define  TMC_DATATYPE_PHONEUSERLIST "phoneUserList"
+
+#define  TMC_DATATYPE_DOCENTITY             "DocEntity"
+#define  TMC_DATATYPE_DOCENTITIES           "DocEntities"
+#define  TMC_DATATYPE_UPLOADTASKENTITY      "UploadTaskEntity"
+#define  TMC_DATATYPE_UPLOADTASKENTITIES    "UploadTaskEntities"
+#define  TMC_DOC_NAME_NODE_NAME             "DocName"
+#define  TMC_SCALING_NODE_NAME              "Scaling"
+#define  TMC_SHARE_USER_ID_NODE_NAME        "ShareUserID"
+#define  TMC_CURRENT_PAGE_ID_NODE_NAME      "CurrentPageID"
+#define  TMC_HORIZON_POS                    "HorizonPos"
+#define  TMC_VERTICAL_POS                   "VerticalPos"
+#define  TMC_PAGE_COUNT_NODE_NAME           "PageCount"
+#define  TMC_READY_PAGE_COUNT_NODE_NAME     "ReadyPageCount"
+#define	 TMC_SERVICE_STATUS_NODE_NAME       "Status"
+#define  TMC_RECORDER_STATUS_NODE_NAME      "recording"
+
+// whiteboard property
+#define  TMC_WHITEBOARD_INSTANCE_LIST       "instances"
+
+//desktop property name
+#define  TMC_DESKTOP_SERVICE_STATUS    "serviceStatus"
+#define  TMC_DESKTOP_RECORD_STATUS     "recording"
+#define  TMC_DESKTOP_SHARE_USER_ID     "shareUserID"
+#define  TMC_DESKTOP_WIDTH             "width"
+#define  TMC_DESKTOP_HEIGHT            "height"
+#define  TMC_DESKTOP_SHOW_VIEWER       "showViewer"
+
+#define PROP_PHONE_ISBAND			"isBind"
+#define PROP_ISSERVICEREADY         "isServiceReady" // bool; 0, not;1, yes, can call current service API now.
+
+#endif // CTANGMEETINGCLIENTCOMMONEXTERNALDEF
+

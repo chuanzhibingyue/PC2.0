@@ -1,0 +1,116 @@
+﻿Build started 2016/6/8 14:06:17.
+     1>Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\CatchScreen\CatchScreen.vcxproj" on node 5 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\DuiLib\DuiLib /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D CATCHSCREEDLL_EXPORTS /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Release/CatchScreen.pch" /Fo".\Release/" /Fd".\Release/vc120.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\DuiLib\DuiLib /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D CATCHSCREEDLL_EXPORTS /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm- /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Release/CatchScreen.pch" /Fo".\Release/" /Fd".\Release/vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BaseNewButton.cpp CatchScreen.cpp CatchScreenDlg.cpp CatchScreenDll.cpp ColorListBarFrameWnd.cpp CommonFrameWnd.cpp Curve.cpp EditText.cpp Ellipse.cpp FontCrtlBarFrameWnd.cpp FontSizeListBarFrameWnd.cpp InputEdit.cpp Line.cpp Rectangle.cpp Shape.cpp ShapeCtrlBarFrameWnd.cpp BaseTracker.cpp CatchScreenBarFrameWnd.cpp WinSpy.cpp
+         BaseNewButton.cpp
+         CatchScreen.cpp
+         CatchScreenDlg.cpp
+     1>CatchScreenDlg.cpp(402): warning C4244: 'argument' : conversion from 'LONG' to 'Gdiplus::REAL', possible loss of data
+     1>CatchScreenDlg.cpp(409): warning C4244: 'argument' : conversion from 'Gdiplus::REAL' to 'int', possible loss of data
+     1>CatchScreenDlg.cpp(1000): warning C4305: 'argument' : truncation from 'int' to 'bool'
+     1>CatchScreenDlg.cpp(1011): warning C4305: 'argument' : truncation from 'int' to 'bool'
+     1>CatchScreenDlg.cpp(1021): warning C4305: 'argument' : truncation from 'int' to 'bool'
+     1>CatchScreenDlg.cpp(1029): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>CatchScreenDlg.cpp(1042): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+         CatchScreenDll.cpp
+         ColorListBarFrameWnd.cpp
+         CommonFrameWnd.cpp
+         Curve.cpp
+         EditText.cpp
+         Ellipse.cpp
+         FontCrtlBarFrameWnd.cpp
+         FontSizeListBarFrameWnd.cpp
+     1>FontSizeListBarFrameWnd.cpp(180): warning C4244: 'argument' : conversion from 'LONG' to 'Gdiplus::REAL', possible loss of data
+     1>FontSizeListBarFrameWnd.cpp(188): warning C4244: 'argument' : conversion from 'UINT' to 'Gdiplus::REAL', possible loss of data
+     1>FontSizeListBarFrameWnd.cpp(188): warning C4244: 'argument' : conversion from 'LONG' to 'Gdiplus::REAL', possible loss of data
+         InputEdit.cpp
+     1>InputEdit.cpp(182): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(294) : see declaration of 'wcscpy'
+         Line.cpp
+         Rectangle.cpp
+         Shape.cpp
+         ShapeCtrlBarFrameWnd.cpp
+         BaseTracker.cpp
+         CatchScreenBarFrameWnd.cpp
+         WinSpy.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\bin\rc.exe /D NDEBUG /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /nologo /fo"Release\CatchScreen\CatchScreen.res" CatchScreen.rc 
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\mywork\client\PC2.0TRUNK\PC2.0\build\Release\capturescreen.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\DuiLib\lib DuiLib.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"E:\mywork\client\PC2.0TRUNK\PC2.0\build\Release\capturescreen.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"lib\capturescreen.lib" /MACHINE:X86 /SAFESEH /DLL Release\CatchScreen\CatchScreen.res
+         .\Release/BaseNewButton.obj
+         .\Release/CatchScreen.obj
+         .\Release/CatchScreenDlg.obj
+         .\Release/CatchScreenDll.obj
+         .\Release/ColorListBarFrameWnd.obj
+         .\Release/CommonFrameWnd.obj
+         .\Release/Curve.obj
+         .\Release/EditText.obj
+         .\Release/Ellipse.obj
+         .\Release/FontCrtlBarFrameWnd.obj
+         .\Release/FontSizeListBarFrameWnd.obj
+         .\Release/InputEdit.obj
+         .\Release/Line.obj
+         .\Release/Rectangle.obj
+         .\Release/Shape.obj
+         .\Release/ShapeCtrlBarFrameWnd.obj
+         .\Release/StdAfx.obj
+         .\Release/BaseTracker.obj
+         .\Release/CatchScreenBarFrameWnd.obj
+         .\Release/WinSpy.obj
+            Creating library lib\capturescreen.lib and object lib\capturescreen.exp
+         CatchScreen.vcxproj -> E:\mywork\client\PC2.0TRUNK\PC2.0\build\Release\capturescreen.dll
+       PostBuildEvent:
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Release\\skin
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Release\\skin
+         copy  ..\DuiLib\lib\DuiLib.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Release\\DuiLib.dll
+         copy  .\skin\*.* E:\mywork\client\PC2.0TRUNK\PC2.0\build\Release\skin\  /Y
+         :VCEnd
+         目录不是空的。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Release\\skin 已经存在。
+         已复制         1 个文件。
+         .\skin\arrow_not_selected.png
+         .\skin\arrow_selected.png
+         .\skin\cancel_not_selected.png
+         .\skin\cancel_selected.png
+         .\skin\circle_not_selected.png
+         .\skin\circle_selected.png
+         .\skin\ColorList.xml
+         .\skin\FontColorList.xml
+         .\skin\FontCrtl.xml
+         .\skin\FontSizeList.xml
+         .\skin\font_not_selected.png
+         .\skin\font_selected.png
+         .\skin\font_size_selected.png
+         .\skin\font_size_to_select.png
+         .\skin\large_not_selected.png
+         .\skin\large_selected.png
+         .\skin\medium_not_selected.png
+         .\skin\medium_selected.png
+         .\skin\ok_not_selected.png
+         .\skin\ok_selected.png
+         .\skin\pen_not_selected.png
+         .\skin\pen_selected.png
+         .\skin\rollback_not_selected.png
+         .\skin\rollback_selected.png
+         .\skin\save_not_selected.png
+         .\skin\save_selected.png
+         .\skin\ShapeCrtl.xml
+         .\skin\shape_rect_hover.png
+         .\skin\shape_rect_normal.png
+         .\skin\size_rect_hover.png
+         .\skin\size_rect_normal.png
+         .\skin\skin.xml
+         .\skin\small_not_selected.png
+         .\skin\small_selected.png.png
+         .\skin\square_not_selected.png
+         .\skin\square_selected.png
+         已复制        36 个文件。
+     1>Done Building Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\CatchScreen\CatchScreen.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:23.69

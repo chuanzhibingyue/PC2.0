@@ -1,0 +1,484 @@
+.Hparent {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 100%;
+    z-index: 97;
+    opacity: 0;
+}
+
+.rootHistory {
+    position: absolute;
+    top: 80px;
+    left: 460px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 98;
+    border: solid 1px #f5f5f5;
+    background-color: #fff;
+    min-width: 400px;
+    min-height: 500px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.init_headtitle {
+    width: 100%;
+    height: 30px;
+    background-color: #ededed;
+}
+
+.init_headtitle .back {
+    display: none;
+}
+
+.headtitle {
+    width: 100%;
+    height: 30px;
+    background-color: #ededed;
+}
+
+.headtitle .back {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    background: url(../images/message/historyback.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+
+.rootHistory .title {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #173553;
+}
+
+.rootHistory .searchbar {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #ededed;
+}
+
+.rootHistory .searchbarIO {
+    float: right;
+    margin-right: 20px;
+    width: calc(100% - 160px);
+    text-align: right;
+}
+
+.rootHistory input {
+    min-width: 160px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: #f7f7f7;
+    border: solid 1px #dadada;
+    padding-left: 10px;
+    margin-top: 8px;
+    line-height: 20px;
+    width: calc(100% - 90px);
+}
+.rootHistory input:hover {
+    background-color: white;
+}
+.rootHistory input:focus {
+    background-color: white;
+    border-color: #ffcc00 !important;
+}
+.rootHistory .delinput
+{
+    width: 8px;
+    height: 8px;
+    padding: 6px;
+    background: url("../images/contacts/search_delete.png") center center no-repeat;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 10px;
+    margin-left: -20px;
+}
+.rootHistory .delinput:hover {
+    background: url("../images/contacts/search_delete_hover.png") center center no-repeat;
+}
+
+.rootHistory .btn {
+    width: 50px;
+    height: 23px;
+    border-radius: 2px;
+    background-color: #4f667b;
+    display: inline-block;
+    text-align: center;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 23px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.rootHistory .btn:hover {
+    background-color: #607588;
+}
+
+.rootHistory .btn:active{
+    background-color: #465b6e;
+}
+
+.rootHistory .list {
+    overflow: auto;
+    height: calc(100% - 70px);
+    overflow-x: hidden;
+    margin-right: 4px;
+    background-color: #f8f8f8;
+}
+
+.rootHistory .list .more-msg-loading{
+    padding-left: 0;
+}
+
+    /*  keywordText  in serach list and check nexthistroyResult  */
+.history-list .me .change .message-info a{color: #EFEFEF;text-decoration: underline;}
+.history-list .me .change .message-info a:link{color: #1576f7 ; text-decoration:underline;}
+.history-list .me .change .message-info a:visited{color: #1576f7; text-decoration:underline;}
+.history-list .me .change .message-info a:hover {color: #1576f7; text-decoration:underline;}
+.rootHistory .list .message-info .keywordText {
+    background: #ede90e;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #173553;
+    font-size: 14px;
+    font-weight: 100;
+    display: inline-block;
+}
+
+/* history message page  list style */
+.history-list .rows {
+    position: relative;
+    margin-left: 20px;
+    margin-right: 31px;
+    min-width: 350px;
+}
+
+.history-list .row {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 5px;
+    clear: both;
+}
+
+.history-list .sys-row {
+    text-align: center;
+    height: 20px;
+}
+
+.history-list .sys-row span {
+    background-color: #dadada;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #ffffff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.history-list .row-user {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 2px;
+    left: 0px;
+    cursor: default;
+    border-radius: 50%;
+}
+
+.history-list .row-info {
+    position: relative;
+    top: 1px;
+    margin-left: 45px;
+    float: left;
+}
+
+.history-list .message-head {
+    margin-bottom: 6px;
+}
+
+.history-list .row-info .user-name {
+    color: #777;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.history-list .row-info .message-time {
+    color: #999;
+    font-size: 10px;
+    margin-left: 8px;
+}
+
+.history-list .message-body:before {
+    top: 36px;
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 7px;
+    background-color: white;
+    border-radius: 1px;
+    transform: skewX(53deg);
+    left: -6px;
+    border-top: 1px solid #ededed;
+    border-left: 1px solid #C3B7B7;
+}
+
+.history-list .message-body {
+    background-color: white;
+    border-radius: 8px;
+    margin-right: 85px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.history-list .message-info {
+    color: #173553;
+    font-size: 14px;
+    line-height: 20px;
+    word-break: break-word;
+    word-wrap: break-word;
+    -webkit-user-select: text;
+}
+
+.history-list .message-img img {
+    max-height: 200px;
+    max-width: 200px;
+    width: auto;
+    min-width: 20px;
+    min-height: 20px;
+    cursor: pointer;
+}
+
+.history-list .message-file {
+    width: 335px;
+    height: 60px;
+    max-width: 295px; /*335px*/
+    min-width: 260px;
+}
+
+.history-list .message-file .filepic {
+    float: left;
+    width: 55px;
+}
+
+.history-list .message-file img {
+    width: 48px;
+    height: 56px;
+}
+
+.history-list .message-file .filename-end {
+    position: relative;
+    top: -60px;
+    left: 2px;
+    font-size: 10px;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-transform: scaleY(1.3);
+    width: 40px;
+    display: block;
+}
+
+.history-list .message-file .fileinfo {
+    margin-left: 55px;
+}
+
+.history-list .message-file .filename {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #3b4f61;
+}
+
+.history-list .message-file .filesize {
+    font-size: 12px;
+    color: #71AFE2;
+}
+
+.history-list .message-file .fileop {
+    margin-top: 3px;
+    margin-left: 55px;
+    text-align: right;
+}
+
+.history-list .message-file .fileop span {
+    display: inline-block;
+    width: 1px;
+    background: #dadada;
+    height: 12px;
+    margin: 5px 7px 0px 7px;
+}
+
+.history-list .message-file .fileop a {
+    font-size: 12px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #71AEE2;
+}
+
+.rootHistory .nextresult {
+    display: none;
+    position: absolute;
+    /*float: right;*/
+    right: 0px;
+    width: 72px;
+    line-height: 20px;
+    height: 20px;
+    font-size: 12px;
+    color: #777777;
+    text-decoration: underline;
+    cursor: pointer;
+    padding-left: 20px;
+    top: 38px;
+}
+
+.message-body:hover .nextresult{
+    display: inline-block;
+}
+
+.rootHistory .me .nextresult:hover {
+    opacity: 1;
+}
+
+.rootHistory .nextresult:hover {
+    opacity: 1;
+}
+
+.rootHistory .nextresult span {
+    /*position: relative;*/
+    /*top: 60%;*/
+}
+
+.rootHistory .me .nextresult {
+    /*display: none;*/
+    position: absolute;
+    float: left;
+    left: -85px;
+    padding-right: 20px;
+    width: 72px;
+    line-height: 20px;
+    height: 20px;
+    font-size: 12px;
+    color: #777777;
+    padding-left: 0;
+}
+
+.rootHistory  .nextresult:hover{
+    color: #173553;
+}
+
+.history-list .me {
+    float: right;
+    margin-top: 6px;
+    margin-bottom: 5px;
+    clear: both;
+}
+
+.history-list .me .message-head {
+    margin-bottom: 6px;
+    text-align: right;
+}
+
+.history-list .me .message-body {
+    background-color: #f7f7f7;
+    /*71aee2*/
+    border-radius: 8px;
+    margin-right: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.history-list .me .message-body:before {
+    display: none;
+}
+
+.history-list .me .message-body:after {
+    position: absolute;
+    right: -6px;
+    top: 36px;
+    content: "";
+    width: 10px;
+    height: 8px;
+    background-color: #f7f7f7;
+    border-radius: 1px;
+    transform: skewX(-50deg);
+    border-top: 1px solid #ededed;
+    border-right: 1px solid #C3B7B7;
+}
+
+/*change : when is not file or img Add this style */
+.history-list .me .change {
+    background-color: #71aee2;
+}
+
+.history-list .me .change .message-info {
+    /*font-weight: bold;*/
+    /*max-width: 230px;*/
+    color: #fff;
+    word-break: break-word;
+    -webkit-user-select: text;
+}
+
+.history-list .me .change .message-info img{vertical-align: middle; margin-top: -2px;}
+.history-list .bgImg
+{
+    min-width: 66px;
+    min-height: 52px;
+    background: url(../images/messagebox/placeImg.gif) no-repeat  ;
+}
+.history-list .me .change:after {
+    background-color: #71aee2;
+}
+
+.history-list .me .row-user {
+    display: none;
+}
+
+.history-list .me .row-info {
+    position: relative;
+    top: 1px;
+    float: right;
+    margin-left: 85px;
+}
+
+.history-timepicker {
+    margin-left: 10px;
+    overflow: hidden;
+    max-width: 120px;
+    float: left;
+}
+
+.history-timepicker input.YMDInputBox {
+    min-width: 90px;
+    margin-top: 5px;
+    border: 1px solid #dadada;
+}
+
+.history-timepicker .pickAdate-views .week{
+    color: #dadada;
+}
+.history-list .op-progress{
+    position: absolute;
+    width: 205px;
+    height: 5px;
+    border: 0;
+    left:65px;
+    bottom: 23px;
+}
+progress::-webkit-progress-value  { background: #3B4F61; }

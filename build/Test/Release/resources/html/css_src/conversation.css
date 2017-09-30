@@ -1,0 +1,270 @@
+.sub-menu-panel .conversation-search-container {
+    padding-top: 11px;
+    height: 38px;
+    border-bottom: 1px solid #D1D1D1;
+}
+.sub-menu-panel .conversation-list-container{
+    position: absolute;
+    top: 50px;
+    bottom: 3px;
+    width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.sub-menu-panel .sub-menu-panel-body{
+    overflow: hidden;
+}
+.sub-menu-panel .conversation-loading-more-icon{
+    position: fixed;
+    bottom: 40px;
+    margin-left: 140px;
+    width: 30px;
+    height: 30px;
+    background: url("../images/loading_big.png");
+    display: none;
+    background-size: 30px;
+    -webkit-animation: common-loading 1s infinite linear;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item{
+    vertical-align: middle;
+    position: relative;
+    border-bottom: 1px solid #e1e1e1;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item.item-top-index:before{
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-right: 14px solid transparent;
+    border-top: 14px solid #ffcc00;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .avatar-node{
+    margin-right: 18px;
+    height: 40px;
+    width: 40px;
+    float: left;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .avatar-node .avatar{
+    width: 40px;
+    height: 40px;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .title{
+    display: inline-block;
+    max-width: 140px !important;
+    /*float: left;*/
+    height: 18px;
+    font-size: 14px !important;
+    color: #000000 !important;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .title.cancelled{
+    text-decoration: line-through;
+    color: #7d7d7e !important;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .avatar-node img.cancelled{
+    -webkit-filter: grayscale(1);
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .message{
+    max-width: 170px;
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    color: #444444;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .message .in-call{
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 2px;
+    background-image: url("../images/call/in_call.png");
+    background-size: 14px 14px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .message img{
+    max-height: 18px;
+    max-width: 18px;
+    vertical-align: top;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .draft,
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .fail,
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .at-you{
+    color: red;
+    margin-right: 2px;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .msg-time{
+    position: absolute;
+    top: 15px;
+    right: 11px;
+    font-size: 12px;
+    color: #777777;
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .msg-num{
+    float: right;
+    border-radius: 9px;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#f96868), to(#d54a4a));
+    font-size: 12px;
+    line-height: 18px;
+    height: 18px;
+    text-align: center;
+    margin-right: 14px;
+    color: white;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .msg-num.single{
+    width: 18px;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .msg-num.ten{
+    width: 24px;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .msg-num.hundred{
+    width: 27px;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .msg-num.hide{
+    display: none;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .msg-num.meeting{
+    margin-top: 4px;
+    height: 10px;
+    width: 10px;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .meeting-icon{
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+    background: url("../images/conversation/icon_normal_meeting_normal.png") no-repeat;
+    background-size: cover;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .meeting-icon.cloud{
+    width: 43px;
+    height: 45px;
+    line-height: 36px;
+    text-align: left;
+    background: url("../images/conversation/icon_cloud_meeting_normal.png") no-repeat;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .meeting-icon.cancelled{
+    background: url("../images/conversation/icon_normal_meeting_cancelled.png") no-repeat;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .meeting-icon.cloud.cancelled{
+    /*width: 43px;*/
+    /*height: 45px;*/
+    background: url("../images/conversation/icon_cloud_meeting_cancelled.png") no-repeat;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .meeting-icon.cloud .cloud-time{
+    margin-left: 3px;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .meeting-icon.cloud .cloud-day{
+    margin-left: 6px;
+}
+.sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .meeting-icon.cloud .cloud-month{
+    margin-left: 1px;
+}
+.conversation-loading-container{
+    position: fixed;
+    width: 320px;
+    height: 32px;
+    top: 200px;
+}
+.conversation-loading {
+    width: 140px;
+    height: 32px;
+    margin: 0 auto;
+}
+
+/* Initial state */
+.conversation-loading-bar {
+    background-color: #d4d4d4;
+    float: left;
+    margin-right: 6px;
+    margin-top: 10px;
+    width: 6px;
+    height: 12px;
+
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: loading-bar;
+}
+
+.conversation-loading .conversation-loading-bar:last-child {
+    margin-right: 0;
+}
+
+.conversation-loading .conversation-loading-bar:nth-child(2) {
+    animation-delay: 0.15s;
+}
+.conversation-loading .conversation-loading-bar:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.conversation-loading .conversation-loading-bar:nth-child(4) {
+    animation-delay: 0.45s;
+}
+.conversation-loading .conversation-loading-bar:nth-child(5) {
+    animation-delay: 0.6s;
+}
+.conversation-loading .conversation-loading-bar:nth-child(6) {
+    animation-delay: 0.75s;
+}
+.conversation-loading .conversation-loading-bar:nth-child(7) {
+    animation-delay: 0.9s;
+}
+.conversation-loading .conversation-loading-bar:nth-child(8) {
+    animation-delay: 1.05s;
+}
+.conversation-loading .conversation-loading-bar:nth-child(9) {
+    animation-delay: 1.2s;
+}
+.conversation-loading .conversation-loading-bar:nth-child(10) {
+    animation-delay: 1.35s;
+}
+/* The actual animation */
+@keyframes loading-bar {
+    0% {
+    }
+    10% {
+        margin-top: 3px;
+        height: 26px;
+    }
+    20% {
+        margin-top: 2px;
+        height: 28px;
+    }
+    30% {
+        margin-top: 1px;
+        height: 30px;
+    }
+    40% {
+        margin-top: 2px;
+        height: 28px;
+    }
+    50% {
+        margin-top: 3px;
+        height: 26px;
+        background-color: #bbbbbb;
+    }
+    60% {
+        margin-top: 4px;
+        height: 24px;
+    }
+    70% {
+        margin-top: 5px;
+        height: 22px;
+    }
+    80% {
+        margin-top: 6px;
+        height: 20px;
+    }
+    90% {
+        margin-top: 7px;
+        height: 18px;
+    }
+    /* Missing frames will cause the extra delay */
+    100% {
+        margin-top: 8px;
+        height: 16px;
+    }
+}

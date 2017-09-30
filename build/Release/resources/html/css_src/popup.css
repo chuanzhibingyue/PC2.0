@@ -1,0 +1,273 @@
+@CHARSET "UTF-8";
+.popup {
+	font-size: 12px;
+}
+#layoutContainer{
+ 	/*position: absolute;*/
+    /*top: 1px;*/
+    /*left: 1px;*/
+    /*right: 1px;*/
+    /*bottom: 1px;*/
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+    /*border: 1px solid #666;*/
+    /*box-shadow: -10px 0 10px 10px #999;*/
+    /*box-shadow: -1px 0 4px -1px #999, *//*Left*/
+    /*1px 0 4px -1px #999,*//*Right*/
+    /*0 -1px 4px -1px #999,*//*Top*/
+    /*0 1px 4px -1px #999;*//*Bottom*/
+    /*border-radius: 2px;*/
+    background-color: #ffffff;
+    /*border-radius: 4px;*/
+}
+
+#layoutContainer .menu-panel-body.vertical .menu-panel-body-title {
+    height: 20px;
+    width: 100%;
+}
+
+.tool-icon-container {
+    position: absolute;
+    height: 20px;
+    top: -2px;
+    right: 1px;
+}
+
+#layoutContainer .menu-panel-body{
+    display: flex;
+    height: 100%;
+    flex-flow: row;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#layoutContainer .menu-panel-body.vertical{
+    display: flex;
+    flex-direction: column;
+}
+
+.popup .user-detail .user-detail-down{
+	top: 245px;
+}
+div.profile-wrapper {
+    padding: 0 20px 0 40px;
+    min-width: 440px;
+    overflow: hidden;
+    float:left;
+    margin-top: 20px;
+}
+
+.popup div.left-content {
+	margin-left: 0px;	
+}
+.popup .profile-avatar {
+    padding-left: 30px;
+}
+.profile-wrapper .left-content {
+	width: 230px;
+}
+
+.profile-display-name {   
+    color: #3b4f61;
+    font-size: 18px;    
+}
+
+.profile-position {  
+    color: #999999;
+    font-size: 12px;
+}
+
+.profile-department {    
+    color: #999999;
+    font-size: 12px;
+}
+
+.actions-bar {
+	padding: 0px;
+}
+
+.actions-bar figure {
+	margin: 12px 0px;
+	display: inline-block;
+	cursor: pointer;
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+.popup .user-up-splitter {	
+   	border-bottom: 1px solid #f5f5f5;
+    margin: 0 10px 0 10px;
+    position: absolute;
+    top: 220px;
+    width: 300px;
+    left: 0px;
+}
+
+.popup .self .user-up-splitter {	
+	padding-top: 120px; 
+}
+
+.popup .social {	
+	padding: 5px 0px 5px 30px;
+    margin: 0 10px;
+}
+
+.social .field {
+    margin-left: 0px;
+}
+
+.social .label{
+    padding-left: 0px;
+}
+
+.popup .social .social-right {
+    padding-left: 230px;
+}
+
+.label {
+    /*float: left;*/
+    padding-left: 40px;
+    padding-top: 15px;
+    color: #666;
+}
+
+.profile-detail {
+	padding: 10px 40px;
+	min-width: 440px;
+}
+
+.profile-detail .value {   
+    margin-left: 100px;
+}
+
+.field {
+	height: 12px;
+}
+
+.leader-list, .colleague-list {
+    list-style: none;
+    margin: 25px 0 14px 30px;
+}
+
+.leader-list li, .colleague-list li {
+    border-bottom: none;
+}
+
+.magic-lamp {
+    position: absolute;
+    top: 230px;
+    left: 0px;
+    right: 0px;
+    bottom: 72px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-right: 3px;
+}
+
+.groupProfile .rounded-corners {
+	position: absolute;
+    margin-top: -30px;
+    margin-left: 334px;
+    border: 1px solid #f5f5f5;
+    height: 30px;
+    width: 30px;
+    background: white;
+    cursor: pointer;
+}
+
+.profile-signature {
+	max-width:300px;
+}
+.meeting-figcaption {
+    background: url("../images/contacts/meeting.png") center center no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+
+.view-call-figcaption{
+    background: url("../images/contacts/call_hover.png") center center no-repeat;
+    height: 32px;
+    width: 33px;
+    left: 40px;
+}
+
+.social-figcaption {
+    background: url("../images/contacts/social-new.png") center center no-repeat;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 132px;
+    left: 85px;
+}
+.view-calendar{
+    position: absolute;
+    left: 23px;
+    top: 120px;
+}
+/*.send-message{*/
+    /*position: absolute;*/
+    /*left: 65px;*/
+    /*top: 120px;*/
+/*}*/
+.personal-data{
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    cursor: pointer;
+    color: #03111f;
+}
+.relationship-data{
+    position: absolute;
+    top: 200px;
+    left: 114px;
+    cursor: pointer;
+    color: #03111f;
+}
+.slip-line{
+    height: 3px;
+    background-color: #FFCC00;
+    border-radius: 3px;
+    width: 56px;
+    position: absolute;
+    left: 36px;
+    top: 228px;
+}
+.send-content {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+}
+.send-message,.send-call{
+    color: #ffffff;
+    border: none;
+    background-color: #4f667b;
+    width: 160px;
+    height: 32px;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    right: auto;
+    margin: 0 10px;
+}
+
+/*.send-call{*/
+    /*float:right;*/
+    /*right:55px;*/
+/*}*/
+.move{
+    height: 3px;
+    background-color: #FFCC00;
+    border-radius: 3px;
+    width: 56px;
+    position: absolute;
+    top: 228px;
+}
+.popup .contact-widget-container .left{
+    padding-left: 9px;
+}

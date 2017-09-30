@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{552c3e7c-eed2-421c-bdb1-856bae0d827b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{ae5c6604-9e09-4314-bd7d-b296e8fdc77f}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{6564d4e4-829b-4e68-91f7-2193b77629af}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseNewButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CatchScreenDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Curve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EditText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ellipse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Line.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CatchScreenBarFrameWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CatchScreenDll.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CatchScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeCtrlBarFrameWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorListBarFrameWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FontCrtlBarFrameWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FontSizeListBarFrameWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonFrameWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseTracker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinSpy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CatchScreen.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseNewButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseTracker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CatchScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CatchScreenDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Curve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EditText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ellipse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlEx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CatchScreenBarFrameWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CatchScreenDll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapeCtrlBarFrameWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorListBarFrameWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FontCrtlBarFrameWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FontSizeListBarFrameWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFrameWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WinSpy.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\arrow.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\arrow_dowm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\arrow_m.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back dd.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\back.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\backd.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\backward.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bitmap6.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\brush.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\brush_dowm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CatchScreen.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CatchScreen.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ecback.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ECCatchScree.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ecllipse_dowm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ellipse.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\esc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\final.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\font.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\font_dowm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_arrow.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_back.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_brush.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_cancel.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_ecllipse.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_font.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_ok.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_rect.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\menu_save.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\move_r.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ok.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rect.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rect_dowm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\save.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\size1_r.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\size2_r.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\size3_r.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\size4_r.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\光标.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="res\M05.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

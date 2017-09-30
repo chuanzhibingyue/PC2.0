@@ -1,0 +1,380 @@
+.chooseCallContacts{
+	width:601px;
+	height:620px;
+	background-color: white;
+    border-radius: 4px;
+}
+
+.chooseCallContacts a,.chooseCallContacts input:focus {
+    outline: none;
+}
+
+/**left side*/
+.chooseCallContacts .ContactsContainer{
+	float:left;
+	width:300px;
+	height:620px;
+	border-right:1px solid #ededed;
+}
+
+/**left search**/
+
+.chooseCallContacts .ContactsContainer .search-input-container {
+	width: 260px;
+    height: 24px;
+	line-height:24px;
+	margin:12px 20px;
+	background-color: #f5f5f5;
+	border-radius: 2px;
+	border:1px solid #ededed;
+	text-align:center;
+	cursor:pointer;
+    /*position: relative;
+     display: inline-block;
+   overflow: hidden;*/
+}
+
+.chooseCallContacts .ContactsContainer  .search-input-container .icon-search {
+    font-size: 12px;
+    padding-left: 5px;
+    color: #c3c3c3;
+}
+
+.chooseCallContacts .ContactsContainer  .search-input-container .search-input {
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    color: #3B4F61;
+	border: none;
+	background:none;
+}
+
+.chooseCallContacts .ContactsContainer  .search-input-container:hover{
+    background-color: white;
+}
+
+.chooseCallContacts .ContactsContainer  .search-input-container .icon-search {
+    color: #c3c3c3;
+    font-size: 12px;
+}
+
+.chooseCallContacts .ContactsContainer  .search-input-container .search-input {
+    border: none;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    width: 0px;
+    outline: none;
+    color: #173553;
+	background-color:none;
+    margin-left: 4px;
+}
+
+.chooseCallContacts .ContactsContainer  .search-input-container .icon-search-del {
+    width: 8px;
+    height: 8px;
+    padding: 6px;
+    background: url("../images/contacts/search_delete.png") center center no-repeat;
+    cursor: pointer;
+	display: none;
+    position: absolute;
+    top: 15px;
+	left:260px;
+}
+
+.chooseCallContacts .ContactsContainer  .search-input-container .icon-search-del:hover {
+    background: url("../images/contacts/search_delete_hover.png") center center no-repeat;
+}
+.chooseCallContacts .ContactsContainer  .search-input-container.focus{
+    text-align: inherit;
+    background-color: white;
+    cursor: default;
+}
+
+.chooseCallContacts .ContactsContainer  .search-input-container.focus .search-input{
+    /*transform: scale(1);*/
+    animation: showInput 0.5s;
+    width: 205px;
+}
+
+.chooseCallContacts .ContactsContainer  .search-input-container.focus .icon-search{
+    animation: goLeft 0.5s;
+    margin-left: 5px;
+}
+
+/**left content**/
+.chooseCallContacts .ContactsContainer .contacts-wrap{
+	width:300px;
+	border-top:1px solid #ededed;
+}
+
+.chooseCallContacts .ContactsContainer .contacts-wrap .contacts-container{
+	width:300px;
+	height:565px;
+	max-height: 565px;
+}
+
+.chooseCallContacts .ContactsContainer .contacts-wrap .contacts-container ul{
+	width:291px;
+	max-height: 555px;
+	padding:3px;
+	overflow-y: auto;
+    margin-top: 7px;
+}
+
+/**contacts-container loading*/
+.chooseCallContacts .ContactsContainer .contacts-wrap .contacts-container .contacts-loading, .chooseCallContacts .ContactsContainer .contacts-wrap .contacts-container .contacts-load-failed{
+    width: 100%;
+    text-align: center;
+    height: 50%;
+    padding-top: 50%;
+}
+.chooseCallContacts .ContactsContainer .contacts-wrap .contacts-container .contacts-loading{
+	opacity:0.5;
+}
+.chooseCallContacts .ContactsContainer .contacts-wrap .contacts-container .contacts-load-failed a{
+    color: #999;
+}
+
+/**search panel*/
+.chooseCallContacts .ContactsContainer .contacts-wrap .contacts-search-container{
+    position: absolute;
+    top: 40px;
+    background-color: white;
+    width: 290px;
+    box-shadow: 0 5px 15px #ccc;
+    padding: 5px;
+}
+
+.chooseCallContacts .ContactsContainer .contacts-wrap .contacts-search-container .contacts-searching{
+    min-height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.chooseCallContacts .ContactsContainer .contacts-wrap .contacts-search-container .contacts-search-noresult{
+    text-align: center;
+}
+
+.chooseCallContacts .ContactsContainer .contacts-wrap .contacts-search-container .contacts-search-noresult img{
+    max-width: 70%;
+}
+
+.chooseCallContacts .ContactsContainer .contacts-wrap .contacts-search-container .contacts-search-list{
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/**right side*/
+.chooseCallContacts .selectContainer{
+	float:right;
+	width:300px;
+	height:620px;
+}
+
+.chooseCallContacts .selectContainer .selectContainer_title{
+	width:300px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	font-size:14px;
+	color:#777777;
+}
+
+.chooseCallContacts .selectContainer .contacts-select_list{
+	width:300px;
+	height:496px;
+	border-top:1px solid #ededed;
+	border-bottom:1px solid #ededed;
+	background-color:#f7f7f7;
+	max-height: 496px;
+}
+
+.chooseCallContacts .selectContainer .contacts-select_list ul{
+    overflow-y: auto;
+    padding-top: 10px;
+    background-color: #fff;
+}
+
+.chooseCallContacts .selectContainer .footer{
+	width:300px;
+	height:50px;
+	text-align:center;
+	padding-top:20px;
+}
+
+
+
+/*animation**/
+@-webkit-keyframes showInput{
+    from{width: 0px;}
+    to{width: 205px;}
+}
+
+@-webkit-keyframes goLeft{
+    from{margin-left: 120px;}
+    to{margin-left: 5px;}
+}
+
+
+.callContacts_user_list li{
+    height: 28px;
+    line-height: 28px;
+    padding-left:30px;
+
+    /*padding: 5px 5px;*/
+	background-color:#fff;
+	/*border-bottom: 1px solid #f7f7f7;*/
+    overflow: hidden;
+}
+
+.callContacts_user_list li:hover{
+    background-color: #fffff3;
+    cursor: pointer;
+}
+
+.callContacts_user_list li .left, .callContacts_user_list li .center, .callContacts_user_list li .right{
+    /*margin-top: 5px;*/
+}
+
+.callContacts_user_list .checkbox-parent {
+	
+}
+
+.callContacts_user_list  input[type="checkbox"] {
+    display:none;
+}
+
+.callContacts_user_list  .left{
+    float: left;
+    margin-right: 9px;
+}
+
+.callContacts_user_list  .left img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 4px;
+}
+
+.callContacts_user_list  .center{
+    float: left;
+    display: inline-block;
+    width: 190px;
+    /*margin-left: 10px;*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*max-height: 40px;*/
+    /*word-break: break-all;*/
+    font-size:12px;
+}
+
+.callContacts_user_list  .center .name{
+    width: 36px;
+    float: left;
+    margin-right: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.callContacts_user_list  .center .depart{
+    font-size: 12px;
+    color: #999;
+    max-width: 158px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.callContacts_user_list  .right{
+    float: right;
+    /*height: 50px;*/
+    /*line-height: 50px;*/
+    margin-right: 10px;
+}
+
+.callContacts_user_list  input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    vertical-align:middle;
+    background:url(../images/contacts/unchecked.png) left top no-repeat;
+    cursor:pointer;
+    position: relative;
+}
+
+.callContacts_user_list  input[type="checkbox"]:checked + label span {
+    background:url(../images/contacts/checked.png) left top no-repeat;
+}
+
+.callContacts_user_list  input[type="checkbox"]:disabled + label span {
+    background:url(../images/contacts/checked_and_disabled.png) left top no-repeat;
+}
+
+/** ѡ���б�item��ʽ*/
+.selectContainer .callContacts_user_list label span {
+    display:none;
+    width:19px;
+    height:19px;
+    vertical-align:middle;
+    background:url(../images/contacts/remove.png) left top no-repeat;
+    cursor:pointer;
+    position: relative;
+}
+
+.selectContainer .callContacts_user_list li:hover{
+    cursor: default;
+}
+
+.selectContainer .callContacts_user_list li:hover label span{
+	display:inline-block;
+}
+.chooseCallContacts .panelloading{
+    position:absolute;
+    top:0;
+    width:601px;
+    height:420px;
+    border-radius: 4px;
+    text-align: center;
+    padding-top:200px;
+    display: none;
+}
+.chooseCallContacts .panelloading .loadingBox{
+    width:240px;
+    height:34px;
+    margin: 0 auto;
+    border-radius: 2px;
+    padding: 12px 30px;
+    background: #fff;
+    box-shadow: 0 6px 15px rgba(00,00,00, .3);
+}
+.chooseCallContacts .panelloading .loadingBox div{
+    float:left;
+}
+
+.chooseCallContacts .panelloading .loadingBox div p{
+    margin-left:10px;
+    height:34px;
+    line-height:34px;
+}
+.chooseCallContacts .contacts-container .left-title{
+    font-size: 12px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #173553;
+    margin-top:-7px;
+}
+.chooseCallContacts .contacts-container .left-title span{
+    border-bottom: 1px solid #ededed;
+    display: inline-block;
+    height: 2px;
+    width: 240px;
+    float: left;
+    margin-top: -16px;
+    margin-left: 28px;
+}

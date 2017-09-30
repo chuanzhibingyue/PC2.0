@@ -1,0 +1,55 @@
+<div class="gk-dialog-header">添加库成员</div>
+<div class="gk-dialog-content">
+    <span us-spinner ng-show="isLoading"></span>
+    <form class="form-horizontal" ng-show="!isLoading">
+        <div class="form-group">
+            <label class="pull-left control-label" translate>已选成员</label>
+            <div class="selected_list_wrapper pull-left">
+                <ul class="selected_list">
+                    <li class="add_member_btn" ng-click="openSelectMemberDialog()">
+                        <a  href="javascript:;">
+                            <i>+</i>
+                        </a>
+                        <div class="add_btn_text">点击添加</div>
+                    </li>
+                    <li ng-repeat="member in selectedMembers" class="member_item">
+                        <a href="javascript:;" ng-click="removeSelectedMember(member)" class="close">&times;</a>
+                        <div class="member_avatar">
+                            <avatar user-id="{{member.out_id}}" member-id="{{member.member_id}}" ent-id="{{entId}}"></avatar>
+                        </div>
+                        <div class="member_name" title="{{member.member_name}}">
+                            <span ng-bind="member.member_name"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'no_label':!showEnt && !showStoragePoint}">
+            <label class="pull-left control-label" translate>设置角色</label>
+            <div class="btn-group dropdown" uib-dropdown="" style="">
+                <button id="split-button" type="button" class="select_role_btn btn btn-default" ng-bind="role.name"></button>
+                <button type="button" class="btn btn-default dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                </button>
+                <ul class="role_list uib-dropdown-menu dropdown-menu" role="menu" aria-labelledby="split-button">
+                    <li ng-repeat="role in roles track by $index" class="role_item">
+                        <a href="javascript:;" ng-click="changeRole(role)" >
+                            <span class="role_name">{{role.name}}</span>
+                            <span class="role_description">权限: {{role.description ?role.description : '无' }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="gk-dialog-footer">
+    <button class="btn btn-default" ng-disabled="submitting" ng-click="cancel()">取消</button>
+    <button class="btn btn-primary" ng-disabled="submitting" style="position: relative" ng-click="addMember(selectedMembers,role)">
+        <span ng-show="!submitting">完成</span>
+        <span ng-show="submitting" us-spinner spinner-theme="smallBlack"></span>
+    </button>
+</div>
+<div class="overlay" ng-show="checking">
+    <span us-spinner></span>
+</div>

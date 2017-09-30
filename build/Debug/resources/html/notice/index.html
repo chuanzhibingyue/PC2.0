@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="./theme/css/main.css" />
+    <link type="text/css" rel="stylesheet" href="./theme/css/font-awesome.css" />
+    	<link type="text/css" rel="stylesheet" href="theme/css/icomoon.css" />
+    <link type="text/css" rel="stylesheet" href="thirdparty/cropper.min.css"/>
+    <title>Notice</title>
+    <script src="thirdparty/jquery-1.11.3.js"></script>
+  	<script src="thirdparty/jquery.caret.js"></script>
+    <script src="thirdparty/angular.min.js"></script>
+    <script src="thirdparty/angular-animate.min.js"></script>
+    <script src="thirdparty/angular-sanitize.min.js"></script>
+    <script src="thirdparty/angular-route.min.js"></script>
+    <script src="thirdparty/angular-translate.min.js"></script>
+    <script src="thirdparty/cropper.min.js"></script>
+    <script>
+      window.appModule = angular.module('appModule', ['ngSanitize','ngAnimate','ngRoute','pascalprecht.translate'])
+      .config(['$routeProvider', '$locationProvider',
+        function($routeProvider, $locationProvider) {
+          $routeProvider
+            .when('/', {
+              templateUrl: 'templates/accounts.html',
+              controller: 'AccountsCtrl'
+            })
+            .when('/manage',{
+                templateUrl:'templates/account_management.html',
+                controller:'AccountsCtrl'
+            })
+            .when('/notice',{
+              templateUrl:'templates/notice.html',
+              controller:'NoticeCtrl'
+            })
+            .when('/receiver',{
+              templateUrl:'templates/receiver.html',
+              controller:'ReceiverCtrl'
+            })
+            .otherwise({
+              redirect:"/"
+            });
+      }]);
+        // added by xue.bai_2 on 20160524 to fix bug: 广播页面无法隐藏当前登录人头像下的状态列表。
+        $(document).click(function(){
+            $(top.document).find('body').click();
+        });
+      </script>
+
+    <!-- replace start-->
+    <script src="js/app.js"></script>
+     <!-- 第一引入services -->
+    <script src="js/services/native.js"></script>
+    <script src="js/services/utils.js"></script>
+    <script src="js/services/notices.js"></script>
+    <script src="js/services/api.js"></script>
+    <script src="js/services/pages.js"></script>
+    <script src="js/services/selections.js"></script>
+    <script src="js/services/log.js"></script>
+    <!-- 第二入directives -->
+    <script src="js/directives/notice_alert.js"></script>
+    <script src="js/directives/notice_item.js"></script>
+    <script src="js/directives/raw_html.js"></script>
+    <script src="js/directives/scroll_container.js"></script>
+    <script src="js/directives/cropper.js"></script>
+    <script src="js/directives/spinner_loading.js"></script>
+    <script src="js/directives/notice_sections.js"></script>
+    <script src="js/directives/notice_image.js"></script>
+    <script src="js/directives/notice_item_context_menu.js"></script>
+    <script src="js/directives/help_panel.js"></script>
+    <script src="js/directives/notice_editor.js"></script>
+    <!-- filters -->
+    <script src="js/filters/text_length.js"></script>
+    <script src="js/filters/cover_image.js"></script>
+    <script src="js/filters/account_name.js"></script>
+    <!-- 第三入controllers -->
+    <script src="js/controllers/root_controller.js"></script>
+    <script src="js/controllers/notice_controller.js"></script>
+    <script src="js/controllers/accounts_controller.js"></script>
+    <script src="js/controllers/receiver_controller.js"></script>
+    <!-- replace end-->
+<body ng-controller = "RootCtrl">
+  <div ng-view></div>
+</body>
+</html>

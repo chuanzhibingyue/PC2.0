@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/contactAddEmail.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/contactAddEmail.js"></script>
+    <title></title>
+</head>
+<body>
+  <div class='contact-forward-email window-shadow'>
+      <div class="window-bar">
+          <span class="title">{{ChooseContacts.AddEmail}}</span>
+          <div class="tool-icon-container">
+              <span class="icon-close tool-icon"></span>
+          </div>
+      </div>
+      <div class='border'></div>
+      <div class="emailBody">
+          <input placeholder="{{ChooseContacts.EmailAddress}}" class='inputEmail'/>
+          <img src="../images/contacts/contact-email.png" class="emailAvatar"/>
+      </div>
+      <div class="email-save">
+          <a href="javascript:void(0);" class="cancel btn-uikit btn-gray">{{Common.Cancel}}</a>
+          <a href="javascript:void(0);" class="save btn-uikit btn-dark">{{Common.OK}}</a>
+      </div>
+  </div>
+</body>
+</html>

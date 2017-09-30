@@ -1,0 +1,47 @@
+.show-Minutes{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.show-Minutes .window-bar{
+    height: 40px;
+    line-height: 40px;
+    margin-left: 19px;
+    color:#3b4f61;
+    font-size: 14px;
+}
+.show-Minutes .title-Minutes{
+    margin-top: 21px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    height:40px;
+    border-bottom: 1px solid #adadad;
+}
+.show-Minutes .title-Minutes .userName{
+    color:#71aee2;
+}
+.show-Minutes .content-Minutes{
+    margin-left: 20px;
+    color:#555555;
+    font-size: 14px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    height: 70%;
+}
+.show-Minutes .content-Minutes .content{
+    border: none;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    margin-right: 10px;
+    resize: none;
+    outline:none;
+}
+.show-Minutes .edui-default .edui-editor-iframeholder{
+    margin-top: 0;
+}
+.show-Minutes .edui-default .edui-editor-toolbarbox{
+    display: none;
+}

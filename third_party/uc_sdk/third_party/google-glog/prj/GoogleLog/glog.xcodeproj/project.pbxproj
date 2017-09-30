@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38487AA31A78DFF50051093E /* GoogleLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38487AA21A78DFF50051093E /* GoogleLog.h */; };
+		38487AA51A78DFF50051093E /* GoogleLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 38487AA41A78DFF50051093E /* GoogleLog.m */; };
+		38487AAB1A78DFF50051093E /* libglog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38487A9F1A78DFF50051093E /* libglog.a */; };
+		38487AFB1A78E24E0051093E /* logging_striptest2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38487AF11A78E24E0051093E /* logging_striptest2.cc */; };
+		38487AFC1A78E24E0051093E /* logging_striptest10.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38487AF21A78E24E0051093E /* logging_striptest10.cc */; };
+		38487AFD1A78E24E0051093E /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38487AF31A78E24E0051093E /* logging.cc */; };
+		38487AFE1A78E24E0051093E /* raw_logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38487AF41A78E24E0051093E /* raw_logging.cc */; };
+		38487AFF1A78E24E0051093E /* signalhandler.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38487AF51A78E24E0051093E /* signalhandler.cc */; };
+		38487B001A78E24E0051093E /* symbolize.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38487AF61A78E24E0051093E /* symbolize.cc */; };
+		38487B011A78E24E0051093E /* utilities.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38487AF71A78E24E0051093E /* utilities.cc */; };
+		38487B021A78E24E0051093E /* vlog_is_on.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38487AF81A78E24E0051093E /* vlog_is_on.cc */; };
+		38487B611A79DED90051093E /* demangle.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38487B601A79DED90051093E /* demangle.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38487AAC1A78DFF50051093E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38487A971A78DFF50051093E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38487A9E1A78DFF50051093E;
+			remoteInfo = GoogleLog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		38487A9D1A78DFF50051093E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				38487AA31A78DFF50051093E /* GoogleLog.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		382E0DB81AA952D10041D718 /* commandlineflags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commandlineflags.h; path = ../../../include/base/commandlineflags.h; sourceTree = "<group>"; };
+		382E0DB91AA952D10041D718 /* googleinit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = googleinit.h; path = ../../../include/base/googleinit.h; sourceTree = "<group>"; };
+		382E0DBA1AA952D10041D718 /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutex.h; path = ../../../include/base/mutex.h; sourceTree = "<group>"; };
+		382E0DBB1AA952F80041D718 /* log_severity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log_severity.h; path = ../../../include/glog/log_severity.h; sourceTree = "<group>"; };
+		382E0DBC1AA952F80041D718 /* logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = logging.h; path = ../../../include/glog/logging.h; sourceTree = "<group>"; };
+		382E0DBD1AA952F80041D718 /* raw_logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = raw_logging.h; path = ../../../include/glog/raw_logging.h; sourceTree = "<group>"; };
+		382E0DBE1AA952F80041D718 /* stl_logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stl_logging.h; path = ../../../include/glog/stl_logging.h; sourceTree = "<group>"; };
+		382E0DBF1AA952F80041D718 /* vlog_is_on.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vlog_is_on.h; path = ../../../include/glog/vlog_is_on.h; sourceTree = "<group>"; };
+		382E0DC01AA953440041D718 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../../include/config.h; sourceTree = "<group>"; };
+		382E0DC11AA953440041D718 /* demangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = demangle.h; path = ../../../include/demangle.h; sourceTree = "<group>"; };
+		382E0DC21AA953440041D718 /* mock-log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "mock-log.h"; path = "../../../include/mock-log.h"; sourceTree = "<group>"; };
+		382E0DC31AA953440041D718 /* stacktrace_generic-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "stacktrace_generic-inl.h"; path = "../../../include/stacktrace_generic-inl.h"; sourceTree = "<group>"; };
+		382E0DC41AA953440041D718 /* stacktrace_libunwind-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "stacktrace_libunwind-inl.h"; path = "../../../include/stacktrace_libunwind-inl.h"; sourceTree = "<group>"; };
+		382E0DC51AA953440041D718 /* stacktrace_powerpc-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "stacktrace_powerpc-inl.h"; path = "../../../include/stacktrace_powerpc-inl.h"; sourceTree = "<group>"; };
+		382E0DC61AA953440041D718 /* stacktrace_x86_64-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "stacktrace_x86_64-inl.h"; path = "../../../include/stacktrace_x86_64-inl.h"; sourceTree = "<group>"; };
+		382E0DC71AA953440041D718 /* stacktrace_x86-inl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "stacktrace_x86-inl.h"; path = "../../../include/stacktrace_x86-inl.h"; sourceTree = "<group>"; };
+		382E0DC81AA953440041D718 /* stacktrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stacktrace.h; path = ../../../include/stacktrace.h; sourceTree = "<group>"; };
+		382E0DC91AA953440041D718 /* symbolize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = symbolize.h; path = ../../../include/symbolize.h; sourceTree = "<group>"; };
+		382E0DCA1AA953440041D718 /* utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utilities.h; path = ../../../include/utilities.h; sourceTree = "<group>"; };
+		38487A9F1A78DFF50051093E /* libglog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libglog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		38487AA21A78DFF50051093E /* GoogleLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleLog.h; sourceTree = "<group>"; };
+		38487AA41A78DFF50051093E /* GoogleLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleLog.m; sourceTree = "<group>"; };
+		38487AAA1A78DFF50051093E /* glogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = glogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38487AB01A78DFF50051093E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38487AF11A78E24E0051093E /* logging_striptest2.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = logging_striptest2.cc; path = ../../../src/logging_striptest2.cc; sourceTree = "<group>"; };
+		38487AF21A78E24E0051093E /* logging_striptest10.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = logging_striptest10.cc; path = ../../../src/logging_striptest10.cc; sourceTree = "<group>"; };
+		38487AF31A78E24E0051093E /* logging.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = logging.cc; path = ../../../src/logging.cc; sourceTree = "<group>"; };
+		38487AF41A78E24E0051093E /* raw_logging.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = raw_logging.cc; path = ../../../src/raw_logging.cc; sourceTree = "<group>"; };
+		38487AF51A78E24E0051093E /* signalhandler.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = signalhandler.cc; path = ../../../src/signalhandler.cc; sourceTree = "<group>"; };
+		38487AF61A78E24E0051093E /* symbolize.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = symbolize.cc; path = ../../../src/symbolize.cc; sourceTree = "<group>"; };
+		38487AF71A78E24E0051093E /* utilities.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utilities.cc; path = ../../../src/utilities.cc; sourceTree = "<group>"; };
+		38487AF81A78E24E0051093E /* vlog_is_on.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vlog_is_on.cc; path = ../../../src/vlog_is_on.cc; sourceTree = "<group>"; };
+		38487B601A79DED90051093E /* demangle.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = demangle.cc; path = ../../../src/demangle.cc; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38487A9C1A78DFF50051093E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38487AA71A78DFF50051093E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38487AAB1A78DFF50051093E /* libglog.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38487A961A78DFF50051093E = {
+			isa = PBXGroup;
+			children = (
+				38487AA11A78DFF50051093E /* GoogleLog */,
+				38487AAE1A78DFF50051093E /* GoogleLogTests */,
+				38487AA01A78DFF50051093E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38487AA01A78DFF50051093E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38487A9F1A78DFF50051093E /* libglog.a */,
+				38487AAA1A78DFF50051093E /* glogTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38487AA11A78DFF50051093E /* GoogleLog */ = {
+			isa = PBXGroup;
+			children = (
+				38487AB91A78E00F0051093E /* Header Files */,
+				38487ABA1A78E01D0051093E /* Source Files */,
+				38487AA21A78DFF50051093E /* GoogleLog.h */,
+				38487AA41A78DFF50051093E /* GoogleLog.m */,
+			);
+			path = GoogleLog;
+			sourceTree = "<group>";
+		};
+		38487AAE1A78DFF50051093E /* GoogleLogTests */ = {
+			isa = PBXGroup;
+			children = (
+				38487AAF1A78DFF50051093E /* Supporting Files */,
+			);
+			path = GoogleLogTests;
+			sourceTree = "<group>";
+		};
+		38487AAF1A78DFF50051093E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38487AB01A78DFF50051093E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38487AB91A78E00F0051093E /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				382E0DC01AA953440041D718 /* config.h */,
+				382E0DC11AA953440041D718 /* demangle.h */,
+				382E0DC21AA953440041D718 /* mock-log.h */,
+				382E0DC31AA953440041D718 /* stacktrace_generic-inl.h */,
+				382E0DC41AA953440041D718 /* stacktrace_libunwind-inl.h */,
+				382E0DC51AA953440041D718 /* stacktrace_powerpc-inl.h */,
+				382E0DC61AA953440041D718 /* stacktrace_x86_64-inl.h */,
+				382E0DC71AA953440041D718 /* stacktrace_x86-inl.h */,
+				382E0DC81AA953440041D718 /* stacktrace.h */,
+				382E0DC91AA953440041D718 /* symbolize.h */,
+				382E0DCA1AA953440041D718 /* utilities.h */,
+				382E0DBB1AA952F80041D718 /* log_severity.h */,
+				382E0DBC1AA952F80041D718 /* logging.h */,
+				382E0DBD1AA952F80041D718 /* raw_logging.h */,
+				382E0DBE1AA952F80041D718 /* stl_logging.h */,
+				382E0DBF1AA952F80041D718 /* vlog_is_on.h */,
+				382E0DB81AA952D10041D718 /* commandlineflags.h */,
+				382E0DB91AA952D10041D718 /* googleinit.h */,
+				382E0DBA1AA952D10041D718 /* mutex.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		38487ABA1A78E01D0051093E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				38487B601A79DED90051093E /* demangle.cc */,
+				38487AF11A78E24E0051093E /* logging_striptest2.cc */,
+				38487AF21A78E24E0051093E /* logging_striptest10.cc */,
+				38487AF31A78E24E0051093E /* logging.cc */,
+				38487AF41A78E24E0051093E /* raw_logging.cc */,
+				38487AF51A78E24E0051093E /* signalhandler.cc */,
+				38487AF61A78E24E0051093E /* symbolize.cc */,
+				38487AF71A78E24E0051093E /* utilities.cc */,
+				38487AF81A78E24E0051093E /* vlog_is_on.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38487A9E1A78DFF50051093E /* glog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38487AB31A78DFF50051093E /* Build configuration list for PBXNativeTarget "glog" */;
+			buildPhases = (
+				38487A9B1A78DFF50051093E /* Sources */,
+				38487A9C1A78DFF50051093E /* Frameworks */,
+				38487A9D1A78DFF50051093E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glog;
+			productName = GoogleLog;
+			productReference = 38487A9F1A78DFF50051093E /* libglog.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		38487AA91A78DFF50051093E /* glogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38487AB61A78DFF50051093E /* Build configuration list for PBXNativeTarget "glogTests" */;
+			buildPhases = (
+				38487AA61A78DFF50051093E /* Sources */,
+				38487AA71A78DFF50051093E /* Frameworks */,
+				38487AA81A78DFF50051093E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38487AAD1A78DFF50051093E /* PBXTargetDependency */,
+			);
+			name = glogTests;
+			productName = GoogleLogTests;
+			productReference = 38487AAA1A78DFF50051093E /* glogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38487A971A78DFF50051093E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = UC;
+				TargetAttributes = {
+					38487A9E1A78DFF50051093E = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					38487AA91A78DFF50051093E = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 38487A9A1A78DFF50051093E /* Build configuration list for PBXProject "glog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 38487A961A78DFF50051093E;
+			productRefGroup = 38487AA01A78DFF50051093E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38487A9E1A78DFF50051093E /* glog */,
+				38487AA91A78DFF50051093E /* glogTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38487AA81A78DFF50051093E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38487A9B1A78DFF50051093E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38487AFF1A78E24E0051093E /* signalhandler.cc in Sources */,
+				38487AA51A78DFF50051093E /* GoogleLog.m in Sources */,
+				38487B021A78E24E0051093E /* vlog_is_on.cc in Sources */,
+				38487AFC1A78E24E0051093E /* logging_striptest10.cc in Sources */,
+				38487AFE1A78E24E0051093E /* raw_logging.cc in Sources */,
+				38487B611A79DED90051093E /* demangle.cc in Sources */,
+				38487B011A78E24E0051093E /* utilities.cc in Sources */,
+				38487B001A78E24E0051093E /* symbolize.cc in Sources */,
+				38487AFD1A78E24E0051093E /* logging.cc in Sources */,
+				38487AFB1A78E24E0051093E /* logging_striptest2.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38487AA61A78DFF50051093E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38487AAD1A78DFF50051093E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38487A9E1A78DFF50051093E /* glog */;
+			targetProxy = 38487AAC1A78DFF50051093E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		38487AB11A78DFF50051093E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		38487AB21A78DFF50051093E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38487AB41A78DFF50051093E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					GLOG_USE_PTHREADS,
+					UNICODE,
+					GLOG_HAVE_SYS_TYPES_H,
+					GLOG_HAVE_SYS_STAT_H,
+					GLOG_HAVE_STDLIB_H,
+					GLOG_HAVE_ERRNO_H,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = glog;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		38487AB51A78DFF50051093E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					GLOG_USE_PTHREADS,
+					UNICODE,
+					GLOG_HAVE_SYS_TYPES_H,
+					GLOG_HAVE_SYS_STAT_H,
+					GLOG_HAVE_STDLIB_H,
+					GLOG_HAVE_ERRNO_H,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = glog;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		38487AB71A78DFF50051093E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GoogleLogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = glogTests;
+			};
+			name = Debug;
+		};
+		38487AB81A78DFF50051093E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GoogleLogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = glogTests;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38487A9A1A78DFF50051093E /* Build configuration list for PBXProject "glog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38487AB11A78DFF50051093E /* Debug */,
+				38487AB21A78DFF50051093E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38487AB31A78DFF50051093E /* Build configuration list for PBXNativeTarget "glog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38487AB41A78DFF50051093E /* Debug */,
+				38487AB51A78DFF50051093E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38487AB61A78DFF50051093E /* Build configuration list for PBXNativeTarget "glogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38487AB71A78DFF50051093E /* Debug */,
+				38487AB81A78DFF50051093E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38487A971A78DFF50051093E /* Project object */;
+}

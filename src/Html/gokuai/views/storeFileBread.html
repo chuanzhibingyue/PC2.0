@@ -1,0 +1,49 @@
+<div class="file-bar">
+    <div class="pull-left">
+        <a class="history-back btn-history" ng-click="historyBack($event)">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+        <a class="history-forward btn-history" ng-click="historyForward($event)">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+    </div>
+    <div class="pull-left addrbar">
+        <div class="search-bar">
+            <input class="search-input" type="text" />
+            <span class="fa fa-search icon-search" ng-show="!searchLoading"></span>
+            <span class="fa fa-times-circle icon-search icon-close" ng-click="cancelSearch($event)" ng-show="!searchLoading"></span>
+            <span class="fa fa-spinner fa-pulse icon-search icon-load" ng-show="searchLoading"></span>
+        </div>
+        <div class="path-bar dropdown">
+            <a ng-show="hidePaths && hidePaths.length" data-toggle="dropdown" style="display: inline-block;
+    vertical-align: top;"
+               aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></a>
+            <ul class="dropdown-menu" ng-show="hidePaths && hidePaths.length">
+                <li ng-repeat="path in hidePaths track by $index">
+                    <a ng-click="openPath($event, path)" href="javascript:;">{{path.name}}</a>
+                </li>
+            </ul>
+            <div class="path-item" ng-repeat="path in paths track by $index">
+                <a ng-click="openPath($event, path)" href="javascript:;">
+                    <span ng-bind="path.name"></span>
+                </a>
+                <i class="fa fa-chevron-right" ng-hide="$last"></i>
+            </div>
+        </div>
+        <div class="path-search-bar">
+            <div class="dropdown">
+                <a class="btn-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span>在 {{currentSearchPath.name}} 中搜索：</span>
+                    <span class="fa fa-chevron-down icon-dropdown"
+                          ng-show="searchPaths && searchPaths.length > 1"></span>
+                </a>
+                <ul class="dropdown-menu" ng-show="searchPaths && searchPaths.length > 1">
+                    <li ng-repeat="path in searchPaths track by $index"
+                        ng-click="changeSearchPath($event, path)">
+                        <a>{{path.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

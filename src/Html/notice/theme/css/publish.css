@@ -1,0 +1,1104 @@
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+input[type='radio'] {
+  position: relative;
+}
+input[type='radio']:before {
+  border-radius: 14px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid white;
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  border: solid 1px #979797;
+  left: -2px;
+}
+input[type='radio']:checked:after {
+  border-radius: 8px;
+  position: absolute;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  width: 8px;
+  height: 8px;
+  background-color: #3399f3;
+  top: 4px;
+  left: 2px;
+}
+.sendSuccess {
+  top: 56px;
+}
+.publishPage {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  left: 0;
+  display: inline-block;
+  height: 686px;
+  border: solid 1px #dadada;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0 0 10px 0;
+  font-size: 12px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.publishPage .previewDialog {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.publishPage .previewDialog .dialogContent {
+  border-radius: 2px;
+  width: 500px;
+  box-sizing: border-box;
+  height: 210px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+.publishPage .previewDialog .dialogContent .send-to {
+  padding: 10px;
+  line-height: 30px;
+}
+.publishPage .previewDialog .dialogContent .title {
+  display: block;
+  height: 45px;
+  border-bottom: solid 1px #c3c3c3;
+  text-align: center;
+}
+.publishPage .previewDialog .dialogContent label {
+  display: inline-block;
+  text-align: left;
+  padding-left: 0;
+}
+.publishPage .previewDialog .dialogContent .contact-searchbar {
+  padding: 0;
+  margin: 3px 55px 0 0;
+  display: inline-block;
+  float: right;
+  border-radius: 2px;
+  width: 300px;
+}
+.publishPage .previewDialog .dialogContent .contact-searchbar input {
+  width: 200px;
+}
+.publishPage .previewDialog .dialogContent .footer {
+  margin-top: 20px;
+  border-top: solid 1px #c3c3c3;
+  padding: 10px 20px;
+  color: #777;
+  line-height: 30px;
+}
+.publishPage .previewDialog .dialogContent .footer .btn {
+  float: right;
+  width: 70px;
+  height: 30px;
+  color: #fff;
+  background-color: #3399f3;
+  border-radius: 2px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.publishPage .previewDialog .dialogContent .footer .btn:hover {
+  background-color: #237dcc;
+}
+.publishPage .previewDialog .dialogContent .footer .btn.enter {
+  background-color: #1764a7;
+}
+.publishPage .previewDialog .dialogContent .footer .btn.disabled {
+  background-color: #c3c3c3;
+}
+.publishPage .previewDialog .dialogContent .searchrlt {
+  position: absolute;
+  top: 30px;
+}
+.publishPage .previewDialog .contact-searchbar {
+  padding: 0 10px;
+  height: 24px;
+  border: solid 1px #dadada;
+  box-sizing: border-box;
+}
+.publishPage .previewDialog .contact-searchbar .selectedName {
+  float: left;
+  line-height: 20px;
+}
+.publishPage.min {
+  width: 150px;
+  height: 30px!important;
+  overflow: hidden;
+}
+.publishPage.max {
+  height: calc(100% - 10PX);
+  top: 0;
+  right: 0;
+}
+.publishPage .title {
+  padding: 0 0 0 10px;
+  text-align: left;
+  line-height: 39px;
+  font-size: 14px;
+  display: inline-block;
+}
+.publishPage .shadow {
+  height: 3px;
+  background-image: linear-gradient(to top, #ffffff, #000000);
+  opacity: 0.1;
+}
+.publishPage .close,
+.publishPage .maximize,
+.publishPage .minimize {
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  z-index: 10;
+  height: 15px;
+  width: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.publishPage .close {
+  right: 5px;
+  background-image: url(../images/icon_close.png);
+  background-size: 8px;
+}
+.publishPage .close:hover {
+  background-image: url(../images/icon_close_hover.png);
+  background-size: 15px;
+}
+.publishPage .maximize {
+  right: 23px;
+  background-size: 15px;
+  background-image: url(../images/icon_max.png);
+}
+.publishPage .maximize:hover {
+  background-image: url(../images/icon_max_hover.png);
+  background-size: 15px;
+}
+.publishPage .minimize {
+  right: 43px;
+  background-size: 15px;
+  background-image: url(../images/icon_min.png);
+}
+.publishPage .minimize:hover {
+  background-image: url(../images/icon_min_hover.png);
+  background-size: 15px;
+}
+.publishPage .restore {
+  background-image: url(../images/icon_restore.png);
+}
+.publishPage .restore:hover {
+  background-image: url(../images/icon_restore_hover.png);
+  background-size: 15px;
+}
+.publishPage .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 40px;
+}
+.publishPage .content .cwrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.publishPage .content .cwrap .cleft {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 0 30px 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.publishPage .content .cwrap .cright {
+  width: 270px;
+  float: right;
+  background-color: #eaeaea;
+  padding: 50px 20px 0 20px;
+  position: relative;
+  border-left: solid 1px #c3c3c3;
+}
+.publishPage .content .cwrap .cright .tip {
+  position: relative;
+  top: -25px;
+  text-align: center;
+}
+.publishPage .content .cwrap .cright .previewBtn {
+  width: 125px;
+  height: 30px;
+  border-radius: 2px;
+  position: relative;
+  margin: 20px auto 0 auto;
+  line-height: 30px;
+  padding: 0 10px;
+  color: #3399f3;
+  background-color: #ffffff;
+  border: solid 1px #3399f3;
+}
+.publishPage .content .cwrap .cright .previewBtn:hover {
+  color: #fff;
+  background-color: #3399f3;
+}
+.publishPage .content .cwrap .cright .previewBtn.enter {
+  background-color: #237dcc;
+}
+.publishPage .content .cwrap .cright .previewBtn.disabled {
+  background-color: #dadada;
+  border: solid 1px #c3c3c3;
+  color: #666;
+}
+.publishPage .content label {
+  line-height: 1;
+  width: 56px;
+  text-align: left;
+  display: block;
+  vertical-align: top;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.publishPage .content .noticeInfo {
+  height: 60px;
+  overflow: hidden;
+  border-bottom: solid 1px #c3c3c3;
+  margin: 0 -30px 0 -20px;
+  position: relative;
+  box-sizing: border-box;
+}
+.publishPage .content .noticeInfo div {
+  display: inline-block;
+}
+.publishPage .content .noticeInfo .info {
+  position: relative;
+  margin-left: 20px;
+}
+.publishPage .content .noticeInfo .info .value {
+  color: #3399f3;
+  margin-left: 10px;
+}
+.publishPage .content .noticeInfo .avatar {
+  height: 32px;
+  width: 32px;
+  overflow: hidden;
+  border-radius: 50%;
+  top: 10px;
+  position: relative;
+  margin-left: 10px;
+}
+.publishPage .content .noticeInfo .avatar img {
+  width: 100%;
+  height: 100%;
+}
+.publishPage .content .sender {
+  margin-bottom: 12px;
+  margin-top: 18px;
+}
+.publishPage .content .sender .selectedContent {
+  position: relative;
+}
+.publishPage .content .sender .selectedContent .drop {
+  color: #d8d8d8;
+  position: absolute;
+  font-size: 14px;
+  right: 5px;
+  bottom: 12px;
+  cursor: pointer;
+}
+.publishPage .content .sender .selectedContent .showContact {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  color: #3399f3;
+  cursor: pointer;
+}
+.publishPage .content .sender .selectedContent .showContact.disabled {
+  color: #777;
+  cursor: auto;
+}
+.publishPage .content .sender .selectedContent .selectAll {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  line-height: 30px;
+  width: 50px;
+  height: calc(100% - 3px);
+  border-radius: 2px;
+  background-color: #ededed;
+  border: solid 1px #c3c3c3;
+  text-align: center;
+  box-sizing: border-box;
+  color: #3399f3;
+  font-size: 12px;
+  float: right;
+  cursor: pointer;
+}
+.publishPage .content .sender .selectedContent .selectAll span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.publishPage .content .sender .selectedContent .sectionSelection {
+  display: inline-block;
+  border: solid 1px #dadada;
+  max-height: 60px;
+  min-height: 28px;
+  width: calc(100% - 47px);
+  border-radius: 2px;
+  position: relative;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.publishPage .content .sender .selectedContent .sectionSelection.focus {
+  border: solid 1px #3399f4;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .searchbar input {
+  line-height: 30px!important;
+  width: 100px;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .selectedSection {
+  position: relative;
+  display: inline-block;
+  float: left;
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #f5f5f5;
+  color: #03111f;
+  margin: 5px;
+  padding: 0 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .selectedSection .closeTag {
+  cursor: pointer;
+  display: none;
+  width: 16px;
+  height: 20px;
+  overflow: hidden;
+  background: url(../images/remove.png) center no-repeat;
+  background-size: 18px 18px;
+  position: absolute;
+  right: 2px;
+  top: 0px;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .selectedSection.selectedSection_hover {
+  padding-left: 2px;
+  padding-right: 18px;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .selectedSection.selectedSection_hover .closeTag {
+  display: inline-block;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .selectedSection.selectedSection_hover .closeTag:hover {
+  background: url(../images/remove_hover.png) center no-repeat;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .selectedSection.selectedSection_last_hover .closeTag {
+  right: -12px;
+  border-radius: 0 2px 2px 0;
+  display: inline-block;
+  background-color: #f5f5f5;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .selectedSection.selectedSection_last_hover .closeTag:hover {
+  background: url(../images/remove_hover.png) center no-repeat;
+  background-color: #f5f5f5;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .selectedSection.selected {
+  background-color: #5da5e2;
+  color: #fff;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .selectedSection.selected .closeTag {
+  background-color: #5da5e2;
+}
+.publishPage .content .sender .selectedContent .sectionSelection .selectedSection.selected .closeTag:hover {
+  background-color: #5da5e2;
+}
+.publishPage .content .sender .sections {
+  position: absolute;
+  z-index: 1;
+  border-radius: 4px;
+  margin-left: -1px;
+  background-color: #fff;
+  border-top: none;
+  margin-top: 2px;
+  width: 160px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.publishPage .content .sender .sections .section {
+  padding: 0 5px 0 20px;
+  cursor: pointer;
+  line-height: 39px;
+  font-size: 14px;
+  border-bottom: solid 1px #ededed;
+}
+.publishPage .content .sender .sections .section:hover {
+  background-color: #d3d3d3;
+}
+.publishPage .content .sender .sections .last {
+  color: #666666;
+}
+.publishPage .content .sender .sections .onSeleced {
+  background-color: #d3d3d3;
+}
+.publishPage .content .topic {
+  display: block;
+  margin-top: 0;
+  position: relative;
+}
+.publishPage .content .topic input {
+  width: calc(100% - 10px);
+  border: solid 1px #dadada;
+  line-height: 28px;
+  padding: 0 0 0 10px;
+  color: #03111f;
+  font-family: inherit;
+  border-radius: 2px;
+  font-size: 12px;
+}
+.publishPage .content .topic input::-webkit-input-placeholder {
+  color: #c3c3c3!important;
+}
+.publishPage .content .coverUploadContainer {
+  height: 237px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px #ededed;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.publishPage .content .coverUploadContainer .banner {
+  height: 4px;
+  border-radius: 8px;
+}
+.publishPage .content .coverUploadContainer .topic {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  right: 10px;
+  text-align: left;
+}
+.publishPage .content .coverUploadContainer .spliter {
+  margin: 23px 10px 0 10px;
+  height: 1px;
+  background-color: #d8d8d8;
+}
+.publishPage .content .coverUploadContainer .coverUpload {
+  height: 138px;
+  margin: 27px 8px 6px 10px;
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  background-size: 100% auto !important;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  border: dashed 1px #979797;
+}
+.publishPage .content .coverUploadContainer .coverUpload .btnReset {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  border-radius: 2px;
+  background-color: #ededed;
+  font-family: inherit;
+  padding: 6px 11px;
+  font-size: 12px;
+  line-height: 1;
+}
+.publishPage .content .coverUploadContainer .coverUpload .tips {
+  position: absolute;
+  display: inline-block;
+  color: #ccc;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.publishPage .content .coverUploadContainer .coverUpload .tips .btnUpload {
+  width: 110px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: solid 1px #3399f3;
+  color: #3399f3;
+  line-height: 30px;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+}
+.publishPage .content .coverUploadContainer .coverUpload .tips .spTips {
+  margin-top: 13px;
+  font-size: 12px;
+  line-height: 1.5;
+  width: 117px;
+  display: inline-block;
+}
+.publishPage .content .coverUploadContainer .coverUpload .updateCover {
+  background-color: #666;
+  display: inline-block;
+  line-height: 18px;
+  cursor: pointer;
+  color: #fff;
+  padding: 5px;
+  width: 70px;
+  text-align: center;
+  float: right;
+}
+.publishPage .content .coverUploadContainer .summary {
+  -webkit-line-clamp: 2;
+  padding: 0 10px;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0;
+  height: 36px;
+  word-wrap: break-word;
+}
+.publishPage .content .embedCoverDiv {
+  margin-top: 10px;
+  cursor: pointer;
+}
+.publishPage .content .embedCoverDiv input,
+.publishPage .content .embedCoverDiv label {
+  cusor: pointer;
+}
+.publishPage .content .embedCoverDiv label {
+  display: inline-block;
+  width: auto;
+  line-height: 1.5;
+  font-size: 12px;
+  cursor: pointer;
+}
+.publishPage .content .editor {
+  margin-top: 12px;
+  margin-bottom: 11px;
+  flex: 1;
+  position: relative;
+}
+.publishPage .content .editor label {
+  vertical-align: top;
+  line-height: 1;
+  margin-bottom: 11px;
+}
+.publishPage .content .editor notice-editor {
+  width: 100%;
+  display: inline-block;
+  display: flex;
+  flex: 1;
+  height: calc(100% - 15px);
+  position: absolute;
+}
+.publishPage .operation {
+  border-top: none!important;
+  padding: 10px 0 0 10px!important;
+}
+.publishPage .operation button {
+  width: 100px!important;
+  font-family: inherit;
+}
+.publishPage .coverOptionDialog {
+  position: absolute;
+  top: 50px;
+  width: 436px;
+  height: 450px;
+  /* max-height: 95%; */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 0px 2px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  overflow: hidden;
+}
+.publishPage .coverOptionDialog .tips {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.publishPage .coverOptionDialog .divideline {
+  width: 100%;
+  height: 3px;
+  opacity: 0.1;
+  background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+}
+.publishPage .coverOptionDialog .coverOptions {
+  margin-top: 13px;
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-top: 35px; */
+  border: solid 1px #ededed;
+}
+.publishPage .coverOptionDialog .coverOptions .cropper_area {
+  background: #000;
+}
+.publishPage .coverOptionDialog .updateBtn {
+  font-family: inherit;
+  font-size: 14px;
+  color: #03111f;
+  height: 26px;
+  margin-top: 10px;
+  width: 90px;
+  margin-bottom: 10px;
+  background-color: #ededed;
+  outline: none;
+  border: none;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 2px;
+}
+.publishPage .bottomBtns {
+  border-top: solid 1px #c3c3c3!important;
+  /* padding-top: 20px!important; */
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 9px 10px 0 45px!important;
+  background-color: #fff;
+  height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.publishPage .bottomBtns button {
+  font-size: 14px;
+  font-family: inherit;
+  width: 80px;
+  height: 32px;
+  border: none;
+  border-radius: 2px;
+  float: right;
+}
+.publishPage .bottomBtns .btnConfirm {
+  background-color: #3399f3;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+.publishPage .bottomBtns .btnConfirm:hover {
+  background-color: #237dcc;
+}
+.publishPage .bottomBtns .btnConfirm.enter {
+  background-color: #1764a7;
+}
+.publishPage .bottomBtns .btnConfirm.disabled {
+  background-color: #c3c3c3;
+  color: #777;
+}
+.publishPage .bottomBtns .btnSave {
+  border-radius: 2px;
+  background-color: #ffffff;
+  line-height: 1.5;
+  color: #3399f3;
+  border: solid 1px #3399f3;
+  margin-right: 20px;
+}
+.publishPage .bottomBtns .btnSave:hover {
+  background-color: #3399f3;
+  color: #fff;
+}
+.publishPage .bottomBtns .btnSave.enter {
+  background-color: #237dcc;
+}
+.publishPage .bottomBtns .btnSave.disabled {
+  color: #777;
+  background-color: #ededed;
+  border: solid 1px #c3c3c3;
+}
+.publishPage .bottomBtns .float-left {
+  float: left!important;
+}
+.publishPage .limit {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.publishPage .limit span {
+  font-size: 12px;
+  color: #c3c3c3;
+}
+.publishPage .limit .curLength {
+  color: inherit;
+}
+.publishPage .limit .curLength.overflow {
+  color: #f96868;
+}
+.publishPage .summary {
+  margin-top: 13px;
+  height: 74px;
+  position: relative;
+}
+.publishPage .summary #summaryInput {
+  width: calc(100% - 14px);
+  resize: none;
+  border-radius: 2px;
+  height: 44px;
+  font-size: 12px;
+  color: inherit;
+  font-family: inherit;
+  padding-left: 10px;
+  border: solid 1px #dadada;
+}
+.publishPage .summary #summaryInput::-webkit-input-placeholder {
+  color: #c3c3c3!important;
+}
+.publishPage .excelInput {
+  position: relative;
+  height: 22px;
+}
+.publishPage .excelInput input[type='file'] {
+  opacity: 0;
+}
+.publishPage .excelInput .inputLabel {
+  border: solid 1px #dadada;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+  line-height: 21px;
+}
+.loadingLayout {
+  top: 40px;
+}
+.searchbar-dir {
+  float: left;
+  width: auto;
+  position: relative;
+}
+.searchbar-dir .searchbar:hover {
+  background: rgba(0, 0, 0, 0);
+}
+.searchbar-dir .searchbar .search_icon {
+  display: none;
+}
+.searchbar-dir .searchbar .search_delete {
+  display: none;
+}
+.searchbar-dir .searchbar .input {
+  font-size: 12px;
+  float: left;
+  margin-left: 10px;
+  line-height: 20px;
+  padding: 0px;
+  border: none;
+  font-family: 微软雅黑;
+}
+.searchbar-dir .searchrlt {
+  min-height: 234px;
+  min-width: 280px;
+  position: fixed;
+  text-align: left;
+  background: url(../images/contact/no-result.png) center no-repeat;
+  background-size: 180px 148px;
+  background-color: #ffffff;
+  z-index: 999999;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.searchbar-dir .searchrlt .highlight {
+  background-color: #fbf9aa;
+}
+.searchbar-dir .searchrlt .searchrlt_content {
+  min-height: 234px;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.searchbar-dir .searchrlt .list_header {
+  height: 24px;
+  line-height: 24px;
+  background-color: #f5f5f5;
+  font-size: 12px;
+}
+.searchbar-dir .searchrlt .list_header .header_title {
+  margin-left: 24px;
+  color: #03111f;
+}
+.searchbar-dir .searchrlt .list_header .header_btn {
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+  color: #666666;
+}
+.searchbar-dir .searchrlt .list_header .header_back_btn {
+  margin-left: 20px;
+  color: #666666;
+  background: url(../images/contact/return.png) left no-repeat;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.searchbar-dir .searchrlt .select {
+  cursor: pointer;
+  font-size: 12px;
+  color: #03111f;
+  padding: 0;
+  position: absolute;
+  right: 17px;
+  background-size: 14px 14px;
+  width: 14px;
+  height: 28px;
+}
+.searchbar-dir .searchrlt .select.checked {
+  background: url(../images/contact/checked.png) center no-repeat;
+}
+.searchbar-dir .searchrlt .select.un-checked {
+  background: url(../images/contact/unchecked.png) center no-repeat;
+}
+.searchbar-dir .searchrlt .select.disable-checked {
+  background: url(../images/contact/checked_and_disabled.png) center no-repeat;
+}
+.searchbar-dir .searchrlt .contact_item {
+  cursor: pointer;
+  height: 28px;
+  line-height: 28px;
+}
+.searchbar-dir .searchrlt .contact_item.selected {
+  background-color: #71aee2;
+  color: #fff;
+  border-radius: 2px;
+}
+.searchbar-dir .searchrlt .contact_item.selected .department,
+.searchbar-dir .searchrlt .contact_item.selected .position {
+  color: #fff!important;
+}
+.searchbar-dir .searchrlt .contact_item .avatar {
+  float: left;
+  margin: 4px 0 0 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.searchbar-dir .searchrlt .contact_item .avatar img {
+  width: 20px;
+  height: 20px;
+}
+.searchbar-dir .searchrlt .contact_item .item_content {
+  margin-left: 49px;
+  padding-right: 20px;
+  max-width: 260px;
+  height: 28px;
+  position: relative;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .wrapper .tooltip {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: -16px;
+  font-size: 12px;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(0, 0, 0, 0.4);
+  border: solid 0 #c3c3c3;
+  padding: 0 5px;
+  line-height: 1.5;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .wrapper:hover .tooltip {
+  display: inline-block !important;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .org {
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+  color: #03111f;
+  font-size: 12px;
+  display: inline-block;
+  max-width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .name {
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+  color: inherit;
+  font-size: 12px;
+  display: inline-block;
+  max-width: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .department {
+  line-height: 28px;
+  height: 28px;
+  color: #666666;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 110px;
+  white-space: nowrap;
+  display: inline-block;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .position {
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+  color: #666666;
+  font-size: 12px;
+  display: inline-block;
+  max-width: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.searchbar-dir .searchrlt .timenews_item {
+  cursor: pointer;
+}
+.searchbar-dir .searchrlt .timenews_item .avatar {
+  float: left;
+  margin: 10px 0 0 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.searchbar-dir .searchrlt .timenews_item .avatar img {
+  width: 40px;
+  height: 40px;
+}
+.searchbar-dir .searchrlt .timenews_item .item_content {
+  margin-left: 80px;
+  padding-right: 20px;
+  width: 260px;
+  height: 80px;
+}
+.searchbar-dir .searchrlt .timenews_item .item_content .name {
+  line-height: 40px;
+  height: 30px;
+  color: #03111f;
+  font-size: 14px;
+}
+.searchbar-dir .searchrlt .timenews_item .item_content .name .time {
+  margin-left: 10px;
+  font-size: 10px;
+  color: #999999;
+}
+.searchbar-dir .searchrlt .timenews_item .item_content .desc {
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.searchbar-dir .searchrlt .timenews_item .item_content .desc span {
+  color: #03111f;
+  font-size: 12px;
+}
+.coverPage {
+  width: 100%;
+  height: calc(100% - 30px);
+  position: relative;
+  padding: 0;
+  font-size: 14px;
+  top: -3px;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.coverPage .coversContainer {
+  height: 428px;
+  overflow: auto;
+  background-color: #fff;
+  margin: 0 15px;
+  border-radius: 0 0 4px 4px;
+  border: solid 1px #c3c3c3;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 0;
+}
+.coverPage .coversContainer .title {
+  display: block;
+  margin: 0 7px;
+  border-bottom: solid 1px #d8d8d8;
+  padding: 0 20px;
+  font-size: 14px;
+  color: #777;
+}
+.coverPage .coversContainer .title a {
+  margin-right: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.coverPage .coversContainer .title a.selected span {
+  border-bottom: solid 3px #71aee2;
+  padding-bottom: 7px;
+}
+.coverPage .coversContainer .covers {
+  height: 328px;
+  overflow: auto;
+}
+.coverPage .coversContainer .covers .coverItem {
+  padding: 20px 0 0 27px;
+  position: relative;
+  display: inline-block;
+}
+.coverPage .coversContainer .covers .coversWrapper {
+  margin: 0;
+  width: 142px;
+  height: 79px;
+  cursor: pointer;
+}
+.coverPage .coversContainer .covers .coversWrapper a {
+  position: absolute;
+  right: 0;
+  top: 84px;
+  color: #3399f3;
+  font-size: 12px;
+}
+.coverPage .coversContainer .bottomBtns {
+  position: relative;
+  border: none;
+}
+.coverPage .coversContainer .bottomBtns .imgTip {
+  position: absolute;
+  line-height: 1.5;
+  color: #666;
+  left: 23px;
+  font-size: 12px;
+}
+.coverPage .coversContainer .bottomBtns button {
+  width: 70px;
+  height: 30px;
+  border-radius: 2px;
+}
+.coverPage .coversContainer .bottomBtns .btnConfirm {
+  background-color: #3399f3;
+  margin-right: 10px;
+}
+.coverPage .coversContainer .bottomBtns .btnCancel {
+  background-color: #ffffff;
+  border: solid 1px #adadad;
+  color: #03111f;
+  margin-right: 20px;
+}
+.coverPage .customizeContainer .upload {
+  width: 142px;
+  height: 80px;
+  box-sizing: border-box;
+}

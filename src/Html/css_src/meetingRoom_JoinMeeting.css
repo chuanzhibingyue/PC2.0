@@ -1,0 +1,82 @@
+.cl{
+    clear:both;
+}
+.meetingRoom_JoinMeeting *{
+    transition:all 0.3s;
+}
+
+.meetingRoom_JoinMeeting .clear{
+    clear:both;
+}
+
+.meetingRoom_JoinMeeting a{
+    text-decoration: none;
+}
+
+.meetingRoom_JoinMeeting input{
+    outline: none;
+
+}
+.meetingRoom_JoinMeeting{
+    width:360px;
+    height:168px;
+    margin-left: 5px;
+    cursor: default;
+    font-size:12px;
+    color:#03111f;
+    background-color:#fff;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.meetingRoom_JoinMeeting .windowTitle{
+    height: 50px;
+    line-height:50px;
+    color:#03111f;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+.meetingRoom_JoinMeeting .password{
+    width: 250px;
+    height: 30px;
+    border-radius: 2px;
+    border: solid 1px #dadada;
+}
+
+.meetingRoom_JoinMeeting .password:focus{
+    border: solid 1px #3399f3;
+}
+
+.meetingRoom_JoinMeeting .footer{
+    margin-top: 20px;
+}
+.meetingRoom_JoinMeeting .pswErrorTips{
+    width: 265px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #ff9e9e;
+    position: absolute;
+    top: 0px;
+    left: 47px;
+    top: 93px;
+    text-align: center;
+}
+
+.meetingRoom_JoinMeeting .pswErrorTips span{
+    display: block;
+    background:  url(../images/call/dialpadInputerror.png) no-repeat 27px center;
+    padding-left: 27px;
+}
+
+
+
+
+
+

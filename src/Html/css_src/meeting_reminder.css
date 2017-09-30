@@ -1,0 +1,84 @@
+.meeting-body {
+    min-height: 140px;
+    width: 360px;
+    position: relative;
+    padding: 20px;
+}
+
+.child-window-shadow {
+    position: static;
+}
+
+.alarmed-meeting {
+    background-color: #FFFFFF;
+    font-size: 14px;
+}
+
+.alarmed-meeting .hide {
+    display: none !important;
+}
+
+.alarmed-meeting .window-bar {
+    line-height: 14px;
+    vertical-align: middle;
+    padding: 20px;
+    padding-bottom: 14px;
+    /*background-image: url(../images/bottom_border.png);*/
+    /*background-repeat: repeat-x;*/
+    /*background-position-y: 40px;*/
+}
+
+/*.alarmed-meeting .window-bar .tool-icon-container {
+    top: 20px;
+    right: 26px;
+
+}*/
+
+.alarmed-meeting .title {
+    font-size: 14px;
+    height: 30px;
+    line-height: 14px;
+    font-weight: bold;
+    color: #3b4f61 !important;
+}
+
+.alarmed-meeting .message-info {
+    line-height: 26px;
+    margin: 20px;
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.alarmed-meeting .meeting-title {
+    color: #999;
+}
+
+.alarmed-meeting .meeting-bar {
+    text-align: right;
+    margin: 0 20px;
+    padding-bottom: 20px;
+}
+
+.alarmed-meeting .btn {
+    background-color: #4f667b;
+    font-size: 14px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.alarmed-meeting .btn-ok {
+    background-color: #ededed;
+    color: #4f667b;
+    width: 120px;
+}
+
+.alarmed-meeting .btn-cancel {
+    background-color: #4f667b;
+    color: #ffffff;
+    width: 120px;
+    margin-left: 10px;
+}

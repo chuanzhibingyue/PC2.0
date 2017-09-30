@@ -1,0 +1,158 @@
+.searchBox{
+    width: 200px;
+    height: 0;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    background-color: #fff;
+    box-shadow: 0 1px 5px #dadada !important;    
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    padding: 5px 0;
+}
+
+.searchBox li.userDropList{
+    float: left;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+}
+
+.searchBox li.userDropList:hover, .searchBox li.userDropList-selected {
+    background-color: #fffee1;
+}
+
+.searchBox li.userDropList img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;    
+    margin-top: 10px;
+}
+
+.searchBox #searchList{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    position: relative;
+}
+
+.searchBox li .userName{
+    color:#3b4f61;
+    font-size: 14px;    
+    margin-top: 10px;
+}
+
+.searchBox li .staff-post{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.searchBox li .staff-post span{
+    color:#999999;
+    font-size: 12px;
+}
+.searchBox li:hover{
+    color:#fffee1;
+}
+.searchBox .more{
+    border-top:1px solid #dadada;
+    text-align: center;
+    padding-left: 0 !important;
+}
+.searchBox *, .time-box *
+{
+    color: #3b4f61;
+}
+
+.searchBox{
+    width: 200px;
+    height: 0;
+    display: none;
+    position: absolute;
+    z-index: 99;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #aaa;
+}
+
+.searchBox .prev, .searchdown-list .next {
+    position: absolute;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+    font-size: 12px;
+    overflow: hidden;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: -10000px;
+    background-image: url(../images/meeting/icon_drop_down.png);
+}
+
+.searchBox .prev {
+    background-image: url(../images/meeting/icon_drop_up.png);
+    top: 0;
+}
+
+.searchBox .items {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.searchBox .items a {
+    text-decoration: none;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #3b4f61;
+    text-indent: 25px;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    left: 0;
+    padding-right: 3px;
+}
+
+.searchBox .right a
+{
+    padding-left: 0;
+    padding-right: 30px;
+    width: 95%;
+    text-align: right;
+}
+
+.searchBox .items a:hover {
+    background-color: #4e677d;
+    color: #fff;
+}
+
+.searchBox .items a.selected i {
+    height: 20px;
+    width: 20px;
+    line-height: 25px;
+    display: inline-block;
+    left: 5px;
+    top: 2px;
+    color: #fff;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: 10000px;
+    background-image: url(../images/meeting/icon_selected.png);
+}
+
+.searchBox .items a.selected:hover i {
+    background-color: #4e677d;
+    color: #fff;
+    background-image: url(../images/meeting/icon_selected_white.png);
+}
+

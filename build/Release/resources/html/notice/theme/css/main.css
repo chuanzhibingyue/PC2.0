@@ -1,0 +1,1861 @@
+@-webkit-keyframes flipIn {
+  from {
+    transform: translate3d(-100%, 0px, 0px) scale(1) translateZ(0px);
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px) scale(1) translateZ(0px);
+  }
+}
+@keyframes flipOut {
+  from {
+    transform: translate3d(0, 0px, 0px) scale(1) translateZ(0px);
+  }
+  to {
+    transform: translate3d(100%, 0px, 0px) scale(1) translateZ(0px);
+  }
+}
+/* loading animation*/
+@keyframes spinnerloadframes {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+.spinnerloading {
+  width: 30px;
+  height: 30px;
+  background-color: #4abdec;
+  margin: 0px auto;
+  position: absolute;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  animation: spinnerloadframes 1.2s infinite ease-in-out;
+}
+.spinnerloading1 {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background: url("../images/loading_37.gif");
+}
+.loadingLayout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: url(../images/loading_37.gif) no-repeat center center;
+}
+.no-border {
+  border: none;
+}
+.hide {
+  display: none;
+}
+.grayFont {
+  color: #adadad;
+}
+.force-hide {
+  display: none!important;
+}
+.text-ellipsis {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.text-multiple-ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+.btn {
+  cursor: pointer;
+}
+.table {
+  display: table;
+}
+.row {
+  display: table-row;
+}
+.cell {
+  display: table-cell;
+}
+.flipIn {
+  animation: flipIn 0s ease-out;
+  -webkit-animation: flipIn 0s ease-out;
+}
+.flipOut {
+  animation: flipOut 0.3s ease-in forwards;
+  -webkit-animation: flipOut 0.3s ease-in forwards;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+input {
+  font-family: inherit;
+}
+body {
+  margin: 0;
+  font-size: 14px;
+  color: #03111f;
+  text-align: left;
+  font-family: "微软雅黑", "Microsoft YaHei" !important;
+  -webkit-user-select: none;
+}
+body ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+body ::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #D8D8D8;
+}
+body span,
+body p,
+body h3 {
+  -webkit-user-select: text;
+}
+.noticeItem:hover .options {
+  display: block!important;
+}
+.noticeItem .dateSpliter {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  position: relative;
+  bottom: -10px;
+}
+.noticeItem .dateSpliter span {
+  background-color: #dadada;
+  color: #fff;
+  padding: 3px 34px;
+  border-radius: 20px;
+  font-size: 12px;
+  line-height: 1;
+}
+.noticeItem notice-item {
+  width: 382px;
+  position: relative;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 20px auto 0 auto;
+}
+.noticeItem notice-item .grayColor {
+  color: #c3c3c3;
+}
+.noticeItem notice-item .createTime {
+  height: 20px;
+  display: block;
+  color: #666;
+  font-size: 12px;
+}
+.noticeItem notice-item .content {
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #dadada;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.noticeItem notice-item .content .banner {
+  height: 6px;
+  width: 380px;
+  border-radius: 3px 3px 0 0;
+}
+.noticeItem notice-item .content .topic {
+  text-align: left;
+  display: block;
+  padding: 5px 10px;
+}
+.noticeItem notice-item .content .spliter {
+  margin: 0 10px 0 10px;
+  height: 1px;
+  background-color: #d8d8d8;
+  display: none;
+}
+.noticeItem notice-item .content .cover {
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.noticeItem notice-item .content .cover img {
+  width: 100%;
+}
+.noticeItem notice-item .content .cover .noCover {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.noticeItem notice-item .content .cover .noCover img {
+  width: auto;
+}
+.noticeItem notice-item .content .cover .noCover span {
+  display: block;
+  font-size: 12px;
+  color: #c3c3c3;
+  margin-top: 10px;
+}
+.noticeItem notice-item .content .cover .noCoverBorder {
+  border: solid 1px #ededed;
+}
+.noticeItem notice-item .content .summary {
+  -webkit-line-clamp: 2;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  text-align: left;
+  height: 36px;
+  font-size: 12px;
+  color: #666;
+  word-wrap: break-word;
+}
+.noticeItem notice-item .content .noSummary {
+  color: #c3c3c3;
+}
+.noticeItem notice-item .content .footer {
+  height: 39px;
+  background-color: #f7f7f7;
+  border-top: solid 1px #dadada;
+  line-height: 40px;
+  cursor: pointer;
+}
+.noticeItem notice-item .content .options {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: -84px;
+}
+.noticeItem notice-item .content .options i {
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  font-size: 16px;
+}
+.noticeItem notice-item .content .options div {
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  line-height: 30px;
+  width: 84px;
+  color: #5da5e2;
+  margin-top: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.noticeItem notice-item .content .options .sendTo {
+  color: #3b4f61;
+}
+.noticeItem notice-item .content .options .delete {
+  color: #f96868;
+}
+.noticeItem .status {
+  font-size: 12px;
+  color: #f96868;
+  width: 382px;
+  position: relative;
+  margin: auto;
+  text-align: right;
+  padding: 8px 10px 0 0;
+}
+.main {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.main .right .top {
+  padding: 0 15px;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  border-bottom: solid 1px #dadada;
+  font-size: 12px;
+  position: relative;
+}
+.main .right .top .accountsWrap {
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  margin-left: 20px;
+}
+.main .right .top .accountsWrap .accountsSelect {
+  display: inline-block;
+  cursor: pointer;
+}
+.main .right .top .accountsWrap .accountsSelect .name {
+  max-width: 60px;
+}
+.main .right .top .accountsWrap .accountsSelect span {
+  line-height: 50px;
+  float: left;
+}
+.main .right .top .accountsWrap .avatar {
+  height: 32px;
+  width: 32px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 8px;
+  float: left;
+}
+.main .right .top .accountsWrap .avatar img {
+  width: 100%;
+  height: 100%;
+}
+.main .right .top .accountsWrap span {
+  position: relative;
+  margin-left: 10px;
+  max-width: 130px;
+  display: inline-block;
+}
+.main .right .top .accountsWrap .categories {
+  display: inline-block;
+  margin-left: 50px;
+  text-align: center;
+  position: relative;
+  float: right;
+}
+.main .right .top .accountsWrap .categories .btn {
+  background: none;
+  width: 110px;
+  border: solid 1px #3399f3;
+  padding: 0;
+  margin: 0 -2px;
+  height: 30px;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 30px;
+  color: #3399f3;
+}
+.main .right .top .accountsWrap .categories .btn.selected {
+  color: #fff;
+  background-color: #3399f3;
+}
+.main .right .top .accountsWrap .categories .history {
+  border-radius: 2px 0 0 2px;
+}
+.main .right .top .accountsWrap .categories .draft {
+  border-radius: 0 2px 2px 0;
+}
+.main .right .top .accountsWrap .accountsGridWrapper {
+  position: fixed;
+  background-color: #fff;
+  z-index: 2;
+}
+.main .right .top .accountsWrap .accountsGridWrapper:before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  left: 45px;
+  top: -24px;
+  height: 10px;
+  width: 10px;
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(45deg);
+}
+.main .right .top .accountsWrap .accountsGridWrapper:after {
+  content: "";
+  position: absolute;
+  left: 45px;
+  top: -21px;
+  color: #fff;
+  width: 10px;
+  height: 5px;
+  background-color: #fff;
+  z-index: 1;
+}
+.main .right .top .accountsWrap .accountsGridWrapper .accountsGrid {
+  position: fixed;
+  background-color: #fff;
+  z-index: 1;
+  width: 200px;
+  border-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  top: 100px;
+  height: 310px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.main .right .top .accountsWrap .accountsGridWrapper .accountsGrid .arrow {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 4px 4px 0;
+  border-color: transparent #3399f3 transparent transparent;
+  position: absolute;
+  left: 45px;
+  top: 0;
+  transform: translateY(-50%);
+}
+.main .right .top .accountsWrap .accountsGridWrapper .accountsGrid .arrayColumn {
+  width: 200px;
+  background-color: #fff;
+  position: absolute;
+}
+.main .right .top .accountsWrap .accountsGridWrapper .accountsGrid .arrayColumn .arrayItem {
+  cursor: pointer;
+  height: 40px;
+  box-sizing: border-box;
+  margin: 8px;
+  border-radius: 4px;
+  line-height: 40px;
+  display: flex;
+}
+.main .right .top .accountsWrap .accountsGridWrapper .accountsGrid .arrayColumn .arrayItem .avatar {
+  top: 4px;
+}
+.main .right .top .accountsWrap .accountsGridWrapper .accountsGrid .arrayColumn .arrayItem .item-name {
+  flex: 1;
+}
+.main .right .top .accountsWrap .accountsGridWrapper .accountsGrid .arrayColumn .arrayItem:hover {
+  background-color: #dadada;
+}
+.main .right .top .accountsWrap .accountsGridWrapper .accountsGrid .arrayColumn .arrayItem .selectedIcon {
+  background: url(../images/account_list_select.png) no-repeat center center;
+  background-size: 20px 15px;
+  display: block;
+  float: right;
+  width: 40px;
+  height: 40px;
+}
+.main .right .top .searchContainer {
+  display: flex;
+  padding: 0 8px;
+  float: right;
+  width: 192px;
+  height: 30px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: solid 1px #dadada;
+  border-radius: 2px;
+}
+.main .right .top .searchContainer.focused {
+  border: solid 1px #3399f3;
+}
+.main .right .top .searchContainer .searchIcon {
+  background: url(../images/icon_search.png) no-repeat center center;
+  background-size: 16px;
+  cursor: pointer;
+  border: none;
+  width: 20px;
+}
+.main .right .top .searchContainer .deleteIcon {
+  background: url(../images/search_delete.png) no-repeat center center;
+  background-size: 16px;
+  cursor: pointer;
+  border: none;
+  width: 16px;
+  float: right;
+}
+.main .right .top .searchContainer .deleteIcon:hover {
+  background: url(../images/search_delete_hover.png) no-repeat center center;
+  background-size: 16px;
+}
+.main .right .top .searchContainer .searchText {
+  flex: 1;
+  border: none;
+  height: 26px;
+  line-height: 28px;
+  padding-left: 10px;
+}
+.main .right .noticesContainer {
+  width: 100%;
+  font-size: 12px;
+}
+.main .right .noticesContainer .author {
+  width: 130px;
+  text-align: center;
+}
+.main .right .noticesContainer .time {
+  width: 144px;
+}
+.main .right .noticesContainer .title {
+  background-color: #ededed;
+  height: 24px;
+  box-sizing: border-box;
+  line-height: 24px;
+}
+.main .right .noticesContainer .title .cell {
+  padding: 3px 0;
+}
+.main .right .noticesContainer .title .cell div {
+  border-right: solid 1px #c3c3c3;
+}
+.main .right .noticesContainer .title .topic div {
+  margin-left: 10px;
+}
+.main .right .noticesContainer .title .time {
+  padding-left: 10px;
+}
+.main .right .noticesContainer .title .selectedTimeRange {
+  display: inline-block;
+  border: none!important;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.main .right .noticesContainer .title .selectedTimeRange span {
+  color: #3399f3;
+}
+.main .right .noticesContainer .title .selectedTimeRange i {
+  margin-left: 5px;
+}
+.main .right .noticesContainer .title .timeRanges {
+  position: absolute;
+  color: inherit;
+  width: 120px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  right: 5px;
+  list-style-type: none;
+  z-index: 1;
+  padding: 10px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 4px 0 0 0;
+}
+.main .right .noticesContainer .title .timeRanges li {
+  line-height: 26px;
+  padding: 3px 20px;
+}
+.main .right .noticesContainer .title .timeRanges li:hover {
+  background-color: #71aee2;
+  color: #fff;
+  border-radius: 2px;
+}
+.main .right .noticesContainer .title .selectedEditor {
+  padding-right: 5px;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.main .right .noticesContainer .title .selectedEditor i {
+  margin-left: 5px;
+}
+.main .right .noticesContainer .title .selectedEditor span {
+  color: #3399f3;
+  max-width: 50px;
+  float: left;
+}
+.main .right .noticesContainer .title .accountEditors {
+  position: absolute;
+  color: inherit;
+  width: 120px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  list-style-type: none;
+  z-index: 1;
+  padding: 10px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 4px 0 0 0;
+}
+.main .right .noticesContainer .title .accountEditors li {
+  line-height: 26px;
+  text-align: left;
+  padding: 3px 20px;
+}
+.main .right .noticesContainer .title .accountEditors li:hover {
+  background-color: #71aee2;
+  color: #fff;
+  border-radius: 2px;
+}
+.main .right .noticesContainer .mainContainer {
+  overflow-y: auto;
+  position: absolute;
+  bottom: 3px;
+  top: 80px;
+  left: 0;
+  right: 3px;
+}
+.main .right .noticesContainer .mainContainer .scrollable {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.main .right .noticesContainer .mainContainer .noticeItem {
+  height: 40px;
+  box-sizing: border-box;
+  line-height: 40px;
+  cursor: pointer;
+}
+.main .right .noticesContainer .mainContainer .noticeItem .cell {
+  border-bottom: solid 1px #d8d8d8;
+  padding: 0 5px;
+}
+.main .right .noticesContainer .mainContainer .noticeItem .topic {
+  width: 100%;
+}
+.main .right .noticesContainer .mainContainer .noticeItem .time {
+  padding: 0 0 0 20px!important;
+}
+.main .right .noticesContainer .mainContainer .noticeItem .noticeItemContext {
+  position: fixed;
+  width: 100px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 3px 0;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.main .right .noticesContainer .mainContainer .noticeItem .noticeItemContext .btn {
+  line-height: 26px;
+  padding: 3px 15px;
+}
+.main .right .noticesContainer .mainContainer .noticeItem .noticeItemContext .btn:hover {
+  background-color: #71aee2;
+  color: #fff;
+  border-radius: 2px;
+}
+.main .right .noticesContainer .mainContainer .empty {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: url(../images/message_empty.png) no-repeat center center;
+  background-size: 80%;
+}
+.main .right .noticesContainer .mainContainer .empty.filter {
+  background: url(../images/filter-empty.png) no-repeat center center;
+  background-size: 80%;
+}
+.main .right .noticesContainer .mainContainer .empty.search {
+  background: url(../images/search_empty.png) no-repeat center center;
+  background-size: 80%;
+}
+.main .right .noticesContainer .mainContainer .empty span {
+  position: relative;
+  font-size: 14px;
+  top: 100%;
+}
+.main .right .noticesContainer .table {
+  width: 100%;
+}
+.main .right .noticesContainer .cell {
+  box-sizing: border-box;
+}
+.main .right .detailPanel {
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  width: 400px;
+  right: -400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  transition: right 0.5s;
+}
+.main .right .detailPanel.flip {
+  right: 0;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.1);
+}
+.main .right .detailPanel .header {
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  padding: 0 10px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.1);
+}
+.main .right .detailPanel .detailContent {
+  font-size: 12px;
+  padding: 10px 15px;
+  flex: 1;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.main .right .detailPanel .detailContent label {
+  display: block;
+  line-height: 1;
+  margin-bottom: 10px;
+  min-height: 12px;
+}
+.main .right .detailPanel .detailContent .value {
+  color: #3399f3;
+}
+.main .right .detailPanel .detailContent .section {
+  margin-right: 5px;
+  line-height: 1.3;
+}
+.main .right .detailPanel .detailContent .sectionLabel {
+  float: left;
+}
+.main .right .detailPanel .detailContent .sections {
+  margin-left: 48px;
+  word-break: break-word;
+}
+.main .right .detailPanel .detailContent notice-item {
+  width: 270px;
+  margin-top: 0;
+}
+.main .right .detailPanel .detailContent notice-item .createTime {
+  visibility: hidden;
+}
+.main .right .detailPanel .detailContent notice-item .content {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+  border: solid 1px #c3c3c3;
+}
+.main .right .detailPanel .detailContent notice-item .content .cover {
+  height: 138px;
+  box-sizing: border-box;
+}
+.main .right .detailPanel .detailContent notice-item .content .footer {
+  background-color: inherit;
+  border: none;
+}
+.main .right .detailPanel .detailContent notice-item .content .spliter {
+  display: none;
+}
+.main .right .detailPanel .detailContent notice-item .content .summary {
+  margin-bottom: 0;
+}
+.main .right .detailPanel .detailContent .bottomBtns {
+  margin-top: 40px;
+  text-align: center;
+}
+.main .right .detailPanel .detailContent .bottomBtns button {
+  width: 100px;
+  height: 28px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  line-height: 1.5;
+  color: #3399f3;
+  cursor: pointer;
+}
+.main .right .detailPanel .detailContent .bottomBtns .deleteBtn,
+.main .right .detailPanel .detailContent .bottomBtns .editBtn {
+  margin-right: 20px;
+  border: solid 1px #3399f3;
+}
+.main .right .detailPanel .detailContent .bottomBtns .deleteBtn:hover,
+.main .right .detailPanel .detailContent .bottomBtns .editBtn:hover {
+  background-color: #3399f3;
+  color: #fff;
+}
+.main .right .detailPanel .detailContent .bottomBtns .deleteBtn:active,
+.main .right .detailPanel .detailContent .bottomBtns .editBtn:active {
+  background-color: #237dcc;
+}
+.main .right .detailPanel .detailContent .bottomBtns .deleteBtn.disabled,
+.main .right .detailPanel .detailContent .bottomBtns .editBtn.disabled {
+  color: #777;
+  background-color: #ededed;
+  border: solid 1px #c3c3c3;
+  cursor: default;
+}
+.main .right .detailPanel .detailContent .bottomBtns .publishBtn {
+  background-color: #3399f3;
+  color: #fff;
+  border: none;
+}
+.main .right .detailPanel .detailContent .bottomBtns .publishBtn:hover {
+  background-color: #237dcc;
+}
+.main .right .detailPanel .detailContent .bottomBtns .publishBtn:active {
+  background-color: #1764a7;
+}
+.main .right .detailPanel .detailContent .bottomBtns .publishBtn.disabled {
+  background-color: #c3c3c3;
+  color: #777;
+  cursor: default;
+}
+.publishScopeDiv {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.publishScopeDiv .scopeContainer {
+  width: 438px;
+  height: 240px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.publishScopeDiv .title {
+  height: 40px;
+  line-height: 20px;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fff;
+}
+.publishScopeDiv .title .close {
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+  z-index: 10;
+  height: 15px;
+  width: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  right: 5px;
+  background-image: url(../images/icon_close.png);
+  background-size: 8px;
+}
+.publishScopeDiv .title .close:hover {
+  background-image: url(../images/icon_close_hover.png);
+  background-size: 15px;
+}
+.publishScopeDiv .spliter {
+  height: 3px;
+  opacity: 0.1;
+  background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+}
+.publishScopeDiv .content {
+  flex: 1;
+  overflow: auto;
+  padding: 10px 10px 0 10px;
+}
+.publishScopeDiv .section {
+  float: left;
+  background-color: #fff;
+  color: #666;
+  padding: 6px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.fa {
+  font-family: FontAwesome;
+}
+.modal {
+  position: fixed;
+  width: 100%;
+  height: calc(100% - 30px);
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.modalbackground {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #DDD;
+  opacity: 0.5;
+}
+.accountPage {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.accountPage .pageContent {
+  opacity: 1;
+  border: solid 1px #666;
+  border-radius: 6px;
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  overflow: hidden;
+}
+.accountPage .pageContent .pageItem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.accountPage .pageContent .pageItem .title {
+  border-bottom: solid 1px #666;
+  line-height: 44px;
+  height: 44px;
+  width: 100%;
+  background-color: #DDD;
+  font-size: 16px;
+}
+.accountPage .pageContent .pageItem .title .backBtn {
+  float: left;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px;
+  line-height: 16px;
+  cursor: pointer;
+}
+.accountPage .pageContent .pageItem .title .mainTitle {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+.accountPage .pageContent .pageItem .userContent {
+  height: 755px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.accountPage .pageContent .pageItem .userContent .user {
+  line-height: 40px;
+  height: 40px;
+  text-align: left;
+  padding: 0 20px;
+}
+.accountPage .pageContent .pageItem .userContent .user .detaiBtn {
+  cursor: pointer;
+  float: right;
+  line-height: 14px;
+  font-size: 14px;
+  background-color: #000;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 5px 15px;
+  margin-right: 40px;
+  top: 8px;
+  position: relative;
+}
+.accountPage .pageContent .pageItem .userContent .user .detaiBtn:hover {
+  background-color: #4f6f7f;
+}
+.accountPage .pageContent .pageItem .userDetail {
+  padding: 0 15px;
+}
+.accountPage .pageContent .pageItem .userDetail .userTitle {
+  margin-top: 20px;
+  padding: 15px 0;
+}
+.accountPage .pageContent .pageItem .userDetail .userName {
+  padding: 15px 0;
+  height: 25px;
+}
+.accountPage .pageContent .pageItem .userDetail .userName input {
+  height: 20px;
+  width: 300px;
+}
+.accountPage .pageContent .pageItem .footer {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  padding: 10px 0;
+  width: 100%;
+  left: 0;
+}
+.accountPage .pageContent .pageItem .footer .btn {
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+  line-height: 14px;
+  font-size: 14px;
+  background-color: #000;
+  color: #FFFFFF;
+  border-radius: 4px;
+  padding: 5px 15px;
+  margin-right: 40px;
+  top: 8px;
+  position: relative;
+}
+.accountPage .pageContent .pageItem .footer .btn:hover {
+  background-color: #4f6f7f;
+}
+.accountPage .pageContent .closeBtn {
+  line-height: 30px;
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  top: 0px;
+  right: 10px;
+}
+.accounts {
+  margin-left: 33px;
+  min-height: 32px;
+}
+.accounts .selectedAccount {
+  line-height: 20px;
+  cursor: pointer;
+  display: inline-block;
+  max-width: 200px;
+  position: relative;
+  padding: 5px 35px 0 15px;
+  border: solid 1px transparent;
+  border-radius: 2px;
+}
+.accounts .selectedAccount:hover {
+  border: solid 1px #dadada;
+}
+.accounts .selectedAccount span {
+  max-width: 116px;
+}
+.accounts .selectedAccount i {
+  position: absolute;
+  font-size: 14px;
+  color: #c3c3c3;
+  right: 20px;
+  top: 4px;
+}
+.accounts .selectedAccount i.fa-sort-asc {
+  top: 11px!important;
+}
+.accounts .accountWrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  /* height: 90%; */
+  top: 0;
+  bottom: 30px;
+  z-index: 1000000;
+}
+.accounts .accountWrapper .accountOptions {
+  position: absolute;
+  left: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: #fff;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 45px;
+}
+.accounts .accountWrapper .accountOptions .option {
+  cursor: pointer;
+  line-height: 40px;
+  padding: 0 17px 0 9px;
+  width: 184px;
+  height: 40px;
+  display: flex;
+  position: relative;
+}
+.accounts .accountWrapper .accountOptions .option .check {
+  display: inline-block;
+  float: left;
+  line-height: 40px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+.accounts .accountWrapper .accountOptions .option:hover {
+  background-color: #4F667B;
+  color: #fff;
+}
+.accounts .accountWrapper .accountOptions .option:hover .editor i {
+  color: #fff;
+  border-bottom: solid 1px #fff;
+  background: url(../images/edit-select.svg) no-repeat center center;
+}
+.accounts .accountWrapper .accountOptions .option:hover .confirm {
+  background-color: #FFF;
+  color: #03111f;
+}
+.accounts .accountWrapper .accountOptions .option:hover input {
+  color: #FFF;
+}
+.accounts .accountWrapper .accountOptions .option span {
+  padding: 0 9px 0 5px;
+  float: left;
+  width: 143px;
+}
+.accounts .accountWrapper .accountOptions .option input {
+  max-width: 116px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: #03111f;
+  font-size: 14px;
+  font-family: "微软雅黑", "Microsoft YaHei", "Tahoma", "Hiragino Sans GB", "STHeiti", "WenQuanYi Micro Hei", "SimSun", "sans-serif" !important;
+}
+.accounts .accountWrapper .accountOptions .option .confirm {
+  width: 48px;
+  height: 25px;
+  position: absolute;
+  right: 10px;
+  background-color: #4F667B;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #FFFFFF;
+  top: 7px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.accounts .accountWrapper .accountOptions .option .editor {
+  position: relative;
+  float: right;
+  line-height: 40px;
+  margin-left: 10px;
+}
+.accounts .accountWrapper .accountOptions .option .editor i {
+  color: #c3c3c3;
+  border-bottom: solid 1px #ededed;
+  background: url(../images/edit.png) no-repeat center center;
+  background-size: 12px;
+  width: 15px;
+  display: inline-block;
+  line-height: 1;
+}
+.accounts .accountWrapper .accountOptions .option .invisible {
+  opacity: 0;
+}
+.boxShadow {
+  box-shadow: 0 0 5px #c1c1c1;
+}
+.boxBottomShadow {
+  box-shadow: 0 1px 2px #ccc;
+}
+.alert {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  z-index: 100000;
+  top: 0;
+}
+.alert .alertContainer {
+  position: relative;
+  background-color: #fff;
+  color: #03111f;
+  width: 360px;
+  min-width: 300px;
+  margin: auto;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  height: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+}
+.alert .alertContainer .alertTitle {
+  font-weight: bold;
+}
+.alert .alertContainer .alertMsg {
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-left: 12px;
+}
+.alert .alertContainer .alertMsg span {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+}
+.alert .alertContainer .bottomBtns button {
+  cursor: pointer;
+  width: 80px;
+  float: right;
+  height: 32px;
+  border: none;
+  border-radius: 2px;
+  margin-left: 10px;
+  font-family: inherit;
+}
+.alert .alertContainer .bottomBtns .confirmBtn {
+  background: #3399f3;
+  color: #fff;
+}
+.alert .alertContainer .bottomBtns .cancelBtn {
+  background: #ededed;
+  color: #03111f;
+}
+.sendSuccess {
+  height: 40px;
+  width: 515px;
+  background-color: #71aee2;
+  position: fixed;
+  top: 46px;
+  left: 50%;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: all linear 0.5s;
+}
+.sendSuccess.ng-hide {
+  opacity: 0;
+}
+.sendSuccess span {
+  font-size: 12px;
+  color: #fff;
+  line-height: 40px;
+  background-size: 20px;
+  padding-left: 16px;
+}
+.publishEnd header {
+  height: 49px;
+  line-height: 49px;
+  border-bottom: solid 1px #ededed;
+  text-align: left;
+  padding-left: 30px;
+  background-color: #fff;
+}
+.publishEnd header .help {
+  float: right;
+  margin-right: 90px;
+  cursor: pointer;
+}
+.publishEnd .menu {
+  background-color: #fff;
+}
+.publishEnd .menu p {
+  height: 50px;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+}
+.publishEnd .menu p.selected {
+  background-color: #71aee2;
+  color: #fff;
+}
+.publishEnd .menu p a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  padding-left: 45px;
+  box-sizing: border-box;
+}
+.publishEnd .menu .account {
+  background-image: url('../images/account.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 24px;
+}
+.publishEnd .menu .account.selected {
+  background-image: url('../images/account_selected.png');
+}
+.publishEnd .menu .notice {
+  background-image: url('../images/notice.png');
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.publishEnd .menu .notice.selected {
+  background-image: url('../images/notice_selected.png');
+}
+.publishEnd .menu .setting {
+  background: url('../images/setting.png');
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.publishEnd .menu .setting.selected {
+  background-image: url('../images/setting_selected.png');
+}
+.publishEnd .container {
+  position: absolute;
+  bottom: 3px;
+  top: 50px;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  display: flex;
+}
+.publishEnd .container .left {
+  width: 130px;
+  border-right: solid 1px #d8d8d8;
+  display: block;
+  box-sizing: border-box;
+}
+.publishEnd .container .right {
+  flex: 1;
+  position: relative;
+}
+.publishEnd .spinnerloading1 {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.publishEnd .help_panel {
+  position: fixed;
+  z-index: 3;
+  right: 15px;
+  background-color: #fff;
+  width: 393px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  min-height: 255px;
+  transform: translateY(-5px);
+}
+.publishEnd .help_panel:before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  right: 84px;
+  top: -3px;
+  height: 7px;
+  width: 7px;
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(45deg);
+}
+.publishEnd .help_panel:after {
+  content: "";
+  position: absolute;
+  right: 82px;
+  top: 0;
+  color: #fff;
+  width: 15px;
+  height: 10px;
+  background-color: #fff;
+  z-index: 1;
+}
+.publishEnd .help_panel .help_header {
+  list-style-type: none;
+  display: inline-grid;
+  padding: 0 0 0 30px;
+  margin: 0;
+  box-sizing: border-box;
+  border-bottom: solid 1px #d8d8d8;
+  height: 40px;
+}
+.publishEnd .help_panel .help_header li {
+  float: left;
+  color: #777;
+  line-height: 20px;
+  margin: 0 30px 0 0;
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+.publishEnd .help_panel .help_header li.selected {
+  border-bottom: solid 2px #71aee2;
+}
+.publishEnd .help_panel .section_list li {
+  line-height: 32px;
+  cursor: pointer;
+}
+.publishEnd .help_panel .detail {
+  padding: 15px 10px 20px 15px;
+}
+.publishEnd .help_panel .detail h3 {
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+  line-height: 1.7;
+}
+.publishEnd .help_panel .detail p {
+  margin: 5px 0 0 0;
+  line-height: 2.1;
+}
+#accountsPage .container .right {
+  padding: 15px 0;
+}
+#accountsPage .container .right .tops {
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: -15px;
+  border-bottom: solid 1px #dadada;
+  box-sizing: border-box;
+}
+#accountsPage .container .right .accountsContainer {
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  padding-top: 15px;
+  top: 50px;
+  right: 3px;
+  left: 0;
+}
+#accountsPage .container .right .managementContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 3px;
+  bottom: 3px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+}
+#accountsPage .container .right .managementContainer header {
+  padding: 0;
+  text-align: center;
+}
+#accountsPage .container .right .managementContainer header .fa {
+  font-size: 40px;
+  line-height: 50px;
+  color: #666;
+  left: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+#accountsPage .container .right .managementContainer .accountSection {
+  font-size: 12px;
+}
+#accountsPage .container .right .managementContainer .accountSection .btn {
+  width: 70px;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  border-radius: 2px;
+  text-align: center;
+}
+#accountsPage .container .right .managementContainer .accountSection .btn.update {
+  background-color: #3399f3;
+  color: #fff;
+  margin-right: 10px;
+}
+#accountsPage .container .right .managementContainer .accountSection .btn.cancel {
+  background-color: #ffffff;
+  border: solid 1px #adadad;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv {
+  padding: 20px;
+  height: 310px;
+  box-sizing: border-box;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .avatarContainer {
+  float: left;
+  width: 250px;
+  height: 270px;
+  box-sizing: border-box;
+  border-right: solid 1px #c3c3c3;
+  text-align: center;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .avatarContainer .top {
+  font-size: 12px;
+  line-height: 1;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .avatarContainer .top .tip {
+  margin-top: 10px;
+  color: #777;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .avatarContainer .options {
+  clear: both;
+  margin-top: 40px;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .avatarContainer .avatarImage {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 42px;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .avatarContainer .avatarImage img {
+  width: 100%;
+  height: 100%;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer {
+  margin-left: 250px;
+  padding-left: 20px;
+  font-size: 12px;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .tip {
+  color: #777;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .customizeTitle {
+  margin-left: 10px;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .customizeWrapper {
+  padding: 10px;
+  display: inline-block;
+  margin-top: 5px;
+  float: left;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .customizeWrapper.selected {
+  background: url(../images/account_icon_selected.png) no-repeat center center;
+  background-size: 100%;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .customizeOption {
+  display: inline-block;
+  line-height: 70px;
+  float: left;
+  color: #3399f3;
+  margin-left: 15px;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .customizeOption a {
+  margin: 5px;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .customizeOption a span {
+  cursor: pointer;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .customizeOption .splitter {
+  border-right: solid 1px #c3c3c3;
+  height: 12px;
+  display: inline-block;
+  top: 7px;
+  position: relative;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .customizeSet {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: url(../images/avatar_upload.png) no-repeat top left;
+  background-size: 100%;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .icons {
+  width: 300px;
+  height: 190px;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .icons .iconWrapper {
+  padding: 10px;
+  display: inline-block;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .icons .iconWrapper:hover {
+  background: url(../images/account_icon_hover.png) no-repeat center center;
+  background-size: 100%;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .icons .iconWrapper.selected {
+  background: url(../images/account_icon_selected.png) no-repeat center center;
+  background-size: 100%;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .icons .iconWrapper .iconDiv {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  overflow: hidden;
+  float: left;
+  cursor: pointer;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .icons .iconWrapper .iconDiv img {
+  width: 100%;
+}
+#accountsPage .container .right .managementContainer .accountSection .avartarDiv .iconsContainer .icons:after {
+  content: "";
+  clear: both;
+}
+#accountsPage .container .right .managementContainer .accountSection .nameDiv {
+  margin: 0 20px 0 50px;
+  border-top: solid 1px #dadada;
+  border-bottom: solid 1px #dadada;
+  padding: 15px 10px;
+}
+#accountsPage .container .right .managementContainer .accountSection .nameDiv label {
+  float: left;
+}
+#accountsPage .container .right .managementContainer .accountSection .nameDiv .nameSet {
+  margin-left: 135px;
+}
+#accountsPage .container .right .managementContainer .accountSection .nameDiv .nameSet .updateNameBtn {
+  float: right;
+  color: #3399f3;
+  height: 18px;
+  line-height: 18px;
+}
+#accountsPage .container .right .managementContainer .accountSection .nameDiv .nameSet .nameUpdate input {
+  width: 360px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: solid 1px #3399f3;
+  padding-left: 5px;
+  font-family: inherit;
+}
+#accountsPage .container .right .managementContainer .accountSection .nameDiv .nameSet .nameUpdate .btns {
+  margin-top: 10px;
+}
+#accountsPage .container .right .managementContainer .accountSection .scopes,
+#accountsPage .container .right .managementContainer .accountSection .editors,
+#accountsPage .container .right .managementContainer .accountSection .warning {
+  margin: 0 20px 0 50px;
+  padding: 15px 10px;
+}
+#accountsPage .container .right .managementContainer .accountSection .scopes label,
+#accountsPage .container .right .managementContainer .accountSection .editors label,
+#accountsPage .container .right .managementContainer .accountSection .warning label {
+  float: left;
+}
+#accountsPage .container .right .managementContainer .accountSection .scopes .sections,
+#accountsPage .container .right .managementContainer .accountSection .editors .sections,
+#accountsPage .container .right .managementContainer .accountSection .warning .sections {
+  margin-left: 135px;
+}
+#accountsPage .container .right .managementContainer .accountSection .scopes .sections .section,
+#accountsPage .container .right .managementContainer .accountSection .editors .sections .section,
+#accountsPage .container .right .managementContainer .accountSection .warning .sections .section {
+  margin-right: 10px;
+}
+#accountsPage .container .right .managementContainer .accountSection .warning {
+  padding: 0 10px;
+  color: #a12121;
+}
+#accountsPage .container section {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px 40px 20px;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+#accountsPage .container section div {
+  display: inline-block;
+}
+#accountsPage .container section .avartarDiv {
+  display: block;
+  height: 80px;
+  overflow: hidden;
+  width: 80px;
+  border-radius: 50%;
+  margin: 0 10px;
+  border: solid 2px transparent;
+}
+#accountsPage .container section .avartarDiv:hover {
+  border: solid 2px #3399f3;
+}
+#accountsPage .container section .avartarDiv img {
+  width: 100%;
+  height: 100%;
+}
+#accountsPage .container section .nameDiv {
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+}
+#accountsPage .container section .tips {
+  position: absolute;
+  width: 392.9px;
+  height: 126px;
+  border-radius: 3px;
+  background-color: #3399f3;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24);
+  color: #fff;
+  top: 15px;
+  left: 110px;
+  z-index: 1;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  background-image: url(../images/set_tooltip.png);
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+}
+#accountsPage .container section .tips:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 5px 0;
+  border-color: transparent #3399f3 transparent transparent;
+  position: absolute;
+  left: -4px;
+  top: 30px;
+  transform: translateY(-50%);
+}
+#accountsPage .container section .tips .message {
+  display: block;
+  margin-top: 10px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+}
+#accountsPage .container section .tips .goToSetting {
+  text-decoration: none;
+  color: #3399f3;
+  width: 110px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  /* border: solid 1px #3399f3; */
+  display: block;
+  float: right;
+  line-height: 30px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+#accountsPage .container section .tips .note {
+  font-size: 12px;
+  clear: both;
+  display: block;
+  text-align: right;
+  opacity: 0.5;
+}
+.management .right {
+  background-color: #fff;
+}
+.receiverView {
+  padding: 0 3px 3px 0;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  color: #03111f;
+  background-color: #f5f5f5;
+}
+.receiverView .left {
+  overflow-x: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.receiverView .left .header {
+  position: relative;
+  line-height: 50px;
+  height: 50px;
+  padding: 0 20px;
+  border-bottom: solid 1px #c3c3c3;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.receiverView .left .accountsDiv {
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  top: 71px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+}
+.receiverView .left .accountsDiv .spinnerloading1 {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+}
+.receiverView .left .accountsDiv .accountWrapper {
+  display: flex;
+  height: 70px;
+  box-sizing: border-box;
+  padding: 15px 20px 0 20px;
+  cursor: pointer;
+  width: 380px;
+  position: relative;
+  margin: auto;
+  border: solid 1px #ededed;
+  border-bottom: none;
+  background-color: #fff;
+}
+.receiverView .left .accountsDiv .accountWrapper:hover {
+  background-color: #fffff3;
+}
+.receiverView .left .accountsDiv .accountWrapper.last {
+  border-bottom: solid 1px #ededed;
+}
+.receiverView .left .accountsDiv .accountWrapper .avartarDiv {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 20px 0 10px;
+}
+.receiverView .left .accountsDiv .accountWrapper .avartarDiv img {
+  width: 100%;
+}
+.receiverView .left .accountsDiv .accountWrapper .nameDiv {
+  flex: 1;
+}
+.receiverView .left .accountsDiv .accountWrapper .nameDiv span {
+  display: block;
+}
+.receiverView .left .accountsDiv .accountWrapper .nameDiv .message {
+  font-size: 12px;
+  line-height: 2;
+  color: #666;
+}
+.receiverView .left .accountsDiv .accountWrapper .restDiv {
+  padding-right: 5px;
+}
+.receiverView .left .accountsDiv .accountWrapper .restDiv .time {
+  font-size: 10px;
+  color: #999;
+}
+.receiverView .left .accountsDiv .accountWrapper .restDiv .badge {
+  text-align: right;
+  display: block;
+  font-size: 12px;
+  float: right;
+}
+.receiverView .left .accountsDiv .accountWrapper .restDiv .badge span {
+  top: 5px;
+  position: relative;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f96868), to(#d54a4a));
+  border-radius: 50%;
+  color: #fff;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  display: block;
+  line-height: 1.3;
+  text-align: center;
+}
+.receiverView .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #dadada;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 3px;
+  right: 0;
+  padding: 0;
+}
+.receiverView .right .top {
+  min-height: 50px;
+  padding: 0 20px 0 40px;
+  border-bottom: solid 1px #c3c3c3;
+  box-sizing: border-box;
+  line-height: 50px;
+  text-align: left;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.receiverView .right .top span {
+  line-height: 54px;
+}
+.receiverView .right .top .back {
+  font-size: 24px;
+  color: #c3c3c3;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+  left: 20px;
+  position: absolute;
+}
+.receiverView .right .mainContainer {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  margin-right: 3px;
+}
+.receiverView .right .mainContainer .showMoreDiv {
+  display: block;
+}
+.receiverView .right .mainContainer .showMoreDiv .moreMsg {
+  text-align: center;
+  width: 6em;
+  padding-left: 20px;
+  margin: 5px auto;
+  font-size: 12px;
+  color: #8199ac;
+  background: url(../images/moreMsg.png) no-repeat 0 center;
+  display: block;
+  clear: both;
+  cursor: pointer;
+}

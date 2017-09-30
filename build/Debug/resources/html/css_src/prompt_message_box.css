@@ -1,0 +1,159 @@
+
+.btnCls, .btnCls:hover {
+    border-radius: 10px;
+    background: #cff73d; 
+    background: -moz-linear-gradient(top,  #f0ffc3 0%, #cff73d 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0ffc3), color-stop(100%,#cff73d)); 
+    background: -webkit-linear-gradient(top,  #f0ffc3 0%,#cff73d 100%); 
+    background: -o-linear-gradient(top,  #f0ffc3 0%,#cff73d 100%); 
+    background: -ms-linear-gradient(top,  #f0ffc3 0%,#cff73d 100%); 
+    background: linear-gradient(to bottom,  #f0ffc3 0%,#cff73d 100%); 
+    filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#f0ffc3', endColorstr='#cff73d',GradientType=0 ); 
+    border: 1px solid #364b4d;
+    box-shadow: 0px 3px 8px #536803 !important;
+}
+
+
+#modOverlay {
+    position:fixed; 
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    /*background:#000;*/
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    z-index:1000;
+}
+
+#modalWin {
+    position:absolute;				
+    background:white;				
+    border:none;
+    border-radius:0 0 2px 2px;
+    padding: 20px 20px 20px 10px;
+    z-index:1000;
+    box-shadow: 0px 3px 8px #b9bab4 !important;
+}
+
+#modContent {
+    border-radius:8px;
+    /*background:#fff;*/
+    padding: 0 10px 10px 0;
+    height:auto;
+    width:310px;   		
+}
+
+#modContent h3{
+    background: none repeat scroll 0 0 white;
+    border-radius: 2px 2px 0 0;
+    color: #272d2f;
+    font-size: 16px;
+    font-weight: bolder;
+    left: 0;
+    margin: 0;
+    padding: 30px 5px 10px 30px;
+    position: absolute;
+    top: -36px;
+    width: 300px;
+    
+}
+
+#modContent .title {
+	font-weight: bold;
+}
+#modContent p{
+    margin: 0;
+    padding: 0 0 10px 10px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+/*
+button {
+    border:solid 1px #565656;
+    margin: 8px 7px 0 0;
+    cursor:pointer;
+    font-size:12px;
+    padding:5px;
+    border:none;
+    border-radius:5px!important;	
+}
+*/
+
+#modalWin .btn{
+    width: auto;
+    min-width: 80px;
+	padding: 6px 26px 7px 26px;	
+	border-radius: 2px;
+	border: none;
+	cursor: pointer;
+	float: right;
+	margin-left: 10px;
+	font-size: 14px;
+	outline: none;
+}
+
+#modalWin .btn-ok{
+	color: white;
+}
+#modalWin .btn-cancel{
+	background: #ededed;
+}
+#modalWin .btn-cancel:hover{
+	background: #eeeeee;
+}
+#modalWin .btn-cancel:active{
+	background: #d4d4d4;
+}
+#modalWin .btn-green {
+    background: #4cd964;
+}
+#modalWin .btn-green:hover {
+    background: #5edc73;
+}
+#modalWin .btn-green:active {
+    background: #44c259;
+}
+#modalWin .btn-blue {
+    background: #4f667b;
+}
+#modalWin .btn-blue:hover {
+    background: #607588;
+}
+#modalWin .btn-blue:active {
+    background: #465b6e;
+}
+#modalWin .btn-light-blue {
+    background: #3399f3;
+}
+#modalWin .btn-light-blue:hover {
+    background: #237dcc;
+}
+#modalWin .btn-light-blue:active {
+    background: #1764a7;
+}
+#modalWin .btn-red {
+    background: #f96868;
+}
+#modalWin .btn-red:hover {
+    background: #f97777;
+}
+#modalWin .btn-red:active {
+    background: #df5d5d;
+}
+#modalWin .btn-yellow {
+    background: #ede90e;
+}
+#modalWin .btn-yellow:hover {
+    background: #ede90e;
+}
+#modalWin .btn-yellow:active {
+    background: #ede90e;
+}
+#clsBtn {				
+    position:absolute;
+    top:-40px;
+    right:-3px;
+    display:none;
+}

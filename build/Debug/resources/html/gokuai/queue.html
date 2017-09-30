@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="goukuai.queue" prevent-drag-drop>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link rel="stylesheet" href="styles/vendor-bundle.css"/>
+    <link rel="stylesheet" href="styles/queue-bundle.css"/>
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body ng-controller="initCtrl as vm" disable-context-menu disable-backspace>
+    <div class="window-box">
+        <div class="header">
+            <span>传输队列</span>
+            <span class="fa fa-times icon-close" ng-click="vm.closeWin()"></span>
+        </div>
+        <div class="main" ng-cloak>
+            <div class="left-side">
+                <ul class="nav-wrapper">
+                    <li>
+                        <a class="nav-item nav-upload" ui-sref="upload" ui-sref-active="active">
+                            <span>上传</span>
+                            <span ng-cloak>({{vm.uploadCount}})</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-item nav-download" ui-sref="download" ui-sref-active="active">
+                            <span>下载</span>
+                            <span ng-cloak>({{vm.downloadCount}})</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-side">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+<script src="scripts/vendor-bundle.js"></script>
+<script src="scripts/queue-bundle.js"></script>
+</body>
+</html>

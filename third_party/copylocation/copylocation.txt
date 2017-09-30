@@ -1,0 +1,74 @@
+Copy Location Shell Extension
+
+
+This shell extension adds the ability to copy file and
+folder names from the Windows Explorer window to the
+clipboard.
+Simply select the file(s) whose name you want to copy,
+right-click and select "Copy File Path" or "Copy File Name"
+from the context menu. Then paste to any editor.
+Copy File Path - copies the entire path to the file.
+Copy File Name - copies only the file name without the folder.
+
+
+Setup
+
+1. Unzip CopyLocation.zip to the folder where you want to
+   install utility (e.g., C:\Windows).
+2. Go to the installation folder and double-click on
+   install.bat or install64.bat, depending on the type of
+   your Windows: 32 or 64-bit.
+3. If you wish, you can delete the .bat files and the .dll
+   of the other Windows type.
+
+Install.bat registers CopyLocation.dll in the system.
+
+Alternatively you can:
+1. Copy CopyLocation.dll to the installation folder (e.g.,
+   C:\Windows). Use CopyLocation64.dll if you're running a
+   64-bit version of Windows.
+2. From the Start menu select Run...
+3. Type "regsvr32.exe C:\Windows\CopyLocation.dll" (or
+   CopyLocation64.dll) and press OK. Specify the exact
+   installation folder.
+
+Note: you have to have administrative rights to run regsvr32.exe
+
+To uninstall the shell extension:
+1. From the Start menu select Run...
+2. Type "regsvr32.exe /u C:\Windows\CopyLocation.dll" and
+   press OK (specify the exact installation folder)
+3. Delete CopyLocation.dll from the installation folder.
+   You may need to reboot before you can delete the DLL.
+
+
+History
+
+Version 1.1.0
+  Porting to 64-bit Windows.
+
+Version 1.00.1
+  Some users had minor compilation problems.
+
+Version 1.00.0
+  First release outside my small beta tester comunity.
+
+
+Freeware
+
+This software is free. It is distributed with the
+source code and you are encouraged to do anything you
+want with it. If you do anything interesting, I'd be
+happy to hear about it.
+
+
+Contacting me
+
+For comments, suggestions, improvements, bug reports,
+etc. you can contact me at:
+
+e-mail: grebulon@grebulon.com
+web:    http://grebulon.com
+
+Have fun
+Itay Szekely

@@ -1,0 +1,24 @@
+﻿Build started 2016/6/8 14:06:07.
+     1>Project "E:\mywork\client\PC2.0TRUNK\PC2.0\src\UCPlugin\build\windows\UCPlugin\UCPlugin\UCPlugin.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\..\..\include /I..\..\..\..\..\..\third_party\pepper_46\include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D UCPLUGIN_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\src\PluginPipe.cpp ..\..\..\..\src\StringConvert.cpp ..\..\..\..\src\PluginInstance.cpp ..\..\..\..\src\UCPlugin.cpp ..\..\..\..\src\WindowManger.cpp
+         PluginPipe.cpp
+         StringConvert.cpp
+         PluginInstance.cpp
+         UCPlugin.cpp
+         WindowManger.cpp
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\bin\Release\UCPlugin.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\bin\Release\UCPlugin.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\bin\Release\UCPlugin.lib" /MACHINE:X86 /SAFESEH /DLL Release\PluginPipe.obj
+         Release\StringConvert.obj
+         Release\PluginInstance.obj
+         Release\UCPlugin.obj
+         Release\WindowManger.obj
+            Creating library ..\bin\Release\UCPlugin.lib and object ..\bin\Release\UCPlugin.exp
+         Generating code
+         Finished generating code
+         UCPlugin.vcxproj -> E:\mywork\client\PC2.0TRUNK\PC2.0\src\UCPlugin\build\windows\UCPlugin\UCPlugin\..\bin\Release\UCPlugin.dll
+     1>Done Building Project "E:\mywork\client\PC2.0TRUNK\PC2.0\src\UCPlugin\build\windows\UCPlugin\UCPlugin\UCPlugin.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.47

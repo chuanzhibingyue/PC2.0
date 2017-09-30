@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\third_party\pugixml\src\pugixml.cpp" />
+    <ClCompile Include="..\..\src\assist\AudioServiceJSEventAssist.cpp" />
+    <ClCompile Include="..\..\src\assist\AudioServiceStrategyAssist.cpp" />
+    <ClCompile Include="..\..\src\assist\FileTransferServiceJSEventAssist.cpp" />
+    <ClCompile Include="..\..\src\assist\JSEventAssist.cpp" />
+    <ClCompile Include="..\..\src\assist\PbxServiceJSEventAssist.cpp" />
+    <ClCompile Include="..\..\src\AudioServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\BBSServiceStragegy.cpp" />
+    <ClCompile Include="..\..\src\CalendarServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\CatchScreenServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\ClientScheme.cpp" />
+    <ClCompile Include="..\..\src\ClientServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\Configuration.cpp" />
+    <ClCompile Include="..\..\src\ContactServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\SharingServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\ExternalServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\FileTransferServiceStratepy.cpp" />
+    <ClCompile Include="..\..\src\gkclient\GkClient.cpp" />
+    <ClCompile Include="..\..\src\gkclient\GkClientMessage.cpp" />
+    <ClCompile Include="..\..\src\GroupServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\IMServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\MicroblogServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\OpenApiServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\PbxServiceStratepy.cpp" />
+    <ClCompile Include="..\..\src\SearchServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\ServiceObjectConversion.cpp" />
+    <ClCompile Include="..\..\src\SharingWnd.cpp" />
+    <ClCompile Include="..\..\src\SystemService.cpp" />
+    <ClCompile Include="..\..\src\UCClient.cpp" />
+    <ClCompile Include="..\..\src\UCExtension.cpp" />
+    <ClCompile Include="..\..\src\UCManager.cpp" />
+    <ClCompile Include="..\..\src\UpdateServiceStrategy.cpp" />
+    <ClCompile Include="..\..\src\utils\Clipboard.cpp" />
+    <ClCompile Include="..\..\src\utils\CrashHandler.cpp" />
+    <ClCompile Include="..\..\src\utils\Environment.cpp" />
+    <ClCompile Include="..\..\src\utils\FileUtil.cpp" />
+    <ClCompile Include="..\..\src\utils\HTTPProxy.cpp" />
+    <ClCompile Include="..\..\src\utils\Logger.cpp" />
+    <ClCompile Include="..\..\src\utils\NetworkAdapterUtil.cpp" />
+    <ClCompile Include="..\..\src\utils\NetworkMonitor.cpp" />
+    <ClCompile Include="..\..\src\utils\PowerMonitor.cpp" />
+    <ClCompile Include="..\..\src\utils\Thumbnails.cpp" />
+    <ClCompile Include="..\..\src\utils\Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\third_party\pugixml\src\pugiconfig.hpp" />
+    <ClInclude Include="..\..\..\..\third_party\pugixml\src\pugixml.hpp" />
+    <ClInclude Include="..\..\res\resource.h" />
+    <ClInclude Include="..\..\src\assist\AudioServiceJSEventAssist.h" />
+    <ClInclude Include="..\..\src\assist\AudioServiceStrategyAssist.h" />
+    <ClInclude Include="..\..\src\assist\FileTransferServiceJSEventAssist.h" />
+    <ClInclude Include="..\..\src\assist\JSEventAssist.h" />
+    <ClInclude Include="..\..\src\assist\PbxServiceJSEventAssist.h" />
+    <ClInclude Include="..\..\src\AudioServiceStrategy.h" />
+    <ClInclude Include="..\..\src\BBSServiceStragegy.h" />
+    <ClInclude Include="..\..\src\CalendarServiceStrategy.h" />
+    <ClInclude Include="..\..\src\CatchScreenServiceStrategy.h" />
+    <ClInclude Include="..\..\src\ClientScheme.h" />
+    <ClInclude Include="..\..\src\ClientServiceStrategy.h" />
+    <ClInclude Include="..\..\src\Configuration.h" />
+    <ClInclude Include="..\..\src\ContactServiceStrategy.h" />
+    <ClInclude Include="..\..\src\SharingServiceStrategy.h" />
+    <ClInclude Include="..\..\src\ExternalServiceStrategy.h" />
+    <ClInclude Include="..\..\src\FileTransferServiceStrategy.h" />
+    <ClInclude Include="..\..\src\gkclient\GkClient.h" />
+    <ClInclude Include="..\..\src\gkclient\GkClientMessage.h" />
+    <ClInclude Include="..\..\src\gkclient\GkClientTask.h" />
+    <ClInclude Include="..\..\src\GroupServiceStrategy.h" />
+    <ClInclude Include="..\..\src\IMServiceStrategy.h" />
+    <ClInclude Include="..\..\src\MicroblogServiceStrategy.h" />
+    <ClInclude Include="..\..\src\OpenApiServiceStrategy.h" />
+    <ClInclude Include="..\..\src\PbxServiceStrategy.h" />
+    <ClInclude Include="..\..\src\SearchServiceStrategy.h" />
+    <ClInclude Include="..\..\src\ServiceObjectConversion.h" />
+    <ClInclude Include="..\..\src\SharingWnd.h" />
+    <ClInclude Include="..\..\src\SystemService.h" />
+    <ClInclude Include="..\..\src\UCDefs.h" />
+    <ClInclude Include="..\..\src\UCExtension.h" />
+    <ClInclude Include="..\..\src\UCManager.h" />
+    <ClInclude Include="..\..\src\UpdateServiceStrategy.h" />
+    <ClInclude Include="..\..\src\utils\Clipboard.h" />
+    <ClInclude Include="..\..\src\utils\CrashHandler.h" />
+    <ClInclude Include="..\..\src\utils\Environment.h" />
+    <ClInclude Include="..\..\src\utils\FileUtil.h" />
+    <ClInclude Include="..\..\src\utils\HTTPProxy.h" />
+    <ClInclude Include="..\..\src\utils\Logger.h" />
+    <ClInclude Include="..\..\src\utils\NetworkAdapterUtil.h" />
+    <ClInclude Include="..\..\src\utils\NetworkMonitor.h" />
+    <ClInclude Include="..\..\src\utils\PowerMonitor.h" />
+    <ClInclude Include="..\..\src\utils\Thumbnails.h" />
+    <ClInclude Include="..\..\src\utils\Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\res\UCClient.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\res\bee.ico" />
+    <None Include="bee.ico" />
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B2751F79-7ED6-4C7C-A67C-A124E5C654CA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UCClient</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>bee</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>bee</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../../../third_party;../../../../src/CefIntegration/include;../../../../third_party/cef;../../../../third_party/uc_sdk/include;../../../../third_party\uc_sdk\third_party;../../../../third_party/uc_sdk\src\components\parser\msg_parser\include;../../../../third_party/uc_sdk\third_party/thrift/include;../../../../third_party/uc_sdk\src\services;../../../../third_party/uc_sdk\src\services\message_service;../../../../third_party/CatchScreen;../../../../third_party/pugixml/src;../../../../third_party\uc_sdk/third_party/boost/include;../../../../third_party\uc_sdk/third_party/log_manager;../../../../third_party/cximage/include;../../../../third_party\uc_sdk/third_party/common/include;../../../../third_party\libUpdate\Framework\Common\Inc;../../../../third_party\libUpdate\Tang\Common\Inc;../../../../libUpdate\Tang\Common\Support\Inc;../../../../third_party\libUpdate\Source;../../../../third_party/libproxy/include;../../../../third_party/gkclient/include;../../../../third_party\uc_sdk\third_party/rapidjson/include;../../../../third_party/DuiLib/DuiLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>true</MinimalRebuild>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../../../third_party/cef/lib/$(Configuration);../../../../third_party/uc_sdk/build/windows/UCSDK/bin/$(Configuration);../../../../third_party/uc_sdk/third_party\boost\stage\lib\windows;../../../../third_party/CatchScreen/lib;../../../../build/$(Configuration);../../../../third_party/uc_sdk/third_party/log_manager/lib/windows;../../../../third_party/cximage/lib/$(Configuration);../../../../third_party/uc_sdk/third_party/common/lib/windows/$(Configuration);../../../../third_party/libUpdate\lib;../../../../third_party/libproxy/lib/windows/x86;../../../../third_party/gkclient/lib/$(Configuration);../../../../third_party/DuiLib/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>LogManager_d.lib;CefIntegration.lib;libcef.lib;libcef_dll_wrapper.lib;UCSDK_d.lib;capturescreen_d.lib;libAMRPlayer.lib;cximagecrtd.lib;common.lib;msxml2.lib;update_d.lib;libproxy.lib;gkClient.lib;GKCefExtension.lib;DuiLib_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <ImageHasSafeExceptionHandlers>true</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>rd $(OutDir)config\
+md $(OutDir)config\
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\glog_d.dll $(OutDir)glog_d.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\UCSDK_d.dll $(OutDir)UCSDK_d.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\sqlite3.dll $(OutDir)sqlite3.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\zlib_d.dll $(OutDir)zlib_d.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\LogManager_d.dll $(OutDir)LogManager_d.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\UCSDK_d.pdb $(OutDir)UCSDK_d.pdb
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\oncloud2CA.pem $(OutDir)\oncloud2CA.pem
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\Bee2MeetingPlugin_d.dll $(OutDir)\Bee2MeetingPlugin.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\Bee2MeetingPlugin.ini $(OutDir)\Bee2MeetingPlugin.ini
+copy  ..\..\config\bee.config $(OutDir)config\bee.config
+copy  ..\..\..\..\third_party\libproxy\lib\windows\x86\libproxy_d.dll $(OutDir)libproxy.dll
+copy  ..\..\..\..\third_party\libproxy\lib\windows\x86\libproxy_d.pdb $(OutDir)libproxy.pdb
+copy  ..\..\..\..\third_party\uc_sdk\third_party\common\lib\windows\$(Configuration)\common.dll $(OutDir)common.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\common\lib\windows\$(Configuration)\common.pdb $(OutDir)common.pdb
+copy  ..\..\..\..\third_party\uc_sdk\third_party\log_manager\lib\windows\LogManager_d.pdb $(OutDir)LogManager_d.pdb
+copy ..\..\..\..\third_party\pacparser\lib\windows\x86\pacparser.dll $(OutDir)pacparser.dll
+copy ..\..\..\..\third_party\pacparser\lib\windows\x86\libgcc_s_dw2-1.dll $(OutDir)libgcc_s_dw2-1.dll
+copy  ..\..\..\..\third_party\DuiLib\lib\DuiLib_d.dll $(OutDir)DuiLib_d.dll
+copy  ..\..\..\..\third_party\DuiLib\lib\DuiLib_d.pdb $(OutDir)DuiLib_d.pdb
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\gkClient.dll $(OutDir)gkClient.dll
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\gkClient.pdb $(OutDir)gkClient.pdb
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\libcurl.dll $(OutDir)libcurl.dll
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\zlibwapi.dll $(OutDir)zlibwapi.dll
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\libeay32.dll $(OutDir)libeay32.dll
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\ssleay32.dll $(OutDir)ssleay32.dll
+rd $(OutDir)tools\
+md $(OutDir)tools\
+copy  ..\..\..\..\third_party\gkclient\tools\* $(OutDir)tools
+copy  ..\..\..\..\third_party\tools\* $(OutDir)\tools
+rd $(OutDir)Conference\plugin\
+rd $(OutDir)Conference\
+md $(OutDir)Conference\
+md $(OutDir)Conference\plugin\
+copy  ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\* $(OutDir)Conference
+copy  ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\* $(OutDir)Conference\plugin
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\EasiioLibrary.dll $(OutDir)\EasiioLibrary.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avcodec-55.dll $(OutDir)\avcodec-55.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avdevice-55.dll $(OutDir)\avdevice-55.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avfilter-4.dll $(OutDir)\avfilter-4.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avformat-55.dll $(OutDir)\avformat-55.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avutil-52.dll $(OutDir)\avutil-52.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\ezpjsipwrapper.dll $(OutDir)\ezpjsipwrapper.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\postproc-52.dll $(OutDir)\postproc-52.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\SDL2.dll $(OutDir)\SDL2.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\swresample-0.dll $(OutDir)\swresample-0.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\swscale-2.dll $(OutDir)\swscale-2.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\OnvifClientLibrary.dll $(OutDir)\OnvifClientLibrary.dll
+rd $(OutDir)\resources\sharingSkin
+md $(OutDir)\resources\sharingSkin
+copy  ..\..\res\sharingSkin\* $(OutDir)\resources\sharingSkin
+rd $(OutDir)\shellExt\win32
+rd $(OutDir)\shellExt\x64
+rd $(OutDir)\shellExt
+md $(OutDir)\shellExt
+md $(OutDir)\shellExt\win32
+md $(OutDir)\shellExt\x64
+copy  ..\..\..\..\third_party\copylocation\lib\Debug\win32\CopyLocation.dll $(OutDir)\shellExt\win32\CopyLocation.dll
+copy  ..\..\..\..\third_party\copylocation\lib\Debug\x64\CopyLocation.dll $(OutDir)\shellExt\x64\CopyLocation.dll
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../../../third_party;../../../../src/CefIntegration/include;../../../../third_party/cef;../../../../third_party/uc_sdk/include;../../../../third_party\uc_sdk\third_party;../../../../third_party/uc_sdk\src\components\parser\msg_parser\include;../../../../third_party/uc_sdk\third_party/thrift/include;../../../../third_party/uc_sdk\src\services;../../../../third_party/uc_sdk\src\services\message_service;../../../../third_party/CatchScreen;../../../../third_party/pugixml/src;../../../../third_party\uc_sdk/third_party/boost/include;../../../../third_party\uc_sdk/third_party/log_manager;../../../../third_party/cximage/include;../../../../third_party\uc_sdk/third_party/common/include;../../../../third_party\libUpdate\Framework\Common\Inc;../../../../third_party\libUpdate\Tang\Common\Inc;../../../../libUpdate\Tang\Common\Support\Inc;../../../../third_party\libUpdate\Source;../../../../third_party/libproxy/include;../../../../third_party/gkclient/include;../../../../third_party\uc_sdk\third_party/rapidjson/include;../../../../third_party/DuiLib/DuiLib</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>LogManager.lib;CefIntegration.lib;libcef.lib;libcef_dll_wrapper.lib;UCSDK.lib;capturescreen.lib;libAMRPlayer.lib;cximagecrt.lib;common.lib;msxml2.lib;update.lib;libproxy.lib;gkClient.lib;GKCefExtension.lib;DuiLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../../build/$(Configuration);../../../../third_party/cef/lib/$(Configuration);../../../../third_party/uc_sdk/build/windows/UCSDK/bin/$(Configuration);../../../../third_party/uc_sdk/third_party\boost\stage\lib\windows;../../../../third_party/CatchScreen/lib;../../../../third_party/uc_sdk/third_party/log_manager/lib/windows;../../../../third_party/cximage/lib/$(Configuration);../../../../third_party/uc_sdk/third_party/common/lib/windows/$(Configuration);../../../../third_party/libUpdate\lib;../../../../third_party/libproxy/lib/windows/x86;../../../../third_party/gkclient/lib/$(Configuration);../../../../third_party/DuiLib/lib</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>rd $(OutDir)\config\
+md $(OutDir)\config\
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\glog.dll $(OutDir)\glog.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\UCSDK.dll $(OutDir)\UCSDK.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\sqlite3.dll $(OutDir)\sqlite3.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\zlib.dll $(OutDir)\zlib.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\LogManager.dll $(OutDir)\LogManager.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\UCSDK.pdb $(OutDir)\UCSDK.pdb
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\oncloud2CA.pem $(OutDir)\oncloud2CA.pem
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\Bee2MeetingPlugin.dll $(OutDir)\Bee2MeetingPlugin.dll
+copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\$(Configuration)\Bee2MeetingPlugin.ini $(OutDir)\Bee2MeetingPlugin.ini
+copy  ..\..\config\bee.config $(OutDir)\config\bee.config
+copy  ..\..\..\..\third_party\libproxy\lib\windows\x86\libproxy.dll $(OutDir)\libproxy.dll
+copy  ..\..\..\..\third_party\libproxy\lib\windows\x86\libproxy.pdb $(OutDir)\libproxy.pdb
+copy  ..\..\..\..\third_party\uc_sdk\third_party\common\lib\windows\$(Configuration)\common.dll $(OutDir)\common.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\common\lib\windows\$(Configuration)\common.pdb $(OutDir)\common.pdb
+copy  ..\..\..\..\third_party\uc_sdk\third_party\log_manager\lib\windows\LogManager.pdb $(OutDir)\LogManager.pdb
+copy ..\..\..\..\third_party\pacparser\lib\windows\x86\pacparser.dll $(OutDir)\pacparser.dll
+copy ..\..\..\..\third_party\pacparser\lib\windows\x86\libgcc_s_dw2-1.dll $(OutDir)\libgcc_s_dw2-1.dll
+copy  ..\..\..\..\third_party\DuiLib\lib\DuiLib.dll $(OutDir)\DuiLib.dll
+copy  ..\..\..\..\third_party\DuiLib\lib\DuiLib.pdb $(OutDir)\DuiLib.pdb
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\gkClient.dll $(OutDir)\gkClient.dll
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\gkClient.pdb $(OutDir)\gkClient.pdb
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\libcurl.dll $(OutDir)\libcurl.dll
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\zlibwapi.dll $(OutDir)\zlibwapi.dll
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\libeay32.dll $(OutDir)\libeay32.dll
+copy  ..\..\..\..\third_party\gkclient\lib\$(Configuration)\ssleay32.dll $(OutDir)\ssleay32.dll
+rd $(OutDir)\tools\
+md $(OutDir)\tools\
+copy  ..\..\..\..\third_party\gkclient\tools\* $(OutDir)\tools
+copy  ..\..\..\..\third_party\tools\* $(OutDir)\tools
+rd $(OutDir)\Conference\plugin\
+rd $(OutDir)\Conference\
+md $(OutDir)\Conference\
+md $(OutDir)\Conference\plugin\
+copy  ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\release\* $(OutDir)\Conference
+copy  ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\release\plugin\* $(OutDir)\Conference\plugin
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\EasiioLibrary.dll $(OutDir)\EasiioLibrary.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avcodec-55.dll $(OutDir)\avcodec-55.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avdevice-55.dll $(OutDir)\avdevice-55.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avfilter-4.dll $(OutDir)\avfilter-4.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avformat-55.dll $(OutDir)\avformat-55.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avutil-52.dll $(OutDir)\avutil-52.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\ezpjsipwrapper.dll $(OutDir)\ezpjsipwrapper.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\postproc-52.dll $(OutDir)\postproc-52.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\SDL2.dll $(OutDir)\SDL2.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\swresample-0.dll $(OutDir)\swresample-0.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\swscale-2.dll $(OutDir)\swscale-2.dll
+copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\OnvifClientLibrary.dll $(OutDir)\OnvifClientLibrary.dll
+rd $(OutDir)\resources\sharingSkin
+md $(OutDir)\resources\sharingSkin
+copy  ..\..\res\sharingSkin\* $(OutDir)\resources\sharingSkin
+rd $(OutDir)\shellExt\win32
+rd $(OutDir)\shellExt\x64
+rd $(OutDir)\shellExt
+md $(OutDir)\shellExt
+md $(OutDir)\shellExt\win32
+md $(OutDir)\shellExt\x64
+copy  ..\..\..\..\third_party\copylocation\lib\Release\win32\CopyLocation.dll $(OutDir)\shellExt\win32\CopyLocation.dll
+copy  ..\..\..\..\third_party\copylocation\lib\Release\x64\CopyLocation.dll $(OutDir)\shellExt\x64\CopyLocation.dll</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,26 @@
+<div class="file-header">
+    <h1 class="header-name" ng-bind="mount.name"></h1>
+    <div class="header-act">
+        <div class="act-item chat-icon"
+             ng-click="goGroup()" uib-tooltip="库讨论组" ng-if="mount.membercount>1 && mount.entid > 0">
+        </div>
+        <div class="act-item act-item-toggle-member user-icon" ng-hide="mount.orgtype == 20"
+             ng-click="toggleMember($event)" uib-tooltip="库成员" >
+        </div>
+        <div class="act-item more-icon" ng-click="openMenu($event)" uib-tooltip="更多">
+            <ul class="dropdown-menu">
+                <li>
+                    <a ng-click="setLib()" href="javascript:;" ng-if="(mount.entid == 0 && mount.membertype <= 1) || (mount.entid >0 && mount.orgtype != 20)">库设置</a>
+                </li>
+                <li>
+                    <a ng-click="handleMountSync()" href="javascript:;">同步设置</a>
+                </li>
+                <li ng-if="showTrash">
+                    <a ng-click="goTrash()" href="javascript:;">回收站</a>
+                </li>
+                <li><a ng-show="!isTop" ng-click="setTop($event, mount)" href="javascript:;">置顶</a></li>
+                <li><a ng-show="isTop" ng-click="cancelTop($event, mount)" href="javascript:;">取消置顶</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

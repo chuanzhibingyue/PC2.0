@@ -1,0 +1,1594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		002E12AC1CED6D0E00896429 /* liblogmanager.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 002E12A71CED6CF500896429 /* liblogmanager.dylib */; };
+		00C2E8041CEC4D7D00042425 /* CommonDef.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6D71CEC4D4300042425 /* CommonDef.h */; };
+		00C2E8121CEC4D7D00042425 /* AccountDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6E91CEC4D4300042425 /* AccountDao.h */; };
+		00C2E8131CEC4D7D00042425 /* AppDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6EA1CEC4D4300042425 /* AppDao.h */; };
+		00C2E8141CEC4D7D00042425 /* ConferenceDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6EB1CEC4D4300042425 /* ConferenceDao.h */; };
+		00C2E8151CEC4D7D00042425 /* ConfigDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6EC1CEC4D4300042425 /* ConfigDao.h */; };
+		00C2E8161CEC4D7D00042425 /* ContactDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6ED1CEC4D4300042425 /* ContactDao.h */; };
+		00C2E8171CEC4D7D00042425 /* ConversationDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6EE1CEC4D4300042425 /* ConversationDao.h */; };
+		00C2E8181CEC4D7D00042425 /* CppSQLite3.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6EF1CEC4D4300042425 /* CppSQLite3.h */; };
+		00C2E8191CEC4D7D00042425 /* DBManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6F01CEC4D4300042425 /* DBManager.h */; };
+		00C2E81A1CEC4D7D00042425 /* DBManagerDef.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6F11CEC4D4300042425 /* DBManagerDef.h */; };
+		00C2E81B1CEC4D7D00042425 /* DBUpgrade.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6F21CEC4D4300042425 /* DBUpgrade.h */; };
+		00C2E81C1CEC4D7D00042425 /* ExternalDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6F31CEC4D4300042425 /* ExternalDao.h */; };
+		00C2E81D1CEC4D7D00042425 /* FileTransferDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6F41CEC4D4300042425 /* FileTransferDao.h */; };
+		00C2E81E1CEC4D7D00042425 /* GroupDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6F51CEC4D4300042425 /* GroupDao.h */; };
+		00C2E81F1CEC4D7D00042425 /* KeyValueDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6F61CEC4D4300042425 /* KeyValueDao.h */; };
+		00C2E8201CEC4D7D00042425 /* MessageDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6F71CEC4D4300042425 /* MessageDao.h */; };
+		00C2E8211CEC4D7D00042425 /* PbxDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6F81CEC4D4300042425 /* PbxDao.h */; };
+		00C2E8221CEC4D7D00042425 /* ProxyInfoDao.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6F91CEC4D4300042425 /* ProxyInfoDao.h */; };
+		00C2E8231CEC4D7D00042425 /* SQLConfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6FA1CEC4D4300042425 /* SQLConfig.h */; };
+		00C2E8241CEC4D7D00042425 /* SQLiteManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E6FB1CEC4D4300042425 /* SQLiteManager.h */; };
+		00C2E8251CEC4D7D00042425 /* AccountDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7071CEC4D4300042425 /* AccountDao.cpp */; };
+		00C2E8261CEC4D7D00042425 /* AppDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7081CEC4D4300042425 /* AppDao.cpp */; };
+		00C2E8271CEC4D7D00042425 /* ConferenceDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7091CEC4D4300042425 /* ConferenceDao.cpp */; };
+		00C2E8281CEC4D7D00042425 /* ConfigDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E70A1CEC4D4300042425 /* ConfigDao.cpp */; };
+		00C2E8291CEC4D7D00042425 /* ContactDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E70B1CEC4D4300042425 /* ContactDao.cpp */; };
+		00C2E82A1CEC4D7D00042425 /* ConversationDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E70C1CEC4D4300042425 /* ConversationDao.cpp */; };
+		00C2E82B1CEC4D7D00042425 /* CppSQLite3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E70D1CEC4D4300042425 /* CppSQLite3.cpp */; };
+		00C2E82C1CEC4D7D00042425 /* DBManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E70E1CEC4D4300042425 /* DBManager.cpp */; };
+		00C2E82D1CEC4D7D00042425 /* DBUpgrade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E70F1CEC4D4300042425 /* DBUpgrade.cpp */; };
+		00C2E82E1CEC4D7D00042425 /* ExternalDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7101CEC4D4300042425 /* ExternalDao.cpp */; };
+		00C2E82F1CEC4D7D00042425 /* FileTransferDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7111CEC4D4300042425 /* FileTransferDao.cpp */; };
+		00C2E8301CEC4D7D00042425 /* GroupDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7121CEC4D4300042425 /* GroupDao.cpp */; };
+		00C2E8311CEC4D7D00042425 /* KeyValueDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7131CEC4D4300042425 /* KeyValueDao.cpp */; };
+		00C2E8321CEC4D7D00042425 /* MessageDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7141CEC4D4300042425 /* MessageDao.cpp */; };
+		00C2E8331CEC4D7D00042425 /* PbxDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7151CEC4D4300042425 /* PbxDao.cpp */; };
+		00C2E8341CEC4D7D00042425 /* ProxyInfoDao.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7161CEC4D4300042425 /* ProxyInfoDao.cpp */; };
+		00C2E8351CEC4D7D00042425 /* SQLiteManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7171CEC4D4300042425 /* SQLiteManager.cpp */; };
+		00C2E8361CEC4D7D00042425 /* HTTPHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E71A1CEC4D4300042425 /* HTTPHandler.cpp */; };
+		00C2E8371CEC4D7D00042425 /* HTTPHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E71B1CEC4D4300042425 /* HTTPHandler.h */; };
+		00C2E8381CEC4D7D00042425 /* HTTPRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E71C1CEC4D4300042425 /* HTTPRequest.cpp */; };
+		00C2E8391CEC4D7D00042425 /* HTTPRequestEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E71D1CEC4D4300042425 /* HTTPRequestEvent.cpp */; };
+		00C2E83A1CEC4D7D00042425 /* HTTPResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E71E1CEC4D4300042425 /* HTTPResponse.cpp */; };
+		00C2E83B1CEC4D7D00042425 /* MessageQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E71F1CEC4D4300042425 /* MessageQueue.cpp */; };
+		00C2E83C1CEC4D7D00042425 /* MessageQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7201CEC4D4300042425 /* MessageQueue.h */; };
+		00C2E83D1CEC4D7D00042425 /* NetworkManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7211CEC4D4300042425 /* NetworkManager.cpp */; };
+		00C2E83E1CEC4D7D00042425 /* NetworkManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7221CEC4D4300042425 /* NetworkManager.h */; };
+		00C2E83F1CEC4D7D00042425 /* QueuedNetWorkManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7231CEC4D4300042425 /* QueuedNetWorkManager.cpp */; };
+		00C2E8401CEC4D7D00042425 /* QueuedNetWorkManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7241CEC4D4300042425 /* QueuedNetWorkManager.h */; };
+		00C2E8411CEC4D7D00042425 /* TaskExecutorCallback.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7251CEC4D4300042425 /* TaskExecutorCallback.h */; };
+		00C2E8421CEC4D7D00042425 /* UCASConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7261CEC4D4300042425 /* UCASConnection.cpp */; };
+		00C2E8431CEC4D7D00042425 /* UCASConnection.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7271CEC4D4300042425 /* UCASConnection.h */; };
+		00C2E8441CEC4D7D00042425 /* AppMessageType.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E72B1CEC4D4300042425 /* AppMessageType.h */; };
+		00C2E8451CEC4D7D00042425 /* MessageParser.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E72C1CEC4D4300042425 /* MessageParser.h */; };
+		00C2E8461CEC4D7D00042425 /* MessageStream.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E72D1CEC4D4300042425 /* MessageStream.h */; };
+		00C2E8471CEC4D7D00042425 /* uc_types.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E72E1CEC4D4300042425 /* uc_types.h */; };
+		00C2E8481CEC4D7D00042425 /* UCMessage.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E72F1CEC4D4300042425 /* UCMessage.h */; };
+		00C2E8491CEC4D7D00042425 /* UCMessageType.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7301CEC4D4300042425 /* UCMessageType.h */; };
+		00C2E84A1CEC4D7D00042425 /* UCParserDef.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7311CEC4D4300042425 /* UCParserDef.h */; };
+		00C2E84B1CEC4D7D00042425 /* UCParserErrorCode.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7321CEC4D4300042425 /* UCParserErrorCode.h */; };
+		00C2E8521CEC4D7D00042425 /* AppMessageType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7401CEC4D4300042425 /* AppMessageType.cpp */; };
+		00C2E8531CEC4D7D00042425 /* MessageParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7411CEC4D4300042425 /* MessageParser.cpp */; };
+		00C2E8541CEC4D7D00042425 /* MessageStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7421CEC4D4300042425 /* MessageStream.cpp */; };
+		00C2E8561CEC4D7D00042425 /* uc_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7441CEC4D4300042425 /* uc_types.cpp */; };
+		00C2E8571CEC4D7D00042425 /* UCMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7451CEC4D4300042425 /* UCMessage.cpp */; };
+		00C2E8581CEC4D7D00042425 /* UCMessageType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7461CEC4D4300042425 /* UCMessageType.cpp */; };
+		00C2E8621CEC4D7D00042425 /* CalendarMsgProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7531CEC4D4300042425 /* CalendarMsgProcessor.cpp */; };
+		00C2E8631CEC4D7D00042425 /* CalendarMsgProcessor.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7541CEC4D4300042425 /* CalendarMsgProcessor.h */; };
+		00C2E8641CEC4D7D00042425 /* CalendarRequestFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7551CEC4D4300042425 /* CalendarRequestFactory.cpp */; };
+		00C2E8651CEC4D7D00042425 /* CalendarRequestFactory.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7561CEC4D4300042425 /* CalendarRequestFactory.h */; };
+		00C2E8661CEC4D7D00042425 /* CalendarService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7571CEC4D4300042425 /* CalendarService.cpp */; };
+		00C2E8671CEC4D7D00042425 /* CalendarService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7581CEC4D4300042425 /* CalendarService.h */; };
+		00C2E8681CEC4D7D00042425 /* date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E75A1CEC4D4300042425 /* date.cpp */; };
+		00C2E8691CEC4D7D00042425 /* date.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E75B1CEC4D4300042425 /* date.h */; };
+		00C2E86A1CEC4D7D00042425 /* element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E75C1CEC4D4300042425 /* element.cpp */; };
+		00C2E86B1CEC4D7D00042425 /* element.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E75D1CEC4D4300042425 /* element.h */; };
+		00C2E86C1CEC4D7D00042425 /* icalendar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E75E1CEC4D4300042425 /* icalendar.cpp */; };
+		00C2E86D1CEC4D7D00042425 /* icalendar.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E75F1CEC4D4300042425 /* icalendar.h */; };
+		00C2E86E1CEC4D7D00042425 /* ClientService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7611CEC4D4300042425 /* ClientService.cpp */; };
+		00C2E86F1CEC4D7D00042425 /* ClientService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7621CEC4D4300042425 /* ClientService.h */; };
+		00C2E8701CEC4D7D00042425 /* ConversationInfoInternal.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7631CEC4D4300042425 /* ConversationInfoInternal.h */; };
+		00C2E8711CEC4D7D00042425 /* LoginInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7641CEC4D4300042425 /* LoginInfo.cpp */; };
+		00C2E8721CEC4D7D00042425 /* LoginInfo.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7651CEC4D4300042425 /* LoginInfo.h */; };
+		00C2E8741CEC4D7D00042425 /* PasswordRule.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7671CEC4D4300042425 /* PasswordRule.h */; };
+		00C2E8751CEC4D7D00042425 /* ProxyInfo.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7681CEC4D4300042425 /* ProxyInfo.h */; };
+		00C2E8761CEC4D7D00042425 /* ServerInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7691CEC4D4300042425 /* ServerInfo.cpp */; };
+		00C2E8771CEC4D7D00042425 /* ServerInfo.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E76A1CEC4D4300042425 /* ServerInfo.h */; };
+		00C2E8781CEC4D7D00042425 /* ContactCache.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E76D1CEC4D4300042425 /* ContactCache.h */; };
+		00C2E8791CEC4D7D00042425 /* ContactCacheListener.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E76E1CEC4D4300042425 /* ContactCacheListener.h */; };
+		00C2E87A1CEC4D7D00042425 /* ContactDelayLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E76F1CEC4D4300042425 /* ContactDelayLoader.cpp */; };
+		00C2E87B1CEC4D7D00042425 /* ContactDelayLoader.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7701CEC4D4300042425 /* ContactDelayLoader.h */; };
+		00C2E87C1CEC4D7D00042425 /* RegularUpdatedCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7711CEC4D4300042425 /* RegularUpdatedCache.cpp */; };
+		00C2E87D1CEC4D7D00042425 /* RegularUpdatedCache.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7721CEC4D4300042425 /* RegularUpdatedCache.h */; };
+		00C2E87E1CEC4D7D00042425 /* ContactEventDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7731CEC4D4300042425 /* ContactEventDispatcher.cpp */; };
+		00C2E87F1CEC4D7D00042425 /* ContactEventDispatcher.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7741CEC4D4300042425 /* ContactEventDispatcher.h */; };
+		00C2E8801CEC4D7D00042425 /* ContactInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7751CEC4D4300042425 /* ContactInfo.cpp */; };
+		00C2E8811CEC4D7D00042425 /* ContactInfoImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7761CEC4D4300042425 /* ContactInfoImpl.cpp */; };
+		00C2E8821CEC4D7D00042425 /* ContactInfoImpl.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7771CEC4D4300042425 /* ContactInfoImpl.h */; };
+		00C2E8831CEC4D7D00042425 /* ContactMsgProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7781CEC4D4300042425 /* ContactMsgProcessor.cpp */; };
+		00C2E8841CEC4D7D00042425 /* ContactMsgProcessor.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7791CEC4D4300042425 /* ContactMsgProcessor.h */; };
+		00C2E8851CEC4D7D00042425 /* ContactRequestFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E77A1CEC4D4300042425 /* ContactRequestFactory.cpp */; };
+		00C2E8861CEC4D7D00042425 /* ContactRequestFactory.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E77B1CEC4D4300042425 /* ContactRequestFactory.h */; };
+		00C2E8871CEC4D7D00042425 /* ContactResponseParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E77C1CEC4D4300042425 /* ContactResponseParser.cpp */; };
+		00C2E8881CEC4D7D00042425 /* ContactResponseParser.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E77D1CEC4D4300042425 /* ContactResponseParser.h */; };
+		00C2E8891CEC4D7D00042425 /* ContactService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E77E1CEC4D4300042425 /* ContactService.cpp */; };
+		00C2E88A1CEC4D7E00042425 /* ContactService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E77F1CEC4D4300042425 /* ContactService.h */; };
+		00C2E88B1CEC4D7E00042425 /* ContactTag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7801CEC4D4300042425 /* ContactTag.cpp */; };
+		00C2E88C1CEC4D7E00042425 /* DefaultContactEventDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7811CEC4D4300042425 /* DefaultContactEventDispatcher.cpp */; };
+		00C2E88D1CEC4D7E00042425 /* DefaultContactEventDispatcher.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7821CEC4D4300042425 /* DefaultContactEventDispatcher.h */; };
+		00C2E88E1CEC4D7E00042425 /* ExternalService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7841CEC4D4300042425 /* ExternalService.cpp */; };
+		00C2E88F1CEC4D7E00042425 /* ExternalService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7851CEC4D4300042425 /* ExternalService.h */; };
+		00C2E8901CEC4D7E00042425 /* FileHelp.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7871CEC4D4300042425 /* FileHelp.hpp */; };
+		00C2E8911CEC4D7E00042425 /* FileTransferService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7881CEC4D4300042425 /* FileTransferService.cpp */; };
+		00C2E8921CEC4D7E00042425 /* FileTransferService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7891CEC4D4300042425 /* FileTransferService.h */; };
+		00C2E8931CEC4D7E00042425 /* FSDef.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E78A1CEC4D4300042425 /* FSDef.h */; };
+		00C2E8941CEC4D7E00042425 /* FSRequestAssist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E78B1CEC4D4300042425 /* FSRequestAssist.cpp */; };
+		00C2E8951CEC4D7E00042425 /* FSRequestAssist.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E78C1CEC4D4300042425 /* FSRequestAssist.h */; };
+		00C2E8961CEC4D7E00042425 /* FSResponseAssist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E78D1CEC4D4300042425 /* FSResponseAssist.cpp */; };
+		00C2E8971CEC4D7E00042425 /* FSResponseAssist.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E78E1CEC4D4300042425 /* FSResponseAssist.h */; };
+		00C2E8981CEC4D7E00042425 /* ResidentThread.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E78F1CEC4D4300042425 /* ResidentThread.hpp */; };
+		00C2E89B1CEC4D7E00042425 /* Task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7921CEC4D4300042425 /* Task.cpp */; };
+		00C2E89C1CEC4D7E00042425 /* Task.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7931CEC4D4300042425 /* Task.h */; };
+		00C2E89D1CEC4D7E00042425 /* UCFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7941CEC4D4300042425 /* UCFile.cpp */; };
+		00C2E89E1CEC4D7E00042425 /* UCFile.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7951CEC4D4300042425 /* UCFile.h */; };
+		00C2E89F1CEC4D7E00042425 /* DocumentInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7971CEC4D4300042425 /* DocumentInfo.cpp */; };
+		00C2E8A01CEC4D7E00042425 /* GroupInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7981CEC4D4300042425 /* GroupInfo.cpp */; };
+		00C2E8A11CEC4D7E00042425 /* GroupService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7991CEC4D4300042425 /* GroupService.cpp */; };
+		00C2E8A21CEC4D7E00042425 /* GroupService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E79A1CEC4D4300042425 /* GroupService.h */; };
+		00C2E8A31CEC4D7E00042425 /* GroupServiceNotify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E79B1CEC4D4300042425 /* GroupServiceNotify.cpp */; };
+		00C2E8A41CEC4D7E00042425 /* GroupServiceRequest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E79C1CEC4D4300042425 /* GroupServiceRequest.cpp */; };
+		00C2E8A51CEC4D7E00042425 /* GroupServiceResponse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E79D1CEC4D4300042425 /* GroupServiceResponse.cpp */; };
+		00C2E8A61CEC4D7E00042425 /* IMService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E79E1CEC4D4300042425 /* IMService.cpp */; };
+		00C2E8A71CEC4D7E00042425 /* IMService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E79F1CEC4D4300042425 /* IMService.h */; };
+		00C2E8A81CEC4D7E00042425 /* MessageInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7A01CEC4D4300042425 /* MessageInfo.cpp */; };
+		00C2E8A91CEC4D7E00042425 /* MessageProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7A11CEC4D4300042425 /* MessageProcessor.cpp */; };
+		00C2E8AA1CEC4D7E00042425 /* MessageProcessor.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7A21CEC4D4300042425 /* MessageProcessor.h */; };
+		00C2E8AB1CEC4D7E00042425 /* MicroblogService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7A41CEC4D4300042425 /* MicroblogService.cpp */; };
+		00C2E8AC1CEC4D7E00042425 /* MicroblogService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7A51CEC4D4300042425 /* MicroblogService.h */; };
+		00C2E8AD1CEC4D7E00042425 /* OpenApiService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7A71CEC4D4300042425 /* OpenApiService.cpp */; };
+		00C2E8AE1CEC4D7E00042425 /* OpenApiService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7A81CEC4D4300042425 /* OpenApiService.h */; };
+		00C2E8D31CEC4D7E00042425 /* SearchService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7D71CEC4D4300042425 /* SearchService.cpp */; };
+		00C2E8D41CEC4D7E00042425 /* SearchService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7D81CEC4D4300042425 /* SearchService.h */; };
+		00C2E8D71CEC4D7E00042425 /* ConversationStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7DD1CEC4D4300042425 /* ConversationStore.cpp */; };
+		00C2E8D81CEC4D7E00042425 /* ConversationStore.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7DE1CEC4D4300042425 /* ConversationStore.h */; };
+		00C2E8D91CEC4D7E00042425 /* GroupListStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7DF1CEC4D4300042425 /* GroupListStore.cpp */; };
+		00C2E8DA1CEC4D7E00042425 /* GroupListStore.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7E01CEC4D4300042425 /* GroupListStore.h */; };
+		00C2E8DB1CEC4D7E00042425 /* MessageReadStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7E11CEC4D4300042425 /* MessageReadStore.cpp */; };
+		00C2E8DC1CEC4D7E00042425 /* MessageReadStore.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7E21CEC4D4300042425 /* MessageReadStore.h */; };
+		00C2E8DD1CEC4D7E00042425 /* MessageStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7E31CEC4D4300042425 /* MessageStore.cpp */; };
+		00C2E8DE1CEC4D7E00042425 /* MessageStore.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7E41CEC4D4300042425 /* MessageStore.h */; };
+		00C2E8DF1CEC4D7E00042425 /* StoreService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7E51CEC4D4300042425 /* StoreService.cpp */; };
+		00C2E8E01CEC4D7E00042425 /* StoreService.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7E61CEC4D4300042425 /* StoreService.h */; };
+		00C2E8E41CEC4D7E00042425 /* UCEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7EB1CEC4D4300042425 /* UCEngine.cpp */; };
+		00C2E8E51CEC4D7E00042425 /* UCEngine.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7EC1CEC4D4300042425 /* UCEngine.h */; };
+		00C2E8E61CEC4D7E00042425 /* CrypWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7EE1CEC4D4300042425 /* CrypWrapper.cpp */; };
+		00C2E8E71CEC4D7E00042425 /* CrypWrapper.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7EF1CEC4D4300042425 /* CrypWrapper.h */; };
+		00C2E8E81CEC4D7E00042425 /* Gzip.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7F01CEC4D4300042425 /* Gzip.h */; };
+		00C2E8E91CEC4D7E00042425 /* HTTPResponseAssist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7F11CEC4D4300042425 /* HTTPResponseAssist.cpp */; };
+		00C2E8EA1CEC4D7E00042425 /* HTTPResponseAssist.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7F21CEC4D4300042425 /* HTTPResponseAssist.h */; };
+		00C2E8EB1CEC4D7E00042425 /* jsonhelper.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7F31CEC4D4300042425 /* jsonhelper.h */; };
+		00C2E8EC1CEC4D7E00042425 /* Macro.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7F41CEC4D4300042425 /* Macro.h */; };
+		00C2E8ED1CEC4D7E00042425 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7F61CEC4D4300042425 /* md5.cpp */; };
+		00C2E8EE1CEC4D7E00042425 /* md5.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7F71CEC4D4300042425 /* md5.h */; };
+		00C2E8EF1CEC4D7E00042425 /* TaskExecutor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7F81CEC4D4300042425 /* TaskExecutor.cpp */; };
+		00C2E8F01CEC4D7E00042425 /* TaskExecutor.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7F91CEC4D4300042425 /* TaskExecutor.h */; };
+		00C2E8F11CEC4D7E00042425 /* ThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7FA1CEC4D4300042425 /* ThreadPool.cpp */; };
+		00C2E8F21CEC4D7E00042425 /* ThreadPool.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7FB1CEC4D4300042425 /* ThreadPool.h */; };
+		00C2E8F31CEC4D7E00042425 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7FC1CEC4D4300042425 /* Timer.cpp */; };
+		00C2E8F41CEC4D7E00042425 /* UCTime.h in Sources */ = {isa = PBXBuildFile; fileRef = 00C2E7FD1CEC4D4300042425 /* UCTime.h */; };
+		00C866801CED5BBB00574D21 /* libcommon.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C2E8F71CEC77D800042425 /* libcommon.dylib */; };
+		00DB73B71CED871300B097EE /* libboost_chrono.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DB73B11CED871300B097EE /* libboost_chrono.dylib */; };
+		00DB73B81CED871300B097EE /* libboost_date_time.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DB73B21CED871300B097EE /* libboost_date_time.dylib */; };
+		00DB73B91CED871300B097EE /* libboost_filesystem.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DB73B31CED871300B097EE /* libboost_filesystem.dylib */; };
+		00DB73BA1CED871300B097EE /* libboost_regex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DB73B41CED871300B097EE /* libboost_regex.dylib */; };
+		00DB73BB1CED871300B097EE /* libboost_system.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DB73B51CED871300B097EE /* libboost_system.dylib */; };
+		00DB73BC1CED871300B097EE /* libboost_thread.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DB73B61CED871300B097EE /* libboost_thread.dylib */; };
+		00DB73BD1CED87BD00B097EE /* libcryptopp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C2E8F51CEC771100042425 /* libcryptopp.a */; };
+		00DB73BF1CED87CC00B097EE /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DB73BE1CED87CC00B097EE /* libsqlite3.a */; };
+		00DB73C31CED881E00B097EE /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DB73C21CED881E00B097EE /* libcurl.dylib */; };
+		00DB73C61CED887800B097EE /* libthrift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DB73C51CED887800B097EE /* libthrift.a */; };
+		00F10E8A1CFBE45E00C59E2D /* BBSService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00F10E881CFBE45E00C59E2D /* BBSService.cpp */; };
+		00F10E8B1CFBE45E00C59E2D /* BBSService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F10E891CFBE45E00C59E2D /* BBSService.h */; };
+		00F90DD61CF29908004EBE5B /* AC_PbxCallRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DAD1CF29908004EBE5B /* AC_PbxCallRecord.h */; };
+		00F90DD71CF29908004EBE5B /* AccountInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DAE1CF29908004EBE5B /* AccountInfo.h */; };
+		00F90DD81CF29908004EBE5B /* AppInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DAF1CF29908004EBE5B /* AppInfo.h */; };
+		00F90DD91CF29908004EBE5B /* HTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DB11CF29908004EBE5B /* HTTPRequest.h */; };
+		00F90DDA1CF29908004EBE5B /* HTTPRequestCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DB21CF29908004EBE5B /* HTTPRequestCallback.h */; };
+		00F90DDB1CF29908004EBE5B /* HTTPRequestEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DB31CF29908004EBE5B /* HTTPRequestEvent.h */; };
+		00F90DDC1CF29908004EBE5B /* HTTPResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DB41CF29908004EBE5B /* HTTPResponse.h */; };
+		00F90DDD1CF29908004EBE5B /* Timer.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DB51CF29908004EBE5B /* Timer.h */; };
+		00F90DDE1CF29908004EBE5B /* CalendarData.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DB61CF29908004EBE5B /* CalendarData.h */; };
+		00F90DDF1CF29908004EBE5B /* ContactInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DB71CF29908004EBE5B /* ContactInfo.h */; };
+		00F90DE01CF29908004EBE5B /* ContactTag.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DB81CF29908004EBE5B /* ContactTag.h */; };
+		00F90DE11CF29908004EBE5B /* ConversationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DB91CF29908004EBE5B /* ConversationInfo.h */; };
+		00F90DE21CF29908004EBE5B /* DepartmentInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DBA1CF29908004EBE5B /* DepartmentInfo.h */; };
+		00F90DE31CF29908004EBE5B /* DocumentInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DBB1CF29908004EBE5B /* DocumentInfo.h */; };
+		00F90DE41CF29908004EBE5B /* ExternalInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DBC1CF29908004EBE5B /* ExternalInfo.h */; };
+		00F90DE51CF29908004EBE5B /* GroupInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DBD1CF29908004EBE5B /* GroupInfo.h */; };
+		00F90DE61CF29908004EBE5B /* IAudioService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DBE1CF29908004EBE5B /* IAudioService.h */; };
+		00F90DE71CF29908004EBE5B /* ICalendarService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DBF1CF29908004EBE5B /* ICalendarService.h */; };
+		00F90DE81CF29908004EBE5B /* IClientService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DC01CF29908004EBE5B /* IClientService.h */; };
+		00F90DE91CF29908004EBE5B /* IConference.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DC11CF29908004EBE5B /* IConference.h */; };
+		00F90DEA1CF29908004EBE5B /* IConferenceEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DC21CF29908004EBE5B /* IConferenceEvent.h */; };
+		00F90DEB1CF29908004EBE5B /* IContactService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DC31CF29908004EBE5B /* IContactService.h */; };
+		00F90DEC1CF29908004EBE5B /* IExternalService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DC41CF29908004EBE5B /* IExternalService.h */; };
+		00F90DED1CF29908004EBE5B /* IFileTransferService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DC51CF29908004EBE5B /* IFileTransferService.h */; };
+		00F90DEE1CF29908004EBE5B /* IGroupService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DC61CF29908004EBE5B /* IGroupService.h */; };
+		00F90DEF1CF29908004EBE5B /* IIMService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DC71CF29908004EBE5B /* IIMService.h */; };
+		00F90DF01CF29908004EBE5B /* IMicroblogService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DC81CF29908004EBE5B /* IMicroblogService.h */; };
+		00F90DF11CF29908004EBE5B /* IOpenApiService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DC91CF29908004EBE5B /* IOpenApiService.h */; };
+		00F90DF21CF29908004EBE5B /* IP2PService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DCA1CF29908004EBE5B /* IP2PService.h */; };
+		00F90DF31CF29908004EBE5B /* IPbxService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DCB1CF29908004EBE5B /* IPbxService.h */; };
+		00F90DF41CF29908004EBE5B /* ISearchService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DCC1CF29908004EBE5B /* ISearchService.h */; };
+		00F90DF51CF29908004EBE5B /* ISharingService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DCD1CF29908004EBE5B /* ISharingService.h */; };
+		00F90DF61CF29908004EBE5B /* ITangUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DCE1CF29908004EBE5B /* ITangUser.h */; };
+		00F90DF71CF29908004EBE5B /* IUCEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DCF1CF29908004EBE5B /* IUCEngine.h */; };
+		00F90DF81CF29908004EBE5B /* IVideoService.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DD01CF29908004EBE5B /* IVideoService.h */; };
+		00F90DF91CF29908004EBE5B /* MessageInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DD11CF29908004EBE5B /* MessageInfo.h */; };
+		00F90DFA1CF29908004EBE5B /* MessageReadInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DD21CF29908004EBE5B /* MessageReadInfo.h */; };
+		00F90DFB1CF29908004EBE5B /* SearchInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DD31CF29908004EBE5B /* SearchInfo.h */; };
+		00F90DFC1CF29908004EBE5B /* UCErrorCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DD41CF29908004EBE5B /* UCErrorCode.h */; };
+		00F90DFD1CF29908004EBE5B /* UCSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F90DD51CF29908004EBE5B /* UCSDK.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		002E12A61CED6CF500896429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002E12A01CED6CF500896429 /* logmanager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 002E12821CED6A8500896429;
+			remoteInfo = logmanager;
+		};
+		002E12A81CED6D0500896429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C866761CED522200574D21 /* common.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 00F56D4A1CEAB8400080AA33;
+			remoteInfo = common;
+		};
+		002E12AA1CED6D0800896429 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002E12A01CED6CF500896429 /* logmanager.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 002E12811CED6A8500896429;
+			remoteInfo = logmanager;
+		};
+		00C8667A1CED522200574D21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00C866761CED522200574D21 /* common.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00F56D4B1CEAB8400080AA33;
+			remoteInfo = common;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002E12A01CED6CF500896429 /* logmanager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = logmanager.xcodeproj; path = ../../third_party/log_manager/prj/logmanager.xcodeproj; sourceTree = "<group>"; };
+		00C2E6C91CEC4CF800042425 /* libucsdk.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libucsdk.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		00C2E6D71CEC4D4300042425 /* CommonDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonDef.h; sourceTree = "<group>"; };
+		00C2E6E91CEC4D4300042425 /* AccountDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountDao.h; sourceTree = "<group>"; };
+		00C2E6EA1CEC4D4300042425 /* AppDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDao.h; sourceTree = "<group>"; };
+		00C2E6EB1CEC4D4300042425 /* ConferenceDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConferenceDao.h; sourceTree = "<group>"; };
+		00C2E6EC1CEC4D4300042425 /* ConfigDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigDao.h; sourceTree = "<group>"; };
+		00C2E6ED1CEC4D4300042425 /* ContactDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDao.h; sourceTree = "<group>"; };
+		00C2E6EE1CEC4D4300042425 /* ConversationDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversationDao.h; sourceTree = "<group>"; };
+		00C2E6EF1CEC4D4300042425 /* CppSQLite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CppSQLite3.h; sourceTree = "<group>"; };
+		00C2E6F01CEC4D4300042425 /* DBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		00C2E6F11CEC4D4300042425 /* DBManagerDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBManagerDef.h; sourceTree = "<group>"; };
+		00C2E6F21CEC4D4300042425 /* DBUpgrade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBUpgrade.h; sourceTree = "<group>"; };
+		00C2E6F31CEC4D4300042425 /* ExternalDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExternalDao.h; sourceTree = "<group>"; };
+		00C2E6F41CEC4D4300042425 /* FileTransferDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileTransferDao.h; sourceTree = "<group>"; };
+		00C2E6F51CEC4D4300042425 /* GroupDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupDao.h; sourceTree = "<group>"; };
+		00C2E6F61CEC4D4300042425 /* KeyValueDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyValueDao.h; sourceTree = "<group>"; };
+		00C2E6F71CEC4D4300042425 /* MessageDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageDao.h; sourceTree = "<group>"; };
+		00C2E6F81CEC4D4300042425 /* PbxDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PbxDao.h; sourceTree = "<group>"; };
+		00C2E6F91CEC4D4300042425 /* ProxyInfoDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProxyInfoDao.h; sourceTree = "<group>"; };
+		00C2E6FA1CEC4D4300042425 /* SQLConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLConfig.h; sourceTree = "<group>"; };
+		00C2E6FB1CEC4D4300042425 /* SQLiteManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		00C2E7071CEC4D4300042425 /* AccountDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AccountDao.cpp; sourceTree = "<group>"; };
+		00C2E7081CEC4D4300042425 /* AppDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppDao.cpp; sourceTree = "<group>"; };
+		00C2E7091CEC4D4300042425 /* ConferenceDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConferenceDao.cpp; sourceTree = "<group>"; };
+		00C2E70A1CEC4D4300042425 /* ConfigDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigDao.cpp; sourceTree = "<group>"; };
+		00C2E70B1CEC4D4300042425 /* ContactDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContactDao.cpp; sourceTree = "<group>"; };
+		00C2E70C1CEC4D4300042425 /* ConversationDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConversationDao.cpp; sourceTree = "<group>"; };
+		00C2E70D1CEC4D4300042425 /* CppSQLite3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CppSQLite3.cpp; sourceTree = "<group>"; };
+		00C2E70E1CEC4D4300042425 /* DBManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DBManager.cpp; sourceTree = "<group>"; };
+		00C2E70F1CEC4D4300042425 /* DBUpgrade.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DBUpgrade.cpp; sourceTree = "<group>"; };
+		00C2E7101CEC4D4300042425 /* ExternalDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ExternalDao.cpp; sourceTree = "<group>"; };
+		00C2E7111CEC4D4300042425 /* FileTransferDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileTransferDao.cpp; sourceTree = "<group>"; };
+		00C2E7121CEC4D4300042425 /* GroupDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GroupDao.cpp; sourceTree = "<group>"; };
+		00C2E7131CEC4D4300042425 /* KeyValueDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = KeyValueDao.cpp; sourceTree = "<group>"; };
+		00C2E7141CEC4D4300042425 /* MessageDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MessageDao.cpp; sourceTree = "<group>"; };
+		00C2E7151CEC4D4300042425 /* PbxDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PbxDao.cpp; sourceTree = "<group>"; };
+		00C2E7161CEC4D4300042425 /* ProxyInfoDao.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProxyInfoDao.cpp; sourceTree = "<group>"; };
+		00C2E7171CEC4D4300042425 /* SQLiteManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SQLiteManager.cpp; sourceTree = "<group>"; };
+		00C2E71A1CEC4D4300042425 /* HTTPHandler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPHandler.cpp; sourceTree = "<group>"; };
+		00C2E71B1CEC4D4300042425 /* HTTPHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPHandler.h; sourceTree = "<group>"; };
+		00C2E71C1CEC4D4300042425 /* HTTPRequest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPRequest.cpp; sourceTree = "<group>"; };
+		00C2E71D1CEC4D4300042425 /* HTTPRequestEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPRequestEvent.cpp; sourceTree = "<group>"; };
+		00C2E71E1CEC4D4300042425 /* HTTPResponse.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPResponse.cpp; sourceTree = "<group>"; };
+		00C2E71F1CEC4D4300042425 /* MessageQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MessageQueue.cpp; sourceTree = "<group>"; };
+		00C2E7201CEC4D4300042425 /* MessageQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageQueue.h; sourceTree = "<group>"; };
+		00C2E7211CEC4D4300042425 /* NetworkManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkManager.cpp; sourceTree = "<group>"; };
+		00C2E7221CEC4D4300042425 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		00C2E7231CEC4D4300042425 /* QueuedNetWorkManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QueuedNetWorkManager.cpp; sourceTree = "<group>"; };
+		00C2E7241CEC4D4300042425 /* QueuedNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueuedNetWorkManager.h; sourceTree = "<group>"; };
+		00C2E7251CEC4D4300042425 /* TaskExecutorCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskExecutorCallback.h; sourceTree = "<group>"; };
+		00C2E7261CEC4D4300042425 /* UCASConnection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UCASConnection.cpp; sourceTree = "<group>"; };
+		00C2E7271CEC4D4300042425 /* UCASConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCASConnection.h; sourceTree = "<group>"; };
+		00C2E72B1CEC4D4300042425 /* AppMessageType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMessageType.h; sourceTree = "<group>"; };
+		00C2E72C1CEC4D4300042425 /* MessageParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageParser.h; sourceTree = "<group>"; };
+		00C2E72D1CEC4D4300042425 /* MessageStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageStream.h; sourceTree = "<group>"; };
+		00C2E72E1CEC4D4300042425 /* uc_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uc_types.h; sourceTree = "<group>"; };
+		00C2E72F1CEC4D4300042425 /* UCMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCMessage.h; sourceTree = "<group>"; };
+		00C2E7301CEC4D4300042425 /* UCMessageType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCMessageType.h; sourceTree = "<group>"; };
+		00C2E7311CEC4D4300042425 /* UCParserDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCParserDef.h; sourceTree = "<group>"; };
+		00C2E7321CEC4D4300042425 /* UCParserErrorCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCParserErrorCode.h; sourceTree = "<group>"; };
+		00C2E7401CEC4D4300042425 /* AppMessageType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppMessageType.cpp; sourceTree = "<group>"; };
+		00C2E7411CEC4D4300042425 /* MessageParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MessageParser.cpp; sourceTree = "<group>"; };
+		00C2E7421CEC4D4300042425 /* MessageStream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MessageStream.cpp; sourceTree = "<group>"; };
+		00C2E7441CEC4D4300042425 /* uc_types.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = uc_types.cpp; sourceTree = "<group>"; };
+		00C2E7451CEC4D4300042425 /* UCMessage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UCMessage.cpp; sourceTree = "<group>"; };
+		00C2E7461CEC4D4300042425 /* UCMessageType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UCMessageType.cpp; sourceTree = "<group>"; };
+		00C2E7531CEC4D4300042425 /* CalendarMsgProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CalendarMsgProcessor.cpp; sourceTree = "<group>"; };
+		00C2E7541CEC4D4300042425 /* CalendarMsgProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarMsgProcessor.h; sourceTree = "<group>"; };
+		00C2E7551CEC4D4300042425 /* CalendarRequestFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CalendarRequestFactory.cpp; sourceTree = "<group>"; };
+		00C2E7561CEC4D4300042425 /* CalendarRequestFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarRequestFactory.h; sourceTree = "<group>"; };
+		00C2E7571CEC4D4300042425 /* CalendarService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CalendarService.cpp; sourceTree = "<group>"; };
+		00C2E7581CEC4D4300042425 /* CalendarService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarService.h; sourceTree = "<group>"; };
+		00C2E75A1CEC4D4300042425 /* date.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = date.cpp; sourceTree = "<group>"; };
+		00C2E75B1CEC4D4300042425 /* date.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = date.h; sourceTree = "<group>"; };
+		00C2E75C1CEC4D4300042425 /* element.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = element.cpp; sourceTree = "<group>"; };
+		00C2E75D1CEC4D4300042425 /* element.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = element.h; sourceTree = "<group>"; };
+		00C2E75E1CEC4D4300042425 /* icalendar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = icalendar.cpp; sourceTree = "<group>"; };
+		00C2E75F1CEC4D4300042425 /* icalendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = icalendar.h; sourceTree = "<group>"; };
+		00C2E7611CEC4D4300042425 /* ClientService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ClientService.cpp; sourceTree = "<group>"; };
+		00C2E7621CEC4D4300042425 /* ClientService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientService.h; sourceTree = "<group>"; };
+		00C2E7631CEC4D4300042425 /* ConversationInfoInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversationInfoInternal.h; sourceTree = "<group>"; };
+		00C2E7641CEC4D4300042425 /* LoginInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LoginInfo.cpp; sourceTree = "<group>"; };
+		00C2E7651CEC4D4300042425 /* LoginInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginInfo.h; sourceTree = "<group>"; };
+		00C2E7671CEC4D4300042425 /* PasswordRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordRule.h; sourceTree = "<group>"; };
+		00C2E7681CEC4D4300042425 /* ProxyInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProxyInfo.h; sourceTree = "<group>"; };
+		00C2E7691CEC4D4300042425 /* ServerInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ServerInfo.cpp; sourceTree = "<group>"; };
+		00C2E76A1CEC4D4300042425 /* ServerInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerInfo.h; sourceTree = "<group>"; };
+		00C2E76D1CEC4D4300042425 /* ContactCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactCache.h; sourceTree = "<group>"; };
+		00C2E76E1CEC4D4300042425 /* ContactCacheListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactCacheListener.h; sourceTree = "<group>"; };
+		00C2E76F1CEC4D4300042425 /* ContactDelayLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContactDelayLoader.cpp; sourceTree = "<group>"; };
+		00C2E7701CEC4D4300042425 /* ContactDelayLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactDelayLoader.h; sourceTree = "<group>"; };
+		00C2E7711CEC4D4300042425 /* RegularUpdatedCache.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RegularUpdatedCache.cpp; sourceTree = "<group>"; };
+		00C2E7721CEC4D4300042425 /* RegularUpdatedCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegularUpdatedCache.h; sourceTree = "<group>"; };
+		00C2E7731CEC4D4300042425 /* ContactEventDispatcher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContactEventDispatcher.cpp; sourceTree = "<group>"; };
+		00C2E7741CEC4D4300042425 /* ContactEventDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactEventDispatcher.h; sourceTree = "<group>"; };
+		00C2E7751CEC4D4300042425 /* ContactInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContactInfo.cpp; sourceTree = "<group>"; };
+		00C2E7761CEC4D4300042425 /* ContactInfoImpl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContactInfoImpl.cpp; sourceTree = "<group>"; };
+		00C2E7771CEC4D4300042425 /* ContactInfoImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactInfoImpl.h; sourceTree = "<group>"; };
+		00C2E7781CEC4D4300042425 /* ContactMsgProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContactMsgProcessor.cpp; sourceTree = "<group>"; };
+		00C2E7791CEC4D4300042425 /* ContactMsgProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactMsgProcessor.h; sourceTree = "<group>"; };
+		00C2E77A1CEC4D4300042425 /* ContactRequestFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContactRequestFactory.cpp; sourceTree = "<group>"; };
+		00C2E77B1CEC4D4300042425 /* ContactRequestFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactRequestFactory.h; sourceTree = "<group>"; };
+		00C2E77C1CEC4D4300042425 /* ContactResponseParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContactResponseParser.cpp; sourceTree = "<group>"; };
+		00C2E77D1CEC4D4300042425 /* ContactResponseParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactResponseParser.h; sourceTree = "<group>"; };
+		00C2E77E1CEC4D4300042425 /* ContactService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContactService.cpp; sourceTree = "<group>"; };
+		00C2E77F1CEC4D4300042425 /* ContactService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactService.h; sourceTree = "<group>"; };
+		00C2E7801CEC4D4300042425 /* ContactTag.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContactTag.cpp; sourceTree = "<group>"; };
+		00C2E7811CEC4D4300042425 /* DefaultContactEventDispatcher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DefaultContactEventDispatcher.cpp; sourceTree = "<group>"; };
+		00C2E7821CEC4D4300042425 /* DefaultContactEventDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultContactEventDispatcher.h; sourceTree = "<group>"; };
+		00C2E7841CEC4D4300042425 /* ExternalService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ExternalService.cpp; sourceTree = "<group>"; };
+		00C2E7851CEC4D4300042425 /* ExternalService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExternalService.h; sourceTree = "<group>"; };
+		00C2E7871CEC4D4300042425 /* FileHelp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileHelp.hpp; sourceTree = "<group>"; };
+		00C2E7881CEC4D4300042425 /* FileTransferService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileTransferService.cpp; sourceTree = "<group>"; };
+		00C2E7891CEC4D4300042425 /* FileTransferService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileTransferService.h; sourceTree = "<group>"; };
+		00C2E78A1CEC4D4300042425 /* FSDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSDef.h; sourceTree = "<group>"; };
+		00C2E78B1CEC4D4300042425 /* FSRequestAssist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FSRequestAssist.cpp; sourceTree = "<group>"; };
+		00C2E78C1CEC4D4300042425 /* FSRequestAssist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSRequestAssist.h; sourceTree = "<group>"; };
+		00C2E78D1CEC4D4300042425 /* FSResponseAssist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FSResponseAssist.cpp; sourceTree = "<group>"; };
+		00C2E78E1CEC4D4300042425 /* FSResponseAssist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSResponseAssist.h; sourceTree = "<group>"; };
+		00C2E78F1CEC4D4300042425 /* ResidentThread.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResidentThread.hpp; sourceTree = "<group>"; };
+		00C2E7921CEC4D4300042425 /* Task.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Task.cpp; sourceTree = "<group>"; };
+		00C2E7931CEC4D4300042425 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		00C2E7941CEC4D4300042425 /* UCFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UCFile.cpp; sourceTree = "<group>"; };
+		00C2E7951CEC4D4300042425 /* UCFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCFile.h; sourceTree = "<group>"; };
+		00C2E7971CEC4D4300042425 /* DocumentInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DocumentInfo.cpp; sourceTree = "<group>"; };
+		00C2E7981CEC4D4300042425 /* GroupInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GroupInfo.cpp; sourceTree = "<group>"; };
+		00C2E7991CEC4D4300042425 /* GroupService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GroupService.cpp; sourceTree = "<group>"; };
+		00C2E79A1CEC4D4300042425 /* GroupService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupService.h; sourceTree = "<group>"; };
+		00C2E79B1CEC4D4300042425 /* GroupServiceNotify.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GroupServiceNotify.cpp; sourceTree = "<group>"; };
+		00C2E79C1CEC4D4300042425 /* GroupServiceRequest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GroupServiceRequest.cpp; sourceTree = "<group>"; };
+		00C2E79D1CEC4D4300042425 /* GroupServiceResponse.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GroupServiceResponse.cpp; sourceTree = "<group>"; };
+		00C2E79E1CEC4D4300042425 /* IMService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IMService.cpp; sourceTree = "<group>"; };
+		00C2E79F1CEC4D4300042425 /* IMService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMService.h; sourceTree = "<group>"; };
+		00C2E7A01CEC4D4300042425 /* MessageInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MessageInfo.cpp; sourceTree = "<group>"; };
+		00C2E7A11CEC4D4300042425 /* MessageProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MessageProcessor.cpp; sourceTree = "<group>"; };
+		00C2E7A21CEC4D4300042425 /* MessageProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageProcessor.h; sourceTree = "<group>"; };
+		00C2E7A41CEC4D4300042425 /* MicroblogService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MicroblogService.cpp; sourceTree = "<group>"; };
+		00C2E7A51CEC4D4300042425 /* MicroblogService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MicroblogService.h; sourceTree = "<group>"; };
+		00C2E7A71CEC4D4300042425 /* OpenApiService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenApiService.cpp; sourceTree = "<group>"; };
+		00C2E7A81CEC4D4300042425 /* OpenApiService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenApiService.h; sourceTree = "<group>"; };
+		00C2E7D71CEC4D4300042425 /* SearchService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SearchService.cpp; sourceTree = "<group>"; };
+		00C2E7D81CEC4D4300042425 /* SearchService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchService.h; sourceTree = "<group>"; };
+		00C2E7DD1CEC4D4300042425 /* ConversationStore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConversationStore.cpp; sourceTree = "<group>"; };
+		00C2E7DE1CEC4D4300042425 /* ConversationStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversationStore.h; sourceTree = "<group>"; };
+		00C2E7DF1CEC4D4300042425 /* GroupListStore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GroupListStore.cpp; sourceTree = "<group>"; };
+		00C2E7E01CEC4D4300042425 /* GroupListStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupListStore.h; sourceTree = "<group>"; };
+		00C2E7E11CEC4D4300042425 /* MessageReadStore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MessageReadStore.cpp; sourceTree = "<group>"; };
+		00C2E7E21CEC4D4300042425 /* MessageReadStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageReadStore.h; sourceTree = "<group>"; };
+		00C2E7E31CEC4D4300042425 /* MessageStore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MessageStore.cpp; sourceTree = "<group>"; };
+		00C2E7E41CEC4D4300042425 /* MessageStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageStore.h; sourceTree = "<group>"; };
+		00C2E7E51CEC4D4300042425 /* StoreService.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StoreService.cpp; sourceTree = "<group>"; };
+		00C2E7E61CEC4D4300042425 /* StoreService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreService.h; sourceTree = "<group>"; };
+		00C2E7EB1CEC4D4300042425 /* UCEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UCEngine.cpp; sourceTree = "<group>"; };
+		00C2E7EC1CEC4D4300042425 /* UCEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCEngine.h; sourceTree = "<group>"; };
+		00C2E7EE1CEC4D4300042425 /* CrypWrapper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CrypWrapper.cpp; sourceTree = "<group>"; };
+		00C2E7EF1CEC4D4300042425 /* CrypWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrypWrapper.h; sourceTree = "<group>"; };
+		00C2E7F01CEC4D4300042425 /* Gzip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gzip.h; sourceTree = "<group>"; };
+		00C2E7F11CEC4D4300042425 /* HTTPResponseAssist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HTTPResponseAssist.cpp; sourceTree = "<group>"; };
+		00C2E7F21CEC4D4300042425 /* HTTPResponseAssist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPResponseAssist.h; sourceTree = "<group>"; };
+		00C2E7F31CEC4D4300042425 /* jsonhelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = jsonhelper.h; sourceTree = "<group>"; };
+		00C2E7F41CEC4D4300042425 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		00C2E7F61CEC4D4300042425 /* md5.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = md5.cpp; sourceTree = "<group>"; };
+		00C2E7F71CEC4D4300042425 /* md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		00C2E7F81CEC4D4300042425 /* TaskExecutor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TaskExecutor.cpp; sourceTree = "<group>"; };
+		00C2E7F91CEC4D4300042425 /* TaskExecutor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskExecutor.h; sourceTree = "<group>"; };
+		00C2E7FA1CEC4D4300042425 /* ThreadPool.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ThreadPool.cpp; sourceTree = "<group>"; };
+		00C2E7FB1CEC4D4300042425 /* ThreadPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadPool.h; sourceTree = "<group>"; };
+		00C2E7FC1CEC4D4300042425 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		00C2E7FD1CEC4D4300042425 /* UCTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCTime.h; sourceTree = "<group>"; };
+		00C2E8F51CEC771100042425 /* libcryptopp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcryptopp.a; path = ../../third_party/CrypWrapper/lib/mac/libcryptopp.a; sourceTree = "<group>"; };
+		00C2E8F71CEC77D800042425 /* libcommon.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommon.dylib; path = ../../third_party/common/lib/mac/Debug/libcommon.dylib; sourceTree = "<group>"; };
+		00C866761CED522200574D21 /* common.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = common.xcodeproj; path = ../../third_party/common/build/mac/common.xcodeproj; sourceTree = "<group>"; };
+		00DB73B11CED871300B097EE /* libboost_chrono.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_chrono.dylib; path = ../../third_party/boost/lib/macosx/libboost_chrono.dylib; sourceTree = "<group>"; };
+		00DB73B21CED871300B097EE /* libboost_date_time.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_date_time.dylib; path = ../../third_party/boost/lib/macosx/libboost_date_time.dylib; sourceTree = "<group>"; };
+		00DB73B31CED871300B097EE /* libboost_filesystem.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_filesystem.dylib; path = ../../third_party/boost/lib/macosx/libboost_filesystem.dylib; sourceTree = "<group>"; };
+		00DB73B41CED871300B097EE /* libboost_regex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_regex.dylib; path = ../../third_party/boost/lib/macosx/libboost_regex.dylib; sourceTree = "<group>"; };
+		00DB73B51CED871300B097EE /* libboost_system.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_system.dylib; path = ../../third_party/boost/lib/macosx/libboost_system.dylib; sourceTree = "<group>"; };
+		00DB73B61CED871300B097EE /* libboost_thread.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libboost_thread.dylib; path = ../../third_party/boost/lib/macosx/libboost_thread.dylib; sourceTree = "<group>"; };
+		00DB73BE1CED87CC00B097EE /* libsqlite3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsqlite3.a; path = ../../third_party/sqlite3/lib/macosx/libsqlite3.a; sourceTree = "<group>"; };
+		00DB73C21CED881E00B097EE /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = ../../third_party/curl/lib/macosx/libcurl.dylib; sourceTree = "<group>"; };
+		00DB73C51CED887800B097EE /* libthrift.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libthrift.a; path = ../../third_party/thrift/lib/macosx/libthrift.a; sourceTree = "<group>"; };
+		00F10E881CFBE45E00C59E2D /* BBSService.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BBSService.cpp; sourceTree = "<group>"; };
+		00F10E891CFBE45E00C59E2D /* BBSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSService.h; sourceTree = "<group>"; };
+		00F90DAD1CF29908004EBE5B /* AC_PbxCallRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AC_PbxCallRecord.h; path = ../../include/AC_PbxCallRecord.h; sourceTree = "<group>"; };
+		00F90DAE1CF29908004EBE5B /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountInfo.h; path = ../../include/AccountInfo.h; sourceTree = "<group>"; };
+		00F90DAF1CF29908004EBE5B /* AppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppInfo.h; path = ../../include/AppInfo.h; sourceTree = "<group>"; };
+		00F90DB11CF29908004EBE5B /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
+		00F90DB21CF29908004EBE5B /* HTTPRequestCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequestCallback.h; sourceTree = "<group>"; };
+		00F90DB31CF29908004EBE5B /* HTTPRequestEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequestEvent.h; sourceTree = "<group>"; };
+		00F90DB41CF29908004EBE5B /* HTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponse.h; sourceTree = "<group>"; };
+		00F90DB51CF29908004EBE5B /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		00F90DB61CF29908004EBE5B /* CalendarData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarData.h; path = ../../include/CalendarData.h; sourceTree = "<group>"; };
+		00F90DB71CF29908004EBE5B /* ContactInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactInfo.h; path = ../../include/ContactInfo.h; sourceTree = "<group>"; };
+		00F90DB81CF29908004EBE5B /* ContactTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactTag.h; path = ../../include/ContactTag.h; sourceTree = "<group>"; };
+		00F90DB91CF29908004EBE5B /* ConversationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConversationInfo.h; path = ../../include/ConversationInfo.h; sourceTree = "<group>"; };
+		00F90DBA1CF29908004EBE5B /* DepartmentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DepartmentInfo.h; path = ../../include/DepartmentInfo.h; sourceTree = "<group>"; };
+		00F90DBB1CF29908004EBE5B /* DocumentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DocumentInfo.h; path = ../../include/DocumentInfo.h; sourceTree = "<group>"; };
+		00F90DBC1CF29908004EBE5B /* ExternalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExternalInfo.h; path = ../../include/ExternalInfo.h; sourceTree = "<group>"; };
+		00F90DBD1CF29908004EBE5B /* GroupInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupInfo.h; path = ../../include/GroupInfo.h; sourceTree = "<group>"; };
+		00F90DBE1CF29908004EBE5B /* IAudioService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IAudioService.h; path = ../../include/IAudioService.h; sourceTree = "<group>"; };
+		00F90DBF1CF29908004EBE5B /* ICalendarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ICalendarService.h; path = ../../include/ICalendarService.h; sourceTree = "<group>"; };
+		00F90DC01CF29908004EBE5B /* IClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IClientService.h; path = ../../include/IClientService.h; sourceTree = "<group>"; };
+		00F90DC11CF29908004EBE5B /* IConference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IConference.h; path = ../../include/IConference.h; sourceTree = "<group>"; };
+		00F90DC21CF29908004EBE5B /* IConferenceEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IConferenceEvent.h; path = ../../include/IConferenceEvent.h; sourceTree = "<group>"; };
+		00F90DC31CF29908004EBE5B /* IContactService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IContactService.h; path = ../../include/IContactService.h; sourceTree = "<group>"; };
+		00F90DC41CF29908004EBE5B /* IExternalService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IExternalService.h; path = ../../include/IExternalService.h; sourceTree = "<group>"; };
+		00F90DC51CF29908004EBE5B /* IFileTransferService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IFileTransferService.h; path = ../../include/IFileTransferService.h; sourceTree = "<group>"; };
+		00F90DC61CF29908004EBE5B /* IGroupService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGroupService.h; path = ../../include/IGroupService.h; sourceTree = "<group>"; };
+		00F90DC71CF29908004EBE5B /* IIMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IIMService.h; path = ../../include/IIMService.h; sourceTree = "<group>"; };
+		00F90DC81CF29908004EBE5B /* IMicroblogService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMicroblogService.h; path = ../../include/IMicroblogService.h; sourceTree = "<group>"; };
+		00F90DC91CF29908004EBE5B /* IOpenApiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IOpenApiService.h; path = ../../include/IOpenApiService.h; sourceTree = "<group>"; };
+		00F90DCA1CF29908004EBE5B /* IP2PService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IP2PService.h; path = ../../include/IP2PService.h; sourceTree = "<group>"; };
+		00F90DCB1CF29908004EBE5B /* IPbxService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPbxService.h; path = ../../include/IPbxService.h; sourceTree = "<group>"; };
+		00F90DCC1CF29908004EBE5B /* ISearchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISearchService.h; path = ../../include/ISearchService.h; sourceTree = "<group>"; };
+		00F90DCD1CF29908004EBE5B /* ISharingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ISharingService.h; path = ../../include/ISharingService.h; sourceTree = "<group>"; };
+		00F90DCE1CF29908004EBE5B /* ITangUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITangUser.h; path = ../../include/ITangUser.h; sourceTree = "<group>"; };
+		00F90DCF1CF29908004EBE5B /* IUCEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IUCEngine.h; path = ../../include/IUCEngine.h; sourceTree = "<group>"; };
+		00F90DD01CF29908004EBE5B /* IVideoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IVideoService.h; path = ../../include/IVideoService.h; sourceTree = "<group>"; };
+		00F90DD11CF29908004EBE5B /* MessageInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageInfo.h; path = ../../include/MessageInfo.h; sourceTree = "<group>"; };
+		00F90DD21CF29908004EBE5B /* MessageReadInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageReadInfo.h; path = ../../include/MessageReadInfo.h; sourceTree = "<group>"; };
+		00F90DD31CF29908004EBE5B /* SearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchInfo.h; path = ../../include/SearchInfo.h; sourceTree = "<group>"; };
+		00F90DD41CF29908004EBE5B /* UCErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCErrorCode.h; path = ../../include/UCErrorCode.h; sourceTree = "<group>"; };
+		00F90DD51CF29908004EBE5B /* UCSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UCSDK.h; path = ../../include/UCSDK.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00C2E6C61CEC4CF800042425 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DB73C61CED887800B097EE /* libthrift.a in Frameworks */,
+				00DB73C31CED881E00B097EE /* libcurl.dylib in Frameworks */,
+				00DB73BF1CED87CC00B097EE /* libsqlite3.a in Frameworks */,
+				00DB73BD1CED87BD00B097EE /* libcryptopp.a in Frameworks */,
+				00DB73B71CED871300B097EE /* libboost_chrono.dylib in Frameworks */,
+				00DB73B81CED871300B097EE /* libboost_date_time.dylib in Frameworks */,
+				00DB73B91CED871300B097EE /* libboost_filesystem.dylib in Frameworks */,
+				00DB73BA1CED871300B097EE /* libboost_regex.dylib in Frameworks */,
+				00DB73BB1CED871300B097EE /* libboost_system.dylib in Frameworks */,
+				00DB73BC1CED871300B097EE /* libboost_thread.dylib in Frameworks */,
+				002E12AC1CED6D0E00896429 /* liblogmanager.dylib in Frameworks */,
+				00C866801CED5BBB00574D21 /* libcommon.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		002E12A11CED6CF500896429 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				002E12A71CED6CF500896429 /* liblogmanager.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C2E6C01CEC4CF800042425 = {
+			isa = PBXGroup;
+			children = (
+				00F90DAC1CF298F9004EBE5B /* include */,
+				00C2E6D51CEC4D4300042425 /* src */,
+				00DB73C41CED884300B097EE /* third_party */,
+				00C2E6CA1CEC4CF800042425 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00C2E6CA1CEC4CF800042425 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E6C91CEC4CF800042425 /* libucsdk.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00C2E6D51CEC4D4300042425 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E6D61CEC4D4300042425 /* common */,
+				00C2E6D81CEC4D4300042425 /* components */,
+				00C2E7471CEC4D4300042425 /* services */,
+				00C2E7EB1CEC4D4300042425 /* UCEngine.cpp */,
+				00C2E7EC1CEC4D4300042425 /* UCEngine.h */,
+				00C2E7ED1CEC4D4300042425 /* utils */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		00C2E6D61CEC4D4300042425 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E6D71CEC4D4300042425 /* CommonDef.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		00C2E6D81CEC4D4300042425 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E6D91CEC4D4300042425 /* conferencesdk */,
+				00C2E6E71CEC4D4300042425 /* db */,
+				00C2E7181CEC4D4300042425 /* filetransfer */,
+				00C2E7191CEC4D4300042425 /* network */,
+				00C2E7281CEC4D4300042425 /* parser */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		00C2E6D91CEC4D4300042425 /* conferencesdk */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = conferencesdk;
+			sourceTree = "<group>";
+		};
+		00C2E6E71CEC4D4300042425 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E6E81CEC4D4300042425 /* include */,
+				00C2E7061CEC4D4300042425 /* src */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		00C2E6E81CEC4D4300042425 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E6E91CEC4D4300042425 /* AccountDao.h */,
+				00C2E6EA1CEC4D4300042425 /* AppDao.h */,
+				00C2E6EB1CEC4D4300042425 /* ConferenceDao.h */,
+				00C2E6EC1CEC4D4300042425 /* ConfigDao.h */,
+				00C2E6ED1CEC4D4300042425 /* ContactDao.h */,
+				00C2E6EE1CEC4D4300042425 /* ConversationDao.h */,
+				00C2E6EF1CEC4D4300042425 /* CppSQLite3.h */,
+				00C2E6F01CEC4D4300042425 /* DBManager.h */,
+				00C2E6F11CEC4D4300042425 /* DBManagerDef.h */,
+				00C2E6F21CEC4D4300042425 /* DBUpgrade.h */,
+				00C2E6F31CEC4D4300042425 /* ExternalDao.h */,
+				00C2E6F41CEC4D4300042425 /* FileTransferDao.h */,
+				00C2E6F51CEC4D4300042425 /* GroupDao.h */,
+				00C2E6F61CEC4D4300042425 /* KeyValueDao.h */,
+				00C2E6F71CEC4D4300042425 /* MessageDao.h */,
+				00C2E6F81CEC4D4300042425 /* PbxDao.h */,
+				00C2E6F91CEC4D4300042425 /* ProxyInfoDao.h */,
+				00C2E6FA1CEC4D4300042425 /* SQLConfig.h */,
+				00C2E6FB1CEC4D4300042425 /* SQLiteManager.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		00C2E7061CEC4D4300042425 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7071CEC4D4300042425 /* AccountDao.cpp */,
+				00C2E7081CEC4D4300042425 /* AppDao.cpp */,
+				00C2E7091CEC4D4300042425 /* ConferenceDao.cpp */,
+				00C2E70A1CEC4D4300042425 /* ConfigDao.cpp */,
+				00C2E70B1CEC4D4300042425 /* ContactDao.cpp */,
+				00C2E70C1CEC4D4300042425 /* ConversationDao.cpp */,
+				00C2E70D1CEC4D4300042425 /* CppSQLite3.cpp */,
+				00C2E70E1CEC4D4300042425 /* DBManager.cpp */,
+				00C2E70F1CEC4D4300042425 /* DBUpgrade.cpp */,
+				00C2E7101CEC4D4300042425 /* ExternalDao.cpp */,
+				00C2E7111CEC4D4300042425 /* FileTransferDao.cpp */,
+				00C2E7121CEC4D4300042425 /* GroupDao.cpp */,
+				00C2E7131CEC4D4300042425 /* KeyValueDao.cpp */,
+				00C2E7141CEC4D4300042425 /* MessageDao.cpp */,
+				00C2E7151CEC4D4300042425 /* PbxDao.cpp */,
+				00C2E7161CEC4D4300042425 /* ProxyInfoDao.cpp */,
+				00C2E7171CEC4D4300042425 /* SQLiteManager.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		00C2E7181CEC4D4300042425 /* filetransfer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = filetransfer;
+			sourceTree = "<group>";
+		};
+		00C2E7191CEC4D4300042425 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E71A1CEC4D4300042425 /* HTTPHandler.cpp */,
+				00C2E71B1CEC4D4300042425 /* HTTPHandler.h */,
+				00C2E71C1CEC4D4300042425 /* HTTPRequest.cpp */,
+				00C2E71D1CEC4D4300042425 /* HTTPRequestEvent.cpp */,
+				00C2E71E1CEC4D4300042425 /* HTTPResponse.cpp */,
+				00C2E71F1CEC4D4300042425 /* MessageQueue.cpp */,
+				00C2E7201CEC4D4300042425 /* MessageQueue.h */,
+				00C2E7211CEC4D4300042425 /* NetworkManager.cpp */,
+				00C2E7221CEC4D4300042425 /* NetworkManager.h */,
+				00C2E7231CEC4D4300042425 /* QueuedNetWorkManager.cpp */,
+				00C2E7241CEC4D4300042425 /* QueuedNetWorkManager.h */,
+				00C2E7251CEC4D4300042425 /* TaskExecutorCallback.h */,
+				00C2E7261CEC4D4300042425 /* UCASConnection.cpp */,
+				00C2E7271CEC4D4300042425 /* UCASConnection.h */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		00C2E7281CEC4D4300042425 /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7291CEC4D4300042425 /* msg_parser */,
+			);
+			path = parser;
+			sourceTree = "<group>";
+		};
+		00C2E7291CEC4D4300042425 /* msg_parser */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E72A1CEC4D4300042425 /* include */,
+				00C2E73F1CEC4D4300042425 /* src */,
+			);
+			path = msg_parser;
+			sourceTree = "<group>";
+		};
+		00C2E72A1CEC4D4300042425 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E72B1CEC4D4300042425 /* AppMessageType.h */,
+				00C2E72C1CEC4D4300042425 /* MessageParser.h */,
+				00C2E72D1CEC4D4300042425 /* MessageStream.h */,
+				00C2E72E1CEC4D4300042425 /* uc_types.h */,
+				00C2E72F1CEC4D4300042425 /* UCMessage.h */,
+				00C2E7301CEC4D4300042425 /* UCMessageType.h */,
+				00C2E7311CEC4D4300042425 /* UCParserDef.h */,
+				00C2E7321CEC4D4300042425 /* UCParserErrorCode.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		00C2E73F1CEC4D4300042425 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7401CEC4D4300042425 /* AppMessageType.cpp */,
+				00C2E7411CEC4D4300042425 /* MessageParser.cpp */,
+				00C2E7421CEC4D4300042425 /* MessageStream.cpp */,
+				00C2E7441CEC4D4300042425 /* uc_types.cpp */,
+				00C2E7451CEC4D4300042425 /* UCMessage.cpp */,
+				00C2E7461CEC4D4300042425 /* UCMessageType.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		00C2E7471CEC4D4300042425 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				00F10E871CFBE45E00C59E2D /* bbs_service */,
+				00C2E7481CEC4D4300042425 /* audio_service */,
+				00C2E7521CEC4D4300042425 /* calendar_service */,
+				00C2E7601CEC4D4300042425 /* client_service */,
+				00C2E76B1CEC4D4300042425 /* contact_service */,
+				00C2E7831CEC4D4300042425 /* external_service */,
+				00C2E7861CEC4D4300042425 /* filetransfer_service */,
+				00C2E7961CEC4D4300042425 /* message_service */,
+				00C2E7A31CEC4D4300042425 /* microblog_service */,
+				00C2E7A61CEC4D4300042425 /* openapi_service */,
+				00C2E7A91CEC4D4300042425 /* p2p_service */,
+				00C2E7D21CEC4D4300042425 /* pbx_service */,
+				00C2E7D61CEC4D4300042425 /* search_service */,
+				00C2E7D91CEC4D4300042425 /* sharing_service */,
+				00C2E7DC1CEC4D4300042425 /* store_service */,
+				00C2E7E71CEC4D4300042425 /* video_service */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		00C2E7481CEC4D4300042425 /* audio_service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = audio_service;
+			sourceTree = "<group>";
+		};
+		00C2E7521CEC4D4300042425 /* calendar_service */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7531CEC4D4300042425 /* CalendarMsgProcessor.cpp */,
+				00C2E7541CEC4D4300042425 /* CalendarMsgProcessor.h */,
+				00C2E7551CEC4D4300042425 /* CalendarRequestFactory.cpp */,
+				00C2E7561CEC4D4300042425 /* CalendarRequestFactory.h */,
+				00C2E7571CEC4D4300042425 /* CalendarService.cpp */,
+				00C2E7581CEC4D4300042425 /* CalendarService.h */,
+				00C2E7591CEC4D4300042425 /* ICalendarParser */,
+			);
+			path = calendar_service;
+			sourceTree = "<group>";
+		};
+		00C2E7591CEC4D4300042425 /* ICalendarParser */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E75A1CEC4D4300042425 /* date.cpp */,
+				00C2E75B1CEC4D4300042425 /* date.h */,
+				00C2E75C1CEC4D4300042425 /* element.cpp */,
+				00C2E75D1CEC4D4300042425 /* element.h */,
+				00C2E75E1CEC4D4300042425 /* icalendar.cpp */,
+				00C2E75F1CEC4D4300042425 /* icalendar.h */,
+			);
+			path = ICalendarParser;
+			sourceTree = "<group>";
+		};
+		00C2E7601CEC4D4300042425 /* client_service */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7611CEC4D4300042425 /* ClientService.cpp */,
+				00C2E7621CEC4D4300042425 /* ClientService.h */,
+				00C2E7631CEC4D4300042425 /* ConversationInfoInternal.h */,
+				00C2E7641CEC4D4300042425 /* LoginInfo.cpp */,
+				00C2E7651CEC4D4300042425 /* LoginInfo.h */,
+				00C2E7671CEC4D4300042425 /* PasswordRule.h */,
+				00C2E7681CEC4D4300042425 /* ProxyInfo.h */,
+				00C2E7691CEC4D4300042425 /* ServerInfo.cpp */,
+				00C2E76A1CEC4D4300042425 /* ServerInfo.h */,
+			);
+			path = client_service;
+			sourceTree = "<group>";
+		};
+		00C2E76B1CEC4D4300042425 /* contact_service */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E76C1CEC4D4300042425 /* contact_cache */,
+				00C2E7731CEC4D4300042425 /* ContactEventDispatcher.cpp */,
+				00C2E7741CEC4D4300042425 /* ContactEventDispatcher.h */,
+				00C2E7751CEC4D4300042425 /* ContactInfo.cpp */,
+				00C2E7761CEC4D4300042425 /* ContactInfoImpl.cpp */,
+				00C2E7771CEC4D4300042425 /* ContactInfoImpl.h */,
+				00C2E7781CEC4D4300042425 /* ContactMsgProcessor.cpp */,
+				00C2E7791CEC4D4300042425 /* ContactMsgProcessor.h */,
+				00C2E77A1CEC4D4300042425 /* ContactRequestFactory.cpp */,
+				00C2E77B1CEC4D4300042425 /* ContactRequestFactory.h */,
+				00C2E77C1CEC4D4300042425 /* ContactResponseParser.cpp */,
+				00C2E77D1CEC4D4300042425 /* ContactResponseParser.h */,
+				00C2E77E1CEC4D4300042425 /* ContactService.cpp */,
+				00C2E77F1CEC4D4300042425 /* ContactService.h */,
+				00C2E7801CEC4D4300042425 /* ContactTag.cpp */,
+				00C2E7811CEC4D4300042425 /* DefaultContactEventDispatcher.cpp */,
+				00C2E7821CEC4D4300042425 /* DefaultContactEventDispatcher.h */,
+			);
+			path = contact_service;
+			sourceTree = "<group>";
+		};
+		00C2E76C1CEC4D4300042425 /* contact_cache */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E76D1CEC4D4300042425 /* ContactCache.h */,
+				00C2E76E1CEC4D4300042425 /* ContactCacheListener.h */,
+				00C2E76F1CEC4D4300042425 /* ContactDelayLoader.cpp */,
+				00C2E7701CEC4D4300042425 /* ContactDelayLoader.h */,
+				00C2E7711CEC4D4300042425 /* RegularUpdatedCache.cpp */,
+				00C2E7721CEC4D4300042425 /* RegularUpdatedCache.h */,
+			);
+			path = contact_cache;
+			sourceTree = "<group>";
+		};
+		00C2E7831CEC4D4300042425 /* external_service */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7841CEC4D4300042425 /* ExternalService.cpp */,
+				00C2E7851CEC4D4300042425 /* ExternalService.h */,
+			);
+			path = external_service;
+			sourceTree = "<group>";
+		};
+		00C2E7861CEC4D4300042425 /* filetransfer_service */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7871CEC4D4300042425 /* FileHelp.hpp */,
+				00C2E7881CEC4D4300042425 /* FileTransferService.cpp */,
+				00C2E7891CEC4D4300042425 /* FileTransferService.h */,
+				00C2E78A1CEC4D4300042425 /* FSDef.h */,
+				00C2E78B1CEC4D4300042425 /* FSRequestAssist.cpp */,
+				00C2E78C1CEC4D4300042425 /* FSRequestAssist.h */,
+				00C2E78D1CEC4D4300042425 /* FSResponseAssist.cpp */,
+				00C2E78E1CEC4D4300042425 /* FSResponseAssist.h */,
+				00C2E78F1CEC4D4300042425 /* ResidentThread.hpp */,
+				00C2E7921CEC4D4300042425 /* Task.cpp */,
+				00C2E7931CEC4D4300042425 /* Task.h */,
+				00C2E7941CEC4D4300042425 /* UCFile.cpp */,
+				00C2E7951CEC4D4300042425 /* UCFile.h */,
+			);
+			path = filetransfer_service;
+			sourceTree = "<group>";
+		};
+		00C2E7961CEC4D4300042425 /* message_service */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7971CEC4D4300042425 /* DocumentInfo.cpp */,
+				00C2E7981CEC4D4300042425 /* GroupInfo.cpp */,
+				00C2E7991CEC4D4300042425 /* GroupService.cpp */,
+				00C2E79A1CEC4D4300042425 /* GroupService.h */,
+				00C2E79B1CEC4D4300042425 /* GroupServiceNotify.cpp */,
+				00C2E79C1CEC4D4300042425 /* GroupServiceRequest.cpp */,
+				00C2E79D1CEC4D4300042425 /* GroupServiceResponse.cpp */,
+				00C2E79E1CEC4D4300042425 /* IMService.cpp */,
+				00C2E79F1CEC4D4300042425 /* IMService.h */,
+				00C2E7A01CEC4D4300042425 /* MessageInfo.cpp */,
+				00C2E7A11CEC4D4300042425 /* MessageProcessor.cpp */,
+				00C2E7A21CEC4D4300042425 /* MessageProcessor.h */,
+			);
+			path = message_service;
+			sourceTree = "<group>";
+		};
+		00C2E7A31CEC4D4300042425 /* microblog_service */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7A41CEC4D4300042425 /* MicroblogService.cpp */,
+				00C2E7A51CEC4D4300042425 /* MicroblogService.h */,
+			);
+			path = microblog_service;
+			sourceTree = "<group>";
+		};
+		00C2E7A61CEC4D4300042425 /* openapi_service */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7A71CEC4D4300042425 /* OpenApiService.cpp */,
+				00C2E7A81CEC4D4300042425 /* OpenApiService.h */,
+			);
+			path = openapi_service;
+			sourceTree = "<group>";
+		};
+		00C2E7A91CEC4D4300042425 /* p2p_service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = p2p_service;
+			sourceTree = "<group>";
+		};
+		00C2E7D21CEC4D4300042425 /* pbx_service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pbx_service;
+			sourceTree = "<group>";
+		};
+		00C2E7D61CEC4D4300042425 /* search_service */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7D71CEC4D4300042425 /* SearchService.cpp */,
+				00C2E7D81CEC4D4300042425 /* SearchService.h */,
+			);
+			path = search_service;
+			sourceTree = "<group>";
+		};
+		00C2E7D91CEC4D4300042425 /* sharing_service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = sharing_service;
+			sourceTree = "<group>";
+		};
+		00C2E7DC1CEC4D4300042425 /* store_service */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7DD1CEC4D4300042425 /* ConversationStore.cpp */,
+				00C2E7DE1CEC4D4300042425 /* ConversationStore.h */,
+				00C2E7DF1CEC4D4300042425 /* GroupListStore.cpp */,
+				00C2E7E01CEC4D4300042425 /* GroupListStore.h */,
+				00C2E7E11CEC4D4300042425 /* MessageReadStore.cpp */,
+				00C2E7E21CEC4D4300042425 /* MessageReadStore.h */,
+				00C2E7E31CEC4D4300042425 /* MessageStore.cpp */,
+				00C2E7E41CEC4D4300042425 /* MessageStore.h */,
+				00C2E7E51CEC4D4300042425 /* StoreService.cpp */,
+				00C2E7E61CEC4D4300042425 /* StoreService.h */,
+			);
+			path = store_service;
+			sourceTree = "<group>";
+		};
+		00C2E7E71CEC4D4300042425 /* video_service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = video_service;
+			sourceTree = "<group>";
+		};
+		00C2E7ED1CEC4D4300042425 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7EE1CEC4D4300042425 /* CrypWrapper.cpp */,
+				00C2E7EF1CEC4D4300042425 /* CrypWrapper.h */,
+				00C2E7F01CEC4D4300042425 /* Gzip.h */,
+				00C2E7F11CEC4D4300042425 /* HTTPResponseAssist.cpp */,
+				00C2E7F21CEC4D4300042425 /* HTTPResponseAssist.h */,
+				00C2E7F31CEC4D4300042425 /* jsonhelper.h */,
+				00C2E7F41CEC4D4300042425 /* Macro.h */,
+				00C2E7F51CEC4D4300042425 /* md5 */,
+				00C2E7F81CEC4D4300042425 /* TaskExecutor.cpp */,
+				00C2E7F91CEC4D4300042425 /* TaskExecutor.h */,
+				00C2E7FA1CEC4D4300042425 /* ThreadPool.cpp */,
+				00C2E7FB1CEC4D4300042425 /* ThreadPool.h */,
+				00C2E7FC1CEC4D4300042425 /* Timer.cpp */,
+				00C2E7FD1CEC4D4300042425 /* UCTime.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		00C2E7F51CEC4D4300042425 /* md5 */ = {
+			isa = PBXGroup;
+			children = (
+				00C2E7F61CEC4D4300042425 /* md5.cpp */,
+				00C2E7F71CEC4D4300042425 /* md5.h */,
+			);
+			path = md5;
+			sourceTree = "<group>";
+		};
+		00C866771CED522200574D21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00C8667B1CED522200574D21 /* libcommon.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00DB73C41CED884300B097EE /* third_party */ = {
+			isa = PBXGroup;
+			children = (
+				002E12A01CED6CF500896429 /* logmanager.xcodeproj */,
+				00C866761CED522200574D21 /* common.xcodeproj */,
+				00F90DFF1CF299F5004EBE5B /* lib */,
+			);
+			name = third_party;
+			sourceTree = "<group>";
+		};
+		00F10E871CFBE45E00C59E2D /* bbs_service */ = {
+			isa = PBXGroup;
+			children = (
+				00F10E881CFBE45E00C59E2D /* BBSService.cpp */,
+				00F10E891CFBE45E00C59E2D /* BBSService.h */,
+			);
+			path = bbs_service;
+			sourceTree = "<group>";
+		};
+		00F90DAC1CF298F9004EBE5B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				00F90DAD1CF29908004EBE5B /* AC_PbxCallRecord.h */,
+				00F90DAE1CF29908004EBE5B /* AccountInfo.h */,
+				00F90DAF1CF29908004EBE5B /* AppInfo.h */,
+				00F90DB01CF29908004EBE5B /* base */,
+				00F90DB61CF29908004EBE5B /* CalendarData.h */,
+				00F90DB71CF29908004EBE5B /* ContactInfo.h */,
+				00F90DB81CF29908004EBE5B /* ContactTag.h */,
+				00F90DB91CF29908004EBE5B /* ConversationInfo.h */,
+				00F90DBA1CF29908004EBE5B /* DepartmentInfo.h */,
+				00F90DBB1CF29908004EBE5B /* DocumentInfo.h */,
+				00F90DBC1CF29908004EBE5B /* ExternalInfo.h */,
+				00F90DBD1CF29908004EBE5B /* GroupInfo.h */,
+				00F90DBE1CF29908004EBE5B /* IAudioService.h */,
+				00F90DBF1CF29908004EBE5B /* ICalendarService.h */,
+				00F90DC01CF29908004EBE5B /* IClientService.h */,
+				00F90DC11CF29908004EBE5B /* IConference.h */,
+				00F90DC21CF29908004EBE5B /* IConferenceEvent.h */,
+				00F90DC31CF29908004EBE5B /* IContactService.h */,
+				00F90DC41CF29908004EBE5B /* IExternalService.h */,
+				00F90DC51CF29908004EBE5B /* IFileTransferService.h */,
+				00F90DC61CF29908004EBE5B /* IGroupService.h */,
+				00F90DC71CF29908004EBE5B /* IIMService.h */,
+				00F90DC81CF29908004EBE5B /* IMicroblogService.h */,
+				00F90DC91CF29908004EBE5B /* IOpenApiService.h */,
+				00F90DCA1CF29908004EBE5B /* IP2PService.h */,
+				00F90DCB1CF29908004EBE5B /* IPbxService.h */,
+				00F90DCC1CF29908004EBE5B /* ISearchService.h */,
+				00F90DCD1CF29908004EBE5B /* ISharingService.h */,
+				00F90DCE1CF29908004EBE5B /* ITangUser.h */,
+				00F90DCF1CF29908004EBE5B /* IUCEngine.h */,
+				00F90DD01CF29908004EBE5B /* IVideoService.h */,
+				00F90DD11CF29908004EBE5B /* MessageInfo.h */,
+				00F90DD21CF29908004EBE5B /* MessageReadInfo.h */,
+				00F90DD31CF29908004EBE5B /* SearchInfo.h */,
+				00F90DD41CF29908004EBE5B /* UCErrorCode.h */,
+				00F90DD51CF29908004EBE5B /* UCSDK.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		00F90DB01CF29908004EBE5B /* base */ = {
+			isa = PBXGroup;
+			children = (
+				00F90DB11CF29908004EBE5B /* HTTPRequest.h */,
+				00F90DB21CF29908004EBE5B /* HTTPRequestCallback.h */,
+				00F90DB31CF29908004EBE5B /* HTTPRequestEvent.h */,
+				00F90DB41CF29908004EBE5B /* HTTPResponse.h */,
+				00F90DB51CF29908004EBE5B /* Timer.h */,
+			);
+			name = base;
+			path = ../../include/base;
+			sourceTree = "<group>";
+		};
+		00F90DFF1CF299F5004EBE5B /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				00DB73C51CED887800B097EE /* libthrift.a */,
+				00C2E8F51CEC771100042425 /* libcryptopp.a */,
+				00C2E8F71CEC77D800042425 /* libcommon.dylib */,
+				00DB73C21CED881E00B097EE /* libcurl.dylib */,
+				00DB73BE1CED87CC00B097EE /* libsqlite3.a */,
+				00DB73B11CED871300B097EE /* libboost_chrono.dylib */,
+				00DB73B21CED871300B097EE /* libboost_date_time.dylib */,
+				00DB73B31CED871300B097EE /* libboost_filesystem.dylib */,
+				00DB73B41CED871300B097EE /* libboost_regex.dylib */,
+				00DB73B51CED871300B097EE /* libboost_system.dylib */,
+				00DB73B61CED871300B097EE /* libboost_thread.dylib */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		00C2E6C71CEC4CF800042425 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00F90DF91CF29908004EBE5B /* MessageInfo.h in Headers */,
+				00F90DE71CF29908004EBE5B /* ICalendarService.h in Headers */,
+				00F90DEC1CF29908004EBE5B /* IExternalService.h in Headers */,
+				00F90DE41CF29908004EBE5B /* ExternalInfo.h in Headers */,
+				00F90DD91CF29908004EBE5B /* HTTPRequest.h in Headers */,
+				00F90DEF1CF29908004EBE5B /* IIMService.h in Headers */,
+				00F90DE31CF29908004EBE5B /* DocumentInfo.h in Headers */,
+				00F10E8B1CFBE45E00C59E2D /* BBSService.h in Headers */,
+				00F90DE91CF29908004EBE5B /* IConference.h in Headers */,
+				00F90DEB1CF29908004EBE5B /* IContactService.h in Headers */,
+				00F90DFC1CF29908004EBE5B /* UCErrorCode.h in Headers */,
+				00F90DE01CF29908004EBE5B /* ContactTag.h in Headers */,
+				00F90DE81CF29908004EBE5B /* IClientService.h in Headers */,
+				00F90DF71CF29908004EBE5B /* IUCEngine.h in Headers */,
+				00F90DDA1CF29908004EBE5B /* HTTPRequestCallback.h in Headers */,
+				00F90DD81CF29908004EBE5B /* AppInfo.h in Headers */,
+				00F90DF41CF29908004EBE5B /* ISearchService.h in Headers */,
+				00F90DF51CF29908004EBE5B /* ISharingService.h in Headers */,
+				00F90DF61CF29908004EBE5B /* ITangUser.h in Headers */,
+				00F90DEE1CF29908004EBE5B /* IGroupService.h in Headers */,
+				00F90DE21CF29908004EBE5B /* DepartmentInfo.h in Headers */,
+				00F90DD71CF29908004EBE5B /* AccountInfo.h in Headers */,
+				00F90DF01CF29908004EBE5B /* IMicroblogService.h in Headers */,
+				00F90DDC1CF29908004EBE5B /* HTTPResponse.h in Headers */,
+				00F90DFD1CF29908004EBE5B /* UCSDK.h in Headers */,
+				00F90DF81CF29908004EBE5B /* IVideoService.h in Headers */,
+				00F90DF11CF29908004EBE5B /* IOpenApiService.h in Headers */,
+				00F90DD61CF29908004EBE5B /* AC_PbxCallRecord.h in Headers */,
+				00F90DE51CF29908004EBE5B /* GroupInfo.h in Headers */,
+				00F90DE11CF29908004EBE5B /* ConversationInfo.h in Headers */,
+				00F90DDD1CF29908004EBE5B /* Timer.h in Headers */,
+				00F90DFB1CF29908004EBE5B /* SearchInfo.h in Headers */,
+				00F90DE61CF29908004EBE5B /* IAudioService.h in Headers */,
+				00F90DF31CF29908004EBE5B /* IPbxService.h in Headers */,
+				00F90DED1CF29908004EBE5B /* IFileTransferService.h in Headers */,
+				00F90DEA1CF29908004EBE5B /* IConferenceEvent.h in Headers */,
+				00F90DDB1CF29908004EBE5B /* HTTPRequestEvent.h in Headers */,
+				00F90DF21CF29908004EBE5B /* IP2PService.h in Headers */,
+				00F90DDE1CF29908004EBE5B /* CalendarData.h in Headers */,
+				00F90DFA1CF29908004EBE5B /* MessageReadInfo.h in Headers */,
+				00F90DDF1CF29908004EBE5B /* ContactInfo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00C2E6C81CEC4CF800042425 /* ucsdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00C2E6D21CEC4CF800042425 /* Build configuration list for PBXNativeTarget "ucsdk" */;
+			buildPhases = (
+				00C2E6C51CEC4CF800042425 /* Sources */,
+				00C2E6C61CEC4CF800042425 /* Frameworks */,
+				00C2E6C71CEC4CF800042425 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				002E12AB1CED6D0800896429 /* PBXTargetDependency */,
+				002E12A91CED6D0500896429 /* PBXTargetDependency */,
+			);
+			name = ucsdk;
+			productName = ucsdk;
+			productReference = 00C2E6C91CEC4CF800042425 /* libucsdk.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00C2E6C11CEC4CF800042425 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = quanshi;
+				TargetAttributes = {
+					00C2E6C81CEC4CF800042425 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 00C2E6C41CEC4CF800042425 /* Build configuration list for PBXProject "ucsdk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 00C2E6C01CEC4CF800042425;
+			productRefGroup = 00C2E6CA1CEC4CF800042425 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 00C866771CED522200574D21 /* Products */;
+					ProjectRef = 00C866761CED522200574D21 /* common.xcodeproj */;
+				},
+				{
+					ProductGroup = 002E12A11CED6CF500896429 /* Products */;
+					ProjectRef = 002E12A01CED6CF500896429 /* logmanager.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				00C2E6C81CEC4CF800042425 /* ucsdk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		002E12A71CED6CF500896429 /* liblogmanager.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = liblogmanager.dylib;
+			remoteRef = 002E12A61CED6CF500896429 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		00C8667B1CED522200574D21 /* libcommon.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libcommon.dylib;
+			remoteRef = 00C8667A1CED522200574D21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00C2E6C51CEC4CF800042425 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C2E8041CEC4D7D00042425 /* CommonDef.h in Sources */,
+				00C2E8121CEC4D7D00042425 /* AccountDao.h in Sources */,
+				00C2E8131CEC4D7D00042425 /* AppDao.h in Sources */,
+				00C2E8141CEC4D7D00042425 /* ConferenceDao.h in Sources */,
+				00C2E8151CEC4D7D00042425 /* ConfigDao.h in Sources */,
+				00C2E8161CEC4D7D00042425 /* ContactDao.h in Sources */,
+				00C2E8171CEC4D7D00042425 /* ConversationDao.h in Sources */,
+				00C2E8181CEC4D7D00042425 /* CppSQLite3.h in Sources */,
+				00C2E8191CEC4D7D00042425 /* DBManager.h in Sources */,
+				00C2E81A1CEC4D7D00042425 /* DBManagerDef.h in Sources */,
+				00C2E81B1CEC4D7D00042425 /* DBUpgrade.h in Sources */,
+				00C2E81C1CEC4D7D00042425 /* ExternalDao.h in Sources */,
+				00C2E81D1CEC4D7D00042425 /* FileTransferDao.h in Sources */,
+				00C2E81E1CEC4D7D00042425 /* GroupDao.h in Sources */,
+				00C2E81F1CEC4D7D00042425 /* KeyValueDao.h in Sources */,
+				00C2E8201CEC4D7D00042425 /* MessageDao.h in Sources */,
+				00C2E8211CEC4D7D00042425 /* PbxDao.h in Sources */,
+				00C2E8221CEC4D7D00042425 /* ProxyInfoDao.h in Sources */,
+				00C2E8231CEC4D7D00042425 /* SQLConfig.h in Sources */,
+				00C2E8241CEC4D7D00042425 /* SQLiteManager.h in Sources */,
+				00C2E8251CEC4D7D00042425 /* AccountDao.cpp in Sources */,
+				00C2E8261CEC4D7D00042425 /* AppDao.cpp in Sources */,
+				00C2E8271CEC4D7D00042425 /* ConferenceDao.cpp in Sources */,
+				00C2E8281CEC4D7D00042425 /* ConfigDao.cpp in Sources */,
+				00C2E8291CEC4D7D00042425 /* ContactDao.cpp in Sources */,
+				00C2E82A1CEC4D7D00042425 /* ConversationDao.cpp in Sources */,
+				00C2E82B1CEC4D7D00042425 /* CppSQLite3.cpp in Sources */,
+				00C2E82C1CEC4D7D00042425 /* DBManager.cpp in Sources */,
+				00C2E82D1CEC4D7D00042425 /* DBUpgrade.cpp in Sources */,
+				00C2E82E1CEC4D7D00042425 /* ExternalDao.cpp in Sources */,
+				00C2E82F1CEC4D7D00042425 /* FileTransferDao.cpp in Sources */,
+				00C2E8301CEC4D7D00042425 /* GroupDao.cpp in Sources */,
+				00C2E8311CEC4D7D00042425 /* KeyValueDao.cpp in Sources */,
+				00C2E8321CEC4D7D00042425 /* MessageDao.cpp in Sources */,
+				00C2E8331CEC4D7D00042425 /* PbxDao.cpp in Sources */,
+				00C2E8341CEC4D7D00042425 /* ProxyInfoDao.cpp in Sources */,
+				00C2E8351CEC4D7D00042425 /* SQLiteManager.cpp in Sources */,
+				00C2E8361CEC4D7D00042425 /* HTTPHandler.cpp in Sources */,
+				00C2E8371CEC4D7D00042425 /* HTTPHandler.h in Sources */,
+				00C2E8381CEC4D7D00042425 /* HTTPRequest.cpp in Sources */,
+				00C2E8391CEC4D7D00042425 /* HTTPRequestEvent.cpp in Sources */,
+				00C2E83A1CEC4D7D00042425 /* HTTPResponse.cpp in Sources */,
+				00C2E83B1CEC4D7D00042425 /* MessageQueue.cpp in Sources */,
+				00C2E83C1CEC4D7D00042425 /* MessageQueue.h in Sources */,
+				00C2E83D1CEC4D7D00042425 /* NetworkManager.cpp in Sources */,
+				00C2E83E1CEC4D7D00042425 /* NetworkManager.h in Sources */,
+				00C2E83F1CEC4D7D00042425 /* QueuedNetWorkManager.cpp in Sources */,
+				00C2E8401CEC4D7D00042425 /* QueuedNetWorkManager.h in Sources */,
+				00C2E8411CEC4D7D00042425 /* TaskExecutorCallback.h in Sources */,
+				00C2E8421CEC4D7D00042425 /* UCASConnection.cpp in Sources */,
+				00C2E8431CEC4D7D00042425 /* UCASConnection.h in Sources */,
+				00C2E8441CEC4D7D00042425 /* AppMessageType.h in Sources */,
+				00C2E8451CEC4D7D00042425 /* MessageParser.h in Sources */,
+				00C2E8461CEC4D7D00042425 /* MessageStream.h in Sources */,
+				00C2E8471CEC4D7D00042425 /* uc_types.h in Sources */,
+				00C2E8481CEC4D7D00042425 /* UCMessage.h in Sources */,
+				00C2E8491CEC4D7D00042425 /* UCMessageType.h in Sources */,
+				00F10E8A1CFBE45E00C59E2D /* BBSService.cpp in Sources */,
+				00C2E84A1CEC4D7D00042425 /* UCParserDef.h in Sources */,
+				00C2E84B1CEC4D7D00042425 /* UCParserErrorCode.h in Sources */,
+				00C2E8521CEC4D7D00042425 /* AppMessageType.cpp in Sources */,
+				00C2E8531CEC4D7D00042425 /* MessageParser.cpp in Sources */,
+				00C2E8541CEC4D7D00042425 /* MessageStream.cpp in Sources */,
+				00C2E8561CEC4D7D00042425 /* uc_types.cpp in Sources */,
+				00C2E8571CEC4D7D00042425 /* UCMessage.cpp in Sources */,
+				00C2E8581CEC4D7D00042425 /* UCMessageType.cpp in Sources */,
+				00C2E8621CEC4D7D00042425 /* CalendarMsgProcessor.cpp in Sources */,
+				00C2E8631CEC4D7D00042425 /* CalendarMsgProcessor.h in Sources */,
+				00C2E8641CEC4D7D00042425 /* CalendarRequestFactory.cpp in Sources */,
+				00C2E8651CEC4D7D00042425 /* CalendarRequestFactory.h in Sources */,
+				00C2E8661CEC4D7D00042425 /* CalendarService.cpp in Sources */,
+				00C2E8671CEC4D7D00042425 /* CalendarService.h in Sources */,
+				00C2E8681CEC4D7D00042425 /* date.cpp in Sources */,
+				00C2E8691CEC4D7D00042425 /* date.h in Sources */,
+				00C2E86A1CEC4D7D00042425 /* element.cpp in Sources */,
+				00C2E86B1CEC4D7D00042425 /* element.h in Sources */,
+				00C2E86C1CEC4D7D00042425 /* icalendar.cpp in Sources */,
+				00C2E86D1CEC4D7D00042425 /* icalendar.h in Sources */,
+				00C2E86E1CEC4D7D00042425 /* ClientService.cpp in Sources */,
+				00C2E86F1CEC4D7D00042425 /* ClientService.h in Sources */,
+				00C2E8701CEC4D7D00042425 /* ConversationInfoInternal.h in Sources */,
+				00C2E8711CEC4D7D00042425 /* LoginInfo.cpp in Sources */,
+				00C2E8721CEC4D7D00042425 /* LoginInfo.h in Sources */,
+				00C2E8741CEC4D7D00042425 /* PasswordRule.h in Sources */,
+				00C2E8751CEC4D7D00042425 /* ProxyInfo.h in Sources */,
+				00C2E8761CEC4D7D00042425 /* ServerInfo.cpp in Sources */,
+				00C2E8771CEC4D7D00042425 /* ServerInfo.h in Sources */,
+				00C2E8781CEC4D7D00042425 /* ContactCache.h in Sources */,
+				00C2E8791CEC4D7D00042425 /* ContactCacheListener.h in Sources */,
+				00C2E87A1CEC4D7D00042425 /* ContactDelayLoader.cpp in Sources */,
+				00C2E87B1CEC4D7D00042425 /* ContactDelayLoader.h in Sources */,
+				00C2E87C1CEC4D7D00042425 /* RegularUpdatedCache.cpp in Sources */,
+				00C2E87D1CEC4D7D00042425 /* RegularUpdatedCache.h in Sources */,
+				00C2E87E1CEC4D7D00042425 /* ContactEventDispatcher.cpp in Sources */,
+				00C2E87F1CEC4D7D00042425 /* ContactEventDispatcher.h in Sources */,
+				00C2E8801CEC4D7D00042425 /* ContactInfo.cpp in Sources */,
+				00C2E8811CEC4D7D00042425 /* ContactInfoImpl.cpp in Sources */,
+				00C2E8821CEC4D7D00042425 /* ContactInfoImpl.h in Sources */,
+				00C2E8831CEC4D7D00042425 /* ContactMsgProcessor.cpp in Sources */,
+				00C2E8841CEC4D7D00042425 /* ContactMsgProcessor.h in Sources */,
+				00C2E8851CEC4D7D00042425 /* ContactRequestFactory.cpp in Sources */,
+				00C2E8861CEC4D7D00042425 /* ContactRequestFactory.h in Sources */,
+				00C2E8871CEC4D7D00042425 /* ContactResponseParser.cpp in Sources */,
+				00C2E8881CEC4D7D00042425 /* ContactResponseParser.h in Sources */,
+				00C2E8891CEC4D7D00042425 /* ContactService.cpp in Sources */,
+				00C2E88A1CEC4D7E00042425 /* ContactService.h in Sources */,
+				00C2E88B1CEC4D7E00042425 /* ContactTag.cpp in Sources */,
+				00C2E88C1CEC4D7E00042425 /* DefaultContactEventDispatcher.cpp in Sources */,
+				00C2E88D1CEC4D7E00042425 /* DefaultContactEventDispatcher.h in Sources */,
+				00C2E88E1CEC4D7E00042425 /* ExternalService.cpp in Sources */,
+				00C2E88F1CEC4D7E00042425 /* ExternalService.h in Sources */,
+				00C2E8901CEC4D7E00042425 /* FileHelp.hpp in Sources */,
+				00C2E8911CEC4D7E00042425 /* FileTransferService.cpp in Sources */,
+				00C2E8921CEC4D7E00042425 /* FileTransferService.h in Sources */,
+				00C2E8931CEC4D7E00042425 /* FSDef.h in Sources */,
+				00C2E8941CEC4D7E00042425 /* FSRequestAssist.cpp in Sources */,
+				00C2E8951CEC4D7E00042425 /* FSRequestAssist.h in Sources */,
+				00C2E8961CEC4D7E00042425 /* FSResponseAssist.cpp in Sources */,
+				00C2E8971CEC4D7E00042425 /* FSResponseAssist.h in Sources */,
+				00C2E8981CEC4D7E00042425 /* ResidentThread.hpp in Sources */,
+				00C2E89B1CEC4D7E00042425 /* Task.cpp in Sources */,
+				00C2E89C1CEC4D7E00042425 /* Task.h in Sources */,
+				00C2E89D1CEC4D7E00042425 /* UCFile.cpp in Sources */,
+				00C2E89E1CEC4D7E00042425 /* UCFile.h in Sources */,
+				00C2E89F1CEC4D7E00042425 /* DocumentInfo.cpp in Sources */,
+				00C2E8A01CEC4D7E00042425 /* GroupInfo.cpp in Sources */,
+				00C2E8A11CEC4D7E00042425 /* GroupService.cpp in Sources */,
+				00C2E8A21CEC4D7E00042425 /* GroupService.h in Sources */,
+				00C2E8A31CEC4D7E00042425 /* GroupServiceNotify.cpp in Sources */,
+				00C2E8A41CEC4D7E00042425 /* GroupServiceRequest.cpp in Sources */,
+				00C2E8A51CEC4D7E00042425 /* GroupServiceResponse.cpp in Sources */,
+				00C2E8A61CEC4D7E00042425 /* IMService.cpp in Sources */,
+				00C2E8A71CEC4D7E00042425 /* IMService.h in Sources */,
+				00C2E8A81CEC4D7E00042425 /* MessageInfo.cpp in Sources */,
+				00C2E8A91CEC4D7E00042425 /* MessageProcessor.cpp in Sources */,
+				00C2E8AA1CEC4D7E00042425 /* MessageProcessor.h in Sources */,
+				00C2E8AB1CEC4D7E00042425 /* MicroblogService.cpp in Sources */,
+				00C2E8AC1CEC4D7E00042425 /* MicroblogService.h in Sources */,
+				00C2E8AD1CEC4D7E00042425 /* OpenApiService.cpp in Sources */,
+				00C2E8AE1CEC4D7E00042425 /* OpenApiService.h in Sources */,
+				00C2E8D31CEC4D7E00042425 /* SearchService.cpp in Sources */,
+				00C2E8D41CEC4D7E00042425 /* SearchService.h in Sources */,
+				00C2E8D71CEC4D7E00042425 /* ConversationStore.cpp in Sources */,
+				00C2E8D81CEC4D7E00042425 /* ConversationStore.h in Sources */,
+				00C2E8D91CEC4D7E00042425 /* GroupListStore.cpp in Sources */,
+				00C2E8DA1CEC4D7E00042425 /* GroupListStore.h in Sources */,
+				00C2E8DB1CEC4D7E00042425 /* MessageReadStore.cpp in Sources */,
+				00C2E8DC1CEC4D7E00042425 /* MessageReadStore.h in Sources */,
+				00C2E8DD1CEC4D7E00042425 /* MessageStore.cpp in Sources */,
+				00C2E8DE1CEC4D7E00042425 /* MessageStore.h in Sources */,
+				00C2E8DF1CEC4D7E00042425 /* StoreService.cpp in Sources */,
+				00C2E8E01CEC4D7E00042425 /* StoreService.h in Sources */,
+				00C2E8E41CEC4D7E00042425 /* UCEngine.cpp in Sources */,
+				00C2E8E51CEC4D7E00042425 /* UCEngine.h in Sources */,
+				00C2E8E61CEC4D7E00042425 /* CrypWrapper.cpp in Sources */,
+				00C2E8E71CEC4D7E00042425 /* CrypWrapper.h in Sources */,
+				00C2E8E81CEC4D7E00042425 /* Gzip.h in Sources */,
+				00C2E8E91CEC4D7E00042425 /* HTTPResponseAssist.cpp in Sources */,
+				00C2E8EA1CEC4D7E00042425 /* HTTPResponseAssist.h in Sources */,
+				00C2E8EB1CEC4D7E00042425 /* jsonhelper.h in Sources */,
+				00C2E8EC1CEC4D7E00042425 /* Macro.h in Sources */,
+				00C2E8ED1CEC4D7E00042425 /* md5.cpp in Sources */,
+				00C2E8EE1CEC4D7E00042425 /* md5.h in Sources */,
+				00C2E8EF1CEC4D7E00042425 /* TaskExecutor.cpp in Sources */,
+				00C2E8F01CEC4D7E00042425 /* TaskExecutor.h in Sources */,
+				00C2E8F11CEC4D7E00042425 /* ThreadPool.cpp in Sources */,
+				00C2E8F21CEC4D7E00042425 /* ThreadPool.h in Sources */,
+				00C2E8F31CEC4D7E00042425 /* Timer.cpp in Sources */,
+				00C2E8F41CEC4D7E00042425 /* UCTime.h in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		002E12A91CED6D0500896429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = common;
+			targetProxy = 002E12A81CED6D0500896429 /* PBXContainerItemProxy */;
+		};
+		002E12AB1CED6D0800896429 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = logmanager;
+			targetProxy = 002E12AA1CED6D0800896429 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00C2E6D01CEC4CF800042425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		00C2E6D11CEC4CF800042425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		00C2E6D31CEC4CF800042425 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = UC_EXPORTS;
+				HEADER_SEARCH_PATHS = (
+					../../include,
+					../../include/base,
+					../../third_party/common/include,
+					../../third_party/common/include/common,
+					../../third_party/curl/include,
+					../../third_party/boost/include,
+					../../third_party/thrift/include,
+					../../third_party/tang/include,
+					../../third_party/sqlite3/include,
+					../../third_party/zlib/include,
+					../../third_party/rapidjson/include,
+					../../third_party/openssl/include,
+					../../third_party/log_manager,
+					../../third_party/gtest/include,
+					"../../third_party/google-glot/include",
+					../../third_party/CrypWrapper/include,
+					../../src,
+					../../src/common,
+					"../../src/services/**",
+					../../src/utils,
+					../../src/components,
+					../../src/components/db/include,
+				);
+				LD_RUNPATH_SEARCH_PATHS = ../../third_party/common/lib/mac/;
+				LIBRARY_SEARCH_PATHS = (
+					../../third_party/common/lib/mac/,
+					../../third_party/log_manager/lib/mac,
+					../../third_party/boost/lib/macosx,
+					../../third_party/CrypWrapper/lib/mac,
+					../../third_party/sqlite3/lib/macosx,
+					../../third_party/thrift/lib/macosx,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00C2E6D41CEC4CF800042425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = UC_EXPORTS;
+				HEADER_SEARCH_PATHS = (
+					../../include,
+					../../include/base,
+					../../third_party/common/include,
+					../../third_party/common/include/common,
+					../../third_party/curl/include,
+					../../third_party/boost/include,
+					../../third_party/thrift/include,
+					../../third_party/tang/include,
+					../../third_party/sqlite3/include,
+					../../third_party/zlib/include,
+					../../third_party/rapidjson/include,
+					../../third_party/openssl/include,
+					../../third_party/log_manager,
+					../../third_party/gtest/include,
+					"../../third_party/google-glot/include",
+					../../third_party/CrypWrapper/include,
+					../../src,
+					../../src/common,
+					"../../src/services/**",
+					../../src/utils,
+					../../src/components,
+					../../src/components/db/include,
+				);
+				LD_RUNPATH_SEARCH_PATHS = ../../third_party/common/lib/mac/;
+				LIBRARY_SEARCH_PATHS = (
+					../../third_party/common/lib/mac/,
+					../../third_party/log_manager/lib/mac,
+					../../third_party/boost/lib/macosx,
+					../../third_party/CrypWrapper/lib/mac,
+					../../third_party/sqlite3/lib/macosx,
+					../../third_party/thrift/lib/macosx,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00C2E6C41CEC4CF800042425 /* Build configuration list for PBXProject "ucsdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00C2E6D01CEC4CF800042425 /* Debug */,
+				00C2E6D11CEC4CF800042425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00C2E6D21CEC4CF800042425 /* Build configuration list for PBXNativeTarget "ucsdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00C2E6D31CEC4CF800042425 /* Debug */,
+				00C2E6D41CEC4CF800042425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00C2E6C11CEC4CF800042425 /* Project object */;
+}

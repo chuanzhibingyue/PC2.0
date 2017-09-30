@@ -1,0 +1,13 @@
+<div class="store-header">
+    <span class="fa fa-link"></span>
+    <span>选择文件发送</span>
+    <div class="search-wrapper">
+        <form ng-keydown="globalSearch($event)" ng-click="goToSearch($event)">
+            <span class="fa fa-search icon-search"></span>
+            <input type="text" placeholder="{{'搜索'|translate}}" ng-model="searchText" ng-blur="blurSearch($event)"/>
+            <span class="fa fa-times-circle icon-cross" ng-mousedown="clearSearch($event)"
+                  ng-show="!isSearching && searchText"></span>
+            <span class="fa fa-spinner fa-pulse icon-loading" ng-show="isSearching"></span>
+        </form>
+    </div>
+</div>

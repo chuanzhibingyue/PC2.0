@@ -1,0 +1,271 @@
+body {
+  overflow: hidden;
+}
+.contactsPage {
+  overflow: hidden;
+  text-align: left;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3), 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 600px;
+  height: 620px;
+  background-color: #FFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+}
+.contactsPage .closeBtn {
+  cursor: pointer;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  content: '';
+  height: 20px;
+  width: 20px;
+  background-size: 8px;
+  background-position: center;
+  background-image: url(../images/icon_close.png);
+  background-repeat: no-repeat;
+}
+.contactsPage .closeBtn:hover {
+  background-image: url(../images/icon_close_hover.png);
+  background-size: 20px 20px;
+}
+.contactsPage .divideline {
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  float: left;
+  background-color: #ededed;
+}
+.contactsPage .content {
+  padding: 0;
+  height: 100%;
+  margin: 0;
+}
+.contactsPage .content .siderleft {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.contactsPage .content .siderleft .header {
+  height: 50px;
+  border-bottom: solid 1px #DDD;
+  text-align: center;
+  font-size: 14px;
+  color: #03111f;
+  line-height: 50px;
+}
+.contactsPage .content .siderleft .header .contact-searchbar {
+  width: 260px;
+  height: 28px;
+  top: 11px;
+  position: absolute;
+  padding: 0 20px;
+}
+.contactsPage .content .siderleft .dptList {
+  height: calc(100% - 50px);
+  overflow: auto;
+  width: 300px;
+  display: block;
+}
+.contactsPage .content .siderleft .dptList .orderlist {
+  display: block;
+  position: relative;
+}
+.contactsPage .content .siderleft .dptList .first-level {
+  min-width: 240px;
+}
+.contactsPage .content .siderleft .dptList .item {
+  font-size: 12px;
+  border-bottom: solid 1px #ededed;
+  display: block;
+  cursor: pointer;
+  padding: 0 40px 0 0;
+  height: 28px;
+  line-height: 28px;
+  white-space: nowrap;
+}
+.contactsPage .content .siderleft .dptList .item:hover {
+  background-color: #fffff3;
+}
+.contactsPage .content .siderleft .dptList .item.person .name {
+  max-width: 120px;
+  float: left;
+}
+.contactsPage .content .siderleft .dptList .item .avatar {
+  width: 20px;
+  height: 20px;
+  background-color: #f5f5f5;
+  border-radius: 40px;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  margin-top: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.contactsPage .content .siderleft .dptList .item .avatar img {
+  width: 20px;
+  height: 20px;
+}
+.contactsPage .content .siderleft .dptList .item .position {
+  color: #666666;
+  margin-left: 10px;
+}
+.contactsPage .content .siderleft .dptList .item .itemcontent {
+  float: left;
+  padding-right: 50px;
+}
+.contactsPage .content .siderleft .dptList .item .select {
+  cursor: pointer;
+  font-size: 12px;
+  color: #03111f;
+  padding: 0;
+  position: absolute;
+  right: 17px;
+  background-size: 14px 14px;
+  width: 14px;
+  height: 28px;
+}
+.contactsPage .content .siderleft .dptList .item .select.checked {
+  background: url(../images/checked.png) center no-repeat;
+}
+.contactsPage .content .siderleft .dptList .item .select.un-checked {
+  background: url(../images/unchecked.png) center no-repeat;
+}
+.contactsPage .content .siderleft .dptList .item .select.disable-checked {
+  background: url(../images/contact/checked_and_disabled.png) center no-repeat;
+}
+.contactsPage .content .siderleft .dptList .item .icon {
+  cursor: pointer;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  position: relative;
+  margin-right: 15px;
+}
+.contactsPage .content .siderleft .dptList .item .arrow-down::after {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  background-size: 8px 4px;
+  background-position: center;
+  background-image: url(../images/arrowdown.png);
+  background-repeat: no-repeat;
+}
+.contactsPage .content .siderleft .dptList .item .arrow-right::after {
+  position: absolute;
+  content: '';
+  height: 8px;
+  width: 8px;
+  -webkit-transform: rotate(270deg);
+  background-size: 8px 4px;
+  background-position: center;
+  background-image: url(../images/arrowdown.png);
+  background-repeat: no-repeat;
+}
+.contactsPage .content .siderright {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+.contactsPage .content .siderright .header {
+  height: 50px;
+  border-bottom: solid 1px #DDD;
+  text-align: center;
+  font-size: 14px;
+  color: #03111f;
+  line-height: 50px;
+}
+.contactsPage .content .siderright .selectList {
+  height: calc(100% - 122px);
+  overflow: auto;
+}
+.contactsPage .content .siderright .selectList .avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  display: inline-block;
+  float: left;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.contactsPage .content .siderright .selectList .avatar img {
+  background-color: #5DA5E2;
+  width: 20px;
+  height: 20px;
+}
+.contactsPage .content .siderright .selectList .avatar .user {
+  background-color: #f5f5f5;
+}
+.contactsPage .content .siderright .selectList .position {
+  color: #666666;
+  margin-left: 10px;
+}
+.contactsPage .content .siderright .selectList .item {
+  font-size: 12px;
+  padding: 0;
+  height: 28px;
+  line-height: 28px;
+  white-space: nowrap;
+  border-bottom: solid 1px #ededed;
+  position: relative;
+}
+.contactsPage .content .siderright .selectList .item .name {
+  max-width: 170px;
+  float: left;
+}
+.contactsPage .content .siderright .selectList .item:hover .remove {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: url(../images/remove.png) center no-repeat;
+  background-size: 18px 18px;
+}
+.contactsPage .content .siderright .selectList .item:hover .remove:hover {
+  background: url(../images/remove_hover.png) center no-repeat;
+}
+.contactsPage .content .siderright footer {
+  height: 72px;
+  line-height: 72px;
+  border-top: solid 1px #EDEDED;
+}
+.contactsPage .content .siderright footer .btn-cancel {
+  background-color: #EDEDED;
+  float: right;
+  height: 14px;
+  line-height: 14px;
+  padding: 9px 40px;
+  margin-right: 20px;
+  margin-top: 20px;
+  border-radius: 2px;
+  color: #03111f;
+  cursor: pointer;
+}
+.contactsPage .content .siderright footer .btn-submit {
+  float: right;
+  background-color: #4F667B;
+  height: 14px;
+  line-height: 14px;
+  padding: 9px 40px;
+  margin-right: 20px;
+  margin-top: 20px;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+}

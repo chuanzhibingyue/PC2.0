@@ -1,0 +1,233 @@
+.code-editor{
+	font-size: 14px;
+	width: 640px;
+	height: 620px;
+	border-radius: 2px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background: white;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.code-editor .tbcode{
+	margin-top:-18px;
+	margin-bottom:-50px;
+}
+.code-editor #td-number{
+	width: 10px;
+}
+.code-editor .pre-numbering {
+	float: left;
+	text-align: center;
+	font-size: 12px;
+}
+.code-editor .code-preview {
+	overflow-y: auto;
+	overflow-x: auto;
+	width: 598px;
+	height: 367px;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	margin-top: 1px;
+	margin-left: 0px;
+}
+.code-editor .preview li{
+	background: #f5f5f5;
+	color: #555555;
+	border-right: 1px solid #dadada;
+	padding: 0 5px;
+}
+.code-editor #testcode{
+	float: left;
+	font-size: 12px;
+	border: none;
+	overflow: hidden;
+	padding: 0 10px;
+	top: 0;
+	margin: 0;
+}
+.code-editor #testcode .hljs{
+	padding: 0;
+}
+
+.code-editor .code-title {
+	height: 15px;
+	text-align: left;
+	padding: 12px 20px;
+	color: #3b4f61;
+	border-bottom: 1px solid rgb(205, 212, 218);
+	font-size: 16px;
+}
+.code-editor .top-items {
+	margin-top: 15px;
+}
+.code-editor .code-name{
+	margin-left: 20px;
+	width: 415px;
+	height: 32px;
+	border: 1px solid rgb(205, 212, 218);
+	outline: none;
+	color: #3b4f61;
+	padding: 0 2px;
+	font-size: 14px;
+}
+.code-editor .selectformat{
+	float: right;
+	width: 154px;
+	height: 32px;
+	padding: 0;
+	margin: 0;
+	margin-right: 18px;
+	border: 1px solid rgb(205, 212, 218);
+	cursor: pointer;
+}
+.code-editor .code-type {
+	margin-top: 6px;
+	margin-left: 5px;
+	color: #999999;
+	cursor: pointer;
+}
+.code-editor .code-type.initialize{
+	color: #3B4F6E;
+}
+.code-editor .selectformat:after{
+	border: solid transparent;
+	content: ' ';
+	height: 0;
+	position: absolute;
+	width: 0;
+	border-width: 4px;
+	border-top-color: #999999;
+	top: 72px;
+	right: 45px;
+	cursor: pointer;
+}
+.code-editor .selectformat:before{
+	border: solid transparent;
+	content: ' ';
+	height: 0;
+	position: absolute;
+	width: 0;
+	border-width: 4px;
+	border-bottom-color: #999999;
+	top: 62px;
+	right: 45px;
+	cursor: pointer;
+}
+.code-editor .selectformat .format-list{
+	position: absolute;
+	width: 153px;
+	height: 420px;
+	background: white;
+	border: 1px solid rgb(205, 212, 218);
+	right: 19px;
+	top: 91px;
+	box-shadow: 1px 1px 2px #D4CDCD;
+	display: inline-block;
+	overflow-y: auto;
+	color: #3B4F6E;
+	z-index: 99;
+}
+.code-editor .selectformat .format-list p{
+	border-top: 2px solid rgba(0,0,0,0);
+	border-bottom: 2px solid rgba(0,0,0,0);
+	border-left: 5px solid rgba(0,0,0,0);
+	border-right: 5px solid rgba(0,0,0,0);
+}
+.code-editor .selectformat .format-list p:hover{
+	background: #3b4f61;
+	color: white;
+}
+
+.code-editor .middle-items{
+	border: 1px solid rgb(205, 212, 218);
+	height: 369px;
+	width: 600px;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.code-editor .des-input {
+	width: 595px;
+	height: 70px;
+	outline: none;
+	resize: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	font-size: 14px;
+	border: 1px solid rgb(205, 212, 218);
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+	color: #3b4f61;
+}
+.code-editor .code-input{
+	width: 594px;
+	height: 365px;
+	outline: none;
+	resize: none;
+	border: none;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	font-size: 12px;
+	overflow: scroll;
+}
+.code-editor .apply-btn{
+	float: left;
+	margin-left: 10px;
+	color: #4f667b;
+	cursor: pointer;
+	margin-top: 10px;
+	width: 100px;
+	height: 32px;
+	background: #ededed;
+	outline: none;
+	border: none;
+}
+.code-editor .apply-btn:hover{
+	color: #ffffff;
+	background: #3b4f61;
+}
+.code-editor .cancel-btn{
+	float: left;
+	margin-left: 410px;
+	color: #4f667b;
+	cursor: pointer;
+	width: 100px;
+	height: 32px;
+	margin-top: 10px;
+	background: #ededed;
+	outline: none;
+	border: none;
+}
+.code-editor .cancel-btn:hover{
+	color: #ffffff;
+	background: #3b4f61;
+}
+.code-editor .tool-icon-container{
+	position: absolute;
+	height: 20px;
+	top: 5px;
+	right: 7px;
+}
+.code-editor .tool-icon-container .tool-icon{
+	font-size: 10px;
+	padding: 4px;
+	cursor: pointer;
+}
+.code-editor .tool-icon-container .icon-close:hover{
+	background-color: red;
+	color: #ffffff;
+}
+.code-editor  .waring-ipt {
+	border-color: red;
+}

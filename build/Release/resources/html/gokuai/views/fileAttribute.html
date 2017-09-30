@@ -1,0 +1,45 @@
+<div class="gk-dialog-header">
+    <span>属性</span>
+</div>
+<div class="gk-dialog-content">
+    <div class="file-thumb-wrapper">
+        <div ng-if="!file.thumbimg" class="thumb-img file-icon-54 icon-{{file.fileicon}}-54"
+             ng-class="{'icon-cache-folder-54': file.iscached && file.dir == 1,
+                                    'icon-collection-folder-54': file.property.collection_type == 'private'  && file.dir == 1,
+                                    'icon-public-folder-54': file.property.collection_type == 'public'  && file.dir == 1,
+                                    'icon-sync-folder-54': file.synctype == 0  && file.dir == 1,
+                                    'icon-sync-download-folder-54': file.synctype == 2  && file.dir == 1,
+                                    'icon-sync-upload-folder-54': file.synctype == 1  && file.dir == 1}">
+        </div>
+        <div class="thumb-img file-icon-54" ng-if="file.thumbimg" style="background-image: url({{file.thumbimg}});"></div>
+        <div class="file-filename">{{file.filename}}</div>
+    </div>
+    <div class="file-info-wrapper">
+        <div class="file-last-edit file-info">
+            <avatar member-id="{{file.lastid}}" ent-id="{{entId}}"></avatar>
+            <span ng-show="user.member_id == file.lastid" class="name">我</span>
+            <span ng-show="user.member_id != file.lastid" class="name">{{file.lastname}}</span>
+            <span class="act">最后修改</span>
+            <span ng-bind="file.lasttime*1000 | date: 'yyyy/MM/dd HH:mm'"></span>
+        </div>
+        <div class="file-create file-info">
+            <avatar member-id="{{file.creatorid}}" ent-id="{{entId}}"></avatar>
+            <span ng-show="user.member_id == file.creatorid" class="name">我</span>
+            <span ng-show="user.member_id != file.creatorid" class="name">{{file.creatorname}}</span>
+            <span class="act">创建</span>
+            <span ng-bind="file.creatortime*1000 | date: 'yyyy/MM/dd HH:mm'"></span>
+        </div>
+        <div class="file-lock file-info" ng-if="file.lock != 0">
+            <avatar user-id="{{user.out_id}}" member-id="{{user.member_id}}" ent-id="{{entId}}"></avatar>
+            <span ng-show="user.member_id == file.lockid" class="name">我</span>
+            <span ng-show="user.member_id != file.lockid" class="name">{{file.lockname}}</span>
+            <span class="act">锁定文件</span>
+        </div>
+        <div class="file-filesize file-info" ng-if="file.dir == 0" style="padding-left: 34px;">
+            <span>大小：</span><span>{{file.humansize}}</span>
+        </div>
+        <div class="file-info file-place-wrapper" style="padding-left: 34px;">
+            <span>位置：</span><span ng-click="goTo('preview')" class="file-place">{{filepath}}</span>
+        </div>
+    </div>
+</div>

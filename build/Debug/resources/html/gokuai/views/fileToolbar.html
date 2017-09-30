@@ -1,0 +1,30 @@
+<div class="file-toolbar">
+    <div class="toolbar-operator" ng-if="view == 'mount'">
+        <div class="act-item create-icon" ng-click="openMenu($event)">
+            <span>新建</span>
+            <ul class="dropdown-menu">
+                <li ng-repeat="item in createItems">
+                    <a ng-click="createFile($event, item)">{{item.name}}</a>
+                </li>
+            </ul>
+        </div>
+        <div ng-click="uploadFile()" class="act-item upload-icon">
+            <span>上传</span>
+        </div>
+        <div ng-click="reload()" class="act-item refresh-icon">
+            <span>刷新</span>
+        </div>
+    </div>
+    <div class="toolbar-operator" ng-if="view == 'trash'">
+        <div ng-click="clearTrash()" class="act-item trash-icon">
+            <span>清空回收站</span>
+        </div>
+    </div>
+    <div class="toolbar-operator" ng-if="view == 'search'">
+        <span>搜索结果：</span>
+    </div>
+    <div class="toolbar-view">
+        <a uib-tooltip="缩略图" tooltip-append-to-body="true" ng-click="changeListView($event, 'thumbnail')" class="view-btn"  ng-class="PAGE_CONFIG.listView=='thumbnail'?'active':''"><i class="thumb-icon"></i></a>
+        <a uib-tooltip="列表" tooltip-append-to-body="true" ng-click="changeListView($event, 'list')" class="view-btn" ng-class="PAGE_CONFIG.listView=='list'?'active':''"><i class="list-icon"></i></a>
+    </div>
+</div>

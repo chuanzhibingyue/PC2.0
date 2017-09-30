@@ -1,0 +1,65 @@
+﻿Build started 2016/6/8 14:06:14.
+     1>Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\libUpdate\Source\libUpdate.vcxproj" on node 4 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I../Framework/Common/Inc /I../Tang/Common/Inc /I../Tang/Common/Support/Inc /I../../uc_sdk\third_party/log_manager /I../../uc_sdk\third_party\common\include /I../../pugixml/src /I"D:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /O2 /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D UPDATE_EXPORTS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\libUpdate.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I../Framework/Common/Inc /I../Tang/Common/Inc /I../Tang/Common/Support/Inc /I../../uc_sdk\third_party/log_manager /I../../uc_sdk\third_party\common\include /I../../pugixml/src /I"D:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /WX- /O2 /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D UPDATE_EXPORTS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\pugixml\src\pugixml.cpp ..\XmlWrapper.cpp Cookie.cpp FolderOperator.cpp HttpOperator.cpp Markup.cpp UpdateAdaptor.cpp UpdateManagerImpl.cpp UpdateXml.cpp XUnzip.cpp
+         pugixml.cpp
+         XmlWrapper.cpp
+         Cookie.cpp
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+         FolderOperator.cpp
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+         HttpOperator.cpp
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+     1>HttpOperator.cpp(579): warning C4244: 'initializing' : conversion from 'UINT64' to 'unsigned int', possible loss of data
+     1>HttpOperator.cpp(580): warning C4244: 'argument' : conversion from 'UINT64' to 'DWORD', possible loss of data
+     1>HttpOperator.cpp(750): warning C4244: 'argument' : conversion from 'UINT64' to 'UINT', possible loss of data
+     1>HttpOperator.cpp(270): warning C4101: 'PointPort' : unreferenced local variable
+     1>HttpOperator.cpp(1152): warning C4101: 'PointPort' : unreferenced local variable
+         Markup.cpp
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+         UpdateAdaptor.cpp
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+         UpdateManagerImpl.cpp
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+     1>UpdateManagerImpl.cpp(1520): warning C4995: 'wsprintf': name was marked as #pragma deprecated
+     1>UpdateManagerImpl.cpp(1520): warning C4995: 'wsprintfW': name was marked as #pragma deprecated
+     1>UpdateManagerImpl.cpp(1740): warning C4995: '_snwprintf': name was marked as #pragma deprecated
+     1>UpdateManagerImpl.cpp(1946): warning C4102: 'exit' : unreferenced label
+     1>UpdateManagerImpl.cpp(1899): warning C4101: 'dwWriteSize' : unreferenced local variable
+     1>UpdateManagerImpl.cpp(1988): warning C4101: 'szLoginInfo' : unreferenced local variable
+         UpdateXml.cpp
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+         XUnzip.cpp
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(\Release\libUpdate.lib) does not match the Library's OutputFile property value (E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\libUpdate\lib\update.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetName(libUpdate) does not match the Library's OutputFile property value (update). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"../lib/update.lib" /NOLOGO /LTCG Release\pugixml.obj
+         Release\XmlWrapper.obj
+         Release\Cookie.obj
+         Release\FolderOperator.obj
+         Release\HttpOperator.obj
+         Release\Markup.obj
+         Release\stdafx.obj
+         Release\UpdateAdaptor.obj
+         Release\UpdateManagerImpl.obj
+         Release\UpdateXml.obj
+         Release\XUnzip.obj
+         libUpdate.vcxproj -> \Release\libUpdate.lib
+     1>Done Building Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\libUpdate\Source\libUpdate.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.34

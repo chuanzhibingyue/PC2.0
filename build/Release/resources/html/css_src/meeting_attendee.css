@@ -1,0 +1,104 @@
+.meeting-attendee .attendees {
+    display: inline-block;
+    width: 300px;
+    border-right: solid 1px #dadada;
+    position: absolute;
+    top: 40px;
+    bottom: 60px;
+}
+
+.meeting-attendee .attendee-list {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: auto;
+    text-overflow: ellipsis;
+}
+
+.meeting-attendee .attendee-list .unhandle-list,
+.meeting-attendee .attendee-list .accepted-list,
+.meeting-attendee .attendee-list .reject-list {
+    background-color: #fff;
+}
+
+.meeting-attendee .attendee-list h1 {
+    height: 24px;
+    line-height: 24px;
+    padding-left: 23px;
+    background-color: #f7f7f7;
+    color: #666;
+    font-size: 12px;
+}
+
+.meeting-attendee .attendee-list .attendee {
+    display: block;
+    width:100%;
+    height: 60px;
+    line-height: 60px;
+    cursor: default;
+    outline: none;
+    position: relative;
+}
+.meeting-attendee .attendee-list .attendee *{
+    cursor: pointer;
+}
+.meeting-attendee .attendee-list .attendee:hover{
+    background-color:#fffff3;
+}
+
+.meeting-attendee .attendee-list .attendee .attendee-image {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 12px;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.meeting-attendee .attendee-list .attendee .attendee-name,
+.meeting-attendee .attendee-list .attendee .attendee-info {
+    height: 30px;
+    line-height: 45px;
+    margin-left: 80px;
+    float: left;
+    font-size: 14px;
+    color: #3b4f61;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meeting-attendee .attendee-list .attendee .attendee-name {
+    line-height: 42px;
+}
+.meeting-attendee .attendee-list .attendee .attendee-host{
+    height: 14px;
+    line-height: 14px;
+    margin-left: 20px;
+    float: left;
+    padding: 0 3px;
+    margin-top: 13px;
+    font-size: 10px;
+    border-radius: 2px;
+    background-color: #607589;
+    color: #E4E4DF;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meeting-attendee .attendee-list .attendee .attendee-name-middle {
+    line-height: 60px;
+    height: 60px;
+}
+
+.meeting-attendee .attendee-list .attendee .attendee-info {
+    clear: left;
+    line-height: 25px;
+    font-size: 12px;
+    color: #666;
+}

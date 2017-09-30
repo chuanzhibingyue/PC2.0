@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <link href="../css/choose_call_contacts.css" rel="stylesheet" />
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+	<script type="text/javascript" src="../script/chooseCallContacts.js"></script>
+    <title>choose call contacts</title>
+</head>
+<body>
+    <div class=" chooseCallContacts child-window-shadow">
+		<!--left side-->
+		<div class="ContactsContainer">
+			<div class="search-input-container">
+				<span class="icon-search"></span>
+				<input class="search-input" type="text" placeholder="{{Call.ChooseContactsPlaceHolder}}"/>
+				<span class="icon-search-del"></span>
+			</div>
+			
+			<div class="contacts-wrap">
+				<div class="contacts-container">
+					<ul class="contacts-list  callContacts_user_list">
+					
+					</ul>
+					<div class="contacts-loading">
+						<img src="../images/loading_37.gif" alt=""/>
+					</div>
+					<div class="contacts-load-failed hide">
+						<span>{{Search.DoNotHaveContacts}}</span>
+						<!--<a href="###">{{Call.Retry}}</a>-->
+					</div>
+				</div>
+				<div class="contacts-search-container hide">
+					<ul class="contacts-search-list callContacts_user_list">
+
+					</ul>
+					<div class="contacts-searching hide">
+						   {{ChooseContacts.Searching}}
+					</div>
+					<div class="contacts-search-noresult hide">
+						<img src="../images/search/no-result.png" alt=""/>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--right side-->
+		<div class="selectContainer">
+			<div class="selectContainer_title">
+				<span> {{ChooseContacts.SelectList}}</span>
+			</div>
+			<!--  select list-->
+			<div class = "contacts-select_list">
+				<ul class="callContacts_user_list">
+				</ul>
+			</div>
+			<!--  commit button-->
+			<div class="footer">
+				<a class="btn-uikit btn-gray btn-cancel" href="###">{{Common.Cancel}}</a>
+				<a class="btn-uikit btn-dark disabled btn-ok" href="###">{{Common.OK}} ( <span>0</span> ) </a>
+			</div>
+		</div>
+        <div class="panelloading">
+            <div class="loadingBox">
+                <div><img src="../images/loading_37.gif" alt=""/></div>
+                <div><p>{{Call.groupCreateCallTip}}</p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

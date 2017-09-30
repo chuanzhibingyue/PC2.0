@@ -1,0 +1,45 @@
+<div class="file-bar">
+    <div class="nav-wrapper">
+        <a class="history-back btn-history" ng-click="historyBack($event)">
+            <i class="fa fa-chevron-left icon-chevron-left"></i>
+        </a>
+        <a class="history-forward btn-history" ng-click="historyForward($event)">
+            <i class="fa fa-chevron-right icon-chevron-right"></i>
+        </a>
+    </div>
+    <div class="addrbar">
+        <div class="search-bar">
+            <input class="search-input" type="text" ng-model="searchText" />
+            <span class="icon-search fa fa-search" ng-show="!searchLoading"></span>
+            <span class="icon-cross fa fa-times-circle" ng-click="cancelSearch($event)" ng-show="!searchLoading"></span>
+            <span class="icon-spinner fa fa-spinner fa-pulse" ng-show="searchLoading"></span>
+        </div>
+        <div class="path-bar">
+            <a ng-show="hidePaths && hidePaths.length" data-toggle="dropdown" class="icon-hide"
+               aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-down"></i></a>
+            <ul class="dropdown-menu" ng-show="hidePaths && hidePaths.length">
+                <li ng-repeat="path in hidePaths track by $index">
+                    <a ng-click="openPath($event, path)" href="javascript:;">{{path.name}}</a>
+                </li>
+            </ul>
+            <div class="path-item" ng-repeat="path in paths track by $index">
+                <a ng-click="openPath($event, path)" href="javascript:;">
+                    <span ng-bind="path.name"></span>
+                </a>
+                <i ng-hide="$last">/</i>
+            </div>
+        </div>
+        <div class="path-search-bar">
+            <a ng-click="toggleMenu($event)" class="path-dropdown">
+                <span translate>在 {{currentSearchPath.name}} 中搜索：</span>
+                <i class="icon-triangle-down fa fa-caret-down" ng-if="searchPaths && searchPaths.length > 1"></i>
+            </a>
+            <ul class="dropdown-menu" ng-show="searchPaths && searchPaths.length > 1">
+                <li ng-repeat="path in searchPaths track by $index"
+                    ng-click="changeSearchPath(path)">
+                    <a>{{path.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

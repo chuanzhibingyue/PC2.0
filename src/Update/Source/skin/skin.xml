@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="520,419" sizebox="4,4,6,6" caption="0,0,0,40" roundcorner="4,4">
+    <Container width="423" height="100" bordercolor="#00FFFBF0">
+        <VerticalLayout bordersize="2" width="520" height="420" bkcolor="#FF3C4F60">
+            <Progress name="updateProgress" float="true" pos="22,349,0,0" width="476" height="6" bkcolor="#FFFFFBF0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" foreimage="progress_fore.png" min="0" max="100" value="0" hor="true" />
+            <Text name="promptText" text="蜜蜂更新中..." float="true" pos="21,369,0,0" width="164" height="27" textpadding="2,0,2,0" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" align="wrap" />
+            <Text name="percentText" float="true" pos="451,367,0,0" width="60" height="24" textpadding="2,0,2,0" textcolor="#00FFFBF0" align="centerwrap" />
+            <Button name="minbtn" float="true" pos="469,15,0,0" width="10" height="2" bkimage="min.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Button name="closebtn" float="true" pos="498,11,0,0" width="10" height="10" bkimage="close.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+            <Text name="avatarText" float="true" pos="208,101,0,0" width="100" height="100" bkimage="logo.png" textpadding="2,0,2,0" align="wrap" />
+            <Text name="updateResultText" float="true" pos="168,270,0,0" width="176" height="27" textpadding="40,10,2,2" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="40" align="wrap" />
+            <Button name="cancelBtn" float="true" pos="63,334,0,0" width="120" height="32" bkimage="cancel_not_selected.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" hotimage="cancel_selected.png" />
+            <Button name="tryBtn" float="true" pos="195,334,0,0" width="120" height="32" bkimage="try_not_selected.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" hotimage="try_selected.png" />
+            <Text name="featuresText" float="true" pos="188,261,0,0" width="119" height="34" textpadding="2,0,2,0" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" font="20" align="centerwrap" />
+            <Button name="manualBtn" float="true" pos="328,334,0,0" width="120" height="32" bkimage="manual_not_selected.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" hotimage="manual_selected.png" />
+        </VerticalLayout>
+    </Container>
+</Window>

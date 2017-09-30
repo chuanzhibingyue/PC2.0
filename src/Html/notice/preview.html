@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport" />
+<meta name="apple-mobile-web-app-capable" content="yes"></meta>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"></meta>
+<meta content="telephone=no" name="format-detection" />
+<link type="text/css" rel="stylesheet" href="theme/css/preview.css" />
+<title>detail</title>
+<script src="thirdparty/jquery-1.11.3.js"></script>
+<script src="thirdparty/angular.min.js"></script>
+<script src="thirdparty/angular-animate.min.js"></script>
+<script src="thirdparty/angular-sanitize.min.js"></script>
+<script src="thirdparty/cropper.min.js"></script>
+<script src="thirdparty/angular-translate.min.js"></script>
+
+<!-- replace start-->
+<script src="js/app.js"></script>
+<!-- 第一引入services -->
+<script src="js/services/native.js"></script>
+<script src="js/services/utils.js"></script>
+<script src="js/services/notices.js"></script>
+<script src="js/services/pages.js"></script>
+<script src="js/services/api.js"></script>
+<script src="js/services/log.js"></script>
+<!-- 第二入directives -->
+<script src="js/directives/notice_alert.js"></script>
+<script src="js/directives\raw_html.js"></script>
+<!-- 第三入controllers -->
+<script src="js/controllers/preview_controller.js"></script>
+
+<!-- replace end-->
+
+</head>
+<body>
+  <div class="wrapper" ng-controller="previewCtrl" ng-class="{'min':isMinimized,'max':isMaximized}">
+      <header>
+      <i class="close" ng-click = "onClose()"></i>
+      <i class="maximize" ng-class="{'restore':isMaximized}" ng-click= "toggleMaximize()"></i>
+      <i class="minimize" ng-click = "minimize()"></i>
+      </header>
+     <div class="inner">
+         <div class="innerContent">
+             <div class="header">
+      <div class="topic"><span id="topicContent" ng-bind="notice.topic"></span></div>
+      <div class="subline">
+        <div class="createTime" ng-bind="notice.createTime"></div>
+        <!--<div class="count read">-->
+          <!--<label translate="preview.read"></label><span id="read_count" ng-bind="notice.readCount"></span>-->
+        <!--</div>-->
+        <!--<div class="count unread">-->
+          <!--<label translate="preview.unread"></label><span id="unread_count" ng-bind="notice.unreadCount"></span>-->
+        <!--</div>-->
+      </div>
+    </div>
+    <div class="content">
+        <div class="coverDiv" ng-if="notice.isEmbedCover == 1 && notice.cover.url">
+            <img ng-src="{{notice.cover.url}}"/>
+        </div>
+        <div id="content" raw-html content="notice.content"></div>
+    </div>
+         </div>
+     </div>
+  </div>
+</body>
+</html>

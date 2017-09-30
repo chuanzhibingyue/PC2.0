@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/meeting_reminder.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/meetingReminder.js"></script>
+    <title>MeetingReminder</title>
+</head>
+<body>
+    <div class="meeting-body">
+        <div class="alarmed-meeting child-window-shadow">
+            <div class="window-bar">
+                <span class="title">{{WindowTitle.Notification}}</span>
+	            <!--<div class="tool-icon-container">-->
+			        <!--<span class="icon-close tool-icon"></span>-->
+		        <!--</div>-->
+            </div>
+            <div class="message-info">
+                <span class="meeting-title">{{Meeting.YourMeeting}}</span>
+                <span class="meeting-name"></span>，3{{Meeting.MeetingReminderBegin}}
+            </div>
+            <div class="meeting-bar">
+                <a id="confirm" class="btn btn-ok">{{Common.Known}}</a>
+                <a id="joinMeeting" class="btn btn-cancel hide">{{Menu.JoinMeeting}}</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

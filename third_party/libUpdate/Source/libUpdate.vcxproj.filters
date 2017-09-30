@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{c4fc38c9-ed28-4933-b37a-5a1155628e15}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cookie.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="FolderOperator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpOperator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Markup.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateAdaptor.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateManagerImpl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateXml.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="XUnzip.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\XmlWrapper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\pugixml\src\pugixml.cpp">
+      <Filter>xml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cookie.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="FolderOperator.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpOperator.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Markup.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateAdaptor.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateManagerImpl.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateXml.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="XUnzip.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Lock.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\XmlWrapper.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pugixml\src\pugiconfig.hpp">
+      <Filter>xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\pugixml\src\pugixml.hpp">
+      <Filter>xml</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

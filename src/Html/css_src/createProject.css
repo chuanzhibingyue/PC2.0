@@ -1,0 +1,129 @@
+@CHARSET "UTF-8";
+.new-project
+{
+    background-color: #fff;
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 3px;*/
+    height: 150px;
+}
+
+.new-project *
+{
+    font-size: 14px;
+    color: #3b4f61;
+}
+
+.new-project .project-body
+{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.new-project .clear-float
+{
+    clear: both;
+}
+
+.new-project .title
+{
+    color: #999;
+    font-size: 12px;
+}
+
+.new-project .content
+{
+	margin-left: 10px;
+	padding-left: 5px;
+	width: 300px;
+	height: 30px;
+	outline: none;
+    border-radius: 2px;
+    border: 1px solid #dadada;
+}
+
+.new-project .save
+{
+    border: none;
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+.new-project .window-bar
+{
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.new-project .window-bar .title
+{
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.new-project .window-bar .tool-icon-container
+{
+    top: 0;
+}
+
+.new-project .project-save {
+	margin-top: 25px;
+	margin-left: 200px;
+}
+
+.new-project .project-save .cancel
+{
+    display: inline-block;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: solid 1px #ededed;
+    color: #3b4f61;
+}
+
+.new-project .project-save .cancel:hover {
+	background-color: #eeeeee;
+}
+
+.new-project .project-save .cancel:active {
+	background-color: #d4d4d4;
+}
+
+.new-project .project-save .save
+{
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 3px;
+    border: solid 1px #4f667b;
+    background-color: #4f667b;
+    color: #ffffff;
+}
+
+.new-project .project-save .save:hover {
+	background-color: #607588;
+}
+
+.new-project .project-save .save:active {
+	background-color: #465b6e;
+}
+
+.disabled {
+	display: inline-block;
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: solid 1px #ededed;
+    background-color: #ededed;
+    color: #3b4f61;
+}

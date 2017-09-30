@@ -1,0 +1,7 @@
+<div class="gk-dialog-content">
+    {{tooltip}}
+</div>
+<div class="gk-dialog-footer">
+    <button class="cancel-btn" ng-click="closeThisDialog(0)">取消</button>
+    <button ng-repeat="btn in btns" class="{{btn.classes}}" ng-click="closeThisDialog($index+1)" ng-bind="btn.text"></button>
+</div>

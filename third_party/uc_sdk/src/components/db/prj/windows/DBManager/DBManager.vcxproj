@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2A095700-2509-438C-BAFE-09A0D7341FDF}</ProjectGuid>
+    <RootNamespace>test2</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;GLOG_NO_ABBREVIATED_SEVERITIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../../include;$(UCSDKROOT)\third_party\sqlite3\include;$(UCSDKROOT)\src\utils;$(UCSDKROOT)\include;$(UCSDKROOT)\third_party;$(UCSDKROOT)\src\components\parser\msg_parser\include;$(UCSDKROOT)\third_party\thrift;$(UCSDKROOT)\src\services;$(UCSDKROOT)\src\services\contact_service;$(UCSDKROOT)\src;$(UCSDKROOT)\third_party\google-glog\include;$(UCSDKROOT)\third_party\zlib\lib\windows;$(UCSDKROOT)\third_party\zlib\include;$(UCSDKROOT)\src\components</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(UCSDKROOT)\third_party\sqlite3\lib\windows;$(UCSDKROOT)\third_party\boost\stage\lib\windows;$(UCSDKROOT)\third_party\google-glog\lib\windows;$(UCSDKROOT)\third_party\zlib\lib\windows</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sqlite3.lib;glog_d.lib;zlib_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../../include;$(UCSDKROOT)\third_party\sqlite3\include;$(UCSDKROOT)\src\utils</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>$(UCSDKROOT)\third_party\sqlite3\lib\windows</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\services\contact_service\ContactInfo.cpp" />
+    <ClCompile Include="..\..\..\..\..\services\contact_service\ContactInfoImpl.cpp" />
+    <ClCompile Include="..\..\..\..\..\services\contact_service\ContactTag.cpp" />
+    <ClCompile Include="..\..\..\..\..\services\message_service\DocumentInfo.cpp" />
+    <ClCompile Include="..\..\..\..\..\services\message_service\GroupInfo.cpp" />
+    <ClCompile Include="..\..\..\..\..\services\message_service\MessageInfo.cpp" />
+    <ClCompile Include="..\..\..\..\..\utils\modp_base64\modp_b64.cc" />
+    <ClCompile Include="..\..\..\..\..\utils\StringConvert.cpp" />
+    <ClCompile Include="..\..\..\..\log\LogManager.cpp" />
+    <ClCompile Include="..\..\..\src\AccountDao.cpp" />
+    <ClCompile Include="..\..\..\src\AppDao.cpp" />
+    <ClCompile Include="..\..\..\src\ConferenceDao.cpp" />
+    <ClCompile Include="..\..\..\src\ConfigDao.cpp" />
+    <ClCompile Include="..\..\..\src\ContactDao.cpp" />
+    <ClCompile Include="..\..\..\src\ConversationDao.cpp" />
+    <ClCompile Include="..\..\..\src\CppSQLite3.cpp" />
+    <ClCompile Include="..\..\..\src\DBManager.cpp" />
+    <ClCompile Include="..\..\..\src\DBUpgrade.cpp" />
+    <ClCompile Include="..\..\..\src\GroupDao.cpp" />
+    <ClCompile Include="..\..\..\src\MessageDao.cpp" />
+    <ClCompile Include="..\..\..\src\SQLiteManager.cpp" />
+    <ClCompile Include="MyTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\include\AccountInfo.h" />
+    <ClInclude Include="..\..\..\..\..\..\include\CalendarData.h" />
+    <ClInclude Include="..\..\..\..\..\..\include\ContactInfo.h" />
+    <ClInclude Include="..\..\..\..\..\..\include\ContactTag.h" />
+    <ClInclude Include="..\..\..\..\..\..\include\IConversationInfo.h" />
+    <ClInclude Include="..\..\..\..\..\services\contact_service\ContactInfoImpl.h" />
+    <ClInclude Include="..\..\..\..\..\services\message_service\DocumentInfo.h" />
+    <ClInclude Include="..\..\..\..\..\services\message_service\GroupInfo.h" />
+    <ClInclude Include="..\..\..\..\..\services\message_service\MessageInfo.h" />
+    <ClInclude Include="..\..\..\..\..\utils\modp_base64\modp_b64.h" />
+    <ClInclude Include="..\..\..\..\..\utils\modp_base64\modp_b64_data.h" />
+    <ClInclude Include="..\..\..\..\..\utils\StringConvert.h" />
+    <ClInclude Include="..\..\..\..\..\utils\Gzip.h" />
+    <ClInclude Include="..\..\..\..\log\LogManager.h" />
+    <ClInclude Include="..\..\..\include\AccountDao.h" />
+    <ClInclude Include="..\..\..\include\AppDao.h" />
+    <ClInclude Include="..\..\..\include\ConferenceDao.h" />
+    <ClInclude Include="..\..\..\include\ConfigDao.h" />
+    <ClInclude Include="..\..\..\include\ContactDao.h" />
+    <ClInclude Include="..\..\..\include\ConversationDao.h" />
+    <ClInclude Include="..\..\..\include\CppSQLite3.h" />
+    <ClInclude Include="..\..\..\include\DBManager.h" />
+    <ClInclude Include="..\..\..\include\DBManagerDef.h" />
+    <ClInclude Include="..\..\..\include\DBUpgrade.h" />
+    <ClInclude Include="..\..\..\include\GroupDao.h" />
+    <ClInclude Include="..\..\..\include\MessageDao.h" />
+    <ClInclude Include="..\..\..\include\SQLConfig.h" />
+    <ClInclude Include="..\..\..\include\SQLiteManager.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

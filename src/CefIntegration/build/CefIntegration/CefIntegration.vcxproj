@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2C4CFB75-71DC-4FE3-8EE5-66F8BB30A555}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CefIntegration</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CEFINTEGRATION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include;../../../../third_party/cef;../../../../third_party/cximage/include;../../src;../../../../third_party\uc_sdk/third_party/log_manager;../../../../third_party/pugixml/src;../../../../third_party\uc_sdk/third_party/common/include;../../../../third_party\DuiLib\DuiLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../../../third_party/cef/lib/$(Configuration);../../../../third_party/cximage/lib/$(Configuration);../../../../third_party/uc_sdk/third_party/log_manager/lib/windows;../../../../third_party/uc_sdk/third_party/common/lib/windows/$(Configuration);../../../../third_party/DuiLib/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcef.lib;libcef_dll_wrapper.lib;cximagecrtd.lib;LogManager_d.lib;common.lib;winhttp.lib;DuiLib_d.lib;Imm32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+    </Link>
+    <PostBuildEvent>
+      <Command>rd $(OutDir)\locales
+md $(OutDir)\locales
+md $(OutDir)\resources\authSkin
+copy  .\authSkin\*.* $(OutDir)\resources\authSkin\  /Y
+copy ..\..\..\..\third_party\cef\Resources\cef.pak $(OutDir)\cef.pak
+copy ..\..\..\..\third_party\cef\Resources\cef_100_percent.pak $(OutDir)\cef_100_percent.pak
+copy ..\..\..\..\third_party\cef\Resources\cef_extensions.pak $(OutDir)\cef_extensions.pak
+copy ..\..\..\..\third_party\cef\Resources\cef_200_percent.pak $(OutDir)\cef_200_percent.pak
+copy ..\..\..\..\third_party\cef\Resources\devtools_resources.pak $(OutDir)\devtools_resources.pak
+copy ..\..\..\..\third_party\cef\Resources\icudtl.dat $(OutDir)\icudtl.dat
+copy ..\..\..\..\third_party\cef\Resources\locales\*  $(OutDir)\locales
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\natives_blob.bin $(OutDir)\natives_blob.bin
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\snapshot_blob.bin $(OutDir)\snapshot_blob.bin
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\d3dcompiler_43.dll $(OutDir)\d3dcompiler_43.dll
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\d3dcompiler_47.dll $(OutDir)\d3dcompiler_47.dll
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\libcef.dll $(OutDir)\libcef.dll
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\libEGL.dll $(OutDir)\libEGL.dll
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\libGLESv2.dll $(OutDir)\libGLESv2.dll
+copy ..\..\..\..\third_party\cximage\lib\$(Configuration)\cximagecrtd.dll $(OutDir)\cximagecrtd.dll
+md $(OutDir)\plugin
+copy  ..\..\..\..\third_party\cef\plugin\*.* $(OutDir)\plugin\  /Y
+copy  ..\..\..\UCPlugin\build\windows\UCPlugin\Bin\$(Configuration)\UCPlugin.dll $(OutDir)\plugin\UCPlugin.dll</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rd /q /s $(OutDir)\plugin
+rd /q /s $(OutDir)\resources\authSkin</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CEFINTEGRATION_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include;../../../../third_party/cef;../../../../third_party/cximage/include;../../src;../../../../third_party/uc_sdk/third_party/log_manager;../../../../third_party/pugixml/src;../../../../third_party\uc_sdk/third_party/common/include;../../../../third_party/DuiLib/DuiLib</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DisableSpecificWarnings>4251;4275</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../../../../third_party/cef/lib/$(Configuration);../../../../third_party/cximage/lib/$(Configuration);../../../../third_party/uc_sdk/third_party/log_manager/lib/windows;../../../../third_party/uc_sdk/third_party/common/lib/windows/$(Configuration);../../../../third_party/DuiLib/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libcef.lib;libcef_dll_wrapper.lib;cximagecrt.lib;LogManager.lib;common.lib;winhttp.lib;DuiLib.lib;Imm32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:libcmt.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>rd $(OutDir)\locales
+md $(OutDir)\locales
+md $(OutDir)\resources\authSkin
+copy  .\authSkin\*.* $(OutDir)\resources\authSkin\  /Y
+copy ..\..\..\..\third_party\cef\Resources\cef.pak $(OutDir)\cef.pak
+copy ..\..\..\..\third_party\cef\Resources\cef_100_percent.pak $(OutDir)\cef_100_percent.pak
+copy ..\..\..\..\third_party\cef\Resources\cef_extensions.pak $(OutDir)\cef_extensions.pak
+copy ..\..\..\..\third_party\cef\Resources\cef_200_percent.pak $(OutDir)\cef_200_percent.pak
+copy ..\..\..\..\third_party\cef\Resources\devtools_resources.pak $(OutDir)\devtools_resources.pak
+copy ..\..\..\..\third_party\cef\Resources\icudtl.dat $(OutDir)\icudtl.dat
+copy ..\..\..\..\third_party\cef\Resources\locales\*  $(OutDir)\locales
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\natives_blob.bin $(OutDir)\natives_blob.bin
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\snapshot_blob.bin $(OutDir)\snapshot_blob.bin
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\d3dcompiler_43.dll $(OutDir)\d3dcompiler_43.dll
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\d3dcompiler_47.dll $(OutDir)\d3dcompiler_47.dll
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\libcef.dll $(OutDir)\libcef.dll
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\libEGL.dll $(OutDir)\libEGL.dll
+copy ..\..\..\..\third_party\cef\lib\$(Configuration)\libGLESv2.dll $(OutDir)\libGLESv2.dll
+copy ..\..\..\..\third_party\cximage\lib\$(Configuration)\cximagecrt.dll $(OutDir)\cximagecrt.dll
+md $(OutDir)\plugin
+copy  ..\..\..\..\third_party\cef\plugin\*.* $(OutDir)\plugin\  /Y
+copy  ..\..\..\UCPlugin\build\windows\UCPlugin\Bin\$(Configuration)\UCPlugin.dll $(OutDir)\plugin\UCPlugin.dll</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>rd /q /s $(OutDir)\plugin
+rd /q /s $(OutDir)\resources\authSkin</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\src\resources\CefIntegration.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\resources\CefIntegration.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\third_party\pugixml\src\pugixml.cpp" />
+    <ClCompile Include="..\..\src\browser\CefOSRWindow.cpp" />
+    <ClCompile Include="..\..\src\browser\CefWindow.cpp" />
+    <ClCompile Include="..\..\src\browser\ClientHandler.cpp" />
+    <ClCompile Include="..\..\src\browser\drag_drop\bytes_write_handler.cc" />
+    <ClCompile Include="..\..\src\browser\drag_drop\geometry_util.cc" />
+    <ClCompile Include="..\..\src\browser\drag_drop\osr_dragdrop_win.cc" />
+    <ClCompile Include="..\..\src\browser\OsrUtil.cpp" />
+    <ClCompile Include="..\..\src\browser\Proxy.cpp" />
+    <ClCompile Include="..\..\src\browser\ProxyAuthWnd.cpp" />
+    <ClCompile Include="..\..\src\browser\Tray.cpp" />
+    <ClCompile Include="..\..\src\browser\WindowExtension.cpp" />
+    <ClCompile Include="..\..\src\browser\WindowManager.cpp" />
+    <ClCompile Include="..\..\src\browser\WindowResizableHandler.cpp" />
+    <ClCompile Include="..\..\src\CefClient.cpp" />
+    <ClCompile Include="..\..\src\CefJSConversion.cpp" />
+    <ClCompile Include="..\..\src\ClientApp.cpp" />
+    <ClCompile Include="..\..\src\renderer\ClientExtensionHandler.cpp" />
+    <ClCompile Include="..\..\src\utils\Dialog.cpp" />
+    <ClCompile Include="..\..\src\utils\FileUtil.cpp" />
+    <ClCompile Include="..\..\src\utils\Font.cpp" />
+    <ClCompile Include="..\..\src\utils\ImageUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\third_party\pugixml\src\pugiconfig.hpp" />
+    <ClInclude Include="..\..\..\..\third_party\pugixml\src\pugixml.hpp" />
+    <ClInclude Include="..\..\include\browser\CefOSRWindow.h" />
+    <ClInclude Include="..\..\include\browser\CefWindow.h" />
+    <ClInclude Include="..\..\include\browser\ClientHandler.h" />
+    <ClInclude Include="..\..\include\browser\drag_drop\osr_dragdrop_events.h" />
+    <ClInclude Include="..\..\include\browser\drag_drop\osr_dragdrop_win.h" />
+    <ClInclude Include="..\..\include\browser\Proxy.h" />
+    <ClInclude Include="..\..\include\browser\ProxyAuthWnd.h" />
+    <ClInclude Include="..\..\include\browser\Tray.h" />
+    <ClInclude Include="..\..\include\browser\WindowFeature.h" />
+    <ClInclude Include="..\..\include\browser\WindowManager.h" />
+    <ClInclude Include="..\..\include\browser\WindowResizableHandler.h" />
+    <ClInclude Include="..\..\include\CefClient.h" />
+    <ClInclude Include="..\..\include\CefJSConversion.h" />
+    <ClInclude Include="..\..\include\ClientApp.h" />
+    <ClInclude Include="..\..\include\ClientDefs.h" />
+    <ClInclude Include="..\..\include\Delegate.h" />
+    <ClInclude Include="..\..\include\renderer\ClientExtensionHandler.h" />
+    <ClInclude Include="..\..\src\browser\drag_drop\bytes_write_handler.h" />
+    <ClInclude Include="..\..\src\browser\drag_drop\geometry_util.h" />
+    <ClInclude Include="..\..\src\browser\JsExtDef.h" />
+    <ClInclude Include="..\..\src\browser\OsrUtil.h" />
+    <ClInclude Include="..\..\src\browser\WindowExtension.h" />
+    <ClInclude Include="..\..\src\resources\resource.h" />
+    <ClInclude Include="..\..\src\utils\Dialog.h" />
+    <ClInclude Include="..\..\src\utils\FileUtil.h" />
+    <ClInclude Include="..\..\src\utils\Font.h" />
+    <ClInclude Include="..\..\src\utils\ImageUtil.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

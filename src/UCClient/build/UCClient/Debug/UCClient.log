@@ -1,0 +1,406 @@
+﻿Build started 2016/6/15 15:18:16.
+     1>Project "E:\mywork\client\PC2.0TRUNK\PC2.0\src\UCClient\build\UCClient\UCClient.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I../../../../third_party /I../../../../src/CefIntegration/include /I../../../../third_party/cef /I../../../../third_party/uc_sdk/include /I../../../../third_party\uc_sdk\third_party /I../../../../third_party/uc_sdk\src\components\parser\msg_parser\include /I../../../../third_party/uc_sdk\third_party/thrift/include /I../../../../third_party/uc_sdk\src\services /I../../../../third_party/uc_sdk\src\services\message_service /I../../../../third_party/CatchScreen /I../../../../third_party/pugixml/src /I../../../../third_party\uc_sdk/third_party/boost/include /I../../../../third_party\uc_sdk/third_party/log_manager /I../../../../third_party/cximage/include /I../../../../third_party\uc_sdk/third_party/common/include /I../../../../third_party\libUpdate\Framework\Common\Inc /I../../../../third_party\libUpdate\Tang\Common\Inc /I../../../../libUpdate\Tang\Common\Support\Inc /I../../../../third_party\libUpdate\Source /I../../../../third_party/libproxy/include /I../../../../third_party/gkclient/include /I../../../../third_party\uc_sdk\third_party/rapidjson/include /I../../../../third_party/DuiLib/DuiLib /I"D:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS- /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt ..\..\src\utils\Clipboard.cpp
+         Clipboard.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\src\ucclient\src\utils\clipboard.cpp(135): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\bee.exe" /INCREMENTAL:NO /LIBPATH:../../../../third_party/cef/lib/Debug /LIBPATH:../../../../third_party/uc_sdk/build/windows/UCSDK/bin/Debug /LIBPATH:../../../../third_party/uc_sdk/third_party\boost\stage\lib\windows /LIBPATH:../../../../third_party/CatchScreen/lib /LIBPATH:../../../../build/Debug /LIBPATH:../../../../third_party/uc_sdk/third_party/log_manager/lib/windows /LIBPATH:../../../../third_party/cximage/lib/Debug /LIBPATH:../../../../third_party/uc_sdk/third_party/common/lib/windows/Debug /LIBPATH:../../../../third_party/libUpdate\lib /LIBPATH:../../../../third_party/libproxy/lib/windows/x86 /LIBPATH:../../../../third_party/gkclient/lib/Debug /LIBPATH:../../../../third_party/DuiLib/lib /LIBPATH:"D:\Program Files (x86)\Visual Leak Detector\lib\Win32" LogManager_d.lib CefIntegration.lib libcef.lib libcef_dll_wrapper.lib UCSDK_d.lib capturescreen_d.lib libAMRPlayer.lib cximagecrtd.lib common.lib msxml2.lib update_d.lib libproxy.lib gkClient.lib GKCefExtension.lib DuiLib_d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\bee.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\bee.lib" /MACHINE:X86 /SAFESEH Debug\UCClient.res
+         Debug\pugixml.obj
+         Debug\AudioServiceJSEventAssist.obj
+         Debug\AudioServiceStrategyAssist.obj
+         Debug\FileTransferServiceJSEventAssist.obj
+         Debug\JSEventAssist.obj
+         Debug\PbxServiceJSEventAssist.obj
+         Debug\AudioServiceStrategy.obj
+         Debug\BBSServiceStragegy.obj
+         Debug\CalendarServiceStrategy.obj
+         Debug\CatchScreenServiceStrategy.obj
+         Debug\ClientScheme.obj
+         Debug\ClientServiceStrategy.obj
+         Debug\Configuration.obj
+         Debug\ContactServiceStrategy.obj
+         Debug\SharingServiceStrategy.obj
+         Debug\ExternalServiceStrategy.obj
+         Debug\FileTransferServiceStratepy.obj
+         Debug\GkClient.obj
+         Debug\GkClientMessage.obj
+         Debug\GroupServiceStrategy.obj
+         Debug\IMServiceStrategy.obj
+         Debug\MicroblogServiceStrategy.obj
+         Debug\OpenApiServiceStrategy.obj
+         Debug\PbxServiceStratepy.obj
+         Debug\SearchServiceStrategy.obj
+         Debug\ServiceObjectConversion.obj
+         Debug\SharingWnd.obj
+         Debug\SystemService.obj
+         Debug\UCClient.obj
+         Debug\UCExtension.obj
+         Debug\UCManager.obj
+         Debug\UpdateServiceStrategy.obj
+         Debug\Clipboard.obj
+         Debug\CrashHandler.obj
+         Debug\Environment.obj
+         Debug\FileUtil.obj
+         Debug\HTTPProxy.obj
+         Debug\Logger.obj
+         Debug\NetworkAdapterUtil.obj
+         Debug\NetworkMonitor.obj
+         Debug\PowerMonitor.obj
+         Debug\Thumbnails.obj
+         Debug\Utils.obj
+         Microsoft (R) Incremental Linker Version 12.00.40629.0
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         "/OUT:E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\bee.exe" /INCREMENTAL:NO /LIBPATH:../../../../third_party/cef/lib/Debug /LIBPATH:../../../../third_party/uc_sdk/build/windows/UCSDK/bin/Debug /LIBPATH:../../../../third_party/uc_sdk/third_party\boost\stage\lib\windows /LIBPATH:../../../../third_party/CatchScreen/lib /LIBPATH:../../../../build/Debug /LIBPATH:../../../../third_party/uc_sdk/third_party/log_manager/lib/windows /LIBPATH:../../../../third_party/cximage/lib/Debug /LIBPATH:../../../../third_party/uc_sdk/third_party/common/lib/windows/Debug /LIBPATH:../../../../third_party/libUpdate\lib /LIBPATH:../../../../third_party/libproxy/lib/windows/x86 /LIBPATH:../../../../third_party/gkclient/lib/Debug /LIBPATH:../../../../third_party/DuiLib/lib "/LIBPATH:D:\Program Files (x86)\Visual Leak Detector\lib\Win32" LogManager_d.lib CefIntegration.lib libcef.lib libcef_dll_wrapper.lib UCSDK_d.lib capturescreen_d.lib libAMRPlayer.lib cximagecrtd.lib common.lib msxml2.lib update_d.lib libproxy.lib gkClient.lib GKCefExtension.lib DuiLib_d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST "/MANIFESTUAC:level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG "/PDB:E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\bee.pdb" "/SUBSYSTEM:WINDOWS,5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT "/IMPLIB:E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\bee.lib" /MACHINE:X86 /SAFESEH Debug\UCClient.res 
+         Debug\pugixml.obj 
+         Debug\AudioServiceJSEventAssist.obj 
+         Debug\AudioServiceStrategyAssist.obj 
+         Debug\FileTransferServiceJSEventAssist.obj 
+         Debug\JSEventAssist.obj 
+         Debug\PbxServiceJSEventAssist.obj 
+         Debug\AudioServiceStrategy.obj 
+         Debug\BBSServiceStragegy.obj 
+         Debug\CalendarServiceStrategy.obj 
+         Debug\CatchScreenServiceStrategy.obj 
+         Debug\ClientScheme.obj 
+         Debug\ClientServiceStrategy.obj 
+         Debug\Configuration.obj 
+         Debug\ContactServiceStrategy.obj 
+         Debug\SharingServiceStrategy.obj 
+         Debug\ExternalServiceStrategy.obj 
+         Debug\FileTransferServiceStratepy.obj 
+         Debug\GkClient.obj 
+         Debug\GkClientMessage.obj 
+         Debug\GroupServiceStrategy.obj 
+         Debug\IMServiceStrategy.obj 
+         Debug\MicroblogServiceStrategy.obj 
+         Debug\OpenApiServiceStrategy.obj 
+         Debug\PbxServiceStratepy.obj 
+         Debug\SearchServiceStrategy.obj 
+         Debug\ServiceObjectConversion.obj 
+         Debug\SharingWnd.obj 
+         Debug\SystemService.obj 
+         Debug\UCClient.obj 
+         Debug\UCExtension.obj 
+         Debug\UCManager.obj 
+         Debug\UpdateServiceStrategy.obj 
+         Debug\Clipboard.obj 
+         Debug\CrashHandler.obj 
+         Debug\Environment.obj 
+         Debug\FileUtil.obj 
+         Debug\HTTPProxy.obj 
+         Debug\Logger.obj 
+         Debug\NetworkAdapterUtil.obj 
+         Debug\NetworkMonitor.obj 
+         Debug\PowerMonitor.obj 
+         Debug\Thumbnails.obj 
+         Debug\Utils.obj 
+     1>pugixml.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+            Creating library E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\bee.lib and object E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\bee.exp
+     1>libcef_dll_wrapper.lib(transfer_util.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(transfer_util.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(cef_logging.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(cef_logging.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(app_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(app_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(base_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(base_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(browser_process_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(browser_process_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(client_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(client_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(completion_callback_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(completion_callback_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(context_menu_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(context_menu_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(cookie_visitor_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(cookie_visitor_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(delete_cookies_callback_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(delete_cookies_callback_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(dialog_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(dialog_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(display_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(display_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(domvisitor_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(domvisitor_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(download_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(download_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(drag_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(drag_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(end_tracing_callback_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(end_tracing_callback_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(find_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(find_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(focus_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(focus_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(geolocation_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(geolocation_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(get_geolocation_callback_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(get_geolocation_callback_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(jsdialog_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(jsdialog_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(keyboard_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(keyboard_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(life_span_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(life_span_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(load_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(load_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(navigation_entry_visitor_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(navigation_entry_visitor_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(pdf_print_callback_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(pdf_print_callback_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(print_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(print_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(read_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(read_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(render_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(render_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(render_process_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(render_process_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(request_context_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(request_context_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(request_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(request_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(resource_bundle_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(resource_bundle_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(resource_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(resource_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(run_file_dialog_callback_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(run_file_dialog_callback_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(scheme_handler_factory_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(scheme_handler_factory_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(set_cookie_callback_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(set_cookie_callback_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(string_visitor_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(string_visitor_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(task_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(task_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(urlrequest_client_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(urlrequest_client_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(v8accessor_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(v8accessor_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(v8handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(v8handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(web_plugin_info_visitor_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(web_plugin_info_visitor_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(web_plugin_unstable_callback_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(web_plugin_unstable_callback_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(write_handler_cpptoc.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(write_handler_cpptoc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(auth_callback_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(auth_callback_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(before_download_callback_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(before_download_callback_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(binary_value_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(binary_value_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(browser_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(browser_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(browser_host_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(browser_host_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(callback_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(callback_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(command_line_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(command_line_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(context_menu_params_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(context_menu_params_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(cookie_manager_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(cookie_manager_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(dictionary_value_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(dictionary_value_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(domdocument_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(domdocument_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(domnode_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(domnode_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(download_item_callback_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(download_item_callback_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(download_item_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(download_item_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(drag_data_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(drag_data_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(file_dialog_callback_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(file_dialog_callback_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(frame_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(frame_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(geolocation_callback_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(geolocation_callback_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(jsdialog_callback_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(jsdialog_callback_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(list_value_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(list_value_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(menu_model_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(menu_model_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(navigation_entry_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(navigation_entry_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(post_data_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(post_data_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(post_data_element_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(post_data_element_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(print_dialog_callback_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(print_dialog_callback_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(print_job_callback_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(print_job_callback_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(print_settings_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(print_settings_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(process_message_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(process_message_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(request_callback_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(request_callback_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(request_context_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(request_context_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(request_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(request_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(response_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(response_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(scheme_registrar_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(scheme_registrar_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(sslcert_principal_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(sslcert_principal_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(sslinfo_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(sslinfo_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(stream_reader_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(stream_reader_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(stream_writer_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(stream_writer_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(task_runner_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(task_runner_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(urlrequest_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(urlrequest_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(v8context_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(v8context_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(v8exception_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(v8exception_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(v8stack_frame_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(v8stack_frame_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(v8stack_trace_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(v8stack_trace_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(v8value_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(v8value_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(value_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(value_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(web_plugin_info_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(web_plugin_info_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(xml_reader_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(xml_reader_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(zip_reader_ctocpp.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(zip_reader_ctocpp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>libcef_dll_wrapper.lib(libcef_dll_wrapper.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'libcef_dll_wrapper.lib(libcef_dll_wrapper.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>GKCefExtension.lib(GKCallbackEx.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'GKCefExtension.lib(GKCallbackEx.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+     1>GKCefExtension.lib(GKClientBrowserDelegate.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'GKCefExtension.lib(GKClientBrowserDelegate.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\vc120.pdb'; linking object as if no debug info
+         UCClient.vcxproj -> E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\bee.exe
+       PostBuildEvent:
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\config\
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\config\
+         copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\glog_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\glog_d.dll
+         copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\UCSDK_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\UCSDK_d.dll
+         copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\sqlite3.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\sqlite3.dll
+         copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\zlib_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\zlib_d.dll
+         copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\LogManager_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\LogManager_d.dll
+         copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\UCSDK_d.pdb E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\UCSDK_d.pdb
+         copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\oncloud2CA.pem E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\oncloud2CA.pem
+         copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\Bee2MeetingPlugin_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\Bee2MeetingPlugin.dll
+         copy  ..\..\..\..\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\Bee2MeetingPlugin.ini E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\Bee2MeetingPlugin.ini
+         copy  ..\..\config\bee.config E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\config\bee.config
+         copy  ..\..\..\..\third_party\libproxy\lib\windows\x86\libproxy_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\libproxy.dll
+         copy  ..\..\..\..\third_party\libproxy\lib\windows\x86\libproxy_d.pdb E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\libproxy.pdb
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\common\lib\windows\Debug\common.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\common.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\common\lib\windows\Debug\common.pdb E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\common.pdb
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\log_manager\lib\windows\LogManager_d.pdb E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\LogManager_d.pdb
+         copy ..\..\..\..\third_party\pacparser\lib\windows\x86\pacparser.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\pacparser.dll
+         copy ..\..\..\..\third_party\pacparser\lib\windows\x86\libgcc_s_dw2-1.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\libgcc_s_dw2-1.dll
+         copy  ..\..\..\..\third_party\DuiLib\lib\DuiLib_d.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\DuiLib_d.dll
+         copy  ..\..\..\..\third_party\DuiLib\lib\DuiLib_d.pdb E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\DuiLib_d.pdb
+         copy  ..\..\..\..\third_party\gkclient\lib\Debug\gkClient.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\gkClient.dll
+         copy  ..\..\..\..\third_party\gkclient\lib\Debug\gkClient.pdb E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\gkClient.pdb
+         copy  ..\..\..\..\third_party\gkclient\lib\Debug\libcurl.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\libcurl.dll
+         copy  ..\..\..\..\third_party\gkclient\lib\Debug\zlibwapi.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\zlibwapi.dll
+         copy  ..\..\..\..\third_party\gkclient\lib\Debug\libeay32.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\libeay32.dll
+         copy  ..\..\..\..\third_party\gkclient\lib\Debug\ssleay32.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\ssleay32.dll
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\tools\
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\tools\
+         copy  ..\..\..\..\third_party\gkclient\tools\* E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\tools
+         copy  ..\..\..\..\third_party\tools\* E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\tools
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\Conference\plugin\
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\Conference\
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\Conference\
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\Conference\plugin\
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\* E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\Conference
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\* E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\Conference\plugin
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\EasiioLibrary.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\EasiioLibrary.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avcodec-55.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\avcodec-55.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avdevice-55.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\avdevice-55.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avfilter-4.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\avfilter-4.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avformat-55.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\avformat-55.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\avutil-52.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\avutil-52.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\ezpjsipwrapper.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\ezpjsipwrapper.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\postproc-52.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\postproc-52.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\SDL2.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\SDL2.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\swresample-0.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\swresample-0.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\swscale-2.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\swscale-2.dll
+         copy  ..\..\..\..\third_party\uc_sdk\third_party\easiio\dll\OnvifClientLibrary.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\OnvifClientLibrary.dll
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\resources\sharingSkin
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\resources\sharingSkin
+         copy  ..\..\res\sharingSkin\* E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\resources\sharingSkin
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt\win32
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt\x64
+         rd E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt\win32
+         md E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt\x64
+         copy  ..\..\..\..\third_party\copylocation\lib\Debug\win32\CopyLocation.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt\win32\CopyLocation.dll
+         copy  ..\..\..\..\third_party\copylocation\lib\Debug\x64\CopyLocation.dll E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt\x64\CopyLocation.dll
+         
+         :VCEnd
+         目录不是空的。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\config\ 已经存在。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         目录不是空的。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\tools\ 已经存在。
+         ..\..\..\..\third_party\gkclient\tools\diff-doc.js
+         ..\..\..\..\third_party\gkclient\tools\diff-docx.js
+         ..\..\..\..\third_party\gkclient\tools\diff-ppt.js
+         ..\..\..\..\third_party\gkclient\tools\diff-pptx.js
+         ..\..\..\..\third_party\gkclient\tools\diff-xls.js
+         ..\..\..\..\third_party\gkclient\tools\diff-xlsx.js
+         已复制         6 个文件。
+         ..\..\..\..\third_party\tools\cyggcc_s-1.dll
+         ..\..\..\..\third_party\tools\cygiconv-2.dll
+         ..\..\..\..\third_party\tools\cygintl-8.dll
+         ..\..\..\..\third_party\tools\cygwin1.dll
+         ..\..\..\..\third_party\tools\rm.exe
+         已复制         5 个文件。
+         目录不是空的。
+         目录不是空的。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\Conference\ 已经存在。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\Conference\plugin\ 已经存在。
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\atl80.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\channelmgr.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\channelmgr.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\CommonLib.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\Conference.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\Conference.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\DownloadManager.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\eXosip2.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\LogConfig.xml
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\LogDll.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\LogDll.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\Microsoft.VC80.ATL.manifest
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\Microsoft.VC80.CRT.manifest
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\Microsoft.VC80.OpenMP.manifest
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\msvcm80.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\msvcp80.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\msvcr80.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\msxml3.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\osip2.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\osipparser2.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\PluginConfig.xml
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\PluginManager.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\TangTransportConfig.xml
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\test.wav
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\tm.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\UploadManager.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\vcomp.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\WhiteboardView.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\wzcsapi.dll
+         已复制        29 个文件。
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\avcodec-56.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\AVEngine.xml
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\AVEngineCore.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\AVModule.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\AVModule.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\avutil-54.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\AVWizard.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\AVWizard.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\convertconfig.ini
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\ConvertServer.log
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\DesktopCodec.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\DesktopCodec.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\DesktopSharing.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\DesktopSharing.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\DocConvertLib.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\DocSharing.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\DocSharing.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\eXosip2.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\ImgBoxRT.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\ImgBoxRT.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\libAVEngine.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\libUA.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\libx264-142.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\Microsoft.VC80.ATL.manifest
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\Microsoft.VC80.CRT.manifest
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\msvcp80.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\msvcr80.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\osip2.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\osipparser2.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\PstnLib.lib
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\ScreenSpyDLL.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\swresample-1.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\Whiteboard.dll
+         ..\..\..\..\third_party\uc_sdk\third_party\tang\lib\debug\plugin\Whiteboard.lib
+         已复制        34 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         目录不是空的。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\resources\sharingSkin 已经存在。
+         ..\..\res\sharingSkin\max_normal.png
+         ..\..\res\sharingSkin\max_select.png
+         ..\..\res\sharingSkin\min.png
+         ..\..\res\sharingSkin\restore_normal.png
+         ..\..\res\sharingSkin\restore_select.png
+         ..\..\res\sharingSkin\skin.xml
+         已复制         6 个文件。
+         目录不是空的。
+         目录不是空的。
+         目录不是空的。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt 已经存在。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt\win32 已经存在。
+         子目录或文件 E:\mywork\client\PC2.0TRUNK\PC2.0\build\Debug\\shellExt\x64 已经存在。
+         已复制         1 个文件。
+         已复制         1 个文件。
+     1>Done Building Project "E:\mywork\client\PC2.0TRUNK\PC2.0\src\UCClient\build\UCClient\UCClient.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.95

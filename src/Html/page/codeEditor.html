@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../css/codeEditor.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/codeEditor.js"></script>
+    <title>codeEditor</title>
+</head>
+<body>
+<div class="code-editor child-window-shadow">
+    <div class="code-title">{{Code.SendCode}}</div>
+    <div class="top-items">
+        <input type="text" class="code-name" placeholder="{{Code.PleaseInputCode}}"/>
+        <div class="selectformat">
+            <div class="code-type">{{Code.SelectLanguage}}</div>
+            <div class="format-list" style="display:none">
+                <p class="type-item" codeType="cpp">C/C++</p>
+                <p class="type-item" codeType="java">Java</p>
+                <p class="type-item" codeType="html">HTML/XML</p>
+                <p class="type-item" codeType="python">Python</p>
+                <p class="type-item" codeType="d">D</p>
+                <p class="type-item" codeType="php">PHP</p>
+                <p class="type-item" codeType="sql">SQL</p>
+                <p class="type-item" codeType="go">Go</p>
+                <p class="type-item" codeType="bash">Bash</p>
+                <p class="type-item" codeType="diff">Diff</p>
+                <p class="type-item" codeType="makefile">Makefile</p>
+                <p class="type-item" codeType="ruby">Ruby</p>
+                <p class="type-item" codeType="objectec">Objective C</p>
+                <p class="type-item" codeType="javascript">JavaScript</p>
+                <p class="type-item" codeType="ini">Ini</p>
+                <p class="type-item" codeType="nginx">Nginx</p>
+                <p class="type-item" codeType="lua">Lua</p>
+                <p class="type-item" codeType="perl">Perl</p>
+                <p class="type-item" codeType="json">JSON</p>
+            </div>
+        </div>
+    </div>
+    <div class="middle-items">
+        <div class="preview" style="display:none;">
+			<pre class="code-preview">
+				<table class="tbcode" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td id="td-number"><div id="line-number"><ul class="pre-numbering"/></div></td>
+                        <td><code class="go" id="testcode"/></td>
+                    </tr>
+                </table>
+			</pre>
+        </div>
+        <textarea class="code-input" placeholder="{{Code.AddCode}}"></textarea>
+    </div>
+    <textarea class="des-input" placeholder="{{Code.AddDescription}}"></textarea>
+    <div class="bottom-items">
+        <button class="cancel-btn">{{Code.Cancel}}</button>
+        <button class="apply-btn">{{Code.Ok}}</button>
+    </div>
+
+    <div class="tool-icon-container">
+        <span class="icon-close tool-icon"></span>
+    </div>
+</div>
+
+</body>
+</html>

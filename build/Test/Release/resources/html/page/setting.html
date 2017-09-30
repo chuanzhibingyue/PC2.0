@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Setting</title>
+    <link href="../css/setting.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/setting.js"></script>
+</head>
+<body>
+<div class="child-window-shadow">
+    <div class="setting">
+        <div class="setting-title">{{Setting.Title}}</div>
+        <div class="crossing-line"></div>
+        <div class="setting-menu">
+            <ul>
+                <li class="account-setting selected"><span>{{Setting.AccountSetting}}</span></li>
+                <li class="safety "><span>{{Setting.Safe}}</span></li>
+                <li class="general"><span>{{Setting.Common}}</span></li>
+                <li class="shortcut-key"><span>{{Setting.KeyBoard}}</span></li>
+                <li class="function"><span>{{Setting.Function}}</span></li>
+                <li class="feedback-menu"><span>{{Setting.Feedback}}</span></li>
+                <li class="about-bee"><span>{{Setting.AboutBee}}</span></li>
+            </ul>
+        </div>
+        <div class="setting-content">
+            <div class="quit-content">
+                <img id="quit-avatar" src="../images/avatar_default.png" />
+                <p id="quit-name"></p>
+                <p id="quit-account"></p>
+                <a id="quit-login">{{Setting.Logout}}</a>
+            </div>
+            <div class="pwd-safe hide">
+                <div class="safety-setting">
+                    <div class = "login-tips">
+                        <div class="checkbox-parent">
+                            <input type="checkbox">
+                            <label><span></span></label>
+                        </div>
+                        <span class="words">{{Setting.LoginTips}}</span>
+                    </div>
+                    <div>{{Setting.PasswordTips}}</div>
+                    <div class = "reset-password hide">{{Setting.Remind}}
+                        <span id="rest-days"></span>
+                        {{Setting.Day}}
+                    <button class="setting-button reset-password">{{Setting.PasswordModify}}</button>
+                    </div>
+                </div>
+            </div>
+            <div class="general-setting hide">
+                <div class="self-starting">
+                    <div class="checkbox-parent">
+                        <input type="checkbox">
+                        <label><span></span></label>
+                    </div>
+                    <span class="words">{{Setting.AutoStart}}</span>
+                </div>
+                <div class="set-on-top">
+                    <div class="checkbox-parent">
+                        <input type="checkbox" checked="checked">
+                        <label><span></span></label>
+                    </div>
+                    <span class="words">{{Setting.IsTop}}</span>
+                </div>
+                <div class="voice-prompts">
+                    <div class="checkbox-parent">
+                        <input type="checkbox">
+                        <label><span></span></label>
+                    </div>
+                    <span class="words">{{Setting.VoiceRemind}}</span>
+                    <div class="select-voice"></div>
+                </div>
+                <div class="bubble">
+                    <div class="checkbox-parent">
+                        <input type="checkbox">
+                        <label><span></span></label>
+                    </div>
+                    <span class="words">{{Setting.Bubble}}</span>
+                </div>
+                <div>
+                    <button class="default setting-button">{{Setting.Default}}</button>
+                </div>
+            </div>
+            <div class="shortcut-setting hide">
+                <div class="sub-wrap">
+                    <div class="wrap">
+                        {{Setting.SendMessage}}
+                        <div class="middle-line"></div>
+                        <div class="send-message"></div>
+                    </div>
+                </div>
+                <div class="wrap">{{Setting.ScreenShots}}
+                    <div class="middle-line"></div>
+                    <button class="screen" id="set-screen">Ctrl+Alt+A</button>
+                </div>
+                <div class="wrap">{{Setting.OpenMainPage}}
+                    <div class="middle-line"></div>
+                    <button class="main-interface" id="set-mainPage">Ctrl+Alt+W</button>
+                </div>
+                <div>
+                    <button class="default setting-button">{{Setting.Default}}</button>
+                </div>
+            </div>
+            <div class="function-setting hide">
+                <div class="sub-wrap">
+                    <div class="wrap">
+                        {{Setting.Meeting}}
+                        <div class="middle-line"></div>
+                        <div class="meeting-time-title">{{Setting.MeetingTime}}</div>
+                        <div class="meeting-time"></div>
+                    </div>
+                </div>
+                <div class="wrap">{{Setting.Cloud}}
+                    <div class="middle-line"></div>
+                    <button class="cloudSetting">{{Setting.CloudSetting}}</button>
+                </div>
+                <div class="wrap">{{Setting.AVDetection}}
+                    <div class="middle-line"></div>
+                    <button class="AVDetectionSetting">{{Setting.StartAVDetection}}</button>
+                </div>
+                <div>
+                    <button class="default setting-button">{{Setting.Default}}</button>
+                </div>
+            </div>
+            <div class="feedback-content hide">
+                <textarea  id="desc" rows="6" cols="20" maxlength="200" placeholder={{Feedback.PlaceHolder}} spellcheck="false"></textarea>
+                <div class="upload-log">
+                    <div class="checkbox-parent">
+                        <input type="checkbox" checked="true">
+                        <label><span></span></label>
+                    </div>
+                    <div class="input-number hide"><span class="current-number"></span><span class="total-number">/200</span></div>
+                    <span class="words">{{Feedback.UploadLog}}</span>
+                </div>
+                <button class="default setting-button submit">{{Setting.Submit}}</button>
+            </div>
+            <div class="about-bee-setting hide">
+                <div>
+                    <img id="bee-icon" src="../images/settings/bee_icon.png" />
+                    <div id="version"></div>
+                    <button class="check-version setting-button">{{Setting.SettingUpdate}}</button>
+                </div>
+                <div class="service-terms">{{Setting.ServiceTerms}}</div>
+                <div class="copyright">{{Setting.Copyright}}</div>
+            </div>
+        </div>
+        <!------------------------快捷键设置------------------------------------>
+        <div class="keyboard-screen">
+            <div class="window" >
+                <div class="title-words">{{Setting.EnterKeyBoard}}</div>
+                <div class="set-keyboard">
+                    <div class="input" >Ctrl+Alt+A</div>
+                    <div class="key-warning"></div>
+                </div>
+                <div>
+                    <button class="key-cancel">{{Setting.Cancel}}</button>
+                    <button class="key-confirm">{{Setting.Confirm}}</button>
+                </div>
+            </div>
+        </div>
+        <!------------------------快捷键设置------------------------------------>
+        <div class="keyboard-open">
+            <div class="window" >
+                <div class="title-words">{{Setting.EnterKeyBoard}}</div>
+                <div class="set-keyboard">
+                    <div class="input">Ctrl+Alt+W</div>
+                    <div class="key-warning"></div>
+                </div>
+                <div>
+                    <button class="key-cancel">{{Setting.Cancel}}</button>
+                    <button class="key-confirm">{{Setting.Confirm}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="tool-icon-container"><span class="icon-close tool-icon"></span></div>
+    </div>
+</div>
+<!--<div class="emptyMeeting hide">
+                <div class="middle-line"></div>
+                <div class="subtitle">{{Setting.Meeting}}</div>
+                <div class="meeting-content">
+                    <div class="sub-wrap hide" >
+                        {{Setting.TimeZone}}
+                        <div class="time-zone">
+                        </div>
+                    </div>
+                    <div class="sub-wrap hide">
+                        {{Setting.Date}}
+                        <div class="date">
+                        </div>
+                    </div>
+                    <div class="sub-wrap hide">
+                        {{Setting.TimeShow}}
+                        <div class="time">
+                        </div>
+                    </div>
+                    <div class="sub-wrap hide" >
+                        {{Setting.TimeInterval}}
+                        <div class="time-interval">
+                        </div>
+                    </div>
+                    <div class="sub-wrap">
+                        {{Setting.MeetingTime}}
+                        <div class="meeting-time">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="emptyCloud hide">
+                <div class="middle-line hide"></div>
+                <div class="subtitle">{{Setting.Cloud}}</div>
+                <div class="content">
+                    <div style="height: 25px;">
+                        <button class=" cloudSetting">{{Setting.Setting}}</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="AVDetection hide">
+                <div class="middle-line"></div>
+                <div class="subtitle">{{Setting.AVDetection}}</div>
+                <div class="content">
+                    <div style="height: 25px;">
+                        <button class=" AVDetectionSetting">{{Setting.StartAVDetection}}</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="middle-line hide"></div>
+            <div class="subtitle hide">{{Setting.Others}}</div>
+            <div class="content hide">
+                <div style="height: 40px;">
+                    <span>{{Setting.Bee}}</span><span id=""></span>
+                    <button class="service-terms setting-button">{{Setting.ServiceTerms}}</button>
+                    <button class="check-version setting-button">{{Setting.SettingUpdate}}</button>
+                </div>
+                <div style="height: 40px;">
+                    <span>{{Setting.Feedback}}</span>
+                    <button class="feedback setting-button">{{Setting.Feedback}}</button>
+                </div>
+                <div style="height: 40px;">
+                    <span>{{Setting.Default}}</span>
+                    <button class="default setting-button">{{Setting.Default}}</button>
+                </div>
+            </div>
+        </div>-->
+</body>
+</html>

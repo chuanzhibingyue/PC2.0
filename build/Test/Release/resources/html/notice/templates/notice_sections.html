@@ -1,0 +1,10 @@
+<div class="detailSections">
+  <div class="rawText"  ng-bind-html="rawText"></div>
+  <div class="displayText force-hide">
+    <span class="sectionOutput text-ellipsis"  ng-bind-html="rawText"></span>
+    <div ng-bind="menuText" class="menuBtn" ng-click="toggleDisplayInfo()"></div>
+    <div class="shadow" ng-click="toggleDisplayInfo()"  ng-show="showDisplayInfo"></div>
+    <div ng-show="showDisplayInfo" ng-bind-html="rawText" class="fullText">
+    </div>
+  </div>
+</div>

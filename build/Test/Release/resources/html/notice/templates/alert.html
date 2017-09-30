@@ -1,0 +1,10 @@
+<div class="alert" ng-show="isShow">
+    <div class="alertContainer">
+        <div class="alertTitle" translate="common.prompt"></div>
+        <div class="alertMsg"><span ng-bind="option.msg"></span></div>
+        <div class="bottomBtns">
+            <button class="confirmBtn" ng-click="hide(1,$event)" ng-style="option.confirmStyle" ng-show="option.isShowConfirm" ng-bind="option.confirmTxt"></button>
+            <button class="cancelBtn" ng-click="hide(0,$event)" ng-style="option.cancelStyle" ng-show="option.isShowCancel" ng-bind="option.cancelTxt"></button>
+        </div>
+    </div>
+</div>

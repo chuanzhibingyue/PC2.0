@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pbx Dial Window</title>
+    <link href="../css/pbxDialWindow.css" rel="stylesheet"  type="text/css" >
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/pbxDialWindow.js"></script>
+</head>
+<body class="window-fadeIn">
+<div class="panel">
+    <div class="tool-icon-container">
+        <!--<span class="icon-min tool-icon white"></span>-->
+        <span class="icon-close tool-icon white"></span>
+    </div>
+    <div class="panel-body">
+        <div class="panel-country-code">
+            <span class="pbx-code">{{Pbx.China}}&nbsp;</span>
+            <span class="pbx-icon-down"></span>
+        </div>
+        <div class="pbx-code-list-panel"><ul class="pbx-code-list"></ul></div>
+        <div class="panel-input-contain">
+            <span class="pbx-dial-icon-search-del"></span>
+            <input type="text"  class="panel-input" value="" spellcheck="false"  tabindex="1" placeholder="{{Pbx.InputTelephoneNumber}}" maxlength="30" >
+        </div>
+        <div class="pbx-tel-num">
+            <ul>
+                <li><a>1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li><a>5</a></li>
+                <li><a>6</a></li>
+                <li><a>7</a></li>
+                <li><a>8</a></li>
+                <li><a>9</a></li>
+                <li><a>*</a></li>
+                <li><a>0</a></li>
+                <li><a>#</a></li>
+            </ul>
+        </div>
+        <div class="pbx-call"><a href="javascript:void(0)" class="icon-call_phoneVideo"></a></div>
+    </div>
+    <div class="error-tips"><span><img src="../images/login/login_warning.png"></span>{{Pbx.errorPhoneNumber}}</div>
+</div>
+</body>
+</html>

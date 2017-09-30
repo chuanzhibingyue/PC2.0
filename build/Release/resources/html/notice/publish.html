@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="text/css" rel="stylesheet" href="theme/css/main.css" />
+	<link type="text/css" rel="stylesheet" href="theme/css/cover.css" />
+	<link type="text/css" rel="stylesheet" href="theme/css/publish.css" />
+	<link type="text/css" rel="stylesheet" href="theme/css/txeditor.css" />
+	<link type="text/css" rel="stylesheet" href="theme/css/font-awesome.css" />
+	<link type="text/css" rel="stylesheet" href="theme/css/icomoon.css" />
+	<link type="text/css" rel="stylesheet" href="thirdparty/cropper.min.css" />
+
+  <title>publish</title>
+  <script src="thirdparty/jquery-1.11.3.js"></script>
+	<script src="thirdparty/jquery.caret.js"></script>
+	<script src="thirdparty/angular.min.js"></script>
+	<script src="thirdparty/angular-animate.min.js"></script>
+	<script src="thirdparty/angular-sanitize.min.js"></script>
+	<script src="thirdparty/angular-translate.min.js"></script>
+	<script src="thirdparty/cropper.min.js"></script>
+
+  <!-- replace start-->
+	<script src="js/app.js"></script>
+	<!-- 第一引入services -->
+	<script src="js/services/native.js"></script>
+	<script src="js/services/api.js"></script>
+	<script src="js/services/utils.js"></script>
+	<script src="js/services/notices.js"></script>
+	<script src="js/services/pages.js"></script>
+	<script src="js/services/selections.js"></script>
+	<script src="js/services/log.js"></script>
+	<!-- 第二入directives -->
+	<script src="js/directives/notice_alert.js"></script>
+	<script src="js/directives/notice_editor.js"></script>
+	<script src="js/directives/notice_item.js"></script>
+	<script src="js/directives/notice_image.js"></script>
+	<script src="js/directives/raw_html.js"></script>
+	<script src="js/directives/scroll_container.js"></script>
+	<script src="js/directives/cropper.js"></script>
+	<script src="js/directives/spinner_loading.js"></script>
+	<script src="js/directives/publish_scope.js"></script>
+	<script src="js/directives/search_bar_dir.js"></script>
+	<!-- filters -->
+	<script src="js/filters/text_length.js"></script>
+	<!-- 第三入controllers -->
+	<script src="js/controllers/publish_controller.js"></script>
+	<script src="js/controllers/cover_controller.js"></script>
+	<!-- replace end-->
+</head>
+<body>
+	<div ng-controller='PublishCtrl'>
+		<div class="publishPage" ng-class="{'min':isMinimized,'max': isMaximized}" ng-keydown="bodyDown($event)">
+			<i class="close" ng-click = "closePage()"></i>
+			<i class="maximize" ng-class="{'restore':isMaximized}" ng-click= "toggleMaximize()"></i>
+			<i class="minimize" ng-click = "minimize()"></i>
+			<div class="title" translate="publish.title"></div>
+			<div class="shadow"></div>
+			<div class="content">
+				<div class="cwrap">
+					<div class="cleft">
+						<div class="noticeInfo">
+							<div class="info accountInfo">
+								<span translate="publish.info.account-title"></span>
+								<div class="avatar">
+									<notice-image isrc="selectedAccount.avatar" save-to-local="true"></notice-image>
+								</div>
+								<span class="value" ng-bind="selectedAccount.name"></span>
+
+							</div>
+							<div class="info userInfo">
+								<span translate="publish.info.publisher"></span>
+								<div class="avatar">
+									<notice-image isrc="publisher.avatar" size="32" default-src="../images/icon_avatar_default_32.png"></notice-image>
+								</div>
+								<span class="value" ng-bind="publisher.displayName"></span>
+							</div>
+						</div>
+						<div class="sender">
+							<label for="input-receivers" translate="publish.send-to"></label>
+							<publish-scope  get-Org-Info="getOrgInfo" delete-Key-Down="deleteKeyDown" convert-default-sections="convertDefaultSections" show-default-section="showDefaultSection" selected-Sections="selectedSections"  root-Sections="rootSections" rootorg="rootorg"></publish-scope>
+						</div>
+						<div class="topic">
+							<div class="limit">
+								<span class="curLength" ng-bind="currentNotice.topic|textLength" ng-class="{overflow:currentNotice.topic.length >topicMaxLength}"></span>
+								<span>/</span>
+								<span ng-bind="topicMaxLength" class="maxLength"></span>
+							</div>
+							<label for="input-topic" translate="publish.topic"></label>
+							<input type="text" ng-keyup="onInputCaretPositionKeyUp($event)" ng-disabled="currentNotice.isEditDisabled" ng-mouseup="onInputCaretPositionKeyUp($event)"  ng-keydown="setInputEditorCaretPosition($event)" ng-mousedown="setInputEditorCaretPosition($event)" id="input-topic" class="topicText" placeholder="{{'publish.topic-placeholder'|translate}}" ng-model="currentNotice.topic"/>
+						</div>
+						<div class="summary">
+							<label translate="publish.summary"></label>
+							<div class="limit"><span ng-bind="summaryLength" class="curLength" ng-class="{'overflow': summaryLength > summaryMaxLength}"></span><span>/{{summaryMaxLength}}</span></div>
+							<textarea ng-keyup="onInputCaretPositionKeyUp($event)" ng-disabled="currentNotice.isEditDisabled" ng-mouseup="onInputCaretPositionKeyUp($event)" ng-keydown="setInputEditorCaretPosition($event)" ng-mousedown="setInputEditorCaretPosition($event)" id="summaryInput" rows="2" cols="45" placeholder="{{'publish.summary-placeholder'|translate}}" ng-model="summary"></textarea>
+						</div>
+						<div class="editor">
+							<label translate="publish.content"></label>
+							<!--<div text-angular ta-text-editor-class="form-content" ta-html-editor-class="form-content" ta-toolbar="[['bold','italics','underline','justifyLeft','justifyCenter','justifyRight','ol','insertLink','uploadImage']]" ng-model="currentNotice.content"></div>-->
+							<notice-editor place-holder="currentNotice.placeHolder" edit-disabled="currentNotice.isEditDisabled" open-cloud="showCloudFileWindow()" content="currentNotice.content"></notice-editor>
+						</div>
+					</div>
+					<div class="cright">
+						<div class="tip" translate="publish.preview-tip"></div>
+						<div class="coverUploadContainer">
+								<div class="banner"></div>
+								<span class="topic text-ellipsis" ng-bind="currentNotice.topic"></span>
+								<div class="coverUpload"  ng-style="coverBackgroundStyle">
+									<div class="tips" ng-hide="currentNotice.cover">
+										<span class="btnUpload btn" ng-click="updateCover()" translate="publish.cover-upload"></span>
+									</div>
+									<div class="btnReset btn" ng-show="currentNotice.cover && !currentNotice.isEditDisabled" ng-click="updateCover()" translate="publish.cover-reset"></div>
+								</div>
+								<span class="summary text-multiple-ellipsis" ng-bind="summary"></span>
+						</div>
+						<div class="previewBtn btn" translate="publish.send-preview" ng-click="showPreviewDialog()" onmousedown="$(this).addClass('enter')"
+							 onmouseup="$(this).removeClass('enter')" ng-class="{'disabled': !isAvailableToSendPreview()}">
+						</div>
+						<div class="bottomBtns operation" ng-hide="isMinimized">
+							<button class="btnSave btn float-left" ng-hide="currentNotice.isEditDisabled"
+									ng-click="onSave()"
+									onmousedown="$(this).addClass('enter')"
+									onmouseup="$(this).removeClass('enter')"
+									ng-class="{'disabled': !isAvailableToSave()}"
+									translate="publish.save-draft"></button>
+							<button class="btnConfirm btn float-left"
+									ng-click="onSend()"
+									onmousedown="$(this).addClass('enter')"
+									onmouseup="$(this).removeClass('enter')"
+									translate="publish.send"
+									ng-class="{'disabled': !isAvailableToSend()}"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="previewDialog" ng-show="isShowPreviewDialog">
+				<div class="dialogContent">
+					<div class="title">
+						<i class="close" ng-click = "isShowPreviewDialog = false"></i>
+						<span translate="publish.send-preview"></span>
+					</div>
+					<div class="send-to">
+						<div class="send-to-me">
+							<input id="sendToMe" type="radio" name="sendTo" ng-model="sendTo.value" value="0"/>
+							<label for="sendToMe" translate="publish.send-to-me"></label>
+						</div>
+						<div class="send-to-other">
+							<input id="sendToOther"  type="radio" name="sendTo" ng-model="sendTo.value" value="1"/>
+							<label for="sendToOther" translate="publish.send-to-other"></label>
+							<div class="contact-searchbar">
+								<div class="selectedName">
+									<span ng-bind="previewReceiver.name"></span>
+								</div>
+								<search-bar search-type="1" rootorg="rootorg" is-node-Selected="isNodeSelected" is-single-select="true" select-node="searchPreviewReceiver" placeholder="{{'publish.preview-dialog-placeholder'|translate}}"></search-bar>
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<span translate="publish.preview-dialog-tip"></span>
+						<div class="btn" translate="publish.send"  ng-click="isShowPreviewDialog = false; sendPreview();" ng-class="{'disabled': !previewReceiver && sendTo.value == 1}"></div>
+					</div>
+				</div>
+			</div>
+			<article class="coverPage" ng-show="isShowCoverPanel" ng-controller="CoverCtrl">
+				<div class="coversContainer">
+					<div class="title">
+						<a ng-repeat="category in defaultCoverCategories"  ng-click="selectCategory($index)" ng-class="{'selected':category===selectedCategory}">
+							<span ng-bind="category.type_name"></span>
+						</a>
+					</div>
+					<div class="covers">
+						<div ng-repeat="cover in selectedCategory.lists" class="coverItem"  ng-click="selectCover($index)">
+							<div class="coversWrapper" ng-class="{'selected':cover==selectedCover}">
+								<div class="cover" ng-if="selectedCategory !=defaultCoverCategories[defaultCoverCategories.length-1]">
+									<div class="imageContainer">
+										<img ng-src="{{cover.url}}" />
+									</div>
+								</div>
+								<div class="cover" ng-if="selectedCategory ==defaultCoverCategories[defaultCoverCategories.length-1]">
+									<div class="imageContainer">
+										<img ng-src="{{cover.url}}" />
+									</div>
+									<a ng-click="removeCustomCover($index,cover,$event)">
+										<span translate="common.remove"></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="customizeContainer coverItem" ng-show="selectedCategory==defaultCoverCategories[defaultCoverCategories.length-1]">
+							<div class="upload" ng-click="updateCover()">
+								<i class="uploadIcon"></i>
+							</div>
+						</div>
+					</div>
+					<div class="bottomBtns">
+						<label class="imgTip" translate="publish.recommend-cover-size" ng-show="selectedCategory==defaultCoverCategories[defaultCoverCategories.length-1]"></label>
+						<button class="btnCancel btn" ng-click="closeCover()" translate="common.cancel"></button>
+						<button class="btnConfirm btn" ng-click="onSave()" translate="common.save"></button>
+					</div>
+				</div>
+
+				<div class="coverOptionDialog" ng-if="showCoverOptions">
+					<i class="close" ng-click = "toggleCoverOptionDialog()"></i>
+					<div class="divideline"></div>
+					<div class="coverOptions">
+						<div class="cropper_area">
+							<cropper img-src="tempCover" cropper="cropper"/>
+						</div>
+					</div>
+					<button class="updateBtn btn" ng-click="updateCover()" translate="publish.cover-reset"></button>
+					<div class="bottomBtns">
+						<button class="btnConfirm btn" ng-click="saveCover()" translate="common.confirm"></button>
+						<button class="btnCancel btn" ng-click="cancelUpload()" translate="common.cancel"></button>
+					</div>
+
+					<!--<a class="btnConfirm" href="javascript:;"><input type="file"  ng-click="updateCover()"  id="coverFileInput"/>确定</a>-->
+				</div>
+			</article>
+		</div>
+		<div class="sendSuccess" ng-show="showSuccessMsg" ng-style="successStyle">
+			<span ng-bind="successMsg"></span>
+		</div>
+		<div class="loadingLayout" ng-show="showLoading"></div>
+
+	</div>
+	<div notice-alert></div>
+</body>

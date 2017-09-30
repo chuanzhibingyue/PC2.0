@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="./theme/css/main.css" />
+    <link type="text/css" rel="stylesheet" href="./theme/css/contacts.css" />
+    <link type="text/css" rel="stylesheet" href="./theme/css/searchbar.css" />
+    <title>Notice</title>
+    <script src="thirdparty/angular.min.js"></script>
+    <script src="thirdparty/angular-sanitize.min.js"></script>
+    <script src="thirdparty/angular-animate.min.js"></script>
+    <script src="thirdparty/angular-translate.min.js"></script>
+    <script src="thirdparty/jquery-1.11.3.js"></script>
+    <script src="thirdparty/jquery.caret.js"></script>
+
+    <!-- replace start-->
+    <script src="js/app.js"></script>
+    <script src="js/services/native.js"></script>
+    <script src="js/services/utils.js"></script>
+    <script src="js/services/pages.js"></script>
+    <script src="js/services/log.js"></script>
+    <script src="js/services/notices.js"></script>
+    <script src="js/services/api.js"></script>
+    <script src="js/controllers/contacts_controller.js"></script>
+    <script src="js/directives/notice_alert.js"></script>
+    <script src="js/directives/search_bar_dir.js"></script>
+    <!-- replace end-->
+    <body>
+        <div class="contactsPage" ng-controller='ContactsCtrl'>
+            <div class="divideline"></div>
+            <div class="content">
+                <aside class="siderleft">
+                    <header class="header">
+                        <div class="contact-searchbar">
+                            <search-bar search-type="3" rootorg="rootorg" is-node-Selected="isNodeSelected" select-node="searchSelectNode"></search-bar></div>
+                    </header>
+                    <div class="dptList">
+                        <script type="text/ng-template" id="nodes_renderer.html">
+                            <div ng-if="node.isPerson" class="item person"  ng-click="selectNode($event,node)" ng-class="{'first-level':node.level == 1}" style="padding-left:{{node.level*20}}px">
+                                <div class="avatar">
+                                    <img ng-src="{{node.avatar}}" onerror="this.src='theme/images/icon_avatar_default_40.png'" />
+                                </div>
+                                <span class="text-ellipsis name">{{node.name}}</span>
+                                <span class="position">{{node.position}}</span>
+                                <span class="select" ng-class='{"checked":node.isSelected ==1,"disable-checked":node.isSelected == 3||node.isSelected == 4,"un-checked":node.isSelected == 0}'
+                                > </span>
+                            </div>
+                            <div ng-if="!node.isPerson" ng-click="expandNode(node)" class="item" ng-class="{'first-level':node.level == 1}" style="padding-left:{{node.level*20}}px">
+                                <span ng-show="node.isExpand" class="icon arrow-down"></span>
+                                <span ng-show="!node.isExpand" class="icon arrow-right"></span>
+                                <span class="name">{{node.name}}</span>
+                                <span class="select" ng-class='{"checked":node.isSelected ==1,"disable-checked":node.isSelected == 3||node.isSelected == 4,"un-checked":node.isSelected == 0}'
+                                 ng-click="selectNode($event,node)"> </span>
+                            </div>
+                            <div ng-if="node.isExpand && !node.isPerson">
+                                <div ng-repeat="node in node.children" ng-include="'nodes_renderer.html'"></div>
+                            </div>
+                        </script>
+                        <div>
+                            <div class="orderlist">
+                                <div ng-repeat="node in departments" ng-include="'nodes_renderer.html'"></div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <aside class="siderright">
+                    <header class="header">
+                        <span translate="contact.selected-list"></span>
+                    </header>
+                    <div class="selectList">
+                        <div class="orderlist">
+                            <div ng-repeat="node in selectedNodes">
+                                <div class="item">
+                                    <div class="avatar">
+                                        <img ng-if="!node.isPerson" src="theme/images/organization.png" />
+                                        <img class="user" ng-if="node.isPerson" ng-src="{{node.avatar}}" onerror="this.src='theme/images/icon_avatar_default_40.png'" />
+                                    </div>
+                                    <span class="text-ellipsis name" ng-bind-html="node.name"></span>
+                                    <span class="position" ng-if="node.isPerson">{{node.position}}</span>
+                                    <div class="remove" ng-click="removeNode($event, $index)"></div>
+                                </div>
+                                <span class="lidivider"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <span class="btn-submit" ng-click="submit();" translate="contact.finish"></span>
+                        <span class="btn-cancel" ng-click="hideContacts()" translate="contact.cancel"></span>
+                    </footer>
+                </aside>
+            </div>
+            <span class='closeBtn' ng-click="hideContacts()"><i class="fa fa-times"></i></span>
+        </div>
+        <div notice-alert></div>
+    </body>
+
+</html>

@@ -1,0 +1,86 @@
+.meeting-list-container .meeting-list{
+    position: relative;
+}
+.meeting-list-container .meeting-list>div.meeting-list-grid-item:not(.fadeOut):hover{
+    background-color: rgba(237, 237, 237, 0.7);
+}
+.meeting-list-container .meeting-list .meeting-list-grid-item{
+    width: 100%;
+    height: 39px;
+    border-bottom: 1px solid #eee;
+}
+.meeting-list-container .meeting-list .meeting-list-grid-item .meeting-list-grid-time{
+    width: 60px;
+    font-size: 10px;
+    /*transform: scale(0.9);*/
+    line-height: 41px;
+    height: 39px;
+    text-align: center;
+    display: inline-block;
+    text-indent: 10px;
+    background-color: white;
+    color: #666666;
+}
+.meeting-list-container .meeting-list .meeting-list-grid-item .meeting-list-grid-time .hour{
+    color: #03111f;;
+}
+.meeting-list-container .meeting-list .meeting-list-item{
+    position: absolute;
+    background-color: rgba(249,104,104, 0.2);
+    border-left: 2px solid #f96868;
+    cursor: default;
+    /*padding-right: 4px;*/
+}
+.meeting-list-container .meeting-list>div.meeting-list-item:hover{
+    color: white !important;
+    background-color: rgba(249,104,104, 0.4);
+}
+.meeting-list-container .meeting-list .meeting-list-item.active,
+.meeting-list-container .meeting-list .meeting-list-item.active:hover{
+/*.meeting-list-container .meeting-list>div.meeting-list-grid-item:not(.fadeOut):active{*/
+/*.meeting-list-container .meeting-list>div.meeting-list-grid-item:not(.fadeOut):active{*/
+    background-color: #f96868;
+}
+.meeting-list-container .meeting-list .meeting-list-item .meeting-list-item-title{
+    font-size: 12px;
+    text-indent: 4px;
+    margin-top: 10px;
+    color: #03111f;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: nowrap;
+    width: 100%;
+    padding-right: 4px;
+}
+
+.meeting-list-container .meeting-list .meeting-list-item .meeting-list-item-title.min-height{
+    margin-top: 0;
+}
+
+.meeting-list-container .meeting-list .meeting-list-item.active .meeting-list-item-title{
+    color: #ffffff;
+}
+
+.meeting-list-container .meeting-list .current-time-indicator{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    left: 2px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #f96868;
+}
+.meeting-list-container .meeting-list .meeting-list-grid-item.fadeOut{
+    animation: bg-fadeOut 1.5s cubic-bezier(0.18, 0.08, 0.39, 1.06);
+}
+@-webkit-keyframes bg-fadeOut{
+    from{
+        background-color: #f96868;
+    }
+    to{
+        background-color: #fff;
+    }
+}

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UCSDKDemo", "UCSDKDemo.vcxproj", "{819EBFCC-6143-4484-8B31-D583B46A946F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UCSDK", "..\UCSDK\UCSDK.vcxproj", "{C58F8AD0-6B98-41FD-9ADE-081227A92937}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{819EBFCC-6143-4484-8B31-D583B46A946F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{819EBFCC-6143-4484-8B31-D583B46A946F}.Debug|Win32.Build.0 = Debug|Win32
+		{819EBFCC-6143-4484-8B31-D583B46A946F}.Release|Win32.ActiveCfg = Release|Win32
+		{819EBFCC-6143-4484-8B31-D583B46A946F}.Release|Win32.Build.0 = Release|Win32
+		{C58F8AD0-6B98-41FD-9ADE-081227A92937}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C58F8AD0-6B98-41FD-9ADE-081227A92937}.Debug|Win32.Build.0 = Debug|Win32
+		{C58F8AD0-6B98-41FD-9ADE-081227A92937}.Release|Win32.ActiveCfg = Release|Win32
+		{C58F8AD0-6B98-41FD-9ADE-081227A92937}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

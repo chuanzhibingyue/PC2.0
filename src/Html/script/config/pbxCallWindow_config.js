@@ -1,0 +1,41 @@
+[
+    'src/js/lib/jquery-2.1.4.js',
+    'src/js/lib/jquery-qtips.js',
+    'src/js/lib/jquery-caret.js',
+    'src/js/uc.js',
+    /*Constants**/
+    'src/js/constants/Constants.js',
+    'src/js/constants/ErrorCode.js',
+    /*Utils**/
+    'src/js/util/EventUtil.js',
+    'src/js/util/HashMap.js',
+    'src/js/util/WindowUtil.js',
+    'src/js/util/StringUtil.js',
+    'src/js/util/TimeUtil.js',
+    'src/js/util/LogUtil.js',
+    'src/js/util/StorageUtil.js',
+    'src/js/util/SystemUtil.js',
+    'src/js/util/ImageUtil.js',
+    'src/js/util/AvatarUtil.js',
+    /* Components **/
+    'src/js/service/UIService.js',
+    /* Interfaces **/
+    'src/js/interfaces/IUIEvent.js',
+    'src/js/interfaces/IUIService.js',
+    'src/js/interfaces/IPbxService.js',
+    'src/js/interfaces/IPbxEvent.js',
+    'src/js/interfaces/IContactService.js',
+    'src/js/interfaces/IContactEvent.js',
+    'src/js/interfaces/IIMService.js',
+    'src/js/interfaces/IIMEvent.js',
+    'src/js/listener/event_config.js',
+    'src/js/listener/service_config.js',
+    'src/js/listener/native_event_config.js',
+    'src/js/listener/native_service_config.js',
+    'src/js/listener/manager.js',
+    'src/js/modules/component/PromptMessageBox.js',
+    'src/js/modules/component/TitleBarButton.js',
+    'src/js/modules/pbx/PbxCallWindowEventListener.js',
+    'src/js/modules/pbx/PbxCallWindowManager.js',
+    'src/js/modules/pbx/PbxCallWindow.js'
+]

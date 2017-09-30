@@ -1,0 +1,291 @@
+.jquery-search-box .search-input-container {
+    font-size: 16px;
+	border: 1px solid #dadada;
+    width: 260px;
+    margin-left: 20px;
+    border-radius: 2px;
+    height: 26px;
+    line-height: 26px;
+    position: relative;
+    display: inline-block;
+    background-color: #ededed;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.jquery-search-box .search-input-container:hover{
+    background-color: white;
+    /*border-color: #ffcc00;*/
+}
+
+.jquery-search-box .search-input-container .icon-search {
+	color: #c3c3c3;
+    font-size: 12px;
+    margin-left: 120px;
+}
+.jquery-search-box .search-input-container .icon-search-del {
+	width: 8px;
+    height: 8px;   
+    padding: 6px;
+    background: url("../images/contacts/search_delete.png") center center no-repeat;
+    cursor: pointer;
+    display: none;
+    position: absolute;    
+    top: 3px;
+    right: 5px;
+}
+
+.jquery-search-box .search-input-container .icon-search-del:hover {
+	background: url("../images/contacts/search_delete_hover.png") center center no-repeat;
+}
+
+.jquery-search-box .search-input-container .search-input {
+	border: none;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    width: 0px;
+    outline: none;
+    color: #173553;
+    margin-left: 4px;
+    transition: none;
+}
+
+.jquery-search-box .search-input-container.focus{
+    text-align: inherit;
+    background-color: white;
+    border-color: #ffcc00;
+    cursor: default;
+}
+
+.jquery-search-box .search-input-container.focus .search-input{
+    /*transform: scale(1);*/
+    animation: showInput 0.5s;
+    width: 205px;
+}
+
+.jquery-search-box .search-input-container.focus .icon-search{
+    animation: goLeft 0.5s;
+    margin-left: 10px;
+}
+
+@-webkit-keyframes showInput{
+    from{width: 0px;}
+    to{width: 205px;}
+}
+
+@-webkit-keyframes goLeft{
+    from{margin-left: 120px;}
+    to{margin-left: 10px;}
+}
+
+.jquery-search-result.panel-search-result, .jquery-search-result.detail-result {
+    color: #173553;
+    top: 44px;
+    background: #fff;
+    overflow-x: hidden;
+    z-index: 3;
+    position: absolute;
+    width: 300px;
+    overflow-y: hidden;
+}
+.jquery-search-result .empty-result {
+    background-image: url(../images/search/no-result.png);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 240px;
+}
+.jquery-search-result .panel-search-warp, .jquery-search-result .detail-search-warp {
+    margin-right: 3px;
+    overflow-y: scroll;
+    max-height: 495px;
+    position: relative;
+}
+.jquery-search-result .bread-crumb {
+    color: #173553;
+}
+.jquery-search-result .view-more-search-result {
+    color: #777777;
+}
+.jquery-search-result li, .jquery-search-result li.group-item{
+    padding-left: 10px !important;
+}
+.jquery-search-result li.meeting-item{
+    padding-left: 0px !important;
+}
+.jquery-search-result li, .jquery-search-result li.group-item .jquery-search-result li .contact-widget-container,.jquery-search-result li .group-widget-container, .jquery-search-result li .left,.jquery-search-result li .group-name-container{
+    height: 60px !important;
+    line-height:60px !important;
+}
+.jquery-search-result li .left .avatar,.jquery-search-result li .left .project-avatar, .jquery-search-result li .group-avatar{
+    margin-top: 5px !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+.jquery-search-result li .left .project-avatar{
+    margin-top: 10px !important;
+}
+.jquery-search-result li .group-avatar .avatar-admin, .jquery-search-result li .group-avatar .avatar-attendee{
+    width: 30px !important;
+    height: 30px !important;
+}
+.jquery-search-result li .group-avatar .avatar-admin{
+    margin-top: 2px !important;
+}
+.jquery-search-result li .group-avatar .avatar-attendee{
+    margin-top: 12px !important;
+    margin-left: 10px !important;
+}
+.jquery-search-result li .contact-display-name{
+    max-width: 150px;
+    display: block;
+}
+.jquery-search-result li .group-name{
+    height: 60px !important;
+    line-height: 60px !important;
+    width: 140px !important;
+}
+.jquery-search-result li .group-members-count-container{
+    /*display: inline !important;*/
+}
+.jquery-search-result li .contact-department{
+    max-width: 160px !important;
+}
+.jquery-search-result li.active {
+    background-color: #fffee1;
+}
+.jquery-search-result .bread-crumb {
+    font-size: 12px;
+    text-align: left;
+    padding: 3px 20px;
+}
+.jquery-search-result .bread-crumb-right {
+    float: right;
+    text-align: right;
+}
+.jquery-search-result .view-more-search-result {
+    cursor: pointer;
+}
+.jquery-search-result  .bread-crumb-return{
+    cursor: pointer;
+    margin-left: -5px;
+    margin-right: 5px;
+}
+
+.jquery-search-result .meeting-icon {
+    width: 38px;
+    color: white;
+    height: 38px;
+    font-size: 12px;
+    text-indent: 3px;
+    line-height: 38px;
+    background: url("../images/conversation/icon_normal_meeting_normal.png") no-repeat;
+    background-size: cover;
+    vertical-align: top;
+    margin: 10px 0 0 10px;
+}
+.jquery-search-result .meeting-icon.cloud {
+    background: url("../images/conversation/icon_cloud_meeting_normal.png") no-repeat;
+    background-size: cover;
+    width: 42px;
+    height: 45px;
+}
+
+.jquery-search-result .meeting-widget-container {
+    height: 60px;
+    cursor: default;
+}
+.jquery-search-result .center .meeting-description{
+    height: 20px;
+    line-height: 20px;
+    max-width: 180px;
+}
+.jquery-search-result .meeting-item .center{
+    float: left;
+    margin-top: 10px;
+}
+.jquery-search-result .search-message-text{
+    color: #666666;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+.jquery-search-result .search-message-right{
+    margin-top: 20px;
+    display: inline-block;
+    height: 16px;
+    position: absolute;
+    right: 10px;
+    color: #c3c3c3;
+}
+.jquery-search-result .search-message-right:hover{
+    /*color: #999999;*/
+}
+.jquery-search-result .search-message-right:active{
+    /*color: #777777;*/
+}
+.jquery-search-result .contact-widget-container .center{
+    line-height: 24px;
+}
+.jquery-search-result .contact-display-name .keywordText, .jquery-search-result .group-name .keywordText, .jquery-search-result .meeting-name .keywordText{
+    font-size: 14px;
+}
+.jquery-search-result li.search-group-messages-item .contact-display-name{
+    margin-top: 5px;
+}
+.jquery-search-result li.search-group-messages-item .contact-display-name, .jquery-search-result li.search-group-messages-item .contact-description{
+    height: 24px;
+    line-height: 24px;
+}
+.jquery-search-result li.search-group-messages-item .msgTime{
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    height: 20px;
+    line-height: 20px;
+    color: #777777;
+}
+.jquery-search-result li.search-group-messages-item .contact-description{
+    display: block;
+}
+.jquery-search-result .bread-crumb-left{
+    max-width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 16px;
+    display: inline-block;
+    line-height: 18px;
+    white-space: nowrap;
+}
+/*
+.panel-search-result .group-item .group-name-container {
+	width: 175px;
+}
+
+.popup .panel-search-result .contact-widget-container .right {
+	left: 255px;
+}
+
+.panel-search-result .down-scroll-way-point {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.contact-widget-container .contact-display-name  {
+    width: auto;
+}
+
+.bread-crumb-left {
+    width: 100px;
+    display: inline-block;
+}
+.bread-crumb-right {
+    width: 150px;
+    display: inline-block;
+    text-align: right;
+}*/

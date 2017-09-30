@@ -1,0 +1,502 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                            
+//  This template script provides the code necessary to build an entry-point 
+//  function to be called in an InstallScript custom action. 
+//                                                                            
+//                                                                            
+//    File Name:  Setup.rul                                                   
+//                                                                            
+//  Description:  InstallShield script                                        
+//
+////////////////////////////////////////////////////////////////////////////////
+
+// Include Ifx.h for built-in InstallScript function prototypes, for Windows 
+// Installer API function prototypes and constants, and to declare code for 
+// the OnBegin and OnEnd events.
+#include "ifx.h"
+
+// The keyword export identifies MyFunction() as an entry-point function.
+// The argument it accepts must be a handle to the Installer database.
+
+export prototype PreInstallation(HWND);
+export prototype AfterInstall(HWND);
+export prototype MsiUI(HWND);
+export prototype UninstallMsiUI(HWND);
+export prototype AddShortCutIcon(HWND);
+export prototype ExecPreUnist(HWND);
+
+
+
+
+export prototype Percent10(HWND);
+export prototype Percent20(HWND);
+export prototype Percent50(HWND);
+export prototype Percent80(HWND);
+export prototype SetRuntimeProperty(HWND);
+
+//调用dll，dll调用exe，去停止msiexec.exe进程并重新以Admin权限启动安装包
+prototype cdecl BOOL MsiDll.RunAdminExe(STRING,STRING);
+prototype cdecl BOOL MsiDll.RunExe(STRING,STRING);
+prototype cdecl VOID MsiDll.KillExe(STRING);
+prototype cdecl VOID MsiDll.debugLog(STRING);
+prototype cdecl BOOL MsiDll.getInstallDir(STRING);
+prototype cdecl BOOL MsiDll.CheckInstalled();
+prototype cdecl INT  MsiDll.GetSystemBits();
+prototype cdecl VOID MsiDll.DelInstallDir();
+
+//prototype cdecl VOID MsiDll.WriteUninstallToReg();
+
+//调用dll导出函数等待MsiUI.exe的事件
+prototype cdecl BOOL MsiDll.WaitEvent(NUMBER);
+
+//调用dll导出函数等待MsiUI.exe的事件
+prototype cdecl BOOL MsiDll.PostInt(NUMBER,NUMBER);
+
+//export prototype ExFn_UseDLL();
+
+// To Do:  Declare global variables, define constants, and prototype user-
+//         defined and DLL functions here.
+
+
+// To Do:  Create a custom action for this entry-point function:
+// 1.  Right-click on "Custom Actions" in the Sequences/Actions view.
+// 2.  Select "Custom Action Wizard" from the context menu.
+// 3.  Proceed through the wizard and give the custom action a unique name.
+// 4.  Select "Run InstallScript code" for the custom action type, and in
+//     the next panel select "MyFunction" (or the new name of the entry-
+//     point function) for the source.
+// 5.  Click Next, accepting the default selections until the wizard
+//     creates the custom action.
+//
+// Once you have made a custom action, you must execute it in your setup by
+// inserting it into a sequence or making it the result of a dialog's
+// control event.
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           
+// Function:  MyFunction
+//                                                                           
+//  Purpose:  This function will be called by the script engine when
+//            Windows(TM) Installer executes your custom action (see the "To
+//            Do," above).
+//                                                                           
+///////////////////////////////////////////////////////////////////////////////
+
+function ExecPreUnist(hMSI)
+
+begin
+	
+	UninstallMsiUI(hMSI);
+
+end;
+
+function PreInstallation(hMSI)
+
+	NUMBER nBuffer;
+	STRING strTemp;
+		STRING strSupDir, szValueBuf, strUIExe;
+	
+	STRING szPath, szRegName, szReturn, szDll, szZipPath;
+	NUMBER nValue, nRet, nRegString, nResult;
+	
+	BOOL bIsRunAsAdmin;
+	STRING szPrinterPath;
+	NUMBER nInt;
+begin
+
+	//获取MsiUI.exe的路径
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "OriginalDatabase", szValueBuf, nBuffer);
+
+	szDll = strSupDir ^ "MsiDll.dll";
+	if(UseDLL(szDll) < 0) then
+		MessageBox(szDll, INFORMATION);
+	endif;
+	
+	UnUseDLL(szDll);
+	MsiUI(hMSI);
+
+end;
+
+
+
+function MsiUI(hMSI)
+	
+	NUMBER nBuffer;
+	STRING strSupDir, szValueBuf, strUIExe, strSvcExe, strCmdLine, strProductCode;
+	
+	STRING szPath, szRegName, szReturn, szDll, szZipPath, szTestPath;
+	NUMBER nValue, nRet, nRegString;
+	
+	BOOL bIsRunAsAdmin;
+   
+begin
+	
+	//获取MsiUI.exe的路径
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "OriginalDatabase", szValueBuf, nBuffer);
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "ProductCode", strProductCode, nBuffer);
+	strUIExe = strSupDir ^ "Setup.exe";
+	//szDll = strSupDir ^ "MsiDll.dll";
+
+	//msi 命令行详解事例
+	//http://www.advancedinstaller.com/user-guide/msiexec.html
+	//静默修复
+	//msiexec.exe /fa {37255CD4-BFF5-4192-AADF-1289427C36B5} /qn
+	//静默卸载
+	//msiexec.exe /x {37255CD4-BFF5-4192-AADF-1289427C36B5} /qn
+	
+	//LaunchAppAndWait(strUIExe, szValueBuf, WAIT);
+	//LaunchAppAndWait(strUIExe, szValueBuf, WAIT);
+	szDll = strSupDir ^ "MsiDll.dll";	
+	if(UseDLL(szDll) < 0) then
+		MessageBox(szDll, INFORMATION);
+	endif;
+	//MessageBox("222", INFORMATION);
+	//MessageBox("111", INFORMATION);
+
+	//recoverInstall
+	strCmdLine = szValueBuf + " -v" + IFX_PRODUCT_VERSION + " -k" + strProductCode;
+	RunExe(strUIExe, strCmdLine);
+	debugLog("UCSetup:MsiUI:before run setup.exe, cmdline:");	
+	debugLog(strCmdLine);	
+
+	//LaunchAppAndWait("sc.exe", "sc create UCDaemonSvc binPath= strSvcExe start= auto")
+	KillExe("msiexec.exe");
+	debugLog("UCSetup:MsiUI:after kill msiexec.exe");
+	//RunAdminExe(strUIExe, szValueBuf);
+	
+
+		
+	UnUseDLL(szDll);
+	
+end;
+
+function UninstallMsiUI(hMSI)
+	
+	NUMBER nBuffer;
+	STRING strSupDir, szValueBuf, strUIExe, strUILevel;
+	
+	STRING szPath, szRegName, szReturn, szDll, szZipPath, szTestPath;
+	NUMBER nValue, nRet, nRegString;
+	
+	BOOL bIsRunAsAdmin;
+   
+begin
+
+	//获取MsiUI.exe的路径
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "OriginalDatabase", szValueBuf, nBuffer);
+	
+	strUIExe = strSupDir ^ "Setup.exe";	
+	//szDll = strSupDir ^ "MsiDll.dll";
+
+
+	//msi 命令行详解事例
+	//http://www.advancedinstaller.com/user-guide/msiexec.html
+	//静默修复
+	//msiexec.exe /fa {37255CD4-BFF5-4192-AADF-1289427C36B5} /qn
+	//静默卸载
+	//msiexec.exe /x {37255CD4-BFF5-4192-AADF-1289427C36B5} /qn
+	
+	szDll = strSupDir ^ "MsiDll.dll";	
+	if(UseDLL(szDll) < 0) then
+		MessageBox(szDll, INFORMATION);
+	endif;
+	debugLog("UCSetup:UninstallMsiUI:before RunExe");
+	//MessageBox("222", INFORMATION);
+	//MessageBox("111", INFORMATION);
+	//WriteUninstallToReg();
+	
+	RunExe(strUIExe, "-suninstallbeefromcp");
+	debugLog("UCSetup:UninstallMsiUI:after RunExe");
+	//KillExe("msiexec.exe");
+	debugLog("UCSetup:UninstallMsiUI:after KillExe");
+	//MessageBox("222", INFORMATION);
+	
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "UILevel", strUILevel, nBuffer);
+	debugLog("UninstallMsiUI get UILevel = ");
+	debugLog(strUILevel);
+	UnUseDLL(szDll);
+	
+	//非静默安装则退出
+	if(strUILevel != "2") then
+		abort;
+	endif;
+	
+end;
+
+function AfterInstall(hMSI)
+	
+	NUMBER nBuffer;
+	STRING strSupDir, strUIExe;
+	
+	STRING szPath, szRegName, szReturn, szDll, szZipPath;
+	NUMBER nValue, nRet, nRegString;
+	STRING szPrinterPath, szInstallDir, szValueBuf;
+	BOOL bInstalled;
+	   
+begin
+
+
+	
+	//获取MsiUI.exe的路径
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "OriginalDatabase", szValueBuf, nBuffer);
+	
+	strUIExe = strSupDir ^ "Setup.exe";	
+	szDll = strSupDir ^ "MsiDll.dll";
+	
+	UseDLL(szDll);
+
+	debugLog("AfterInstall!!!!!");
+	
+	bInstalled = !getInstallDir(szInstallDir);
+	if(bInstalled) then
+		debugLog("UCSetup:AfterInstall:now unload");
+	else
+		debugLog("UCSetup:AfterInstall:now install");
+		//DelInstallDir();
+	endif;
+	
+	//暂时屏蔽打印机的安装卸载操作
+	//if(GetSystemBits() == 32 && !bInstalled) then
+	//	debugLog("UCSetup:AfterInstall:32 bit system and install now, so install virtual printer");
+		//安装打印机
+	//	nBuffer = 256; // reset size buffer 
+	//	MsiGetProperty(hMSI, "INSTALLDIR", szInstallDir, nBuffer); 
+	//	debugLog(szInstallDir);
+	//	szPrinterPath = szInstallDir ^ "GVPrinter.exe";
+	//	debugLog(szPrinterPath);
+	//	szValueBuf = "i GnetPrinter";
+	//	LaunchAppAndWait(szPrinterPath, szValueBuf, WAIT);	
+	//endif;
+	
+	debugLog("UCSetup:AfterInstall:before PostInt(1, 100)");
+	//MessageBox("111", INFORMATION);
+	PostInt(1, 100);
+	debugLog("UCSetup:AfterInstall:after PostInt(1, 100)");
+	//MessageBox("222", INFORMATION);mm
+	//WaitEvent(3000);	
+	UnUseDLL(szDll);
+	
+	//AddShortCutIcon(hMSI);
+	
+end;
+
+function AddShortCutIcon(hMSI)
+
+	STRING szProgramFolder, szCommandLine, szItemName, szWorkingDir, szIconPath, szShortCutKey;
+	NUMBER nIcon, nFlag, nResult;
+
+begin
+
+	szProgramFolder = WINDIR ^ "msiexec.exe";
+    szCommandLine = "/x {37255CD4-BFF5-4192-AADF-1289427C36B5}";
+    
+    szItemName = "testUCName";
+    szWorkingDir  = "";
+    szIconPath    = "";
+    nIcon         = 0;
+    szShortCutKey = "";
+    nFlag         = REPLACE|RUN_MAXIMIZED;
+	
+	nResult = AddFolderIcon (szProgramFolder, 
+							szItemName, 
+							szCommandLine,
+                            szWorkingDir, 
+                            szIconPath, 
+                            nIcon,
+                            szShortCutKey, 
+                            nFlag);
+
+end;
+
+
+
+function Percent10(hMSI)
+	
+	NUMBER nBuffer;
+	STRING strSupDir, szValueBuf, strUIExe;
+	
+	STRING szPath, szRegName, szReturn, szDll, szZipPath;
+	NUMBER nValue, nRet, nRegString;
+	STRING szInstallDir, szPrinterPath;
+	BOOL bInstalled;
+	   
+begin
+
+		
+	//获取MsiUI.exe的路径
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "OriginalDatabase", szValueBuf, nBuffer);
+	
+	strUIExe = strSupDir ^ "Setup.exe";	
+	szDll = strSupDir ^ "MsiDll.dll";
+	UseDLL(szDll);
+	
+	bInstalled = CheckInstalled();
+	if(bInstalled) then
+		debugLog("UCSetup:Percent10:now unload");
+	else
+		debugLog("UCSetup:Percent10:now install");
+	endif;
+	
+	//暂时屏蔽打印机的安装卸载操作
+	//if(GetSystemBits() == 32 && bInstalled) then
+	//	debugLog("UCSetup:Percent10:32 bit system and unload now , so unload virtual printer");
+		//卸载打印机
+	//	nBuffer = 256; // reset size buffer 
+	//	MsiGetProperty(hMSI, "INSTALLDIR", szInstallDir, nBuffer); 
+	//	debugLog(szInstallDir);
+	//	szPrinterPath = szInstallDir ^ "GVPrinter.exe";
+	//	debugLog(szPrinterPath);
+	//	szValueBuf = "u GnetPrinter";
+	//	LaunchAppAndWait(szPrinterPath, szValueBuf, WAIT);	
+	//endif;
+	
+	//MessageBox("send" ,INFORMATION);
+	debugLog("UCSetup:Percent10:before PostInt(1, 10)");
+	PostInt(1, 10);
+	debugLog("UCSetup:Percent10:after PostInt(1, 10)");
+	//MessageBox("send end" ,INFORMATION);
+	UnUseDLL(szDll);
+end;
+
+
+function Percent20(hMSI)
+	
+	NUMBER nBuffer;
+	STRING strSupDir, szValueBuf, strUIExe;
+	
+	STRING szPath, szRegName, szReturn, szDll, szZipPath;
+	NUMBER nValue, nRet, nRegString;
+	   
+begin
+
+		
+	//获取MsiUI.exe的路径
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "OriginalDatabase", szValueBuf, nBuffer);
+	
+	strUIExe = strSupDir ^ "Setup.exe";	
+	szDll = strSupDir ^ "MsiDll.dll";
+	
+	UseDLL(szDll);
+	debugLog("UCSetup:Percent20:before PostInt(1, 20)");
+	PostInt(1, 20);
+	debugLog("UCSetup:Percent20:after PostInt(1, 20)");	
+	UnUseDLL(szDll);
+end;
+
+function Percent50(hMSI)
+	
+	NUMBER nBuffer;
+	STRING strSupDir, szValueBuf, strUIExe;
+	
+	STRING szPath, szRegName, szReturn, szDll, szZipPath;
+	NUMBER nValue, nRet, nRegString;
+	   
+begin
+
+		
+	//获取MsiUI.exe的路径
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "OriginalDatabase", szValueBuf, nBuffer);
+	
+	strUIExe = strSupDir ^ "Setup.exe";	
+	szDll = strSupDir ^ "MsiDll.dll";
+	
+	UseDLL(szDll);
+	debugLog("UCSetup:Percent50:before PostInt(1, 50)");
+	PostInt(1, 50);
+	debugLog("UCSetup:Percent50:after PostInt(1, 50)");	
+	UnUseDLL(szDll);
+end;
+
+function Percent80(hMSI)
+	
+	NUMBER nBuffer;
+	STRING strSupDir, szValueBuf, strUIExe;
+	
+	STRING szPath, szRegName, szReturn, szDll, szZipPath;
+	NUMBER nValue, nRet, nRegString;
+	   
+begin
+
+		
+	//获取MsiUI.exe的路径
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "OriginalDatabase", szValueBuf, nBuffer);
+	
+	strUIExe = strSupDir ^ "Setup.exe";	
+	szDll = strSupDir ^ "MsiDll.dll";
+	
+	UseDLL(szDll);
+	debugLog("UCSetup:Percent80:before PostInt(1, 80)");	
+	PostInt(1, 80);
+	debugLog("UCSetup:Percent80:after PostInt(1, 80)");		
+	UnUseDLL(szDll);
+end;
+
+function SetRuntimeProperty(hMSI) 
+    STRING szRuntimeDestination ;
+    NUMBER nCnt;
+    NUMBER nBuffer;
+    STRING svPropvalue;
+    STRING strSupDir, szDll, szValueBuf, strUIExe;
+    STRING szInstallDir;
+begin
+    //(or path of your choice)
+    	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "SUPPORTDIR", strSupDir, nBuffer);
+	
+	nBuffer = MAX_PATH;
+	MsiGetProperty(hMSI, "OriginalDatabase", szValueBuf, nBuffer);
+	szDll = strSupDir ^ "MsiDll.dll";
+	
+	UseDLL(szDll);
+	debugLog("UCSetup:SetRuntimeProperty:before getInstallDir()");	
+	getInstallDir(szInstallDir);
+	debugLog("UCSetup:SetRuntimeProperty:after getInstallDir()");
+	debugLog(szInstallDir);
+    MsiSetProperty(hMSI,"INSTALLDIR",szInstallDir);
+    nBuffer = 256; // reset size buffer 
+    MsiGetProperty(hMSI, "INSTALLDIR", svPropvalue, nBuffer); 
+	debugLog(svPropvalue);	
+	UnUseDLL(szDll);
+	
+	//FeatureSetTarget(MEDIA, "<INSTALLDIR>", "C:\\test");
+    //nCnt = 500;  
+    //szRuntimeDestination = "C:\\Kevin Wan";
+	//
+    //MsiSetProperty(hMSI,"NEW_DIRECTORY1",szRuntimeDestination);
+end;

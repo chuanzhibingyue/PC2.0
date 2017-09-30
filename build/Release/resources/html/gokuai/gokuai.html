@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/vendor-bundle.css"/>
+    <link rel="stylesheet" href="styles/index-bundle.css"/>
+</head>
+<body id="indexPage" ng-controller="initCtrl" ng-class="{'network_unconnected':!PAGE_CONFIG.networkConnected}"  ng-click="bodyClick($event)" disable-backspace disable-context-menu hide-context-menu>
+    <div ui-view class="main-container" style="overflow: hidden;position: absolute;top:0;left:0;right:0;bottom:0;"></div>
+    <script src="scripts/vendor-bundle.js"></script>
+    <script src="scripts/index-bundle.js"></script>
+</body>
+</html>

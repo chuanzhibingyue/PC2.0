@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/proxyAuthenticate.css">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/proxyAuthenticate.js"></script>
+</head>
+<body>
+<div class="container child-window-shadow">
+    <div class="title">{{Proxy.ProxyAuthenticate}}</div>
+    <div class="auth-result"></div>
+    <div class="input-container">
+        <input type="text" class="input account" placeholder={{Proxy.AccountPlaceHolder}} autofocus>
+        <input type="password" class="input password" placeholder={{Proxy.PasswordPlaceHolder}}>
+    </div>
+    <div class="btn-container">
+        <span class="btn btn-dark ok">{{Common.OK}}</span>
+        <span class="btn btn-gray cancel">{{Common.Cancel}}</span>
+    </div>
+    <div class="tool-icon-container">
+        <span class="icon-close tool-icon"></span>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\AccountInfo.h" />
+    <ClInclude Include="..\..\..\..\include\AppInfo.h" />
+    <ClInclude Include="..\..\..\..\include\base\HTTPRequest.h" />
+    <ClInclude Include="..\..\..\..\include\base\HTTPRequestCallback.h" />
+    <ClInclude Include="..\..\..\..\include\base\HTTPRequestEvent.h" />
+    <ClInclude Include="..\..\..\..\include\base\HTTPResponse.h" />
+    <ClInclude Include="..\..\..\..\include\base\Timer.h" />
+    <ClInclude Include="..\..\..\..\include\CalendarData.h" />
+    <ClInclude Include="..\..\..\..\include\ContactInfo.h" />
+    <ClInclude Include="..\..\..\..\include\ContactTag.h" />
+    <ClInclude Include="..\..\..\..\include\ConversationInfo.h" />
+    <ClInclude Include="..\..\..\..\include\DepartmentInfo.h" />
+    <ClInclude Include="..\..\..\..\include\DocumentInfo.h" />
+    <ClInclude Include="..\..\..\..\include\ExternalInfo.h" />
+    <ClInclude Include="..\..\..\..\include\GroupInfo.h" />
+    <ClInclude Include="..\..\..\..\include\IBBSService.h" />
+    <ClInclude Include="..\..\..\..\include\IAudioService.h" />
+    <ClInclude Include="..\..\..\..\include\ICalendarService.h" />
+    <ClInclude Include="..\..\..\..\include\IClientService.h" />
+    <ClInclude Include="..\..\..\..\include\IContactService.h" />
+    <ClInclude Include="..\..\..\..\include\IExternalService.h" />
+    <ClInclude Include="..\..\..\..\include\IFileTransferService.h" />
+    <ClInclude Include="..\..\..\..\include\IGroupService.h" />
+    <ClInclude Include="..\..\..\..\include\IIMService.h" />
+    <ClInclude Include="..\..\..\..\include\IMicroblogService.h" />
+    <ClInclude Include="..\..\..\..\include\IOpenApiService.h" />
+    <ClInclude Include="..\..\..\..\include\IPbxService.h" />
+    <ClInclude Include="..\..\..\..\include\ISearchService.h" />
+    <ClInclude Include="..\..\..\..\include\ISharingService.h" />
+    <ClInclude Include="..\..\..\..\include\IUCEngine.h" />
+    <ClInclude Include="..\..\..\..\include\IVideoService.h" />
+    <ClInclude Include="..\..\..\..\include\MessageInfo.h" />
+    <ClInclude Include="..\..\..\..\include\MessageReadInfo.h" />
+    <ClInclude Include="..\..\..\..\include\UCErrorCode.h" />
+    <ClInclude Include="..\..\..\..\include\UCSDK.h" />
+    <ClInclude Include="..\..\..\..\src\common\CommonDef.h" />
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\AudioServiceSink.h" />
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\ConferenceDef.h" />
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\ConferenceSink.h" />
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\ConferenceWrapper.h" />
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\SharingServiceSink.h" />
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\TangUser.h" />
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\VideoServiceSink.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\AccountDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\AppDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\ConferenceDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\ConfigDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\ContactDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\ConversationDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\CppSQLite3.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\DBManager.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\DBManagerDef.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\DBUpgrade.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\ExternalDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\FileTransferDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\GroupDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\KeyValueDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\MessageDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\PbxDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\ProxyInfoDao.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\SQLConfig.h" />
+    <ClInclude Include="..\..\..\..\src\components\db\include\SQLiteManager.h" />
+    <ClInclude Include="..\..\..\..\src\components\network\HTTPHandler.h" />
+    <ClInclude Include="..\..\..\..\src\components\network\NetworkManager.h" />
+    <ClInclude Include="..\..\..\..\src\components\network\MessageQueue.h" />
+    <ClInclude Include="..\..\..\..\src\components\network\QueuedNetWorkManager.h" />
+    <ClInclude Include="..\..\..\..\src\components\network\TaskExecutorCallback.h" />
+    <ClInclude Include="..\..\..\..\src\components\network\UCASConnection.h" />
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\AppMessageType.h" />
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\MessageParser.h" />
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\MessageStream.h" />
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\UCMessage.h" />
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\UCMessageType.h" />
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\UCParserDef.h" />
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\UCParserErrorCode.h" />
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\uc_types.h" />
+    <ClInclude Include="..\..\..\..\src\services\audio_service\AudioService.h" />
+    <ClInclude Include="..\..\..\..\src\services\audio_service\CallDef.h" />
+    <ClInclude Include="..\..\..\..\src\services\audio_service\CallRequestAssist.h" />
+    <ClInclude Include="..\..\..\..\src\services\audio_service\CallResponseAssist.h" />
+    <ClInclude Include="..\..\..\..\src\services\audio_service\ConferenceLibraryAssist.h" />
+    <ClInclude Include="..\..\..\..\src\services\bbs_service\BBSService.h" />
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\CalendarMsgProcessor.h" />
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\CalendarRequestFactory.h" />
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\CalendarService.h" />
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\ICalendarParser\date.h" />
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\ICalendarParser\element.h" />
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\ICalendarParser\icalendar.h" />
+    <ClInclude Include="..\..\..\..\src\services\client_service\ClientService.h" />
+    <ClInclude Include="..\..\..\..\src\services\client_service\ConversationInfoInternal.h" />
+    <ClInclude Include="..\..\..\..\src\services\client_service\IBee2MeetingPlugin.h" />
+    <ClInclude Include="..\..\..\..\src\services\client_service\LoginInfo.h" />
+    <ClInclude Include="..\..\..\..\src\services\client_service\PasswordRule.h" />
+    <ClInclude Include="..\..\..\..\src\services\client_service\ProxyInfo.h" />
+    <ClInclude Include="..\..\..\..\src\services\client_service\ServerInfo.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactEventDispatcher.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactInfoImpl.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactMsgProcessor.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactRequestFactory.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactResponseParser.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactService.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\contact_cache\ContactCache.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\contact_cache\ContactCacheListener.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\contact_cache\ContactDelayLoader.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\contact_cache\RegularUpdatedCache.h" />
+    <ClInclude Include="..\..\..\..\src\services\contact_service\DefaultContactEventDispatcher.h" />
+    <ClInclude Include="..\..\..\..\src\services\external_service\ExternalService.h" />
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\FileHelp.hpp" />
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\FileTransferService.h" />
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\FSDef.h" />
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\FSRequestAssist.h" />
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\FSResponseAssist.h" />
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\ResidentThread.hpp" />
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\Task.h" />
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\UCFile.h" />
+    <ClInclude Include="..\..\..\..\src\services\message_service\GroupService.h" />
+    <ClInclude Include="..\..\..\..\src\services\message_service\IMService.h" />
+    <ClInclude Include="..\..\..\..\src\services\message_service\MessageProcessor.h" />
+    <ClInclude Include="..\..\..\..\src\services\microblog_service\MicroblogService.h" />
+    <ClInclude Include="..\..\..\..\src\services\openapi_service\OpenApiService.h" />
+    <ClInclude Include="..\..\..\..\src\services\pbx_service\PbxErrorCode.h" />
+    <ClInclude Include="..\..\..\..\src\services\pbx_service\PbxService.h" />
+    <ClInclude Include="..\..\..\..\src\services\pbx_service\TasksMgr.h" />
+    <ClInclude Include="..\..\..\..\src\services\search_service\SearchService.h" />
+    <ClInclude Include="..\..\..\..\src\services\sharing_service\SharingService.h" />
+    <ClInclude Include="..\..\..\..\src\services\store_service\ConversationStore.h" />
+    <ClInclude Include="..\..\..\..\src\services\store_service\GroupListStore.h" />
+    <ClInclude Include="..\..\..\..\src\services\store_service\MessageReadStore.h" />
+    <ClInclude Include="..\..\..\..\src\services\store_service\MessageStore.h" />
+    <ClInclude Include="..\..\..\..\src\services\store_service\StoreService.h" />
+    <ClInclude Include="..\..\..\..\src\services\video_service\VideoService.h" />
+    <ClInclude Include="..\..\..\..\src\UCEngine.h" />
+    <ClInclude Include="..\..\..\..\src\utils\CrypWrapper.h" />
+    <ClInclude Include="..\..\..\..\src\utils\HTTPResponseAssist.h" />
+    <ClInclude Include="..\..\..\..\src\utils\jsonhelper.h" />
+    <ClInclude Include="..\..\..\..\src\utils\Macro.h" />
+    <ClInclude Include="..\..\..\..\src\utils\md5\md5.h" />
+    <ClInclude Include="..\..\..\..\src\utils\TaskExecutor.h" />
+    <ClInclude Include="..\..\..\..\src\utils\ThreadPool.h" />
+    <ClInclude Include="..\..\..\..\src\utils\UCTime.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\AudioServiceSink.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\ConferenceSink.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\ConferenceWrapper.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\SharingServiceSink.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\TangUser.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\VideoServiceSink.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\AccountDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\AppDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\ConferenceDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\ConfigDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\ContactDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\ConversationDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\CppSQLite3.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\DBManager.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\DBUpgrade.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\ExternalDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\FileTransferDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\GroupDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\KeyValueDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\MessageDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\PbxDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\ProxyInfoDao.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\db\src\SQLiteManager.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\network\HTTPHandler.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\network\HTTPRequest.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\network\HTTPRequestEvent.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\network\HTTPResponse.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\network\MessageQueue.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\network\NetworkManager.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\network\QueuedNetWorkManager.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\network\UCASConnection.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\AppMessageType.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\MessageParser.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\MessageStream.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\UCMessage.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\UCMessageType.cpp" />
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\uc_types.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\audio_service\AudioService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\audio_service\CallRequestAssist.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\audio_service\CallResponseAssist.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\audio_service\ConferenceLibraryAssist.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\bbs_service\BBSService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\CalendarMsgProcessor.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\CalendarRequestFactory.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\CalendarService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\ICalendarParser\date.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\ICalendarParser\element.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\ICalendarParser\icalendar.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\client_service\ClientService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\client_service\LoginInfo.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\client_service\ServerInfo.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactEventDispatcher.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactInfo.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactInfoImpl.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactMsgProcessor.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactRequestFactory.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactResponseParser.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactTag.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\contact_cache\ContactDelayLoader.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\contact_cache\RegularUpdatedCache.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\contact_service\DefaultContactEventDispatcher.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\external_service\ExternalService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\filetransfer_service\FileTransferService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\filetransfer_service\FSRequestAssist.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\filetransfer_service\FSResponseAssist.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\filetransfer_service\Task.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\filetransfer_service\UCFile.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\message_service\DocumentInfo.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\message_service\GroupInfo.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\message_service\GroupService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\message_service\GroupServiceNotify.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\message_service\GroupServiceRequest.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\message_service\GroupServiceResponse.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\message_service\IMService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\message_service\MessageInfo.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\message_service\MessageProcessor.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\microblog_service\MicroblogService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\openapi_service\OpenApiService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\pbx_service\PbxService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\search_service\SearchService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\sharing_service\SharingService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\store_service\ConversationStore.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\store_service\GroupListStore.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\store_service\MessageReadStore.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\store_service\MessageStore.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\store_service\StoreService.cpp" />
+    <ClCompile Include="..\..\..\..\src\services\video_service\VideoService.cpp" />
+    <ClCompile Include="..\..\..\..\src\UCEngine.cpp" />
+    <ClCompile Include="..\..\..\..\src\utils\CrypWrapper.cpp" />
+    <ClCompile Include="..\..\..\..\src\utils\HTTPResponseAssist.cpp" />
+    <ClCompile Include="..\..\..\..\src\utils\md5\md5.cpp" />
+    <ClCompile Include="..\..\..\..\src\utils\TaskExecutor.cpp" />
+    <ClCompile Include="..\..\..\..\src\utils\ThreadPool.cpp" />
+    <ClCompile Include="..\..\..\..\src\utils\Timer.cpp" />
+    <ClCompile Include="..\..\..\..\test\unit_test\NetworkManagerTest.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C58F8AD0-6B98-41FD-9ADE-081227A92937}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UCSDK</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120_xp</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <OutDir>..\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;UC_EXPORTS;CURL_STATICLIB;GLOG_NO_ABBREVIATED_SEVERITIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\include;..\..\..\..\include\base;..\..\..\..\src\common;..\..\..\..\src\components;..\..\..\..\src\components\network;..\..\..\..\third_party\log_manager;..\..\..\..\third_party\curl\include;..\..\..\..\third_party\gtest\include;..\..\..\..\third_party;..\..\..\..\src\components\parser\msg_parser\include;..\..\..\..\third_party\thrift\include;..\..\..\..\src\utils;..\..\..\..\src\components\db\include;..\..\..\..\third_party\sqlite3\include;..\..\..\..\src\services;..\..\..\..\src;..\..\..\..\third_party\vld\include;..\..\..\..\third_party\boost\include;..\..\..\..\third_party\tang\include;..\..\..\..\third_party\common\include;..\..\..\..\third_party\rapidjson\include;..\..\..\..\third_party\easiio\include;..\..\..\..\third_party\CrypWrapper\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DisableSpecificWarnings>4819;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Bee2MeetingPlugin_d.lib;ws2_32.lib;wldap32.lib;libeay32.lib;ssleay32.lib;libcurl.lib;gtestd.lib;LogManager_d.lib;libthrift.lib;sqlite3.lib;zlib_d.lib;common.lib;cryptlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\third_party\pclib\debug;..\..\..\..\third_party\curl\lib\windows\x86;..\..\..\..\third_party\gtest\lib\windows\$(Configuration);..\..\..\..\third_party\boost\lib\windows;..\..\..\..\third_party\log_manager\lib\windows;..\..\..\..\third_party\thrift\lib\windows\$(Configuration);..\..\..\..\third_party\sqlite3\lib\windows;..\..\..\..\third_party\zlib\lib\windows;..\..\..\..\third_party\vld\lib\Win32;..\..\..\..\third_party\common\lib\windows\$(Configuration);..\..\..\..\third_party\easiio\lib;..\..\..\..\third_party/CrypWrapper/lib/windows/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy ..\..\..\..\third_party\google-glog\lib\windows\Debug\glog_d.dll $(OutDir)\glog_d.dll
+copy ..\..\..\..\third_party\zlib\lib\windows\zlib_d.dll $(OutDir)\zlib_d.dll
+copy ..\..\..\..\third_party\sqlite3\lib\windows\sqlite3.dll $(OutDir)\sqlite3.dll
+copy ..\..\..\..\third_party\log_manager\lib\windows\LogManager_d.dll $(OutDir)\LogManager_d.dll
+copy ..\..\..\..\third_party\common\lib\windows\$(Configuration)\common.dll $(OutDir)\common.dll
+copy ..\..\..\..\third_party\cert\oncloud2CA.pem $(OutDir)\oncloud2CA.pem
+copy ..\..\..\..\third_party\pclib\debug\Bee2MeetingPlugin_d.dll $(OutDir)\Bee2MeetingPlugin_d.dll
+copy ..\..\..\..\third_party\pclib\debug\Bee2MeetingPlugin.ini $(OutDir)\Bee2MeetingPlugin.ini
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;UC_EXPORTS;CURL_STATICLIB;GLOG_NO_ABBREVIATED_SEVERITIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\include;..\..\..\..\include\base;..\..\..\..\src\common;..\..\..\..\src\components;..\..\..\..\src\components\network;..\..\..\..\third_party\log_manager;..\..\..\..\third_party\curl\include;..\..\..\..\third_party\gtest\include;..\..\..\..\third_party;..\..\..\..\src\components\parser\msg_parser\include;..\..\..\..\third_party\thrift\include;..\..\..\..\src\utils;..\..\..\..\src\components\db\include;..\..\..\..\third_party\sqlite3\include;..\..\..\..\src\services;..\..\..\..\src;..\..\..\..\third_party\zlib\include;..\..\..\..\third_party\vld\include;..\..\..\..\third_party\boost\include;..\..\..\..\third_party\tang\include;..\..\..\..\third_party\common\include;..\..\..\..\third_party\rapidjson\include;..\..\..\..\third_party\easiio\include;..\..\..\..\third_party\CrypWrapper\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Bee2MeetingPlugin.lib;ws2_32.lib;wldap32.lib;libeay32.lib;ssleay32.lib;libcurl.lib;gtest.lib;LogManager.lib;libthrift.lib;sqlite3.lib;zlib.lib;zlib_d.lib;common.lib;cryptlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\third_party\curl\lib\windows\x86;..\..\..\..\third_party\gtest\lib\windows\$(Configuration);..\..\..\..\third_party\boost\lib\windows;..\..\..\..\third_party\log_manager\lib\windows;..\..\..\..\third_party\thrift\lib\windows\$(Configuration);..\..\..\..\third_party\sqlite3\lib\windows;..\..\..\..\third_party\pclib\release;..\..\..\..\third_party\zlib\lib\windows;..\..\..\..\third_party\vld\lib\Win32;..\..\..\..\third_party\common\lib\windows\$(Configuration);..\..\..\..\third_party\easiio\lib;..\..\..\..\third_party\CrypWrapper\lib\windows\$(Configuration)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent />
+    <PostBuildEvent>
+      <Command>copy ..\..\..\..\third_party\google-glog\lib\windows\release\glog.dll $(OutDir)\glog.dll
+copy ..\..\..\..\third_party\zlib\lib\windows\zlib.dll $(OutDir)\zlib.dll
+copy ..\..\..\..\third_party\sqlite3\lib\windows\sqlite3.dll $(OutDir)\sqlite3.dll
+copy ..\..\..\..\third_party\log_manager\lib\windows\LogManager.dll $(OutDir)\LogManager.dll
+copy ..\..\..\..\third_party\common\lib\windows\$(Configuration)\common.dll $(OutDir)\common.dll
+copy ..\..\..\..\third_party\cert\oncloud2CA.pem $(OutDir)\oncloud2CA.pem
+copy ..\..\..\..\third_party\pclib\release\Bee2MeetingPlugin.dll $(OutDir)\Bee2MeetingPlugin.dll
+copy ..\..\..\..\third_party\pclib\release\Bee2MeetingPlugin.ini $(OutDir)\Bee2MeetingPlugin.ini</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

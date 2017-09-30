@@ -1,0 +1,778 @@
+
+#pbxPanel {
+	width: 100%;
+}
+
+.pbx {
+	font-size: 12px;
+}
+
+.pbx-panel {
+	color: #3b4f61;
+}
+.pbx .fontRed{
+    color: #ff0000 !important;
+
+}
+.sub-menu-panel .pbx-search-container {
+	padding-top: 11px;
+	height: 38px;
+	border-bottom: 1px solid #f5f5f5;
+    text-align: center;
+}
+.panel-item {
+	position:absolute;
+	width: 300px;
+	top: 92px;
+	left:60px;
+	right:0px;
+	bottom:4px;
+	overflow-x:scroll;
+	overflow-y:scroll;
+}
+.pbx-back{
+    height: 50px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ededed;
+}
+.pbx-back a{
+    display: inline-block;
+    height:50px;
+    line-height:50px;
+    overflow:hidden;
+}
+.pbx .pbx-list-container{
+    position: absolute;
+    top: 51px;
+    bottom: 3px;
+    width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.pbx-back .pbx-back_icon{
+    color: #C3C3C3;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.pbx-back .pbx-back_font{
+    color: #3b4f61;
+    font-size: 14px;
+}
+.pbx .call-toolbar-btn {
+    font-size: 20px;
+}
+.pbx .pbx-dial-btn{
+    position: fixed;
+    bottom:38px;
+    left:305px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffcc00;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0px 18px rgba(0, 0, 0, 0.1);
+}
+.pbx .pbx-dial-btn:hover{
+    background-color: #ffe066;
+    box-shadow: 0 0px 18px rgba(0, 0, 0, 0.1);
+}
+.pbx .pbx-dialPanel{
+    position: fixed;
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    bottom:15px;
+    height: 380px;
+    width: 300px;
+    z-index: 10;
+    background: #ffffff;
+}
+.pbx .pbx-dial-out-panel{
+    width: 260px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.pbx .pbx-dial-input-panel{
+    width: 260px;
+    border: 1px solid #EDEDED;
+    border-radius: 2px;
+    height: 30px;
+}
+.pbx .focus {
+    border:  1px solid #ffcc00;
+    cursor: default;
+}
+.pbx .pbx-input{
+    border: 0px;
+    outline:none;
+    border-left: 1px solid #EDEDED;
+    padding-left: 8px;
+
+}
+.pbx .pbx-dial-input-panel a{
+    height: 25px;
+    line-height: 30px;
+    overflow: hidden;
+    display: inline-block;
+}
+.pbx .pbx-code{
+    width: 100%;
+    padding-left: 5px;
+    max-width: 58px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    color: #173553;
+}
+.pbx .pbx-icon-panel{
+    width: 18px;
+    display: inline-block;
+}
+.pbx .pbx-input-parent {
+    float: right;
+    width: 180px;
+}
+.pbx .pbx-hide{
+    position: absolute;
+    top: 7px;
+    left:26px;
+}
+.pbx .pbx-icon{
+    position: absolute;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #000000;
+    top: 24px;
+    cursor: pointer;
+    left: 80px;
+}
+.pbx .pbx-code-list li{
+    width: 100%;
+    margin-top: 4px;
+}
+.pbx .pbx-code-list-panel{
+    display: none;
+    width: 160px;
+    height: 150px;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0px 1px 4px #858585;
+    top:44px;
+    left:21px;
+    background-color: #ffffff;
+}
+.pbx .pbx-code-list{
+    width: 153px;
+    height: 140px;
+    margin: 5px;
+    background-color: #ffffff;
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+
+.pbx .pbx-code-list .codeName{
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pbx .pbx-code-list .code{
+    margin-right: 10px;
+    float: right;
+}
+.pbx .pbx-code-list .icon-call_singleSelected{
+    margin-right: 5px;
+}
+.pbx .pbx-code-list li:hover{
+    color: #fff;
+    background-color: #4f667b;
+    cursor: pointer;
+}
+.pbx .pbx-tel-num{
+    width: 266px;
+    margin: 0 auto;
+    height: 260px;
+}
+.pbx .pbx-tel-num ul li{
+    width: 88px;
+    height: 65px;
+    margin: 0 auto;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    float: left;
+}
+.pbx .pbx-tel-num  ul li a{
+    width: 40px;
+    display:block;
+    text-decoration:none;
+    color:#173553;
+    border-radius: 50%;
+    border: 1px solid #dadada;
+    margin: 0 auto;
+    /*box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);*/
+}
+.pbx .pbx-tel-num  ul li a:hover{
+    color: #fff;
+    background-color: #173553;
+}
+.pbx .pbx-call{
+    text-align: center;
+    width: 100%;
+}
+.pbx .pbx-call a{
+     display: inline-block;
+     color: #ffffff;
+     border: none;
+     background-color: #4cd964;
+     width: 80px;
+     height: 40px;
+     border-radius: 18px;
+     outline: none;
+     cursor: pointer;
+     font-size: 14px;
+     line-height: 40px;
+     text-align: center;
+     text-decoration: none;
+ }
+.pbx .pbx-call .icon-call_phoneVideo{
+    font-size: 25px;
+}
+.pbx .pbx-call a:hover{
+    background-color: #5edc73;
+}
+.pbx .pbx-call a:active{
+    background-color: #44c259;
+}
+.pbx .pbx-tel .icon-call_phoneVideo{
+    position: relative;
+    font-size: 14px;
+    color: #ffffff;
+    left: -156px;
+    top: 0px;
+    cursor: pointer;
+}
+.pbx-detail-head{
+    text-align: center;
+}
+.pbx .pbx-avatar{
+    height: 100px;
+    overflow: hidden;
+    text-align: center;
+}
+.pbx .pbx-avatar img{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+.pbx .pbx-title{
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    width: auto;
+}
+.pbx .pbx-tel {
+    text-align: center;
+}
+.pbx .pbx-tel div{
+    height: 40px;
+    line-height: 40px;
+}
+.pbx .pbx-tel a{
+    display: inline-block;
+    /*margin-bottom: 20px;*/
+    height: 28px;
+    background-color: #4cd964;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 100px;
+    width: 170px;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+}
+.pbx .pbx-tel a:hover{
+    background-color: #5edc73;
+}
+.pbx .pbx-tel a:active{
+    background-color: #44c259;
+}
+.pbx .clear{
+    clear: both;
+}
+.pbx .call-title{
+    text-align: center;
+    position: relative;
+}
+.pbx .pbx-call-left-line{
+    width: 90%;
+    display: inline-block;
+    border-top:1px solid #EDEDED ;
+}
+.pbx .pbx-call-title-text{
+    display: inline-block;
+    width: 75px;
+    font-size: 14px;
+    color: #173553;
+    text-align: center;
+    height: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 4px;
+    left:70px
+}
+.pbx .pbx-call-history-panel{
+    /*position: absolute;*/
+    /*top:370px;*/
+    right: 2px;
+    /*left: 362px;*/
+    bottom: 10px;
+    /*min-width: 490px;*/
+    /*overflow-y: auto;*/
+    /*overflow-x: hidden;*/
+    /*margin-top: 10px;*/
+    /*height: 250px;*/
+    margin-top: 15px;
+    flex: 1;
+    overflow-y: auto;
+    position: relative;
+    overflow-x: hidden;
+}
+.pbx .pbx-call-history{
+    border-left: 1px solid #EDEDED;
+    width: 100%;
+    margin-left: 100px;
+    margin-top: 10px;
+    position: absolute;
+
+}
+.pbx .pbx-call-history  ul{
+    margin-left: 15px;
+}
+.pbx .pbx-call-history ul .li-text{
+    height: 40px;
+    line-height: 40px;
+}
+.pbx .li-title{
+    color: #777777;
+    height: 30px;
+}
+.pbx .round{
+    width: 6px;
+    height: 6px;
+    background: #ADADAD;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    left: -3px;
+    margin-top: 7px;
+}
+.pbx .font14{
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 7px;
+    margin-left: 12px;
+}
+.pbx .pbx-cal-btn-text{
+    position: absolute;
+    display: inline-block;
+    top:0px;
+    left:62px;
+}
+.pbx .pbx-cal-btn-text-tel{
+    position: absolute;
+    display: inline-block;
+    top:0px;
+    left:50px;
+}
+.pbx .pbx-dial-icon-search-del{
+    width: 8px;
+    height: 8px;
+    padding: 6px;
+    background: url("../images/contacts/search_delete.png") center center no-repeat;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 16px;
+    right: 21px;
+}
+
+.pbx .pbx-dial-icon-search-del:hover {
+    background: url("../images/contacts/search_delete_hover.png") center center no-repeat;
+}
+.pbx .call-dmz-dial{
+    display: none;
+    /*position: absolute;*/
+    /*left:86px;*/
+    /*bottom: 150px;*/
+    width: 264px;
+    background-color: #ffffff;
+    height: 272px;
+    border-radius: 4px;
+}
+.pbx .pbx-dmz-dialPanel{
+    margin-top: 5px;
+}
+.pbx .pbx-dmz-tel-num{
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+.pbx .call-dmz-dial ul li{
+    width: 85px;
+    height: 54px;
+    margin: 0 auto;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    float: left;
+}
+.pbx .call-dmz-dial  ul li a{
+    width: 40px;
+    display:block;
+    text-decoration:none;
+    color:#173553;
+    border-radius: 50%;
+    border: 1px solid #dadada;
+    margin: 0 auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.pbx .call-dmz-dial  ul li a:hover{
+    color: #fff;
+    background-color: #173553;
+}
+.pbx .pbx-dmz-input{
+    padding:2px ;
+    width: 200px;
+    height: 21px;
+    border: 1px solid #F9F8F8;
+    outline: none;
+}
+.pbx .focus {
+    border:  1px solid #ffcc00;
+    cursor: default;
+}
+.pbx .call-dmz-dial .triangle{
+    position: absolute;
+    bottom: -8px;
+    left:196px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #fff;
+}
+.pbx .pbx-dial-dmz-icon-search-del{
+    width: 8px;
+    height: 8px;
+    padding: 6px;
+    background: url("../images/contacts/search_delete.png") center center no-repeat;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 16px;
+    right: 32px;
+}
+
+.pbx .pbx-dial-dmz-icon-search-del:hover {
+    background: url("../images/contacts/search_delete_hover.png") center center no-repeat;
+}
+/*****************************pbx search*******************************************/
+.pbx .pxb-loading{
+    height: 30px;
+    line-height: 30px;
+}
+.pbx .pbx-loading-img{
+    float:left;
+    margin-right:3px;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+.pbx .pbx-search-panel {
+    font-size: 16px;
+    border: 1px solid #dadada;
+    width: 260px;
+    /*margin-left: 20px;*/
+    border-radius: 2px;
+    height: 26px;
+    line-height: 26px;
+    display: inline-block;
+    background-color: #ededed;
+    cursor: pointer;
+    overflow: hidden;
+}
+.pbx .pbx-search-panel:hover{
+    background-color: white;
+}
+
+.pbx .pbx-search-panel .icon-search {
+    color: #c3c3c3;
+    font-size: 12px;
+    margin-left: -15px;
+}
+.pbx .pbx-search-panel .icon-search-del {
+    width: 8px;
+    height: 8px;
+    padding: 6px;
+    background: url("../images/contacts/search_delete.png") center center no-repeat;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+}
+
+.pbx .pbx-search-panel  .icon-search-del:hover {
+    background: url("../images/contacts/search_delete_hover.png") center center no-repeat;
+}
+
+.pbx .pbx-search-panel  .search-input {
+    border: none;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    width: 0px;
+    outline: none;
+    color: #173553;
+    margin-left: 4px;
+    transition: none;
+}
+
+.pbx .focus-line{
+    text-align: inherit;
+    background-color: white;
+    border-color: #ffcc00;
+    cursor: default;
+}
+
+.pbx .focus-line .search-input{
+    animation: pbxshowInput 0.5s;
+    width: 205px;
+}
+
+.pbx .focus-line .icon-search{
+    animation: gopbxLeft 0.5s;
+}
+
+@-webkit-keyframes pbxshowInput{
+    from{width: 0px;}
+    to{width: 205px;}
+}
+
+@-webkit-keyframes gopbxLeft{
+    from{margin-left: 120px;}
+    to{margin-left: -15px;}
+}
+.pbx .pbx-search-content{
+    display: none;
+    left:60px;
+    top:51px;
+    background-color: #fff;
+    height: 450px;
+    /*min-height: 300px;*/
+    color: #173553;
+    background: #fff;
+    overflow-x: hidden;
+    z-index: 3;
+    position: absolute;
+    width: 300px;
+    overflow-y: auto;
+}
+.pbx .default-search-tel{
+    display: none;
+    cursor: pointer;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 11px 0 15px 10px;
+    cursor: pointer;
+}
+.pbx .default-search-tel:hover{
+    background-color: #fffff3;
+}
+.pbx .bread-crumb {
+    font-size: 12px;
+    text-align: left;
+    padding: 3px 20px;
+    color: #173553;
+}
+.pbx .bread-crumb-contact {
+    font-size: 12px;
+    text-align: center;
+    padding: 3px 20px;
+    color: #173553;
+    background-color: #f7f7f7;
+}
+.pbx .bread-crumb-right {
+    text-align: left;
+}
+.pbx .pbx-search-content li {
+    height: 60px;
+}
+.pbx .pbx-search-content .contact-widget-container .left {
+    float: left;
+    padding-left: 9px;
+    line-height: 60px;
+    padding-right: 15px;
+    padding-top: 7px;
+}
+.pbx .pbx-search-content li .contact-item {
+    padding: 0 10px;
+}
+.pbx .pbx-search-content li.active {
+    background-color: #fffee1;
+}
+.pbx .view-more-search-result {
+    cursor: pointer;
+}
+.pbx .bread-crumb-center {
+    width: 130px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.pbx .pbx-contact-search-result{
+    /*overflow-x: hidden;*/
+    /*z-index: 3;*/
+    /*width: 300px;*/
+    /*height: 100%;*/
+    /*overflow-y: auto;*/
+}
+.pbx .pbx-contact-search-result li{
+    position: relative;
+}
+
+.pbx .empty-result {
+    background-image: url(../images/search/no-result.png);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 240px;
+}
+.pbx .contact-tel{
+    position: absolute;
+    top:16px;
+    left:239px;
+    display: inline-block;
+    width: 33px;
+    height: 32px;
+    background-image: url(../images/call/call_hover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.pbx .pbx-search-tel-list{
+    width: 130px;
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    border-radius: 4px;
+    padding: 3px;
+    z-index: 1000;
+    text-align: center;
+}
+.pbx .pbx-search-tel-list div{
+    line-height: 30px;
+    height: 30px;
+}
+.pbx .pbx-search-tel-list div:hover{
+    cursor: pointer;
+    background-color: #4f667b;
+    color: #fff;
+    border-radius: 2px;
+}
+.pbx .pbx-search-call-pbx2{
+    display: none;
+}
+.pbx .contact-item .left  .avatar{
+    width: 40px;
+    height: 40px;
+}
+.pbx .contact-item {
+    padding-left: 0px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+/**************************************End**************************************/
+.pbx .callIcon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #008000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+    margin-left: 20px;
+}
+.pbx .default-search-tel .tel{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    margin-left: 10px;
+    background-color: #ffff00;
+    border-radius: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.pbx .pbx-content-flex{
+    display: flex;
+    flex-direction: column;
+}
+.pbx .pbx-contact-display-name{
+    padding-right: 10px;
+    width: auto;
+    font-size: 14px;
+    display: inline-block;
+    max-width: 160px;
+}
+.pbx .contact-description {
+    color: #999;
+    font-size: 12px;
+    margin-right: 6px;
+    display: inline-block;
+}
+.pbx .pbx-contact-department {
+    max-width: 200px;
+    padding-right: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    color:#666;
+}
+
+.pbx .pbx-contact-position{
+    width: 40px;
+    /*display: inline-block;*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #666;
+    padding-left: 5px;
+}
+.pbx .sub-menu-panel .list-with-avatar-and-info .list-item.conversation-item .title{
+    display: inline-block;
+    max-width: 165px !important;
+    height: 18px;
+    font-size: 14px !important;
+    color: #000000 !important;
+}
+.keywordPbxText{
+    background: #fbf9aa;
+    color: #666666;
+}

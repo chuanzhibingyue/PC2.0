@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Image Cropper</title>
+    <link href="../css/image_cropper.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/imageCropper.js"></script>
+</head>
+<body>
+<div class="avatar-body-container child-window-shadow">
+    <div class="modal-header">
+      <div class="tool-icon-container">
+		<span class="icon-close tool-icon"></span>
+	  </div>
+      <h4 id="avatar-modal-label" class="modal-title">{{Profile.ChangeIcon}}</h4>
+    </div>
+    <div class="content-container">
+       	
+         <div class="parent">
+         	<div class="child avatar-cropper-wrapper">
+         		<div class="avatar-cropper avatar-cropper-init">
+         			<div class="upload-description">
+         				<div>{{Profile.NoticeSize}}</div>
+         				<div>{{Profile.NoticeWidth}}</div>
+         			</div>
+         		</div>
+         		<div class="avatar-upload">
+		           <input type="hidden" name="avatar_src" class="avatar-src">
+		           <input type="hidden" name="avatar_data" class="avatar-data" value="{&quot;x&quot;:-13.682967032967033,&quot;y&quot;:1.87747252747253,&quot;height&quot;:40.8,&quot;width&quot;:40.8,&quot;rotate&quot;:0}">
+		                     
+		           <button id="avatarInput" class="btn btn-avatar-upload" autofocus="autofocus">{{Profile.ChooseIcon}}</button>
+		           <input type="hidden" placeholder="Get data to here or set data with this value" id="putData" class="avatar-crop-info">
+		         </div>
+         	</div>         	
+         	<div class="child avatar-preview-wrapper">
+         		<div class="avatar-preview-title">{{Profile.Previews}}</div>
+         		<div class="avatar-preview"></div>
+         	</div>         	
+         </div>
+    </div>
+    
+    <div class="modal-footer">
+     	<button class="btn btn-cancel">{{Common.Cancel}}</button>
+     	<button class="btn btn-ok">{{Common.OK}}</button>
+    </div>
+</div>
+</body>
+</html>

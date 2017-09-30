@@ -1,0 +1,37 @@
+HKCR
+{
+	CopyLocation.CopyLocationShl.1 = s 'CopyLocationShl Class'
+	{
+		CLSID = s '{A7847D3E-09F3-11D4-8F6D-0080AD87DD41}'
+	}
+	CopyLocation.CopyLocationShl = s 'CopyLocationShl Class'
+	{
+		CLSID = s '{A7847D3E-09F3-11D4-8F6D-0080AD87DD41}'
+		CurVer = s 'CopyLocation.CopyLocationShl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A7847D3E-09F3-11D4-8F6D-0080AD87DD41} = s 'CopyLocationShl Class'
+		{
+			ProgID = s 'CopyLocation.CopyLocationShl.1'
+			VersionIndependentProgID = s 'CopyLocation.CopyLocationShl'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{A7847D31-09F3-11D4-8F6D-0080AD87DD41}'
+		}
+	}
+
+	NoRemove *
+	{
+		NoRemove ShellEx
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove CopyLocationShl = s '{A7847D3E-09F3-11D4-8F6D-0080AD87DD41}'
+			}
+		}
+	}
+}

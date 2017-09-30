@@ -1,0 +1,43 @@
+<div class="receiverView">
+  <div class="left">
+    <div class="header">
+        <div class="nameDiv">
+          <span ng-bind="ConversationTitle"></span>
+        </div>
+    </div>
+    <scroll-container class="accountsDiv">
+      <div class="accountWrapper" ng-repeat="account in accounts" ng-click="updateSelectedAccount(account);" ng-class="{'selected': account === selectedAccount, 'last':$last}">
+        <div class="avartarDiv">
+          <notice-image isrc="account.avatar" default-src="theme/images/account_default_avatar.png"></notice-image>
+        </div>
+        <div class="nameDiv text-ellipsis">
+          <span ng-bind="account.board_name" class="text-ellipsis"></span>
+          <span ng-bind="account.title" class="message text-ellipsis"></span>
+        </div>
+        <div class="restDiv">
+          <div ng-bind="time2str(account.created_at)" class="time"></div>
+          <div class="badge" ng-if="account.unread_count > 0"><span ng-bind="convertBadgeNumber(account.unread_count)"></span></div>
+        </div>
+      </div>
+      <spinner-loading ng-show='isLoadingAccounts'></spinner-loading>
+    </scroll-container>
+  </div>
+  <div class="right" ng-show="showNotices">
+    <div class="top">
+      <div class="back" ng-click="backToMain()">
+          <i class="fa fa-angle-left"></i>
+      </div>
+      <span ng-bind="selectedAccount.board_name" class="boardName"></span>
+    </div>
+    <scroll-container class="mainContainer" up-to-update="true" id="{{noticeContainerId}}">
+      <div class="showMoreDiv force-hide">
+        <span class="moreMsg" translate="receive.show-more"></span>
+      </div>
+        <div ng-repeat="n in selectedAccount.notices" class="noticeItem" id="{{n.id}}">
+            <notice-item ng-click="showDetail(n)" show-preview="showPreview(n)" convert-time="convertTime(createTime)" n="n" hide-options="true"></notice-item>
+            <div ng-if="n.readStatus == 0" translate="receive.unread" class="status"></div>
+        </div>
+        <spinner-loading ng-show='isLoadingNotices'></spinner-loading>
+    </scroll-container>
+  </div>
+</div>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="zlib">
+      <UniqueIdentifier>{ec2084c5-f36d-4292-b619-00d37b7bb847}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\AccountDao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\AppDao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\ConferenceDao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\ConfigDao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\ContactDao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\CppSQLite3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\DBManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\GroupDao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\MessageDao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\SQLConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\SQLiteManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\DBManagerDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\utils\StringConvert.h" />
+    <ClInclude Include="..\..\..\..\..\..\include\ContactInfo.h" />
+    <ClInclude Include="..\..\..\..\..\..\include\ContactTag.h" />
+    <ClInclude Include="..\..\..\..\..\services\contact_service\ContactInfoImpl.h" />
+    <ClInclude Include="..\..\..\include\DBUpgrade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\utils\Gzip.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\log\LogManager.h" />
+    <ClInclude Include="..\..\..\..\..\services\message_service\GroupInfo.h" />
+    <ClInclude Include="..\..\..\..\..\services\message_service\DocumentInfo.h" />
+    <ClInclude Include="..\..\..\..\..\..\include\CalendarData.h" />
+    <ClInclude Include="..\..\..\include\ConversationDao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\include\IConversationInfo.h" />
+    <ClInclude Include="..\..\..\..\..\services\message_service\MessageInfo.h" />
+    <ClInclude Include="..\..\..\..\..\utils\modp_base64\modp_b64.h" />
+    <ClInclude Include="..\..\..\..\..\utils\modp_base64\modp_b64_data.h" />
+    <ClInclude Include="..\..\..\..\..\..\include\AccountInfo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyTest.cpp" />
+    <ClCompile Include="..\..\..\..\..\utils\StringConvert.cpp" />
+    <ClCompile Include="..\..\..\src\AccountDao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\SQLiteManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\AppDao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ConferenceDao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ConfigDao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ContactDao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\CppSQLite3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\DBManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\GroupDao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\MessageDao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\services\contact_service\ContactInfo.cpp" />
+    <ClCompile Include="..\..\..\..\..\services\contact_service\ContactTag.cpp" />
+    <ClCompile Include="..\..\..\..\..\services\contact_service\ContactInfoImpl.cpp" />
+    <ClCompile Include="..\..\..\src\DBUpgrade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\log\LogManager.cpp" />
+    <ClCompile Include="..\..\..\..\..\services\message_service\GroupInfo.cpp" />
+    <ClCompile Include="..\..\..\..\..\services\message_service\DocumentInfo.cpp" />
+    <ClCompile Include="..\..\..\src\ConversationDao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\services\message_service\MessageInfo.cpp" />
+    <ClCompile Include="..\..\..\..\..\utils\modp_base64\modp_b64.cc" />
+  </ItemGroup>
+</Project>

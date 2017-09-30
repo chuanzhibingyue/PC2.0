@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../css/meeting_attendee_busy_status.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/meetingAttendeeBusyStatus.js"></script>
+    <title>Meeting Attendee</title>
+</head>
+<body>
+<div class="meeting-attendee_busy_status child-window-shadow">
+    <div class="window-bar">
+        <span class="title">{{Meeting.ViewAttendeeBusyStatus}}</span>
+
+        <div class="tool-icon-container">
+            <span class="icon-close tool-icon"></span>
+        </div>
+    </div>
+    <div class="header">
+        <div class="start-time-label">{{Meeting.ActivityStartTime}}</div>
+        <div class="meeting-time-container">
+            <div class="start-time-container">
+                <div class="start-label">{{Meeting.StartTime}}</div>
+                <div class="start-time"></div>
+            </div>
+            <div class="duration-container">
+                <div class="duration-label">{{Meeting.MeetingLength}}</div>
+                <div class="duration"></div>
+            </div>
+            <input type="text" class="search-input" placeholder="{{Meeting.SearchAndAddAttendee}}">
+        </div>
+    </div>
+    <div class="body">
+        <div class="body-header">
+            <div class="time-pointer-container">
+                <div class="time-pointers"></div>
+            </div>
+        </div>
+        <div class="body-content">
+            <div class="attendee-list-container">
+                <div class="attendee-list"></div>
+            </div>
+            <div class="timeline-box">
+                <div class="attendee-works">
+                    <div class="timelines"></div>
+                </div>
+                <div class="meeting-timeline">
+                    <div class="timeline-head"></div>
+                    <div class="timeline-body"></div>
+                </div>
+                <div class='current'></div>
+                <!--<div class="rule-time-box"><span class="hour">10</span><span class="minute">:00</span></div>-->
+                <!--<div class="time-rule"></div>-->
+            </div>
+        </div>
+
+        <div class="vertical-scroll">
+            <div class="content-length"></div>
+        </div>
+        <div class="horizontal-scroll">
+            <div class="content-length"></div>
+        </div>
+        <br class="clear-float"/>
+    </div>
+
+    <div class="calendarButton">
+        <a class="cancel">{{Common.Cancel}}</a>
+        <a class="finish">{{Common.Success}}</a>
+    </div>
+</div>
+</body>
+</html>

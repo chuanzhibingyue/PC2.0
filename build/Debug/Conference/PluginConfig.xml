@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PluginConfig>
+    <Plugins>
+        <Plugin fileName="Conference.dll" version="1.0.1" url="http://192.168.2.3/Conference.dll" >
+            <ServiceType>1</ServiceType>
+        </Plugin>
+        <Plugin fileName="WhiteBoard.dll" version="1.0.1" url="http://192.168.2.3/WhiteBoard.dll" >
+            <ServiceType>775</ServiceType>
+        </Plugin>
+        <Plugin fileName="DocSharing.dll" version="1.0.1" url="http://192.168.12.175/DocSharing.dll">
+            <ServiceType>776</ServiceType>
+            <AdditionDependency fileName="DocConvertLib.dll" />
+        </Plugin>
+        <Plugin fileName="DesktopSharing.dll" version="1.0.1" url="http://192.168.2.3/DesktopSharing.dll">
+            <ServiceType>777</ServiceType>
+        </Plugin>
+        <Plugin fileName="AVModule.dll" version="1.0.1" url="http://192.168.2.3/AVModule.dll">
+            <ServiceType>258</ServiceType>
+            <ServiceType>259</ServiceType>
+        </Plugin>
+        <Plugin fileName="Text.dll" version="1.0.1" url="http://192.168.2.3/Text.dll" >
+            <ServiceType>516</ServiceType>
+            <ServiceType>517</ServiceType>
+            <ServiceType>518</ServiceType>
+        </Plugin>
+    </Plugins>
+
+    <DependencyFiles>
+        <AdditionDll fileName="DocConvertLib.dll" version="1.0.3" url="http://192.168.12.175/DocConvertLib.dll" />
+        <AdditionDll fileName="public_2.dll" version="1.0.3" url="http://192.168.2.3/public_2.dll" />
+        <AdditionDll fileName="public_3.dll" version="1.0.3" url="http://192.168.2.3/public_3.dll" />
+    </DependencyFiles>
+
+</PluginConfig>

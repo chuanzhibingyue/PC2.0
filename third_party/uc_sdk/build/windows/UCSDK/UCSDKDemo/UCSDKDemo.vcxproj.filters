@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\test\functional_test\CalendarServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\CalendarServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\ClientServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\ContactServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\ContactServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\FileTransferServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\FileTransferServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\GroupServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\GroupServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\UCCommonFunctionMock.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\FunctionalTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\UCEnvironment.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\UCMockBase.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\UCMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\utils\callback\ThreadMessage.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\IMServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\IMServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\AudioServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\AudioServiceMockClient.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\test\functional_test\include\CalendarServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\CalendarServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\ClientInfo.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\ClientServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\ContactServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\FileTransferServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\FileTransferServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\GroupServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\GroupServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\UCCommonFunctionMock.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\UCMockBase.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\UCMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\utils\callback\Callback.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\utils\callback\ExecuteCallback.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\utils\callback\ThreadMessage.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\IMServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\IMServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\AudioServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\AudioServiceMockClient.h" />
+  </ItemGroup>
+</Project>

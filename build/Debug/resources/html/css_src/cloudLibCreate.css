@@ -1,0 +1,66 @@
+.panel .tool-icon-container .icon-close:hover{
+    background-color: red;
+    color: #ffffff;
+}
+.panel  .waring-ipt {
+    border-color: red;
+}
+.panel .iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.panelContain{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+.panelTitle{
+    padding: 10px;
+    font-size: 14px;
+    color: #999999;
+    height: 350px;
+}
+.cloud-loading-font{
+    font-size: 14px;
+    color: #999999;
+    margin-left:10px;
+    margin-top:10px;
+}
+.cloud-loading span{
+    display: inline-block;
+    margin-top: -2px;
+    margin-left: 20px;
+    position: absolute;
+}
+.cloud_font{
+    font-size: 14px;
+    color: #999999;
+}
+.cloudFailPanel{
+    text-align: center;
+    position: absolute;
+    color: #999999;
+    left:50%;
+    top:50%;
+    width:135px;
+    height:120px;
+    margin-left:-58px;
+    margin-top:-60px;
+}
+.cloudFailPanel a.btn:hover {
+    background-color:#607588;
+}
+.cloudFailPanel a.btn {
+    background-color: #4f667b;
+    font-size: 14px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #FFFFFF;
+    width: 100px;
+}

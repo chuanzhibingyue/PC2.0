@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\test\functional_test\AudioServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\AudioServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\CalendarServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\CalendarServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\ClientServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\ContactServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\ContactServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\FileTransferServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\FileTransferServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\GroupServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\GroupServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\IMServiceMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\IMServiceTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\UCCommonFunctionMock.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\FunctionalTest.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\UCEnvironment.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\UCMockBase.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\UCMockClient.cpp" />
+    <ClCompile Include="..\..\..\..\test\functional_test\utils\callback\ThreadMessage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\test\functional_test\include\AudioServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\AudioServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\CalendarServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\CalendarServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\ClientInfo.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\ClientServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\ContactServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\FileTransferServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\FileTransferServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\GroupServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\GroupServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\IMServiceMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\IMServiceTest.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\UCCommonFunctionMock.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\UCMockBase.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\include\UCMockClient.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\utils\callback\Callback.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\utils\callback\ExecuteCallback.h" />
+    <ClInclude Include="..\..\..\..\test\functional_test\utils\callback\ThreadMessage.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{819EBFCC-6143-4484-8B31-D583B46A946F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UCSDKDemo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\..\include;..\..\..\..\include\base;..\..\..\..\src\components\parser\msg_parser\include;..\..\..\..\third_party\thrift;..\..\..\..\third_party\gtest\include;..\..\..\..\third_party;..\..\..\..\test\functional_test\include;..\..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>UCSDK_d.lib;libthrift_d.lib;glog.lib;gtestd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\..\build\windows\UCSDK\bin\Debug;..\..\..\..\third_party\thrift\lib\windows;..\..\..\..\third_party\boost\stage\lib\windows;..\..\..\..\third_party\google-glog\lib\windows;..\..\..\..\third_party\gtest\lib\windows;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,26 @@
+<div id="accountsPage" class="publishEnd" ng-click="onTopClick($event)">
+  <ng-include src="'templates/header.html'"></ng-include>
+  <article class="container">
+    <ng-include class="left" src="'templates/menu.html'"></ng-include>
+    <div class="right">
+      <div class="tops" translate="account.select-account"></div>
+      <div class="accountsContainer">
+        <section ng-repeat="account in accounts" class="accountSection" >
+          <div class="avartarDiv" ng-click="showPublish(account,$event)">
+            <notice-image isrc="account.avatar" save-to-local="true"></notice-image>
+          </div>
+          <div class="nameDiv text-ellipsis" ng-class="{grayFont:account.status == 0}">
+            <span ng-bind="account.name|accountName" title="{{account.name|accountName}}"></span>
+          </div>
+          <div class="tips" ng-if="account.isShowActivationTips">
+            <span ng-bind="account.activateTip" class="message"></span>
+            <a class="goToSetting" translate="account.guide.activate-confirm" href="index.html#/manage" ng-click="manage($event,account)"></a>
+            <div class="note" translate="account.guide.note"></div>
+          </div>
+        </section>
+      </div>
+      <spinner-loading ng-show='isLoadingAccounts'></spinner-loading>
+    </div>
+  </article>
+  <div notice-alert></div>
+</div>

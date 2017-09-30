@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{e8ee5afa-8657-4ec8-81dd-807a405dc921}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{80172c7d-5158-4f81-b682-dafe76cd8797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\modp_base64">
+      <UniqueIdentifier>{cb6e87f1-ded6-49ec-bc44-ccff237d1056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\minizip">
+      <UniqueIdentifier>{3e7b0fb7-28ea-4489-bed9-6da89af9f84c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\modp_base64\modp_b64.h">
+      <Filter>src\modp_base64</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\modp_base64\modp_b64_data.h">
+      <Filter>src\modp_base64</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\platform.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\StringConvert.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\ZipWrapper.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\minizip\crypt.h">
+      <Filter>src\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\minizip\ioapi.h">
+      <Filter>src\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\minizip\iowin32.h">
+      <Filter>src\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\minizip\mztools.h">
+      <Filter>src\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\minizip\unzip.h">
+      <Filter>src\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\minizip\zip.h">
+      <Filter>src\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\Callback.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\CallOnMainThread.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\event.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\ThreadMessage.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\ShellExt.h">
+      <Filter>include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\StringConvert.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dllmain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\modp_base64\modp_b64.cc">
+      <Filter>src\modp_base64</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ZipWrapper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\minizip\ioapi.c">
+      <Filter>src\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\minizip\iowin32.c">
+      <Filter>src\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\minizip\mztools.c">
+      <Filter>src\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\minizip\unzip.c">
+      <Filter>src\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\minizip\zip.c">
+      <Filter>src\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ThreadMessage.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ShellExt.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

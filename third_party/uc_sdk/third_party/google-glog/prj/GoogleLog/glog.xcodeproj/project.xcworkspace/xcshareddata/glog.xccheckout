@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EAE926DE-D0BA-4870-8EA7-56CC0A47B307</string>
+	<key>IDESourceControlProjectName</key>
+	<string>glog</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5ec7da6d-c031-40c7-874b-d4b58c7751c9++1318</key>
+		<string>http://192.168.11.216/svn/uc/code/trunk/mobile</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>uclog/google-glog/prj/GoogleLog/glog.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5ec7da6d-c031-40c7-874b-d4b58c7751c9++1318</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>5ec7da6d-c031-40c7-874b-d4b58c7751c9++1318</key>
+		<string>http://192.168.11.216/svn/uc</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://192.168.11.216/svn/uc/code/trunk/mobile/uclog/google-glog/prj/GoogleLog/glog.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5ec7da6d-c031-40c7-874b-d4b58c7751c9++1318</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5ec7da6d-c031-40c7-874b-d4b58c7751c9++1318</string>
+			<key>IDESourceControlWCCName</key>
+			<string>zhaotao</string>
+		</dict>
+	</array>
+</dict>
+</plist>

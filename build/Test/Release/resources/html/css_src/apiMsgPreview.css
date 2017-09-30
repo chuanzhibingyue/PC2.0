@@ -1,0 +1,60 @@
+.apimsg-preview{
+	font-size: 14px;
+	width: 530px;
+	height: 540px;
+	border-radius: 2px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background: white;
+	margin-top: 10px;
+	margin-left: 5px;
+	background-color: white;
+}
+.apimsg-preview .title{
+    font-weight: bold;
+	height: 15px;
+	text-align: left;
+	padding: 12px 15px;
+	color: #173553;
+	font-size: 14px;
+}
+.apimsg-preview .title:after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000000), to(rgba(0, 0, 0, 0)));
+    left: 0;
+    top: 40px;
+    opacity: 0.1;
+}
+.apimsg-preview .content{
+    width: 497px;
+    height: 470px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 5px 15px;
+	margin-top: 2px;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	word-wrap: break-word;
+	word-break: normal;
+}
+
+.apimsg-preview .tool-icon-container{
+	position: absolute;
+	height: 20px;
+}
+.apimsg-preview .tool-icon-container .tool-icon{
+	font-size: 8px;
+	padding: 6px;
+	cursor: pointer;
+}
+.apimsg-preview .tool-icon-container .icon-close:hover{
+	background-color: red;
+	color: #ffffff;
+}

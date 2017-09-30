@@ -1,0 +1,57 @@
+.panel{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 4px;
+    box-shadow: 0 6px 15px rgba(00,00,00, .3);
+}
+.panel .tool-icon-container .icon-close:hover{
+    background-color: red;
+    color: #ffffff;
+}
+.panel  .waring-ipt {
+    border-color: red;
+}
+.panel .iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.panelContain{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+.panelTitle{
+    padding: 10px;
+    font-size: 14px;
+    color: #999999;
+}
+.cloudFailPanel{
+    /*height: 100%;*/
+    text-align: center;
+    margin-top: 195px;
+}
+.cloudFailPanel a.btn:hover {
+    background-color:#607588;
+}
+.cloudFailPanel a.btn {
+    background-color: #4f667b;
+    font-size: 14px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #FFFFFF;
+    width: 100px;
+    margin-top: 5px;
+}
+.max{
+    margin: 0px;
+    height: 100%;
+}

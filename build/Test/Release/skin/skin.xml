@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="336,40" sizebox="4,4,6,6" caption="0,0,0,30" roundcorner="2,2">
+    <Container width="423" height="124" bordercolor="#00FFFBF0">
+        <VerticalLayout bordersize="2" width="235" height="40" bkcolor="#FF2D3D4D" bordercolor="#FF4F667B">
+            <Button name="OK" tooltip="完成截图" float="true" pos="302,12,0,0" width="22" height="16" bkimage="ok_not_selected.png" bkcolor="#FF2D3D4D" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" hotimage="ok_selected.png" focusedimage="ok_selected.png" />
+            <Button name="CANCEL" tooltip="退出截图" float="true" pos="270,12,0,0" width="16" height="16" bkimage="cancel_not_selected.png" bkcolor="#FF2D3D4D" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" hotimage="cancel_selected.png" focusedimage="cancel_selected.png" />
+            <Button name="SAVE" tooltip="保存截图" float="true" pos="222,11,0,0" width="16" height="17" bkimage="save_not_selected.png" bkcolor="#FF2D3D4D" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" hotimage="save_selected.png" focusedimage="save_selected.png" disabledimage="save_selected.png" />
+            <Button name="VLINE2" float="true" pos="254,11,0,0" width="1" height="18" bkcolor="#FF607589" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" />
+            <Button name="FONT" tooltip="文字工具" float="true" pos="190,12,0,0" width="16" height="16" bkimage="font_not_selected.png" bkcolor="#FF2D3D4D" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" hotimage="font_selected.png" focusedimage="font_selected.png" />
+            <Button name="PEN" tooltip="画刷工具" float="true" pos="158,12,0,0" width="16" height="16" bkimage="pen_not_selected.png" bkcolor="#FF2D3D4D" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" hotimage="pen_selected.png" focusedimage="pen_selected.png" />
+            <Button name="ARROW" tooltip="箭头工具" float="true" pos="126,13,0,0" width="16" height="16" bkimage="arrow_not_selected.png" bkcolor="#FF2D3D4D" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" hotimage="arrow_selected.png" focusedimage="arrow_selected.png" />
+            <Button name="CIRCLE" tooltip="椭圆工具" float="true" pos="92,11,0,0" width="18" height="18" bkimage="circle_not_selected.png" bkcolor="#FF2D3D4D" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" hotimage="circle_selected.png" focusedimage="circle_selected.png" />
+            <Button name="SQUARE" tooltip="矩形工具" float="true" pos="60,12,0,0" width="16" height="16" bkimage="square_not_selected.png" bkcolor="#FF2D3D4D" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" hotimage="square_selected.png" focusedimage="square_selected.png" />
+            <Button name="VLINE1" float="true" pos="43,11,0,0" width="1" height="18" bkcolor="#FF607589" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" />
+            <Button name="ROLLBACK" tooltip="撤销编辑" float="true" pos="12,12,0,0" width="16" height="15" bkimage="rollback_not_selected.png" bkcolor="#FF2D3D4D" textcolor="#FF000000" disabledtextcolor="#FFFFFFFF" align="center" hotimage="rollback_selected.png" focusedimage="rollback_selected.png" />
+        </VerticalLayout>
+    </Container>
+</Window>

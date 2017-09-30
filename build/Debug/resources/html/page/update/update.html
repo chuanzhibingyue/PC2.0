@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../../css/update.css" rel="stylesheet">
+    <script type="text/javascript" src="../../nls/i18n.js"></script>
+    <script type="text/javascript" src="../../script/update.js"></script>
+    <title>Bee Update</title>
+</head>
+<body>
+    <section class="update-main">
+        <header>
+            <div class="tool-icon-container">
+                <span class="icon-min tool-icon"></span><span class="icon-close tool-icon"></span>
+            </div>
+        </header>
+
+        <!-- 更新提示页 -->
+        <div class="update-welcome">
+            <div class="logo">
+                <div>
+                    <img src="../../images/update/logo.png" />
+                </div>
+
+                <div class="title">
+
+                </div>
+
+                <textarea class="tips" readonly></textarea>
+            </div>
+
+            <!-- 欢迎页 -->
+            <div class="btn-group">
+                <a class="btn-uikit btn-dark" href="javascript:void(0)" id="btnIgnore">{{Update.Ignore}}</a>
+                <a class="btn-uikit btn-dark hide" href="javascript:void(0)" id="btnDownSelf">{{Update.DownloadSelf}}</a>
+                <a class="btn-uikit btn-yellow disabled" href="javascript:void(0)" id="btnUpdate">{{Update.Update}}<img src="../../images/loading.gif" /></a>
+            </div>
+        </div>
+
+        <!-- 安装页 由底层实现，此处暂留 -->
+        <div class="update-setup" style="display: none;">
+            <div class="intro">
+                {{Update.NewFeatures}}
+            </div>
+
+            <div class="progress">
+                <!--<div class="bar"></div>-->
+            </div>
+
+            <div class="status">
+                <div class="left">
+                    {{Update.Updating}}
+                </div>
+
+                <div class="right">
+                    15%
+                </div>
+            </div>
+        </div>
+
+        <!-- 更新失败 由底层实现，此处暂留-->
+        <div class="update-failed" style="display: none;">
+            <div class="logo">
+                <div>
+                    <img src="../../images/logo.png" />
+                </div>
+
+                <div class="name">
+                    {{Update.Name}}
+                </div>
+
+                <div class="tips">
+                    {{Update.UpdateFail}}
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <!--<a class="btn" id="btnSkip" href="javascript:void(0)">以后再说</a>-->
+                <!--<a class="btn" id="btnRetry" href="javascript:void(0)">重试</a>-->
+            </div>
+        </div>
+
+        <!-- 强制更新提示 -->
+        <div class="update-force">
+           <div class="body">
+               <div class="title">
+                   <div class="tips">
+                       {{Update.TipsTitle}}
+                   </div>
+
+                   <div class="msg">
+                       {{Update.GiveUpTips}}
+                   </div>
+               </div>
+
+               <div class="btn-group">
+                   <a class="btn-uikit btn-gray" id="btnUpdate2" href="javascript:void(0)">{{Update.Update}}</a>
+                   <a class="btn-uikit btn-dark" id="btnForget" href="javascript:void(0)">{{Update.GiveUp}}</a>
+               </div>
+           </div>
+        </div>
+    </section>
+</body>
+</html>

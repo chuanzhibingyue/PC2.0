@@ -1,0 +1,73 @@
+.bee-menu .menu{
+    float: left;
+    /*border: solid 1px #ccc;*/
+    background: #FFF;
+    position: relative;
+    z-index: 9999;
+    border-radius: 4px;
+    /*-webkit-box-shadow: 2px 2px 4px #666;*/
+    /*-moz-box-shadow: 2px 2px 4px #666;*/
+    /*box-shadow: 2px 2px 4px #666;*/
+}
+
+.bee-menu .menu ul {
+    float: left;
+    margin: 4px 0;
+    padding: 1px;
+    width: 100%;
+}
+.bee-menu .menu ul li{
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+}
+.bee-menu .menu ul li:hover{
+    background-color: #4f667b;
+}
+.bee-menu .menu ul .menu-split{
+    border-bottom: 1px solid #dadada;
+    height: 0;
+}
+.bee-menu .menu ul .menu-parent {
+    background: url("../images/icon_menu_more.png") no-repeat right center;
+}
+
+.bee-menu .menu ul .menu-parent:hover {
+    background: url("../images/icon_menu_more_white.png") no-repeat right center #4f667b;
+    color: #fff;
+}
+.bee-menu .menu ul .menu-item.disabled{
+
+}
+
+.bee-menu .menu ul li .menu-icon{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+}
+.bee-menu .menu ul li .menu-icon img{
+    width: 26px;
+    height: 26px;
+    margin: 2px;
+}
+.bee-menu .menu ul li .menu-label{
+    width: 120px;
+    display: inline-block;
+    color: #3B4F61;
+    height: 30px;
+    line-height: 30px;
+    /*text-indent: 36px;*/
+    text-decoration: none;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.bee-menu .menu ul li .menu-label:hover {
+    color: #fff;
+}

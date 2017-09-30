@@ -1,0 +1,180 @@
+.embedded-call-banner{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: #3b4f61;
+    z-index:99;
+}
+.embedded-call-banner .call-status{
+    /*position: absolute;*/
+    /*max-width: 100px;*/
+    /*font-size: 14px;*/
+    /*color: #3C4F60;*/
+    /*overflow-x: hidden;*/
+    /*margin-left: 20px;*/
+}
+.embedded-call-banner .call-btn-node{
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    display: inline-block;
+}
+.embedded-call-banner .call-toolbar-btn{
+    width: 40px;
+    height: 40px;
+    /*background-size: 40px 40px;*/
+    display: inline-block;
+    margin: 10px 5px;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    /*margin-top: -5px;*/
+}
+
+.embedded-call-banner .call-toolbar-btn:hover{
+    background-color: rgba(255,255,255,0.3);
+    /*color:#ffffff;*/
+}
+
+.embedded-call-banner .call-toolbar-btn:active{
+    background-color: rgba(0,0,0,0.1);
+    /*color:#ffffff;*/
+}
+
+.embedded-call-banner .call-toolbar-btn.open{
+    color:#3b4f61;
+    background-color: #ede90e !important;
+    opacity: 1 !important;
+}
+
+.embedded-call-banner .call-toolbar-btn.openHover{
+    background-color: #f4f16e;
+    color:#3b4f61 !important;
+
+}
+.embedded-call-banner .call-toolbar-btn.openActive{
+    background-color: #e0dd0d;
+    color:#3b4f61 !important;
+}
+
+
+.embedded-call-banner .back-to-call-window{
+    /*background-image: url("../images/call/end_call.png");*/
+    margin-left: 15px;
+    float:left;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    color:#ffffff;
+}
+.embedded-call-banner .back-to-text-chat:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+.embedded-call-banner .back-to-text-chat:active{
+    background-color: #000000;
+    opacity: 0.1;
+}
+.embedded-call-banner .call-tell-status{
+    font-size: 14px;
+    color: #ffffff;
+    padding-left: 10px;
+    float: left;
+    width: auto;
+    /* display: inline-block; */
+    /* margin-top: 15px; */
+    /* margin-left: 10px; */
+    line-height: 55px;
+    height: auto;
+}
+.embedded-call-banner .calm-call{
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    color:#ffffff;
+}
+.embedded-call-banner .calm-call.disable{
+    background-color: rgba(255,255,255,0.3);
+}
+.embedded-call-banner .calm-call.open{
+     color:#3b4f61;
+     background-color: #ede90e;
+ }
+.embedded-call-banner .calm-call.open.disable{
+    color:#3b4f61;
+    background-color: #ede90e;
+    opacity: 0.3;
+}
+.embedded-call-banner .end-call{
+    /*background-image: url("../images/call/end_call.png");*/
+    border-radius: 50%;
+    background-color: #ff5252;
+    margin-right:15px;
+    color:#ffffff;
+}
+.embedded-call-banner .end-call:hover{
+    background-color: #ff7272;
+}
+.embedded-call-banner .end-call:active{
+    background-color: #e54949;
+}
+.embedded-call-banner .end-call.disable{
+    background-color: #ff5252;
+    opacity: 0.3;
+}
+.embedded-call-banner .answer-call{
+    /*background-image: url("../images/call/answer_call.png");*/
+    border-radius: 50%;
+    background-color: #4cd964;
+    margin-right:5px;
+    color:#ffffff;
+}
+.embedded-call-banner .answer-call:hover{
+    background-color: #5edc73;
+}
+.embedded-call-banner .answer-call:active{
+    background-color: #44c259;
+}
+.embedded-call-banner .answer-call.disable{
+    background-color: #4cd964;
+    opacity: 0.3;
+}
+.embedded-call-banner .quick-reply{
+	display:inline;
+    font-size: 12px;
+    color:#ffffff;
+    padding-right: 10px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url(../images/message/screen_shot_settings.png);
+}
+.embedded-call-banner .replyMessage{
+    display:none;
+    height:88px;
+    width:196px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    right: 0;
+    position: absolute;
+    color:#173553;
+    z-index: 20;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.embedded-call-banner .replyMessage li:hover{
+    background-color: #4f667b;
+}
+.embedded-call-banner .replyMessage li:active{
+    background-color: #4f667b;
+}
+.embedded-call-banner .replyMessage li.sorry-tell{
+  padding-right: 30px;
+}
+.embedded-call-banner .replyMessage li.come-soon{
+    padding-right: 140px;
+}
+.embedded-call-banner .replyMessage li.call-you{
+    padding-right: 56px;
+}
+.embedded-call-banner .replyMessage li.meeting-after{
+    padding-right: 30px;
+}

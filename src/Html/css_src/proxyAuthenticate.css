@@ -1,0 +1,42 @@
+.container{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+}
+.container .title{
+    font-size: 20px;
+}
+.container .auth-result{
+    font-size: 12px;
+    color: #ff0000;
+}
+.container .input-container{
+    margin-top: 50px;
+}
+.container .input{
+    width: 310px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #999999;
+    outline: none;
+}
+.container .btn-container{
+    height: 40px;
+    margin-top: 20px;
+}
+.container .btn-container .btn{
+    height: 30px;
+    border-radius: 2px;
+    margin-right: 10px;
+    float: right;
+    text-align: center;
+    cursor: pointer;
+    line-height: 30px;
+}
+.container .btn-container .btn.ok{
+    width: 110px;
+}
+.container .btn-container .btn.cancel{
+    width: 70px;
+}

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "update", "update.vcxproj", "{463FE628-A176-4C58-B005-3924BFD1E4E6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libUpdate", "..\..\..\third_party\libUpdate\Source\libUpdate.vcxproj", "{26FC9090-FCD6-43BD-9261-48E7B8CF3A40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		UnicodeDebug|Win32 = UnicodeDebug|Win32
+		UnicodeRelease|Win32 = UnicodeRelease|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{463FE628-A176-4C58-B005-3924BFD1E4E6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{463FE628-A176-4C58-B005-3924BFD1E4E6}.Debug|Win32.Build.0 = Debug|Win32
+		{463FE628-A176-4C58-B005-3924BFD1E4E6}.Release|Win32.ActiveCfg = Release|Win32
+		{463FE628-A176-4C58-B005-3924BFD1E4E6}.Release|Win32.Build.0 = Release|Win32
+		{463FE628-A176-4C58-B005-3924BFD1E4E6}.UnicodeDebug|Win32.ActiveCfg = UnicodeDebug|Win32
+		{463FE628-A176-4C58-B005-3924BFD1E4E6}.UnicodeDebug|Win32.Build.0 = UnicodeDebug|Win32
+		{463FE628-A176-4C58-B005-3924BFD1E4E6}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
+		{463FE628-A176-4C58-B005-3924BFD1E4E6}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
+		{26FC9090-FCD6-43BD-9261-48E7B8CF3A40}.Debug|Win32.ActiveCfg = Debug|Win32
+		{26FC9090-FCD6-43BD-9261-48E7B8CF3A40}.Debug|Win32.Build.0 = Debug|Win32
+		{26FC9090-FCD6-43BD-9261-48E7B8CF3A40}.Release|Win32.ActiveCfg = Release|Win32
+		{26FC9090-FCD6-43BD-9261-48E7B8CF3A40}.Release|Win32.Build.0 = Release|Win32
+		{26FC9090-FCD6-43BD-9261-48E7B8CF3A40}.UnicodeDebug|Win32.ActiveCfg = Debug|Win32
+		{26FC9090-FCD6-43BD-9261-48E7B8CF3A40}.UnicodeDebug|Win32.Build.0 = Debug|Win32
+		{26FC9090-FCD6-43BD-9261-48E7B8CF3A40}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
+		{26FC9090-FCD6-43BD-9261-48E7B8CF3A40}.UnicodeRelease|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

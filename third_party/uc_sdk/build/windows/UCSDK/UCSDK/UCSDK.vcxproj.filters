@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{c39901a4-c746-4a9a-8e14-9753774c36fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{f2b302a9-1760-4600-b059-e0254d8e7cc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\functional_test">
+      <UniqueIdentifier>{badab931-99a3-4adb-8194-9235d9abf1dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\unit_test">
+      <UniqueIdentifier>{3e8ac7bf-236a-4a5c-88d8-7674ea2dd360}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{e4358ba3-80ae-48e6-bcea-bbeb73c991db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services">
+      <UniqueIdentifier>{895c789d-4fa7-4158-b6d9-739a629646cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\components">
+      <UniqueIdentifier>{ce814bc0-65c8-4332-a743-d78522c2a9fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\components\db">
+      <UniqueIdentifier>{a1d66d06-5ac4-494c-986f-26d16340b2b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\components\network">
+      <UniqueIdentifier>{45c815e9-f91c-4bbc-a825-14d6f47250d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\components\parser">
+      <UniqueIdentifier>{3df86bed-17d5-4437-aceb-4f285a77e2dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\audio_service">
+      <UniqueIdentifier>{27948594-c942-4983-a00e-a611ce1ffbb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\calendar_service">
+      <UniqueIdentifier>{0a6a90ba-250c-4976-96fa-95096e6f53dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\contact_service">
+      <UniqueIdentifier>{ea102b89-7389-4f40-893c-e420aad42371}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\filetransfer_service">
+      <UniqueIdentifier>{b23de1c1-c6b5-4b4f-99fd-3ff0832256a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\message_service">
+      <UniqueIdentifier>{c07d422f-35b6-46ec-b18f-39560f36e525}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\sharing_service">
+      <UniqueIdentifier>{78482197-0e6f-4707-a9ce-c942171cf955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\video_service">
+      <UniqueIdentifier>{0fdd4064-8ed3-435b-b6f8-d96a314b74b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\client_service">
+      <UniqueIdentifier>{6833d336-cd89-46b5-ac25-c854d21c2c64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\components\parser\msg_parser">
+      <UniqueIdentifier>{fcbba1f8-8e4e-4e15-b948-076268d2e8f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\components\parser\msg_parser\include">
+      <UniqueIdentifier>{038e6be6-a589-482d-8f49-c84e7cbd52d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\components\parser\msg_parser\src">
+      <UniqueIdentifier>{46570f68-3be7-4bde-843e-d1de19720338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\components\db\include">
+      <UniqueIdentifier>{27a5c4a9-5b37-45e1-93b0-88ad5aaf0554}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\components\db\src">
+      <UniqueIdentifier>{8b9ebcc4-50bb-4336-9951-102b2cea2c6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\calendar_service\ICalendarParser">
+      <UniqueIdentifier>{463eb99c-3673-4881-b402-b65309160d06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\search_service">
+      <UniqueIdentifier>{bc59d08c-6cb0-45a0-94d1-1d98c8e472ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\store_service">
+      <UniqueIdentifier>{4b3f4993-3ed9-46b6-b288-a34405762375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\contact_service\contact_cache">
+      <UniqueIdentifier>{b058b77c-4de5-4276-9ab3-12c492ead8ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\base">
+      <UniqueIdentifier>{acaa2979-b315-4561-b93e-db87c8dc2356}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base">
+      <UniqueIdentifier>{324deab7-e09f-4b06-9294-a0fdc52486b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base\modp_base64">
+      <UniqueIdentifier>{af082eae-5528-41c9-b974-fc7cc7259883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\base\md5">
+      <UniqueIdentifier>{fb06ec4e-0edd-4af9-80ec-d36ba19d6a8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\components\conferencesdk">
+      <UniqueIdentifier>{75a2e9e0-14d6-47ad-a095-9c24dcc4671d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\microblog_service">
+      <UniqueIdentifier>{ef8c2c51-1bd5-4976-943d-19b12dc2aee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\openapi_service">
+      <UniqueIdentifier>{9f35afde-ba3c-4903-a376-a86b972efc6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\external_service">
+      <UniqueIdentifier>{73c98641-3794-42f6-b15b-703834125216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\bbs_service">
+      <UniqueIdentifier>{05c65133-ef70-47c2-a815-9ff6ffe1cde6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services\pbx_service">
+      <UniqueIdentifier>{aaf42a83-0544-4dc6-81d3-ee3552ed2639}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\IClientService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IContactService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IUCEngine.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\UCEngine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\network\HTTPHandler.h">
+      <Filter>src\components\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\network\NetworkManager.h">
+      <Filter>src\components\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\ContactInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\audio_service\AudioService.h">
+      <Filter>src\services\audio_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\CalendarService.h">
+      <Filter>src\services\calendar_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactService.h">
+      <Filter>src\services\contact_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\FileTransferService.h">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\video_service\VideoService.h">
+      <Filter>src\services\video_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\sharing_service\SharingService.h">
+      <Filter>src\services\sharing_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\client_service\ClientService.h">
+      <Filter>src\services\client_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\DepartmentInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\client_service\LoginInfo.h">
+      <Filter>src\services\client_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\client_service\ServerInfo.h">
+      <Filter>src\services\client_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IAudioService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\ICalendarService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IFileTransferService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\ISharingService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IVideoService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\AppMessageType.h">
+      <Filter>src\components\parser\msg_parser\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\MessageParser.h">
+      <Filter>src\components\parser\msg_parser\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\MessageStream.h">
+      <Filter>src\components\parser\msg_parser\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\UCMessage.h">
+      <Filter>src\components\parser\msg_parser\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\UCMessageType.h">
+      <Filter>src\components\parser\msg_parser\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\UCParserDef.h">
+      <Filter>src\components\parser\msg_parser\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\UCParserErrorCode.h">
+      <Filter>src\components\parser\msg_parser\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\utils\ThreadPool.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\AccountDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\AppDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\ConferenceDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\ConfigDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\ContactDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\CppSQLite3.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\DBManager.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\DBManagerDef.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\GroupDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\MessageDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\SQLConfig.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\SQLiteManager.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactEventDispatcher.h">
+      <Filter>src\services\contact_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactMsgProcessor.h">
+      <Filter>src\services\contact_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactRequestFactory.h">
+      <Filter>src\services\contact_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactResponseParser.h">
+      <Filter>src\services\contact_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\DefaultContactEventDispatcher.h">
+      <Filter>src\services\contact_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\utils\Macro.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\CalendarData.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\ContactTag.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\message_service\IMService.h">
+      <Filter>src\services\message_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IGroupService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IIMService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\ContactInfoImpl.h">
+      <Filter>src\services\contact_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\utils\TaskExecutor.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\network\TaskExecutorCallback.h">
+      <Filter>src\components\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\message_service\GroupService.h">
+      <Filter>src\services\message_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\CalendarRequestFactory.h">
+      <Filter>src\services\calendar_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\CalendarMsgProcessor.h">
+      <Filter>src\services\calendar_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\DBUpgrade.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\UCErrorCode.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\ConversationDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\ICalendarParser\date.h">
+      <Filter>src\services\calendar_service\ICalendarParser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\ICalendarParser\icalendar.h">
+      <Filter>src\services\calendar_service\ICalendarParser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\calendar_service\ICalendarParser\element.h">
+      <Filter>src\services\calendar_service\ICalendarParser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\message_service\MessageProcessor.h">
+      <Filter>src\services\message_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\ConversationInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\network\UCASConnection.h">
+      <Filter>src\components\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\utils\UCTime.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\MessageInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\AccountInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\DocumentInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\GroupInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\search_service\SearchService.h">
+      <Filter>src\services\search_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\audio_service\CallDef.h">
+      <Filter>src\services\audio_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\store_service\StoreService.h">
+      <Filter>src\services\store_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\store_service\MessageStore.h">
+      <Filter>src\services\store_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\utils\md5\md5.h">
+      <Filter>src\base\md5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\client_service\ConversationInfoInternal.h">
+      <Filter>src\services\client_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\contact_cache\ContactCache.h">
+      <Filter>src\services\contact_service\contact_cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\contact_cache\ContactCacheListener.h">
+      <Filter>src\services\contact_service\contact_cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\contact_cache\RegularUpdatedCache.h">
+      <Filter>src\services\contact_service\contact_cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\store_service\ConversationStore.h">
+      <Filter>src\services\store_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\FileTransferDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\base\HTTPRequest.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\base\HTTPRequestCallback.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\base\HTTPRequestEvent.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\base\HTTPResponse.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\UCSDK.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\common\CommonDef.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\audio_service\CallResponseAssist.h">
+      <Filter>src\services\audio_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\audio_service\CallRequestAssist.h">
+      <Filter>src\services\audio_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\contact_service\contact_cache\ContactDelayLoader.h">
+      <Filter>src\services\contact_service\contact_cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\ConferenceDef.h">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\ConferenceSink.h">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\ConferenceWrapper.h">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\TangUser.h">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\audio_service\ConferenceLibraryAssist.h">
+      <Filter>src\services\audio_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\utils\HTTPResponseAssist.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\UCFile.h">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\Task.h">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\ProxyInfoDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\FSDef.h">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\FSRequestAssist.h">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\FSResponseAssist.h">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\microblog_service\MicroblogService.h">
+      <Filter>src\services\microblog_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IMicroblogService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IOpenApiService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\openapi_service\OpenApiService.h">
+      <Filter>src\services\openapi_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\AppInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\utils\jsonhelper.h">
+      <Filter>src\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\store_service\GroupListStore.h">
+      <Filter>src\services\store_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\client_service\PasswordRule.h">
+      <Filter>src\services\client_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\FileHelp.hpp">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\filetransfer_service\ResidentThread.hpp">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\client_service\ProxyInfo.h">
+      <Filter>src\services\client_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\store_service\MessageReadStore.h">
+      <Filter>src\services\store_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\MessageReadInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\parser\msg_parser\include\uc_types.h">
+      <Filter>src\components\parser\msg_parser\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\network\MessageQueue.h">
+      <Filter>src\components\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\network\QueuedNetWorkManager.h">
+      <Filter>src\components\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\base\Timer.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\KeyValueDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\external_service\ExternalService.h">
+      <Filter>src\services\external_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IExternalService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\ExternalInfo.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\ExternalDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\AudioServiceSink.h">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\VideoServiceSink.h">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\conferencesdk\SharingServiceSink.h">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\pbx_service\PbxService.h">
+      <Filter>src\services\pbx_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IPbxService.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\components\db\include\PbxDao.h">
+      <Filter>src\components\db\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\pbx_service\PbxErrorCode.h">
+      <Filter>src\services\pbx_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\ISearchService.h">
+	<Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\utils\CrypWrapper.h">
+      <Filter>src\base</Filter>
+	</ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\bbs_service\BBSService.h">
+      <Filter>src\services\bbs_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\IBBSService.h">
+	<Filter>include</Filter>
+	</ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\pbx_service\TasksMgr.h">
+      <Filter>src\services\pbx_service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\services\client_service\IBee2MeetingPlugin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\UCEngine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\network\HTTPRequest.cpp">
+      <Filter>src\components\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\network\HTTPResponse.cpp">
+      <Filter>src\components\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\network\NetworkManager.cpp">
+      <Filter>src\components\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\test\unit_test\NetworkManagerTest.cpp">
+      <Filter>test\unit_test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\audio_service\AudioService.cpp">
+      <Filter>src\services\audio_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\CalendarService.cpp">
+      <Filter>src\services\calendar_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactService.cpp">
+      <Filter>src\services\contact_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactInfo.cpp">
+      <Filter>src\services\contact_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\filetransfer_service\FileTransferService.cpp">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\video_service\VideoService.cpp">
+      <Filter>src\services\video_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\sharing_service\SharingService.cpp">
+      <Filter>src\services\sharing_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\client_service\ServerInfo.cpp">
+      <Filter>src\services\client_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\AppMessageType.cpp">
+      <Filter>src\components\parser\msg_parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\MessageParser.cpp">
+      <Filter>src\components\parser\msg_parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\MessageStream.cpp">
+      <Filter>src\components\parser\msg_parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\UCMessageType.cpp">
+      <Filter>src\components\parser\msg_parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\utils\ThreadPool.cpp">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\network\HTTPRequestEvent.cpp">
+      <Filter>src\components\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\network\HTTPHandler.cpp">
+      <Filter>src\components\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\AccountDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\AppDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\ConferenceDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\ConfigDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\ContactDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\CppSQLite3.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\DBManager.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\GroupDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\MessageDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\SQLiteManager.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactEventDispatcher.cpp">
+      <Filter>src\services\contact_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactMsgProcessor.cpp">
+      <Filter>src\services\contact_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactRequestFactory.cpp">
+      <Filter>src\services\contact_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactResponseParser.cpp">
+      <Filter>src\services\contact_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\DefaultContactEventDispatcher.cpp">
+      <Filter>src\services\contact_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactTag.cpp">
+      <Filter>src\services\contact_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\message_service\IMService.cpp">
+      <Filter>src\services\message_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\message_service\GroupInfo.cpp">
+      <Filter>src\services\message_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\message_service\GroupServiceResponse.cpp">
+      <Filter>src\services\message_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\ContactInfoImpl.cpp">
+      <Filter>src\services\contact_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\client_service\ClientService.cpp">
+      <Filter>src\services\client_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\message_service\DocumentInfo.cpp">
+      <Filter>src\services\message_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\utils\TaskExecutor.cpp">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\message_service\GroupService.cpp">
+      <Filter>src\services\message_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\message_service\GroupServiceNotify.cpp">
+      <Filter>src\services\message_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\message_service\GroupServiceRequest.cpp">
+      <Filter>src\services\message_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\UCMessage.cpp">
+      <Filter>src\components\parser\msg_parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\CalendarRequestFactory.cpp">
+      <Filter>src\services\calendar_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\CalendarMsgProcessor.cpp">
+      <Filter>src\services\calendar_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\DBUpgrade.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\ConversationDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\ICalendarParser\date.cpp">
+      <Filter>src\services\calendar_service\ICalendarParser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\ICalendarParser\icalendar.cpp">
+      <Filter>src\services\calendar_service\ICalendarParser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\calendar_service\ICalendarParser\element.cpp">
+      <Filter>src\services\calendar_service\ICalendarParser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\message_service\MessageProcessor.cpp">
+      <Filter>src\services\message_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\network\UCASConnection.cpp">
+      <Filter>src\components\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\message_service\MessageInfo.cpp">
+      <Filter>src\services\message_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\search_service\SearchService.cpp">
+      <Filter>src\services\search_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\store_service\MessageStore.cpp">
+      <Filter>src\services\store_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\store_service\StoreService.cpp">
+      <Filter>src\services\store_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\contact_cache\RegularUpdatedCache.cpp">
+      <Filter>src\services\contact_service\contact_cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\store_service\ConversationStore.cpp">
+      <Filter>src\services\store_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\FileTransferDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\audio_service\CallResponseAssist.cpp">
+      <Filter>src\services\audio_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\audio_service\CallRequestAssist.cpp">
+      <Filter>src\services\audio_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\utils\md5\md5.cpp">
+      <Filter>src\base\md5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\utils\Timer.cpp">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\contact_service\contact_cache\ContactDelayLoader.cpp">
+      <Filter>src\services\contact_service\contact_cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\ConferenceSink.cpp">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\ConferenceWrapper.cpp">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\TangUser.cpp">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\audio_service\ConferenceLibraryAssist.cpp">
+      <Filter>src\services\audio_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\utils\HTTPResponseAssist.cpp">
+      <Filter>src\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\filetransfer_service\UCFile.cpp">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\filetransfer_service\Task.cpp">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\ProxyInfoDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\filetransfer_service\FSRequestAssist.cpp">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\filetransfer_service\FSResponseAssist.cpp">
+      <Filter>src\services\filetransfer_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\microblog_service\MicroblogService.cpp">
+      <Filter>src\services\microblog_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\openapi_service\OpenApiService.cpp">
+      <Filter>src\services\openapi_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\store_service\GroupListStore.cpp">
+      <Filter>src\services\store_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\client_service\LoginInfo.cpp">
+      <Filter>src\services\client_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\store_service\MessageReadStore.cpp">
+      <Filter>src\services\store_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\parser\msg_parser\src\uc_types.cpp">
+      <Filter>src\components\parser\msg_parser\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\network\MessageQueue.cpp">
+      <Filter>src\components\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\network\QueuedNetWorkManager.cpp">
+      <Filter>src\components\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\KeyValueDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\external_service\ExternalService.cpp">
+      <Filter>src\services\external_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\ExternalDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\AudioServiceSink.cpp">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\VideoServiceSink.cpp">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\conferencesdk\SharingServiceSink.cpp">
+      <Filter>src\components\conferencesdk</Filter>
+    </ClCompile>    
+    <ClCompile Include="..\..\..\..\src\services\bbs_service\BBSService.cpp">
+      <Filter>src\services\bbs_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\services\pbx_service\PbxService.cpp">
+      <Filter>src\services\pbx_service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\components\db\src\PbxDao.cpp">
+      <Filter>src\components\db\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\utils\CrypWrapper.cpp">
+      <Filter>src\base</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

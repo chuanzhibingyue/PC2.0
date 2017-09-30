@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>video Previewer</title>
+    <link href="../css/video_previewer.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/videoPreviewer.js"></script>
+</head>
+<body>
+<div class="body-container">
+    <span class="icon-preview-close"></span>
+    <div class="image-container">
+        <video controls="" autoplay="" name="media">
+            <source src="../video/xhr.mp4" type="video/mp4"/>
+        </video>
+        <div class="videoControls"></div>
+    </div>
+    <div class="control-container">
+        <span class="control-btn previous disabled"></span>
+        <span class="control-btn next disabled"></span>
+        <span class="control-btn download"></span>
+        <span class="control-btn rotate"></span>
+    </div>
+</div>
+</body>
+</html>

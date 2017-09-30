@@ -1,0 +1,89 @@
+<div class="btn-wrapper">
+    <button class="btn" ng-class="{active: vm.viewStatus == 'downloading'}" ng-click="vm.changeView('downloading')">正在下载</button>
+    <button class="btn" ng-class="{active: vm.viewStatus == 'complete'}" ng-click="vm.changeView('complete')">已完成</button>
+</div>
+
+<div ng-if="vm.viewStatus == 'downloading'">
+    <div class="toolbar">
+        <a class="tool-item" ng-click="vm.startAll()">
+            <span class="fa fa-play"></span>
+            <span>全部开始</span>
+        </a>
+        <a class="tool-item" ng-click="vm.pauseAll()">
+            <span class="fa fa-pause"></span>
+            <span>全部暂停</span>
+        </a>
+        <a class="tool-item" ng-click="vm.clearAll()">
+            <span class="fa fa-times"></span>
+            <span>全部取消</span>
+        </a>
+    </div>
+
+    <div class="transfer-content">
+        <ul infinite-scroll-disabled="!vm.canDownloadLoad || vm.downloadLoading"
+            infinite-scroll-parent="true" infinite-scroll="vm.downloadList(vm.downloadStart)"
+            infinite-scroll-distance="1" infinite-scroll-immediate-check="false">
+            <li ng-repeat="item in vm.downloadItems" class="transfer-item">
+                <div class="item-icon file-icon-28 icon-{{item.fileicon}}-28"></div>
+                <div class="item-info">
+                    <div class="item-name" title="{{item.filename}}">{{item.filename}}</div>
+                    <div class="item-progressbar" ng-style="{width: item.progress}" ng-if="item.dir == 0"></div>
+                </div>
+                <div class="item-size">{{item.humansize}}</div>
+                <div class="item-status">
+                    <span class="transfer-status" ng-if="item.status == 1" ng-bind="item.timeLeft"></span>
+                    <span class="transfer-status" ng-if="item.status == 2">等待传输</span>
+                    <span class="transfer-status" ng-if="item.status == 3">已暂停</span>
+                    <span class="transfer-status" ng-if="item.status == 4">完成</span>
+                    <span class="transfer-status" title="{{item.errormsg ? item.errormsg : '未知错误'}}" ng-bind="item.errormsg ? item.errormsg : '未知错误'" ng-if="item.status == 5" style="color:#f00"></span>
+                </div>
+                <div class="item-act">
+                    <span ng-if="item.status == 1 || item.status == 2" class="fa fa-pause" style="color: #7d8999;" ng-click="vm.pauseDownload(item)"></span>
+                    <span ng-if="item.status == 3" class="fa fa-play-circle" style="color: #438ce8;" ng-click="vm.startDownload(item)"></span>
+                    <span ng-if="item.status == 5" class="fa fa-repeat" style="color: #54af76;" ng-click="vm.startDownload(item)"></span>
+                </div>
+                <div class="item-act">
+                    <span class="fa fa-times" ng-click="vm.clearDownload(item)" ng-if="item.sync != 1" style="color: #7d8999;"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div ng-if="vm.viewStatus == 'complete'">
+    <div class="toolbar">
+        <a class="tool-item" ng-click="vm.clearDownloaded()">
+            <span class="fa fa-trash"></span>
+            <span>清除下载历史</span>
+        </a>
+    </div>
+
+    <div class="transfer-content">
+        <ul infinite-scroll-disabled="!vm.canDownloadedLoad || vm.downloadedLoading"
+            infinite-scroll-parent="true" infinite-scroll="vm.downloadedList(vm.downloadedStart)"
+            infinite-scroll-distance="1" infinite-scroll-immediate-check="false">
+            <li ng-repeat="item in vm.downloadedItems" class="transfer-item">
+                <div class="item-icon file-icon-28 icon-{{item.fileicon}}-28"></div>
+                <div class="item-info">
+                    <div class="item-name" style="height: 45px;line-height: 45px;">{{item.filename}}</div>
+                </div>
+                <div class="item-size" style="width: 150px;">{{item.humansize}}</div>
+                <!--<div class="item-place" ng-click="vm.goToLocal(item)">-->
+                    <!--<span>本地位置</span>-->
+                <!--</div>-->
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="transfer-footer">
+    <div style="display: inline-block;">
+        <span>上传速度：</span>
+        <span>{{vm.uploadSpeed | transferSpeed}}</span>
+    </div>
+    <div style="display: inline-block;">
+        <span>下载速度：</span>
+        <span>{{vm.downloadSpeed | transferSpeed}}</span>
+    </div>
+</div>

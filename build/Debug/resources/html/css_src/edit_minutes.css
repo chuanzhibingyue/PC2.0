@@ -1,0 +1,114 @@
+.create_minutes{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 95%;
+}
+.create_minutes .window-bar{
+    height: 40px;
+}
+.create_minutes .title{
+    line-height: 40px;
+    color: #3b4f61;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.create_minutes .minutes-title{
+    font-size: 18px;
+    margin-top: 22px;
+    margin-left: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #adadad;
+    margin-right: 20px;
+}
+.create_minutes .getDiscussion{
+    height: 36px;
+    margin-top: 3px;
+    border-bottom: 1px solid #ededed;
+}
+.create_minutes .toolTitle{
+    margin-left: 20px;
+    font-size: 12px;
+    color:#999999;
+}
+.create_minutes .fontFamily{
+    margin-left: 65px;
+}
+.create_minutes .section{
+    margin-left: 95px;
+}
+.create_minutes .minutes-userName{
+    color:#71aee2;
+}
+.create_minutes .minutes-create{
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.create_minutes .cancel-minutes{
+    width:105px;
+    height:32px;
+    border-radius: 2px;
+    background-color:#ededed;
+    color:#3b4f61;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    margin-right: 10px;
+    display: block;
+    cursor: pointer;
+    float: left;
+}
+.create_minutes .cancel-minutes:hover{
+    background-color:#eeeeee;
+
+}
+.create_minutes .cancel-minutes:active{
+    background-color:#d4d4d4;
+
+}
+.create_minutes .release-minutes{
+    width:164px;
+    height:32px;
+    border-radius: 2px;
+    background-color:#4f667b;
+    color:#ffffff;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    float: right;
+}
+
+.create_minutes .release-minutes:hover{
+    background-color:#607588;
+}
+
+.create_minutes .release-minutes:active{
+    background-color:#465b6e;
+}
+.create_minutes .color-minutes{
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000000), to(rgba(0, 0, 0, 0)));
+    height: 3px;
+    opacity: 0.1;
+}
+.create_minutes .left-minutes{
+    height: 60px;
+    position: absolute;
+    width: 1px;
+    border-left: 1px solid #f7f7f7;
+    left: 96px;
+    top: 42px;
+}
+.create_minutes .right-minutes{
+    height: 60px;
+    position: absolute;
+    width: 1px;
+    border-left: 1px solid #f7f7f7;
+    left: 210px;
+    top: 42px;
+}

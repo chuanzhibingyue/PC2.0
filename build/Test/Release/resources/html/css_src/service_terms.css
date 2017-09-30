@@ -1,0 +1,55 @@
+.service-terms{
+    width: 560px;
+    height: 685px;
+    background-color: #ffffff;
+}
+.title{
+    color:#3b4f61;
+    font-size: 14px;
+    margin: 13px 0 13px 10px;
+}
+.line{
+    width: 100%;
+    border-bottom: solid 1px #dadada;
+}
+.setting-pic{
+    position: absolute;
+    top: 70px;
+    left: 200px;
+
+}
+.version-num{
+    position: absolute;
+    top:147px;
+    left: 280px;
+    font-size: 12px;
+    color: #4a4a4a;
+}
+.words{
+    position: absolute;
+    top:170px;
+    left: 210px;
+    font-size: 32px;
+    color: #4a4a4a;
+    font-family: STYuanti-SC-Light,serif;
+}
+.detail{
+    position: absolute;
+    top: 220px;
+    font-size: 14px;
+    width: 500px;
+    height: 420px;
+    color: #3b4f61;
+    margin: 0 30px 5px 30px;
+    overflow-y: scroll;
+    padding-right: 25px;
+}
+::-webkit-scrollbar {
+    width:4px;
+
+}
+.tool-icon-container{
+    /*z-index: 2;*/
+    /*top: 30px;*/
+    /*right: 30px;*/
+}

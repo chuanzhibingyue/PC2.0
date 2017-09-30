@@ -1,0 +1,100 @@
+.code-preview{
+    font-size: 14px;
+    width: 640px;
+    height: 620px;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: white;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.code-preview .code-title{
+    height: 15px;
+    text-align: left;
+    padding: 12px 20px;
+    color: #3b4f61;
+    font-size: 16px;
+}
+
+.code-preview .code-title .code-icon{
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    width: 48px;
+    height: 56px;
+}
+.code-preview .code-title .file-ext{
+    font-size: 7px;
+    color: white;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+    margin-left: -1px;
+    width: 33px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-transform: scaleY(1.8);
+}
+
+.code-preview .code-title .name{
+    position: absolute;
+    left: 71px;
+    color: #3b4f61;
+    top: 14px;
+}
+
+.code-preview .code-title .detail{
+    font-size: 12px;
+    width: 300px;
+    position: absolute;
+    left: 72px;
+    top: 38px;
+}
+.code-preview .code-title .type{
+    color: #71aee2;
+    float: left;
+}
+
+.code-preview .code-title .size{
+    float: left;
+    margin-left: 10px;
+    color: #999999;
+}
+
+
+.code-preview .code-body{
+    position: absolute;
+    left: 15px;
+    top: 80px;
+    width: 610px;
+    height: 525px;
+    border: 1px solid rgb(205, 212, 218);
+}
+.code-preview .code-frame{
+    position: absolute;
+    top: 2px;
+    width: 609px;
+    height: 522px;
+}
+
+.code-preview .tool-icon-container{
+	position: absolute;
+	height: 10px;
+	top: 10px;
+	right: 10px;
+}
+.code-preview .tool-icon-container .tool-icon{
+	font-size: 10px;
+	color: #6c7d8b;
+	padding: 4px;
+	cursor: pointer;
+}
+.code-preview .tool-icon-container .icon-close:hover{
+	background-color: red;
+	color: #ffffff;
+}

@@ -1,0 +1,20 @@
+﻿Build started 2016/6/8 14:06:13.
+     1>Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\prj\LogManager.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"../../../third_party/google-glog/include" /I../../../third_party/common/include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D LOG_EXPORTS /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\LogManager.cpp
+         LogManager.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(90): warning C4251: 'uc::LogStream::_stream' : class 'std::basic_stringstream<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::LogStream'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\third_party\log_manager\LogManager.h(106): warning C4251: 'uc::Log::_file' : class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'uc::Log'
+     1>..\LogManager.cpp(187): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\lib\windows\LogManager.dll" /INCREMENTAL /NOLOGO /LIBPATH:"../../../third_party/google-glog/lib/windows/Release" /LIBPATH:../../../third_party/common/lib/windows/Release common.lib glog.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\lib\windows\LogManager.pdb" /SUBSYSTEM:CONSOLE,"5.01" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"../lib/windows/LogManager.lib" /MACHINE:X86 /SAFESEH /DLL Release\LogManager.obj
+     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+            Creating library ../lib/windows/LogManager.lib and object ../lib/windows/LogManager.exp
+         Generating code
+         Finished generating code
+         LogManager.vcxproj -> E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\prj\..\lib\windows\LogManager.dll
+     1>Done Building Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\third_party\log_manager\prj\LogManager.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.47

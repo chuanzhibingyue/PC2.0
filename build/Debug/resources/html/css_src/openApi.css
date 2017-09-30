@@ -1,0 +1,248 @@
+.menu-panel-body.vertical.app{
+    background-color: #F7F7F7;
+}
+
+.no-app{
+    background: url(../images/openApi/noapp.png) no-repeat 50% 50%;
+}
+
+.no-app .open-api-container-wrap{
+    display: none;
+}
+
+.open-api-container{
+    margin: 0px 0px 0px 10px;
+}
+
+.open-api-container .open-api-item, .open-api-container .undefinedApp{
+    float: left;
+    width: 198px;
+    height: 128px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 5px #eee;
+}
+
+.open-api-container .undefinedApp{
+    border: 1px dashed #dadada;
+    background-color: #F7F7F7;
+}
+
+.open-api-container .open-api-item:hover{
+    background-color: #fffff3;
+    border:1px solid #dadada;
+}
+
+.open-api-container .open-api-item div:first-child{
+    position: relative;
+    white-space: nowrap;
+    margin-top: 25px;
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
+    overflow: hidden;
+}
+
+.open-api-container .open-api-item div:nth-child(2), .open-api-container .open-api-item div:nth-child(2) a{
+    font-size: 12px;
+    color: #71aee2;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.open-api-container .open-api-item div:nth-child(2) a:hover{
+    color: #4e8bbf;
+}
+
+.open-api-container .open-api-item div:nth-child(2) .split{
+    margin: 0px 10px;
+    color:#D7D7D7;
+}
+
+.open-api-container .open-api-item .msg-count{
+    display: none;
+    border-radius: 9px;
+    float: right;
+    top: 0;
+    font-size: 12px;
+    height: 18px;
+    line-height: 17px;
+    min-width: 18px;
+    text-align: center;
+    color: white;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#f96868), to(#d54a4a));
+}
+
+.open-api-container .open-api-item .msg-count.show-point, .open-api-container .open-api-item .msg-count.show-count{
+    display: block;
+}
+
+.open-api-container .open-api-item .msg-count.show-count.double{
+    padding: 0 3px;
+}
+
+.open-api-container .open-api-item .msg-count.show-point{
+    text-indent: 100px;
+    padding: 0;
+}
+
+.open-api-container .open-api-item div:first-child>span.open-app-name,
+.open-api-container .open-api-item div:first-child>span.open-app-intro{
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 130px;
+}
+
+.open-api-container .open-api-item div:first-child>span.open-app-name{
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    position: absolute;
+    color: #03111f;
+}
+
+.open-api-container .open-api-item div:first-child>span.open-app-intro{
+    font-size: 12px;
+    position: absolute;
+    top: 25px;
+    color: #666;
+}
+
+.open-api-container .open-api-item .open-app-logo{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    /*border: 1px solid #ccc;*/
+    /*box-shadow: 0 0 3px #ccc;*/
+    overflow: hidden;
+}
+
+.open-api-container .open-api-item .no-desc{
+    text-align: center;
+}
+.open-api-container .open-api-item .no-desc .open-app-name{
+    display: inline-block;
+    height: 40px !important;
+    line-height: 40px !important;
+    position: relative !important;
+}
+.open-api-container .open-api-item .no-desc .open-app-intro{
+    display: none;
+}
+
+/* 应用最外层 */
+.open-api-container-wrap{
+    position: absolute;
+    width:800px;
+    height: 515px;
+    left: 50%;
+    top: 50%;
+    margin-left: -370px;
+    margin-top: -230px;
+}
+
+/* 上一页，下一页 */
+.open-api-container-wrap .open-api-container-prev, .open-api-container-wrap .open-api-container-next{
+    width: 30px;
+    height: 470px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.open-api-container-wrap .open-api-container-prev{
+    float:left;
+    background:url(../images/openApi/prev.png) no-repeat 50%;
+    margin-left: 20px;
+}
+
+.open-api-container-wrap .open-api-container-next{
+    float: right;
+    background:url(../images/openApi/next.png) no-repeat 50%;
+    margin-right: 20px;
+}
+
+.open-api-container-wrap .open-api-container-prev:hover, .open-api-container-wrap .open-api-container-next:hover{
+    background-color: #ededed;
+}
+
+.open-api-container-wrap .open-api-container-prev.disabled, .open-api-container-wrap .open-api-container-next.disabled{
+    cursor: default;
+    background-color: transparent !important;
+}
+
+/* 应用列表 */
+.open-api-container-wrap .open-api-container-apps{
+    float: left;
+    width: 700px;
+    height: 470px;
+    overflow: hidden;
+    /*margin-left: 10px;*/
+}
+
+/*  页码  */
+.open-api-container-wrap .page-num{
+    height: 20px;
+    line-height: 40px;
+    width: 100%;
+    clear: both;
+    text-align: center;
+}
+
+.open-api-container-wrap .page-num div{
+    display: inline-block;
+    margin-left: 20px;
+    width: 10px;
+    height: 10px;
+    background-color: #dadada;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.open-api-container-wrap .page-num div:hover{
+    background-color: #999999;
+}
+
+.open-api-container-wrap .page-num div.active, .open-api-container-wrap .page-num div.active:hover{
+    background-color: #FFC302;
+    cursor: default;
+}
+
+/* app-wrap */
+.open-api-container-wrap .open-api-apps-wrap{
+    width: 700px;
+    height: 470px;
+    /*transition: all 0.5s linear;*/
+}
+
+.open-api-container-wrap .app-wrap{
+    display: inline-block;
+    width: 700px;
+    height: 470px;
+}
+
+.open-api-loading{
+    position:absolute;
+    width:100%;
+    /*height:100%;*/
+    /*background-color:rgba(247,247,247, 0.7);*/
+    z-index: 2;
+    text-align: center;
+    margin-top: -25px;
+}
+.open-api-loading img{
+    margin-left: -80px;
+}
+
+.open-api-loading .conversation-loading{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -116px;
+    margin-left: -80px;
+}

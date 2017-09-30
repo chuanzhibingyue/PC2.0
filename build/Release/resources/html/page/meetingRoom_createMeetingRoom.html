@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <link href="../css/meetingRoom_createMeetingRoom.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/meetingRoom_createMeetingRoom.js"></script>
+    <title>meetingRoom_createMeetingRoom</title>
+</head>
+<body>
+<div class="meetingRoom-createMeetingRoom child-window-shadow">
+    <div class="windowTitle"></div>
+    <div class="RoomContent">
+        <div class="roomName inputContent">
+            <div class="title"><span>{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomNameInputTitle}}</span><span class="roomNameCount fr">0/30</span></div>
+            <div class="clear"></div>
+            <input type="text" class="roomNameInput" placeholder="{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomNameInputPlaceholder}}">
+        </div>
+
+        <div class="roomExpiryDate inputContent">
+            <div class="title"><span>{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomExpiryDateInputTitle}}</span></div>
+            <div class="clear"></div>
+            <div class="timeBox startTimeBox">
+                <span class="timeBoxTitle">{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomExpiryDateStartTime}}</span>
+            </div>
+            <div class="timeBox endTimeBox">
+                <span class="timeBoxTitle">{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomExpiryDateEndTime}}</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="roomHost inputContent">
+            <div class="title"><span>{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomHostInputTitle}}</span></div>
+            <div class="clear"></div>
+            <div class="roomHostContent adduserContent">
+                <input type="text" class="roomHostInput adduserInput" placeholder="{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.changeroomHost}}">
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="defaultAttendee inputContent">
+            <div class="title"><span>{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomDefaultAttendeeInputTitle}}</span>
+                <span class="batchAdd fr">
+                    <a href="javascript:void(0)" action="roomDefaultAttendeeBatchAdd">{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomDefaultAttendeeBatchAdd}}</a>
+                </span>
+            </div>
+            <div class="clear"></div>
+            <div class="defaultAttendeeContent adduserContent">
+                <input type="text" class="defaultAttendeeInput adduserInput" placeholder="{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomDefaultAttendeeInputPlaceholder}}">
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="roomCheckboxs inputContent">
+            <div class="checkbox-parent defaultAttendsVisible">
+                <input type="checkbox" class="hide" >
+                <label type="1"><span></span></label>
+                <span class="words">{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomCheckBox.defaultAttendsVisible}}</span>
+            </div>
+            <div class="checkbox-parent defaultAttendsJoin">
+                <input type="checkbox" class="hide" >
+                <label type="2"><span></span></label>
+                <span class="words">{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomCheckBox.defaultAttendsJoin}}</span>
+            </div>
+            <div class="checkbox-parent isSetPassword">
+                <input type="checkbox" class="hide" >
+                <label type="3"><span></span></label>
+                <span class="words">{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomCheckBox.isSetPassword}}</span>
+            </div>
+            <input type="password" class="passwordInput hide" placeholder="{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.passwordInputPlaceholder}}"/>
+        </div>
+
+        <div class="roomRemark inputContent">
+            <div class="title"><span>{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomRemarkInputTitle}}</span></div>
+            <textarea class="" rows="3" maxlength="500" placeholder="{{Meeting.meetingRoom.createOrEditMeetingRoomPanle.roomRemarkInputPlaceholder}}"></textarea>
+        </div>
+
+    </div>
+    <div class="meetingRoom-save">
+        <a href="javascript:void(0);" id="createorEditMeetingRoomCancel" class="btn-uikit btn-gray">{{Common.Cancel}}</a>
+        <a href="javascript:void(0);" id="createorEditMeetingSave" class="btn-uikit btn-dark disabled">{{Common.OK}}</a>
+    </div>
+    <div class="tool-icon-container">
+        <span class="icon-close tool-icon"></span>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<div class="lib-member-wrapper">
+    <div class="member-header">
+        <span translate>库成员({{membercount}})</span>
+        <div class="member-add" ng-click="addLibMember()" ng-if="mount.entid > 0">
+            <i class="icon-plus member-icon"></i>
+            <span>添加成员</span>
+        </div>
+    </div>
+    <div class="member-search" ng-click="goToSearch($event)">
+        <i ng-click="searchMember(memberText)" style="cursor: pointer;" class="icon-search fa fa-search"></i>
+        <input type="text" class="seach-input" ng-model="memberText" placeholder="{{'搜索'|translate}}" ng-blur="blurSearch($event)"/>
+        <i ng-mousedown="clearSearch($event)" style="cursor: pointer;" class="member-icon fa fa-times-circle" ng-show="memberText && !searching"></i>
+        <i class="member-icon fa fa-spinner fa-pulse" ng-show="searching"></i>
+    </div>
+
+    <div ng-show="!searchMembers">
+
+        <div class="member-body" ng-class = "{'member-body-personal-mount': mount.entid == 0}">
+            <ul>
+                <li ng-repeat="member in members" class="member-item" context-menu="onContextMenuShow($event,member)" data-target="member-right-menu" context-menu-margin-bottom="20">
+                    <div class="member-avatar">
+                        <avatar user-id="{{member.out_id}}" member-id="{{member.member_id}}" ent-id="{{entId}}"></avatar>
+                    </div>
+                    <div class="member-info">
+                        <p ng-bind="member.member_name" class="member-name"></p>
+                        <p ng-bind="member.roleName" class="member-role"></p>
+                    </div>
+                    <div class="member-dropdown" ng-if="(member.ent_id > 0 && member.role_id != -1)  || (member.ent_id == 0 && member.member_type > 0)" ng-click="showMenu($event)">
+                        <a class="dropdown-switch">
+                            <span class="fa fa-bars"></span>
+                        </a>
+                        <ul class="dropdown-menu position-fixed right-menu member-context-menu" id="member-right-menu-{{member.member_id}}">
+                            <li>
+                                <a ng-click="changeRole(member)">修改角色</a>
+                            </li>
+                            <li>
+                                <a ng-click="removeMember(member)">从库中移除</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+
+        </div>
+        <div class="member-footer">
+            <div class="member-nav">
+                <a class="nav-btn" ng-click="prevMember()"><i class="fa fa-chevron-left"></i></a>
+                <div class="nav-form">
+                    <form ng-submit="jump()">
+                        <input type="text" ng-model="jumpPage" class="nav-input"/>
+                        <span>/</span>
+                        <span>{{pages}}</span>
+                    </form>
+                </div>
+                <a class="nav-btn" ng-click="nextMember()"><i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="searchMembers">
+        <div class="search-body member-body">
+            <div class="search-empty" ng-show="searchMembers.length == 0">搜索结果为空.</div>
+            <ul ng-show="searchMembers.length > 0">
+                <li ng-repeat="member in searchMembers track by $index" class="member-item">
+                    <div class="member-avatar">
+                        <avatar user-id="{{member.out_id}}" member-id="{{member.member_id}}"></avatar>
+                    </div>
+                    <div class="member-info">
+                        <p ng-bind="member.member_name" class="member-name"></p>
+                        <p ng-bind="member.roleName" class="member-role"></p>
+                    </div>
+                    <div class="member-dropdown" ng-click="showMenu($event)">
+                        <a class="dropdown-switch">
+                            <span class="fa fa-bars"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a ng-click="changeRole(member)">修改角色</a>
+                            </li>
+                            <li>
+                                <a ng-click="removeMember(member)">从库中移除</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="dropdown position-fixed right-menu member-context-menu" id="member-right-menu">
+    <ul class="dropdown-menu" role="menu">
+        <li>
+            <a class="pointer" href="javascript:void(0)" role="menuitem" tabindex="1" ng-click="changeRole(selectedMember)">修改角色</a>
+        </li>
+        <li>
+            <a class="pointer" href="javascript:void(0)" role="menuitem" tabindex="1" ng-click="removeMember(selectedMember)">从库中移除</a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,49 @@
+.body-container{
+    overflow: hidden;
+    background-color: rgba(00,00,00, .7);
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-user-select: none;
+}
+.body-container .icon-preview-close{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 32px;
+    height: 32px;
+    background: rgba(0,0,0, .4) url("../images/preview/icon_close.png") no-repeat center center ;
+    border-radius: 50%;
+    background-size: 16px 16px;
+    z-index: 1;
+    cursor: pointer;
+}
+.body-container .image-container{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.body-container .image-container video{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.body-container .control-container{
+    height: 40px;
+    width: 160px;
+    border-radius: 20px;
+    background-color: rgba(59,78,97, .8);
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 20px;
+    padding: 0 20px;
+}
+.body-container .control-container .control-btn{
+    width: 36px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

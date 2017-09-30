@@ -1,0 +1,253 @@
+.searchbar-dir {
+  width: 100%;
+  height: 28px;
+  position: relative;
+}
+.searchbar-dir .searchbar {
+  width: auto;
+  height: 26px;
+  border: solid 1px #EDEDED;
+  background: #F5F5F5;
+  border-radius: 2px;
+  line-height: 26px;
+  position: absolute;
+  padding: 0 20px 0 10px;
+  cursor: pointer;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+.searchbar-dir .searchbar:hover {
+  background: rgba(0, 0, 0, 0);
+}
+.searchbar-dir .searchbar .search_icon {
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 28px;
+  background: url(../images/contact/icon_search.png) center no-repeat;
+  background-size: 14px 14px;
+}
+.searchbar-dir .searchbar .search_delete {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff url(../images/contact/search_delete.png) center no-repeat;
+  right: 0;
+  top: 2px;
+}
+.searchbar-dir .searchbar .input {
+  -webkit-transition: width 0.2s ease-out;
+  font-size: 12px;
+  color: #03111f;
+  padding: 0;
+  width: 0;
+  height: 24px;
+  border: none;
+  margin-left: 20px;
+}
+.searchbar-dir .input_active {
+  border: solid 1px #ffcc00;
+  background: rgba(0, 0, 0, 0);
+}
+.searchbar-dir .input_active .input {
+  outline: none;
+  width: 100%;
+}
+.searchbar-dir .searchrlt {
+  min-height: 234px;
+  min-width: 300px;
+  width: 100%;
+  position: absolute;
+  text-align: left;
+  background: url(../images/contact/no-result.png) center no-repeat;
+  background-size: 180px 148px;
+  background-color: #ffffff;
+  z-index: 999999;
+  top: 30px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.searchbar-dir .searchrlt .highlight {
+  background-color: #fbf9aa;
+}
+.searchbar-dir .searchrlt .searchrlt_content {
+  min-height: 234px;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.searchbar-dir .searchrlt .list_header {
+  height: 24px;
+  line-height: 24px;
+  background-color: #f5f5f5;
+  font-size: 12px;
+}
+.searchbar-dir .searchrlt .list_header .header_title {
+  margin-left: 24px;
+  color: #03111f;
+}
+.searchbar-dir .searchrlt .list_header .header_btn {
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+  color: #666666;
+}
+.searchbar-dir .searchrlt .list_header .header_back_btn {
+  margin-left: 20px;
+  color: #666666;
+  background: url(../images/contact/return.png) left no-repeat;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.searchbar-dir .searchrlt .select {
+  cursor: pointer;
+  font-size: 12px;
+  color: #03111f;
+  padding: 0;
+  position: absolute;
+  right: 17px;
+  background-size: 14px 14px;
+  width: 14px;
+  height: 28px;
+}
+.searchbar-dir .searchrlt .select.checked {
+  background: url(../images/contact/checked.png) center no-repeat;
+}
+.searchbar-dir .searchrlt .select.un-checked {
+  background: url(../images/contact/unchecked.png) center no-repeat;
+}
+.searchbar-dir .searchrlt .select.disable-checked {
+  background: url(../images/contact/checked_and_disabled.png) center no-repeat;
+}
+.searchbar-dir .searchrlt .contact_item {
+  cursor: pointer;
+  height: 28px;
+  line-height: 28px;
+}
+.searchbar-dir .searchrlt .contact_item .avatar {
+  float: left;
+  margin: 4px 0 0 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.searchbar-dir .searchrlt .contact_item .avatar img {
+  width: 20px;
+  height: 20px;
+}
+.searchbar-dir .searchrlt .contact_item .item_content {
+  margin-left: 49px;
+  padding-right: 20px;
+  max-width: 260px;
+  height: 28px;
+  position: relative;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .wrapper .tooltip {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: -16px;
+  font-size: 12px;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(0, 0, 0, 0.4);
+  border: solid 0 #c3c3c3;
+  padding: 0 5px;
+  line-height: 1.5;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .wrapper:hover .tooltip {
+  display: inline-block !important;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .org {
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+  color: #03111f;
+  font-size: 12px;
+  display: inline-block;
+  max-width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .name {
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+  color: #03111f;
+  font-size: 12px;
+  display: inline-block;
+  max-width: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .department {
+  line-height: 28px;
+  height: 28px;
+  color: #666666;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 110px;
+  white-space: nowrap;
+  display: inline-block;
+}
+.searchbar-dir .searchrlt .contact_item .item_content .position {
+  line-height: 28px;
+  height: 28px;
+  overflow: hidden;
+  color: #666666;
+  font-size: 12px;
+  display: inline-block;
+  max-width: 50px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.searchbar-dir .searchrlt .timenews_item {
+  cursor: pointer;
+}
+.searchbar-dir .searchrlt .timenews_item .avatar {
+  float: left;
+  margin: 10px 0 0 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.searchbar-dir .searchrlt .timenews_item .avatar img {
+  width: 40px;
+  height: 40px;
+}
+.searchbar-dir .searchrlt .timenews_item .item_content {
+  margin-left: 80px;
+  padding-right: 20px;
+  width: 260px;
+  height: 80px;
+}
+.searchbar-dir .searchrlt .timenews_item .item_content .name {
+  line-height: 40px;
+  height: 30px;
+  color: #03111f;
+  font-size: 14px;
+}
+.searchbar-dir .searchrlt .timenews_item .item_content .name .time {
+  margin-left: 10px;
+  font-size: 10px;
+  color: #999999;
+}
+.searchbar-dir .searchrlt .timenews_item .item_content .desc {
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.searchbar-dir .searchrlt .timenews_item .item_content .desc span {
+  color: #03111f;
+  font-size: 12px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/edit_minutes.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/editMinutes.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="create_minutes child-window-shadow">
+    <div class="window-bar">
+        <span class="title">{{Meeting.AddMeetingSummary}}</span>
+        <div class="tool-icon-container">
+            <span class="icon-close tool-icon"></span>
+        </div>
+    </div>
+    <div class="color-minutes" style=""></div>
+    <div class="left-minutes" ></div>
+    <div class="right-minutes"></div>
+    <div class="toolTitle">
+        <span class="fontSize">{{Meeting.FontSize}}</span>
+        <span class="fontFamily">{{Meeting.FontFamily}}</span>
+        <span class="section">{{Meeting.Section}}</span>
+    </div>
+    <div class="getDiscussion">
+        <script id="discussion" type="text/plain" style="height:300px;margin-left:18px;margin-right:20px;"></script>
+    </div>
+    <div  class="minutes-title"><span class="minutes-userName"></span>{{Meeting.OthersMeetingSummary}}</div>
+    <div class="minutes-create">
+        <a class="cancel-minutes">{{Common.Cancel}}</a>
+        <a class="release-minutes">{{Common.Save}}</a>
+    </div>
+</div>
+</body>
+</html>

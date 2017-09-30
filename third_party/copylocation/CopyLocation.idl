@@ -1,0 +1,38 @@
+// CopyLocation.idl : IDL source for CopyLocation.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CopyLocation.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(A7847D3D-09F3-11D4-8F6D-0080AD87DD41),
+		dual,
+		helpstring("ICopyLocationShl Interface"),
+		pointer_default(unique)
+	]
+	interface ICopyLocationShl : IDispatch
+	{
+	};
+
+[
+	uuid(A7847D31-09F3-11D4-8F6D-0080AD87DD41),
+	version(1.0),
+	helpstring("CopyLocation 1.0 Type Library")
+]
+library COPYLOCATIONLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(A7847D3E-09F3-11D4-8F6D-0080AD87DD41),
+		helpstring("CopyLocationShl Class")
+	]
+	coclass CopyLocationShl
+	{
+		[default] interface ICopyLocationShl;
+	};
+};

@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{9f830033-caca-42f9-9b0c-96b69ecf0c08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{8314fd90-30b9-41fa-809b-e14fea4241b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RES">
+      <UniqueIdentifier>{0d9259e5-ea36-499d-93fc-402e0e98e25f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils\xml">
+      <UniqueIdentifier>{29361224-67b7-4118-a6ca-3019d8c341c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\service">
+      <UniqueIdentifier>{ee33c1d9-302c-4747-8c88-b3b3a6de4cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\assist">
+      <UniqueIdentifier>{76e92b57-e778-4e70-9b95-51a0f91f635f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gkclient">
+      <UniqueIdentifier>{00658985-5628-46f1-acac-aa666297767f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\service\ShareService">
+      <UniqueIdentifier>{ca424492-b4a2-47c5-9704-fd89e7d28fe8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\UCClient.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\UCExtension.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\NetworkAdapterUtil.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\FileUtil.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ClientScheme.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\Clipboard.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\third_party\pugixml\src\pugixml.cpp">
+      <Filter>src\utils\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\CalendarServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\CatchScreenServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ClientServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ContactServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\FileTransferServiceStratepy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GroupServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\IMServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ServiceObjectConversion.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SystemService.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\AudioServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SearchServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\Thumbnails.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Configuration.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\UCManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\Logger.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\assist\AudioServiceJSEventAssist.cpp">
+      <Filter>src\assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\assist\AudioServiceStrategyAssist.cpp">
+      <Filter>src\assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\assist\JSEventAssist.cpp">
+      <Filter>src\assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\NetworkMonitor.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\Environment.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MicroblogServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\OpenApiServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\CrashHandler.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\assist\FileTransferServiceJSEventAssist.cpp">
+      <Filter>src\assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\UpdateServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\Utils.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\PowerMonitor.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\HTTPProxy.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gkclient\GkClient.cpp">
+      <Filter>src\gkclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gkclient\GkClientMessage.cpp">
+      <Filter>src\gkclient</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ExternalServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PbxServiceStratepy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\assist\PbxServiceJSEventAssist.cpp">
+      <Filter>src\assist</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SharingServiceStrategy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SharingWnd.cpp">
+      <Filter>src\service\ShareService</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\BBSServiceStragegy.cpp">
+      <Filter>src\service</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\UCExtension.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\NetworkAdapterUtil.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\FileUtil.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\res\resource.h">
+      <Filter>RES</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ClientScheme.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\Clipboard.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\third_party\pugixml\src\pugiconfig.hpp">
+      <Filter>src\utils\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\third_party\pugixml\src\pugixml.hpp">
+      <Filter>src\utils\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\CalendarServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\CatchScreenServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ClientServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\IMServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ContactServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\FileTransferServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\GroupServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ServiceObjectConversion.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SystemService.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\AudioServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SearchServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\Thumbnails.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Configuration.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\UCManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\Logger.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\assist\AudioServiceJSEventAssist.h">
+      <Filter>src\assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\assist\AudioServiceStrategyAssist.h">
+      <Filter>src\assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\assist\JSEventAssist.h">
+      <Filter>src\assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\NetworkMonitor.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\UCDefs.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\Environment.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\MicroblogServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\OpenApiServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\CrashHandler.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\assist\FileTransferServiceJSEventAssist.h">
+      <Filter>src\assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\UpdateServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\Utils.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\PowerMonitor.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\HTTPProxy.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gkclient\GkClient.h">
+      <Filter>src\gkclient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gkclient\GkClientMessage.h">
+      <Filter>src\gkclient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gkclient\GkClientTask.h">
+      <Filter>src\gkclient</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ExternalServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PbxServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\assist\PbxServiceJSEventAssist.h">
+      <Filter>src\assist</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SharingServiceStrategy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\SharingWnd.h">
+      <Filter>src\service\ShareService</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\BBSServiceStragegy.h">
+      <Filter>src\service</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\res\UCClient.rc">
+      <Filter>RES</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\res\bee.ico">
+      <Filter>RES</Filter>
+    </None>
+    <None Include="bee.ico" />
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html ng-app="goukuai.createLib">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/vendor-bundle.css"/>
+    <link rel="stylesheet" href="styles/createLib-bundle.css"/>
+    <style>
+        html,body{
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="qs-dialog" ng-controller="initCtrl" disable-context-menu disable-backspace>
+    <div class="dialog create_lib_dialog">
+        <div class="dialog_content">
+            <div class="header">
+                <span>创建文件库</span>
+            </div>
+            <div class="body">
+                <form class="form-horizontal" >
+                    <div class="form-group" ng-if="showEnt">
+                        <label class="pull-left control-label">所属企业</label>
+                        <div class="btn-group dropdown" uib-dropdown="" style="">
+                            <button id="split-button" type="button" class="btn btn-default" ng-bind="lib.ent.ent_name"></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="uib-dropdown-menu dropdown-menu" role="menu" aria-labelledby="split-button">
+                                <li ng-repeat="ent in ents"><a href="javascript:;" ng-click="lib.ent=ent;lib.storagePoint = ent.storagePoints[0]">{{ent.ent_name}}</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="form-group" ng-class="{'no_label':!showEnt && !showStoragePoint}">
+                        <label for="lib_name" class="pull-left control-label" ng-if="showEnt || showStoragePoint">库名称</label>
+                        <div class="input-wrapper pull-left">
+                            <input auto-focus="true" type="text" ng-model="lib.name" class="form-control" id="lib_name" placeholder="输入文件库名称(最多20字)" maxlength="20" enable-enter-submit="createLib(lib)" />
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-if="showStoragePoint">
+                        <label class="pull-left control-label">存储节点</label>
+                        <div class="btn-group dropdown" uib-dropdown="">
+                            <button id="storage_point_button" type="button" class="btn btn-default" ng-bind="lib.storagePoint.name"></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="uib-dropdown-menu dropdown-menu" role="menu" aria-labelledby="storage_point_button">
+                                <li ng-repeat="storagePoint in lib.ent.storagePoints"><a href="javascript:;" ng-click="lib.storagePoint=storagePoint">{{storagePoint.name}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer clearfix btn-wrapper">
+                <button class="btn btn-primary pull-right" style="position: relative" disable ng-disabled="disableCreateBtn || createLoading" ng-click="createLib(lib)">
+                    <span ng-show="!createLoading">完成</span>
+                    <span ng-show="createLoading" us-spinner spinner-theme="smallBlack"></span>
+                </button>
+                <button class="btn btn-default pull-right" ng-click="closeModal()">取消</button>
+            </div>
+        </div>
+        <div class="dialog_content" ng-if="errorText">
+            <p ng-bind="errorText"></p>
+        </div>
+
+    </div>
+    <script src="scripts/vendor-bundle.js"></script>
+    <script src="scripts/createLib-bundle.js"></script>
+</body>
+</html>

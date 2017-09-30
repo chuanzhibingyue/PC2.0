@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="text/css" rel="stylesheet" href="theme/css/main.css" />
+	<link type="text/css" rel="stylesheet" href="theme/css/cover.css" />
+	<link type="text/css" rel="stylesheet" href="theme/css/txeditor.css" />
+	<link type="text/css" rel="stylesheet" href="theme/css/font-awesome.css" />
+	<link type="text/css" rel="stylesheet" href="thirdparty/cropper.min.css" />
+  <title></title>
+  <script src="thirdparty/jquery-1.11.3.js"></script>
+	<script src="thirdparty/angular.min.js"></script>
+	<script src="thirdparty/angular-animate.min.js"></script>
+	<script src="thirdparty/angular-sanitize.min.js"></script>
+	<script src="thirdparty/angular-translate.min.js"></script>
+	<script src="thirdparty/cropper.min.js"></script>
+	<!-- replace start-->
+	<script src="js/app.js"></script>
+	<!-- 第一引入services -->
+	<script src="js/services/native.js"></script>
+	<script src="js/services/notices.js"></script>
+	<script src="js/services/api.js"></script>
+	<script src="js/services/utils.js"></script>
+	<script src="js/services/pages.js"></script>
+	<script src="js/services/log.js"></script>
+	<!-- 第二入directives -->
+	<script src="js/directives/notice_alert.js"></script>
+	<script src="js/directives/cropper.js"></script>
+
+	<!-- 第三入controllers -->
+	<script src="js/controllers/cover_controller.js"></script>
+	<!-- replace end-->
+<body>
+	<div ng-controller='CoverCtrl'>
+		<div class="coverPage">
+			<i class="close" ng-click = "onClose()"></i>
+			<div class="title">选择封面</div>
+			<div class="shadow"></div>
+			<div class="coversContainer">
+				<p>默认封面</p>
+				<div class="covers">
+					<div ng-repeat="defaultCover in defaultCovers" class="coversWrapper" ng-click="selectCover($index)" ng-class="{'selected':$index===selectedCover.index}">
+						<div class="cover">
+							<img ng-src="{{defaultCover.url}}"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="customizeContainer">
+				<p>自定义封面</p>
+				<div class="upload" ng-click="updateCover()">
+					<i class="uploadIcon"></i>
+				</div>
+			</div>
+			<div class="bottomBtns">
+				<button class="btnConfirm btn" ng-click="onSave()" >确定</button>
+			</div>
+			<div class="coverOptionDialog" ng-if="showCoverOptions">
+				<i class="close" ng-click = "toggleCoverOptionDialog()"></i>
+				<div class="tips">添加封面</div>
+				<div class="divideline"></div>
+				<div class="coverOptions">
+					<div class="cropper_area">
+						<cropper img-src="tempCover" cropper="cropper"/>
+					</div>
+				</div>
+				<button class="updateBtn btn" ng-click="updateCover()">重新选择</button>
+				<div class="bottomBtns">
+					<button class="btnConfirm btn" ng-click="saveCover()" >确定</button>
+					<button class="btnCancel btn" ng-click="cancelUpload()" >取消</button>
+				</div>
+
+				<!--<a class="btnConfirm" href="javascript:;"><input type="file"  ng-click="updateCover()"  id="coverFileInput"/>确定</a>-->
+			</div>
+			<div class="loadingLayout" ng-show="showLoading"></div>
+		</div>
+
+	</div>
+	<div notice-alert></div>
+</body>

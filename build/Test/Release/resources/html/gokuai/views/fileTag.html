@@ -1,0 +1,17 @@
+<div class="gk-dialog-header">
+    设置标签
+</div>
+<div class="gk-dialog-content">
+    <div ng-if="!tags.length" class="tag-empty">没有标签</div>
+    <ul class="clearfix">
+        <li ng-repeat="tag in tags" class="tag-item">
+            <span class="tag-name">{{tag}}</span>
+            <span ng-click="removeTag($event, $index)" class="fa fa-times icon-close"></span>
+        </li>
+    </ul>
+    <div class="input-wrapper">
+        <label class="title">添加标签</label>
+        <input class="tag-input" type="text" placeholder="每个标签不超过140个字" enable-enter-submit="addTag($event, newTag)" auto-blur="{{autoBlur}}" maxlength="140" ng-model="newTag"/>
+        <span class="tag-btn" ng-click="addTag($event, newTag)">添加</span>
+    </div>
+</div>

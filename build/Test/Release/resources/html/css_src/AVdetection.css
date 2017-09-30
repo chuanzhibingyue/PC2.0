@@ -1,0 +1,214 @@
+.cl{
+    clear:both;
+}
+.AVdetectionWindow a,.AVdetectionWindow input:focus {
+    outline: none;
+}
+.AVdetectionWindow{
+    margin:10px;
+    width:460px;
+    cursor: default;
+    font-size:12px;
+    color:#777777;
+    background-color:#fff;
+    border-radius:4px;
+    box-shadow: 0 6px 15px rgba(00,00,00, .3);
+}
+
+.AVdetectionWindow .windowTitle{
+    width:450px;
+    height:40px;
+    line-height:40px;
+    padding-left:10px;
+    margin-bottom:26px;
+    font-size:14px;
+    color:#173553;
+    text-align:left;
+    box-shadow: 0 2px 3px rgba(00,00,00, .1);
+}
+
+.AVdetectionWindow .stepShowContent{
+    width:380px;
+    height:90px;
+    padding-left:80px;
+}
+.AVdetectionWindow .stepShowContent ol li{
+    float:left;
+    width:125px;
+    color:#c3c3c3;
+}
+.AVdetectionWindow .stepShowContent ol .stepone{
+    width:240px;
+}
+.AVdetectionWindow .stepShowContent ol .steptwo{
+    float:right;
+    color:#c3c3c3;
+}
+.AVdetectionWindow .stepShowContent ol li .step-icon{
+    float:left;
+    text-align:center;
+    font-size:11px;
+    width:40px;
+}
+
+.AVdetectionWindow .stepShowContent ol li.ui-step-done{
+    color:#71aee2;
+}
+.AVdetectionWindow .stepShowContent ol li .icon-speaker,
+.AVdetectionWindow .stepShowContent ol li .icon-mike,
+.AVdetectionWindow .stepShowContent ol li .icon-call_video{
+    font-size:24px;
+}
+.AVdetectionWindow .stepShowContent ol li .icon-circe_right{
+    width:13px;
+    height:13px;
+    border:1px solid #c3c3c3;
+    border-radius:50%;
+    margin-left:13px;
+    font-size:16px;
+}
+.AVdetectionWindow .stepShowContent ol li .icon-circe_right:before{
+    content:none;
+}
+.AVdetectionWindow .stepShowContent ol li.ui-step-done .icon-circe_right{
+    border:none;
+}
+
+.AVdetectionWindow .stepShowContent ol li.ui-step-done .icon-circe_right:before{
+    content:"\e931";
+}
+
+.AVdetectionWindow .stepShowContent ol li .step-icon span{
+    display:block;
+    margin-bottom:10px;
+}
+.AVdetectionWindow .stepShowContent ol li .step-icon .step-name{
+    display:block;
+    margin-bottom:13px;
+}
+
+.AVdetectionWindow .stepShowContent ol li .step-line{
+    float:left;
+    width:200px;
+    height:75px;
+    border-bottom: 1px solid #ededed;
+}
+.AVdetectionWindow .speakerContent,
+.AVdetectionWindow .mikeContent,
+.AVdetectionWindow .vedioContent{
+    width:370px;
+    margin:0px 40px;
+}
+
+.AVdetectionWindow .vedioContent .vedio{ 
+/* width:380px; */ 
+/* height:285px; */ 
+/* margin:10px 0px; */ 
+/* background:#f5f5f5 url(../images/call/vedioError.png) no-repeat center center; */ 
+}
+
+.content {
+    width:380px;
+    margin-bottom:20px;
+}
+
+.content .tip,
+.content .hardwareSelect,
+.content .DetectionTip,
+.content .clickDetectionBtn{
+    margin-top:10px;
+}
+.content .tip{
+    color: #3b4f61;
+}
+
+.content .hardwareSelect{
+    width: 380px;
+    height: 20px;
+    line-height: 20px;
+    color: #3b4f61;
+    background: url("../images/settings/icon_drop_list_no_select.png") center no-repeat;
+    background-position: 98% center;
+    border:1px solid #dadada;
+    cursor: pointer;
+    text-indent: 5px;
+}
+.content .hardwareSelect:active{
+    background: url(../images/meeting/icon_drop_list.png) center no-repeat;
+    background-position: 98% center;
+}
+
+
+.content .clickDetectionBtn div{
+    float:left;
+}
+
+.content .clickDetectionBtn ol{
+    float:right;
+    padding-top:5px;
+}
+
+.content .clickDetectionBtn li{
+    float:left;
+    width:5px;
+    height:20px;
+    margin-left:6px;
+    background-color:#ededed;
+}
+
+.AVdetectionWindow .stepBtnContent{
+    width:420px;
+    margin-top:20px;
+    text-align:right;
+    padding-right:40px;
+    padding-bottom:20px;
+}
+
+.AVdetectionWindow .stepBtnContent .btn-uikit{
+    margin-left:5px;
+}
+.AVdetectionWindow  .tool-icon-container{
+    top:15px;
+    right:37px;
+}
+.AVdetectionWindow .detectionVideo{
+    background-image:url(../images/settings/video-off.png);
+    width: 258px;
+    height: 20px;
+    margin-left: 14px;
+    margin-top: 6px;
+}
+.AVdetectionWindow .detectionVideoOn{
+    background-image:url(../images/settings/video-on.png);
+    height: 20px;
+    margin-left: 14px;
+    margin-top: -20px;
+}
+.AVdetectionWindow .detectionMike{
+    background-image:url(../images/settings/video-off.png);
+    width: 100%;
+    height: 20px;
+}
+.AVdetectionWindow .detectionMikeOn{
+    background-image:url(../images/settings/video-on.png);
+    height: 20px;
+    margin-top: -20px;
+}
+.AVdetectionWindow .speakerList{
+    position: absolute;
+    display:none;
+    background-color: #ffffff;
+    border: 1px solid #dadada;
+    width: 380px;
+    cursor: pointer;
+    text-indent: 5px;
+}
+.AVdetectionWindow .mikeList{
+    position: absolute;
+    display:none;
+    background-color: #ffffff;
+    border: 1px solid #dadada;
+    width: 380px;
+    cursor: pointer;
+    text-indent: 5px;
+}

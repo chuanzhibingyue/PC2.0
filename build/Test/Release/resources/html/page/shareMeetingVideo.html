@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/shareMeetingVideo.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/shareMeetingVideo.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="share-Meeting child-window-shadow">
+    <div class="window-bar">
+        <span class="title"><span class="userName"></span>{{Meeting.ShareMeetingVideo}}</span>
+        <div class="tool-icon-container">
+            <span class="icon-close tool-icon"></span>
+        </div>
+    </div>
+    <div class="content-share">
+        <textarea  class="share_content" placeholder="{{Meeting.shareEditVideoText}}"></textarea>
+    </div>
+    <div class="share-create">
+        <a class="cancel-share">{{Common.Cancel}}</a>
+        <a class="release-share">{{Meeting.ShareMeetingPublic}}</a>
+    </div>
+</div>
+</body>
+</html>

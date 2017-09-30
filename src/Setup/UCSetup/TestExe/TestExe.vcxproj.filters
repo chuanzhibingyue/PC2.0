@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{8c3f5b5e-ab37-476a-9a7a-7b4147abf4a4}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Generated Files\Resource Files\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="TangFile">
+      <UniqueIdentifier>{e781e1ca-4661-4fcb-a8c2-12b26611b0a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TangFile\External">
+      <UniqueIdentifier>{28c523ab-dbfc-4414-8bf4-324630d65082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tinyxml">
+      <UniqueIdentifier>{e955b005-948f-4d48-8113-27b4868122cd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FolderOperator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestExe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestExe_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IeEvent.cpp">
+      <Filter>TangFile</Filter>
+    </ClCompile>
+    <ClCompile Include="TangFrame.cpp">
+      <Filter>TangFile</Filter>
+    </ClCompile>
+    <ClCompile Include="TangView.cpp">
+      <Filter>TangFile</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilAdaptor.cpp">
+      <Filter>TangFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>TangFile</Filter>
+    </ClCompile>
+    <ClCompile Include="External.cpp">
+      <Filter>TangFile\External</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinystr.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxml.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxmlerror.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxmlparser.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Log.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestExe.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FolderOperator.h">
+      <Filter>Generated Files\Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Generated Files\Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Generated Files\Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Generated Files\Resource Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalDefine.h">
+      <Filter>TangFile</Filter>
+    </ClInclude>
+    <ClInclude Include="IDocHostUIHandlerDispImpl.h">
+      <Filter>TangFile</Filter>
+    </ClInclude>
+    <ClInclude Include="IeEvent.h">
+      <Filter>TangFile</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeActionDispatch.h">
+      <Filter>TangFile</Filter>
+    </ClInclude>
+    <ClInclude Include="NativeActionDispImpl.h">
+      <Filter>TangFile</Filter>
+    </ClInclude>
+    <ClInclude Include="TangFrame.h">
+      <Filter>TangFile</Filter>
+    </ClInclude>
+    <ClInclude Include="TangView.h">
+      <Filter>TangFile</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilAdaptor.h">
+      <Filter>TangFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>TangFile</Filter>
+    </ClInclude>
+    <ClInclude Include="External.h">
+      <Filter>TangFile\External</Filter>
+    </ClInclude>
+    <ClInclude Include="ExternalDispatch.h">
+      <Filter>TangFile\External</Filter>
+    </ClInclude>
+    <ClInclude Include="IExternal.h">
+      <Filter>TangFile\External</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml\tinystr.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml\tinyxml.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="TestExe.idl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rt_mainf.bin">
+      <Filter>Generated Files\Resource Files</Filter>
+    </None>
+    <None Include="TestExe.rgs">
+      <Filter>Generated Files\Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TestExe.rc">
+      <Filter>Generated Files\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="UCSetup.ico">
+      <Filter>Generated Files\Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="TestExe.exe.manifest" />
+  </ItemGroup>
+</Project>

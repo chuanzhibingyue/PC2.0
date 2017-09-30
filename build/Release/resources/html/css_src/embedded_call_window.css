@@ -1,0 +1,114 @@
+.embedded-call-window{
+    position: absolute;
+    height: 100%;
+    left: 360px;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#374a5b), to(#1f2e3b));
+    right: 0;
+    top: -100%;
+    z-index: 99;
+}
+.embedded-call-window .embedded-call-title-container{
+    width: 95%;
+    height: 80px;
+    padding-top: 20px;
+    z-index: 100;
+    position: absolute;
+}
+.embedded-call-window .embedded-call-title-container .embedded-call-title{
+    height: 30px;
+    line-height: 30px;
+    font-size:16px;
+    color: #ffffff;
+    /*text-align: center;*/
+    margin-left: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.embedded-call-window .embedded-call-title-container .embedded-call-status{
+    height: 20px;
+    line-height: 20px;
+    font-size:14px;
+    color: #ffffff;
+    /*text-align: center;*/
+    margin-left: 30px;
+    opacity: 0.75;
+}
+.embedded-call-window .embedded-call-title-container .embedded-call-status span{
+    font-size: 12px;
+    display: inline-block;
+
+}
+.embedded-call-window .embedded-call-panel-container{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 120px;
+}
+.embedded-call-window .embedded-call-tool-bar-container{
+    height: 140px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index:200;
+}
+@keyframes call-window-show {
+    from{
+        top: -100%;
+    }
+    to{
+        top: 0;
+    }
+}
+.embedded-call-window.show{
+    /*animation: call-window-show 1.2s ease-in-out;*/
+    transition: top 0.5s ease-in-out;
+    top: 0;
+}
+@keyframes call-window-close {
+    from{
+        top: 0;
+    }
+    to{
+        top: -100%;
+    }
+}
+.embedded-call-window.close{
+    /*animation: call-window-close 1.2s ease-in-out;*/
+    transition: top 0.5s linear;
+    top: -100%;
+}
+.callTurnEnd{
+    height: 100%;
+    left: 360px;
+    right: 0;
+    height: 100%;
+    z-index: 100;
+    background-color: #1f2e3b;
+    opacity: 0.4;
+    position: absolute;
+    display: none;
+}
+.embedded-call-window .user-list-up{
+    background-image: url(../images/call/calluserlistup.png);
+    width: 90%;
+    height: 110px;
+    position: absolute;
+    /* margin-top: -95px; */
+    background-repeat-y: no-repeat;
+    z-index: 99;
+    display:none;
+}
+.embedded-call-window .user-list-down{
+    background-image: url(../images/call/calluserlistdown.png);
+    width: 98%;
+    height: 610px;
+    position: absolute;
+    margin-top: 375px;
+    background-repeat-y: no-repeat;
+    background-size: 120%;
+    z-index: 99;
+    display:none;
+}
+

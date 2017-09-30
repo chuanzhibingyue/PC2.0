@@ -1,0 +1,852 @@
+﻿Build started 2016/6/15 15:13:31.
+     1>Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\UCSDK\UCSDK.vcxproj" on node 5 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\..\..\include /I..\..\..\..\include\base /I..\..\..\..\src\common /I..\..\..\..\src\components /I..\..\..\..\src\components\network /I..\..\..\..\third_party\log_manager /I..\..\..\..\third_party\curl\include /I..\..\..\..\third_party\gtest\include /I..\..\..\..\third_party /I..\..\..\..\src\components\parser\msg_parser\include /I..\..\..\..\third_party\thrift\include /I..\..\..\..\src\utils /I..\..\..\..\src\components\db\include /I..\..\..\..\third_party\sqlite3\include /I..\..\..\..\src\services /I..\..\..\..\src /I..\..\..\..\third_party\vld\include /I..\..\..\..\third_party\boost\include /I..\..\..\..\third_party\tang\include /I..\..\..\..\third_party\common\include /I..\..\..\..\third_party\rapidjson\include /I..\..\..\..\third_party\easiio\include /I..\..\..\..\third_party\CrypWrapper\include /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D UC_EXPORTS /D CURL_STATICLIB /D GLOG_NO_ABBREVIATED_SEVERITIES /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4819 /wd4251 /analyze- /errorReport:prompt ..\..\..\..\src\components\conferencesdk\AudioServiceSink.cpp ..\..\..\..\src\components\conferencesdk\ConferenceSink.cpp ..\..\..\..\src\components\conferencesdk\ConferenceWrapper.cpp ..\..\..\..\src\components\conferencesdk\SharingServiceSink.cpp ..\..\..\..\src\components\conferencesdk\TangUser.cpp ..\..\..\..\src\components\conferencesdk\VideoServiceSink.cpp ..\..\..\..\src\components\db\src\AccountDao.cpp ..\..\..\..\src\components\db\src\AppDao.cpp ..\..\..\..\src\components\db\src\ConferenceDao.cpp ..\..\..\..\src\components\db\src\ConfigDao.cpp ..\..\..\..\src\components\db\src\ContactDao.cpp ..\..\..\..\src\components\db\src\ConversationDao.cpp ..\..\..\..\src\components\db\src\CppSQLite3.cpp ..\..\..\..\src\components\db\src\DBManager.cpp ..\..\..\..\src\components\db\src\DBUpgrade.cpp ..\..\..\..\src\components\db\src\ExternalDao.cpp ..\..\..\..\src\components\db\src\FileTransferDao.cpp ..\..\..\..\src\components\db\src\GroupDao.cpp ..\..\..\..\src\components\db\src\KeyValueDao.cpp ..\..\..\..\src\components\db\src\MessageDao.cpp ..\..\..\..\src\components\db\src\PbxDao.cpp ..\..\..\..\src\components\db\src\ProxyInfoDao.cpp ..\..\..\..\src\components\db\src\SQLiteManager.cpp ..\..\..\..\src\components\network\HTTPHandler.cpp ..\..\..\..\src\components\network\HTTPRequest.cpp ..\..\..\..\src\components\network\HTTPRequestEvent.cpp ..\..\..\..\src\components\network\HTTPResponse.cpp ..\..\..\..\src\components\network\MessageQueue.cpp ..\..\..\..\src\components\network\NetworkManager.cpp ..\..\..\..\src\components\network\QueuedNetWorkManager.cpp ..\..\..\..\src\components\network\UCASConnection.cpp ..\..\..\..\src\components\parser\msg_parser\src\AppMessageType.cpp ..\..\..\..\src\components\parser\msg_parser\src\MessageParser.cpp ..\..\..\..\src\components\parser\msg_parser\src\MessageStream.cpp ..\..\..\..\src\components\parser\msg_parser\src\UCMessage.cpp ..\..\..\..\src\components\parser\msg_parser\src\UCMessageType.cpp ..\..\..\..\src\components\parser\msg_parser\src\uc_types.cpp ..\..\..\..\src\services\audio_service\AudioService.cpp ..\..\..\..\src\services\audio_service\CallRequestAssist.cpp ..\..\..\..\src\services\audio_service\CallResponseAssist.cpp ..\..\..\..\src\services\audio_service\ConferenceLibraryAssist.cpp ..\..\..\..\src\services\bbs_service\BBSService.cpp ..\..\..\..\src\services\calendar_service\CalendarMsgProcessor.cpp ..\..\..\..\src\services\calendar_service\CalendarRequestFactory.cpp ..\..\..\..\src\services\calendar_service\CalendarService.cpp ..\..\..\..\src\services\calendar_service\ICalendarParser\date.cpp ..\..\..\..\src\services\calendar_service\ICalendarParser\element.cpp ..\..\..\..\src\services\calendar_service\ICalendarParser\icalendar.cpp ..\..\..\..\src\services\client_service\ClientService.cpp ..\..\..\..\src\services\client_service\LoginInfo.cpp ..\..\..\..\src\services\client_service\ServerInfo.cpp ..\..\..\..\src\services\contact_service\ContactEventDispatcher.cpp ..\..\..\..\src\services\contact_service\ContactInfo.cpp ..\..\..\..\src\services\contact_service\ContactInfoImpl.cpp ..\..\..\..\src\services\contact_service\ContactMsgProcessor.cpp ..\..\..\..\src\services\contact_service\ContactRequestFactory.cpp ..\..\..\..\src\services\contact_service\ContactResponseParser.cpp ..\..\..\..\src\services\contact_service\ContactService.cpp ..\..\..\..\src\services\contact_service\ContactTag.cpp ..\..\..\..\src\services\contact_service\contact_cache\ContactDelayLoader.cpp ..\..\..\..\src\services\contact_service\contact_cache\RegularUpdatedCache.cpp ..\..\..\..\src\services\contact_service\DefaultContactEventDispatcher.cpp ..\..\..\..\src\services\external_service\ExternalService.cpp ..\..\..\..\src\services\filetransfer_service\FileTransferService.cpp ..\..\..\..\src\services\filetransfer_service\FSRequestAssist.cpp ..\..\..\..\src\services\filetransfer_service\FSResponseAssist.cpp ..\..\..\..\src\services\filetransfer_service\Task.cpp ..\..\..\..\src\services\filetransfer_service\UCFile.cpp ..\..\..\..\src\services\message_service\DocumentInfo.cpp ..\..\..\..\src\services\message_service\GroupInfo.cpp ..\..\..\..\src\services\message_service\GroupService.cpp ..\..\..\..\src\services\message_service\GroupServiceNotify.cpp ..\..\..\..\src\services\message_service\GroupServiceRequest.cpp ..\..\..\..\src\services\message_service\GroupServiceResponse.cpp ..\..\..\..\src\services\message_service\IMService.cpp ..\..\..\..\src\services\message_service\MessageInfo.cpp ..\..\..\..\src\services\message_service\MessageProcessor.cpp ..\..\..\..\src\services\microblog_service\MicroblogService.cpp ..\..\..\..\src\services\openapi_service\OpenApiService.cpp ..\..\..\..\src\services\pbx_service\PbxService.cpp ..\..\..\..\src\services\search_service\SearchService.cpp ..\..\..\..\src\services\sharing_service\SharingService.cpp ..\..\..\..\src\services\store_service\ConversationStore.cpp ..\..\..\..\src\services\store_service\GroupListStore.cpp ..\..\..\..\src\services\store_service\MessageReadStore.cpp ..\..\..\..\src\services\store_service\MessageStore.cpp ..\..\..\..\src\services\store_service\StoreService.cpp ..\..\..\..\src\services\video_service\VideoService.cpp ..\..\..\..\src\UCEngine.cpp ..\..\..\..\src\utils\CrypWrapper.cpp ..\..\..\..\src\utils\HTTPResponseAssist.cpp ..\..\..\..\src\utils\md5\md5.cpp ..\..\..\..\src\utils\TaskExecutor.cpp ..\..\..\..\src\utils\ThreadPool.cpp ..\..\..\..\src\utils\Timer.cpp ..\..\..\..\test\unit_test\NetworkManagerTest.cpp dllmain.cpp
+         AudioServiceSink.cpp
+         ConferenceSink.cpp
+         ConferenceWrapper.cpp
+         SharingServiceSink.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\conferencesdk\audioservicesink.cpp(42): warning C4800: 'const VARIANT_BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\conferencesdk\audioservicesink.cpp(82): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\conferencesdk\sharingservicesink.cpp(50): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+         TangUser.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\conferencesdk\tanguser.cpp(24): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+         VideoServiceSink.cpp
+         AccountDao.cpp
+         AppDao.cpp
+         ConferenceDao.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\conferencesdk\videoservicesink.cpp(35): warning C4800: 'const VARIANT_BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+         ConfigDao.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\db\src\accountdao.cpp(134): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\db\src\accountdao.cpp(135): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+         ContactDao.cpp
+         ConversationDao.cpp
+         CppSQLite3.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\db\src\cppsqlite3.cpp(1093): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\db\src\cppsqlite3.cpp(1269): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+         DBManager.cpp
+         DBUpgrade.cpp
+         ExternalDao.cpp
+         FileTransferDao.cpp
+         GroupDao.cpp
+         KeyValueDao.cpp
+         MessageDao.cpp
+         PbxDao.cpp
+         ProxyInfoDao.cpp
+         SQLiteManager.cpp
+         HTTPHandler.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\network\httphandler.cpp(67): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
+         HTTPRequest.cpp
+         HTTPRequestEvent.cpp
+         HTTPResponse.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\db\src\sqlitemanager.cpp(540): warning C4305: 'return' : truncation from '' to 'bool'
+         MessageQueue.cpp
+         NetworkManager.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\components\network\messagequeue.cpp(21): warning C4018: '<' : signed/unsigned mismatch
+         QueuedNetWorkManager.cpp
+         UCASConnection.cpp
+         AppMessageType.cpp
+         MessageParser.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\components\network\NetworkManager.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\components\network\NetworkManager.cpp)
+         MessageStream.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\components\network\QueuedNetWorkManager.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\components\network\QueuedNetWorkManager.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\components\network\UCASConnection.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\components\network\UCASConnection.cpp)
+         UCMessage.cpp
+         UCMessageType.cpp
+         uc_types.cpp
+         AudioService.cpp
+         CallRequestAssist.cpp
+         CallResponseAssist.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\audio_service\AudioService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\audio_service\AudioService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\audio_service\CallRequestAssist.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\audio_service\CallRequestAssist.cpp)
+         ConferenceLibraryAssist.cpp
+         BBSService.cpp
+         CalendarMsgProcessor.cpp
+         CalendarRequestFactory.cpp
+         CalendarService.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\bbs_service\BBSService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\bbs_service\BBSService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\calendarmsgprocessor.cpp(616): warning C4244: 'argument' : conversion from 'const int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\calendarmsgprocessor.cpp(679): warning C4244: 'argument' : conversion from 'const int64_t' to 'int32_t', possible loss of data
+         date.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\calendar_service\CalendarService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\calendar_service\CalendarService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\date.cpp(10): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\date.cpp(12): warning C4996: '_snprintf': This function or variable may be unsafe. Consider using _snprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(346) : see declaration of '_snprintf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\date.cpp(18): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\date.cpp(20): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\date.cpp(26): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\date.cpp(29): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\date.cpp(126): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\time.inl(112) : see declaration of 'localtime'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\date.cpp(164): warning C4244: 'return' : conversion from '__int64' to 'unsigned long', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\date.cpp(164): warning C4996: 'gmtime': This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\time.inl(99) : see declaration of 'gmtime'
+         element.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\element.cpp(16): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\element.cpp(20): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\element.cpp(41): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(304) : see declaration of 'sscanf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\element.cpp(57): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+         icalendar.cpp
+         ClientService.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\icalendar.cpp(383): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\icalendar.cpp(412): warning C4244: '=' : conversion from 'std::streamoff' to 'unsigned int', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\icalendar.cpp(474): warning C4244: '=' : conversion from 'std::streamoff' to 'unsigned int', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\icalendar.cpp(594): warning C4244: 'argument' : conversion from 'unsigned long' to 'short', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\icalendar.cpp(595): warning C4244: 'argument' : conversion from 'unsigned long' to 'short', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\calendar_service\icalendarparser\icalendar.cpp(596): warning C4244: '=' : conversion from 'unsigned long' to 'unsigned short', possible loss of data
+         LoginInfo.cpp
+         ServerInfo.cpp
+         ContactEventDispatcher.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\client_service\LoginInfo.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\client_service\LoginInfo.cpp)
+         ContactInfo.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\client_service\ClientService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\client_service\ClientService.cpp)
+         ContactInfoImpl.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\clientservice.cpp(613): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+         ContactMsgProcessor.cpp
+         ContactRequestFactory.cpp
+         ContactResponseParser.cpp
+         ContactService.cpp
+         ContactTag.cpp
+         ContactDelayLoader.cpp
+         RegularUpdatedCache.cpp
+         DefaultContactEventDispatcher.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\contact_service\ContactService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\contact_service\ContactService.cpp)
+         ExternalService.cpp
+         FileTransferService.cpp
+         FSRequestAssist.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\external_service\ExternalService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\external_service\ExternalService.cpp)
+         FSResponseAssist.cpp
+         Task.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\filetransfer_service\FileTransferService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\filetransfer_service\FileTransferService.cpp)
+         UCFile.cpp
+         DocumentInfo.cpp
+         GroupInfo.cpp
+         GroupService.cpp
+         GroupServiceNotify.cpp
+         GroupServiceRequest.cpp
+         GroupServiceResponse.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\message_service\GroupService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\message_service\GroupService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\message_service\GroupServiceNotify.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\message_service\GroupServiceNotify.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\message_service\GroupServiceRequest.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\message_service\GroupServiceRequest.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\message_service\GroupServiceResponse.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\message_service\GroupServiceResponse.cpp)
+         IMService.cpp
+         MessageInfo.cpp
+         MessageProcessor.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\message_service\IMService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\message_service\IMService.cpp)
+         MicroblogService.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(84): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(413): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(417): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(535): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(540): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(953): warning C4244: '=' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(958): warning C4244: '=' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(976): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1248): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1256): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1499): warning C4244: 'argument' : conversion from 'const int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1539): warning C4244: 'argument' : conversion from 'const int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1663): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1680): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1705): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1723): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1747): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1771): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\imservice.cpp(1796): warning C4244: 'argument' : conversion from 'int64_t' to 'int32_t', possible loss of data
+         OpenApiService.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\message_service\MessageProcessor.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\message_service\MessageProcessor.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\messageprocessor.cpp(200): warning C4244: 'argument' : conversion from 'int64_t' to 'const int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\messageprocessor.cpp(306): warning C4244: 'argument' : conversion from 'int64_t' to 'const int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\messageprocessor.cpp(418): warning C4244: 'argument' : conversion from 'int64_t' to 'const int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\messageprocessor.cpp(521): warning C4244: 'argument' : conversion from 'int64_t' to 'const int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\message_service\messageprocessor.cpp(674): warning C4244: 'argument' : conversion from 'int64_t' to 'const int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\microblog_service\MicroblogService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\microblog_service\MicroblogService.cpp)
+         PbxService.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\openapi_service\OpenApiService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\openapi_service\OpenApiService.cpp)
+         SearchService.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\openapi_service\openapiservice.cpp(674): warning C4244: '=' : conversion from 'int64_t' to 'int32_t', possible loss of data
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\openapi_service\openapiservice.cpp(679): warning C4244: '=' : conversion from 'int64_t' to 'int32_t', possible loss of data
+         SharingService.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\search_service\SearchService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\search_service\SearchService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\services\pbx_service\PbxService.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\services\pbx_service\PbxService.cpp)
+         ConversationStore.cpp
+         GroupListStore.cpp
+         MessageReadStore.cpp
+         MessageStore.cpp
+         StoreService.cpp
+         VideoService.cpp
+         UCEngine.cpp
+         CrypWrapper.cpp
+         HTTPResponseAssist.cpp
+         md5.cpp
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\utils\md5\md5.cpp(343): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4305: 'argument' : truncation from 'int' to 'char' (..\..\..\..\src\UCEngine.cpp)
+     1>e:\mywork\client\pc2.0trunk\pc2.0\third_party\uc_sdk\src\services\client_service\logininfo.h(149): warning C4309: 'argument' : truncation of constant value (..\..\..\..\src\UCEngine.cpp)
+         TaskExecutor.cpp
+         ThreadPool.cpp
+         Timer.cpp
+         NetworkManagerTest.cpp
+         dllmain.cpp
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\bin\Debug\UCSDK_d.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\..\..\third_party\pclib\debug /LIBPATH:..\..\..\..\third_party\curl\lib\windows\x86 /LIBPATH:..\..\..\..\third_party\gtest\lib\windows\Debug /LIBPATH:..\..\..\..\third_party\boost\lib\windows /LIBPATH:..\..\..\..\third_party\log_manager\lib\windows /LIBPATH:..\..\..\..\third_party\thrift\lib\windows\Debug /LIBPATH:..\..\..\..\third_party\sqlite3\lib\windows /LIBPATH:..\..\..\..\third_party\zlib\lib\windows /LIBPATH:..\..\..\..\third_party\vld\lib\Win32 /LIBPATH:..\..\..\..\third_party\common\lib\windows\Debug /LIBPATH:..\..\..\..\third_party\easiio\lib /LIBPATH:..\..\..\..\third_party/CrypWrapper/lib/windows/Debug /LIBPATH:"D:\Program Files (x86)\Visual Leak Detector\lib\Win32" Bee2MeetingPlugin_d.lib ws2_32.lib wldap32.lib libeay32.lib ssleay32.lib libcurl.lib gtestd.lib LogManager_d.lib libthrift.lib sqlite3.lib zlib_d.lib common.lib cryptlib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\bin\Debug\UCSDK_d.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\bin\Debug\UCSDK_d.lib" /MACHINE:X86 /DLL Debug\AudioServiceSink.obj
+         Debug\ConferenceSink.obj
+         Debug\ConferenceWrapper.obj
+         Debug\SharingServiceSink.obj
+         Debug\TangUser.obj
+         Debug\VideoServiceSink.obj
+         Debug\AccountDao.obj
+         Debug\AppDao.obj
+         Debug\ConferenceDao.obj
+         Debug\ConfigDao.obj
+         Debug\ContactDao.obj
+         Debug\ConversationDao.obj
+         Debug\CppSQLite3.obj
+         Debug\DBManager.obj
+         Debug\DBUpgrade.obj
+         Debug\ExternalDao.obj
+         Debug\FileTransferDao.obj
+         Debug\GroupDao.obj
+         Debug\KeyValueDao.obj
+         Debug\MessageDao.obj
+         Debug\PbxDao.obj
+         Debug\ProxyInfoDao.obj
+         Debug\SQLiteManager.obj
+         Debug\HTTPHandler.obj
+         Debug\HTTPRequest.obj
+         Debug\HTTPRequestEvent.obj
+         Debug\HTTPResponse.obj
+         Debug\MessageQueue.obj
+         Debug\NetworkManager.obj
+         Debug\QueuedNetWorkManager.obj
+         Debug\UCASConnection.obj
+         Debug\AppMessageType.obj
+         Debug\MessageParser.obj
+         Debug\MessageStream.obj
+         Debug\UCMessage.obj
+         Debug\UCMessageType.obj
+         Debug\uc_types.obj
+         Debug\AudioService.obj
+         Debug\CallRequestAssist.obj
+         Debug\CallResponseAssist.obj
+         Debug\ConferenceLibraryAssist.obj
+         Debug\BBSService.obj
+         Debug\CalendarMsgProcessor.obj
+         Debug\CalendarRequestFactory.obj
+         Debug\CalendarService.obj
+         Debug\date.obj
+         Debug\element.obj
+         Debug\icalendar.obj
+         Debug\ClientService.obj
+         Debug\LoginInfo.obj
+         Debug\ServerInfo.obj
+         Debug\ContactEventDispatcher.obj
+         Debug\ContactInfo.obj
+         Debug\ContactInfoImpl.obj
+         Debug\ContactMsgProcessor.obj
+         Debug\ContactRequestFactory.obj
+         Debug\ContactResponseParser.obj
+         Debug\ContactService.obj
+         Debug\ContactTag.obj
+         Debug\ContactDelayLoader.obj
+         Debug\RegularUpdatedCache.obj
+         Debug\DefaultContactEventDispatcher.obj
+         Debug\ExternalService.obj
+         Debug\FileTransferService.obj
+         Debug\FSRequestAssist.obj
+         Debug\FSResponseAssist.obj
+         Debug\Task.obj
+         Debug\UCFile.obj
+         Debug\DocumentInfo.obj
+         Debug\GroupInfo.obj
+         Debug\GroupService.obj
+         Debug\GroupServiceNotify.obj
+         Debug\GroupServiceRequest.obj
+         Debug\GroupServiceResponse.obj
+         Debug\IMService.obj
+         Debug\MessageInfo.obj
+         Debug\MessageProcessor.obj
+         Debug\MicroblogService.obj
+         Debug\OpenApiService.obj
+         Debug\PbxService.obj
+         Debug\SearchService.obj
+         Debug\SharingService.obj
+         Debug\ConversationStore.obj
+         Debug\GroupListStore.obj
+         Debug\MessageReadStore.obj
+         Debug\MessageStore.obj
+         Debug\StoreService.obj
+         Debug\VideoService.obj
+         Debug\UCEngine.obj
+         Debug\CrypWrapper.obj
+         Debug\HTTPResponseAssist.obj
+         Debug\md5.obj
+         Debug\TaskExecutor.obj
+         Debug\ThreadPool.obj
+         Debug\Timer.obj
+         Debug\NetworkManagerTest.obj
+         Debug\dllmain.obj
+     1>AudioServiceSink.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+         cryptlib.lib(cryptlib.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     1>AudioServiceSink.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+            Creating library ..\bin\Debug\UCSDK_d.lib and object ..\bin\Debug\UCSDK_d.exp
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Generating code
+         Finished generating code
+     1>libeay32.lib(cryptlib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cryptlib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(mem.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(mem.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(mem_dbg.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(mem_dbg.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cversion.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cversion.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ex_data.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ex_data.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cpt_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cpt_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(uid.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(uid.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(o_time.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(o_time.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(o_dir.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(o_dir.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(o_init.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(o_init.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(mem_clr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(mem_clr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(md4_dgst.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(md4_dgst.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(md5_dgst.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(md5_dgst.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(sha_dgst.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(sha_dgst.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(sha1dgst.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(sha1dgst.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(sha1_one.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(sha1_one.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(sha256.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(sha256.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(sha512.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(sha512.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(mdc2dgst.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(mdc2dgst.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(hmac.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(hmac.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(hm_ameth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(hm_ameth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(hm_pmeth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(hm_pmeth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cmac.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cmac.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cm_ameth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cm_ameth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cm_pmeth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cm_pmeth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rmd_dgst.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rmd_dgst.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(set_key.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(set_key.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecb_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecb_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecb3_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecb3_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cfb64enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cfb64enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cfb64ede.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cfb64ede.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cfb_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cfb_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ofb64ede.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ofb64ede.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ofb64enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ofb64enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(des_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(des_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(xcbc_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(xcbc_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rc2_ecb.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rc2_ecb.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rc2_skey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rc2_skey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rc2_cbc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rc2_cbc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rc2cfb64.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rc2cfb64.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rc2ofb64.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rc2ofb64.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rc4_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rc4_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rc4_skey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rc4_skey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rc4_utl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rc4_utl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(i_cbc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(i_cbc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(i_cfb64.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(i_cfb64.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(i_ofb64.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(i_ofb64.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(i_ecb.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(i_ecb.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(i_skey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(i_skey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bf_skey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bf_skey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bf_ecb.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bf_ecb.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bf_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bf_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bf_cfb64.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bf_cfb64.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bf_ofb64.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bf_ofb64.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(c_skey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(c_skey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(c_ecb.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(c_ecb.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(c_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(c_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(c_cfb64.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(c_cfb64.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(c_ofb64.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(c_ofb64.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(aes_misc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(aes_misc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(aes_wrap.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(aes_wrap.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(aes_core.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(aes_core.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(aes_cbc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(aes_cbc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cmll_utl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cmll_utl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(camellia.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(camellia.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cmll_misc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cmll_misc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cmll_cbc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cmll_cbc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(seed.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(seed.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(seed_ecb.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(seed_ecb.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(seed_cbc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(seed_cbc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(seed_cfb.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(seed_cfb.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(seed_ofb.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(seed_ofb.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cbc128.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cbc128.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ctr128.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ctr128.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cfb128.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cfb128.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ofb128.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ofb128.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(gcm128.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(gcm128.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ccm128.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ccm128.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(xts128.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(xts128.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(wrap128.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(wrap128.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_add.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_add.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_div.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_div.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_exp.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_exp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_ctx.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_ctx.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_mul.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_mul.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_mod.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_mod.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_print.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_print.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_rand.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_rand.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_shift.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_shift.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_word.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_word.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_blind.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_blind.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_kron.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_kron.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_sqrt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_sqrt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_gcd.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_gcd.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_prime.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_prime.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_sqr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_sqr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_asm.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_asm.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_recp.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_recp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_mont.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_mont.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_exp2.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_exp2.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_gf2m.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_gf2m.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bn_nist.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bn_nist.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_eay.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_eay.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_gen.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_gen.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_sign.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_sign.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_saos.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_saos.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_pk1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_pk1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_ssl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_ssl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_none.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_none.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_oaep.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_oaep.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_pss.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_pss.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_x931.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_x931.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_asn1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_asn1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_ameth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_ameth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_pmeth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_pmeth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rsa_crpt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rsa_crpt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dsa_gen.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dsa_gen.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dsa_key.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dsa_key.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dsa_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dsa_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dsa_asn1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dsa_asn1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dsa_vrf.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dsa_vrf.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dsa_sign.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dsa_sign.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dsa_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dsa_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dsa_ossl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dsa_ossl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dsa_ameth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dsa_ameth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dsa_pmeth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dsa_pmeth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dso_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dso_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dso_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dso_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dso_openssl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dso_openssl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dso_win32.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dso_win32.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dh_asn1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dh_asn1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dh_gen.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dh_gen.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dh_key.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dh_key.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dh_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dh_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dh_check.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dh_check.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dh_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dh_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dh_ameth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dh_ameth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dh_pmeth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dh_pmeth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dh_rfc5114.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dh_rfc5114.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(dh_kdf.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(dh_kdf.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecp_smpl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecp_smpl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecp_mont.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecp_mont.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecp_nist.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecp_nist.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_cvt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_cvt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_mult.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_mult.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_curve.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_curve.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_print.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_print.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_asn1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_asn1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_key.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_key.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec2_smpl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec2_smpl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec2_mult.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec2_mult.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_ameth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_ameth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_pmeth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_pmeth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(eck_prn.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(eck_prn.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecp_oct.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecp_oct.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec2_oct.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec2_oct.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ec_oct.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ec_oct.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ech_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ech_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ech_ossl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ech_ossl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ech_key.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ech_key.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ech_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ech_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ech_kdf.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ech_kdf.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecs_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecs_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecs_asn1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecs_asn1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecs_ossl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecs_ossl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecs_sign.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecs_sign.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecs_vrf.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecs_vrf.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ecs_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ecs_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(buffer.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(buffer.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(buf_str.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(buf_str.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(buf_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(buf_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bio_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bio_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bio_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bio_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bss_mem.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bss_mem.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bss_null.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bss_null.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bss_file.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bss_file.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bss_sock.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bss_sock.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bf_buff.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bf_buff.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(b_print.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(b_print.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(b_dump.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(b_dump.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(stack.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(stack.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(lhash.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(lhash.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(md_rand.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(md_rand.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(randfile.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(randfile.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rand_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rand_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rand_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rand_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(rand_win.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(rand_win.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(err_all.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(err_all.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(err_prn.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(err_prn.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(o_names.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(o_names.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(obj_dat.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(obj_dat.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(obj_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(obj_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(obj_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(obj_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(obj_xref.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(obj_xref.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(encode.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(encode.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(digest.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(digest.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(evp_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(evp_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(evp_key.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(evp_key.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_des.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_des.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_bf.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_bf.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_idea.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_idea.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_des3.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_des3.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_camellia.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_camellia.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_rc4.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_rc4.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_aes.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_aes.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(names.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(names.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_seed.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_seed.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_xcbc_d.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_xcbc_d.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_rc2.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_rc2.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_cast.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_cast.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_md4.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_md4.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_md5.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_md5.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_sha.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_sha.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_sha1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_sha1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_wp.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_wp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_dss.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_dss.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_dss1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_dss1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_mdc2.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_mdc2.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_ripemd.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_ripemd.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_ecdsa.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_ecdsa.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p_sign.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p_sign.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p_verify.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p_verify.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bio_md.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bio_md.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bio_b64.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bio_b64.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bio_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bio_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(evp_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(evp_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_null.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_null.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(c_all.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(c_all.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(c_allc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(c_allc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(c_alld.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(c_alld.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(evp_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(evp_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(evp_pkey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(evp_pkey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(evp_pbe.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(evp_pbe.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p5_crpt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p5_crpt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p5_crpt2.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p5_crpt2.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pmeth_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pmeth_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pmeth_fn.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pmeth_fn.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pmeth_gn.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pmeth_gn.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(m_sigver.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(m_sigver.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_aes_cbc_hmac_sha1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_aes_cbc_hmac_sha1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_aes_cbc_hmac_sha256.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_aes_cbc_hmac_sha256.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(e_rc4_hmac_md5.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(e_rc4_hmac_md5.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_object.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_object.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_bitstr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_bitstr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_utctm.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_utctm.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_gentm.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_gentm.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_time.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_time.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_int.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_int.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_octet.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_octet.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_print.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_print.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_type.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_type.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_set.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_set.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_dup.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_dup.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_d2i_fp.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_d2i_fp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_i2d_fp.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_i2d_fp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_enum.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_enum.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_utf8.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_utf8.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_sign.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_sign.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_digest.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_digest.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_verify.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_verify.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_mbstr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_mbstr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_strex.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_strex.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_algor.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_algor.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_val.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_val.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_pubkey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_pubkey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_sig.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_sig.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_req.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_req.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_attrib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_attrib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_bignum.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_bignum.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_long.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_long.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_name.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_name.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_x509.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_x509.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_x509a.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_x509a.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_crl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_crl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_info.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_info.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_spki.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_spki.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(nsseq.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(nsseq.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(d2i_pr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(d2i_pr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(i2d_pr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(i2d_pr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(t_x509.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(t_x509.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(t_x509a.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(t_x509a.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(t_pkey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(t_pkey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tasn_new.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tasn_new.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tasn_fre.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tasn_fre.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tasn_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tasn_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tasn_dec.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tasn_dec.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tasn_utl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tasn_utl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tasn_typ.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tasn_typ.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tasn_prn.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tasn_prn.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ameth_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ameth_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(f_int.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(f_int.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(f_string.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(f_string.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_pkey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_pkey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_bool.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_bool.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_exten.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_exten.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bio_asn1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bio_asn1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(bio_ndef.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(bio_ndef.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(asn_mime.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(asn_mime.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(asn1_gen.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(asn1_gen.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(asn1_par.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(asn1_par.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(asn1_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(asn1_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(asn1_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(asn1_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_bytes.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_bytes.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(a_strnid.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(a_strnid.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(evp_asn1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(evp_asn1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(asn_pack.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(asn_pack.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p5_pbe.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p5_pbe.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p5_pbev2.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p5_pbev2.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p8_pkey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p8_pkey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pem_info.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pem_info.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pem_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pem_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pem_all.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pem_all.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pem_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pem_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pem_x509.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pem_x509.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pem_xaux.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pem_xaux.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pem_oth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pem_oth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pem_pk8.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pem_pk8.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pem_pkey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pem_pkey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_def.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_def.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_d2.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_d2.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_cmp.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_cmp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_obj.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_obj.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_req.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_req.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_vfy.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_vfy.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509cset.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509cset.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509rset.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509rset.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509name.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509name.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_v3.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_v3.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_ext.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_ext.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_att.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_att.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509type.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509type.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_lu.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_lu.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x_all.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x_all.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_txt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_txt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_trs.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_trs.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(by_file.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(by_file.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(by_dir.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(by_dir.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(x509_vpm.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(x509_vpm.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_bcons.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_bcons.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_bitst.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_bitst.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_conf.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_conf.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_extku.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_extku.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_ia5.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_ia5.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_prn.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_prn.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_utl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_utl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_genn.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_genn.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_alt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_alt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_skey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_skey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_akey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_akey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_pku.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_pku.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_int.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_int.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_enum.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_enum.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_sxnet.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_sxnet.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_cpols.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_cpols.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_crld.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_crld.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_purp.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_purp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_info.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_info.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_ocsp.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_ocsp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_akeya.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_akeya.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_pmaps.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_pmaps.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_pcons.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_pcons.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_ncons.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_ncons.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_pcia.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_pcia.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_pci.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_pci.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pcy_cache.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pcy_cache.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pcy_node.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pcy_node.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pcy_data.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pcy_data.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pcy_map.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pcy_map.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pcy_tree.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pcy_tree.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pcy_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pcy_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(v3_scts.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(v3_scts.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_asn1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_asn1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_att.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_att.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_io.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_io.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_sd.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_sd.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_dd.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_dd.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_env.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_env.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_pwri.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_pwri.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(cms_kari.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(cms_kari.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(conf_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(conf_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(conf_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(conf_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(conf_api.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(conf_api.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(conf_def.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(conf_def.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(conf_mod.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(conf_mod.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(txt_db.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(txt_db.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pk7_asn1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pk7_asn1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pk7_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pk7_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pkcs7err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pkcs7err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pk7_doit.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pk7_doit.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pk7_attr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pk7_attr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p12_add.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p12_add.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p12_asn.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p12_asn.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p12_crpt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p12_crpt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p12_decr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p12_decr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p12_key.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p12_key.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p12_utl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p12_utl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pk12err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pk12err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p12_p8d.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p12_p8d.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(p12_p8e.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(p12_p8e.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(comp_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(comp_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(comp_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(comp_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(c_zlib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(c_zlib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(eng_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(eng_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(eng_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(eng_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(eng_list.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(eng_list.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(eng_init.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(eng_init.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(eng_ctrl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(eng_ctrl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(eng_table.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(eng_table.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(eng_pkey.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(eng_pkey.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tb_rsa.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tb_rsa.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tb_dsa.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tb_dsa.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tb_ecdsa.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tb_ecdsa.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tb_dh.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tb_dh.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tb_ecdh.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tb_ecdh.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tb_rand.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tb_rand.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tb_cipher.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tb_cipher.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tb_digest.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tb_digest.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tb_pkmeth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tb_pkmeth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(tb_asnmth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(tb_asnmth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ocsp_asn.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ocsp_asn.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ocsp_ht.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ocsp_ht.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ocsp_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ocsp_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ocsp_cl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ocsp_cl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ocsp_srv.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ocsp_srv.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ocsp_prn.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ocsp_prn.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ocsp_vfy.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ocsp_vfy.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ocsp_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ocsp_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ui_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ui_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ui_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ui_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ui_openssl.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ui_openssl.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(pqueue.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(pqueue.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(wp_dgst.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(wp_dgst.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(wp_block.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(wp_block.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(ts_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(ts_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(srp_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(srp_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>libeay32.lib(srp_vfy.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'libeay32.lib(srp_vfy.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s2_meth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s2_meth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s2_srvr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s2_srvr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s2_clnt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s2_clnt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s2_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s2_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s2_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s2_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s2_pkt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s2_pkt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s3_meth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s3_meth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s3_srvr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s3_srvr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s3_clnt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s3_clnt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s3_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s3_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s3_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s3_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s3_pkt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s3_pkt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s3_both.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s3_both.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s3_cbc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s3_cbc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s23_meth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s23_meth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s23_srvr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s23_srvr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s23_clnt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s23_clnt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s23_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s23_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(s23_pkt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(s23_pkt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(t1_meth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(t1_meth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(t1_srvr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(t1_srvr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(t1_clnt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(t1_clnt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(t1_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(t1_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(t1_enc.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(t1_enc.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(t1_ext.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(t1_ext.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(d1_meth.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(d1_meth.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(d1_srvr.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(d1_srvr.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(d1_clnt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(d1_clnt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(d1_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(d1_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(d1_pkt.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(d1_pkt.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(d1_both.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(d1_both.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(d1_srtp.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(d1_srtp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(ssl_lib.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(ssl_lib.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(ssl_err2.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(ssl_err2.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(ssl_cert.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(ssl_cert.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(ssl_sess.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(ssl_sess.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(ssl_ciph.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(ssl_ciph.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(ssl_rsa.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(ssl_rsa.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(ssl_asn1.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(ssl_asn1.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(ssl_algs.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(ssl_algs.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(ssl_err.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(ssl_err.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(t1_reneg.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(t1_reneg.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>ssleay32.lib(tls_srp.obj) : warning LNK4099: PDB 'lib.pdb' was not found with 'ssleay32.lib(tls_srp.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\lib.pdb'; linking object as if no debug info
+     1>gtestd.lib(gtest-all.obj) : warning LNK4099: PDB 'vc120.pdb' was not found with 'gtestd.lib(gtest-all.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\vc120.pdb'; linking object as if no debug info
+     1>libthrift.lib(TBufferTransports.obj) : warning LNK4099: PDB 'libthrift.pdb' was not found with 'libthrift.lib(TBufferTransports.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\libthrift.pdb'; linking object as if no debug info
+     1>libthrift.lib(TTransportException.obj) : warning LNK4099: PDB 'libthrift.pdb' was not found with 'libthrift.lib(TTransportException.obj)' or at 'E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\bin\Debug\libthrift.pdb'; linking object as if no debug info
+         UCSDK.vcxproj -> E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\UCSDK\..\bin\Debug\UCSDK_d.dll
+       PostBuildEvent:
+         copy ..\..\..\..\third_party\google-glog\lib\windows\Debug\glog_d.dll ..\bin\Debug\\glog_d.dll
+         copy ..\..\..\..\third_party\zlib\lib\windows\zlib_d.dll ..\bin\Debug\\zlib_d.dll
+         copy ..\..\..\..\third_party\sqlite3\lib\windows\sqlite3.dll ..\bin\Debug\\sqlite3.dll
+         copy ..\..\..\..\third_party\log_manager\lib\windows\LogManager_d.dll ..\bin\Debug\\LogManager_d.dll
+         copy ..\..\..\..\third_party\common\lib\windows\Debug\common.dll ..\bin\Debug\\common.dll
+         copy ..\..\..\..\third_party\cert\oncloud2CA.pem ..\bin\Debug\\oncloud2CA.pem
+         copy ..\..\..\..\third_party\pclib\debug\Bee2MeetingPlugin_d.dll ..\bin\Debug\\Bee2MeetingPlugin_d.dll
+         copy ..\..\..\..\third_party\pclib\debug\Bee2MeetingPlugin.ini ..\bin\Debug\\Bee2MeetingPlugin.ini
+         
+         :VCEnd
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+         已复制         1 个文件。
+     1>Done Building Project "E:\mywork\client\PC2.0TRUNK\PC2.0\third_party\uc_sdk\build\windows\UCSDK\UCSDK\UCSDK.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:02:12.11

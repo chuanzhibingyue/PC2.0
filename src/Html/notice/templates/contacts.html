@@ -1,0 +1,56 @@
+<div class="contactsPage"  ng-controller='contactsCtrl'>
+
+	<div class="divideline"></div>
+
+	<div class="content">
+		<aside class="siderleft">
+			<header class="header">
+				<span translate="contact.org"></span>
+			</header>
+			<div class="dptList">
+				<script type="text/ng-template" id="nodes_renderer.html">
+					<div ng-click="expandNode(node)" class="item">
+						<span ng-show="node.isExpand"  class="icon arrow-down"></span>
+						<span ng-show="!node.isExpand"  class="icon arrow-right"></span>
+						<span>{{node.name}}</span>
+						<i ng-show="node.isSelected"  class="select fa fa-check-circle" ng-click="selectNode($event,node,false)"></i>
+						<i ng-show="!node.isSelected"  class="select fa fa-circle-thin" ng-click="selectNode($event,node,true)"></i>
+					</div>
+					<span class="lidivider"></span>
+					<ol ng-show="node.isExpand">
+						<li ng-repeat="node in node.children"  ng-include="'nodes_renderer.html'">
+						</li>
+					</ol>
+				</script>
+				<div>
+					<ol>
+						<li ng-repeat="node in departments"  ng-include="'nodes_renderer.html'"></li>
+					</ol>
+				</div>
+			</div>
+		</aside>
+
+		<aside class="siderright">
+			<header class="header">
+				<span translate="contact.selected-list"></span>
+			</header>
+             <div class="selectList">
+					<ol>
+						<li ng-repeat="node in selectedDpts">
+							<div class="item">
+							    <div class="avatar"><img src="theme/images/organization.png"/></div>
+								<span>{{node.name}}</span>
+					         </div>
+					       <span class="lidivider"></span>
+						</li>
+					</ol>
+			</div>
+			<footer>
+				<span class="btn-submit" ng-click="submit();hideContacts();" translate="contact.finish"></span>
+				<span class="btn-cancel" ng-click="hideContacts()" translate="contact.cancel"></span>
+			</footer>
+		</aside>
+	</div>
+
+	<span class='closeBtn' ng-click="(hideContacts)"><i class="fa fa-times"></i></span>
+</div>

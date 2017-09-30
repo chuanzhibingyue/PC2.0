@@ -1,0 +1,43 @@
+TARGETNAME=Update
+TARGETTYPE=LIBRARY
+
+
+C_DEFINES= $(C_DEFINES) -DUNICODE -D_UNICODE
+MSC_WARNING_LEVEL=/W3 /WX
+
+USE_MSVCRT=1
+USE_STL=1
+USE_ATL=1
+USE_VCCOM=1
+STL_VER=70
+USE_RTTI=1
+
+
+MINWIN_SDK_LIB_PATH=$(SDK_LIB_PATH)
+
+
+INCLUDES=	$(COMMON_DIR)\Inc; \
+			$(CRT_INC_PATH); \
+			$(SDK_INC_PATH); \
+			$(ATL80_INC_PATH); \
+			$(SDK_INC_PATH)\crt\stl70; \
+			$(FRAMEWORK_COMMON_INC)\Inc; \
+			$(COMMON_DIR)\Support\Inc; \
+			
+TARGETLIBS=	\
+						
+SOURCES=Cookie.cpp \
+		FolderOperator.cpp \
+		HttpOperator.cpp \
+		Update.cpp \
+		stdafx.cpp \
+		UpdateAdaptor.cpp \
+		UpdateManagerImpl.cpp \
+		UpdateModule.idl \
+		UpdateXml.cpp \
+		XUnzip.cpp \
+
+TARGET_DESTINATION=Target\$(DDKBUILDENV)
+
+PASS0_BINPLACE=-:DEST Framework\Common\Inc $(OBJ_PATH)\$(O)\updatemodule.h
+PASS2_BINPLACE=$(OBJ_PATH)\$(O)\$(TARGETNAME).lib

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bee</title>
+    <link href="css/index.css" rel="stylesheet">
+    <!--<script type="text/javascript" src="src/js/lib/jquery-2.1.4.js"></script>-->
+    <!--<script type="text/javascript" src="nls/resource.js"></script>-->
+    <script type="text/javascript" src="nls/i18n.js"></script>
+    <script type="text/javascript" src="script/index.js"></script>
+</head>
+<body>
+<div class="login-container">
+    <!--<span class="qrcode-logo"></span>-->
+    <div class="login-form">
+        <div class="avatar-node" style="display: block">
+            <img src="images/login/logo.png" class="avatar">
+        </div>
+        <div class="multi-avatar" style="display: none">
+            <ul id="nav1">
+            </ul>
+        </div>
+        <!--添加一个登录时的loading动画-->
+        <div class="login-loading1" ></div>
+        <div class="login-loading2" ></div>
+
+        <div class="login-fail-notification"><img src="images/login/login_warning.png" class="login-warning"><span class="login-warning-content"></span></div>
+        <div class="check-key"></div>
+        <div class="input-container">
+            <div class="common-account">
+                <input type="text" placeholder={{Login.AccountPlaceHolder}} class="input account" value="" spellcheck="false" autofocus tabindex="1">
+                <input type="password" placeholder={{Login.PasswordPlaceHolder}} class="input password" value="" tabindex="2">
+                <button type="submit" class="login-btn"  tabindex="3">{{Login.Login}}</button>
+            </div>
+            <div class="corporate-area">
+                <input type="text" placeholder={{Login.CorporateAccount}} class="input corporate-account" value="" spellcheck="false" autofocus tabindex="1">
+                <input type="text" placeholder={{Login.PersonalAccount}} class="input personal-account" value="" spellcheck="false" autofocus tabindex="2">
+                <input type="password" placeholder={{Login.PasswordPlaceHolder}} class="input password" value="" tabindex="3">
+                <button class="back-to-login">{{Login.GoBack}}</button>
+                <button type="submit" class="login-btn"  tabindex="3">{{Login.Login}}</button>
+            </div>
+        </div>
+
+        <div class = "corporate-account-login"><img src="images/login/corporate_account_login.png" class="corporate-icon">{{Login.CorporateAccountLogin}}</div>
+    </div>
+
+    <!--视高登录 -->
+
+
+    <div class="show-detail">
+        <button  class="detail-btn"  tabindex="-1"></button>
+    </div>
+</div>
+<div class="details">
+    <ul id="nav">
+        <li>
+            <div class="remember-pwd">
+                <div class="switch one">
+                    <input type="checkbox" name="rememberPwd"  tabindex="-1">
+                    <label><i></i></label>
+                </div>
+                    <p class="words">{{Login.RememberPassword}}</p>
+                </div>
+            <div class="automatic-login">
+                <div class="switch two">
+                    <input id="" type="checkbox"  name="autoLogin" tabindex="-1">
+                    <label><i></i></label>
+                </div>
+                    <p class="words">{{Login.AutoLogin}}</p>
+            </div>
+        </li>
+        <li>
+            <div class="forgetPwd" tabindex="-1">
+                {{Login.ForgetPassword}}
+            </div>
+
+            <!--<a href="">设置</a>-->
+        </li>
+    </ul>
+</div>
+<div class="tool-icon-container">
+    <span class="icon-close tool-icon"></span>
+</div>
+
+</body>
+</html>

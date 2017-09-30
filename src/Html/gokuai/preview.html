@@ -1,0 +1,153 @@
+<!doctype html>
+<html ng-app="goukuai.preview">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/vendor-bundle.css"/>
+    <link rel="stylesheet" href="styles/preview-bundle.css"/>
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body ng-controller="previewCtrl as vm" disable-context-menu disable-backspace ng-click = "bodyClick($event)" ng-class="{'qs-theme':isFromQs}">
+    <div class="page-wrapper" ng-cloak>
+        <div id="previewPage">
+            <div class="preview-header">
+                <span class="title" ng-bind="vm.selectedFile.filename"></span>
+                <div class="icon-container">
+                    <span class="fa fa-times icon-tool" ng-click="vm.closeWindow()"></span>
+                </div>
+            </div>
+            <div class="preview-bdoy">
+                <div class="preview-toolbar">
+                    <div class="toolbar-left">
+                        <ul>
+                            <li class="toolbar-dropdown left-item">
+                                <a class="fa fa-wrench toolbar-icon" uib-tooltip="更多"></a>
+                                <ul class="dropdown-menu">
+                                    <li ng-click="vm.deleteFile()">
+                                        <a>
+                                            <span class="fa fa-trash"></span>
+                                            <span>{{'删除'}}</span>
+                                        </a>
+                                    </li>
+                                    <li ng-click="vm.viewProps()">
+                                        <a>
+                                            <span class="fa fa-info-circle"></span>
+                                            <span>{{'属性'}}</span>
+                                        </a>
+                                    </li>
+                                    <!--<li ng-click="vm.goToFile()">-->
+                                    <!--<a>-->
+                                    <!--<span class="fa fa-map-marker"></span>-->
+                                    <!--<span>{{'文件位置'}}</span>-->
+                                    <!--</a>-->
+                                    <!--</li>-->
+                                </ul>
+                            </li>
+                            <li class="left-item cmd_download" ng-click="vm.saveToLocal()" uib-tooltip="下载">
+                                <a class="fa fa-save toolbar-icon"></a>
+                            </li>
+                            <li class="toolbar-dropdown left-item" ng-if="!vm.hideOpen || vm.openItems.length > 0" uib-tooltip="打开方式">
+                                <a class="fa fa-share-square-o toolbar-icon"></a>
+                                <ul class="preview-open-menu dropdown-menu">
+                                    <li ng-click="vm.open(item.openpath)" ng-repeat="item in vm.openItems"><a ng-bind="item.name"></a></li>
+                                </ul>
+                            </li>
+                            <li class="left-item" uib-tooltip="外链">
+                                <a class="fa fa-link toolbar-icon" ng-click="vm.shareLink()"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="toolbar-center">
+                        <a class="fa fa-search-minus toolbar-icon" ng-click="vm.zoomOut()"></a>
+                        <a class="fa fa-search-plus toolbar-icon" ng-click="vm.zoomIn()"></a>
+                        <a class="fa fa-repeat toolbar-icon" ng-click="vm.rotate()"></a>
+                        <!--<a class="fa fa-arrows-alt toolbar-icon"></a>-->
+                    </div>
+                    <div class="toolbar-right history-toggle" ng-if="vm.isShowHistory" tooltip-placement="left" ng-click="vm.openHistory($event)"  uib-tooltip="历史版本">
+                        <a class="fa fa-exchange toolbar-icon"></a>
+                    </div>
+                </div>
+                <div class="preview-content">
+                    <iframe ng-src="{{vm.previewUrl}}" frameborder="0" id="previewFrame" class="preview-frame"></iframe>
+                </div>
+            </div>
+            <div class="preview-footer" preview-keyboard-nav tabindex="1" autofocus="autofocus">
+                <a class="preview-prev" ng-click="vm.prevItem()">
+                    <i class="fa fa-chevron-circle-left"></i>
+                </a>
+                <a class="preview-next" ng-click="vm.nextItem()">
+                    <i class="fa fa-chevron-circle-right"></i>
+                </a>
+                <div class="preview-gallery">
+                    <div id="gallery" class="preview-gallery-inner" >
+                        <ul>
+                            <li ng-repeat="file in vm.previewFiles track by $index" class="preview-item" ng-style="file.style"
+                                ng-click="vm.selectItem($index)"
+                                ng-class="{active: $index == vm.currentIdx}">
+                                <div class="preview-img file-icon file-icon-54 icon-{{file.fileicon}}-54"
+                                     ng-class="{'icon-cache-folder-54': file.iscached && file.dir == 1,
+                                    'icon-collection-folder-54': file.property.collection_type == 'private'  && file.dir == 1,
+                                    'icon-public-folder-54': file.property.collection_type == 'public'  && file.dir == 1,
+                                    'icon-sync-folder-54': file.synctype == 0  && file.dir == 1,
+                                    'icon-sync-download-folder-54': file.synctype == 2  && file.dir == 1,
+                                    'icon-sync-upload-folder-54': file.synctype == 1  && file.dir == 1}">
+                                </div>
+                                <p ng-bind="file.filename" class="preview-name"></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="historyPage" ng-cloak>
+            <div class="title">文件历史</div>
+            <div class="history-wrapper" ng-if="vm.histories">
+                <ul infinite-scroll-disabled="vm.isloading || !vm.canLoad" infinite-scroll-parent="true"
+                    infinite-scroll="vm.historyList()" infinite-scroll-distance="1" infinite-scroll-immediate-check="false">
+                    <li class="history-item" ng-repeat="history in vm.histories track by $index"
+                        data-mountid="{{history.mount_id}}" ng-click="vm.changeVersion($event, history.hid)">
+                        <div class="version" ng-cloak>V.{{vm.count - $index}}</div>
+                        <div class="v-info">
+                            <div class="v-user">
+                                <avatar user-id="{{history.out_id}}" member-id="{{history.member_id}}"></avatar>
+                                <span ng-bind="history.display_name" class="v-name" title="{{history.display_name}}"></span>
+                                <span ng-bind="history.act_name" class="act-name"></span>
+                            </div>
+                            <div class="v-file">
+                                <span>{{history.datelinems|date:'yyyy/MM/dd'}}</span>
+                                <span class="v-time">{{history.datelinems|date:'HH:mm'}}</span>
+                                <span>{{history.humansize}}</span>
+                            </div>
+                        </div>
+                        <div class="v-act">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td><a class="act-item" uib-tooltip="打开" ng-hide="vm.hideOpen" ng-click="vm.openHistoryFile($event, history)"><i class="fa fa-share-square-o"></i></a></td>
+                                    <td><a class="act-item" uib-tooltip="下载" ng-click="vm.saveHistory($event, history)"><i class="fa fa-download"></i></a></td>
+                                    <td><a class="act-item" uib-tooltip="还原" ng-click="vm.revert($event, history)"><i class="fa fa-repeat"></i></a></td>
+                                    <td><a class="act-item" uib-tooltip="对比" ng-if="vm.showCompareBtn" ng-click="vm.openCompare($event, $index)"><i class="fa fa-files-o"></i></a></td>
+                                </tr>
+                            </table>
+                            <a href="javascript: void(0);" class="history-compare" ng-show="$index === vm.comparePos && vm.showCompare" ng-click="vm.cancelCompare($event)" style="color: #e97272;">取消对比</a>
+                            <a href="javascript: void(0);" class="history-compare" ng-show="$index !== vm.comparePos && vm.showCompare" ng-click="vm.historyCompare($event, vm.histories, vm.comparePos, $index, vm.count)" style="color: #4797f1;">与它对比</a>
+                        </div>
+                    </li>
+                </ul>
+                <div ng-if="vm.isloading" style="text-align: center; padding: 30px 0;">
+                    <span class="fa fa-spinner fa-pulse"></span>
+                </div>
+            </div>
+            <div ng-if="!vm.histories && !vm.isloading" class="history-empty history-wrapper" style="text-align: center; padding: 30px 0; color: #ccc;">
+                <span>文件历史记录为空</span>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/vendor-bundle.js"></script>
+    <script src="scripts/preview-bundle.js"></script>
+</body>
+</html>

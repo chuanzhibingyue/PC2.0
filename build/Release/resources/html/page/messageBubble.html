@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../css/message_bubble.css" rel="stylesheet">
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+	<script type="text/javascript" src="../script/messageBubble.js"></script>
+    <title>Message Bubble</title>
+</head>
+<body>
+	<div id="layoutContainer" class="bubble">
+		<div class="single-bubble hide">
+            <ul class="list-with-avatar-and-info conversation-list">
+                <li class="list-item conversation-item">
+                    <span class="avatar-node"></span>
+                    <span class="info title text-ellipsis"></span>
+                    <span class="msg-num"></span>
+                    <img class="delete" src="../images/remove_bubble.png" />
+                </li>
+            </ul>
+        </div>
+		<div class="bubble-list hide">
+			<div class="menu-panel-body vertical popup-message-box">
+		        <div class="menu-panel-body-title">
+                    <span class="box-title">{{Bubble.NewMessageTitle}}</span>
+                    <span class="message-total-num"></span>
+                </div>
+		        <div class="menu-panel-body-body"></div>
+			</div>
+			<div class="scroll-bar">
+				<div class="conversation-list-container">
+					<ul class="list-with-avatar-and-info conversation-list"></ul>
+				</div>
+			</div>
+			<div class="popup-message-box-bottom">
+				<ul>
+					<li class="list-item conversation-item active">
+						<div class="info ignore"></div>
+						<span class="setting">
+							<img src="../images/setting-icon.png" draggable="false" class="setting-icon">
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,455 @@
+.meetingRoom * {
+    transition: all 0.3s;
+}
+
+.meetingRoom a {
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.meetingRoom {
+    font-size: 12px;
+}
+
+.meetingRoom .clear {
+    clear: both;
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-title {
+    width: 300px;
+    height: 49px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #03111f;
+    border-bottom: 1px solid #dadada;
+    background-color: #fff;
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content {
+    position: absolute;
+    width: 300px;
+    top: 50px;
+    left: 60px;
+    right: 0px;
+    bottom: 4px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.meetingRoom .sub-menu-panel  .addMeetingRoom {
+    position: absolute;
+    bottom: 20px;
+    left: 300px;
+}
+
+.meetingRoom .sub-menu-panel .addMeetingRoom .addMeetingRoomIcon {
+    display: inline-block;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffcc00;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0px 18px rgba(0, 0, 0, 0.1);
+}
+
+.meetingRoom .sub-menu-panel  .addMeetingRoom .addMeetingRoomIcon:hover {
+    background-color: #ffe066;
+    box-shadow: 0 0px 18px rgba(0, 0, 0, 0.1);
+}
+
+.meetingRoom .sub-menu-panel  .addMeetingRoom .addMeetingRoomIcon:active {
+    background-color: #cca300;
+    box-shadow: 0 0px 18px rgba(0, 0, 0, 0.1);
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content ul .child {
+    height: 28px;
+    line-height: 28px;
+    padding-left: 10px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content ul .child.couldnotJoin {
+   /* color: #cccccc !important;  */
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content ul .child:hover {
+    background-color: #E8E8E8;
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content ul .child.selectedChild {
+    background-color: #e3e3e3;
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content ul .child li {
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content ul .child li a {
+    height: 28px;
+   display: inline-block;
+    float: left;
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content ul .child li .open {
+    width: 20px;
+    margin-right: 8px;
+    background: url(../images/meeting/meetingRoom/meetingRoomList-open.png) no-repeat center center;
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content ul .child li .close {
+    width: 20px;
+    margin-right: 8px;
+    background: url(../images/meeting/meetingRoom/meetingRoomList-close.png) no-repeat center center;
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content ul .child li .roomList {
+    width: 20px;
+    margin-right: 8px;
+    background: url(../images/meeting/meetingRoom/meetingRoomList.png) no-repeat center center;
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content ul .child li .orgloading {
+    width: 20px;
+    background: url(../images/messagebox/loading-17.gif) no-repeat center center;
+}
+
+/**meeting details**/
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel {
+    position: absolute;
+    left: 360px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailtitle {
+    width: 100%;
+    padding-left: 20px;
+    height: 49px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 16px;
+    color: #03111f;
+    border-bottom: 1px solid #dadada;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar {
+    height: 30px;
+    margin-bottom: 10px;
+    line-height: 50px;
+    padding-right: 21px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar a {
+    display: inline-block;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px #dadada;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar a span {
+    display: inline-block;
+    float: left;
+    color: #3399f3;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar a span.icon {
+    width: 20px;
+    height: 30px;
+    margin: 0px 5px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar a.deleteMeetingRoom .icon {
+    background: url(../images/meeting/meetingRoom/icon-delete.png) no-repeat 3px center;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar .editMeetingRoom .icon {
+    background: url(../images/meeting/meetingRoom/icon-edit.png) no-repeat center center;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar .createMeeting .icon {
+    background: url(../images/meeting/meetingRoom/icon-create.png) no-repeat center center;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar a.deleteMeetingRoom span {
+    color: #f96868;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar .deleteMeetingRoom {
+    width: 60px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar .editMeetingRoom {
+    width: 103px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .hostToolbar .createMeeting {
+    width: 84px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent {
+    min-height: 460px;
+    padding: 0px 20px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem {
+    min-height: 38px;
+    max-height: 250px;
+    overflow-y: auto;
+    line-height: 38px;
+    border-radius: 2px;
+    border: solid 1px #ededed;
+    padding: 0px 8px;
+    margin-bottom: 10px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem div {
+    float: left;
+    margin-right: 12px;
+    color: #03111f;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem .detailItemIcon {
+    width: 20px;
+    height: 20px;
+    margin-top: 9px;
+    background: #dddddd;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem .openAttendeeListBtn {
+    font-size: 15px;
+    line-height: 38px;
+    margin-right: 0;
+    float: right;
+    cursor: pointer;
+    color: #acaaac;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem .detailItemIcon.host-icon {
+    background: url(../images/meeting/meetingRoom/icon-host.png) no-repeat center center;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem .detailItemIcon.defaultAttendee-icon {
+    background: url(../images/meeting/meetingRoom/icon-attendee.png) no-repeat center center;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem .detailItemIcon.timeRange-icon {
+    background: url(../images/meeting/meetingRoom/icon-timeRange.png) no-repeat center center;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem .detailItemIcon.remark-icon {
+    background: url(../images/meeting/meetingRoom/icon-remark.png) no-repeat center center;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem .detailItemIcon.roomPSW-icon {
+    background: url(../images/meeting/meetingRoom/icon-roomPSW.png) no-repeat center center;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem .remark{
+    line-height: 18px;
+    word-break: break-all;
+    white-space: pre-wrap;
+    font-size: 12px;
+    color: #173553;
+    margin-right: 10px;
+    margin-left: 25px;
+    padding-top: 1px;
+}
+
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailFooter {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailFooter .password-btn {
+    height: 80px;
+    line-height: 80px;
+    font-size: 14px;
+    color: #71aee2;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    left: 20px;
+}
+
+.meetingRoom .sub-menu-panel .sub-menu-panel-content .loading {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .attendeePanel * {
+    transition: none;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .attendeePanel {
+    position: absolute;
+    display: none;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.1);
+    top: 50px;
+    right: 0;
+    bottom: 0;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .attendeePanel .title {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #dadada;
+    line-height: 50px;
+    font-size: 14px;
+    color: #03111f;
+    padding-left: 8px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .attendeePanel .title span {
+    margin-right: 10px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .attendeePanel .title .icon-back {
+    font-size: 20px;
+    vertical-align: text-bottom;
+    color: #d8d8d8;
+    cursor: pointer;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .attendeePanel .title .icon-back:hover {
+    color: #666666;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .attendeePanel .attendeeListContent .attendee-list {
+    top: 55px;
+}
+
+.meetingRoom .content-panel .content-panel-body .init-panel {
+    position: initial;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailContent .detailItem .roomPSWContent {
+    color: #f96868;
+}
+
+.detailFooter .password-area {
+    position: absolute;
+    width: 310px;
+    height: 66px;
+    padding-top: 14px;
+    /*padding-left: 20px;*/
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    bottom: 70px;
+    left: -100px;
+    color: #777777;
+    background-color: #ffffff;
+    font-size: 12px;
+    line-height: 26px;
+    z-index: 9999;
+    display: none;
+}
+
+.detailFooter .password-area span {
+    font-size: 14px;
+    padding-left: 10px;
+    color: #173553;
+}
+
+.detailFooter .password-area input {
+    border: none;
+    background-color: white;
+    font-size: 14px;
+    color: #173553;
+    margin-left: 10px;
+}
+
+.detailFooter .password-area .copy-password-button {
+    float: right;
+    margin-top: 3px;
+    margin-right: 15px;
+    width: 25px;
+    height: 20px;
+    line-height: 19px;
+    background-color: #71aee2;
+    font-size: 12px;
+    color: #ffffff;
+    padding-right: 7px;
+    padding-left: 7px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.detailFooter .password-area .copy-password-button:hover {
+    background-color: #7fb6e4;
+}
+
+.detailFooter .password-area .copy-password-button:active {
+    background-color: #659cca;
+}
+
+@keyframes join-loading {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        -moz-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes join-loading {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailFooter .join {
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailFooter a.join img {
+    display: none;
+    margin-right: 5px;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailFooter a.joining {
+    cursor: not-allowed;
+    background-color: #71AEE2;
+}
+
+.meetingRoom .content-panel .content-panel-body .meetingRoomdetailspanel .detailFooter a.joining img {
+    display: inline;
+    -webkit-animation: join-loading 1s infinite linear;
+}
+
+
+
+
+
+

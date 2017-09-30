@@ -1,0 +1,295 @@
+/**
+*  dial_pad component
+*  modify by hougang.chen 2015/12/17
+*/
+.dialPad a,.dialPad input:focus {
+    outline: none;
+}
+.dialPad{
+    width:256px;
+    height:370px;
+    cursor: default;
+    background-color:#f7f7f7;
+    border-radius:4px;
+}
+.dialPad:after{
+    position: absolute;
+    content: "";
+    color: #FFFFFF;
+    left: 129px;
+    top: 370px;
+    width:0;
+    height:0;
+    border-top:6px solid #FFFFFF;
+    border-right:6px solid transparent;
+    border-left:6px solid transparent;
+}
+.dialPad .cl{
+    clear:both;
+}
+/**dialPad head*/
+.dialPad .diaPad_title{
+    padding-top:20px;
+}
+.dialPad .diaPad_title .diaPad_zoneSelect{
+    width:87px;
+    height:20px;
+    line-height:20px;
+    padding-left:5px;
+    margin:0 auto 12px auto;
+    font-size:12px;
+    text-align: center;
+}
+
+.dialPad .diaPad_title .dialPad_inputBox{
+    width: 190px;
+    height: 24px;
+    line-height: 30px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: solid 1px #ededed;
+    margin: 0 auto 14px auto;
+    padding:6px 0 0 6px;
+}
+
+.dialPad .diaPad_title .dialPad_inputBox input{
+    float:left;
+    width:96px;
+    padding: 0 6px;
+    border-right:1px solid #ededed;
+    background: none;
+}
+.dialPad .diaPad_title .dialPad_inputBox .extensionNumber{
+    width:38px;
+    border-right:none;
+}
+
+.dialPad .diaPad_title .displadInputdel{
+    width: 16px;
+    height: 17px;
+    background: url("../images/contacts/search_delete.png") center center no-repeat;
+    cursor: pointer;
+	display: none;
+    position: absolute;
+    top: 60px;
+	right:36px;
+}
+
+.dialPad .diaPad_title .displadInputdel:hover{
+    background: url("../images/contacts/search_delete_hover.png") center center no-repeat;
+}
+
+ 
+
+.dialPad .diaPad_title input{
+    width:113px;
+    border:none;
+    color: #03111f;
+    font-size: 12px;
+}
+.dialPad .diaPad_title .tool-icon-container{
+    right:25px;
+    top: 15px;
+    transform:scale(0.8,0.8)
+}
+/**dialPad main*/
+.dialPad .dialPad_main{
+    padding-left:42px;
+}
+.dialPad .dialPad_main ul li{
+    width: 40px;
+    height: 40px;
+    margin: 6px 26px 6px 0;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    float: left;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.dialPad .dialPad_main ul li a{
+    display:block;
+    text-decoration:none;
+    color:#173553;
+}
+.dialPad .dialPad_main ul li.hidenumber{
+    display: none;
+}
+.dialPad .dialPad_main ul li a:hover{
+    color:#fff;
+    background-color:#4f667b;
+    border-radius: 50%;
+}
+
+.dialPad .dialPad_main ul li a:active{
+    color:#fff;
+    background-color:#3b4f61;
+    border-radius: 50%;
+}
+/**dialPad btn*/
+.dialPad .dialPad_main .cancelbtn a .icon-dialpadup{
+	font-size:12px;
+}
+.dialPad .dialPad_main .okbtn{
+    display:none;
+    font-size:12px;
+    background-color: #4f667b;
+}
+.dialPad .dialPad_main .okbtn a{
+    color:#fff;
+}
+.dialPad .dialPad_main .okbtnhide{
+    font-size:12px;
+    background-color: #4f667b;
+}
+
+.dialPad .dialPad_main .hidenumber a,.dialPad .dialPad_main .okbtnhide a{
+    cursor:default;
+    color:#fff;
+    /*opacity:0.3;*/
+}
+.dialPad .dialPad_main .hidenumber a:hover,.dialPad .dialPad_main .okbtnhide a:hover{
+    /*color:#71aee2;*/
+    /*opacity:0.3;*/
+    /*background-color:#fff;*/
+}
+
+.calllistpanel{
+    width:256px;
+    height:371px;
+    cursor: default;
+	position: absolute;
+    top: 5px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.calllistpanel:after{
+    position: absolute;
+    content: "";
+    color: #FFFFFF;
+    left: 129px;
+    top: 370px;
+    width:0;
+    height:0;
+    border-top:6px solid #FFFFFF;
+    border-right:6px solid transparent;
+    border-left:6px solid transparent;
+}
+
+.calllistpanel .listBox{
+    position:absolute;
+    bottom: 1px;
+	width:256px;
+	background-color:#fff;
+    border-radius:4px;
+    box-shadow: 0 6px 15px rgba(00,00,00, .3);
+}
+.calllistpanel .listBox .calllist{
+	max-height: 97px;
+	padding-top:3px ;
+	padding-top:3px;
+	border-bottom:1px solid #ededed;
+    /*overflow-y: scroll;*/
+    /*overflow-y: scroll;*/
+    overflow:hidden;
+}
+.calllistpanel .listBox .calllist ul li{
+	width:100%;
+	height:32px;
+	color:#173553;
+	font-size:12px;
+	line-height:32px;
+	text-align:center;
+	cursor: pointer;
+}
+.calllistpanel .listBox .calllist ul li .icon-call_voipVideo,.calllistpanel .listBox .calllist ul li .icon-call_reporterTell{
+	display:inline-block;
+	margin-left:16px;
+	margin-top:7px;
+	float:left;
+    font-size: 18px;
+}
+
+.calllistpanel .listBox .calllist ul li .tel{
+	width:120px;
+	margin-left:15px;
+	display:inline-block;
+	text-align:left;
+	float:left;
+}
+
+.calllistpanel .listBox .calllist ul li:hover,.calllistpanel .listBox .footer:hover{
+	background-color:#4f667b;
+	color:#fff;
+}
+
+.calllistpanel .listBox .footer{
+	width:100%;
+	height:32px;
+	color:#173553;
+	font-size:12px;
+	line-height:32px;
+	text-align:left;
+	cursor: pointer;
+}
+.calllistpanel .listBox .footer .icon-dialpaddown{
+	font-size:12px;
+	display:inline-block;
+	margin-left:34px;
+	margin-top:20px;
+	float:left;
+    display:none;
+}
+
+.calllistpanel .listBox .footer .inputteltip{
+	width:120px;
+	margin-left:43px;
+	display:inline-block;
+	text-align:left;
+}
+.calllistpanel .listBox .icon-call_singleSelected{
+    float: right;
+    margin-right: 28px;
+    line-height: 32px;
+}
+.diaPad_zoneSelect a{
+    display: inline-block;
+    float: right;
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 10px;
+    margin-left: -5px;
+    border-top:4px solid #3b4f61;
+    border-right:3px solid transparent;
+    border-left:3px solid transparent;
+}
+
+.dialPad .dialPadInput_Error{
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+
+    color: #fff;
+    border-radius: 4px;
+    background-color: #ff9e9e;
+    position: absolute;
+    top:0px;
+    left:45px;
+    top:45px;
+    text-align: center;
+
+}
+
+.dialPad .dialPadInput_Error span{
+    display: block;
+    background:  url(../images/call/dialpadInputerror.png) no-repeat 27px center;
+    padding-left: 27px;
+}
+
+
+
+

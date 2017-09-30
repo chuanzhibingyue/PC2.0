@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="uc" basedir="../" default="build.all">
+    <description>UC javascript build</description>
+    <property name="build" value="build"/>
+    <property name="tempDir" value="${build}/tempDir"/>
+    <property name="tempDir.js" value="${tempDir}/js"/>
+    <property name="tempDir.js.merged" value="${tempDir.js}/merged"/>
+    <property name="tempDir.js.compressed" value="${tempDir.js}/compressed"/>
+    <property name="tempDir.themes" value="${tempDir}/themes"/>
+    <property name="tempDir.themes.compressed" value="${tempDir.themes}/compressed"/>
+    <property name="tempDir.themes.images" value="${tempDir.themes}/images"/>
+    <property name="releaseDir" value="${build}/release"/>
+    <property name="releaseDir.html" value="${releaseDir}/html"/>
+    <property name="releaseDir.html.script" value="${releaseDir.html}/script"/>
+    <property name="releaseDir.html.css" value="${releaseDir.html}/css"/>
+    <property name="releaseDir.html.images" value="${releaseDir.html}/images"/>
+    <property name="jsConfigPath" value="script/config"/>
+    <property name="cssConfigPath" value="css/config"/>
+    <property name="cssSrc" value="css_src"/>
+    <property name="imagesDir" value="images"/>
+    <property name="ant-contrib" value="${build}/lib/ant-contrib.jar"/>
+    <property name="buildTools" value="${build}/tools"/>
+
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="${ant-contrib}"/>
+        </classpath>
+    </taskdef>
+
+    <target name="init" description="init directories">
+        <condition property="tempDirExists">
+            <available type="dir" file="${tempDir}"/>
+        </condition>
+        <condition property="releaseDirExists">
+            <available file="${releaseDir}" type="dir"/>
+        </condition>
+        <antcall target="clean.temp"/>
+        <antcall target="clean.release"/>
+        <mkdir dir="${tempDir}"/>
+        <mkdir dir="${releaseDir}"/>
+        <mkdir dir="${tempDir.js.compressed}"/>
+        <mkdir dir="${tempDir.themes.compressed}"/>
+    </target>
+
+    <target name="clean.temp" if="tempDirExists">
+        <description>Clean temp directory</description>
+        <delete includeEmptyDirs="true">
+            <fileset dir="${tempDir}"/>
+        </delete>
+    </target>
+
+    <target name="clean.release" if="releaseDirExists">
+        <description>Clean release directory</description>
+        <delete includeEmptyDirs="true">
+            <fileset dir="${releaseDir}"/>
+        </delete>
+    </target>
+
+    <!-- copy static files -->
+    <target name="copy.static" depends="init">
+        <copy todir="${releaseDir.html}">
+            <fileset dir="${basedir}">
+                <include name="nls/**"/>
+                <include name="media/**"/>
+                <include name="page/**"/>
+                <include name="font/**"/>
+				<include name="gokuai/**"/>
+				<include name="notice/**"/>
+                <include name="index.html"/>
+                <exclude name="**/svn/*"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <!-- build css -->
+    <target name="build.css.all" depends="copy.static">
+        <for param="file">
+            <path>
+                <fileset dir="${cssConfigPath}">
+                    <include name="*.js"/>
+                </fileset>
+            </path>
+            <sequential>
+                <!--get target js file-->
+                <getTargetCSS  path="@{file}"/>
+                <!-- <echo message="targetCSS: ${targetCSS}"/> -->
+                <!--load config file content, and set it to fileContent-->
+                <loadfile property="fileContent" srcFile="@{file}"/>
+                <!--<echo message="fileContent: ${fileContent}"/>-->
+                <antcall target="merge.css.single"/>
+                <!--unset the fileContent, so in next loop, it can be used again-->
+                <var name="fileContent" unset="true"/>
+            </sequential>
+        </for>
+    </target>
+    <scriptdef name="getTargetCSS" language="javascript">
+        <attribute name="path"/>
+        <![CDATA[
+            var File = java.io.File
+            var filePath = attributes.get("path");
+            var parts = filePath.split(File.separator);
+            var targetCSS;
+            for each(var part in parts){
+                if(part.endsWith('.js')){
+                    targetCSS = part;
+                    break;
+                }
+            }
+            var configIndex = targetCSS.indexOf("_config");
+            targetCSS = targetCSS.substring(0, configIndex);
+            project.setProperty("targetCSSFileName", targetCSS);
+            targetCSS = targetCSS + ".css";
+            project.setProperty("targetCSS", targetCSS);
+        ]]>
+    </scriptdef>
+
+    <target name="merge.css.single">
+        <!-- <echo message="file content:${fileContent}"/> -->
+        <script language="javascript">
+            <![CDATA[
+                var cssFiles = project.getProperty("fileContent");
+                cssFiles = eval(cssFiles);
+                var cssFileList=cssFiles.join(",");
+                project.setProperty("cssFileList", cssFileList);
+                project.executeTarget("merge.css.temp");
+                project.executeTarget("copy.images.temp");
+                project.executeTarget("copy.css");
+            ]]>
+        </script>
+    </target>
+    <!--<target name="merge.css.single">-->
+        <!--<echo message="file content:${fileContent}"/>-->
+        <!--<script language="javascript">-->
+            <!--<![CDATA[-->
+                <!--var cssFiles = project.getProperty("fileContent");-->
+                <!--cssFiles = eval(cssFiles);-->
+                <!--var cssFileList=cssFiles.join(",");-->
+                <!--project.setProperty("cssFileList", cssFileList);-->
+                <!--project.executeTarget("merge.css.temp");-->
+                <!--project.executeTarget("copy.images.temp");-->
+                <!--project.executeTarget("generate.css.sprits");-->
+                <!--project.executeTarget("rename.generated.images");-->
+                <!--project.executeTarget("compress.css");-->
+                <!--project.executeTarget("copy.compress.css");-->
+            <!--]]>-->
+        <!--</script>-->
+    <!--</target>-->
+
+    <target name="merge.css.temp">
+        <!-- <echo message="cssFileList = ${cssFileList}"/> -->
+        <property name="tempDir.themes.merged" value="${tempDir.themes}/${targetCSSFileName}"/>
+        <concat destfile="${tempDir.themes.merged}/${targetCSS}" encoding="UTF-8" outputencoding="UTF-8">
+            <filelist dir="${basedir}" files="${cssFileList}"/>
+        </concat>
+    </target>
+
+    <target name="copy.images.temp">
+        <copy todir="${tempDir.themes.images}">
+            <fileset dir="${imagesDir}" casesensitive="no">
+                <exclude name="**/svn/*"/>
+                <include name="**/*.png"/>
+                <include name="**/*.gif"/>
+                <include name="**/*.jpg"/>
+                <include name="**/*.ico"/>
+                <include name="**/*.emj"/>
+				<include name="**/*.svg"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="generate.css.sprits">
+        <property name="smartspritesDir" location="${buildTools}/smartsprites-0.2.11" />
+        <java classname="org.carrot2.labs.smartsprites.SmartSprites" fork="true" maxmemory="1024m">
+            <classpath>
+                <pathelement location="${smartspritesDir}/lib/smartsprites-0.2.11.jar" />
+                <pathelement path="${java.class.path}" />
+                <fileset dir="${smartspritesDir}/lib">
+                    <include name="**/*.jar" />
+                </fileset>
+            </classpath>
+            <arg line="--root-dir-path ${tempDir.themes.merged}  --log-level INFO" />
+        </java>
+    </target>
+
+    <target name="rename.generated.images">
+        <condition property="verticalImageExists">
+            <available type="file" file="${tempDir.themes.images}/uc-v.png"/>
+        </condition>
+        <condition property="horizontalImageExists">
+            <available type="dir" file="${tempDir.themes.images}/uc-v.png"/>
+        </condition>
+        <antcall target="rename.vertical.image"/>
+        <antcall target="rename.horizontal.image"/>
+
+    </target>
+    <target name="rename.vertical.image" if="verticalImageExists">
+        <move file="${tempDir.themes.images}/uc-v.png" tofile="${tempDir.themes.images}/${targetCSSFileName}-v.png"/>
+        <replace file="${tempDir.themes.merged}/${targetCSSFileName}-sprite.css" token="uc-v" value="${targetCSSFileName}-v" />
+    </target>
+    <target name="rename.horizontal.image" if="horizontalImageExists">
+        <move file="${tempDir.themes.images}/uc-h.png" tofile="${tempDir.themes.images}/${targetCSSFileName}-h.png"/>
+        <!-- <echo message="css file: ${tempDir.themes.merged}/${targetCSSFileName}-sprite.css"/> -->
+        <replace file="${tempDir.themes.merged}/${targetCSSFileName}-sprite.css" token="uc-h" value="${targetCSSFileName}-h" />
+    </target>
+
+    <target name="compress.css">
+        <java jar="${buildTools}/yuicompress.jar" fork="true">
+            <arg line="--type css --charset utf-8 -o ${tempDir.themes.compressed}/${targetCSS} ${tempDir.themes.merged}/${targetCSSFileName}-sprite.css "/>
+        </java>
+    </target>
+    <target name="copy.compress.css">
+        <copy todir="${releaseDir.html.css}">
+            <fileset dir="${tempDir.themes}">
+                <include name="${targetCSS}"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="copy.css">
+        <copy todir="${releaseDir.html.css}">
+            <fileset dir="${tempDir.themes.merged}">
+                <include name="${targetCSS}"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <!-- build js -->
+    <target name="build.js.all">
+        <!-- <echo message="jsConfigPath: ${jsConfigPath}"/> -->
+        <for param="file">
+            <path>
+                <fileset dir="${jsConfigPath}">
+                    <include name="*.js"/>
+                </fileset>
+            </path>
+            <sequential>
+                <!--get target js file-->
+                <getTargetJS  path="@{file}"/>
+                <echo message="targetJS: ${targetJS}"/>
+                <!--load config file content, and set it to fileContent-->
+                <loadfile property="fileContent" srcFile="@{file}"/>
+                <!--<echo message="fileContent: ${fileContent}"/>-->
+                <antcall target="merge.js.single"/>
+                <!--unset the fileContent, so in next loop, it can be used again-->
+                <var name="fileContent" unset="true"/>
+            </sequential>
+        </for>
+    </target>
+
+    <scriptdef name="getTargetJS" language="javascript">
+        <attribute name="path"/>
+        <![CDATA[
+            var File = java.io.File
+            var filePath = attributes.get("path");
+            var parts = filePath.split(File.separator);
+            var targetJS;
+            for each(var part in parts){
+                if(part.endsWith('.js')){
+                    targetJS = part;
+                    break;
+                }
+            }
+            var configIndex = targetJS.indexOf("_config");
+            targetJS = targetJS.substring(0, configIndex);
+            targetJS = targetJS + ".js";
+            project.setProperty("targetJS", targetJS);
+        ]]>
+    </scriptdef>
+
+    <target name="merge.js.single">
+        <!-- <echo message="file content:${fileContent}"/> -->
+        <script language="javascript">
+            <![CDATA[
+                var jsFiles = project.getProperty("fileContent");
+                jsFiles = eval(jsFiles);
+                var jsFileList=jsFiles.join(",");
+                project.setProperty("jsFileList", jsFileList);
+                project.executeTarget("concat.js");
+                project.executeTarget("replace.debug.token");
+                project.executeTarget("compress.js");
+                project.executeTarget("compile.js");
+                project.executeTarget("copy.compiled.js");
+            ]]>
+        </script>
+    </target>
+
+    <target name="concat.js">
+        <!-- <echo message="jsFileList = ${jsFileList}"/> -->
+        <concat destfile="${tempDir.js.merged}/${targetJS}" encoding="UTF-8" outputencoding="UTF-8">
+            <filelist dir="${basedir}" files="${jsFileList}"/>
+        </concat>
+    </target>
+    <target name="replace.debug.token">
+        <replaceregexp byline="false" encoding="UTF-8">
+            <regexp pattern="\/\*\*DebugBegin\*\*\/[\s\S]*\/\*\*DebugEnd\*\*\/"/>
+            <substitution expression=""/>
+            <fileset dir="${tempDir.js.merged}" includes="${targetJS}"/>
+        </replaceregexp>
+    </target>
+    <target name="compress.js">
+        <description>Compress merged JS</description>
+        <java jar="${buildTools}/yuicompress.jar" fork="true">
+            <arg line="--type js --charset utf-8 -o ${tempDir.js.compressed}/${targetJS} ${tempDir.js.merged}/${targetJS}"/>
+        </java>
+    </target>
+    <target name="compile.js">
+        <java jar="${buildTools}/compiler.jar" fork="true">
+            <arg line="--js ${tempDir.js.compressed}/${targetJS} --js_output_file ${tempDir.js}/${targetJS} --warning_level QUIET"/>
+        </java>
+    </target>
+    <target name="copy.compiled.js">
+        <copy todir="${releaseDir.html.script}">
+            <fileset dir="${tempDir.js}">
+                <include name="${targetJS}"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="copy.release.css">
+        <copy todir="${releaseDir.html.css}">
+            <fileset dir="${tempDir.themes.compressed}">
+                <include name="*.css"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="copy.release.images">
+        <copy todir="${releaseDir.html.images}">
+            <fileset dir="${tempDir.themes.images}">
+                <include name="**"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="copy.release.js">
+        <copy todir="${releaseDir.html.script}">
+            <fileset dir="${tempDir.js.compressed}">
+                <include name="*.js"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="copy.release.third_party">
+        <copy todir="${releaseDir.html.script}">
+            <fileset dir="script">
+                <include name="third_party/**"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="build.all" depends="build.css.all, build.js.all, copy.release.css,copy.release.images, copy.release.js, copy.release.third_party">
+    </target>
+</project>

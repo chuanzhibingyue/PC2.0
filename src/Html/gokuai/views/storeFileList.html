@@ -1,0 +1,91 @@
+<div>
+    <div class="file-table-wrapper" ng-show="PAGE_CONFIG.listView == 'list'">
+        <div id="infiniteTable" gk-contextmenu>
+            <div class="file-table-header">
+                <div class="file-col-c file-col file-title-col" ng-click="changeOrder($event, 'filesize')">
+                    <span style="display: inline-block;" translate>大小</span>
+                    <span class="icon-order order-down" ng-show="order.indexOf('-filesize') > -1"></span>
+                    <span class="icon-order order-up" ng-show="order.indexOf('+filesize') > -1"></span>
+                </div>
+                <div class="file-col-b file-col file-title-col" ng-click="changeOrder($event, 'lasttime')">
+                    <span translate>最后修改</span>
+                    <span class="icon-order order-down" ng-show="order.indexOf('-lasttime') > -1"></span>
+                    <span class="icon-order order-up" ng-show="order.indexOf('+lasttime') > -1"></span>
+                    <div class="v-line"></div>
+                </div>
+                <div class="file-col-a file-col file-title-col" ng-click="changeOrder($event, 'filename')">
+                    <span translate>文件名</span>
+                    <span class="icon-order order-down" ng-show="order.indexOf('+filename') > -1"></span>
+                    <span class="icon-order order-up" ng-show="order.indexOf('-filename') > -1"></span>
+                    <div class="v-line"></div>
+                </div>
+            </div>
+            <div class="file-table-content" infinite-scroll-disabled="isloading || limitLoad"
+                 infinite-scroll="fileList()" infinite-scroll-container="'#infiniteTable'"
+                 infinite-scroll-distance="1">
+                <div ng-if="files && files.length == 0 && !isloading" style="text-align: center; padding: 10px 0; color: #999; font-size: 12px;">
+                    <span translate ng-if="view != 'search'">该文件夹为空</span>
+                    <span ng-if="view == 'search'">未找到相关搜索结果</span>
+                </div>
+                <div ng-repeat="file in files | limitTo: limit track by $index" save-select send-select data-index="{{$index}}"
+                     ng-class="{selected: file.selected}" ng-dblclick="handleDblClick($event, file)" class="file-item">
+                    <div class="file-col file-col-c file-filesize">{{file.humansize}}</div>
+                    <div class="file-col file-col-b file-lasttime">{{file.lasttime*1000 | date: 'yyyy/MM/dd HH:mm'}} {{file.lastname}}</div>
+                    <div class="file-col file-col-a">
+                        <div class="file-info">
+                            <div class="file-icon file-icon-28 icon-{{file.fileicon}}-28"
+                                 ng-class="{'icon-cache-folder-28': file.iscached && file.dir == 1,
+                                    'icon-collection-folder-28': file.property.collection_type == 'private'  && file.dir == 1,
+                                    'icon-public-folder-28': file.property.collection_type == 'public'  && file.dir == 1,
+                                    'icon-sync-folder-28': file.synctype == 0  && file.dir == 1,
+                                    'icon-sync-download-folder-28': file.synctype == 2  && file.dir == 1,
+                                    'icon-sync-upload-folder-28': file.synctype == 1  && file.dir == 1}"></div>
+                            <span ng-hide="file.rename">{{file.filename}}</span>
+                        </div>
+                    </div>
+                    <div class="file-tags clearfix">
+                        <div class="tag-item" ng-repeat="tag in file.tags track by $index">
+                            <i class="circle"></i><span ng-bind="tag" class="tag-name"></span>
+                        </div>
+                    </div>
+                </div>
+                <div ng-if="isloading" style="text-align: center; padding: 10px 0; color: #999; font-size: 12px;">
+                    <span translate>正在加载</span>
+                </div>
+                <div ng-if="loadedError" style="text-align: center; padding: 10px 0; color: #999; font-size: 12px;">
+                    <span translate>文件加载失败</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="file-thumbnail-wrapper" ng-show="PAGE_CONFIG.listView == 'thumbnail'"
+         gk-contextmenu id="infiniteThumb">
+        <div ng-if="files && files.length == 0" style="text-align: center; padding: 10px 0; color: #999; font-size: 12px;">
+            <span ng-if="view != 'search'">该文件夹为空</span>
+            <span ng-if="view == 'search'"></span>
+
+        </div>
+        <ul>
+            <li ng-repeat="file in files track by $index" class="thumb-item" save-select send-select data-index="{{$index}}"
+                ng-class="{selected: file.selected}" ng-dblclick="handleDblClick($event, file)">
+                <div class="file-icon file-icon-54" ng-if="file.thumbimg" style="background-image: url({{file.thumbimg}});">
+                </div>
+                <div ng-if="!file.thumbimg" class="file-icon file-icon-54 icon-{{file.fileicon}}-54"
+                     ng-class="{'icon-cache-folder-54': file.iscached && file.dir == 1,
+                                    'icon-collection-folder-54': file.property.collection_type == 'private'  && file.dir == 1,
+                                    'icon-public-folder-54': file.property.collection_type == 'public'  && file.dir == 1,
+                                    'icon-sync-folder-54': file.synctype == 0  && file.dir == 1,
+                                    'icon-sync-download-folder-54': file.synctype == 2  && file.dir == 1,
+                                    'icon-sync-upload-folder-54': file.synctype == 1  && file.dir == 1}" >
+                </div>
+                <div class="file-filename">{{file.filename}}</div>
+                <div class="rename-thumb" ng-if="file.rename">
+                    <form ng-submit="renameSubmit($event, file)">
+                        <input type="text" id="renameThumb" ng-value="file.filename"/>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

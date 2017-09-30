@@ -1,0 +1,79 @@
+.contact-forward-email{
+    background-color: #fff;
+    border-radius: 3px;
+    width: 403px;
+    height: 203px;
+}
+.contact-forward-email .window-bar{
+    height: 40px;
+    line-height: 40px;
+    margin-left: 19px;
+    color:#3b4f61;
+    font-size: 14px;
+}
+.contact-forward-email .tool-icon-container{
+    line-height: 30px;
+}
+.contact-forward-email .title{
+    font-size:14px;
+    color:#173553;
+}
+.contact-forward-email .border{
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000000), to(rgba(0, 0, 0, 0)));
+    height: 3px;
+    opacity: 0.1;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}
+.contact-forward-email .emailBody{
+    margin-left: 30px;
+    height: 32px;
+    width: 340px;
+    margin-top: 36px;
+    border:1px solid #dadada;
+    border-radius:2px;
+}
+.contact-forward-email .inputEmail{
+    border: 0;
+    width: 300px;
+    height: 30px;
+    margin-left: 40px;
+    font-size: 12px;
+    color: #adadad;
+    outline:none;
+}
+
+.contact-forward-email .emailAvatar{
+    position: absolute;
+    left: 40px;
+    top: 84px;
+}
+.contact-forward-email .email-save{
+    margin-top: 41px;
+    margin-left: 110px;
+}
+.contact-forward-email .email-save a.cancel
+{
+    width: 105px;
+    height: 32px;
+    display: inline-block;
+    /*background-color: #ededed;*/
+    /*color: #3b4f61;*/
+    text-align: center;
+    line-height: 32px;
+    border-radius: 2px;
+    font-size:14px;
+}
+.contact-forward-email .email-save a.save
+{
+    width: 164px;
+    height: 32px;
+    display: inline-block;
+    /*background-color: #4f667b;*/
+    /*color: #ffffff;*/
+    text-align: center;
+    line-height: 32px;
+    border-radius: 2px;
+    font-size:14px;
+}

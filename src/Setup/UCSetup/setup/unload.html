@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+        <title>蜜蜂-卸载</title>
+        <link rel="stylesheet" href="uninstall.css" charset="utf-8">
+    </head>
+    <body onSelectStart="return false" onDragStart="return false;">
+        <div class="main">
+            <!-- title -->
+            <div class="title">
+                <div class="operation">
+                    <i class="min"></i>
+                    <i class="close"></i>
+                </div>
+            </div>
+
+            <div class="step0"  >
+                <div class="logo">
+                    <img src="logo3.png"  />
+                </div>
+
+                <div class="welcome">
+                    确定要卸载蜜蜂吗？
+                </div>
+                <div class="btn-wrap">
+                    <a class="btn-uninstall-cancel btn" href="javascript:void(0);" onfocus="this.blur();" onclick="exit();"></a>
+                    <a class="btn-uninstall btn" href="javascript:void(0);" onfocus="this.blur();" onclick="uninstall();"></a>
+                </div>
+            </div>
+
+            <div class="step1"  style="display:none;" >
+                <div class="info">
+                    <!-- 图文介绍新特性 -->
+					<img src="logo3.png" />
+                </div>
+                <div class="progress">
+                    <div class="bar">
+                        <div class="num"></div>
+                    </div>
+                    <div class="des">
+                        <div class="left">
+                            正在卸载...
+                        </div>
+                        <div class="right">
+                            0%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step2"  style="display:none;" >
+                <div class="logo">
+                    <img src="logo3.png"   />
+                </div>
+
+                <div class="welcome">
+                    卸载完成
+                </div>
+                <div class="btn-wrap">
+                    <a class="btn-uninstall-success btn" href="javascript:void(0);" onfocus="this.blur();" onclick="exit();"> </a>
+                </div>
+            </div>
+
+            <div class="error" style="display:none;">
+                <div class="info">
+                    <img src="logo3.png"   />
+                    <div class="tips">
+                        <div class="big">
+                            程序错误
+                        </div>
+                        <div class="msg">
+                            蜜蜂遇到严重错误无法完成卸载，请联系计算机管理人员。
+                        </div>
+                    </div>
+                </div>
+                <div class="setup-success">
+                    <a class="btn-install-close" href="javascript:void(0);" onfocus="this.blur();" onclick="exit();"></a>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="jquery.1.6.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript">
+//卸载页面的滑动条
+function statusBar(bValue,nValue){
+	$(".bar>.num").css("width",nValue+"%");
+    $('.des .right').text(nValue+"%");
+	//i++;
+	if(nValue == 100)
+	{
+		if(bValue) {
+			$('.step1').hide();
+			$('.step2').show();
+		}
+		else {
+			//失败页面
+			$('.step1').hide();
+			$('.error').show();
+		}
+
+        $('.close').removeClass('disabled');
+	}
+}
+
+function exit()
+{
+  external.MainWnd.close();
+}
+
+//点击卸载
+function uninstall()
+{
+	if (external.MainWnd.CheckAppRunning())
+	{
+		if (!confirm("应用程序仍在运行，请确认是否强制关闭并卸载？"))
+		{
+			external.MainWnd.close();
+		}
+    }
+	$('.step0').hide();
+	$('.step1').show();
+	$('.close').addClass('disabled');
+	external.MainWnd.Uninstall();
+	external.MainWnd.setCallBackHandler("statusBar");
+}
+
+$(document).ready(function () {
+    external.MainWnd.setSize(520, 420);
+    //external.MainWnd.setTitle("蜜蜂");
+    var width = (screen.width-520)/2;
+    var height = (screen.height-420)/2
+    external.MainWnd.setPos(width, height);
+    external.MainWnd.show();
+
+    //禁用ctrl+A
+    $("body").keydown(function(e) {
+        if (e.ctrlKey == 1) {
+            if(e.keyCode==65) {
+                return false;
+            }
+        }
+    });
+
+    $('.min').click(function() {
+        $(this).blur();
+        external.MainWnd.minimize();
+    });
+});
+</script>

@@ -1,0 +1,234 @@
+.coverPage {
+  width: 630px;
+  height: 563px;
+  position: relative;
+  display: inline-block;
+  border: solid 1px #dadada;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.1);
+  padding: 0 0 10px 0;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.coverPage .title {
+  padding: 0 0 0 10px;
+  text-align: left;
+  line-height: 39px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.coverPage .shadow {
+  height: 3px;
+  background-image: linear-gradient(to top, #ffffff, #000000);
+  opacity: 0.1;
+}
+.coverPage .close {
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  z-index: 10;
+  height: 20px;
+  width: 20px;
+  background-size: 8px;
+  background-position: center;
+  background-image: url(../images/icon_close.png);
+  background-repeat: no-repeat;
+}
+.coverPage .close:hover {
+  background-image: url(../images/icon_close_hover.png);
+  background-size: 20px 20px;
+}
+.coverPage .coversContainer {
+  padding: 14px 10px 0 20px;
+}
+.coverPage .coversContainer:after {
+  clear: both;
+}
+.coverPage .coversContainer p {
+  margin-left: 3px;
+  color: #666;
+  line-height: 1;
+}
+.coverPage .coversContainer .covers {
+  width: 100%;
+}
+.coverPage .coversContainer .covers .coversWrapper {
+  float: left;
+  position: relative;
+}
+.coverPage .coversContainer .covers .coversWrapper:hover {
+  outline: solid 2px #3399f3;
+}
+.coverPage .coversContainer .covers .coversWrapper.selected {
+  outline: solid 3px #e5c106;
+  position: relative;
+}
+.coverPage .coversContainer .covers .coversWrapper.selected .imageContainer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.coverPage .coversContainer .covers .coversWrapper.selected .imageContainer:before {
+  content: "";
+  background-color: #e5c106;
+  position: absolute;
+  right: -25px;
+  top: 60px;
+  height: 50px;
+  width: 50px;
+  -webkit-transform: rotate(45deg);
+}
+.coverPage .coversContainer .covers .coversWrapper.selected .imageContainer:after {
+  content: "\f00c";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 2px;
+  top: 66px;
+  font-size: 12px;
+  color: #fff;
+}
+.coverPage .coversContainer .covers .coversWrapper .cover {
+  width: 100%;
+  height: 100%;
+}
+.coverPage .coversContainer .covers .coversWrapper .cover.last {
+  border: dashed 1px #c3c3c3;
+  position: relative;
+  width: 99%;
+  height: 98%;
+}
+.coverPage .coversContainer .covers .coversWrapper .cover.last:before {
+  content: "无封面";
+  color: #c3c3c3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+}
+.coverPage .coversContainer .covers .coversWrapper .cover img {
+  width: 100%;
+  height: auto;
+}
+.coverPage .customizeContainer p {
+  color: #666;
+  line-height: 1;
+}
+.coverPage .customizeContainer .upload {
+  margin-top: 14px;
+  border: dashed 1px #c3c3c3;
+  width: 188px;
+  height: 107px;
+  cursor: pointer;
+  position: relative;
+}
+.coverPage .customizeContainer .upload .uploadIcon:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(../images/camera.png) no-repeat center center;
+  bakcground-size: 40px;
+}
+.coverPage .coverOptionDialog {
+  position: absolute;
+  top: 50px;
+  width: 436px;
+  height: 450px;
+  /* max-height: 95%; */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 0px 2px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  overflow: hidden;
+}
+.coverPage .coverOptionDialog .tips {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.coverPage .coverOptionDialog .divideline {
+  width: 100%;
+  height: 3px;
+  opacity: 0.1;
+  background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+}
+.coverPage .coverOptionDialog .coverOptions {
+  margin-top: 13px;
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-top: 35px; */
+  border: solid 1px #ededed;
+}
+.coverPage .coverOptionDialog .coverOptions .cropper_area {
+  background: transparent;
+}
+.coverPage .coverOptionDialog .updateBtn {
+  font-family: inherit;
+  font-size: 14px;
+  color: #03111f;
+  height: 26px;
+  margin-top: 10px;
+  width: 90px;
+  margin-bottom: 10px;
+  background-color: #ededed;
+  outline: none;
+  border: none;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 2px;
+}
+.coverPage .coverOptionDialog .bottomBtns {
+  border-top: solid 1px #DADADA;
+  padding-top: 20px;
+  font-size: 14px;
+}
+.coverPage .coverOptionDialog .bottomBtns button {
+  width: 80px;
+}
+.coverPage .coverOptionDialog .bottomBtns .btnCancel {
+  background-color: #ededed;
+  color: #03111f;
+  margin-right: 10px;
+}
+.coverPage .bottomBtns button {
+  font-size: 14px;
+  font-family: inherit;
+  width: 110px;
+  height: 32px;
+  border: none;
+  border-radius: 2px;
+  float: right;
+}
+.coverPage .bottomBtns .btnConfirm {
+  background-color: #4F667B;
+  color: #fff;
+  margin-right: 20px;
+}
+.cropper-point.point-se {
+  width: 5px!important;
+  height: 5px!important;
+}
+.cropper-view-box {
+  outline: #FFCC00 solid 1px !important;
+  outline-color: #FFCC00 !important;
+}
+.cropper-point {
+  background-color: #FFCC00 !important;
+}
+.loadingLayout {
+  position: absolute;
+  top: 40px;
+}

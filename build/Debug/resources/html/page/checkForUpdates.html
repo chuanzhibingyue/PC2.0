@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CheckForUpdates</title>
+    <link href="../css/setting_update.css" rel="stylesheet"  type="text/css" >
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/settingUpdate.js"></script>
+</head>
+<body>
+<div class="check-for-updates child-window-shadow">
+    <div class="title">{{SettingUpdate.Title}}</div>
+    <div class="line"></div>
+    <!-- 显示为加载进度条-->
+    <div class="loading">
+        <img class="logo" src="../images/login/logo.png">
+        <div class="loading-here">
+            <div class="progressBar"><div id="bar"></div></div>
+        </div>
+        <button class="cancel">{{SettingUpdate.Cancel}}</button>
+    </div>
+
+    <!-- 有可更新版本-->
+    <div class="new-version">
+        <img class="logo" src="../images/login/logo.png">
+        <div class="content">{{SettingUpdate.Update}}
+            <div>{{SettingUpdate.UpdateWords}}<span class="version-num"></span></div>
+        </div>
+        <button class="update-now">{{SettingUpdate.UpdateNow}}</button>
+    </div>
+
+    <!-- 当前版本为最新版本-->
+    <div class="version">
+        <img class="logo" src="../images/login/logo.png">
+        <div class="content">{{SettingUpdate.NoUpdate}}
+            <div>{{SettingUpdate.NoVersion}}</div>
+        </div>
+      <button class="confirm">{{SettingUpdate.Confirm}}</button>
+    </div>
+    <!-- 检查更新失败-->
+    <div class="checkup_failed">
+        <img class="logo" src="../images/login/logo.png">
+        <div class="content">{{SettingUpdate.UpdateFailed}}</div>
+        <button class="confirm">{{SettingUpdate.Confirm}}</button>
+    </div>
+    <div class="tool-icon-container">
+        <span class="icon-close tool-icon"></span>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<div class="gk-dialog-header">
+    库设置
+</div>
+<div class="gk-dialog-content" ng-if="!isloading && !errorText">
+
+    <div class="input-wrapper">
+        <span class="lib-info" translate>库名称</span>
+        <input enable-enter-submit="updateLib()" type="text" class="create-input" ng-model="setting.name" placeholder="{{'必填（最多20字）'|translate}}" maxlength="20"/>
+    </div>
+    <!--<div class="input-wrapper">-->
+        <!--<span class="lib-info" translate>库图标</span>-->
+        <!--<a class="create-input create-input-lib-logo" style="cursor: pointer;" ng-click="openLogoMenu($event)">-->
+            <!--<img ng-src="{{setting.logoUrl}}" />-->
+        <!--</a>-->
+        <!--<ul class="dropdown-menu" id="logoMenu">-->
+            <!--<li ng-repeat="libLogo in libLogos track by $index" ng-click="changeLibLogo(libLogo)">-->
+                <!--<img ng-src="{{libLogo.url}}" />-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--<i class="icon-sort fa fa-sort" ng-click="openLogoMenu($event)" style="cursor: pointer;"></i>-->
+    <!--</div>-->
+
+    <!--<div class="input-wrapper" ng-if="owner.role_id == -1">-->
+        <!--<span class="lib-info" translate>库所有者</span>-->
+        <!--<a class="create-input" style="cursor: pointer;" ng-click="openRoleMenu($event)" ng-bind="owner.member_name"></a>-->
+        <!--<div id="roleMenu">-->
+            <!--<div class="member-wrapper">-->
+                <!--<input type="text"/>-->
+            <!--</div>-->
+            <!--<ul class="dropdown-menu">-->
+                <!--<li ng-repeat="member in members track by $index" ng-click="changeRole(member)">-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<i class="icon-sort fa fa-sort" ng-click="openRoleMenu($event)" style="cursor: pointer;"></i>-->
+    <!--</div>-->
+
+    <div class="input-wrapper" ng-if="!hideSp">
+        <span class="lib-info" translate>存储节点</span>
+        <a class="create-input" style="cursor: pointer;" ng-click="openStorageMenu($event)">
+            <span ng-bind="setting.storagePoint.name"></span>
+        </a>
+        <ul class="dropdown-menu" id="storageMenu">
+            <li ng-repeat="storagePoint in ent.storagePoints track by $index" ng-click="changeStoragePoint(storagePoint)">
+                <a>{{storagePoint.name}}</a>
+            </li>
+        </ul>
+        <i class="icon-sort fa fa-sort" ng-click="openStorageMenu($event)" style="cursor: pointer;"></i>
+    </div>
+
+    <div class="btn-wrapper">
+        <a class="quit-btn" ng-click="delLib()" ng-if="owner.role_id == -1 || owner.member_type == 0 ">删除库</a>
+        <!--<a class="quit-btn" ng-click="quitLib()" ng-if="owner.role_id != -1">退出库</a>-->
+        <button class="cancel-btn" ng-click="cancel()">取消</button>
+        <button class="ok-btn" ng-click="updateLib()" style="position: relative" ng-disabled="updateLoading">
+            <span ng-show="!updateLoading">完成</span>
+            <span ng-show="updateLoading" us-spinner spinner-theme="smallWhite"></span>
+
+        </button>
+    </div>
+</div>
+<div class="gk-dialog-content" ng-show="!isloading && errorText" style="text-align: center;">
+    <p>{{errorText}}</p>
+</div>
+<div class="gk-dialog-content" ng-show="isloading" style="position: relative">
+    <span us-spinner></span>
+</div>

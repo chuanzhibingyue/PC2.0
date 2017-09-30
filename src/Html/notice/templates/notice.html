@@ -1,0 +1,115 @@
+<div class="main publishEnd" ng-click="onTopClick($event)">
+    <ng-include src="'templates/header.html'"></ng-include>
+    <article class="container">
+        <ng-include class="left" src="'templates/menu.html'"></ng-include>
+        <div class="right">
+            <div class="top" ng-show="selectedAccount">
+                <label translate="notice.account-label"></label>
+                <div class="accountsWrap">
+                    <div class="accountsSelect" ng-click="toggleAccountsSelection($event)">
+                        <div class="avatar">
+                            <notice-image isrc="selectedAccount.avatar" save-to-local="true"></notice-image>
+                        </div>
+                        <span ng-bind="selectedAccount.name" class="text-ellipsis name" title="{{selectedAccount.name}}"></span>
+                        <span class="fa" ng-class="{'fa-caret-down':!showAccountsSelection,'fa-caret-up':showAccountsSelection}"></span>
+                    </div>
+                    <div ng-show="showAccountsSelection" class="accountsGridWrapper">
+                        <div class="accountsGrid"  ng-style="accountGridStyle">
+                            <div class="arrayColumn" ng-repeat="column in accountsArray" ng-style="{'left': 200*$index}">
+                                <div class="arrayItem" ng-repeat="item in column" ng-click="toggleAccountsSelection();updateSelectedAccount($event,item)">
+                                    <span class="avatar">
+                                        <notice-image isrc="item.avatar" save-to-local="true"></notice-image>
+                                    </span>
+                                    <span ng-bind="item.name" class="text-ellipsis item-name" title="{{item.name}}"></span>
+                                    <span class="selectedIcon" ng-show="selectedAccount.id == item.id"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categories">
+                        <div class="history btn" translate="notice.sent-message" ng-class="{'selected':historyNoticesSelected}" ng-click="toggleNoticeType(true)"></div>
+                        <div class="draft btn" translate="notice.drafts" ng-class="{'selected':!historyNoticesSelected}" ng-click="toggleNoticeType(false)"></div>
+                    </div>
+                </div>
+                <div class="searchContainer" ng-class="{'focused':searchFocused}">
+                    <button class="searchIcon" value="" id="submit" ng-click="onSearchNotice()" />
+                    <input type="text" name="text" ng-focus="updateSearchFocusStatus(true)" ng-mouseup="onInputCaretPositionKeyUp($event)"  ng-keydown="setInputEditorCaretPosition($event)" ng-mousedown="setInputEditorCaretPosition($event)" ng-blur = "updateSearchFocusStatus(false)" placeholder="{{'notice.search-placeholder'|translate}}" ng-keypress="onSearchTextKeyUp($event)" class="searchText" ng-model="selectedAccount.searchText" />
+                    <span class="deleteIcon" ng-click="removeSearchText()" ng-show="selectedAccount.searchText"></span>
+                </div>
+            </div>
+            <div class="noticesContainer">
+                <div class="table"  ng-show="selectedAccount">
+                    <div class="title row">
+                        <div class="author cell">
+                            <span translate="notice.items.author"></span>
+                            <div class="selectedEditor" ng-click="toggleSelectedAccountEditor($event)">
+                                <span ng-bind="selectedAccount.selectedEditor.name" class="text-ellipsis" title="{{selectedAccount.selectedEditor.name}}"></span>
+                                <i class="fa" ng-class="{'fa-caret-down':!showSelectedAccountEditors,'fa-caret-up':showSelectedAccountEditors}"></i>
+                            </div>
+                            <ul class="accountEditors" ng-show="showSelectedAccountEditors">
+                                <li ng-repeat="editor in selectedAccount.allEditors" ng-bind="editor.name" ng-click="onSelectedEditorChanged(editor,$event)"></li>
+                            </ul>
+                        </div>
+                        <div class="topic cell"><div translate="notice.items.topic"></div></div>
+                        <div class="time cell" >
+                            <span translate="notice.items.time"></span>
+                            <div class="selectedTimeRange" ng-click="toggleAccountTimeRange($event)">
+                                <span ng-bind="getAccountTimeRange(selectedAccount)"></span>
+                                <i class="fa" ng-class="{'fa-caret-down':!showAccountTimeRange,'fa-caret-up':showAccountTimeRange}"></i>
+                            </div>
+                            <ul class="timeRanges" ng-show="showAccountTimeRange">
+                                <li ng-repeat="range in timeRanges" ng-bind="range.key" ng-click="onTimeRangeChanged(range,$event)"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <scroll-container class="mainContainer">
+                    <div ng-repeat="item in selectedNotices track by $index" class="noticeItem row" ng-click="showDetail(item,$event)">
+                        <div class="author cell text-ellipsis"> <span ng-bind="item.author.name"></span></div>
+                        <div class="topic cell text-ellipsis"> <span ng-bind="item.topic"></span></div>
+                        <div class="time cell text-ellipsis"> <span ng-bind="convertTime(item.createTimestamp)"></span></div>
+                        <notice-item-context-menu item="item" on-edit="showPublish(notice,$event)" on-delete = "deleteNotice(notice,$event)"></notice-item-context-menu>
+                    </div>
+                    <div class="empty" ng-show="showEmpty" ng-class="{'filter':isNoFilterResult,'search':isNoSearchResult}">
+                        <span translate="notice.empty" ng-if="!isNoFilterResult && !isNoSearchResult"></span>
+                        <span translate="notice.filter-empty" ng-if="isNoFilterResult"></span>
+                        <span translate="notice.search-empty" ng-if="isNoSearchResult"></span>
+                    </div>
+                </scroll-container>
+            </div>
+            <aside class="detailPanel" ng-class="{'flip':isShowDetail}">
+                <div class="header">
+                    <span class="backIcon"></span>
+                    <span class="titleText" translate="notice.details.title"></span>
+                </div>
+                <div class="detailContent">
+                    <label><span translate="notice.details.author"></span><span ng-bind="selectedNotice.author.name" class="value"></span></label>
+                    <label>
+                        <span translate="notice.details.send-to" class="sectionLabel"></span>
+                        <div class="sections">
+                            <span ng-repeat="section in selectedNotice.sections" class="value section" ng-bind="section.text"></span>
+                        </div>
+                    </label>
+                    <label><span translate="notice.details.time"></span><span ng-bind="convertTime(selectedNotice.createTimestamp)"></span></span></label>
+                    <label ng-if="historyNoticesSelected">
+                        <span translate="notice.details.read-count"></span>
+                        <span ng-bind="selectedNotice.readCount" class="value"></span>
+                        <span translate="notice.details.unread-count"></span>
+                        <span ng-bind="selectedNotice.unreadCount" class="value"></span>
+                    </label>
+                    <div class="noticeItem">
+                        <notice-item  show-preview="showPreview(n,$event)"   convert-time="convertTime(createTime)" n="selectedNotice" hide-options="true"></notice-item>
+                    </div>
+                    <div class="bottomBtns">
+                        <button class="deleteBtn" translate="common.remove" ng-click="deleteNotice(selectedNotice,$event)"></button>
+                        <button class="editBtn" translate="common.edit" ng-click="showPublish(selectedNotice,$event)"  ng-class="{'disabled':selectedNotice.id}"></button>
+                        <button class="publishBtn" translate="common.publish" ng-click="publishNotice(selectedNotice,$event)" ng-class="{'disabled':isUnableToSend(selectedNotice)}"></button>
+                    </div>
+                    <notice-editor ng-hide="{{true}}" content="selectedNotice.content"></notice-editor>
+                </div>
+            </aside>
+            <spinner-loading ng-show='isLoadingNotice'></spinner-loading>
+        </div>
+    </article>
+    <div notice-alert></div>
+</div>

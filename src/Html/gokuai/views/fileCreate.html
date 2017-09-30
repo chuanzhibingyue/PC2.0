@@ -1,0 +1,13 @@
+<div class="gk-dialog-header">
+    新建
+</div>
+<div class="gk-dialog-content">
+    <label for="new_filename">文件夹名:</label>
+    <input type="text" name="new_filename" id="new_filename" ng-model="filename" class="create-input" enable-enter-submit="ok($event, filename)"/>
+</div>
+<div class="gk-dialog-footer">
+    <button class="cancel-btn" ng-click="cancel()">取消</button>
+    <button class="ok-btn" ng-click="ok($event, filename)">
+        <span>完成</span>
+    </button>
+</div>

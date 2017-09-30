@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="../css/main.css" rel="stylesheet">    
+    <script type="text/javascript" src="../nls/i18n.js"></script>
+    <script type="text/javascript" src="../script/main.js"></script>
+    <title>Main</title>
+</head>
+<body>
+<div id="layout-container" class="window-shadow">
+    <div id="menu-panel">
+        <div class="client-status-container">
+            <div class="client-connecting-circle"></div>
+            <div class="client-connecting-ball">
+                <div class="connecting-ball"></div>
+            </div>
+            <div class="client-status">
+                <div class="client-status-text">{{ClientStatus.Disconnected}}</div>
+                <div class="re-connect">{{ClientStatus.ReConnect}}</div>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="../images/avatar_default.png" draggable="false" class="avatar round-image" onerror="uc.util.ImageUtil.OnImageLoadError(this, '../images/avatar_default.png')"/>
+        </div>
+        <div class="current-user-status"></div>
+        <div class="current-user-status-list hide">
+            <ul>
+                <li class="status-list status-online" data-value="1">{{UserStatus.OnLine}}<i class="hide"></i></li>
+                <li class="status-list status-busy" data-value="2">{{UserStatus.NoDisturb}}<i class="hide"></i></li>
+                <li class="status-list status-inCall" data-value="6">{{UserStatus.InCall}}<i class="hide"></i></li>
+                <li class="status-list status-inMeeting" data-value="4">{{UserStatus.InMeeting}}<i class="hide"></i></li>
+            </ul>
+        </div>
+        <ul class="main-menus">
+            <li class="menu-item menu-message selected" qtips="{{Common.Message}}" qtips-w="40">
+                <span class="menu-icon"></span>
+                <span class="menu-text hide">{{Common.Message}}</span>
+                <span class="new-msg-node no-msg"></span>
+            </li>
+            <li class="menu-item menu-contact" qtips="{{Common.Contact}}" qtips-w="40">
+                <span class="menu-icon"></span>
+                <span class="menu-text hide">{{Common.Contact}}</span>
+            </li>
+            <li class="menu-item menu-meeting hide" qtips="{{Common.Meeting}}" qtips-w="40">
+                <span class="menu-icon"></span>
+                <span class="menu-text hide">{{Common.Meeting}}</span>
+            </li>
+            <li class="menu-item menu-meetingRoom hide" qtips="{{Common.MeetingRoom}}" qtips-w="40">
+                <span class="menu-icon"></span>
+                <span class="menu-text hide">{{Common.MeetingRoom}}</span>
+            </li>
+            <li class="menu-item menu-app hide" qtips="{{Common.App}}" qtips-w="40">
+                <span class="menu-icon"></span>
+                <span class="menu-text hide">{{Common.App}}</span>
+            </li>
+			<li class="menu-item menu-cloud hide" qtips="{{Common.Cloud}}" qtips-w="40">
+                <span class="menu-icon"></span>
+                <span class="menu-text hide">{{Common.Cloud}}</span>
+            </li>
+            <li class="menu-item menu-notice hide" qtips-w="40">
+                <span class="menu-icon"></span>
+                <div class="tooltip hide">
+                    <i class="icon-close tool-icon"></i>
+                    <span>{{Common.NoticeTooltip}}</span>
+                </div>
+            </li>
+            <li class="menu-item menu-pbx hide" qtips-w="40" qtips="{{Common.Pbx}}">
+                <span class="menu-icon"></span>
+                <div class="tooltip hide">
+                    <span>{{Common.PbxCall}}</span>
+                </div>
+            </li>
+        </ul>
+        <div class="extra-options">
+            <span class="extra-item icon-link hide" qtips="{{Extra.Microblog}}" qtips-w="60"><div class="new-weibo-msg"></div></span>
+            <span class="extra-item icon-start" qtips="{{Extra.Create}}"></span>
+            <span class="extra-item icon-search hide" qtips="{{Extra.Search}}" qtips-w="40"></span>
+            <span class="extra-item icon-settings" qtips="{{Extra.Setting}}" qtips-w="40"></span>
+        </div>
+        <div class="el-blank hide">
+            <img src="../images/busy.png" />
+        </div>
+    </div>
+    <div class="filecomment" style="display: none"></div>
+    <div class="menu-panel-body message">
+        <div class="sub-menu-panel"></div>
+        <div class="content-panel">
+            <div class="content-panel-title"></div>
+            <div class="content-panel-body"></div>
+        </div>
+    </div>
+    <div class="menu-panel-body contacts hide">
+        <div class="sub-menu-panel"></div>
+        <div class="content-panel">
+            <div class="content-panel-title"></div>
+            <div class="content-panel-body"></div>
+        </div>
+    </div>
+    <div class="menu-panel-body meeting hide">
+        <div class="meeting-common-title"></div>
+        <div class="meeting-common-panel">
+        <div class="sub-menu-panel"></div>
+        <div class="content-panel">
+            <!--<div class="content-panel-title">ttttt</div>-->
+            <div class="content-panel-body">
+                <div class="init-panel">
+                    <div class="init-panel-none">
+                        <img src="../images/meeting/noneMeeting.png">
+                        <div class="init-panel-noneText">{{Main.MeetingMessage}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="menu-panel-body meetingRoom hide">
+        <div class="sub-menu-panel">
+            <div class="sub-menu-panel-title">{{Common.MeetingRoom}}</div>
+            <div class="sub-menu-panel-content">
+                <div class="loading"><img src='../images/messagebox/loading-17.gif'></div>
+                <ul class="meetingRoom-org-list">
+                </ul>
+            </div>
+            <div class="addMeetingRoom">
+                <span class='addMeetingRoomIcon icon-start' qtips="{{Main.createMeetingRoom}}"></span>
+            </div>
+        </div>
+        <div class="content-panel">
+            <div class="content-panel-body">
+                <div class="meetingRoomdetailspanel">
+                    <div class="init-panel">
+                        <div class="init-panel-none">
+                            <img src="../images/meeting/meetingRoom/noneMeeting.png">
+                            <div class="init-panel-noneText">{{Main.unSelectAnyMeetingRoom}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-panel-body vertical app hide">
+        <div class="menu-panel-body-title"></div>
+        <div class="menu-panel-body-body"></div>
+    </div>
+    <div class="menu-panel-body vertical me hide">
+        <div class="menu-panel-body-title"></div>
+        <div class="menu-panel-body-body"></div>
+    </div>
+	<div class="menu-panel-body notice hide">
+	</div>
+    <div class="menu-panel-body cloud hide">
+    </div>
+    <div class="menu-panel-body pbx hide">
+        <div class="sub-menu-panel"></div>
+        <div class="content-panel">
+            <div class="content-panel-title"></div>
+            <div class="content-panel-body"></div>
+        </div>
+    </div>
+    <div class="search-container node-shadow hide"></div>
+    <div class="start-container hide node-shadow">
+        <a class="leftIconMax"></a>
+        <div class="start-item start-chat">
+            <span class="start-icon"></span>
+            <span>{{Main.StartChat}}</span>
+        </div>
+        <div class="start-item create-project hide">
+            <span class="start-icon"></span>
+            <span>{{Main.CreateProject}}</span>
+        </div>
+        <div class="start-item create-meeting">
+            <span class="start-icon"></span>
+            <span>{{Main.CreateMeeting}}</span>
+        </div>
+        <div class="start-item create-cloud">
+            <span class="start-icon"></span>
+            <span>{{Main.CreateCloud}}</span>
+        </div>
+    </div>
+    <div class="setting-container hide node-shadow">
+        <div class="setting-item forum">
+            <span class="setting-icon"></span>
+            <span>{{Main.BeeForum}}</span>
+        </div>
+        <div class="setting-item setting">
+            <span class="setting-icon"></span>
+            <span>{{Main.Setting}}</span>
+        </div>
+    </div>
+    <div class="tool-icon-container">
+        <span class="icon-min tool-icon"></span>
+        <span class="icon-max tool-icon"></span>
+        <span class="icon-close tool-icon"></span>
+    </div>
+    <div class="message-box-hide-box">
+        <textarea id="messageBoxHideIpt" ></textarea>
+    </div>
+</div>
+<div class="join-animation">
+    <div class="wrap">
+        <div class="waiting-animation-body">
+            <div class="cloud1"></div>
+            <div class="cloud2"></div>
+            <div class="cloud3"></div>
+            <div class="bee">
+                <img class="hide" src="../images/bee/xmf0.png" />
+            </div>
+            <div class="tips">{{Meeting.JoinWaiting}}</div>
+        </div>
+        <div class="waiting-animation-cancel"><a class="btn-uikit btn-dark">{{Common.Cancel}}</a></div>
+    </div>
+</div>
+</body>
+</html>

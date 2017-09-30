@@ -1,0 +1,67 @@
+<div class="clearfix gk-dialog-header" tabindex="0">
+    <div class="pull-left title" translate>权限设置</div>
+    <div class="pull-right input_wrapper">
+        <input placeholder="搜索" type="text" name="keyword" class="search_input" value="" data-ng-model="data.keyword"/>
+        <a href="javascript:;" ng-show="!searching && !data.keyword" class="search_icon"><i class="fa fa-search"></i></a>
+        <a href="javascript:;" ng-show="!searching && data.keyword" class="cancel_search_btn" ng-click="clearSearch()"><i class="cancel">&times;</i></a>
+    </div>
+</div>
+<div class="gk-dialog-content">
+    <div class="list_wrapper">
+        <div class="clearfix list_head" ng-class="{'invisible':!members.length}">
+            <div class="col col_1">名称</div>
+            <div class="col col_{{$index+2}}" ng-repeat="permission  in permissions">
+                <label for="multi_{{permission.name}}_check" ng-class="{'disabled':getMultiDisableState(permission.name,members)}">
+                    <input type="checkbox" ng-if="permission.name =='file_preview'" ng-change="setAllPermission(multi[permission.name],members,permission.name)" ng-disabled="getMultiDisableState(permission.name,members)"   ng-model="multi.file_preview" class="" name="multi_{{permission.name}}_check" id="multi_{{permission.name}}_check" />
+                    <input type="checkbox" ng-if="permission.name =='file_read'"  ng-change="setAllPermission(multi[permission.name],members,permission.name)" ng-disabled="getMultiDisableState(permission.name,members)"   ng-model="multi.file_read" class="" name="multi_{{permission.name}}_check" id="multi_{{permission.name}}_check" />
+                    <input type="checkbox" ng-if="permission.name =='file_write'"  ng-change="setAllPermission(multi[permission.name],members,permission.name)"  ng-disabled="getMultiDisableState(permission.name,members)"  ng-model="multi.file_write" class="" name="multi_{{permission.name}}_check" id="multi_{{permission.name}}_check" />
+                    <input type="checkbox" ng-if="permission.name =='file_delete'"  ng-change="setAllPermission(multi[permission.name],members,permission.name)" ng-disabled="getMultiDisableState(permission.name,members)"  ng-model="multi.file_delete" class="" name="multi_{{permission.name}}_check" id="multi_{{permission.name}}_check" />
+                    <input type="checkbox" ng-if="permission.name =='file_link'"  ng-change="setAllPermission(multi[permission.name],members,permission.name)" ng-disabled="getMultiDisableState(permission.name,members)"  ng-model="multi.file_link" class="" name="multi_{{permission.name}}_check" id="multi_{{permission.name}}_check" />
+                    <span ng-bind="permission.text"></span>
+                </label>
+            </div>
+        </div>
+        <div class="list_body">
+            <ul ng-show="!loading" class="permission_list">
+                <li ng-repeat="member in members" class="clearfix permission_item">
+                    <div class="clearfix col col_1 member">
+                        <div class="pull-left member_avater">
+                            <avatar member-id="{{member.member_id}}" user-id="{{member.out_id}}"></avatar>
+                        </div>
+                        <div class="pull-left member_name_email" ng-class="{'no_email':!member.member_email}">
+                            <span class="member_name" ng-bind="member.member_name"></span>
+                            <span class="member_email" ng-bind="member.member_email" ng-if="member.member_email"></span>
+                        </div>
+                    </div>
+                    <div class="col col_{{$index+2}}" ng-repeat="permission in permissions">
+                        <label for="{{permission.name}}_check_{{member.member_id}}" ng-class="{'disabled':getDisableState(member,permission.name)}">
+                            <input type="checkbox" ng-change="setPermission(member,permission.name)" ng-if="permission.name =='file_preview'" ng-model="member.file_preview" ng-disabled="getDisableState(member,permission.name)" class="" name="{{permission.name}}_check_{{member.member_id}}" id="{{permission.name}}_check_{{member.member_id}}" />
+                            <input type="checkbox" ng-change="setPermission(member,permission.name)" ng-if="permission.name =='file_read'" ng-model="member.file_read" ng-disabled="getDisableState(member,permission.name)" class="" name="{{permission.name}}_check_{{member.member_id}}" id="{{permission.name}}_check_{{member.member_id}}" />
+                            <input type="checkbox" ng-change="setPermission(member,permission.name)" ng-if="permission.name =='file_write'" ng-model="member.file_write" ng-disabled="getDisableState(member,permission.name)" class="" name="{{permission.name}}_check_{{member.member_id}}" id="{{permission.name}}_check_{{member.member_id}}" />
+                            <input type="checkbox" ng-change="setPermission(member,permission.name)" ng-if="permission.name =='file_delete'" ng-model="member.file_delete" ng-disabled="getDisableState(member,permission.name)" class="" name="{{permission.name}}_check_{{member.member_id}}" id="{{permission.name}}_check_{{member.member_id}}" />
+                            <input type="checkbox" ng-change="setPermission(member,permission.name)" ng-if="permission.name =='file_link'" ng-model="member.file_link" ng-disabled="getDisableState(member,permission.name)" class="" name="{{permission.name}}_check_{{member.member_id}}" id="{{permission.name}}_check_{{member.member_id}}" />
+                            <span ng-bind="permission.text"></span>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+            <div class="empty" ng-show="!loading && !members.length && data.keyword">没找到相关搜索结果</div>
+            <span us-spinner ng-show="loading"></span>
+        </div>
+        <div class="overlay" ng-show="setting">
+            <span us-spinner></span>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix gk-dialog-footer">
+     <div class="pull-left page_hint" ng-show="members.length">
+            第<span ng-bind="getStartIndex()"></span>条到第<span ng-bind="getEndIndex()"></span>条, 共<span ng-bind="page.count"></span>条
+        </div>
+    <div class="pull-right page_nav" ng-show="members.length">
+        <a href="javascript:;" ng-click="goPrev($event,data.keyword)" tooltip-append-to-body="true" uib-tooltip="上一页" class="current_page" ng-class="{'disabled':page.current == 1}"><i class="fa fa-chevron-left"></i></a>
+        <input class="" ng-model="page.current"/>/<span class="total_page" ng-bind="page.total"></span>
+        <a href="javascript:;" uib-tooltip="下一页"  tooltip-append-to-body="true"  ng-click="goNext($event,data.keyword)" ng-class="{'disabled':page.current == page.total}"><i class="fa fa-chevron-right"></i></a>
+    </div>
+    <a ng-show="members.length" href="javascript:;" uib-tooltip="刷新" class="pull-right refresh_btn"  tooltip-append-to-body="true" ng-click="goToPage(page.current,data.keyword)"><i class="fa fa-refresh"></i></a>
+</div>

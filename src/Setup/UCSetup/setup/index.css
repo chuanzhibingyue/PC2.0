@@ -1,0 +1,139 @@
+/* common style*/
+/*  common style */
+*::selection { background-color: #FFCC00; color: white; }
+
+.pointer, .section .checkbox-item label, .main .operation i.min:hover, .main .operation i.close:hover, .main .setup-option .left .checkbox, .main .setup-option .right, .dialog .header i { cursor: pointer; }
+
+.wrap-padding, .section .option, .progress{ padding: 0px 20px; }
+
+.check-item, .section .checkbox-item label, .section .checkbox-item label .checkbox { height: 23px; line-height: 23px; }
+
+.main .setup-button .btn-setup.disabled { background: url(btn-big-disabled.png); cursor: default !important; }
+
+.input-disabled, .section .option label.disabled, .section .option a.disabled { background-color: #f2f2f2 !important; color: #c9c9cc; cursor: default !important; }
+
+.common-big-btn, .main .setup-button .btn-setup, .main .success .setup-success a, .main .error1 .setup-success a, .main .error2 .setup-success a, .dialog .btn-option a { width: 208px; height: 32px; line-height: 32px;  display: inline-block; text-decoration: none; color: white; }
+.main .setup-button .btn-setup,.dialog .btn-option a {height: 32px;line-height: 32px;}
+.main .setup-button .btn-setup{width: 208px !important;}
+
+* { padding: 0; margin: 0; outline: none; }
+
+html { overflow: hidden; height: 100%; }
+
+body { width: 520px; height: 585px; outline: none; overflow: hidden; }
+
+a { outline: none; text-decoration: none; }
+
+/*body wrap*/
+.section { font-size: 14px; font-family: "Microsoft Yahei"; width: 520px; border-radius: 10px; position: relative; z-index: 1;}
+.section.open { height: 585px; }
+.section.close { height: 420px; animation: fs-close 0.5s; -webkit-animation: fs-close 0.5s; }
+.section .option { height: 30px; margin-top: 10px;}
+.section .option label, .section .option a { height: 30px; line-height: 30px; display: inline-block; background-color: white; color: #3b4f61; }
+.section .option label { width: 280px; padding-left: 5px; margin-right: 10px;float: left; white-space: nowrap; overflow:hidden; }
+.section .option a { text-decoration: none; padding: 0px 15px; }
+.section .checkbox-item { display: inline-block; width: 37%; height:30px;float: left; color: white; margin-left: 20px; }
+.section .checkbox-item label { display: inline-block; }
+.section .checkbox-item label .checkbox { width: 27px; height: 23px; display: inline-block; float: left; margin-right: 5px; background: url(bg-uncheck.png); vertical-align: top; }
+.section .checkbox-item label .checkbox.checked { background: url(bg-checked.png); }
+
+/* main window */
+.main { width: 520px; height: 420px; box-shadow: 0 0 25px #ccc; border-radius: 10px; background-color: #3b4f61; color: white; }
+.main .title { width: 100%; height: 30px; position: relative;z-index: 4;}
+.main .operation { float: right; height: 18px; margin-right: 10px; margin-top: 10px; }
+.main .operation i { display: inline-block; width: 16px; height: 16px; }
+.main .operation i.min {background: url(min_normal.png) no-repeat 2px 10px;}
+.main .operation i.min:hover {background: url(min_hover.png) no-repeat 0px 0px; }
+.main .operation i.min:active {background: url(min_active.png) no-repeat 0px 0px; }
+.main .operation i.close { background: url(close_normal.png) no-repeat 3px 3px; }
+.main .operation i.close:hover { background: url(close_hover.png) no-repeat; }
+.main .operation i.close.disabled { background: url(close_normal.png) no-repeat 3px 3px; cursor: default;}
+.main .step0 { text-align: center;margin-left:3px; }
+.main .step0 .welcome { font-size: 27px; line-height: 36px; margin-bottom: 10px; }
+.main .step0, .main .step1, .main .step2 {;width: 520px;height: 420px; }
+.main .step2 {position: relative; width: 520px;height: 420px;top: -30px;z-index: 0; }
+.main .logo, .main .setup-button { font-size: 16px; margin: 40px 0 10px 0; text-align: center; }
+.main .setup-option { margin-top: 10px; color: #333; }
+.main .setup-option .left { float: left; margin-left: 153px;}
+.main .setup-option .left .checkbox, .main .setup-option .left .service { display: inline-block; float: left;color: white; }
+.main .setup-option .left .checkbox { width: 24px; height: 24px; margin-top: -1px; margin-right: 5px; background: url(uncheck.png); }
+.main .setup-option .left .checkbox.checked { background: url(checked.png) 1px 1px; }
+.main .setup-option .right { clear: both;text-align: center;padding-top: 40px;}
+.main .setup-option .right img { margin-top: -2px; display: none}
+.main .setup-option .right span { color: white;}
+.main .setup-option img { vertical-align: top; }
+.main .setup-option img.up { -webkit-transform: rotate(180deg); -webkit-animation: fs-rotate 0.3s; }
+.main .setup-option img.down { -webkit-transform: rotate(0deg); -webkit-animation: fs-rotate-close 0.3s; }
+.main .setup-option a, .main .setup-option span { text-decoration: none; color: #71aee2; }
+.main .setup-option span:hover { color: #EFDB2A; }
+.main .step2 .info { height: 344px; background-color:#EDEDED; width: 519px;overflow: hidden; }
+.main .step2 .info img{margin-left: -6px;margin-top: -4px;}
+.main .step2 .progress .bar { height: 4px; border-radius: 5px; background-color: #4f667b; margin-top:20px;}
+.main .step2 .progress .bar .num { width: 0%; height: 4px; background-color: #ffcc00; }
+.main .step2 .progress .des { margin-top: 10px; color: white; }
+.main .step2 .progress .des .left { float: left; }
+.main .step2 .progress .des .right { float: right; }
+.main .success .info, .main .error1 .info, .main .error2 .info { height: 230px; margin-top: 10px; text-align: center; }
+.main .success .info .tips, .main .error1 .info .tips, .main .error2 .info .tips { margin-top: 10px; }
+.main .success .setup-success, .main .error1 .setup-success, .main .error2 .setup-success { text-align: center; }
+.main .error1 .big, .main .error2 .big { font-size: 20px; line-height: 28px; letter-spacing: 3px;}
+
+.dialogMain{display: none; width: 100%;height: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index:10;filter:alpha(opacity=0);background-color: #eee;}
+.dialog {display:none; z-index: 11;top: 80px;margin-left: 60px;font-family: "STHeitiSC-Light","Heiti SC Light","Heiti SC"; font-size: 14px; width: 360px; height: 170px; box-shadow: 0 0 25px #ccc; border-radius: 10px; color: #999999; background-color: white; position: fixed; padding: 0 20px;}
+.dialog .header { height: 30px; line-height: 30px; text-align: left; margin-top: 20px; position: relative; color:#3b4f61;}
+.dialog .header i { position: absolute; float: right; right: 10px; display: inline-block; width: 18px; height: 18px; margin-top: -4px; background: url(tips-close.png); }
+.dialog i.close{display: none;}
+.dialog .content { margin-top: 10px;  text-align: left;color: #3b4f61; }
+.dialog .btn-option { text-align: right; margin-top: 40px; }
+.dialog .btn-option a { text-align:center;width: 120px !important; background-color: #ededed;color:#4f667b !important; }
+.dialog .btn-option a.btn-setup-cancel:hover { background-color: #D4D4D4;}
+
+.dialog .btn-option a.btn-setup-force,
+.dialog .btn-option a.btn-setup-cover,
+.dialog .btn-option a.btn-setup-ok{
+    background-color: #4F667B;
+    color:white !important;
+}
+
+.dialog .btn-option a.btn-setup-force:hover,
+.dialog .btn-option a.btn-setup-cover:hover,
+.dialog .btn-option a.btn-setup-ok:hover{
+    background-color: #607588;
+    color:white !important;
+}
+
+.dialog .btn-option a.btn-setup-force:active,
+.dialog .btn-option a.btn-setup-cover:active,
+.dialog .btn-option a.btn-setup-ok:active{
+    background-color: #465B6E;
+    color:white !important;
+}
+
+
+#btnStartSetup{background-image: url(setup-bg-02-normal.png); cursor: pointer}
+#btnStartSetup:hover{background-image: url(setup-bg-02-hover.png); cursor: pointer}
+#btnStartSetup:active{background-image: url(setup-bg-02-active.png); cursor: pointer}
+#btnStartSetup.disabled{background-image: url(setup-bg-01.png);cursor: default;}
+
+.btn-setup-success{background-image: url(btn-success-normal.png) !important;margin-top: 60px;}
+.btn-setup-success:hover{background-image: url(btn-success-hover.png) !important;margin-top: 60px;}
+.btn-setup-success:active{background-image: url(btn-success-active.png) !important;margin-top: 60px;}
+.error1 .info, .error2 .info{margin-top: 180px !important;height: auto !important;}
+.btn-setup-error{background-image: url(setup-stop-normal.png) !important;margin-top: 60px;}
+.btn-setup-error:hover{background-image: url(setup-stop-hover.png) !important;margin-top: 60px;}
+.btn-setup-error:active{background-image: url(setup-stop-active.png) !important;margin-top: 60px;}
+.btn-setup-resetup{background-image: url(setup-continue-normal.png) !important;margin-top: 60px;}
+.btn-setup-resetup:hover{background-image: url(setup-continue-hover.png) !important;margin-top: 60px;}
+.btn-setup-resetup:active{background-image: url(setup-continue-active.png) !important;margin-top: 60px;}
+
+.option-wrap{
+    overflow: hidden;
+    height: 150px;
+    background: url(bg.png) #3b4f61 ;
+    padding-left: 60px;
+}
+
+.volume{color: white;visibility: hidden;height: 15px !important;}
+.step0 .logo{margin-top: 25px !important;}
+#btnShowOptions{cursor: default !important;}
+#btnShowOptions span{cursor: pointer;}

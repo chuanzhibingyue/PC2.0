@@ -1,0 +1,50 @@
+<div class="gk-dialog-header">历史版本</div>
+
+<div class="gk-dialog-content">
+    <ul infinite-scroll-disabled="vm.isloading || !vm.canLoad" infinite-scroll-parent="true"
+        infinite-scroll="vm.historyList()" infinite-scroll-distance="1" infinite-scroll-immediate-check="false">
+        <li class="history-item" ng-repeat="history in vm.histories track by $index">
+            <div class="history-version pull-left">
+                <div class="history-number" ng-bind="vm.count - $index" title="{{vm.count - $index}}"></div>
+            </div>
+            <div class="history-content pull-right">
+                <div class="member-info pull-left">
+                    <avatar user-id="{{history.out_id}}" member-id="{{history.member_id}}" class="member-avatar pull-left"></avatar>
+                    <!--<img ng-src="{{history.member_photo}}" alt="avatar" class="member-avatar pull-left" />-->
+                    <span title="{{history.display_name}}" ng-bind="history.display_name" class="member-name pull-right"></span>
+                </div>
+                <div class="history-act-name pull-left" ng-bind="history.act_name"></div>
+                <div class="history-date pull-left" ng-bind="history.datelinems | date: 'yyyy/MM/dd HH:mm'"></div>
+                <div class="history-size pull-left" ng-bind="history.humansize"></div>
+                <div class="history-act pull-right" ng-hide="vm.showCompare">
+                    <table class="history-table">
+                        <tr>
+                            <td ng-click="vm.openFile(history)" ng-hide="vm.hideOpenFile">
+                                <div class="history-icon icon-open"></div>
+                            </td>
+                            <td ng-click="vm.downloadFile(history)">
+                                <div class="history-icon icon-download"></div>
+                            </td>
+                            <td ng-click="vm.revertFile(history)">
+                                <div class="history-icon icon-refresh"></div>
+                            </td>
+                            <td ng-click="vm.openCompare($index)" ng-hide="vm.hideCompare">
+                                <div class="history-icon icon-compare"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="history-compare pull-right" ng-show="vm.showCompare">
+                    <a ng-if="$index == vm.currentPos" ng-click="vm.closeCompare()" style="color: #e97272; cursor: pointer; text-decoration: none;"><span>取消对比</span></a>
+                    <a ng-if="$index != vm.currentPos" ng-click="vm.historyCompare(vm.histories, vm.currentPos, $index, vm.count)" style="color: #5cbd85; cursor: pointer; text-decoration: none;"><span>与它对比</span></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div ng-if="vm.isloading" class="history-load">
+        <span class="fa fa-spinner fa-pulse"></span>
+    </div>
+    <div ng-if="!vm.isloading && vm.count == 0" class="history-empty">
+        <span translate>文件历史记录为空</span>
+    </div>
+</div>
